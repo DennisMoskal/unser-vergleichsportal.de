@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X, Calculator, CreditCard, Banknote } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 const providerData = {
   versicherungen: [
@@ -449,19 +450,19 @@ export default function Home() {
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><a href="#" className="hover:text-white transition-colors">Über uns</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Partnerprogramme</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Karriere</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Kontakt</a></li>
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
               </ul>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><a href="#" className="hover:text-white transition-colors">Datenschutz</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Impressum</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">AGB</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookie-Richtlinie</a></li>
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
+                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
+                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
+                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
               </ul>
             </div>
           </div>
