@@ -96,30 +96,30 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menü */}
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4">
               <button
-                onClick={() => {scrollToSection('versicherungen'); setMobileMenuOpen(false)}}
+                onClick={() => { scrollToSection('versicherungen'); setMobileMenuOpen(false); }}
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
               >
                 Versicherungen
               </button>
               <button
-                onClick={() => {scrollToSection('banking'); setMobileMenuOpen(false)}}
+                onClick={() => { scrollToSection('banking'); setMobileMenuOpen(false); }}
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
               >
                 Banking
               </button>
               <button
-                onClick={() => {scrollToSection('tierversicherungen'); setMobileMenuOpen(false)}}
+                onClick={() => { scrollToSection('tierversicherungen'); setMobileMenuOpen(false); }}
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
               >
                 Tierversicherung
               </button>
               <button
-                onClick={() => {scrollToSection('krypto'); setMobileMenuOpen(false)}}
+                onClick={() => { scrollToSection('krypto'); setMobileMenuOpen(false); }}
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
               >
                 Krypto
@@ -131,55 +131,55 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section - NerdWallet Style */}
+      {/* Hero-Bereich - NerdWallet-Stil */}
       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
               Finanzentscheidungen leicht gemacht? Lassen Sie uns das für Sie erledigen.
             </h2>
-            <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
               Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
             </p>
 
-            {/* Interactive Widget */}
-            <div className="bg-white rounded-lg p-4 sm:p-8 text-gray-900 max-w-2xl mx-auto">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-900">
+            {/* Interaktives Widget */}
+            <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-md sm:max-w-xl mx-auto">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                 Nach welchem Produkt oder Service suchen Sie?
               </h3>
 
-              <div className="grid grid-cols-2 gap-2 sm:gap-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <Button
                   variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-16 text-left justify-start sm:justify-center"
-                  onClick={() => {setSelectedProduct("versicherung"); scrollToSection('versicherungen')}}
+                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("versicherung"); scrollToSection('versicherungen'); }}
                 >
-                  <Shield className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  VERSICHERUNG
+                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                  Versicherung
                 </Button>
                 <Button
                   variant={selectedProduct === "banking" ? "default" : "outline"}
-                  className="h-12 sm:h-16 text-left justify-start sm:justify-center"
-                  onClick={() => {setSelectedProduct("banking"); scrollToSection('banking')}}
+                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("banking"); scrollToSection('banking'); }}
                 >
-                  <PiggyBank className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  BANKING
+                  <PiggyBank className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                  Banking
                 </Button>
                 <Button
                   variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-16 text-left justify-start sm:justify-center"
-                  onClick={() => {setSelectedProduct("tierversicherung"); scrollToSection('tierversicherungen')}}
+                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("tierversicherung"); scrollToSection('tierversicherungen'); }}
                 >
-                  <Heart className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  TIERVERSICHERUNG
+                  <Heart className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                  Tierversicherung
                 </Button>
                 <Button
                   variant={selectedProduct === "krypto" ? "default" : "outline"}
-                  className="h-12 sm:h-16 text-left justify-start sm:justify-center"
-                  onClick={() => {setSelectedProduct("krypto"); scrollToSection('krypto')}}
+                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("krypto"); scrollToSection('krypto'); }}
                 >
-                  <TrendingUp className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  KRYPTO TRADING
+                  <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                  Krypto Trading
                 </Button>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Category Navigation */}
+      {/* Kategorie-Navigation */}
       <section className="bg-gray-50 py-4 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
@@ -214,17 +214,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main Headline */}
+      {/* Hauptüberschrift */}
       <section className="py-8 sm:py-12 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h3>
           <Button size="lg" className="bg-green-600 hover:bg-green-700">
-            BESTE EMPFEHLUNGEN ANSEHEN
+            Beste Empfehlungen ansehen
           </Button>
         </div>
       </section>
 
-      {/* Trust Badges */}
+      {/* Vertrauensabzeichen */}
       <section className="py-6 sm:py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
@@ -248,7 +248,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Search Section */}
+      {/* Suchbereich */}
       <section className="py-8 sm:py-12 bg-white" id="search-section">
         <div className="container mx-auto px-4">
           <div className="max-w-xl sm:max-w-2xl mx-auto">
@@ -264,7 +264,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Comparison Tables */}
+      {/* Vergleichstabellen */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
@@ -341,7 +341,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Advisor Section */}
+      {/* Beratungsbereich */}
       <section className="py-12 sm:py-16 bg-white" id="ratgeber">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Ratgeber & Tipps</h3>
@@ -400,7 +400,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Statistik-Bereich */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
