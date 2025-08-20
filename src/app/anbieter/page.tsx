@@ -64,7 +64,7 @@ export default function AnbieterPage() {
                 </p>
                 <Button
                   className="bg-green-600 hover:bg-green-700 flex items-center justify-center"
-                  onClick={() => router.push("/partnerprogramme")}
+                  onClick={() => router.push("/anbieter/partnerprogramme")}
                 >
                   Zur Anbieter-Website
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -74,38 +74,34 @@ export default function AnbieterPage() {
               {/* Home-Buttons zu neuen Seiten */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                 <Button
-                  onClick={() => router.push("/partnerprogramme")}
+                  onClick={() => router.push("/anbieter/ueber-uns")}
                   className="flex items-center justify-center"
                 >
-                  Partnerprogramm
+                  Über uns
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
+
                 <Button
-                  onClick={() => router.push("/kontakt")}
+                  onClick={() => router.push("/anbieter/partnerprogramme")}
+                  className="flex items-center justify-center"
+                >
+                  Partnerprogramme
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+
+                <Button
+                  onClick={() => router.push("/anbieter/karriere")}
+                  className="flex items-center justify-center"
+                >
+                  Karriere
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+
+                <Button
+                  onClick={() => router.push("/anbieter/kontakt")}
                   className="flex items-center justify-center"
                 >
                   Kontakt
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  onClick={() => router.push("/agb")}
-                  className="flex items-center justify-center"
-                >
-                  AGB
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  onClick={() => router.push("/datenschutz")}
-                  className="flex items-center justify-center"
-                >
-                  Datenschutz
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  onClick={() => router.push("/impressum")}
-                  className="flex items-center justify-center"
-                >
-                  Impressum
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
