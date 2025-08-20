@@ -459,7 +459,7 @@ export default function Home() {
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datetschutz</Link></li>
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
                 <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
                 <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
                 <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
