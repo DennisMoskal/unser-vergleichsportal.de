@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
+import Navigation from "@/components/Navigation"; // ✅ Import Navigation
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,20 +28,27 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        {/* ✅ Dein Google Verification Tag */}
         <meta
           name="google-site-verification"
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
-
         <Script
           crossOrigin="anonymous"
           src="//unpkg.com/same-runtime/dist/index.global.js"
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
-        <ClientBody>{children}</ClientBody>
+        <ClientBody>
+          <div className="flex min-h-screen">
+            {/* ✅ Navigation links */}
+            <Navigation />
+
+            {/* ✅ Hauptinhalt rechts */}
+            <main className="flex-1 p-6">{children}</main>
+          </div>
+        </ClientBody>
       </body>
     </html>
   );
 }
+
