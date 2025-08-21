@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -34,6 +32,7 @@ const providerData = {
     { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
     { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
     { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
+    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Forex", "Professionelle Tools"], price: "0€ Kommission", bonus: "Demo-Konto", logo: "📊" },
   ]
 }
 
@@ -336,6 +335,15 @@ export default function Home() {
                     </Card>
                   ))}
                 </div>
+                {category === 'krypto' && (
+                  <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
+                    <p>
+                      CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
+                      71% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
+                      Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+                    </p>
+                  </div>
+                )}
               </TabsContent>
             ))}
           </Tabs>
