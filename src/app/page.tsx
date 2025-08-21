@@ -53,7 +53,23 @@ const providerData = {
       bonus: "50% Rabatt bei Jahreszahlung", 
       logo: "⚖️" 
     },
-    { name: "BavariaDirekt", rating: 4.5, features: ["Regional stark", "Persönlicher Service", "Faire Preise"], price: "ab 16€/Monat", bonus: "Treuebonus", logo: "🍺" },
+    { 
+      name: "BavariaDirekt", 
+      rating: 4.5, 
+      features: [
+        "Günstige Kfz-Versicherung ab 9,70€/Monat",
+        "Haftpflichtversicherung online abschließen",
+        "Tierkrankenversicherung günstig mit OP-Schutz",
+        "Rechtsschutzversicherung günstig und flexibel",
+        "Bis zu 350€ sparen auf Versicherungen",
+        "24h-Notfall-Hotline für schnelle Hilfe",
+        "91% Weiterempfehlung von Kunden",
+        "TÜV-geprüfter Service und Kundenzufriedenheit"
+      ], 
+      price: "ab 9,70€/Monat", 
+      bonus: "Treuebonus + 5% Rabatt", 
+      logo: "🍺" 
+    },
   ],
   banking: [
     { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
@@ -216,35 +232,35 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <Button
                   variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => setSelectedProduct("versicherung")}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
                 >
                   <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  <Link href="/versicherungen" className="no-underline text-inherit">Versicherung</Link>
+                  Versicherung
                 </Button>
                 <Button
                   variant={selectedProduct === "banking" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => setSelectedProduct("banking")}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
                 >
                   <PiggyBank className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  <Link href="/banking" className="no-underline text-inherit">Banking</Link>
+                  Banking
                 </Button>
                 <Button
                   variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => setSelectedProduct("tierversicherung")}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
                 >
                   <Heart className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  <Link href="/tierversicherungen" className="no-underline text-inherit">Tierversicherung</Link>
+                  Tierversicherung
                 </Button>
                 <Button
                   variant={selectedProduct === "krypto" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => setSelectedProduct("krypto")}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("krypto"); window.location.href = "/krypto"; }}
                 >
                   <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  <Link href="/krypto" className="no-underline text-inherit">Krypto Trading</Link>
+                  Krypto Trading
                 </Button>
               </div>
             </div>
