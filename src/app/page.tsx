@@ -16,14 +16,50 @@ const providerData = {
     { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
     { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
     { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
-    { name: "eRecht24", rating: 4.3, features: ["Rechtssicherheit", "DSGVO-konform", "Beratung inklusive"], price: "ab 20€/Monat", bonus: "Gratis Rechtscheck", logo: "⚖️" },
+    { 
+      name: "eRecht24", 
+      rating: 4.3, 
+      features: [
+        "Rechtssicherheit für Webseiten",
+        "DSGVO-konform mit Premium Tools",
+        "Automatische Rechtstext-Generatoren",
+        "Abmahnschutz inklusive",
+        "Praxis-Tools für Social Media & Marketing",
+        "Kostenlose Erstberatung (ab Business)",
+        "NEU: KI-gestützte Lösungen",
+        "Zentraler Projekt Manager",
+        "Live-Webinare zu Internetrecht",
+        "Muster-Verträge & Checklisten"
+      ], 
+      price: "ab 15€/Monat", 
+      bonus: "50% Rabatt bei Jahreszahlung", 
+      logo: "⚖️" 
+    },
     { name: "BavariaDirekt", rating: 4.5, features: ["Regional stark", "Persönlicher Service", "Faire Preise"], price: "ab 16€/Monat", bonus: "Treuebonus", logo: "🍺" },
   ],
   banking: [
     { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
     { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
     { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
-    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Forex", "Professionelle Tools"], price: "0€ Kommission", bonus: "Demo-Konto", logo: "📊" },
+    { 
+      name: "XTB", 
+      rating: 4.5, 
+      features: [
+        "Gratis Aktie für neue Investoren",
+        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+        "Über 8000 Aktien & ETFs",
+        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
+        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
+        "eWallet mit virtueller Mastercard",
+        "Smarte ETF-Sparpläne",
+        "0% Kommission bis 100.000€ Umsatz",
+        "Kostenlose Ein- & Auszahlungen",
+        "Platz 1 CFD-Broker 2024/25"
+      ], 
+      price: "0€ Kommission", 
+      bonus: "Kostenlose Kontoeröffnung", 
+      logo: "📊" 
+    },
     { name: "Credimax", rating: 4.2, features: ["Schnelle Kredite", "Online-Beantragung", "Flexible Rückzahlung"], price: "ab 2,99% p.a.", bonus: "Zinsrabatt", logo: "💳" },
   ],
   tierversicherungen: [
@@ -328,7 +364,7 @@ export default function Home() {
                           <p className="text-xl sm:text-2xl font-bold text-green-600">{provider.price}</p>
                           <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm">{provider.bonus}</Badge>
                         </div>
-                        <ul className="space-y-1 sm:space-y-2">
+                        <ul className="space-y-1 sm:space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {provider.features.map((feature, i) => (
                             <li key={i} className="flex items-center text-xs sm:text-sm">
                               <Check className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4 text-green-600 flex-shrink-0" />
