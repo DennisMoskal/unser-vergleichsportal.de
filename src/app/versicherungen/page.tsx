@@ -9,7 +9,25 @@ import Link from "next/link"
 const providerData = {
   versicherungen: [
     { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
-    { name: "DA-Direkt", rating: 4.6, features: ["Telefonberatung", "Schnelle Abwicklung", "Flexible Tarife"], price: "ab 15€/Monat", bonus: "Willkommensbonus", logo: "🚗" },
+    { 
+      name: "DA-Direkt", 
+      rating: 4.6, 
+      features: [
+        "Bis zu 100 % Kostenerstattung",
+        "Gratismonat bis 31.08.",
+        "monatlich kündbar",
+        "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
+        "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
+        "Fairster Tierversicherer (Focus Money)",
+        "15% Rabatt auf Kfz-Versicherung",
+        "OP-Schutz für Tierkrankenversicherung",
+        "Krankenzusatz mit 100€ Bonus",
+        "Rund-um-die-Uhr Service (365 Tage)"
+      ], 
+      price: "ab 15€/Monat", 
+      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
+      logo: "🚗" 
+    },
     { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
     { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
     { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
