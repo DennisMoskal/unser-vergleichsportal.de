@@ -49,8 +49,8 @@ const providerData = {
         "Live-Webinare zu Internetrecht",
         "Muster-Verträge & Checklisten"
       ], 
-      price: "ab 15€/Monat", 
-      bonus: "50% Rabatt bei Jahreszahlung", 
+      price: "ab 20€/Monat", 
+      bonus: "Gratis Rechtscheck", 
       logo: "⚖️" 
     },
     { 
@@ -66,8 +66,8 @@ const providerData = {
         "91% Weiterempfehlung von Kunden",
         "TÜV-geprüfter Service und Kundenzufriedenheit"
       ], 
-      price: "ab 9,70€/Monat", 
-      bonus: "Treuebonus + 5% Rabatt", 
+      price: "ab 16€/Monat", 
+      bonus: "Treuebonus", 
       logo: "🍺" 
     },
   ],
@@ -212,7 +212,7 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero-Bereich - NerdWallet-Stil */}
+      {/* Hero-Bereich */}
       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto text-center">
@@ -478,12 +478,12 @@ export default function Home() {
               <CardHeader>
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-500" />
-                  <CardTitle>Krypto für Einsteiger</CardTitle>
+                  <CardTitle>Krypto Trading Deutschland</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-2 sm:mb-4">
-                  Grundlagen des Kryptowährungshandels: Was Sie vor dem ersten Investment wissen müssen.
+                  Was Sie über Kryptowährungen wissen müssen: Rechtslage, Steuern und beste Plattformen.
                 </p>
                 <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
                   Mehr erfahren
