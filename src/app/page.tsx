@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X, Calculator, CreditCard, Banknote } from "lucide-react"
-import { useState } from "react"
+import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 const providerData = {
@@ -43,13 +43,22 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen")
   const [selectedProduct, setSelectedProduct] = useState("")
 
+  // Funktion zum Scrollen zu einem Abschnitt
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
-    const element = document.getElementById('comparison-section')
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  // Hash-Änderung verarbeiten, wenn die Seite geladen wird
+  useEffect(() => {
+    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "krypto"].includes(hash)) {
+      scrollToSection(hash)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-white">
@@ -61,16 +70,16 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/#versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Versicherungen
             </Link>
-            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/#banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Banking
             </Link>
-            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/#tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Tierversicherung
             </Link>
-            <Link href="/krypto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/#krypto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Krypto
             </Link>
             <Link href="#ratgeber" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
@@ -93,28 +102,28 @@ export default function Home() {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4">
               <Link
-                href="/versicherungen"
+                href="/#versicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Versicherungen
               </Link>
               <Link
-                href="/banking"
+                href="/#banking"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Banking
               </Link>
               <Link
-                href="/tierversicherungen"
+                href="/#tierversicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tierversicherung
               </Link>
               <Link
-                href="/krypto"
+                href="/#krypto"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -190,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Kategorie-Navigation */}
-      <section className="bg-gray-50 py-4 border-b">
+      <section className="bg-gray-50 py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
             {[
@@ -199,18 +208,22 @@ export default function Home() {
               { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
               { key: 'krypto', label: 'KRYPTO', icon: TrendingUp }
             ].map(({ key, label, icon: Icon }) => (
-              <button
+              <Link
                 key={key}
-                onClick={() => scrollToSection(key)}
+                href={`/#${key}`}
                 className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
                   activeCategory === key
                     ? 'bg-green-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(key)
+                }}
               >
                 <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 {label}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -395,12 +408,12 @@ export default function Home() {
               <CardHeader>
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-500" />
-                  <CardTitle>Krypto Trading Deutschland</CardTitle>
+                  <CardTitle>Krypto für Einsteiger</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-2 sm:mb-4">
-                  Was Sie über Kryptowährungen wissen müssen: Rechtslage, Steuern und beste Plattformen.
+                  Grundlagen des Kryptowährungshandels: Was Sie vor dem ersten Investment wissen müssen.
                 </p>
                 <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
                   Mehr erfahren
@@ -440,26 +453,42 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
-              <div className="flex items-center space-x-2 mb-2 sm:mb-4">
-                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
-                <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
+              <div className="flex items-center space-x-2 mb-4">
+                <TrendingUp className="h-6 w-6 text-green-400" />
+                <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
-              <p className="text-gray-400 text-sm sm:text-base">
+              <p className="text-gray-400 text-sm">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
               </p>
             </div>
             <div>
-              <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
-              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
-                <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
-                <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
-                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
+              <h5 className="font-semibold mb-3">Produkte</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/#versicherungen" className="hover:text-white transition-colors text-left">
+                    Versicherungen
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#banking" className="hover:text-white transition-colors text-left">
+                    Banking
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#tierversicherungen" className="hover:text-white transition-colors text-left">
+                    Tierversicherung
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#krypto" className="hover:text-white transition-colors text-left">
+                    Krypto Trading
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
-              <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
-              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+              <h5 className="font-semibold mb-3">Unternehmen</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
                 <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
                 <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
@@ -467,8 +496,8 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
-              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+              <h5 className="font-semibold mb-3">Rechtliches</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
                 <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
                 <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
@@ -476,8 +505,10 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
-            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-sm text-gray-400">
+              © 2025 SmartFinanz. Alle Rechte vorbehalten.
+            </p>
           </div>
         </div>
       </footer>
