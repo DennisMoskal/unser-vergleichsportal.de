@@ -76,10 +76,10 @@ export default function Krypto() {
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><a href="#versicherungen" className="hover:text-white transition-colors">Versicherungen</a></li>
-                <li><a href="#banking" className="hover:text-white transition-colors">Banking</a></li>
-                <li><a href="#tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</a></li>
-                <li><a href="#krypto" className="hover:text-white transition-colors">Krypto Trading</a></li>
+                <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
+                <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
+                <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
+                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
               </ul>
             </div>
             <div>
