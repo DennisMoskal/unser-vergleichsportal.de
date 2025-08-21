@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -451,7 +453,7 @@ export default function Home() {
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><button onClick={() => scrollToSection('versicherungen')} className="hover:text-white transition-colors">Versicherungen</button></li>
                 <li><button onClick={() => scrollToSection('banking')} className="hover:text-white transition-colors">Banking</button></li>
-                <li><button onClick () => scrollToSection('tierversicherungen')} className="hover:text-white transition-colors">Tierversicherung</button></li>
+                <li><button onClick={() => scrollToSection('tierversicherungen')} className="hover:text-white transition-colors">Tierversicherung</button></li>
                 <li><button onClick={() => scrollToSection('krypto')} className="hover:text-white transition-colors">Krypto Trading</button></li>
               </ul>
             </div>
