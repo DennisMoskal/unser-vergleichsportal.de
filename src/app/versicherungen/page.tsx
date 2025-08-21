@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check } from "lucide-react"
+import { Star, Check } from "lucide-react" // Hinzugefügt: Import von Star und Check
 import Link from "next/link"
-import Footer from "@/components/Footer"
 
 const providerData = {
   versicherungen: [
@@ -19,9 +18,9 @@ const providerData = {
 
 export default function Versicherungen() {
   return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
+    <div className="min-h-screen p-4 bg-white">
+      <h1 className="text-3xl font-bold mb-6">Versicherungen</h1>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {providerData.versicherungen.map((provider, index) => (
           <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
             {index === 0 && (
@@ -55,10 +54,9 @@ export default function Versicherungen() {
           </Card>
         ))}
       </div>
-      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
+      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline">
         Zurück zur Startseite
       </Link>
-      <Footer />
     </div>
   )
 }
