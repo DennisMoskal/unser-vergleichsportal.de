@@ -51,6 +51,14 @@ export default function Home() {
     }
   }
 
+  const handleProductNavigation = (sectionId: string) => {
+    if (window.location.pathname === '/') {
+      scrollToSection(sectionId)
+    } else {
+      window.location.href = `/#${sectionId}`
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -412,7 +420,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+      <footer className="bg-green-600 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
@@ -428,36 +436,36 @@ export default function Home() {
               <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link 
-                    href="/#versicherungen" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('versicherungen')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Versicherungen
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link 
-                    href="/#banking" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('banking')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Banking
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link 
-                    href="/#tierversicherungen" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('tierversicherungen')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Tierversicherung
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link 
-                    href="/#krypto" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('krypto')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Krypto Trading
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -480,7 +488,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+          <div className="border-t border-green-700 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-400">
               © 2025 SmartFinanz. Alle Rechte vorbehalten.
             </p>
