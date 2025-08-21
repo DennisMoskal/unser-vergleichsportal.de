@@ -1,210 +1,83 @@
-"use client"
+import { useState } from 'react';
+import { Link } from 'next/link'; // Annahme: Next.js wird verwendet
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Search, Check, Shield, Star, Zap, PiggyBank, Heart, TrendingUp } from 'lucide-react';
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X, Calculator, CreditCard, Banknote } from "lucide-react"
-import { useState } from "react"
-import Link from "next/link"
-
+// Beispiel-Daten für Anbieter
 const providerData = {
   versicherungen: [
-    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
-    { name: "DA-Direkt", rating: 4.6, features: ["Telefonberatung", "Schnelle Abwicklung", "Flexible Tarife"], price: "ab 15€/Monat", bonus: "Willkommensbonus", logo: "🚗" },
-    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
-    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
-    { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
-    { name: "eRecht24", rating: 4.3, features: ["Rechtssicherheit", "DSGVO-konform", "Beratung inklusive"], price: "ab 20€/Monat", bonus: "Gratis Rechtscheck", logo: "⚖️" },
-    { name: "BavariaDirekt", rating: 4.5, features: ["Regional stark", "Persönlicher Service", "Faire Preise"], price: "ab 16€/Monat", bonus: "Treuebonus", logo: "🍺" },
+    { name: 'Anbieter A', logo: '🛡', rating: 4.8, price: '€19,99/Monat', bonus: '3 Monate gratis', features: ['Umfassender Schutz', 'Schnelle Abwicklung', '24/7 Support'] },
+    { name: 'Anbieter B', logo: '🛡', rating: 4.5, price: '€24,99/Monat', bonus: '€50 Bonus', features: ['Flexible Tarife', 'Online-Verwaltung', 'Hohe Deckung'] },
   ],
   banking: [
-    { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
-    { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
-    { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
-    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Forex", "Professionelle Tools"], price: "0€ Kommission", bonus: "Demo-Konto", logo: "📊" },
-    { name: "Credimax", rating: 4.2, features: ["Schnelle Kredite", "Online-Beantragung", "Flexible Rückzahlung"], price: "ab 2,99% p.a.", bonus: "Zinsrabatt", logo: "💳" },
+    { name: 'Bank X', logo: '🏦', rating: 4.7, price: '€0,00/Monat', bonus: 'Kostenlos', features: ['Kostenloses Girokonto', 'Mobile Banking', 'Keine Gebühren'] },
+    { name: 'Bank Y', logo: '🏦', rating: 4.4, price: '€4,99/Monat', bonus: '€100 Bonus', features: ['Zinsen auf Guthaben', 'Kreditkarte inkl.', 'Schnelle Überweisungen'] },
   ],
   tierversicherungen: [
-    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
-    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
+    { name: 'PetCare', logo: '🐾', rating: 4.9, price: '€14,99/Monat', bonus: 'Erste Monat gratis', features: ['OP-Schutz', 'Tierarztkosten', '24/7 Hotline'] },
+    { name: 'AnimalSafe', logo: '🐾', rating: 4.6, price: '€17,99/Monat', bonus: '€20 Bonus', features: ['Vollschutz', 'Flexible Zahlung', 'Schnelle Erstattung'] },
   ],
   krypto: [
-    { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
-    { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
-    { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
-  ]
-}
+    { name: 'CryptoPro', logo: '₿', rating: 4.8, price: '€9,99/Monat', bonus: '0 Gebühren', features: ['Sichere Wallet', 'Schnelle Trades', '24/7 Support'] },
+    { name: 'CoinBase', logo: '₿', rating: 4.5, price: '€12,99/Monat', bonus: '€10 Bonus', features: ['Breite Auswahl', 'Einfache Nutzung', 'Hohe Sicherheit'] },
+  ],
+};
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("versicherungen")
-  const [selectedProduct, setSelectedProduct] = useState("")
+  const [activeCategory, setActiveCategory] = useState('versicherungen');
 
-  const scrollToSection = (sectionId: string) => {
-    setActiveCategory(sectionId)
-    const element = document.getElementById('comparison-section')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
+
+  const navItems = [
+    { key: 'search-section', label: 'Suche', icon: Search },
+    { key: 'comparison-section', label: 'Vergleich', icon: Shield },
+    { key: 'ratgeber', label: 'Ratgeber', icon: Heart },
+  ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow-sm relative border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <TrendingUp className="h-8 w-8 text-green-600" />
-            <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
+      <header className="bg-white shadow-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 sm:py-6 flex justify-between items-center">
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-600" />
+            <span className="text-lg sm:text-xl font-bold">SmartFinanz</span>
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <button
-              onClick={() => scrollToSection('versicherungen')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
-              Versicherungen
-            </button>
-            <button
-              onClick={() => scrollToSection('banking')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
-              Banking
-            </button>
-            <button
-              onClick={() => scrollToSection('tierversicherungen')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
-              Tierversicherung
-            </button>
-            <button
-              onClick={() => scrollToSection('krypto')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
-              Krypto
-            </button>
-            <a href="#ratgeber" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Ratgeber</a>
+          <nav className="hidden sm:flex space-x-4 sm:space-x-8">
+            {navItems.map(({ key, label, icon: Icon }) => (
+              <button
+                key={key}
+                onClick={() => scrollToSection(key)}
+                className={`text-sm sm:text-base font-medium transition-colors ${
+                  activeCategory === key ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
+                }`}
+              >
+                <Icon className="inline-block mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                {label}
+              </button>
+            ))}
           </nav>
-          <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700">Vergleich starten</Button>
-            <button
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+          <Button className="bg-green-600 hover:bg-green-700 text-sm sm:text-base">
+            Angebote finden
+          </Button>
         </div>
-
-        {/* Mobile Menü */}
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-4 py-4 space-y-4">
-              <button
-                onClick={() => { scrollToSection('versicherungen'); setMobileMenuOpen(false); }}
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-              >
-                Versicherungen
-              </button>
-              <button
-                onClick={() => { scrollToSection('banking'); setMobileMenuOpen(false); }}
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-              >
-                Banking
-              </button>
-              <button
-                onClick={() => { scrollToSection('tierversicherungen'); setMobileMenuOpen(false); }}
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-              >
-                Tierversicherung
-              </button>
-              <button
-                onClick={() => { scrollToSection('krypto'); setMobileMenuOpen(false); }}
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-              >
-                Krypto
-              </button>
-              <a href="#ratgeber" className="block text-gray-600 hover:text-green-600 transition-colors">Ratgeber</a>
-              <Button className="w-full bg-green-600 hover:bg-green-700">Vergleich starten</Button>
-            </nav>
-          </div>
-        )}
-      </header>
-
-      {/* Hero-Bereich - NerdWallet-Stil */}
-      <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
-              Finanzentscheidungen leicht gemacht? Lassen Sie uns das für Sie erledigen.
-            </h2>
-            <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
-              Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
-            </p>
-
-            {/* Interaktives Widget */}
-            <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-md sm:max-w-xl mx-auto">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
-                Nach welchem Produkt oder Service suchen Sie?
-              </h3>
-
-              <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                <Button
-                  variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("versicherung"); scrollToSection('versicherungen'); }}
-                >
-                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Versicherung
-                </Button>
-                <Button
-                  variant={selectedProduct === "banking" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("banking"); scrollToSection('banking'); }}
-                >
-                  <PiggyBank className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Banking
-                </Button>
-                <Button
-                  variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("tierversicherung"); scrollToSection('tierversicherungen'); }}
-                >
-                  <Heart className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Tierversicherung
-                </Button>
-                <Button
-                  variant={selectedProduct === "krypto" ? "default" : "outline"}
-                  className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("krypto"); scrollToSection('krypto'); }}
-                >
-                  <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Krypto Trading
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Kategorie-Navigation */}
-      <section className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
-            {[
-              { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
-              { key: 'banking', label: 'BANKING', icon: PiggyBank },
-              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'krypto', label: 'KRYPTO', icon: TrendingUp }
-            ].map(({ key, label, icon: Icon }) => (
+        <div className="sm:hidden container mx-auto px-4 pb-4">
+          <div className="flex justify-between space-x-2">
+            {navItems.map(({ key, label, icon: Icon }) => (
               <button
                 key={key}
                 onClick={() => scrollToSection(key)}
                 className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
-                  activeCategory === key
-                    ? 'bg-green-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
+                  activeCategory === key ? 'bg-green-600 text-white' : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
               >
                 <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
@@ -213,18 +86,18 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
+      </header>
       {/* Hauptüberschrift */}
       <section className="py-8 sm:py-12 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+            Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.
+          </h3>
           <Button size="lg" className="bg-green-600 hover:bg-green-700">
             Beste Empfehlungen ansehen
           </Button>
         </div>
       </section>
-
       {/* Vertrauensabzeichen */}
       <section className="py-6 sm:py-8 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -248,12 +121,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Suchbereich */}
       <section className="py-8 sm:py-12 bg-white" id="search-section">
         <div className="container mx-auto px-4">
           <div className="max-w-xl sm:max-w-2xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das perfekte Angebot</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">
+              Finden Sie das perfekte Angebot
+            </h3>
             <div className="relative">
               <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" />
               <Input
@@ -264,12 +138,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Vergleichstabellen */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
         <div className="container mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
-
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+            Anbieter im Vergleich
+          </h3>
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
               <TabsTrigger value="versicherungen" className="flex items-center text-xs sm:text-sm">
@@ -289,12 +163,14 @@ export default function Home() {
                 Krypto
               </TabsTrigger>
             </TabsList>
-
             {Object.entries(providerData).map(([category, providers]) => (
               <TabsContent key={category} value={category}>
                 <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {providers.map((provider, index) => (
-                    <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200">
+                    <Card
+                      key={provider.name}
+                      className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200"
+                    >
                       {index === 0 && (
                         <Badge className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm">
                           Top Empfehlung
@@ -307,16 +183,22 @@ export default function Home() {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                              className={`h-3 w-3 sm:h-4 w-4 ${
+                                i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                              }`}
                             />
                           ))}
-                          <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
+                          <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">
+                            {provider.rating}
+                          </span>
                         </div>
                       </CardHeader>
                       <CardContent className="space-y-2 sm:space-y-4">
                         <div className="text-center border-b pb-2 sm:pb-4">
                           <p className="text-xl sm:text-2xl font-bold text-green-600">{provider.price}</p>
-                          <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm">{provider.bonus}</Badge>
+                          <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm">
+                            {provider.bonus}
+                          </Badge>
                         </div>
                         <ul className="space-y-1 sm:space-y-2">
                           {provider.features.map((feature, i) => (
@@ -341,11 +223,12 @@ export default function Home() {
           </Tabs>
         </div>
       </section>
-
       {/* Beratungsbereich */}
       <section className="py-12 sm:py-16 bg-white" id="ratgeber">
         <div className="container mx-auto px-4">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Ratgeber & Tipps</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+            Ratgeber & Tipps
+          </h3>
           <div className="grid gap-4 sm:gap-8 md:grid-cols-3">
             <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
               <CardHeader>
@@ -363,7 +246,6 @@ export default function Home() {
                 </Button>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
               <CardHeader>
                 <div className="flex items-center space-x-2 sm:space-x-3">
@@ -380,7 +262,6 @@ export default function Home() {
                 </Button>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
               <CardHeader>
                 <div className="flex items-center space-x-2 sm:space-x-3">
@@ -400,7 +281,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Statistik-Bereich */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
@@ -424,7 +304,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -441,28 +320,81 @@ export default function Home() {
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><button onClick={() => scrollToSection('versicherungen')} className="hover:text-white transition-colors">Versicherungen</button></li>
-                <li><button onClick={() => scrollToSection('banking')} className="hover:text-white transition-colors">Banking</button></li>
-                <li><button onClick={() => scrollToSection('tierversicherungen')} className="hover:text-white transition-colors">Tierversicherung</button></li>
-                <li><button onClick={() => scrollToSection('krypto')} className="hover:text-white transition-colors">Krypto Trading</button></li>
+                <li>
+                  <button onClick={() => scrollToSection('versicherungen')} className="hover:text-white transition-colors">
+                    Versicherungen
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollToSection('banking')} className="hover:text-white transition-colors">
+                    Banking
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollToSection('tierversicherungen')} className="hover:text-white transition-colors">
+                    Tierversicherung
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollToSection('krypto')} className="hover:text-white transition-colors">
+                    Krypto Trading
+                  </button>
+                </li>
               </ul>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
-                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
-                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
-                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
+                <li>
+                  <Link href="/ueber-uns" className="hover:text-white transition-colors">
+                    Über uns
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/partnerprogramme" className="hover:text-white transition-colors">
+                    Partnerprogramme
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/karriere" className="hover:text-white transition-colors">
+                    Karriere
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/kontakt" className="hover:text-white transition-colors">
+                    Kontakt
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
-                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
-                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
-                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+                <li>
+                  <Link href="/datenschutz" className="hover:text-white transition-colors">
+                    Datenschutz
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/impressum" className="hover:text-white transition-colors">
+                    Impressum
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/agb" className="hover:text-white transition-colors">
+                    AGB
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://partner.e-recht24.de/go.cgi?pid=912&wmid=16&cpid=1&prid=1&subid=&target=eRecht24_Startseite"
+                    className="hover:text-white transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    eRecht24
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -472,5 +404,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
