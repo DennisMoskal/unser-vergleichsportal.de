@@ -1,4 +1,4 @@
-"use client" // Add this line to make it a Client Component
+"use client"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -13,7 +13,25 @@ const providerData = {
     { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
     { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
     { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
-    { name: "eRecht24", rating: 4.3, features: ["Rechtssicherheit", "DSGVO-konform", "Social Media", "Marketing", "Generator für AGB, Impressum", "Neu:KI"], price: "ab 15€/Monat", bonus: "Jährlich 50% sparen", logo: "⚖️" },
+    { 
+      name: "eRecht24", 
+      rating: 4.3, 
+      features: [
+        "Rechtssicherheit für Webseiten",
+        "DSGVO-konform mit Premium Tools",
+        "Automatische Rechtstext-Generatoren",
+        "Abmahnschutz inklusive",
+        "Praxis-Tools für Social Media & Marketing",
+        "Kostenlose Erstberatung (ab Business)",
+        "NEU: KI-gestützte Lösungen",
+        "Zentraler Projekt Manager",
+        "Live-Webinare zu Internetrecht",
+        "Muster-Verträge & Checklisten"
+      ], 
+      price: "ab 15€/Monat", 
+      bonus: "50% Rabatt bei Jahreszahlung", 
+      logo: "⚖️" 
+    },
     { name: "BavariaDirekt", rating: 4.5, features: ["Regional stark", "Persönlicher Service", "Faire Preise"], price: "ab 16€/Monat", bonus: "Treuebonus", logo: "🍺" },
   ],
 }
@@ -43,7 +61,7 @@ export default function Versicherungen() {
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <ul className="space-y-1">
+              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {provider.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm">
                     <Check className="mr-2 h-4 w-4 text-green-600" />
