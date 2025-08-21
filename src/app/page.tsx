@@ -51,16 +51,6 @@ export default function Home() {
     }
   }
 
-  const handleProductNavigation = (sectionId: string) => {
-    // Wenn wir bereits auf der Hauptseite sind, scroll direkt
-    if (window.location.pathname === '/') {
-      scrollToSection(sectionId)
-    } else {
-      // Sonst navigiere zur Hauptseite mit Hash
-      window.location.href = `/#${sectionId}`
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
