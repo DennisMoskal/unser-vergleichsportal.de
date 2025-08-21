@@ -1,35 +1,35 @@
-"use client"
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { TrendingUp, Shield } from "lucide-react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// Google Fonts
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+// Metadata exportieren (Server Component erlaubt)
 export const metadata: Metadata = {
   title: "SmartFinanz",
   description: "Vergleich und Anbieter für Finanzen",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const pathname = usePathname();
+// Client-Komponente nur für den Button
+function BackToHomeButton() {
+  "use client";
+  const pathname = require("next/navigation").usePathname();
+  if (pathname === "/") return null;
+  return (
+    <div className="text-center mt-6">
+      <Link href="/" className="inline-block text-green-600 hover:underline p-4">
+        Zurück zur Startseite
+      </Link>
+    </div>
+  );
+}
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
@@ -37,12 +37,9 @@ export default function RootLayout({
           name="google-site-verification"
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
-        <Script
-          crossOrigin="anonymous"
-          src="//unpkg.com/same-runtime/dist/index.global.js"
-        />
+        <Script crossOrigin="anonymous" src="//unpkg.com/same-runtime/dist/index.global.js" />
       </head>
-      <body suppressHydrationWarning className="antialiased flex flex-col min-h-screen">
+      <body className="antialiased flex flex-col min-h-screen">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -54,19 +51,10 @@ export default function RootLayout({
         </header>
 
         {/* Seiteninhalt */}
-        <main className="flex-1">{children}</main>
-
-        {/* Zurück zur Startseite Button nur auf Unterseiten */}
-        {pathname !== "/" && (
-          <div className="text-center mt-6">
-            <Link
-              href="/"
-              className="inline-block text-green-600 hover:underline p-4"
-            >
-              Zurück zur Startseite
-            </Link>
-          </div>
-        )}
+        <main className="flex-1">
+          {children}
+          <BackToHomeButton />
+        </main>
 
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-8 sm:py-12 mt-auto">
