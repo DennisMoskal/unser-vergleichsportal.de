@@ -445,7 +445,7 @@ export default function Home() {
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
-                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland, Österreich und der Schweiz.
               </p>
             </div>
             <div>
