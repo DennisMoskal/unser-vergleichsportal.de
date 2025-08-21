@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check } from "lucide-react" // Hinzugefügt: Import von Star und Check
+import { Star, Check } from "lucide-react"
 import Link from "next/link"
+import { TrendingUp } from "lucide-react"
 
 const providerData = {
   versicherungen: [
@@ -18,9 +19,9 @@ const providerData = {
 
 export default function Versicherungen() {
   return (
-    <div className="min-h-screen p-4 bg-white">
-      <h1 className="text-3xl font-bold mb-6">Versicherungen</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="min-h-screen bg-white">
+      <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.versicherungen.map((provider, index) => (
           <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
             {index === 0 && (
@@ -54,9 +55,72 @@ export default function Versicherungen() {
           </Card>
         ))}
       </div>
-      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline">
+      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
         Zurück zur Startseite
       </Link>
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <TrendingUp className="h-6 w-6 text-green-400" />
+                <h4 className="text-xl font-bold">SmartFinanz</h4>
+              </div>
+              <p className="text-gray-400 text-sm">
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
+              </p>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Produkte</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/versicherungen" className="hover:text-white transition-colors text-left">
+                    Versicherungen
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/banking" className="hover:text-white transition-colors text-left">
+                    Banking
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors text-left">
+                    Tierversicherung
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/krypto" className="hover:text-white transition-colors text-left">
+                    Krypto Trading
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Unternehmen</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Rechtliches</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
+                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
+                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
+                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-sm text-gray-400">
+              © 2025 SmartFinanz. Alle Rechte vorbehalten.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
