@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X, Calculator, CreditCard, Banknote } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 const providerData = {
   versicherungen: [
@@ -427,36 +428,36 @@ export default function Home() {
               <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a 
+                  <Link 
                     href="/#versicherungen" 
                     className="hover:text-white transition-colors"
                   >
                     Versicherungen
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
+                  <Link 
                     href="/#banking" 
                     className="hover:text-white transition-colors"
                   >
                     Banking
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
+                  <Link 
                     href="/#tierversicherungen" 
                     className="hover:text-white transition-colors"
                   >
                     Tierversicherung
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
+                  <Link 
                     href="/#krypto" 
                     className="hover:text-white transition-colors"
                   >
                     Krypto Trading
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
