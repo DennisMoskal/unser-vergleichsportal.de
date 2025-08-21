@@ -8,6 +8,22 @@ const providerData = {
   tierversicherungen: [
     { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
     { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
+    { 
+      name: "DA Direkt Tierkrankenversicherung", 
+      rating: 4.7, 
+      features: [
+        "Umfassender Schutz für Hund und Katze",
+        "OP-Schutz inklusive",
+        "Freie Tierarztwahl",
+        "Fairster Tierversicherer (Focus Money 2025)",
+        "Schnelle Schadensabwicklung",
+        "Monatlich kündbar",
+        "Bis zu 90% Kostenerstattung"
+      ], 
+      price: "ab 10€/Monat", 
+      bonus: "Gratis-Monat bis 30.09.2025", 
+      logo: "🐾" 
+    },
   ],
 }
 
@@ -62,7 +78,7 @@ export default function Tierversicherungen() {
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
-             </p>
+              </p>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
