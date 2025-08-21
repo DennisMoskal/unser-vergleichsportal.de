@@ -427,36 +427,36 @@ export default function Home() {
               <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('versicherungen')} 
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/#versicherungen" 
+                    className="hover:text-white transition-colors"
                   >
                     Versicherungen
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('banking')} 
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/#banking" 
+                    className="hover:text-white transition-colors"
                   >
                     Banking
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('tierversicherungen')} 
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/#tierversicherungen" 
+                    className="hover:text-white transition-colors"
                   >
                     Tierversicherung
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('krypto')} 
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/#krypto" 
+                    className="hover:text-white transition-colors"
                   >
                     Krypto Trading
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
