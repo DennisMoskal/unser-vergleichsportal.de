@@ -103,6 +103,13 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
+      {/* Zurück zur Startseite Button */}
+      <div className="text-center mt-6">
+        <Link href="/" className="inline-block text-green-600 hover:underline p-4">
+          Zurück zur Startseite
+        </Link>
+      </div>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -114,7 +121,7 @@ export default function UeberUnsPage() {
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
-            </p>
+              </p>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
