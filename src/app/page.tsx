@@ -51,14 +51,6 @@ export default function Home() {
     }
   }
 
-  const handleProductNavigation = (sectionId: string) => {
-    if (window.location.pathname === '/') {
-      scrollToSection(sectionId)
-    } else {
-      window.location.href = `/#${sectionId}`
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -403,12 +395,12 @@ export default function Home() {
               <CardHeader>
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-500" />
-                  <CardTitle>Krypto für Einsteiger</CardTitle>
+                  <CardTitle>Krypto Trading Deutschland</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-2 sm:mb-4">
-                  Grundlagen des Kryptowährungshandels: Was Sie vor dem ersten Investment wissen müssen.
+                  Was Sie über Kryptowährungen wissen müssen: Rechtslage, Steuern und beste Plattformen.
                 </p>
                 <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
                   Mehr erfahren
@@ -419,79 +411,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Statistik-Bereich */}
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
+            <div>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h4>
+              <p className="text-green-100 text-sm sm:text-base">Anbieter verglichen</p>
+            </div>
+            <div>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h4>
+              <p className="text-green-100 text-sm sm:text-base">Zufriedene Kunden</p>
+            </div>
+            <div>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h4>
+              <p className="text-green-100 text-sm sm:text-base">Gespart insgesamt</p>
+            </div>
+            <div>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h4>
+              <p className="text-green-100 text-sm sm:text-base">Durchschnittsbewertung</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-green-600 text-white py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <TrendingUp className="h-6 w-6 text-green-400" />
-                <h4 className="text-xl font-bold">SmartFinanz</h4>
+              <div className="flex items-center space-x-2 mb-2 sm:mb-4">
+                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm sm:text-base">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
               </p>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Produkte</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <button 
-                    onClick={() => handleProductNavigation('versicherungen')}
-                    className="hover:text-white transition-colors text-left"
-                  >
-                    Versicherungen
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleProductNavigation('banking')}
-                    className="hover:text-white transition-colors text-left"
-                  >
-                    Banking
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleProductNavigation('tierversicherungen')}
-                    className="hover:text-white transition-colors text-left"
-                  >
-                    Tierversicherung
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleProductNavigation('krypto')}
-                    className="hover:text-white transition-colors text-left"
-                  >
-                    Krypto Trading
-                  </button>
-                </li>
+              <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><button onClick={() => scrollToSection('versicherungen')} className="hover:text-white transition-colors">Versicherungen</button></li>
+                <li><button onClick={() => scrollToSection('banking')} className="hover:text-white transition-colors">Banking</button></li>
+                <li><button onClick={() => scrollToSection('tierversicherungen')} className="hover:text-white transition-colors">Tierversicherung</button></li>
+                <li><button onClick={() => scrollToSection('krypto')} className="hover:text-white transition-colors">Krypto Trading</button></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Unternehmen</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="/ueber-uns" className="hover:text-white transition-colors">Über uns</a></li>
-                <li><a href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</a></li>
-                <li><a href="/karriere" className="hover:text-white transition-colors">Karriere</a></li>
-                <li><a href="/kontakt" className="hover:text-white transition-colors">Kontakt</a></li>
+              <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Rechtliches</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
-                <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
-                <li><a href="/agb" className="hover:text-white transition-colors">AGB</a></li>
-                <li><a href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</a></li>
+              <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
+                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
+                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
+                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-green-700 mt-8 pt-6 text-center">
-            <p className="text-sm text-gray-400">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten.
-            </p>
+          <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
+            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
