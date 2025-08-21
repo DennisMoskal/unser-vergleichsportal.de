@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X, Calculator, CreditCard, Banknote } from "lucide-react"
 import { useState } from "react"
-import Link from "next.js"
 
 const providerData = {
   versicherungen: [
