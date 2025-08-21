@@ -34,7 +34,7 @@ const providerData = {
     { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
     { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
     { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
-    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Forex", "Professionelle Tools"], price: "0€ Kommission", bonus: "Demo-Konto", logo: "📊" },
+    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Aktien und ETFs", "Forex", "Kryptowährungen", "Professionelle Tools"], price: "Gratis Aktien Aktion", bonus: "bis 2,3% p.a. Zinsen", logo: "📊" },
   ]
 }
 
