@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check } from "lucide-react"
+import { Star, Check, Shield } from "lucide-react"
 import Link from "next/link"
-import { TrendingUp } from "lucide-react"
 
 const providerData = {
   versicherungen: [
@@ -62,42 +61,26 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <TrendingUp className="h-6 w-6 text-green-400" />
-                <h4 className="text-xl font-bold">SmartFinanz</h4>
+              <div className="flex items-center space-x-2 mb-2 sm:mb-4">
+                <Shield className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm sm:text-base">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
               </p>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Produkte</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/versicherungen" className="hover:text-white transition-colors text-left">
-                    Versicherungen
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/banking" className="hover:text-white transition-colors text-left">
-                    Banking
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tierversicherungen" className="hover:text-white transition-colors text-left">
-                    Tierversicherung
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/krypto" className="hover:text-white transition-colors text-left">
-                    Krypto Trading
-                  </Link>
-                </li>
+              <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><a href="#versicherungen" className="hover:text-white transition-colors">Versicherungen</a></li>
+                <li><a href="#banking" className="hover:text-white transition-colors">Banking</a></li>
+                <li><a href="#tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</a></li>
+                <li><a href="#krypto" className="hover:text-white transition-colors">Krypto Trading</a></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Unternehmen</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
                 <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
                 <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
@@ -105,8 +88,8 @@ export default function Versicherungen() {
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Rechtliches</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
                 <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
                 <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
@@ -114,10 +97,8 @@ export default function Versicherungen() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-            <p className="text-sm text-gray-400">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten.
-            </p>
+          <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
+            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
