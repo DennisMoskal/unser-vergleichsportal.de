@@ -70,16 +70,16 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <Link href="/#versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Versicherungen
             </Link>
-            <Link href="/#banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Banking
             </Link>
-            <Link href="/#tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Tierversicherung
             </Link>
-            <Link href="/#krypto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/krypto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Krypto
             </Link>
             <Link href="#ratgeber" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
@@ -102,28 +102,28 @@ export default function Home() {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4">
               <Link
-                href="/#versicherungen"
+                href="/versicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Versicherungen
               </Link>
               <Link
-                href="/#banking"
+                href="/banking"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Banking
               </Link>
               <Link
-                href="/#tierversicherungen"
+                href="/tierversicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tierversicherung
               </Link>
               <Link
-                href="/#krypto"
+                href="/krypto"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -163,34 +163,34 @@ export default function Home() {
                 <Button
                   variant={selectedProduct === "versicherung" ? "default" : "outline"}
                   className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("versicherung"); scrollToSection('versicherungen'); }}
+                  onClick={() => setSelectedProduct("versicherung")}
                 >
                   <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Versicherung
+                  <Link href="/versicherungen" className="no-underline text-inherit">Versicherung</Link>
                 </Button>
                 <Button
                   variant={selectedProduct === "banking" ? "default" : "outline"}
                   className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("banking"); scrollToSection('banking'); }}
+                  onClick={() => setSelectedProduct("banking")}
                 >
                   <PiggyBank className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Banking
+                  <Link href="/banking" className="no-underline text-inherit">Banking</Link>
                 </Button>
                 <Button
                   variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
                   className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("tierversicherung"); scrollToSection('tierversicherungen'); }}
+                  onClick={() => setSelectedProduct("tierversicherung")}
                 >
                   <Heart className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Tierversicherung
+                  <Link href="/tierversicherungen" className="no-underline text-inherit">Tierversicherung</Link>
                 </Button>
                 <Button
                   variant={selectedProduct === "krypto" ? "default" : "outline"}
                   className="h-12 sm:h-14 text-left justify-start sm:justify-center flex items-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("krypto"); scrollToSection('krypto'); }}
+                  onClick={() => setSelectedProduct("krypto")}
                 >
                   <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Krypto Trading
+                  <Link href="/krypto" className="no-underline text-inherit">Krypto Trading</Link>
                 </Button>
               </div>
             </div>
@@ -210,16 +210,12 @@ export default function Home() {
             ].map(({ key, label, icon: Icon }) => (
               <Link
                 key={key}
-                href={`/#${key}`}
+                href={`/${key}`}
                 className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
                   activeCategory === key
                     ? 'bg-green-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection(key)
-                }}
               >
                 <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 {label}
@@ -465,22 +461,22 @@ export default function Home() {
               <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link href="/#versicherungen" className="hover:text-white transition-colors text-left">
+                  <Link href="/versicherungen" className="hover:text-white transition-colors text-left">
                     Versicherungen
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#banking" className="hover:text-white transition-colors text-left">
+                  <Link href="/banking" className="hover:text-white transition-colors text-left">
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#tierversicherungen" className="hover:text-white transition-colors text-left">
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors text-left">
                     Tierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#krypto" className="hover:text-white transition-colors text-left">
+                  <Link href="/krypto" className="hover:text-white transition-colors text-left">
                     Krypto Trading
                   </Link>
                 </li>
