@@ -50,7 +50,23 @@ const providerData = {
       bonus: "50% Rabatt bei Jahreszahlung", 
       logo: "⚖️" 
     },
-    { name: "BavariaDirekt", rating: 4.5, features: ["Regional stark", "Persönlicher Service", "Faire Preise"], price: "ab 16€/Monat", bonus: "Treuebonus", logo: "🍺" },
+    { 
+      name: "BavariaDirekt", 
+      rating: 4.5, 
+      features: [
+        "Günstige Kfz-Versicherung ab 9,70€/Monat",
+        "Haftpflichtversicherung online abschließen",
+        "Tierkrankenversicherung günstig mit OP-Schutz",
+        "Rechtsschutzversicherung günstig und flexibel",
+        "Bis zu 350€ sparen auf Versicherungen",
+        "24h-Notfall-Hotline für schnelle Hilfe",
+        "91% Weiterempfehlung von Kunden",
+        "TÜV-geprüfter Service und Kundenzufriedenheit"
+      ], 
+      price: "ab 9,70€/Monat", 
+      bonus: "Treuebonus + 5% Rabatt", 
+      logo: "🍺" 
+    },
   ],
 }
 
