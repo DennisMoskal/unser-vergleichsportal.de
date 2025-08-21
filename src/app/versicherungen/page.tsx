@@ -1,3 +1,5 @@
+"use client" // Add this line to make it a Client Component
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
