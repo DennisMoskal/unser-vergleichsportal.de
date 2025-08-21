@@ -39,21 +39,21 @@ export default function KontaktPage() {
               <div>
                 <div className="flex items-center space-x-2 mb-2">
                   <Phone className="h-5 w-5 text-green-600" />
-                  <span>Telefon: +49 30 12345678</span>
+                  <span>Telefon: 01722058855</span>
                 </div>
                 <p>Unsere Hotline ist montags bis freitags von 9:00 bis 17:00 Uhr erreichbar.</p>
               </div>
               <div>
                 <div className="flex items-center space-x-2 mb-2">
                   <Mail className="h-5 w-5 text-green-600" />
-                  <span>E-Mail: kontakt@smartfinanz.de</span>
+                  <span>E-Mail: smart-finanz@yahoo.com</span>
                 </div>
                 <p>Schreiben Sie uns jederzeit eine Nachricht, und wir antworten Ihnen so schnell wie möglich.</p>
               </div>
               <div>
                 <div className="flex items-center space-x-2 mb-2">
                   <MapPin className="h-5 w-5 text-green-600" />
-                  <span>Adresse: Musterstraße 1, 10115 Berlin, Deutschland</span>
+                  <span>Adresse: Westpreußenstraße 26, 53119 Bonn, Deutschland</span>
                 </div>
                 <p>Besuchen Sie uns vor Ort nach vorheriger Absprache.</p>
               </div>
