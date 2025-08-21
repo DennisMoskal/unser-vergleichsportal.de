@@ -119,7 +119,7 @@ export default function KarrierePage() {
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
-              </p>
+             </p>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
