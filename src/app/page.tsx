@@ -51,6 +51,16 @@ export default function Home() {
     }
   }
 
+  const handleProductNavigation = (sectionId: string) => {
+    // Wenn wir bereits auf der Hauptseite sind, scroll direkt
+    if (window.location.pathname === '/') {
+      scrollToSection(sectionId)
+    } else {
+      // Sonst navigiere zur Hauptseite mit Hash
+      window.location.href = `/#${sectionId}`
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -428,36 +438,36 @@ export default function Home() {
               <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link 
-                    href="/#versicherungen" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('versicherungen')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Versicherungen
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link 
-                    href="/#banking" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('banking')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Banking
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link 
-                    href="/#tierversicherungen" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('tierversicherungen')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Tierversicherung
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link 
-                    href="/#krypto" 
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleProductNavigation('krypto')}
+                    className="hover:text-white transition-colors text-left"
                   >
                     Krypto Trading
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>
