@@ -61,31 +61,21 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <button
-              onClick={() => scrollToSection('versicherungen')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Versicherungen
-            </button>
-            <button
-              onClick={() => scrollToSection('banking')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
+            </Link>
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Banking
-            </button>
-            <button
-              onClick={() => scrollToSection('tierversicherungen')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
+            </Link>
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Tierversicherung
-            </button>
-            <button
-              onClick={() => scrollToSection('krypto')}
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-            >
+            </Link>
+            <Link href="/krypto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Krypto
-            </button>
-            <a href="#ratgeber" className="text-gray-600 hover:text-green-600 transition-colors font-medium">Ratgeber</a>
+            </Link>
+            <Link href="#ratgeber" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Ratgeber
+            </Link>
           </nav>
           <div className="flex items-center space-x-4">
             <Button className="hidden md:block bg-green-600 hover:bg-green-700">Vergleich starten</Button>
@@ -102,31 +92,41 @@ export default function Home() {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4">
-              <button
-                onClick={() => { scrollToSection('versicherungen'); setMobileMenuOpen(false); }}
+              <Link
+                href="/versicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Versicherungen
-              </button>
-              <button
-                onClick={() => { scrollToSection('banking'); setMobileMenuOpen(false); }}
+              </Link>
+              <Link
+                href="/banking"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Banking
-              </button>
-              <button
-                onClick={() => { scrollToSection('tierversicherungen'); setMobileMenuOpen(false); }}
+              </Link>
+              <Link
+                href="/tierversicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Tierversicherung
-              </button>
-              <button
-                onClick={() => { scrollToSection('krypto'); setMobileMenuOpen(false); }}
+              </Link>
+              <Link
+                href="/krypto"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Krypto
-              </button>
-              <a href="#ratgeber" className="block text-gray-600 hover:text-green-600 transition-colors">Ratgeber</a>
+              </Link>
+              <Link
+                href="#ratgeber"
+                className="block text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Ratgeber
+              </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700">Vergleich starten</Button>
             </nav>
           </div>
@@ -445,16 +445,16 @@ export default function Home() {
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
-                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland, Österreich und der Schweiz.
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
               </p>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><button onClick={() => scrollToSection('versicherungen')} className="hover:text-white transition-colors">Versicherungen</button></li>
-                <li><button onClick={() => scrollToSection('banking')} className="hover:text-white transition-colors">Banking</button></li>
-                <li><button onClick={() => scrollToSection('tierversicherungen')} className="hover:text-white transition-colors">Tierversicherung</button></li>
-                <li><button onClick={() => scrollToSection('krypto')} className="hover:text-white transition-colors">Krypto Trading</button></li>
+                <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
+                <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
+                <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
+                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
               </ul>
             </div>
             <div>
@@ -484,3 +484,4 @@ export default function Home() {
     </div>
   )
 }
+</
