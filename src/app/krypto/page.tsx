@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check } from "lucide-react"
+import { Star, Check, TrendingUp } from "lucide-react"
 import Link from "next/link"
 
 const providerData = {
@@ -15,9 +15,9 @@ const providerData = {
 
 export default function Krypto() {
   return (
-    <div className="min-h-screen p-4 bg-white">
-      <h1 className="text-3xl font-bold mb-6">Krypto Trading</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="min-h-screen bg-white">
+      <h1 className="text-3xl font-bold mb-6 p-4">Krypto Trading</h1>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.krypto.map((provider, index) => (
           <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
             {index === 0 && (
@@ -51,16 +51,61 @@ export default function Krypto() {
           </Card>
         ))}
       </div>
-      <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
+      <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
         <p>
           CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
           71% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
           Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
         </p>
       </div>
-      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline">
+      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
         Zurück zur Startseite
       </Link>
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
+            <div>
+              <div className="flex items-center space-x-2 mb-2 sm:mb-4">
+                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
+              </div>
+              <p className="text-gray-400 text-sm sm:text-base">
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
+              </p>
+            </div>
+            <div>
+              <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><a href="#versicherungen" className="hover:text-white transition-colors">Versicherungen</a></li>
+                <li><a href="#banking" className="hover:text-white transition-colors">Banking</a></li>
+                <li><a href="#tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</a></li>
+                <li><a href="#krypto" className="hover:text-white transition-colors">Krypto Trading</a></li>
+              </ul>
+            </div>
+            <div>
+              <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
+                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
+                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
+                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
+            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
