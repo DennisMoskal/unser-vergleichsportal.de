@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import Link from "next/link";
 import { TrendingUp, Shield } from "lucide-react";
+import { BackToHomeButton } from "./BackToHomeButton"; // <- Client-Komponente importieren
 
 // Google Fonts
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -14,20 +15,6 @@ export const metadata: Metadata = {
   title: "SmartFinanz",
   description: "Vergleich und Anbieter für Finanzen",
 };
-
-// Client-Komponente nur für den Button
-function BackToHomeButton() {
-  "use client";
-  const pathname = require("next/navigation").usePathname();
-  if (pathname === "/") return null;
-  return (
-    <div className="text-center mt-6">
-      <Link href="/" className="inline-block text-green-600 hover:underline p-4">
-        Zurück zur Startseite
-      </Link>
-    </div>
-  );
-}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
