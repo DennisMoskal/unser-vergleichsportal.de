@@ -9,7 +9,25 @@ const providerData = {
     { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
     { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
     { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
-    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Aktien und ETFs", "Forex", "Kryptowährungen", "Professionelle Tools"], price: "Gratis Aktien Aktion", bonus: "bis 2,3% p.a. Zinsen", logo: "📊" },
+    { 
+      name: "XTB", 
+      rating: 4.5, 
+      features: [
+        "Gratis Aktie für neue Investoren",
+        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+        "Über 8000 Aktien & ETFs",
+        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
+        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
+        "eWallet mit virtueller Mastercard",
+        "Smarte ETF-Sparpläne",
+        "0% Kommission bis 100.000€ Umsatz",
+        "Kostenlose Ein- & Auszahlungen",
+        "Platz 1 CFD-Broker 2024/25"
+      ], 
+      price: "0€ Kommission", 
+      bonus: "Kostenlose Kontoeröffnung", 
+      logo: "📊" 
+    },
   ],
 }
 
@@ -38,7 +56,7 @@ export default function Krypto() {
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <ul className="space-y-1">
+              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {provider.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm">
                     <Check className="mr-2 h-4 w-4 text-green-600" />
