@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Star, Check } from "lucide-react" // Hinzugefügt: Import von Star und Check
 import Link from "next/link"
 
 const providerData = {
