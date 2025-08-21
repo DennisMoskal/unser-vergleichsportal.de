@@ -49,7 +49,16 @@ export default function Versicherungen() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              <Button
+                className="w-full bg-green-600 hover:bg-green-700 text-white mt-4"
+                onClick={() =>
+                  provider.name === "eRecht24"
+                    ? window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
+                    : window.open("/anbieter", "_blank")
+                }
+              >
+                Zum Anbieter
+              </Button>
             </CardContent>
           </Card>
         ))}
