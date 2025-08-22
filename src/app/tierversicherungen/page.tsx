@@ -24,26 +24,6 @@ const providerData = {
       bonus: "Gratis-Monat bis 30.09.2025", 
       logo: "🐾" 
     },
-    { 
-      name: "XTB", 
-      rating: 4.5, 
-      features: [
-        "Gratis Aktie für neue Investoren", 
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
-      ], 
-      price: "0€ Kommission", 
-      bonus: "Kostenlose Kontoeröffnung", 
-      logo: "📊" 
-    },
   ],
 }
 
@@ -53,7 +33,7 @@ export default function Tierversicherungen() {
       <h1 className="text-3xl font-bold mb-6 p-4">Tierversicherung</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.tierversicherungen.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col">
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
             )}
@@ -67,7 +47,7 @@ export default function Tierversicherungen() {
                 <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
               </div>
             </CardHeader>
-            <CardContent className="space-y-2 flex-grow min-h-0">
+            <CardContent className="space-y-2">
               <div className="text-center border-b pb-2">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
@@ -80,16 +60,8 @@ export default function Tierversicherungen() {
                   </li>
                 ))}
               </ul>
+              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
             </CardContent>
-            <div className="p-4 mt-auto">
-              {provider.name === "XTB" ? (
-                <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Zum Anbieter</Button>
-                </a>
-              ) : (
-                <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Zum Anbieter</Button>
-              )}
-            </div>
           </Card>
         ))}
       </div>
