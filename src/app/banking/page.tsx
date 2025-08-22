@@ -1,14 +1,32 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp } from "lucide-react"
+import { Star, Check, PiggyBank } from "lucide-react"
 import Link from "next/link"
 
 const providerData = {
-  krypto: [
-    { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
-    { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
-    { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
+  banking: [
+    { 
+      name: "Tarifcheck.de", 
+      rating: 4.5, 
+      features: [
+        "Über 20 Jahre Erfahrung als Vergleichsportal",
+        "100% kostenloser und unverbindlicher Vergleich",
+        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+        "Mehrfach ausgezeichnet mit 'sehr gut'",
+        "eKomi Silber Siegel mit 4,5/5 Sternen",
+        "Über 3.194 Kundenbewertungen",
+        "Deutschlands drittgrößtes Vergleichsportal",
+        "Vertrauen von Millionen Verbrauchern",
+        "Bis zu 1.000€ jährlich sparen möglich"
+      ], 
+      price: "100% kostenlos", 
+      bonus: "Bis zu 120€ Neukundenbonus", 
+      logo: "🏆" 
+    },
+    { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
+    { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
+    { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
     { 
       name: "XTB", 
       rating: 4.5, 
@@ -21,24 +39,43 @@ const providerData = {
         "eWallet mit virtueller Mastercard",
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen", 
+        "Kostenlose Ein- & Auszahlungen",
         "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
       ], 
       price: "0€ Kommission", 
-      bonus: "Kostenlose Kontoeröffnung", 
+      bonus: "Demo-Konto", 
       logo: "📊" 
+    },
+    { 
+      name: "Credimaxx", 
+      rating: 4.9, 
+      features: [
+        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+        "Sofortvermittlung durch erfahrene Kreditprofis",
+        "Digitaler Abschluss mit WebID oder VideoIdent",
+        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
+        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
+        "Vermittlung in bis zu 1 Minute",
+        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
+        "25 Jahre Erfahrung in der Kreditvermittlung"
+      ], 
+      price: "ab 10,99% eff. Zins p.a.", 
+      bonus: "Schnelle Auszahlung", 
+      logo: "💳" 
     },
   ],
 }
 
-export default function Krypto() {
+export default function Banking() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Krypto Trading</h1>
+      <h1 className="text-3xl font-bold mb-6 p-4">Banking</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-        {providerData.krypto.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col">
+        {providerData.banking.map((provider, index) => (
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
             )}
@@ -52,12 +89,12 @@ export default function Krypto() {
                 <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
               </div>
             </CardHeader>
-            <CardContent className="space-y-2 flex-grow min-h-0">
+            <CardContent className="space-y-2">
               <div className="text-center border-b pb-2">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <ul className="space-y-1">
                 {provider.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm">
                     <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -65,18 +102,27 @@ export default function Krypto() {
                   </li>
                 ))}
               </ul>
-            </CardContent>
-            <div className="p-4 mt-auto">
-              {provider.name === "XTB" ? (
+              {provider.name === "Credimaxx" ? (
+                <Link href="https://www.credimaxx.de/?a_aid=S37C8H62WGM9D" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Kredit</Button>
+                </Link>
+              ) : provider.name === "Tarifcheck.de" ? (
+                <Link href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt vergleichen</Button>
+                </Link>
+              ) : provider.name === "XTB" ? (
                 <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Zum Anbieter</Button>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
                 </a>
               ) : (
-                <Link href={`/anbieter/${provider.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Zum Anbieter</Button>
-                </Link>
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
               )}
-            </div>
+              {provider.name === "Credimaxx" && (
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  *Wir erhalten eine Provision für Käufe über diesen Link
+                </p>
+              )}
+            </CardContent>
           </Card>
         ))}
       </div>
@@ -95,7 +141,7 @@ export default function Krypto() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-2 sm:mb-4">
-                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <PiggyBank className="h-5 w-5 sm:h-6 w-6 text-green-500" />
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
@@ -133,7 +179,6 @@ export default function Krypto() {
           <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
             <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
           </div>
-        Ascending
         </div>
       </footer>
     </div>
