@@ -1,39 +1,41 @@
+// /app/tierversicherungen/page.tsx
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Check, Heart } from "lucide-react"
 import Link from "next/link"
 
-const providerData = {
-  tierversicherungen: [
-    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
-    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
-    { 
-      name: "DA Direkt Tierkrankenversicherung", 
-      rating: 4.7, 
-      features: [
-        "Umfassender Schutz für Hund und Katze",
-        "OP-Schutz inklusive",
-        "Freie Tierarztwahl",
-        "Fairster Tierversicherer (Focus Money 2025)",
-        "Schnelle Schadensabwicklung",
-        "Monatlich kündbar",
-        "Bis zu 90% Kostenerstattung"
-      ], 
-      price: "ab 10€/Monat", 
-      bonus: "Gratis-Monat bis 30.09.2025", 
-      logo: "🐾" 
-    },
-  ],
-}
+const providerData = [
+  { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕", url: "/anbieter/petprotect" },
+  { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱", url: "/anbieter/figopet" },
+  { 
+    name: "DA Direkt Tierkrankenversicherung", 
+    rating: 4.7, 
+    features: [
+      "Umfassender Schutz für Hund und Katze",
+      "OP-Schutz inklusive",
+      "Freie Tierarztwahl",
+      "Fairster Tierversicherer (Focus Money 2025)",
+      "Schnelle Schadensabwicklung",
+      "Monatlich kündbar",
+      "Bis zu 90% Kostenerstattung"
+    ], 
+    price: "ab 10€/Monat", 
+    bonus: "Gratis-Monat bis 30.09.2025", 
+    logo: "🐾",
+    url: "/anbieter/da-direkt"
+  },
+]
 
-export default function Tierversicherungen() {
+export default function Haustierversicherungen() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Tierversicherung</h1>
+      <h1 className="text-3xl font-bold mb-6 p-4">Haustierversicherungen</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-        {providerData.tierversicherungen.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative">
+        {providerData.map((provider, index) => (
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
             )}
@@ -62,14 +64,22 @@ export default function Tierversicherungen() {
                   ))}
                 </ul>
               </div>
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              <div className="mt-auto">
+                <Link href={provider.url}>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                    Zum Anbieter
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
         ))}
       </div>
+
       <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
         Zurück zur Startseite
       </Link>
+
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
