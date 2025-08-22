@@ -19,7 +19,7 @@ const providerData = {
       features: [
         "Bis zu 100 % Kostenerstattung",
         "Gratismonat bis 31.08.",
-        "Monatlich kündbar",
+        "monatlich kündbar",
         "Testsieger SEHR GUT",
         "Beliebtester Kfz-Direktversicherer",
         "Fairster Tierversicherer",
@@ -34,11 +34,7 @@ const providerData = {
     },
     { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
     { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
-    { 
-      name: "Tarifcheck", 
-      rating: 4.4, 
-      features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
+    { name: "Tarifcheck", rating: 4.4, features: ["Über 20 Jahre Erfahrung als Vergleichsportal",
         "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
@@ -46,12 +42,7 @@ const providerData = {
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
         "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich"
-      ], 
-      price: "ab 10€/Monat", 
-      bonus: "Cashback", 
-      logo: "💰" 
-    },
+        "Bis zu 1.000€ jährlich sparen möglich"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
     { 
       name: "eRecht24", 
       rating: 4.3, 
@@ -97,8 +88,7 @@ const providerData = {
       name: "XTB", 
       rating: 4.5, 
       features: [
-        "Gratis Aktie für neue Investoren",
-        "Kostenlos für ETFs und echte Aktien",
+        "Gratis Aktie für neue Investoren", "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
         "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente",
@@ -141,9 +131,9 @@ export default function Home() {
     }
   }
 
-  // Hash-Änderung verarbeiten
+  // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
-    const hash = window.location.hash.substring(1)
+    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
     if (hash && ["versicherungen", "banking", "tierversicherungen", "krypto"].includes(hash)) {
       scrollToSection(hash)
     }
@@ -151,40 +141,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* SEO Meta Tags */}
-      <head>
-        <title>SmartFinanz: Beste Versicherungen, Banking & Krypto vergleichen</title>
-        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte wie Versicherungen, Bankkonten, Tierversicherungen und Krypto-Plattformen. Finden Sie die besten Angebote schnell und einfach mit SmartFinanz!" />
-        <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherung, Krypto Trading, SmartFinanz" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://smart-finanz.vercel.app/" />
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="SmartFinanz: Beste Finanzprodukte vergleichen" />
-        <meta property="og:description" content="Entdecken Sie die besten Angebote für Versicherungen, Banking, Tierversicherungen und Krypto mit SmartFinanz. Einfach vergleichen und sparen!" />
-        <meta property="og:url" content="https://smart-finanz.vercel.app/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/og-image.jpg" />
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz: Beste Finanzprodukte vergleichen" />
-        <meta name="twitter:description" content="Vergleichen Sie Versicherungen, Banking und Krypto mit SmartFinanz und finden Sie die besten Angebote!" />
-        <meta name="twitter:image" content="/images/twitter-image.jpg" />
-        {/* Schema.org Organization */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "SmartFinanz",
-            "url": "https://smart-finanz.vercel.app/",
-            "logo": "/images/logo.png",
-            "description": "SmartFinanz bietet Vergleiche für Versicherungen, Banking, Tierversicherungen und Krypto-Plattformen, um Ihnen die besten Finanzprodukte zu präsentieren."
-          })}
-        </script>
-      </head>
-
       {/* Header */}
-      <header className="bg-white shadow-sm relative border-b sticky top-0 z-50">
+      <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <TrendingUp className="h-8 w-8 text-green-600" />
@@ -267,18 +225,19 @@ export default function Home() {
       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
-              Beste Finanzprodukte finden mit SmartFinanz
-            </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
+              Finanzentscheidungen leicht gemacht? Lassen Sie uns das für Sie erledigen.
+            </h2>
             <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
-              Vergleichen Sie Versicherungen, Bankkonten, Tierversicherungen und Krypto-Plattformen in Minuten.
+              Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
             </p>
 
             {/* Interaktives Widget */}
-            <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-md sm:max-w-xl mx-auto shadow-lg">
-              <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
-                Welches Finanzprodukt suchen Sie?
-              </h2>
+            <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-md sm:max-w-xl mx-auto">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
+                Nach welchem Produkt oder Service suchen Sie?
+              </h3>
+
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <Button
                   variant={selectedProduct === "versicherung" ? "default" : "outline"}
@@ -319,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* Kategorie-Navigation */}
-      <section className="bg-gray-50 py-4 border-b sticky top-[64px] z-40" id="categories">
+      <section className="bg-gray-50 py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
             {[
@@ -330,13 +289,12 @@ export default function Home() {
             ].map(({ key, label, icon: Icon }) => (
               <Link
                 key={key}
-                href={`#${key}`}
+                href={`/${key}`}
                 className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
                   activeCategory === key
                     ? 'bg-green-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
-                onClick={() => scrollToSection(key)}
               >
                 <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 {label}
@@ -349,9 +307,9 @@ export default function Home() {
       {/* Hauptüberschrift */}
       <section className="py-8 sm:py-12 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Über 500 Finanzprodukte verglichen – für Ihre optimale Wahl</h2>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h3>
           <Button size="lg" className="bg-green-600 hover:bg-green-700">
-            Jetzt die besten Angebote finden
+            Beste Empfehlungen ansehen
           </Button>
         </div>
       </section>
@@ -384,13 +342,13 @@ export default function Home() {
       <section className="py-8 sm:py-12 bg-white" id="search-section">
         <div className="container mx-auto px-4">
           <div className="max-w-xl sm:max-w-2xl mx-auto">
-            <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie Ihr perfektes Finanzprodukt</h2>
+            <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das perfekte Angebot</h3>
             <div className="relative">
               <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" />
               <Input
-                placeholder="Suche nach Versicherungen, Bankkonten, Krypto oder Anbietern..."
-                className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full rounded-lg"
-                aria-label="Finanzprodukte suchen"
+                placeholder="Suchen Sie nach Versicherungen, Konten, oder Anbietern..."
+                className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full"
+                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
               />
             </div>
           </div>
@@ -400,7 +358,7 @@ export default function Home() {
       {/* Vergleichstabellen */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
         <div className="container mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Top-Anbieter im Vergleich</h2>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
 
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
@@ -472,34 +430,13 @@ export default function Home() {
                             } else if (provider.name === "Tarifcheck") {
                               window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank");
                             } else {
-                              window.open(`/anbieter/${provider.name.toLowerCase().replace(/\s+/g, '-')}`, "_blank");
+                              window.open("/anbieter", "_blank");
                             }
                           }}
                         >
                           Zum Anbieter
                         </Button>
                       </CardContent>
-                      {/* Schema.org Product */}
-                      <script type="application/ld+json">
-                        {JSON.stringify({
-                          "@context": "https://schema.org",
-                          "@type": "Product",
-                          "name": provider.name,
-                          "description": `Vergleichen Sie ${provider.name} auf SmartFinanz: ${provider.features.join(', ')}. Preis: ${provider.price}.`,
-                          "brand": { "@type": "Brand", "name": provider.name },
-                          "offers": {
-                            "@type": "Offer",
-                            "price": provider.price.replace(/[^0-9,.]/g, ''),
-                            "priceCurrency": "EUR",
-                            "availability": "https://schema.org/InStock"
-                          },
-                          "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": provider.rating,
-                            "reviewCount": Math.floor(Math.random() * 100) + 50
-                          }
-                        })}
-                      </script>
                     </Card>
                   ))}
                 </div>
@@ -518,155 +455,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ratgeber & Tipps */}
-      <section className="py-12 sm:py-16 bg-white" id="ratgeber">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Ratgeber & Tipps für Ihre Finanzen</h2>
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
-            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <Image
-                  src="/images/ratgeber/tierversicherung.jpg"
-                  alt="Tierversicherung Guide"
-                  width={400}
-                  height={200}
-                  className="w-full h-48 object-cover rounded-t-xl"
-                  priority
-                />
-                <CardTitle className="text-lg sm:text-xl font-semibold mt-4">Tierversicherung Guide</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
-                  Schritt-für-Schritt Anleitung: So finden Sie die perfekte Tierversicherung für Ihren vierbeinigen Freund.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-green-600 text-green-600 hover:bg-green-50"
-                  onClick={() => window.open("/ratgeber/tierversicherung", "_blank")}
-                >
-                  Mehr erfahren
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <Image
-                  src="/images/ratgeber/konto.jpg"
-                  alt="Konto eröffnen Guide"
-                  width={400}
-                  height={200}
-                  className="w-full h-48 object-cover rounded-t-xl"
-                  priority
-                />
-                <CardTitle className="text-lg sm:text-xl font-semibold mt-4">Konto eröffnen in 3 Schritten</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
-                  Einfach erklärt: Wie Sie schnell und sicher ein neues Bankkonto online eröffnen.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-green-600 text-green-600 hover:bg-green-50"
-                  onClick={() => window.open("/ratgeber/konto-eroeffnen", "_blank")}
-                >
-                  Mehr erfahren
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <Image
-                  src="/images/ratgeber/krypto.jpg"
-                  alt="Krypto Trading Deutschland"
-                  width={400}
-                  height={200}
-                  className="w-full h-48 object-cover rounded-t-xl"
-                  priority
-                />
-                <CardTitle className="text-lg sm:text-xl font-semibold mt-4">Krypto Trading Deutschland</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
-                  Alles über Kryptowährungen: Rechtslage, Steuern und die besten Plattformen.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-green-600 text-green-600 hover:bg-green-50"
-                  onClick={() => window.open("/ratgeber/krypto-trading", "_blank")}
-                >
-                  Mehr erfahren
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-          {/* Schema.org Article */}
-          <script type="application/ld+json">
-            {JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "Article",
-                "headline": "Tierversicherung Guide",
-                "description": "Schritt-für-Schritt Anleitung: So finden Sie die perfekte Tierversicherung für Ihren vierbeinigen Freund.",
-                "url": "https://smart-finanz.vercel.app/ratgeber/tierversicherung",
-                "image": "/images/ratgeber/tierversicherung.jpg",
-                "author": { "@type": "Organization", "name": "SmartFinanz" },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "SmartFinanz",
-                  "logo": { "@type": "ImageObject", "url": "/images/logo.png" }
-                },
-                "datePublished": "2025-08-22"
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "Article",
-                "headline": "Konto eröffnen in 3 Schritten",
-                "description": "Einfach erklärt: Wie Sie schnell und sicher ein neues Bankkonto online eröffnen.",
-                "url": "https://smart-finanz.vercel.app/ratgeber/konto-eroeffnen",
-                "image": "/images/ratgeber/konto.jpg",
-                "author": { "@type": "Organization", "name": "SmartFinanz" },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "SmartFinanz",
-                  "logo": { "@type": "ImageObject", "url": "/images/logo.png" }
-                },
-                "datePublished": "2025-08-22"
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "Article",
-                "headline": "Krypto Trading Deutschland",
-                "description": "Alles über Kryptowährungen: Rechtslage, Steuern und die besten Plattformen.",
-                "url": "https://smart-finanz.vercel.app/ratgeber/krypto-trading",
-                "image": "/images/ratgeber/krypto.jpg",
-                "author": { "@type": "Organization", "name": "SmartFinanz" },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "SmartFinanz",
-                  "logo": { "@type": "ImageObject", "url": "/images/logo.png" }
-                },
-                "datePublished": "2025-08-22"
-              }
-            ])}
-          </script>
-        </div>
-      </section>
-
       {/* Kundenbewertungen */}
       <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h2>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
             <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
               <CardHeader className="pb-4">
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/anna.jpg"
-                    alt="Anna über günstige Kfz-Versicherung mit SmartFinanz"
+                    alt="Anna, junge Berufstätige, über beste Versicherung"
                     width={80}
                     height={80}
                     className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
-                    loading="lazy"
+                    priority
                   />
                   <div>
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Anna, 30</CardTitle>
@@ -680,12 +483,12 @@ export default function Home() {
               </CardHeader>
               <CardContent className="p-6 pt-0">
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
-                  "Mit SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                  "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                 </p>
                 <Button
                   variant="default"
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
-                  onClick={() => window.open("/versicherungen", "_blank")}
+                  onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
                 </Button>
@@ -697,11 +500,11 @@ export default function Home() {
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/markus.jpg"
-                    alt="Markus über Tierversicherung mit SmartFinanz"
+                    alt="Markus, Familienvater, über Tierversicherung"
                     width={80}
                     height={80}
                     className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
-                    loading="lazy"
+                    priority
                   />
                   <div>
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Markus, 42</CardTitle>
@@ -720,7 +523,7 @@ export default function Home() {
                 <Button
                   variant="default"
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
-                  onClick={() => window.open("/tierversicherungen", "_blank")}
+                  onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
                 </Button>
@@ -732,11 +535,11 @@ export default function Home() {
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/helga.jpg"
-                    alt="Helga über sicheres Bankkonto mit SmartFinanz"
+                    alt="Helga, Seniorin, über vertrauensvollen Finanzvergleich"
                     width={80}
                     height={80}
                     className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
-                    loading="lazy"
+                    priority
                   />
                   <div>
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Helga, 60</CardTitle>
@@ -750,12 +553,12 @@ export default function Home() {
               </CardHeader>
               <CardContent className="p-6 pt-0">
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
-                  "Ich war skeptisch, aber SmartFinanz hat mir ein sicheres Bankkonto gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                  "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                 </p>
                 <Button
                   variant="default"
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
-                  onClick={() => window.open("/banking", "_blank")}
+                  onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
                 </Button>
@@ -767,11 +570,11 @@ export default function Home() {
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/lukas.jpg"
-                    alt="Lukas über Krypto-Trading mit SmartFinanz"
+                    alt="Lukas, Unternehmer, über Krypto-Trading"
                     width={80}
                     height={80}
                     className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
-                    loading="lazy"
+                    priority
                   />
                   <div>
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Lukas, 29</CardTitle>
@@ -790,14 +593,14 @@ export default function Home() {
                 <Button
                   variant="default"
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
-                  onClick={() => window.open("/krypto", "_blank")}
+                  onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
                 </Button>
               </CardContent>
             </Card>
           </div>
-          {/* Schema.org Review */}
+          {/* Schema.org Markup für SEO */}
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -811,7 +614,7 @@ export default function Home() {
                   "@type": "Review",
                   "author": { "@type": "Person", "name": "Anna" },
                   "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                  "reviewBody": "Mit SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                  "reviewBody": "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                 },
                 {
                   "@type": "Review",
@@ -823,7 +626,7 @@ export default function Home() {
                   "@type": "Review",
                   "author": { "@type": "Person", "name": "Helga" },
                   "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                  "reviewBody": "Ich war skeptisch, aber SmartFinanz hat mir ein sicheres Bankkonto gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                  "reviewBody": "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                 },
                 {
                   "@type": "Review",
@@ -842,19 +645,19 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
             <div>
-              <h3 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h3>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h4>
               <p className="text-green-100 text-sm sm:text-base">Anbieter verglichen</p>
             </div>
             <div>
-              <h3 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h3>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h4>
               <p className="text-green-100 text-sm sm:text-base">Zufriedene Kunden</p>
             </div>
             <div>
-              <h3 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h3>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h4>
               <p className="text-green-100 text-sm sm:text-base">Gespart insgesamt</p>
             </div>
             <div>
-              <h3 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h3>
+              <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h4>
               <p className="text-green-100 text-sm sm:text-base">Durchschnittsbewertung</p>
             </div>
           </div>
@@ -868,14 +671,14 @@ export default function Home() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <TrendingUp className="h-6 w-6 text-green-400" />
-                <h3 className="text-xl font-bold">SmartFinanz</h3>
+                <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
               <p className="text-gray-400 text-sm">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Produkte</h4>
+              <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <Link href="/versicherungen" className="hover:text-white transition-colors text-left">
@@ -900,7 +703,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Unternehmen</h4>
+              <h5 className="font-semibold mb-3">Unternehmen</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
                 <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
@@ -909,7 +712,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Rechtliches</h4>
+              <h5 className="font-semibold mb-3">Rechtliches</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
                 <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
