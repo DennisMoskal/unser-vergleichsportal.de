@@ -47,7 +47,25 @@ const providerData = {
       bonus: "Demo-Konto", 
       logo: "📊" 
     },
-    { name: "Credimax", rating: 4.2, features: ["Schnelle Kredite", "Online-Beantragung", "Flexible Rückzahlung"], price: "ab 2,99% p.a.", bonus: "Zinsrabatt", logo: "💳" },
+    { 
+      name: "Credimaxx", 
+      rating: 4.9, 
+      features: [
+        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+        "Sofortvermittlung durch erfahrene Kreditprofis",
+        "Digitaler Abschluss mit WebID oder VideoIdent",
+        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
+        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
+        "Vermittlung in bis zu 1 Minute",
+        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
+        "25 Jahre Erfahrung in der Kreditvermittlung"
+      ], 
+      price: "ab 10,99% eff. Zins p.a.", 
+      bonus: "Schnelle Auszahlung", 
+      logo: "💳" 
+    },
   ],
 }
 
@@ -84,9 +102,9 @@ export default function Banking() {
                   </li>
                 ))}
               </ul>
-              {provider.name === "Credimax" ? (
-                <Link href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              {provider.name === "Credimaxx" ? (
+                <Link href="https://www.credimaxx.de/?a_aid=S37C8H62WGM9D" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Kredit</Button>
                 </Link>
               ) : provider.name === "Tarifcheck.de" ? (
                 <Link href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer">
@@ -94,6 +112,11 @@ export default function Banking() {
                 </Link>
               ) : (
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              )}
+              {provider.name === "Credimaxx" && (
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  *Wir erhalten eine Provision für Käufe über diesen Link
+                </p>
               )}
             </CardContent>
           </Card>
