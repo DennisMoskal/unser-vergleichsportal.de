@@ -13,7 +13,7 @@ const providerData = {
       name: "XTB", 
       rating: 4.5, 
       features: [
-        "Gratis Aktie für neue Investoren", "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
+        "Gratis Aktie für neue Investoren", 
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
         "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
@@ -21,7 +21,7 @@ const providerData = {
         "eWallet mit virtueller Mastercard",
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
+        "Kostenlose Ein- & Auszahlungen", "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
       ], 
       price: "0€ Kommission", 
