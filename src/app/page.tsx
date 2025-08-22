@@ -19,13 +19,13 @@ const providerData = {
         "Bis zu 100 % Kostenerstattung",
         "Gratismonat bis 31.08.",
         "monatlich kündbar",
-        "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
-        "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
-        "Fairster Tierversicherer (Focus Money)",
+        "Testsieger SEHR GUT",
+        "Beliebtester Kfz-Direktversicherer",
+        "Fairster Tierversicherer",
         "15% Rabatt auf Kfz-Versicherung",
         "OP-Schutz für Tierkrankenversicherung",
         "Krankenzusatz mit 100€ Bonus",
-        "Rund-um-die-Uhr Service (365 Tage)"
+        "24/7 Service"
       ], 
       price: "ab 15€/Monat", 
       bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
@@ -42,8 +42,8 @@ const providerData = {
         "DSGVO-konform mit Premium Tools",
         "Automatische Rechtstext-Generatoren",
         "Abmahnschutz inklusive",
-        "Praxis-Tools für Social Media & Marketing",
-        "Kostenlose Erstberatung (ab Business)",
+        "Praxis-Tools für Social Media",
+        "Kostenlose Erstberatung",
         "NEU: KI-gestützte Lösungen",
         "Zentraler Projekt Manager",
         "Live-Webinare zu Internetrecht",
@@ -57,14 +57,14 @@ const providerData = {
       name: "BavariaDirekt", 
       rating: 4.5, 
       features: [
-        "Günstige Kfz-Versicherung ab 9,70€/Monat",
-        "Haftpflichtversicherung online abschließen",
-        "Tierkrankenversicherung günstig mit OP-Schutz",
-        "Rechtsschutzversicherung günstig und flexibel",
-        "Bis zu 350€ sparen auf Versicherungen",
-        "24h-Notfall-Hotline für schnelle Hilfe",
-        "91% Weiterempfehlung von Kunden",
-        "TÜV-geprüfter Service und Kundenzufriedenheit"
+        "Günstige Kfz-Versicherung ab 9,70€",
+        "Haftpflichtversicherung online",
+        "Tierkrankenversicherung mit OP-Schutz",
+        "Rechtsschutzversicherung flexibel",
+        "Bis zu 350€ sparen",
+        "24h-Notfall-Hotline",
+        "91% Weiterempfehlung",
+        "TÜV-geprüfter Service"
       ], 
       price: "ab 16€/Monat", 
       bonus: "Treuebonus", 
@@ -82,11 +82,11 @@ const providerData = {
         "Gratis Aktie für neue Investoren",
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
         "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
+        "Über 2600 CFD-Instrumente",
+        "Über 40 Krypto-CFDs",
         "eWallet mit virtueller Mastercard",
         "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
+        "0% Kommission bis 100.000€",
         "Kostenlose Ein- & Auszahlungen",
         "Platz 1 CFD-Broker 2024/25"
       ], 
@@ -374,13 +374,13 @@ export default function Home() {
               <TabsContent key={category} value={category}>
                 <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {providers.map((provider, index) => (
-                    <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 min-h-[300px] max-h-[400px]">
+                    <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col">
                       {index === 0 && (
                         <Badge className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm">
                           Top Empfehlung
                         </Badge>
                       )}
-                      <CardHeader className="text-center pb-2 sm:pb-4">
+                      <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
                         <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
                         <CardTitle className="text-lg sm:text-xl font-bold">{provider.name}</CardTitle>
                         <div className="flex items-center justify-center">
@@ -393,21 +393,23 @@ export default function Home() {
                           <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
                         </div>
                       </CardHeader>
-                      <CardContent className="space-y-2 sm:space-y-4 p-2 sm:p-4 overflow-y-auto max-h-[200px]">
-                        <div className="text-center border-b pb-2 sm:pb-4">
+                      <CardContent className="flex flex-col flex-grow">
+                        <div className="text-center border-b pb-2 sm:pb-4 mb-3 flex-shrink-0">
                           <p className="text-xl sm:text-2xl font-bold text-green-600">{provider.price}</p>
                           <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm">{provider.bonus}</Badge>
                         </div>
-                        <ul className="space-y-1 sm:space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2 text-xs sm:text-sm">
-                          {provider.features.map((feature, i) => (
-                            <li key={i} className="flex items-center">
-                              <Check className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4 text-green-600 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="flex-grow">
+                          <ul className="space-y-1 mb-4">
+                            {provider.features.map((feature, i) => (
+                              <li key={i} className="flex items-start text-xs leading-tight">
+                                <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" />
+                                <span className="break-words">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                         <Button
-                          className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-2"
+                          className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto"
                           onClick={() =>
                             provider.name === "eRecht24"
                               ? window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
@@ -445,40 +447,6 @@ export default function Home() {
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <Heart className="h-6 w-6 sm:h-8 w-8 text-red-500" />
                   <CardTitle>Tierversicherung Guide</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-2 sm:mb-4">
-                  Schritt-für-Schritt Anleitung: So finden Sie die perfekte Tierversicherung für Ihren vierbeinigen Freund.
-                </p>
-                <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
-                  Guide lesen
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <PiggyBank className="h-6 w-6 sm:h-8 w-8 text-blue-500" />
-                  <CardTitle>Konto eröffnen in 3 Schritten</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-2 sm:mb-4">
-                  Einfach erklärt: Wie Sie schnell und sicher ein neues Bankkonto online eröffnen.
-                </p>
-                <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
-                  Anleitung ansehen
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-500" />
-                  <CardTitle>Krypto Trading Deutschland</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -584,4 +552,38 @@ export default function Home() {
       </footer>
     </div>
   )
-}
+} className="text-gray-600 mb-2 sm:mb-4">
+                  Schritt-für-Schritt Anleitung: So finden Sie die perfekte Tierversicherung für Ihren vierbeinigen Freund.
+                </p>
+                <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
+                  Guide lesen
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
+              <CardHeader>
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <PiggyBank className="h-6 w-6 sm:h-8 w-8 text-blue-500" />
+                  <CardTitle>Konto eröffnen in 3 Schritten</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-2 sm:mb-4">
+                  Einfach erklärt: Wie Sie schnell und sicher ein neues Bankkonto online eröffnen.
+                </p>
+                <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
+                  Anleitung ansehen
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
+              <CardHeader>
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-500" />
+                  <CardTitle>Krypto Trading Deutschland</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p
