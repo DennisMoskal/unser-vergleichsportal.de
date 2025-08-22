@@ -33,7 +33,7 @@ export default function Tierversicherungen() {
       <h1 className="text-3xl font-bold mb-6 p-4">Tierversicherung</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.tierversicherungen.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative">
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative h-full">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
             )}
@@ -62,7 +62,9 @@ export default function Tierversicherungen() {
                   ))}
                 </ul>
               </div>
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                Zum Anbieter
+              </Button>
             </CardContent>
           </Card>
         ))}
