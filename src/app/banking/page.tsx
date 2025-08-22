@@ -6,6 +6,24 @@ import Link from "next/link"
 
 const providerData = {
   banking: [
+    { 
+      name: "Tarifcheck.de", 
+      rating: 4.5, 
+      features: [
+        "Über 20 Jahre Erfahrung als Vergleichsportal",
+        "100% kostenloser und unverbindlicher Vergleich",
+        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+        "Mehrfach ausgezeichnet mit 'sehr gut'",
+        "eKomi Silber Siegel mit 4,5/5 Sternen",
+        "Über 3.194 Kundenbewertungen",
+        "Deutschlands drittgrößtes Vergleichsportal",
+        "Vertrauen von Millionen Verbrauchern",
+        "Bis zu 1.000€ jährlich sparen möglich"
+      ], 
+      price: "100% kostenlos", 
+      bonus: "Bis zu 120€ Neukundenbonus", 
+      logo: "🏆" 
+    },
     { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
     { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
     { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
@@ -69,6 +87,10 @@ export default function Banking() {
               {provider.name === "Credimax" ? (
                 <Link href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+                </Link>
+              ) : provider.name === "Tarifcheck.de" ? (
+                <Link href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt vergleichen</Button>
                 </Link>
               ) : (
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
