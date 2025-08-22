@@ -65,18 +65,19 @@ export default function Krypto() {
                   </li>
                 ))}
               </ul>
-              <Button 
-                className="w-full bg-green-600 hover:bg-green-700 text-white mt-4" 
-                onClick={() => {
-                  if (provider.name === "XTB") {
-                    window.open("https://link-pso.xtb.com/pso/lMDhc", "_blank");
-                  } else {
-                    window.open(`/anbieter/${provider.name.toLowerCase().replace(/\s+/g, '-')}`, "_blank");
-                  }
-                }}
-              >
-                Zum Anbieter
-              </Button>
+              {provider.name === "XTB" ? (
+                <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                    Zum Anbieter
+                  </Button>
+                </a>
+              ) : (
+                <Link href={`/anbieter/${provider.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                    Zum Anbieter
+                  </Button>
+                </Link>
+              )}
             </CardContent>
           </Card>
         ))}
