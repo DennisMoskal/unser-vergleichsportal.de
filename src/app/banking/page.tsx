@@ -75,7 +75,7 @@ export default function Banking() {
       <h1 className="text-3xl font-bold mb-6 p-4">Banking</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.banking.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
             )}
@@ -89,12 +89,13 @@ export default function Banking() {
                 <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
               </div>
             </CardHeader>
-            <CardContent className="space-y-2">
+
+            <CardContent className="flex flex-col flex-1 space-y-2">
               <div className="text-center border-b pb-2">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <ul className="space-y-1">
+              <ul className="space-y-1 flex-1">
                 {provider.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm">
                     <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -102,30 +103,27 @@ export default function Banking() {
                   </li>
                 ))}
               </ul>
-              {provider.name === "Credimaxx" ? (
-                <Link href="https://www.credimaxx.de/?a_aid=S37C8H62WGM9D" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Kredit</Button>
-                </Link>
-              ) : provider.name === "Tarifcheck.de" ? (
-                <Link href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt vergleichen</Button>
-                </Link>
-              ) : provider.name === "XTB" ? (
-                <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer">
+
+              {/* Button immer unten */}
+              <div className="mt-auto">
+                <Link href={
+                  provider.name === "Credimaxx" ? "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D" :
+                  provider.name === "Tarifcheck.de" ? "https://www.tarifcheck.de/girokonto/" :
+                  provider.name === "XTB" ? "https://link-pso.xtb.com/pso/lMDhc" : "#"
+                } target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
-                </a>
-              ) : (
-                <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
-              )}
-              {provider.name === "Credimaxx" && (
-                <p className="text-xs text-gray-500 mt-2 text-center">
-                  *Wir erhalten eine Provision für Käufe über diesen Link
-                </p>
-              )}
+                </Link>
+                {provider.name === "Credimaxx" && (
+                  <p className="text-xs text-gray-500 mt-2 text-center">
+                    *Wir erhalten eine Provision für Käufe über diesen Link
+                  </p>
+                )}
+              </div>
             </CardContent>
           </Card>
         ))}
       </div>
+
       <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
         <p>
           CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
@@ -133,9 +131,11 @@ export default function Banking() {
           Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
         </p>
       </div>
+
       <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
         Zurück zur Startseite
       </Link>
+
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
