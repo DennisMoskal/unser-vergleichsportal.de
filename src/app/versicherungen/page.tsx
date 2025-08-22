@@ -75,13 +75,13 @@ export default function Versicherungen() {
               </div>
             </CardHeader>
 
-            <CardContent className="space-y-2">
+            <CardContent className="flex flex-col flex-1 space-y-2">
               <div className="text-center border-b pb-2">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
 
-              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2 flex-1">
                 {provider.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm">
                     <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -90,9 +90,13 @@ export default function Versicherungen() {
                 ))}
               </ul>
 
-              <Link href={provider.url}>
-                <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
-              </Link>
+              <div className="mt-auto">
+                <Link href={provider.url}>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                    Zum Anbieter
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
         ))}
