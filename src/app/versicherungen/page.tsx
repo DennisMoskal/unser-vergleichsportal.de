@@ -1,119 +1,58 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Shield } from "lucide-react"
+import { Star, Check, Heart } from "lucide-react"
 import Link from "next/link"
 
 const providerData = {
-  versicherungen: [
-    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
+  tierversicherungen: [
+    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
+    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
     { 
-      name: "DA-Direkt", 
-      rating: 4.6, 
+      name: "DA Direkt Tierkrankenversicherung", 
+      rating: 4.7, 
       features: [
-        "Bis zu 100 % Kostenerstattung",
-        "Gratismonat bis 31.08.",
-        "monatlich kündbar",
-        "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
-        "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
-        "Fairster Tierversicherer (Focus Money)",
-        "15% Rabatt auf Kfz-Versicherung",
-        "OP-Schutz für Tierkrankenversicherung",
-        "Krankenzusatz mit 100€ Bonus",
-        "Rund-um-die-Uhr Service (365 Tage)"
+        "Umfassender Schutz für Hund und Katze",
+        "OP-Schutz inklusive",
+        "Freie Tierarztwahl",
+        "Fairster Tierversicherer (Focus Money 2025)",
+        "Schnelle Schadensabwicklung",
+        "Monatlich kündbar",
+        "Bis zu 90% Kostenerstattung"
       ], 
-      price: "ab 15€/Monat", 
-      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
-      logo: "🚗" 
-    },
-    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
-    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
-    { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
-    { 
-      name: "eRecht24", 
-      rating: 4.3, 
-      features: [
-        "Rechtssicherheit für Webseiten",
-        "DSGVO-konform mit Premium Tools",
-        "Automatische Rechtstext-Generatoren",
-        "Abmahnschutz inklusive",
-        "Praxis-Tools für Social Media & Marketing",
-        "Kostenlose Erstberatung (ab Business)",
-        "NEU: KI-gestützte Lösungen",
-        "Zentraler Projekt Manager",
-        "Live-Webinare zu Internetrecht",
-        "Muster-Verträge & Checklisten"
-      ], 
-      price: "ab 15€/Monat", 
-      bonus: "50% Rabatt bei Jahreszahlung", 
-      logo: "⚖️" 
-    },
-    { 
-      name: "BavariaDirekt", 
-      rating: 4.5, 
-      features: [
-        "Günstige Kfz-Versicherung ab 9,70€/Monat",
-        "Haftpflichtversicherung online abschließen",
-        "Tierkrankenversicherung günstig mit OP-Schutz",
-        "Rechtsschutzversicherung günstig und flexibel",
-        "Bis zu 350€ sparen auf Versicherungen",
-        "24h-Notfall-Hotline für schnelle Hilfe",
-        "91% Weiterempfehlung von Kunden",
-        "TÜV-geprüfter Service und Kundenzufriedenheit"
-      ], 
-      price: "ab 9,70€/Monat", 
-      bonus: "Treuebonus + 5% Rabatt", 
-      logo: "🍺" 
+      price: "ab 10€/Monat", 
+      bonus: "Gratis-Monat bis 30.09.2025", 
+      logo: "🐾" 
     },
   ],
 }
 
-export default function Versicherungen() {
+export default function Tierversicherungen() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
+      <h1 className="text-3xl font-bold mb-6 p-4">Tierversicherung</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-        {providerData.versicherungen.map((provider, index) => (
-          <Card
-            key={provider.name}
-            className="relative flex flex-col hover:shadow-lg transition-shadow border-2 hover:border-green-200"
-          >
+        {providerData.tierversicherungen.map((provider, index) => (
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
             {index === 0 && (
-              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">
-                Top Empfehlung
-              </Badge>
+              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
             )}
             <CardHeader className="text-center pb-2">
               <div className="text-3xl mb-2">{provider.logo}</div>
               <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
               <div className="flex items-center justify-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-4 w-4 ${
-                      i < Math.floor(provider.rating)
-                        ? "text-yellow-400 fill-current"
-                        : "text-gray-300"
-                    }`}
-                  />
+                  <Star key={i} className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                 ))}
-                <span className="ml-2 text-sm font-medium text-gray-600">
-                  {provider.rating}
-                </span>
+                <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
               </div>
             </CardHeader>
-
-            <CardContent className="flex flex-col flex-grow">
+            <CardContent className="space-y-2">
               <div className="text-center border-b pb-2">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                <Badge
-                  variant="outline"
-                  className="mt-1 border-green-200 text-green-700 text-sm"
-                >
-                  {provider.bonus}
-                </Badge>
+                <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+              <ul className="space-y-1">
                 {provider.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm">
                     <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -121,35 +60,20 @@ export default function Versicherungen() {
                   </li>
                 ))}
               </ul>
-
-              <Button
-                className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto"
-                onClick={() =>
-                  provider.name === "eRecht24"
-                    ? window.open(
-                        "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
-                        "_blank"
-                      )
-                    : window.open("/anbieter", "_blank")
-                }
-              >
-                Zum Anbieter
-              </Button>
+              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
             </CardContent>
           </Card>
         ))}
       </div>
-
       <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
         Zurück zur Startseite
       </Link>
-
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-2 sm:mb-4">
-                <Shield className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <Heart className="h-5 w-5 sm:h-6 w-6 text-green-500" />
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
