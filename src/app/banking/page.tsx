@@ -9,7 +9,7 @@ const providerData = {
     { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
     { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
     { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
-    { name: "XTB", rating: 4.5, features: [" "Gratis Aktie für neue Investoren", 
+    { name: "XTB", rating: 4.5, features: ["Gratis Aktie für neue Investoren", 
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
         "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
