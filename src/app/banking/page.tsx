@@ -66,7 +66,13 @@ export default function Banking() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              {provider.name === "Credimax" ? (
+                <Link href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+                </Link>
+              ) : (
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              )}
             </CardContent>
           </Card>
         ))}
