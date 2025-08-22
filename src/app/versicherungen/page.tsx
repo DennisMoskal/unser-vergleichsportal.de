@@ -1,131 +1,113 @@
-import { Button } from "@/components/ui/button"
+// /app/versicherungen/page.tsx
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Shield } from "lucide-react"
+import { Star, Check, TrendingUp } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-const providerData = {
-  versicherungen: [
-    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
-    { 
-      name: "DA-Direkt", 
-      rating: 4.6, 
-      features: [
-        "Bis zu 100 % Kostenerstattung",
-        "Gratismonat bis 31.08.",
-        "monatlich kündbar",
-        "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
-        "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
-        "Fairster Tierversicherer (Focus Money)",
-        "15% Rabatt auf Kfz-Versicherung",
-        "OP-Schutz für Tierkrankenversicherung",
-        "Krankenzusatz mit 100€ Bonus",
-        "Rund-um-die-Uhr Service (365 Tage)"
-      ], 
-      price: "ab 15€/Monat", 
-      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
-      logo: "🚗" 
-    },
-    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
-    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
-    { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
-    { 
-      name: "eRecht24", 
-      rating: 4.3, 
-      features: [
-        "Rechtssicherheit für Webseiten",
-        "DSGVO-konform mit Premium Tools",
-        "Automatische Rechtstext-Generatoren",
-        "Abmahnschutz inklusive",
-        "Praxis-Tools für Social Media & Marketing",
-        "Kostenlose Erstberatung (ab Business)",
-        "NEU: KI-gestützte Lösungen",
-        "Zentraler Projekt Manager",
-        "Live-Webinare zu Internetrecht",
-        "Muster-Verträge & Checklisten"
-      ], 
-      price: "ab 15€/Monat", 
-      bonus: "50% Rabatt bei Jahreszahlung", 
-      logo: "⚖️" 
-    },
-    { 
-      name: "BavariaDirekt", 
-      rating: 4.5, 
-      features: [
-        "Günstige Kfz-Versicherung ab 9,70€/Monat",
-        "Haftpflichtversicherung online abschließen",
-        "Tierkrankenversicherung günstig mit OP-Schutz",
-        "Rechtsschutzversicherung günstig und flexibel",
-        "Bis zu 350€ sparen auf Versicherungen",
-        "24h-Notfall-Hotline für schnelle Hilfe",
-        "91% Weiterempfehlung von Kunden",
-        "TÜV-geprüfter Service und Kundenzufriedenheit"
-      ], 
-      price: "ab 9,70€/Monat", 
-      bonus: "Treuebonus + 5% Rabatt", 
-      logo: "🍺" 
-    },
-  ],
-}
+const providerData = [
+  {
+    name: "GVV",
+    rating: 4.8,
+    features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"],
+    price: "ab 12€/Monat",
+    bonus: "3 Monate kostenlos",
+    logo: "🛡️",
+    url: "/anbieter/gvv"
+  },
+  {
+    name: "DA-Direkt",
+    rating: 4.6,
+    features: [
+      "Bis zu 100 % Kostenerstattung",
+      "Gratismonat bis 31.08.",
+      "monatlich kündbar",
+      "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
+      "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
+      "Fairster Tierversicherer (Focus Money)",
+      "15% Rabatt auf Kfz-Versicherung",
+      "OP-Schutz für Tierkrankenversicherung",
+      "Krankenzusatz mit 100€ Bonus",
+      "Rund-um-die-Uhr Service (365 Tage)"
+    ],
+    price: "ab 15€/Monat",
+    bonus: "Willkommensbonus + 30€ Amazon-Gutschein",
+    logo: "🚗",
+    url: "/anbieter/da-direkt"
+  },
+  {
+    name: "Münchener Verein",
+    rating: 4.7,
+    features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"],
+    price: "ab 18€/Monat",
+    bonus: "Familienrabatt",
+    logo: "🏛️",
+    url: "/anbieter/muenchener-verein"
+  }
+]
 
 export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
+
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-        {providerData.versicherungen.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative">
+        {providerData.map((provider, index) => (
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 relative">
             {index === 0 && (
-              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
             )}
             <CardHeader className="text-center pb-2">
               <div className="text-3xl mb-2">{provider.logo}</div>
               <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
               <div className="flex items-center justify-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
+                  <Star
+                    key={i}
+                    className={`h-4 w-4 ${
+                      i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
+                    }`}
+                  />
                 ))}
                 <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
               </div>
             </CardHeader>
-            <CardContent className="flex flex-col flex-1">
-              <div className="text-center border-b pb-2 mb-4">
+
+            <CardContent className="space-y-2">
+              <div className="text-center border-b pb-2">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <div className="flex-1">
-                <ul className="space-y-1">
-                  {provider.features.map((feature, i) => (
-                    <li key={i} className="flex items-start text-sm">
-                      <Check className="mr-2 h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Button
-                className="w-full bg-green-600 hover:bg-green-700 text-white mt-4"
-                onClick={() =>
-                  provider.name === "eRecht24"
-                    ? window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
-                    : window.open("/anbieter", "_blank")
-                }
-              >
-                Zum Anbieter
-              </Button>
+
+              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {provider.features.map((feature, i) => (
+                  <li key={i} className="flex items-center text-sm">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link href={provider.url}>
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
       </div>
+
       <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
         Zurück zur Startseite
       </Link>
+
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-2 sm:mb-4">
-                <Shield className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
