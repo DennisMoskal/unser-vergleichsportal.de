@@ -74,9 +74,9 @@ export default function Versicherungen() {
       <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.versicherungen.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative">
             {index === 0 && (
-              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
+              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
             )}
             <CardHeader className="text-center pb-2">
               <div className="text-3xl mb-2">{provider.logo}</div>
@@ -88,19 +88,21 @@ export default function Versicherungen() {
                 <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
               </div>
             </CardHeader>
-            <CardContent className="space-y-2">
-              <div className="text-center border-b pb-2">
+            <CardContent className="flex flex-col flex-1">
+              <div className="text-center border-b pb-2 mb-4">
                 <p className="text-xl font-bold text-green-600">{provider.price}</p>
                 <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
               </div>
-              <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {provider.features.map((feature, i) => (
-                  <li key={i} className="flex items-center text-sm">
-                    <Check className="mr-2 h-4 w-4 text-green-600" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div className="flex-1">
+                <ul className="space-y-1">
+                  {provider.features.map((feature, i) => (
+                    <li key={i} className="flex items-start text-sm">
+                      <Check className="mr-2 h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <Button
                 className="w-full bg-green-600 hover:bg-green-700 text-white mt-4"
                 onClick={() =>
