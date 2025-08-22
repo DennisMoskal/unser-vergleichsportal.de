@@ -552,38 +552,6 @@ export default function Home() {
       </footer>
     </div>
   )
-} className="text-gray-600 mb-2 sm:mb-4">
-                  Schritt-für-Schritt Anleitung: So finden Sie die perfekte Tierversicherung für Ihren vierbeinigen Freund.
-                </p>
-                <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
-                  Guide lesen
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <PiggyBank className="h-6 w-6 sm:h-8 w-8 text-blue-500" />
-                  <CardTitle>Konto eröffnen in 3 Schritten</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-2 sm:mb-4">
-                  Einfach erklärt: Wie Sie schnell und sicher ein neues Bankkonto online eröffnen.
-                </p>
-                <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base">
-                  Anleitung ansehen
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <TrendingUp className="h-6 w-6 sm:h-8 w-8 text-green-500" />
-                  <CardTitle>Krypto Trading Deutschland</CardTitle>
-                </div>
-              </CardHeader>
+}
               <CardContent>
                 <p
