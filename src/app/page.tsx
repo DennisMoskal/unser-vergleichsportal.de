@@ -374,7 +374,7 @@ export default function Home() {
               <TabsContent key={category} value={category}>
                 <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {providers.map((provider, index) => (
-                    <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200">
+                    <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 min-h-[300px] max-h-[400px]">
                       {index === 0 && (
                         <Badge className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm">
                           Top Empfehlung
@@ -393,21 +393,21 @@ export default function Home() {
                           <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
                         </div>
                       </CardHeader>
-                      <CardContent className="space-y-2 sm:space-y-4">
+                      <CardContent className="space-y-2 sm:space-y-4 p-2 sm:p-4 overflow-y-auto max-h-[200px]">
                         <div className="text-center border-b pb-2 sm:pb-4">
                           <p className="text-xl sm:text-2xl font-bold text-green-600">{provider.price}</p>
                           <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm">{provider.bonus}</Badge>
                         </div>
-                        <ul className="space-y-1 sm:space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <ul className="space-y-1 sm:space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2 text-xs sm:text-sm">
                           {provider.features.map((feature, i) => (
-                            <li key={i} className="flex items-center text-xs sm:text-sm">
+                            <li key={i} className="flex items-center">
                               <Check className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4 text-green-600 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                         <Button
-                          className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base"
+                          className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-2"
                           onClick={() =>
                             provider.name === "eRecht24"
                               ? window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
