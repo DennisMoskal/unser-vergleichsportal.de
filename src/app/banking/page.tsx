@@ -110,6 +110,10 @@ export default function Banking() {
                 <Link href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt vergleichen</Button>
                 </Link>
+              ) : provider.name === "XTB" ? (
+                <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+                </a>
               ) : (
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
               )}
