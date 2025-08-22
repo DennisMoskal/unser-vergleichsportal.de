@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 const providerData = {
   versicherungen: [
@@ -455,31 +456,38 @@ export default function Home() {
       </section>
 
       {/* Kundenbewertungen */}
-      <section className="py-12 sm:py-16 bg-white" id="kundenbewertungen">
+      <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
-          <div className="grid gap-4 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <img src="/images/kundenbewertungen/anna.jpg" alt="Anna, junge Berufstätige, über beste Versicherung" className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover" />
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/images/kundenbewertungen/anna.jpg"
+                    alt="Anna, junge Berufstätige, über beste Versicherung"
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    priority
+                  />
                   <div>
-                    <CardTitle className="text-base sm:text-lg">Anna, 30</CardTitle>
-                    <div className="flex items-center">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Anna, 30</CardTitle>
+                    <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              <CardContent className="p-6 pt-0">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
                   "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                 </p>
                 <Button
-                  variant="outline"
-                  className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base"
+                  variant="default"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -487,27 +495,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <img src="/images/kundenbewertungen/markus.jpg" alt="Markus, Familienvater, über Tierversicherung" className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover" />
+            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/images/kundenbewertungen/markus.jpg"
+                    alt="Markus, Familienvater, über Tierversicherung"
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    priority
+                  />
                   <div>
-                    <CardTitle className="text-base sm:text-lg">Markus, 42</CardTitle>
-                    <div className="flex items-center">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Markus, 42</CardTitle>
+                    <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`h-4 w-4 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
+                        <Star key={i} className={`h-5 w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              <CardContent className="p-6 pt-0">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
                   "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
                 </p>
                 <Button
-                  variant="outline"
-                  className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base"
+                  variant="default"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -515,27 +530,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <img src="/images/kundenbewertungen/helga.jpg" alt="Helga, Seniorin, über vertrauensvollen Finanzvergleich" className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover" />
+            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/images/kundenbewertungen/helga.jpg"
+                    alt="Helga, Seniorin, über vertrauensvollen Finanzvergleich"
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    priority
+                  />
                   <div>
-                    <CardTitle className="text-base sm:text-lg">Helga, 60</CardTitle>
-                    <div className="flex items-center">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Helga, 60</CardTitle>
+                    <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              <CardContent className="p-6 pt-0">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
                   "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                 </p>
                 <Button
-                  variant="outline"
-                  className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base"
+                  variant="default"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -543,27 +565,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <img src="/images/kundenbewertungen/lukas.jpg" alt="Lukas, Unternehmer, über Krypto-Trading" className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover" />
+            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/images/kundenbewertungen/lukas.jpg"
+                    alt="Lukas, Unternehmer, über Krypto-Trading"
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    priority
+                  />
                   <div>
-                    <CardTitle className="text-base sm:text-lg">Lukas, 29</CardTitle>
-                    <div className="flex items-center">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Lukas, 29</CardTitle>
+                    <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              <CardContent className="p-6 pt-0">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
                   "Mit SmartFinanz habe ich die beste Krypto-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                 </p>
                 <Button
-                  variant="outline"
-                  className="w-full border-green-200 text-green-700 hover:bg-green-50 text-sm sm:text-base"
+                  variant="default"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -571,6 +600,43 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
+          {/* Schema.org Markup für SEO */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Organization",
+                "name": "SmartFinanz"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": { "@type": "Person", "name": "Anna" },
+                  "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                  "reviewBody": "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                },
+                {
+                  "@type": "Review",
+                  "author": { "@type": "Person", "name": "Markus" },
+                  "reviewRating": { "@type": "Rating", "ratingValue": "4" },
+                  "reviewBody": "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
+                },
+                {
+                  "@type": "Review",
+                  "author": { "@type": "Person", "name": "Helga" },
+                  "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                  "reviewBody": "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                },
+                {
+                  "@type": "Review",
+                  "author": { "@type": "Person", "name": "Lukas" },
+                  "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                  "reviewBody": "Mit SmartFinanz habe ich die beste Krypto-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
+                }
+              ]
+            })}
+          </script>
         </div>
       </section>
 
@@ -657,7 +723,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-400">
-              © 2025 SmartFinanz. Alle Rehews reserved.
+              © 2025 SmartFinanz. Alle Rechte vorbehalten.
             </p>
           </div>
         </div>
