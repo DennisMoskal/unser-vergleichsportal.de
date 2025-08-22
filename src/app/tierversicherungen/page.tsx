@@ -1,39 +1,82 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Heart } from "lucide-react"
+import { Star, Check, Shield } from "lucide-react"
 import Link from "next/link"
 
 const providerData = {
-  tierversicherungen: [
-    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
-    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
+  versicherungen: [
+    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
     { 
-      name: "DA Direkt Tierkrankenversicherung", 
-      rating: 4.7, 
+      name: "DA-Direkt", 
+      rating: 4.6, 
       features: [
-        "Umfassender Schutz für Hund und Katze",
-        "OP-Schutz inklusive",
-        "Freie Tierarztwahl",
-        "Fairster Tierversicherer (Focus Money 2025)",
-        "Schnelle Schadensabwicklung",
-        "Monatlich kündbar",
-        "Bis zu 90% Kostenerstattung"
+        "Bis zu 100 % Kostenerstattung",
+        "Gratismonat bis 31.08.",
+        "monatlich kündbar",
+        "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
+        "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
+        "Fairster Tierversicherer (Focus Money)",
+        "15% Rabatt auf Kfz-Versicherung",
+        "OP-Schutz für Tierkrankenversicherung",
+        "Krankenzusatz mit 100€ Bonus",
+        "Rund-um-die-Uhr Service (365 Tage)"
       ], 
-      price: "ab 10€/Monat", 
-      bonus: "Gratis-Monat bis 30.09.2025", 
-      logo: "🐾" 
+      price: "ab 15€/Monat", 
+      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
+      logo: "🚗" 
+    },
+    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
+    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
+    { name: "Tarifcheck", rating: 4.4, features: ["Vergleichsportal", "Viele Anbieter", "Transparente Preise"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
+    { 
+      name: "eRecht24", 
+      rating: 4.3, 
+      features: [
+        "Rechtssicherheit für Webseiten",
+        "DSGVO-konform mit Premium Tools",
+        "Automatische Rechtstext-Generatoren",
+        "Abmahnschutz inklusive",
+        "Praxis-Tools für Social Media & Marketing",
+        "Kostenlose Erstberatung (ab Business)",
+        "NEU: KI-gestützte Lösungen",
+        "Zentraler Projekt Manager",
+        "Live-Webinare zu Internetrecht",
+        "Muster-Verträge & Checklisten"
+      ], 
+      price: "ab 15€/Monat", 
+      bonus: "50% Rabatt bei Jahreszahlung", 
+      logo: "⚖️" 
+    },
+    { 
+      name: "BavariaDirekt", 
+      rating: 4.5, 
+      features: [
+        "Günstige Kfz-Versicherung ab 9,70€/Monat",
+        "Haftpflichtversicherung online abschließen",
+        "Tierkrankenversicherung günstig mit OP-Schutz",
+        "Rechtsschutzversicherung günstig und flexibel",
+        "Bis zu 350€ sparen auf Versicherungen",
+        "24h-Notfall-Hotline für schnelle Hilfe",
+        "91% Weiterempfehlung von Kunden",
+        "TÜV-geprüfter Service und Kundenzufriedenheit"
+      ], 
+      price: "ab 9,70€/Monat", 
+      bonus: "Treuebonus + 5% Rabatt", 
+      logo: "🍺" 
     },
   ],
 }
 
-export default function Tierversicherungen() {
+export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Tierversicherung</h1>
+      <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-        {providerData.tierversicherungen.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative h-full">
+        {providerData.versicherungen.map((provider, index) => (
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col relative">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
             )}
@@ -62,7 +105,14 @@ export default function Tierversicherungen() {
                   ))}
                 </ul>
               </div>
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+              <Button
+                className="w-full bg-green-600 hover:bg-green-700 text-white mt-4"
+                onClick={() =>
+                  provider.name === "eRecht24"
+                    ? window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
+                    : window.open("/anbieter", "_blank")
+                }
+              >
                 Zum Anbieter
               </Button>
             </CardContent>
@@ -77,7 +127,7 @@ export default function Tierversicherungen() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-2 sm:mb-4">
-                <Heart className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <Shield className="h-5 w-5 sm:h-6 w-6 text-green-500" />
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
@@ -103,7 +153,7 @@ export default function Tierversicherungen() {
               </ul>
             </div>
             <div>
-              <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
+              <h6 className="font-semibent mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
                 <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
