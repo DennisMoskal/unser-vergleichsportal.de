@@ -347,6 +347,7 @@ export default function Home() {
               <Input
                 placeholder="Suchen Sie nach Versicherungen, Konten, oder Anbietern..."
                 className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full"
+                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
               />
             </div>
           </div>
@@ -422,11 +423,15 @@ export default function Home() {
                         </div>
                         <Button
                           className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0"
-                          onClick={() =>
-                            provider.name === "eRecht24"
-                              ? window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
-                              : window.open("/anbieter", "_blank")
-                          }
+                          onClick={() => {
+                            if (provider.name === "eRecht24") {
+                              window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank");
+                            } else if (provider.name === "Tarifcheck") {
+                              window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank");
+                            } else {
+                              window.open("/anbieter", "_blank");
+                            }
+                          }}
                         >
                           Zum Anbieter
                         </Button>
