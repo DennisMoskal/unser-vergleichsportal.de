@@ -455,39 +455,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kundenbewertungen */}
+      {/* Kundenbewertungen - KORRIGIERT */}
       <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <CardHeader className="pb-4">
+            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+              <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/anna.jpg"
-                    alt="Anna, junge Berufstätige, über beste Versicherung"
+                    alt="Anna, Kundin von SmartFinanz"
                     width={80}
                     height={80}
-                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
                     priority
                   />
-                  <div>
-                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Anna, 30</CardTitle>
+                  <div className="flex-grow min-w-0">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
                     <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="p-6 pt-0">
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
+              <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                   "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                 </p>
                 <Button
                   variant="default"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -495,34 +495,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <CardHeader className="pb-4">
+            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+              <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/markus.jpg"
-                    alt="Markus, Familienvater, über Tierversicherung"
+                    alt="Markus, Kunde von SmartFinanz"
                     width={80}
                     height={80}
-                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
                     priority
                   />
-                  <div>
-                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Markus, 42</CardTitle>
+                  <div className="flex-grow min-w-0">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
                     <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`h-5 w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
+                        <Star key={i} className={`h-4 w-4 sm:h-5 sm:w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="p-6 pt-0">
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
+              <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                   "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
                 </p>
                 <Button
                   variant="default"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -530,34 +530,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <CardHeader className="pb-4">
+            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+              <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/helga.jpg"
-                    alt="Helga, Seniorin, über vertrauensvollen Finanzvergleich"
+                    alt="Helga, Kundin von SmartFinanz"
                     width={80}
                     height={80}
-                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
                     priority
                   />
-                  <div>
-                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Helga, 60</CardTitle>
+                  <div className="flex-grow min-w-0">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
                     <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="p-6 pt-0">
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
+              <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                   "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                 </p>
                 <Button
                   variant="default"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
@@ -565,34 +565,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <CardHeader className="pb-4">
+            <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+              <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/images/kundenbewertungen/lukas.jpg"
-                    alt="Lukas, Unternehmer, über Krypto-Trading"
+                    alt="Lukas, Kunde von SmartFinanz"
                     width={80}
                     height={80}
-                    className="h-20 w-20 rounded-full object-cover border-2 border-green-100"
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
                     priority
                   />
-                  <div>
-                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900">Lukas, 29</CardTitle>
+                  <div className="flex-grow min-w-0">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
                     <div className="flex items-center mt-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="p-6 pt-0">
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 min-h-[96px]">
+              <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                   "Mit SmartFinanz habe ich die beste Krypto-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                 </p>
                 <Button
                   variant="default"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                 >
                   Jetzt vergleichen
