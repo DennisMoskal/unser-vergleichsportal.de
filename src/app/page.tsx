@@ -326,7 +326,7 @@ export default function Home() {
               alt="SmartFinanz Logo"
               width={32}
               height={32}
-              className="h-8 w-8 text-green-600"
+              className="h-8 w-8"
             />
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
@@ -450,7 +450,13 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
                 >
-                  <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                  <Image
+                    src="/images/smartfinanz-logo.png"
+                    alt="SmartFinanz Logo"
+                    width={20}
+                    height={20}
+                    className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5"
+                  />
                   Trading
                 </Button>
               </div>
@@ -467,7 +473,7 @@ export default function Home() {
               { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
               { key: 'banking', label: 'BANKING', icon: PiggyBank },
               { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'trading', label: 'TRADING', icon: TrendingUp }
+              { key: 'trading', label: 'TRADING', icon: Image }
             ].map(({ key, label, icon: Icon }) => (
               <Link
                 key={key}
@@ -478,7 +484,13 @@ export default function Home() {
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
               >
-                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                <Icon
+                  src="/images/smartfinanz-logo.png"
+                  alt="SmartFinanz Logo"
+                  width={16}
+                  height={16}
+                  className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4"
+                />
                 {label}
               </Link>
             ))}
@@ -557,7 +569,13 @@ export default function Home() {
                 Tierversicherung
               </TabsTrigger>
               <TabsTrigger value="trading" className="flex items-center text-xs sm:text-sm">
-                <TrendingUp className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
+                <Image
+                  src="/images/smartfinanz-logo.png"
+                  alt="SmartFinanz Logo"
+                  width={16}
+                  height={16}
+                  className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4"
+                />
                 Trading
               </TabsTrigger>
             </TabsList>
@@ -851,7 +869,7 @@ export default function Home() {
                   alt="SmartFinanz Logo"
                   width={24}
                   height={24}
-                  className="h-6 w-6 text-green-400"
+                  className="h-6 w-6"
                 />
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
