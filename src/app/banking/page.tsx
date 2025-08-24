@@ -130,13 +130,8 @@ export default function Banking() {
                   provider.name === "Tarifcheck.de" ? "https://www.tarifcheck.de/girokonto/" :
                   provider.name === "XTB" ? "https://link-pso.xtb.com/pso/lMDhc" : "#"
                 } target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter</Button>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
                 </Link>
-                {(provider.name === "Credimaxx" || provider.name === "DA-Direkt Versicherungen") && (
-                  <p className="text-xs text-gray-500 mt-2 text-center">
-                    *Wir erhalten eine Provision für Käufe über diesen Link
-                  </p>
-                )}
               </div>
             </CardContent>
           </Card>
@@ -148,6 +143,9 @@ export default function Banking() {
           CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
           72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
           Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+        </p>
+        <p className="mt-4">
+          *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
         </p>
       </div>
 
