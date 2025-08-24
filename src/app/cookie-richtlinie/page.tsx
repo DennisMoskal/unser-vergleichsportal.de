@@ -124,7 +124,7 @@ export default function CookieRichtliniePage() {
                 <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
                 <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
                 <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
-                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
+                <li><Link href="/krypto" className="hover:text-white transition-colors">Trading</Link></li>
               </ul>
             </div>
             <div>
