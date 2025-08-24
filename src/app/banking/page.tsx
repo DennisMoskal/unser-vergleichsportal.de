@@ -194,7 +194,7 @@ export default function Banking() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
-            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten</p>
           </div>
         </div>
       </footer>
