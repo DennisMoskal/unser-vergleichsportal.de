@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -321,7 +321,13 @@ export default function Home() {
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <TrendingUp className="h-8 w-8 text-green-600" />
+            <Image
+              src="/images/smartfinanz-logo.png"
+              alt="SmartFinanz Logo"
+              width={32}
+              height={32}
+              className="h-8 w-8 text-green-600"
+            />
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -840,7 +846,13 @@ export default function Home() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <TrendingUp className="h-6 w-6 text-green-400" />
+                <Image
+                  src="/images/smartfinanz-logo.png"
+                  alt="SmartFinanz Logo"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 text-green-400"
+                />
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
               <p className="text-gray-400 text-sm">
