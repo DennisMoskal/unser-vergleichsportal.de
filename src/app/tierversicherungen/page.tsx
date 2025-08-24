@@ -1,38 +1,22 @@
-// /app/tierversicherungen/page.tsx
+// /app/trading/page.tsx
 "use client"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Heart } from "lucide-react"
+import { Star, Check, TrendingUp } from "lucide-react"
 import Link from "next/link"
 
 const providerData = [
-  { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕", url: "/anbieter/petprotect" },
-  { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱", url: "/anbieter/figopet" },
-  { 
-    name: "DA Direkt Tierkrankenversicherung", 
-    rating: 4.7, 
-    features: [
-      "Umfassender Schutz für Hund und Katze",
-      "OP-Schutz inklusive",
-      "Freie Tierarztwahl",
-      "Fairster Tierversicherer (Focus Money 2025)",
-      "Schnelle Schadensabwicklung",
-      "Monatlich kündbar",
-      "Bis zu 90% Kostenerstattung"
-    ], 
-    price: "ab 10€/Monat", 
-    bonus: "Gratis-Monat bis 30.09.2025", 
-    logo: "🐾",
-    url: "/anbieter/da-direkt"
-  },
+  { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱", url: "/anbieter/traderepublic" },
+  { name: "XTB", rating: 4.5, features: ["Gratis Aktie für neue Investoren", "Über 2600 CFD-Instrumente", "0% Kommission bis 100.000€ Umsatz"], price: "0€ Kommission", bonus: "Demo-Konto", logo: "📊", url: "/anbieter/xtb" },
+  { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Viele Kryptowährungen", "Niedrige Gebühren"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙", url: "/anbieter/kraken" },
 ]
 
-export default function Haustierversicherungen() {
+export default function Trading() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Haustierversicherungen</h1>
+      <h1 className="text-3xl font-bold mb-6 p-4">Trading Anbieter</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.map((provider, index) => (
           <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -85,7 +69,7 @@ export default function Haustierversicherungen() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-2 sm:mb-4">
-                <Heart className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
                 <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
@@ -98,7 +82,7 @@ export default function Haustierversicherungen() {
                 <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
                 <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
                 <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
-                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
+                <li><Link href="/trading" className="hover:text-white transition-colors">Trading Anbieter</Link></li>
               </ul>
             </div>
             <div>
