@@ -3,118 +3,25 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
+// Import provider data from subpages
+import { providerData as versicherungenData } from "@/app/versicherungen/page"
+import { providerData as bankingData } from "@/app/banking/page"
+import { providerData as tierversicherungenData } from "@/app/tierversicherungen/page"
+import { providerData as kryptoData } from "@/app/krypto/page"
+
+// Combine provider data into a single object
 const providerData = {
-  versicherungen: [
-    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
-    { 
-      name: "DA-Direkt", 
-      rating: 4.6, 
-      features: [
-        "Bis zu 100 % Kostenerstattung",
-        "Gratismonat bis 31.08.",
-        "monatlich kündbar",
-        "Testsieger SEHR GUT",
-        "Beliebtester Kfz-Direktversicherer",
-        "Fairster Tierversicherer",
-        "15% Rabatt auf Kfz-Versicherung",
-        "OP-Schutz für Tierkrankenversicherung",
-        "Krankenzusatz mit 100€ Bonus",
-        "24/7 Service"
-      ], 
-      price: "ab 15€/Monat", 
-      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
-      logo: "🚗" 
-    },
-    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
-    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
-    { name: "Tarifcheck", rating: 4.4, features: ["Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
-    { 
-      name: "eRecht24", 
-      rating: 4.3, 
-      features: [
-        "Rechtssicherheit für Webseiten",
-        "DSGVO-konform mit Premium Tools",
-        "Automatische Rechtstext-Generatoren",
-        "Abmahnschutz inklusive",
-        "Praxis-Tools für Social Media",
-        "Kostenlose Erstberatung",
-        "NEU: KI-gestützte Lösungen",
-        "Zentraler Projekt Manager",
-        "Live-Webinare zu Internetrecht",
-        "Muster-Verträge & Checklisten"
-      ], 
-      price: "ab 20€/Monat", 
-      bonus: "Gratis Rechtscheck", 
-      logo: "⚖️" 
-    },
-    { 
-      name: "BavariaDirekt", 
-      rating: 4.5, 
-      features: [
-        "Günstige Kfz-Versicherung ab 9,70€",
-        "Haftpflichtversicherung online",
-        "Tierkrankenversicherung mit OP-Schutz",
-        "Rechtsschutzversicherung flexibel",
-        "Bis zu 350€ sparen",
-        "24h-Notfall-Hotline",
-        "91% Weiterempfehlung",
-        "TÜV-geprüfter Service"
-      ], 
-      price: "ab 16€/Monat", 
-      bonus: "Treuebonus", 
-      logo: "🍺" 
-    },
-  ],
-  banking: [
-    { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
-    { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
-    { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
-    { 
-      name: "XTB", 
-      rating: 4.5, 
-      features: [
-        "Gratis Aktie für neue Investoren", "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente",
-        "Über 40 Krypto-CFDs",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€",
-        "Kostenlose Ein- & Auszahlungen",
-        "Platz 1 CFD-Broker 2024/25"
-      ], 
-      price: "0€ Kommission", 
-      bonus: "Kostenlose Kontoeröffnung", 
-      logo: "📊" 
-    },
-    { name: "Credimax", rating: 4.2, features: ["Schnelle Kredite", "Online-Beantragung", "Flexible Rückzahlung"], price: "ab 2,99% p.a.", bonus: "Zinsrabatt", logo: "💳" },
-  ],
-  tierversicherungen: [
-    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
-    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
-  ],
-  krypto: [
-    { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
-    { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
-    { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
-    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Aktien und ETFs", "Forex", "Kryptowährungen", "Professionelle Tools"], price: "Gratis Aktien Aktion", bonus: "bis 2,3% p.a. Zinsen", logo: "📊" },
-  ]
+  versicherungen: versicherungenData,
+  banking: bankingData,
+  tierversicherungen: tierversicherungenData,
+  krypto: kryptoData,
 }
 
 export default function Home() {
@@ -425,12 +332,14 @@ export default function Home() {
                         <Button
                           className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0"
                           onClick={() => {
-                            if (provider.name === "eRecht24") {
-                              window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank");
+                            if (provider.url) {
+                              window.open(provider.url, provider.url.startsWith('http') ? '_blank' : '_self')
+                            } else if (provider.name === "eRecht24") {
+                              window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
                             } else if (provider.name === "Tarifcheck") {
-                              window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank");
+                              window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")
                             } else {
-                              window.open("/anbieter", "_blank");
+                              window.open("/anbieter", "_blank")
                             }
                           }}
                         >
@@ -455,7 +364,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kundenbewertungen - KORRIGIERT */}
+      {/* Kundenbewertungen */}
       <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
