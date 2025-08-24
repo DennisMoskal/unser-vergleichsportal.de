@@ -94,7 +94,7 @@ const providerData = {
 }
 
 export default function Banking() {
-  const getBadgeColor = (category) => {
+  const getBadgeColor = (category: string) => {
     switch(category) {
       case "versicherung": return "bg-blue-500"
       case "bank": return "bg-green-500"
@@ -105,7 +105,7 @@ export default function Banking() {
     }
   }
 
-  const getCategoryText = (category) => {
+  const getCategoryText = (category: string) => {
     switch(category) {
       case "versicherung": return "Versicherung"
       case "bank": return "Banking"
