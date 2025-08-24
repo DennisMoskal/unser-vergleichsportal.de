@@ -1,12 +1,11 @@
 "use client"
 
-import React from 'react';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, Heart, Zap, PiggyBank, Menu, X, TrendingUp } from "lucide-react"
+import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -322,9 +321,7 @@ export default function Home() {
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-gray-600">
-              <TrendingUp className="h-4 w-4 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-            </Shield>
+            <TrendingUp className="h-8 w-8 text-green-600" />
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -423,9 +420,7 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
                 >
-                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5">
-                    <TrendingUp className="h-3 w-3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                  </Shield>
+                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
                   Versicherung
                 </Button>
                 <Button
@@ -449,9 +444,7 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
                 >
-                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5">
-                    <TrendingUp className="h-3 w-3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                  </Shield>
+                  <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
                   Trading
                 </Button>
               </div>
@@ -468,7 +461,7 @@ export default function Home() {
               { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
               { key: 'banking', label: 'BANKING', icon: PiggyBank },
               { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'trading', label: 'TRADING', icon: Shield }
+              { key: 'trading', label: 'TRADING', icon: TrendingUp }
             ].map(({ key, label, icon: Icon }) => (
               <Link
                 key={key}
@@ -479,9 +472,7 @@ export default function Home() {
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
               >
-                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
-                  <TrendingUp className="h-2 w-2 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                </Icon>
+                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 {label}
               </Link>
             ))}
@@ -545,12 +536,10 @@ export default function Home() {
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
 
-          <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
               <TabsTrigger value="versicherungen" className="flex items-center text-xs sm:text-sm">
-                <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
-                  <TrendingUp className="h-2 w-2 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                </Shield>
+                <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
                 Versicherungen
               </TabsTrigger>
               <TabsTrigger value="banking" className="flex items-center text-xs sm:text-sm">
@@ -562,9 +551,7 @@ export default function Home() {
                 Tierversicherung
               </TabsTrigger>
               <TabsTrigger value="trading" className="flex items-center text-xs sm:text-sm">
-                <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
-                  <TrendingUp className="h-2 w-2 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                </Shield>
+                <TrendingUp className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
                 Trading
               </TabsTrigger>
             </TabsList>
@@ -853,9 +840,7 @@ export default function Home() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Shield className="h-6 w-6 text-gray-400">
-                  <TrendingUp className="h-3 w-3 text-green-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                </Shield>
+                <TrendingUp className="h-6 w-6 text-green-400" />
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
               <p className="text-gray-400 text-sm">
