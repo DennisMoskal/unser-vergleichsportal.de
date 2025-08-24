@@ -1,8 +1,9 @@
+```typescript
 "use client"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Lock, EyeOff } from "lucide-react"
+import { Lock, EyeOff, Shield, PiggyBank, Heart, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Head from "next/head"
 
@@ -218,7 +219,7 @@ export default function DatenschutzPage() {
         </div>
       </section>
 
-      {/* Footer (unverändert) */}
+      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
@@ -267,3 +268,4 @@ export default function DatenschutzPage() {
     </div>
   )
 }
+```
