@@ -32,7 +32,7 @@
 
   <!-- Anbieter Versicherungen -->
   <url>
-    <loc>https://smart-finanz.vercel.app/anbieter/gvv</loc>
+    <loc>https://smart-finanz.vercel.app/anbieter/gvv-versicherung</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -101,7 +101,7 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Anbieter Krypto -->
+  <!-- Anbieter Krypto / Trading -->
   <url>
     <loc>https://smart-finanz.vercel.app/anbieter/kraken</loc>
     <priority>0.8</priority>
@@ -118,25 +118,25 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Statische Seiten -->
+  <!-- Footer-Seiten -->
   <url>
     <loc>https://smart-finanz.vercel.app/ueber-uns</loc>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://smart-finanz.vercel.app/partnerprogramme</loc>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://smart-finanz.vercel.app/karriere</loc>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://smart-finanz.vercel.app/kontakt</loc>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
