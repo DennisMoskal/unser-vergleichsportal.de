@@ -253,7 +253,7 @@ const providerData: { [key: string]: Provider[] } = {
       url: "/anbieter/figopet"
     }
   ],
-  krypto: [
+  trading: [
     { 
       name: "Kraken", 
       rating: 4.6, 
@@ -310,7 +310,7 @@ export default function Home() {
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
     const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "krypto"].includes(hash)) {
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -334,8 +334,8 @@ export default function Home() {
             <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Tierversicherung
             </Link>
-            <Link href="/krypto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Krypto
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Trading
             </Link>
             <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Kundenbewertungen
@@ -378,11 +378,11 @@ export default function Home() {
                 Tierversicherung
               </Link>
               <Link
-                href="/krypto"
+                href="/trading"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Krypto
+                Trading
               </Link>
               <Link
                 href="#kundenbewertungen"
@@ -440,12 +440,12 @@ export default function Home() {
                   Tierversicherung
                 </Button>
                 <Button
-                  variant={selectedProduct === "krypto" ? "default" : "outline"}
+                  variant={selectedProduct === "trading" ? "default" : "outline"}
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("krypto"); window.location.href = "/krypto"; }}
+                  onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
                 >
                   <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
-                  Krypto Trading
+                  Trading
                 </Button>
               </div>
             </div>
@@ -461,7 +461,7 @@ export default function Home() {
               { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
               { key: 'banking', label: 'BANKING', icon: PiggyBank },
               { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'krypto', label: 'KRYPTO', icon: TrendingUp }
+              { key: 'trading', label: 'TRADING', icon: TrendingUp }
             ].map(({ key, label, icon: Icon }) => (
               <Link
                 key={key}
@@ -536,7 +536,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
 
-          <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
               <TabsTrigger value="versicherungen" className="flex items-center text-xs sm:text-sm">
                 <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
@@ -550,9 +550,9 @@ export default function Home() {
                 <Heart className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
                 Tierversicherung
               </TabsTrigger>
-              <TabsTrigger value="krypto" className="flex items-center text-xs sm:text-sm">
+              <TabsTrigger value="trading" className="flex items-center text-xs sm:text-sm">
                 <TrendingUp className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
-                Krypto
+                Trading
               </TabsTrigger>
             </TabsList>
 
@@ -608,14 +608,14 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
-                  {category === 'krypto' && (
+                  {category === 'trading' && (
                     <p>
                       CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
                       72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
                       Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
                     </p>
                   )}
-                  <p className={category === 'krypto' ? 'mt-4' : ''}>
+                  <p className={category === 'trading' ? 'mt-4' : ''}>
                     *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
                   </p>
                 </div>
@@ -758,7 +758,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                  "Mit SmartFinanz habe ich die beste Krypto-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
+                  "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                 </p>
                 <Button
                   variant="default"
@@ -802,7 +802,7 @@ export default function Home() {
                   "@type": "Review",
                   "author": { "@type": "Person", "name": "Lukas" },
                   "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                  "reviewBody": "Mit SmartFinanz habe ich die beste Krypto-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
+                  "reviewBody": "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                 }
               ]
             })}
@@ -866,8 +866,8 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/krypto" className="hover:text-white transition-colors text-left">
-                    Krypto Trading
+                  <Link href="/trading" className="hover:text-white transition-colors text-left">
+                    Trading
                   </Link>
                 </li>
               </ul>
