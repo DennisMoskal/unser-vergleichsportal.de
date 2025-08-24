@@ -1,5 +1,6 @@
 "use client"
 
+import React from 'react';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -544,7 +545,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
 
-        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+          <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
               <TabsTrigger value="versicherungen" className="flex items-center text-xs sm:text-sm">
                 <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
@@ -870,7 +871,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href "/banking" className="hover:text-white transition-colors text-left">
+                  <Link href="/banking" className="hover:text-white transition-colors text-left">
                     Banking
                   </Link>
                 </li>
