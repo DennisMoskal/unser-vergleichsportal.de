@@ -9,6 +9,44 @@ import Link from "next/link"
 
 const providerData = [
   {
+    name: "Tarifcheck.de",
+    rating: 4.5,
+    features: [
+      "Über 20 Jahre Erfahrung als Vergleichsportal",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+      "Mehrfach ausgezeichnet mit 'sehr gut'",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 Kundenbewertungen",
+      "Deutschlands drittgrößtes Vergleichsportal",
+      "Vertrauen von Millionen Verbrauchern",
+      "Bis zu 1.000€ jährlich sparen möglich"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.de/girokonto/"
+  },
+  {
+    name: "DA-Direkt Versicherungen",
+    rating: 4.8,
+    features: [
+      "Online-Direktversicherer mit über 100 Jahren Erfahrung",
+      "Teil der internationalen Zurich Insurance Group",
+      "Testsieger bei Stiftung Warentest (Zahnzusatzversicherung)",
+      "Beliebtester Kfz-Direktversicherer laut €uro-Magazin",
+      "24/7 Kundenservice an 365 Tagen im Jahr",
+      "Smarte Online-Services ohne Papierkrieg",
+      "Sofortiger Versicherungsschutz ohne Wartezeit",
+      "Flexible monatliche Kündigungsmöglichkeit",
+      "Ausgezeichneter Versicherungsschutz zu günstigen Preisen"
+    ],
+    price: "Günstige Direktversicherer-Preise",
+    bonus: "15€ Neukundenbonus + Sofortschutz",
+    logo: "🛡️",
+    url: "https://www.da-direkt.de/"
+  },
+  {
     name: "GVV",
     rating: 4.8,
     features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"],
@@ -16,26 +54,6 @@ const providerData = [
     bonus: "3 Monate kostenlos",
     logo: "🛡️",
     url: "/anbieter/gvv"
-  },
-  {
-    name: "DA-Direkt",
-    rating: 4.6,
-    features: [
-      "Bis zu 100 % Kostenerstattung",
-      "Gratismonat bis 31.08.",
-      "monatlich kündbar",
-      "Testsieger SEHR GUT (Stiftung Warentest 07/2025)",
-      "Beliebtester Kfz-Direktversicherer (€uro-Magazin)",
-      "Fairster Tierversicherer (Focus Money)",
-      "15% Rabatt auf Kfz-Versicherung",
-      "OP-Schutz für Tierkrankenversicherung",
-      "Krankenzusatz mit 100€ Bonus",
-      "Rund-um-die-Uhr Service (365 Tage)"
-    ],
-    price: "ab 15€/Monat",
-    bonus: "Willkommensbonus + 30€ Amazon-Gutschein",
-    logo: "🚗",
-    url: "/anbieter/da-direkt"
   },
   {
     name: "Münchener Verein",
@@ -90,15 +108,21 @@ export default function Versicherungen() {
               </ul>
 
               <div className="mt-4">
-                <Link href={provider.url}>
+                <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                    Zum Anbieter
+                    Zum Anbieter*
                   </Button>
                 </Link>
               </div>
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
+        <p>
+          *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
+        </p>
       </div>
 
       <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
