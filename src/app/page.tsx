@@ -5,36 +5,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-const providerData = {
+export interface Provider {
+  name: string;
+  rating: number;
+  features: string[];
+  price: string;
+  bonus: string;
+  logo: string;
+  url: string;
+}
+
+const providerData: { [key: string]: Provider[] } = {
   versicherungen: [
-    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
-    { 
-      name: "DA-Direkt", 
-      rating: 4.6, 
+    {
+      name: "Tarifcheck",
+      rating: 4.5,
       features: [
-        "Bis zu 100 % Kostenerstattung",
-        "Gratismonat bis 31.08.",
-        "monatlich kündbar",
-        "Testsieger SEHR GUT",
-        "Beliebtester Kfz-Direktversicherer",
-        "Fairster Tierversicherer",
-        "15% Rabatt auf Kfz-Versicherung",
-        "OP-Schutz für Tierkrankenversicherung",
-        "Krankenzusatz mit 100€ Bonus",
-        "24/7 Service"
-      ], 
-      price: "ab 15€/Monat", 
-      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
-      logo: "🚗" 
-    },
-    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
-    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
-    { name: "Tarifcheck", rating: 4.4, features: ["Über 20 Jahre Erfahrung als Vergleichsportal",
+        "Über 20 Jahre Erfahrung als Vergleichsportal",
         "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
@@ -42,7 +34,59 @@ const providerData = {
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
         "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
+        "Bis zu 1.000€ jährlich sparen möglich"
+      ],
+      price: "100% kostenlos",
+      bonus: "Bis zu 120€ Neukundenbonus",
+      logo: "🏆",
+      url: "https://www.tarifcheck.de/girokonto/"
+    },
+    {
+      name: "DA-Direkt",
+      rating: 4.8,
+      features: [
+        "Online-Direktversicherer mit über 100 Jahren Erfahrung",
+        "Teil der internationalen Zurich Insurance Group",
+        "Testsieger bei Stiftung Warentest (Zahnzusatzversicherung)",
+        "Beliebtester Kfz-Direktversicherer laut €uro-Magazin",
+        "24/7 Kundenservice an 365 Tagen im Jahr",
+        "Smarte Online-Services ohne Papierkrieg",
+        "Sofortiger Versicherungsschutz ohne Wartezeit",
+        "Flexible monatliche Kündigungsmöglichkeit",
+        "Ausgezeichneter Versicherungsschutz zu günstigen Preisen"
+      ],
+      price: "Günstige Direktversicherer-Preise",
+      bonus: "15€ Neukundenbonus + Sofortschutz",
+      logo: "🛡️",
+      url: "https://www.da-direkt.de/"
+    },
+    { 
+      name: "GVV", 
+      rating: 4.8, 
+      features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], 
+      price: "ab 12€/Monat", 
+      bonus: "3 Monate kostenlos", 
+      logo: "🛡️",
+      url: "/anbieter/gvv"
+    },
+    { 
+      name: "Münchener Verein", 
+      rating: 4.7, 
+      features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], 
+      price: "ab 18€/Monat", 
+      bonus: "Familienrabatt", 
+      logo: "🏛️",
+      url: "/anbieter/muenchener-verein"
+    },
+    { 
+      name: "Maxcare", 
+      rating: 4.5, 
+      features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], 
+      price: "ab 14€/Monat", 
+      bonus: "Online-Rabatt", 
+      logo: "💊",
+      url: "/anbieter/maxcare"
+    },
     { 
       name: "eRecht24", 
       rating: 4.3, 
@@ -60,7 +104,8 @@ const providerData = {
       ], 
       price: "ab 20€/Monat", 
       bonus: "Gratis Rechtscheck", 
-      logo: "⚖️" 
+      logo: "⚖️",
+      url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
     },
     { 
       name: "BavariaDirekt", 
@@ -77,18 +122,81 @@ const providerData = {
       ], 
       price: "ab 16€/Monat", 
       bonus: "Treuebonus", 
-      logo: "🍺" 
+      logo: "🍺",
+      url: "/anbieter/bavariadirekt"
     },
   ],
   banking: [
-    { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
-    { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
-    { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
+    { 
+      name: "Tarifcheck", 
+      rating: 4.5, 
+      features: [
+        "Über 20 Jahre Erfahrung als Vergleichsportal",
+        "100% kostenloser und unverbindlicher Vergleich",
+        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+        "Mehrfach ausgezeichnet mit 'sehr gut'",
+        "eKomi Silber Siegel mit 4,5/5 Sternen",
+        "Über 3.194 Kundenbewertungen",
+        "Deutschlands drittgrößtes Vergleichsportal",
+        "Vertrauen von Millionen Verbrauchern",
+        "Bis zu 1.000€ jährlich sparen möglich"
+      ], 
+      price: "100% kostenlos", 
+      bonus: "Bis zu 120€ Neukundenbonus", 
+      logo: "🏆",
+      url: "https://www.tarifcheck.de/girokonto/"
+    },
+    { 
+      name: "DA-Direkt", 
+      rating: 4.8, 
+      features: [
+        "Online-Direktversicherer mit über 100 Jahren Erfahrung",
+        "Teil der internationalen Zurich Insurance Group",
+        "Testsieger bei Stiftung Warentest (Zahnzusatzversicherung)",
+        "Beliebtester Kfz-Direktversicherer laut €uro-Magazin",
+        "24/7 Kundenservice an 365 Tagen im Jahr",
+        "Smarte Online-Services ohne Papierkrieg",
+        "Sofortiger Versicherungsschutz ohne Wartezeit",
+        "Flexible monatliche Kündigungsmöglichkeit",
+        "Ausgezeichneter Versicherungsschutz zu günstigen Preisen"
+      ], 
+      price: "Günstige Direktversicherer-Preise", 
+      bonus: "15€ Neukundenbonus + Sofortschutz", 
+      logo: "🛡️",
+      url: "https://www.da-direkt.de/"
+    },
+    { 
+      name: "Postbank", 
+      rating: 4.4, 
+      features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], 
+      price: "0€ Kontoführung", 
+      bonus: "50€ Startguthaben", 
+      logo: "📮",
+      url: "/anbieter/postbank"
+    },
+    { 
+      name: "Deutsche Bank", 
+      rating: 4.3, 
+      features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], 
+      price: "ab 6,90€/Monat", 
+      bonus: "Willkommenspaket", 
+      logo: "🏦",
+      url: "/anbieter/deutsche-bank"
+    },
+    { 
+      name: "TradeRepublic", 
+      rating: 4.7, 
+      features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], 
+      price: "Niedrige Ordergebühren", 
+      bonus: "2,2% für Guthaben", 
+      logo: "📱",
+      url: "https://www.traderepublic.com/"
+    },
     { 
       name: "XTB", 
       rating: 4.5, 
       features: [
-        "Gratis Aktie für neue Investoren", "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
+        "Gratis Aktie für neue Investoren",
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
         "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente",
@@ -100,20 +208,88 @@ const providerData = {
         "Platz 1 CFD-Broker 2024/25"
       ], 
       price: "0€ Kommission", 
-      bonus: "Kostenlose Kontoeröffnung", 
-      logo: "📊" 
+      bonus: "Demo-Konto", 
+      logo: "📊",
+      url: "https://link-pso.xtb.com/pso/lMDhc"
     },
-    { name: "Credimax", rating: 4.2, features: ["Schnelle Kredite", "Online-Beantragung", "Flexible Rückzahlung"], price: "ab 2,99% p.a.", bonus: "Zinsrabatt", logo: "💳" },
+    { 
+      name: "Credimaxx", 
+      rating: 4.9, 
+      features: [
+        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+        "Sofortvermittlung durch erfahrene Kreditprofis",
+        "Digitaler Abschluss mit WebID oder VideoIdent",
+        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
+        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
+        "Vermittlung in bis zu 1 Minute",
+        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
+        "25 Jahre Erfahrung in der Kreditvermittlung"
+      ], 
+      price: "ab 10,99% eff. Zins p.a.", 
+      bonus: "Schnelle Auszahlung", 
+      logo: "💳",
+      url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
+    }
   ],
   tierversicherungen: [
-    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
-    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
+    { 
+      name: "PetProtect", 
+      rating: 4.9, 
+      features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], 
+      price: "ab 8€/Monat", 
+      bonus: "1. Monat gratis", 
+      logo: "🐕",
+      url: "/anbieter/petprotect"
+    },
+    { 
+      name: "FigoPet", 
+      rating: 4.6, 
+      features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], 
+      price: "ab 12€/Monat", 
+      bonus: "Willkommensgeschenk", 
+      logo: "🐱",
+      url: "/anbieter/figopet"
+    }
   ],
   krypto: [
-    { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
-    { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
-    { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
-    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Aktien und ETFs", "Forex", "Kryptowährungen", "Professionelle Tools"], price: "Gratis Aktien Aktion", bonus: "bis 2,3% p.a. Zinsen", logo: "📊" },
+    { 
+      name: "Kraken", 
+      rating: 4.6, 
+      features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], 
+      price: "0,16% Maker Fee", 
+      bonus: "Staking Rewards", 
+      logo: "🐙",
+      url: "/anbieter/kraken"
+    },
+    { 
+      name: "Bybit", 
+      rating: 4.4, 
+      features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], 
+      price: "0,1% Taker Fee", 
+      bonus: "Trading Bonus", 
+      logo: "⚡",
+      url: "/anbieter/bybit"
+    },
+    { 
+      name: "eToro", 
+      rating: 4.3, 
+      features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], 
+      price: "1% Spread", 
+      bonus: "Demo Portfolio", 
+      logo: "🌐",
+      url: "/anbieter/etoro"
+    },
+    { 
+      name: "XTB", 
+      rating: 4.5, 
+      features: ["CFD Trading", "Aktien und ETFs", "Forex", "Kryptowährungen", "Professionelle Tools"], 
+      price: "Gratis Aktien Aktion", 
+      bonus: "bis 2,3% p.a. Zinsen", 
+      logo: "📊",
+      url: "https://link-pso.xtb.com/pso/lMDhc"
+    }
   ]
 }
 
@@ -422,40 +598,34 @@ export default function Home() {
                             </ul>
                           </div>
                         </div>
-                        <Button
-                          className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0"
-                          onClick={() => {
-                            if (provider.name === "eRecht24") {
-                              window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank");
-                            } else if (provider.name === "Tarifcheck") {
-                              window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank");
-                            } else {
-                              window.open("/anbieter", "_blank");
-                            }
-                          }}
-                        >
-                          Zum Anbieter
-                        </Button>
+                        <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                          <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                            Zum Anbieter*
+                          </Button>
+                        </Link>
                       </CardContent>
                     </Card>
                   ))}
                 </div>
-                {category === 'krypto' && (
-                  <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
+                <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
+                  {category === 'krypto' && (
                     <p>
                       CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
-                      71% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
+                      72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
                       Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
                     </p>
-                  </div>
-                )}
+                  )}
+                  <p className={category === 'krypto' ? 'mt-4' : ''}>
+                    *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
+                  </p>
+                </div>
               </TabsContent>
             ))}
           </Tabs>
         </div>
       </section>
 
-      {/* Kundenbewertungen - KORRIGIERT */}
+      {/* Kundenbewertungen */}
       <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
