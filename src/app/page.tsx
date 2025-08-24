@@ -3,25 +3,118 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, Car, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-// Import provider data from subpages
-import { providerData as versicherungenData } from "@/app/versicherungen/page"
-import { providerData as bankingData } from "@/app/banking/page"
-import { providerData as tierversicherungenData } from "@/app/tierversicherungen/page"
-import { providerData as kryptoData } from "@/app/krypto/page"
-
-// Combine provider data into a single object
 const providerData = {
-  versicherungen: versicherungenData,
-  banking: bankingData,
-  tierversicherungen: tierversicherungenData,
-  krypto: kryptoData,
+  versicherungen: [
+    { name: "GVV", rating: 4.8, features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"], price: "ab 12€/Monat", bonus: "3 Monate kostenlos", logo: "🛡️" },
+    { 
+      name: "DA-Direkt", 
+      rating: 4.6, 
+      features: [
+        "Bis zu 100 % Kostenerstattung",
+        "Gratismonat bis 31.08.",
+        "monatlich kündbar",
+        "Testsieger SEHR GUT",
+        "Beliebtester Kfz-Direktversicherer",
+        "Fairster Tierversicherer",
+        "15% Rabatt auf Kfz-Versicherung",
+        "OP-Schutz für Tierkrankenversicherung",
+        "Krankenzusatz mit 100€ Bonus",
+        "24/7 Service"
+      ], 
+      price: "ab 15€/Monat", 
+      bonus: "Willkommensbonus + 30€ Amazon-Gutschein", 
+      logo: "🚗" 
+    },
+    { name: "Münchener Verein", rating: 4.7, features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"], price: "ab 18€/Monat", bonus: "Familienrabatt", logo: "🏛️" },
+    { name: "Maxcare", rating: 4.5, features: ["Digitale Services", "Günstige Prämien", "Schnelle Regulierung"], price: "ab 14€/Monat", bonus: "Online-Rabatt", logo: "💊" },
+    { name: "Tarifcheck", rating: 4.4, features: ["Über 20 Jahre Erfahrung als Vergleichsportal",
+        "100% kostenloser und unverbindlicher Vergleich",
+        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+        "Mehrfach ausgezeichnet mit 'sehr gut'",
+        "eKomi Silber Siegel mit 4,5/5 Sternen",
+        "Über 3.194 Kundenbewertungen",
+        "Deutschlands drittgrößtes Vergleichsportal",
+        "Vertrauen von Millionen Verbrauchern",
+        "Bis zu 1.000€ jährlich sparen möglich"], price: "ab 10€/Monat", bonus: "Cashback", logo: "💰" },
+    { 
+      name: "eRecht24", 
+      rating: 4.3, 
+      features: [
+        "Rechtssicherheit für Webseiten",
+        "DSGVO-konform mit Premium Tools",
+        "Automatische Rechtstext-Generatoren",
+        "Abmahnschutz inklusive",
+        "Praxis-Tools für Social Media",
+        "Kostenlose Erstberatung",
+        "NEU: KI-gestützte Lösungen",
+        "Zentraler Projekt Manager",
+        "Live-Webinare zu Internetrecht",
+        "Muster-Verträge & Checklisten"
+      ], 
+      price: "ab 20€/Monat", 
+      bonus: "Gratis Rechtscheck", 
+      logo: "⚖️" 
+    },
+    { 
+      name: "BavariaDirekt", 
+      rating: 4.5, 
+      features: [
+        "Günstige Kfz-Versicherung ab 9,70€",
+        "Haftpflichtversicherung online",
+        "Tierkrankenversicherung mit OP-Schutz",
+        "Rechtsschutzversicherung flexibel",
+        "Bis zu 350€ sparen",
+        "24h-Notfall-Hotline",
+        "91% Weiterempfehlung",
+        "TÜV-geprüfter Service"
+      ], 
+      price: "ab 16€/Monat", 
+      bonus: "Treuebonus", 
+      logo: "🍺" 
+    },
+  ],
+  banking: [
+    { name: "Postbank", rating: 4.4, features: ["Filialnetz", "Kostenloses Girokonto", "Mobile App"], price: "0€ Kontoführung", bonus: "50€ Startguthaben", logo: "📮" },
+    { name: "Deutsche Bank", rating: 4.3, features: ["Premium Service", "Internationale Präsenz", "Anlageberatung"], price: "ab 6,90€/Monat", bonus: "Willkommenspaket", logo: "🏦" },
+    { name: "TradeRepublic", rating: 4.7, features: ["Provisionsfreier Handel", "Intuitive App", "ETF-Sparpläne"], price: "Niedrige Ordergebühren", bonus: "2,2% für Guthaben", logo: "📱" },
+    { 
+      name: "XTB", 
+      rating: 4.5, 
+      features: [
+        "Gratis Aktie für neue Investoren", "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
+        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+        "Über 8000 Aktien & ETFs",
+        "Über 2600 CFD-Instrumente",
+        "Über 40 Krypto-CFDs",
+        "eWallet mit virtueller Mastercard",
+        "Smarte ETF-Sparpläne",
+        "0% Kommission bis 100.000€",
+        "Kostenlose Ein- & Auszahlungen",
+        "Platz 1 CFD-Broker 2024/25"
+      ], 
+      price: "0€ Kommission", 
+      bonus: "Kostenlose Kontoeröffnung", 
+      logo: "📊" 
+    },
+    { name: "Credimax", rating: 4.2, features: ["Schnelle Kredite", "Online-Beantragung", "Flexible Rückzahlung"], price: "ab 2,99% p.a.", bonus: "Zinsrabatt", logo: "💳" },
+  ],
+  tierversicherungen: [
+    { name: "PetProtect", rating: 4.9, features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"], price: "ab 8€/Monat", bonus: "1. Monat gratis", logo: "🐕" },
+    { name: "FigoPet", rating: 4.6, features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"], price: "ab 12€/Monat", bonus: "Willkommensgeschenk", logo: "🐱" },
+  ],
+  krypto: [
+    { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
+    { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
+    { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
+    { name: "XTB", rating: 4.5, features: ["CFD Trading", "Aktien und ETFs", "Forex", "Kryptowährungen", "Professionelle Tools"], price: "Gratis Aktien Aktion", bonus: "bis 2,3% p.a. Zinsen", logo: "📊" },
+  ]
 }
 
 export default function Home() {
@@ -332,14 +425,12 @@ export default function Home() {
                         <Button
                           className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0"
                           onClick={() => {
-                            if (provider.url) {
-                              window.open(provider.url, provider.url.startsWith('http') ? '_blank' : '_self')
-                            } else if (provider.name === "eRecht24") {
-                              window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")
+                            if (provider.name === "eRecht24") {
+                              window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank");
                             } else if (provider.name === "Tarifcheck") {
-                              window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")
+                              window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank");
                             } else {
-                              window.open("/anbieter", "_blank")
+                              window.open("/anbieter", "_blank");
                             }
                           }}
                         >
@@ -364,7 +455,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kundenbewertungen */}
+      {/* Kundenbewertungen - KORRIGIERT */}
       <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
@@ -634,6 +725,184 @@ export default function Home() {
             <p className="text-sm text-gray-400">
               © 2025 SmartFinanz. Alle Rechte vorbehalten.
             </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+} und hier als beispiel die versicherungen unterseite: // /app/versicherungen/page.tsx
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Star, Check, TrendingUp } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
+const providerData = [
+  {
+    name: "Tarifcheck.de",
+    rating: 4.5,
+    features: [
+      "Über 20 Jahre Erfahrung als Vergleichsportal",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+      "Mehrfach ausgezeichnet mit 'sehr gut'",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 Kundenbewertungen",
+      "Deutschlands drittgrößtes Vergleichsportal",
+      "Vertrauen von Millionen Verbrauchern",
+      "Bis zu 1.000€ jährlich sparen möglich"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.de/girokonto/"
+  },
+  {
+    name: "DA-Direkt Versicherungen",
+    rating: 4.8,
+    features: [
+      "Online-Direktversicherer mit über 100 Jahren Erfahrung",
+      "Teil der internationalen Zurich Insurance Group",
+      "Testsieger bei Stiftung Warentest (Zahnzusatzversicherung)",
+      "Beliebtester Kfz-Direktversicherer laut €uro-Magazin",
+      "24/7 Kundenservice an 365 Tagen im Jahr",
+      "Smarte Online-Services ohne Papierkrieg",
+      "Sofortiger Versicherungsschutz ohne Wartezeit",
+      "Flexible monatliche Kündigungsmöglichkeit",
+      "Ausgezeichneter Versicherungsschutz zu günstigen Preisen"
+    ],
+    price: "Günstige Direktversicherer-Preise",
+    bonus: "15€ Neukundenbonus + Sofortschutz",
+    logo: "🛡️",
+    url: "https://www.da-direkt.de/"
+  },
+  {
+    name: "GVV",
+    rating: 4.8,
+    features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"],
+    price: "ab 12€/Monat",
+    bonus: "3 Monate kostenlos",
+    logo: "🛡️",
+    url: "/anbieter/gvv"
+  },
+  {
+    name: "Münchener Verein",
+    rating: 4.7,
+    features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"],
+    price: "ab 18€/Monat",
+    bonus: "Familienrabatt",
+    logo: "🏛️",
+    url: "/anbieter/muenchener-verein"
+  }
+]
+
+export default function Versicherungen() {
+  return (
+    <div className="min-h-screen bg-white">
+      <h1 className="text-3xl font-bold mb-6 p-4">Versicherungen</h1>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
+        {providerData.map((provider, index) => (
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
+            {index === 0 && (
+              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+            )}
+
+            <CardHeader className="text-center pb-2">
+              <div className="text-3xl mb-2">{provider.logo}</div>
+              <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
+              <div className="flex items-center justify-center">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                  />
+                ))}
+                <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
+              </div>
+            </CardHeader>
+
+            <CardContent className="flex flex-col flex-1">
+              <div className="text-center border-b pb-2 mb-4">
+                <p className="text-xl font-bold text-green-600">{provider.price}</p>
+                <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
+              </div>
+
+              <ul className="space-y-1 flex-1">
+                {provider.features.map((feature, i) => (
+                  <li key={i} className="flex items-center text-sm">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-4">
+                <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                    Zum Anbieter*
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
+        <p>
+          *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
+        </p>
+      </div>
+
+      <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
+        Zurück zur Startseite
+      </Link>
+
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
+            <div>
+              <div className="flex items-center space-x-2 mb-2 sm:mb-4">
+                <TrendingUp className="h-5 w-5 sm:h-6 w-6 text-green-500" />
+                <h5 className="text-lg sm:text-xl font-bold">SmartFinanz</h5>
+              </div>
+              <p className="text-gray-400 text-sm sm:text-base">
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
+              </p>
+            </div>
+            <div>
+              <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
+                <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
+                <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
+                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
+                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
+                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
+                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-4 sm:mt-8 pt-4 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
+            <p>&copy; 2025 SmartFinanz. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
