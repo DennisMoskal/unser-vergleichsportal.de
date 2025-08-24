@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Star, Check, PiggyBank } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Star, Check, PiggyBank } from "lucide-react";
+import Link from "next/link";
 
 const providerData = {
-  banking: [
+  trading: [
     { 
       name: "Tarifcheck.de", 
       rating: 4.5, 
@@ -87,12 +87,12 @@ const providerData = {
   ],
 }
 
-export default function Banking() {
+export default function Trading() {
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-6 p-4">Banking</h1>
+      <h1 className="text-3xl font-bold mb-6 p-4">Trading Anbieter</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-        {providerData.banking.map((provider, index) => (
+        {providerData.trading.map((provider, index) => (
           <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col">
             {index === 0 && (
               <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
@@ -122,7 +122,6 @@ export default function Banking() {
                 ))}
               </ul>
 
-              {/* Button immer unten */}
               <div className="mt-auto">
                 <Link href={
                   provider.name === "DA-Direkt Versicherungen" ? "https://www.da-direkt.de/" :
@@ -171,7 +170,7 @@ export default function Banking() {
                 <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
                 <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
                 <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
-                <li><Link href="/krypto" className="hover:text-white transition-colors">Krypto Trading</Link></li>
+                <li><Link href="/trading" className="hover:text-white transition-colors">Trading Anbieter</Link></li>
               </ul>
             </div>
             <div>
