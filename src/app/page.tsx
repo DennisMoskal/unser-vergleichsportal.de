@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, Heart, Zap, PiggyBank, Menu, X, TrendingUp } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -321,13 +321,9 @@ export default function Home() {
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Image
-              src="/images/smartfinanz-logo.png"
-              alt="SmartFinanz Logo"
-              width={32}
-              height={32}
-              className="h-8 w-8"
-            />
+            <Shield className="h-8 w-8 text-gray-600">
+              <TrendingUp className="h-4 w-4 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+            </Shield>
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -426,7 +422,9 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
                 >
-                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
+                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5">
+                    <TrendingUp className="h-3 w-3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  </Shield>
                   Versicherung
                 </Button>
                 <Button
@@ -450,13 +448,9 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
                 >
-                  <Image
-                    src="/images/smartfinanz-logo.png"
-                    alt="SmartFinanz Logo"
-                    width={20}
-                    height={20}
-                    className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5"
-                  />
+                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5">
+                    <TrendingUp className="h-3 w-3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  </Shield>
                   Trading
                 </Button>
               </div>
@@ -473,7 +467,7 @@ export default function Home() {
               { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
               { key: 'banking', label: 'BANKING', icon: PiggyBank },
               { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'trading', label: 'TRADING', icon: Image }
+              { key: 'trading', label: 'TRADING', icon: Shield }
             ].map(({ key, label, icon: Icon }) => (
               <Link
                 key={key}
@@ -484,13 +478,9 @@ export default function Home() {
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
               >
-                <Icon
-                  src="/images/smartfinanz-logo.png"
-                  alt="SmartFinanz Logo"
-                  width={16}
-                  height={16}
-                  className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4"
-                />
+                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
+                  <TrendingUp className="h-2 w-2 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </Icon>
                 {label}
               </Link>
             ))}
@@ -557,7 +547,9 @@ export default function Home() {
         <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
               <TabsTrigger value="versicherungen" className="flex items-center text-xs sm:text-sm">
-                <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
+                <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
+                  <TrendingUp className="h-2 w-2 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </Shield>
                 Versicherungen
               </TabsTrigger>
               <TabsTrigger value="banking" className="flex items-center text-xs sm:text-sm">
@@ -569,13 +561,9 @@ export default function Home() {
                 Tierversicherung
               </TabsTrigger>
               <TabsTrigger value="trading" className="flex items-center text-xs sm:text-sm">
-                <Image
-                  src="/images/smartfinanz-logo.png"
-                  alt="SmartFinanz Logo"
-                  width={16}
-                  height={16}
-                  className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4"
-                />
+                <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4">
+                  <TrendingUp className="h-2 w-2 text-green-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </Shield>
                 Trading
               </TabsTrigger>
             </TabsList>
@@ -864,13 +852,9 @@ export default function Home() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Image
-                  src="/images/smartfinanz-logo.png"
-                  alt="SmartFinanz Logo"
-                  width={24}
-                  height={24}
-                  className="h-6 w-6"
-                />
+                <Shield className="h-6 w-6 text-gray-400">
+                  <TrendingUp className="h-3 w-3 text-green-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </Shield>
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
               <p className="text-gray-400 text-sm">
@@ -886,7 +870,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/banking" className="hover:text-white transition-colors text-left">
+                  <Link href "/banking" className="hover:text-white transition-colors text-left">
                     Banking
                   </Link>
                 </li>
