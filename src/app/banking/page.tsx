@@ -236,7 +236,10 @@ export default function Banking() {
                     provider.name === "DA-Direkt Versicherungen" ? "https://www.da-direkt.de/" :
                     provider.name === "Credimaxx" ? "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D" :
                     provider.name === "Tarifcheck.de" ? "https://www.tarifcheck.de/girokonto/" :
-                    provider.name === "XTB" ? "https://link-pso.xtb.com/pso/lMDhc" : "#"
+                    provider.name === "XTB" ? "https://link-pso.xtb.com/pso/lMDhc" :
+                    provider.name === "Postbank" ? "https://www.postbank.de/" :
+                    provider.name === "Deutsche Bank" ? "https://www.deutsche-bank.de/" :
+                    provider.name === "TradeRepublic" ? "https://traderepublic.com/" : "#"
                   } target="_blank" rel="noopener noreferrer">
                     <Button className={`w-full text-white transform hover:scale-105 transition-all ${
                       provider.name === "DA-Direkt Versicherungen" ? 'bg-blue-600 hover:bg-blue-700' :
