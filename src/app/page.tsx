@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Check, Star, TrendingUp, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -33,7 +33,6 @@ const providerData: { [key: string]: Provider[] } = {
         "eKomi Silber Siegel mit 4,5/5 Sternen",
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
         "Bis zu 1.000€ jährlich sparen möglich"
       ],
       price: "100% kostenlos",
@@ -74,7 +73,6 @@ const providerData: { [key: string]: Provider[] } = {
         "eKomi Silber Siegel mit 4,5/5 Sternen",
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
         "Bis zu 1.000€ jährlich sparen möglich"
       ],
       price: "100% kostenlos",
@@ -300,7 +298,6 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
                 >
-                  <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
                   Versicherung
                 </Button>
                 <Button
@@ -308,7 +305,6 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
                 >
-                  <PiggyBank className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
                   Banking
                 </Button>
                 <Button
@@ -316,7 +312,6 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
                 >
-                  <Heart className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
                   Tierversicherung
                 </Button>
                 <Button
@@ -324,8 +319,49 @@ export default function Home() {
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
                   onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
                 >
-                  <TrendingUp className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5" />
                   Trading
+                </Button>
+                <Button
+                  variant={selectedProduct === "dsl" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("dsl"); window.location.href = "https://www.c24n.de/ducwCtq"; }}
+                >
+                  DSL
+                </Button>
+                <Button
+                  variant={selectedProduct === "mobilfunk" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("mobilfunk"); window.location.href = "https://www.c24n.de/5R17qbN"; }}
+                >
+                  Mobilfunk
+                </Button>
+                <Button
+                  variant={selectedProduct === "oekostrom" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("oekostrom"); window.location.href = "https://www.c24n.de/zxy0WKh"; }}
+                >
+                  Ökostrom
+                </Button>
+                <Button
+                  variant={selectedProduct === "gas" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("gas"); window.location.href = "https://www.c24n.de/Uxudvkj"; }}
+                >
+                  Gas
+                </Button>
+                <Button
+                  variant={selectedProduct === "pauschalreise" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("pauschalreise"); window.location.href = "https://www.c24n.de/EieKR0E"; }}
+                >
+                  Pauschalreise
+                </Button>
+                <Button
+                  variant={selectedProduct === "strom" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  onClick={() => { setSelectedProduct("strom"); window.location.href = "https://www.c24n.de/RYXPGyh"; }}
+                >
+                  Strom
                 </Button>
               </div>
             </div>
@@ -338,11 +374,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
             {[
-              { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
-              { key: 'banking', label: 'BANKING', icon: PiggyBank },
-              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'trading', label: 'TRADING', icon: TrendingUp }
-            ].map(({ key, label, icon: Icon }) => (
+              { key: 'versicherungen', label: 'VERSICHERUNGEN' },
+              { key: 'banking', label: 'BANKING' },
+              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG' },
+              { key: 'trading', label: 'TRADING' }
+            ].map(({ key, label }) => (
               <Link
                 key={key}
                 href={`/${key}`}
@@ -352,7 +388,6 @@ export default function Home() {
                     : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
               >
-                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 {label}
               </Link>
             ))}
@@ -377,10 +412,6 @@ export default function Home() {
             <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
               <Check className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
               Geprüft & Sicher
-            </Badge>
-            <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-              <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
-              TÜV Zertifiziert
             </Badge>
             <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
               <Star className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
@@ -429,7 +460,6 @@ export default function Home() {
                   "eKomi Silber Siegel mit 4,5/5 Sternen",
                   "Über 3.194 Kundenbewertungen",
                   "Deutschlands drittgrößtes Vergleichsportal",
-                  "Vertrauen von Millionen Verbrauchern",
                   "Bis zu 1.000€ jährlich sparen möglich"
                 ],
                 price: "100% kostenlos",
