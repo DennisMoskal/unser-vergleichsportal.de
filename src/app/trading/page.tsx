@@ -1,19 +1,72 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Star, Check, TrendingUp } from "lucide-react";
-import Link from "next/link";
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Star, Check, TrendingUp } from "lucide-react"
+import Link from "next/link"
 
 const providerData = {
   trading: [
-    { name: "Kraken", rating: 4.6, features: ["Hohe Sicherheit", "Niedrige Gebühren", "Viele Kryptowährungen"], price: "0,16% Maker Fee", bonus: "Staking Rewards", logo: "🐙" },
-    { name: "Bybit", rating: 4.4, features: ["Derivatives Trading", "High Leverage", "Advanced Tools"], price: "0,1% Taker Fee", bonus: "Trading Bonus", logo: "⚡" },
-    { name: "eToro", rating: 4.3, features: ["Social Trading", "Copy Trading", "Benutzerfreundlich"], price: "1% Spread", bonus: "Demo Portfolio", logo: "🌐" },
-    { 
-      name: "XTB", 
-      rating: 4.5, 
+    {
+      name: "Kraken",
+      rating: 4.6,
       features: [
-        "Gratis Aktie für neue Investoren", 
+        "Über 480 Kryptowährungen zum Kaufen und Verkaufen",
+        "Niedrige Spreads und 0,16% Maker Fee",
+        "Wöchentliche Staking-Rewards mit über 800 Mio. € ausgezahlt",
+        "24/7 preisgekrönter Kundensupport",
+        "Kostenlose Euro-Einzahlungen via SEPA oder PayPal",
+        "Reguliert durch die Bermuda Monetary Authority",
+        "Hohe Liquidität für stabiles Trading",
+        "Krypto-Akademie für Einsteiger und Profis"
+      ],
+      price: "0,16% Maker Fee",
+      bonus: "Wöchentliche Staking-Rewards",
+      logo: "🐙",
+      url: "https://www.kraken.com/de-de"
+    },
+    {
+      name: "Bybit",
+      rating: 4.4,
+      features: [
+        "Über 100 Kryptowährungen für Spot- und Derivate-Trading",
+        "Bis zu 100x Leverage für fortgeschrittene Trader",
+        "Niedrige Gebühren mit 0,1% Taker Fee",
+        "Intuitive Plattform mit fortschrittlichen Trading-Tools",
+        "Kostenlose Einzahlungen via SEPA oder Kreditkarte",
+        "24/7 mehrsprachiger Kundensupport",
+        "Bybit Learn für Krypto-Wissen und Strategien",
+        "Reguliert und sicher für globale Nutzer"
+      ],
+      price: "0,1% Taker Fee",
+      bonus: "Willkommensbonus bis zu 5.000 USDT",
+      logo: "⚡",
+      url: "/anbieter/bybit"
+    },
+    {
+      name: "eToro",
+      rating: 4.3,
+      features: [
+        "Social Trading mit CopyTrader™ für automatische Trades",
+        "Über 70 Kryptowährungen und 3.000+ Aktien/ETFs",
+        "Bis zu 4,3% Zinsen auf USD-Guthaben",
+        "Einlagen bis 100.000€ pro Bank geschützt",
+        "Reguliert durch BaFin und CySec",
+        "Kostenlose Euro-Einzahlungen ohne Umrechnungsgebühren",
+        "eToro-Akademie mit kostenlosen Kursen",
+        "Über 35 Mio. Nutzer weltweit"
+      ],
+      price: "1% Spread",
+      bonus: "Kostenloses Demo-Konto",
+      logo: "🌐",
+      url: "https://www.etoro.com/de/"
+    },
+    {
+      name: "XTB",
+      rating: 4.5,
+      features: [
+        "Gratis Aktie für neue Investoren",
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
         "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
@@ -21,26 +74,29 @@ const providerData = {
         "eWallet mit virtueller Mastercard",
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen", 
+        "Kostenlose Ein- & Auszahlungen",
         "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
-      ], 
-      price: "0€ Kommission", 
-      bonus: "Kostenlose Kontoeröffnung", 
-      logo: "📊" 
-    },
-  ],
+      ],
+      price: "0€ Kommission",
+      bonus: "Kostenlose Kontoeröffnung",
+      logo: "📊",
+      url: "https://link-pso.xtb.com/pso/lMDhc"
+    }
+  ]
 }
 
-export default function Trading() {
+export default function聆
+
+function Trading() {
   return (
     <div className="min-h-screen bg-white">
       <h1 className="text-3xl font-bold mb-6 p-4">Trading Anbieter</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
         {providerData.trading.map((provider, index) => (
-          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200">
+          <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 relative">
             {index === 0 && (
-              <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs">Top Empfehlung</Badge>
+              <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs px-3 py-1">Top Empfehlung</Badge>
             )}
             <CardHeader className="text-center pb-2">
               <div className="text-3xl mb-2">{provider.logo}</div>
@@ -65,19 +121,11 @@ export default function Trading() {
                   </li>
                 ))}
               </ul>
-              {provider.name === "XTB" ? (
-                <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                    Zum Anbieter
-                  </Button>
-                </a>
-              ) : (
-                <Link href={`/anbieter/${provider.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                    Zum Anbieter
-                  </Button>
-                </Link>
-              )}
+              <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                  Zum Anbieter
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
@@ -87,6 +135,9 @@ export default function Trading() {
           CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
           72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
           Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+        </p>
+        <p className="mt-4">
+          *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
         </p>
       </div>
       <Link href="/" className="mt-6 inline-block text-green-600 hover:underline p-4">
@@ -138,5 +189,5 @@ export default function Trading() {
         </div>
       </footer>
     </div>
-  );
+  )
 }
