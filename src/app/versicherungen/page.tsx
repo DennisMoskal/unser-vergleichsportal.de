@@ -1,4 +1,3 @@
-// /app/versicherungen/page.tsx
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,13 +13,13 @@ const providerData = [
     features: [
       "Über 20 Jahre Erfahrung als Vergleichsportal",
       "100% kostenloser und unverbindlicher Vergleich",
-      "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-      "Mehrfach ausgezeichnet mit 'sehr gut'",
+      "Vergleich von über 300 Kfz-Versicherungstarifen",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (z. B. Handelsblatt 09/2024)",
       "eKomi Silber Siegel mit 4,5/5 Sternen",
-      "Über 3.194 Kundenbewertungen",
+      "Über 3.194 verifizierte Kundenbewertungen",
       "Deutschlands drittgrößtes Vergleichsportal",
-      "Vertrauen von Millionen Verbrauchern",
-      "Bis zu 1.000€ jährlich sparen möglich"
+      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen",
+      "Conversionstarke Tarifrechner für Affiliate-Partner"
     ],
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
@@ -28,41 +27,80 @@ const providerData = [
     url: "https://www.tarifcheck.de/girokonto/"
   },
   {
-    name: "DA-Direkt Versicherungen",
+    name: "auxmoney",
     rating: 4.8,
     features: [
-      "Online-Direktversicherer mit über 100 Jahren Erfahrung",
-      "Teil der internationalen Zurich Insurance Group",
-      "Testsieger bei Stiftung Warentest (Zahnzusatzversicherung)",
-      "Beliebtester Kfz-Direktversicherer laut €uro-Magazin",
-      "24/7 Kundenservice an 365 Tagen im Jahr",
-      "Smarte Online-Services ohne Papierkrieg",
-      "Sofortiger Versicherungsschutz ohne Wartezeit",
-      "Flexible monatliche Kündigungsmöglichkeit",
-      "Ausgezeichneter Versicherungsschutz zu günstigen Preisen"
+      "Kreditvermittlung auch für Selbstständige und Freiberufler",
+      "Kooperation mit SWK Bank für schnelle Abwicklung",
+      "eKomi Gold Siegel mit 4,8/5 Sternen",
+      "Über 10 Jahre Erfahrung im Kreditmarkt",
+      "Schufa-neutrale Kreditanfrage",
+      "Kostenlose Sondertilgungen für flexible Rückzahlung",
+      "Vergleich von über 20 Banken für beste Konditionen",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "SEO-optimierte Plattform für Kredit- und Versicherungsvergleiche"
     ],
-    price: "Günstige Direktversicherer-Preise",
-    bonus: "15€ Neukundenbonus + Sofortschutz",
-    logo: "🛡️",
-    url: "https://www.da-direkt.de/"
+    price: "Bonitätsabhängige Zinsen",
+    bonus: "Flexible Kreditkonditionen",
+    logo: "💸",
+    url: "/anbieter/auxmoney"
   },
   {
-    name: "GVV",
-    rating: 4.8,
-    features: ["24/7 Support", "Online-Abschluss", "Sofortschutz"],
-    price: "ab 12€/Monat",
-    bonus: "3 Monate kostenlos",
-    logo: "🛡️",
-    url: "/anbieter/gvv"
+    name: "finanzcheck.pro",
+    rating: 4.6,
+    features: [
+      "TÜV-geprüftes Kreditvergleichsportal seit 2012",
+      "Vergleich von über 20 Banken für Ratenkredite",
+      "Schufa-neutrale Anfrage für bessere Konditionen",
+      "Teil der Smava GmbH für vertrauensvolle Vermittlung",
+      "Dezente Bewerbung von Restschuldversicherungen",
+      "Kostenloser Vergleich für Kfz- und Hausratversicherungen",
+      "Bis zu 1.000€ Ersparnis durch Umschuldung",
+      "SEO-optimierte Inhalte für Kredit- und Versicherungsanfragen",
+      "Kostenlose Beratung für Finanzoptimierung"
+    ],
+    price: "100% kostenlos",
+    bonus: "Kostenlose Kreditanfrage",
+    logo: "🔍",
+    url: "/anbieter/finanzcheck-pro"
   },
   {
-    name: "Münchener Verein",
+    name: "CHECK24",
     rating: 4.7,
-    features: ["Traditionsunternehmen", "Persönliche Beratung", "Umfassender Schutz"],
-    price: "ab 18€/Monat",
-    bonus: "Familienrabatt",
-    logo: "🏛️",
-    url: "/anbieter/muenchener-verein"
+    features: [
+      "Marktführer mit über 90% Marktabdeckung bei Kfz-Versicherungen",
+      "Über 25 Testsiege im Kfz-Versicherungsvergleich (Handelsblatt 09/2024)",
+      "Vergleich von über 330 Kfz-Versicherungstarifen",
+      "Nirgendwo-Günstiger-Garantie für beste Preise",
+      "Kostenlose Beratung durch 300 Versicherungsexperten (08:00–22:00 Uhr)",
+      "Über 98% Kundenzufriedenheit",
+      "Vermittlung von Versicherungen mit Provisionstransparenz",
+      "SEO-optimierte Plattform mit hoher Conversion-Rate",
+      "Zusätzliche Vergleiche für Strom, Gas und Reisen"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 100€ Cashback",
+    logo: "✅",
+    url: "https://www.check24.de/versicherungen/"
+  },
+  {
+    name: "Verivox",
+    rating: 4.6,
+    features: [
+      "Vergleich von Kfz-, Hausrat- und Haftpflichtversicherungen",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "Kostenlose und Schufa-neutrale Kreditanfragen",
+      "Über 20 Jahre Erfahrung im Vergleichsmarkt",
+      "TÜV-geprüfte Plattform für Versicherungen und Finanzen",
+      "Bis zu 850€ Ersparnis bei Kfz-Versicherungen",
+      "SEO-optimierte Inhalte für Versicherungs- und Finanzprodukte",
+      "Kostenlose Beratung für Umschuldung und Finanzoptimierung",
+      "Conversionstarke Affiliate-Werbemittel"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 300€ Rückerstattung",
+    logo: "⚖️",
+    url: "https://www.verivox.de/versicherungen/"
   }
 ]
 
