@@ -1,9 +1,10 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
+import { useState } from "react"
 import Link from "next/link"
 
 const providerData = [
@@ -18,8 +19,7 @@ const providerData = [
       "eKomi Silber Siegel mit 4,5/5 Sternen",
       "Über 3.194 verifizierte Kundenbewertungen",
       "Deutschlands drittgrößtes Vergleichsportal",
-      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen",
-      "Conversionstarke Tarifrechner für Affiliate-Partner"
+      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen"
     ],
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
@@ -57,8 +57,7 @@ const providerData = [
       "Schufa-neutrale Kreditanfrage",
       "Kostenlose Sondertilgungen für flexible Rückzahlung",
       "Vergleich von über 20 Banken für beste Konditionen",
-      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
-      "SEO-optimierte Plattform für Kredit- und Versicherungsvergleiche"
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung"
     ],
     price: "Bonitätsabhängige Zinsen",
     bonus: "Flexible Kreditkonditionen",
@@ -76,7 +75,6 @@ const providerData = [
       "Dezente Bewerbung von Restschuldversicherungen",
       "Kostenloser Vergleich für Kfz- und Hausratversicherungen",
       "Bis zu 1.000€ Ersparnis durch Umschuldung",
-      "SEO-optimierte Inhalte für Kredit- und Versicherungsanfragen",
       "Kostenlose Beratung für Finanzoptimierung"
     ],
     price: "100% kostenlos",
@@ -95,7 +93,6 @@ const providerData = [
       "Kostenlose Beratung durch 300 Versicherungsexperten (08:00–22:00 Uhr)",
       "Über 98% Kundenzufriedenheit",
       "Vermittlung von Versicherungen mit Provisionstransparenz",
-      "SEO-optimierte Plattform mit hoher Conversion-Rate",
       "Zusätzliche Vergleiche für Strom, Gas und Reisen"
     ],
     price: "100% kostenlos",
@@ -113,9 +110,7 @@ const providerData = [
       "Über 20 Jahre Erfahrung im Vergleichsmarkt",
       "TÜV-geprüfte Plattform für Versicherungen und Finanzen",
       "Bis zu 850€ Ersparnis bei Kfz-Versicherungen",
-      "SEO-optimierte Inhalte für Versicherungs- und Finanzprodukte",
-      "Kostenlose Beratung für Umschuldung und Finanzoptimierung",
-      "Conversionstarke Affiliate-Werbemittel"
+      "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
     ],
     price: "100% kostenlos",
     bonus: "Bis zu 300€ Rückerstattung",
@@ -125,8 +120,103 @@ const providerData = [
 ]
 
 export default function Versicherungen() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm relative border-b">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <TrendingUp className="h-8 w-8 text-green-600" />
+            <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
+          </div>
+          <nav className="hidden md:flex space-x-6">
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Versicherungen
+            </Link>
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Banking
+            </Link>
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Tierversicherung
+            </Link>
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Trading
+            </Link>
+            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Kundenbewertungen
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              Vergleich starten
+            </Button>
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menü */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
+            <nav className="px-4 py-4 space-y-4">
+              <Link
+                href="/versicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Versicherungen
+              </Link>
+              <Link
+                href="/banking"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Banking
+              </Link>
+              <Link
+                href="/tierversicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Tierversicherung
+              </Link>
+              <Link
+                href="/trading"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Trading
+              </Link>
+              <Link
+                href="/#kundenbewertungen"
+                className="block text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Kundenbewertungen
+              </Link>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+                Vergleich starten
+              </Button>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      {/* Zurück zur Startseite */}
+      <section className="py-4 bg-white">
+        <div className="container mx-auto px-4">
+          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+            ← Zurück zur Startseite
+          </Link>
+        </div>
+      </section>
+
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
@@ -204,7 +294,7 @@ export default function Versicherungen() {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
                       />
                     ))}
                     <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
@@ -215,7 +305,7 @@ export default function Versicherungen() {
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
                     <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
                   </div>
-                  <ul className="space-y-1 flex-1">
+                  <ul className="space-y-1 flex-1 overflow-auto">
                     {provider.features.map((feature, i) => (
                       <li key={i} className="flex items-center text-sm">
                         <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -223,13 +313,11 @@ export default function Versicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4">
-                    <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                        Zum Anbieter*
-                      </Button>
-                    </Link>
-                  </div>
+                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
+                      Zum Anbieter*
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -239,6 +327,15 @@ export default function Versicherungen() {
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Zurück zur Startseite */}
+      <section className="py-4 bg-white">
+        <div className="container mx-auto px-4">
+          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+            ← Zurück zur Startseite
+          </Link>
         </div>
       </section>
 
