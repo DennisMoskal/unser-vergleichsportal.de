@@ -9,6 +9,27 @@ import Link from "next/link"
 const providerData = {
   trading: [
     {
+      name: "XTB",
+      rating: 4.5,
+      features: [
+        "Gratis Aktie für neue Investoren",
+        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+        "Über 8000 Aktien & ETFs",
+        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
+        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
+        "eWallet mit virtueller Mastercard",
+        "Smarte ETF-Sparpläne",
+        "0% Kommission bis 100.000€ Umsatz",
+        "Kostenlose Ein- & Auszahlungen",
+        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
+        "Platz 1 CFD-Broker 2024/25"
+      ],
+      price: "0€ Kommission",
+      bonus: "Kostenlose Kontoeröffnung",
+      logo: "📊",
+      url: "https://link-pso.xtb.com/pso/lMDhc"
+    },
+    {
       name: "Kraken",
       rating: 4.6,
       features: [
@@ -61,27 +82,6 @@ const providerData = {
       bonus: "Kostenloses Demo-Konto",
       logo: "🌐",
       url: "https://www.etoro.com/de/"
-    },
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
-      ],
-      price: "0€ Kommission",
-      bonus: "Kostenlose Kontoeröffnung",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc"
     }
   ]
 }
