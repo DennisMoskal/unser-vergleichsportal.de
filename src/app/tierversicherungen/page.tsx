@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 const providerData = [
@@ -212,10 +212,14 @@ const providerData = [
 export default function Tierversicherungen() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  // Debugging function to log navigation attempts
+  // Debugging: Log when component mounts
+  useEffect(() => {
+    console.log("Tierversicherungen component mounted")
+  }, [])
+
+  // Debugging: Log navigation attempts
   const handleNavigation = (path: string) => {
     console.log(`Navigating to: ${path}`)
-    // Fallback to window.location.href if Next.js Link fails
     try {
       window.location.href = path
     } catch (error) {
@@ -225,42 +229,6 @@ export default function Tierversicherungen() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* SEO Meta Tags */}
-      <head>
-        <title>Tierversicherung Vergleich: Beste Absicherung für Hunde, Katzen und Pferde</title>
-        <meta
-          name="description"
-          content="Vergleichen Sie die besten Tierversicherungen für Hunde, Katzen und Pferde bei SmartFinanz. Über 250 Tarife, kostenlos und unverbindlich. Sparen Sie bis zu 850€!"
-        />
-        <meta
-          name="keywords"
-          content="Tierversicherung, Hundekrankenversicherung, Katzenversicherung, Hundehaftpflicht, Testsieger Tierversicherung, Deutschland"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Tierversicherung Vergleich",
-            "description": "Vergleichen Sie die besten Tierversicherungen für Hunde, Katzen und Pferde bei SmartFinanz.",
-            "url": "https://www.smartfinanz.de/tierversicherungen",
-            "publisher": {
-              "@type": "Organization",
-              "name": "SmartFinanz",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.smartfinanz.de/logo.png"
-              }
-            },
-            "hasPart": providerData.map(provider => ({
-              "@type": "VeterinaryCare",
-              "name": provider.name,
-              "description": provider.metaDescription,
-              "url": provider.url
-            }))
-          })}
-        </script>
-      </head>
-
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -326,6 +294,7 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
+                  console.log("Clicked Mobile Versicherungen")
                   handleNavigation("/versicherungen")
                 }}
               >
@@ -336,6 +305,7 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
+                  console.log("Clicked Mobile Banking")
                   handleNavigation("/banking")
                 }}
               >
@@ -346,6 +316,7 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
+                  console.log("Clicked Mobile Tierversicherung")
                   handleNavigation("/tierversicherungen")
                 }}
               >
@@ -356,6 +327,7 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
+                  console.log("Clicked Mobile Trading")
                   handleNavigation("/trading")
                 }}
               >
@@ -366,6 +338,7 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
+                  console.log("Clicked Mobile Kundenbewertungen")
                   handleNavigation("/#kundenbewertungen")
                 }}
               >
@@ -380,7 +353,7 @@ export default function Tierversicherungen() {
               >
                 Vergleich starten
               </Button>
-            </nav\xb0
+            </nav>
           </div>
         )}
       </header>
