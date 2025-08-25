@@ -1,5 +1,4 @@
 "use client"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -218,8 +217,14 @@ export default function Tierversicherungen() {
       {/* SEO Meta Tags */}
       <head>
         <title>Tierversicherung Vergleich: Beste Absicherung für Hunde, Katzen und Pferde</title>
-        <meta name="description" content="Vergleichen Sie die besten Tierversicherungen für Hunde, Katzen und Pferde bei SmartFinanz. Über 250 Tarife, kostenlos und unverbindlich. Sparen Sie bis zu 850€!" />
-        <meta name="keywords" content="Tierversicherung, Hundekrankenversicherung, Katzenversicherung, Hundehaftpflicht, Testsieger Tierversicherung, Deutschland" />
+        <meta
+          name="description"
+          content="Vergleichen Sie die besten Tierversicherungen für Hunde, Katzen und Pferde bei SmartFinanz. Über 250 Tarife, kostenlos und unverbindlich. Sparen Sie bis zu 850€!"
+        />
+        <meta
+          name="keywords"
+          content="Tierversicherung, Hundekrankenversicherung, Katzenversicherung, Hundehaftpflicht, Testsieger Tierversicherung, Deutschland"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -270,19 +275,18 @@ export default function Tierversicherungen() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
+            <Button
+              className="hidden md:block bg-green-600 hover:bg-green-700"
+              onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}
+            >
               Vergleich starten
             </Button>
-            <button
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
+            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-
-        {/* Mobile Menü */}
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4">
@@ -316,12 +320,18 @@ export default function Tierversicherungen() {
               </Link>
               <Link
                 href="/#kundenbewertungen"
-                className="block text-gray-600 hover:text-green-600 transition-colors"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kundenbewertungen
               </Link>
-              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
+              <Button
+                className="w-full bg-green-600 hover:bg-green-700"
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")
+                }}
+              >
                 Vergleich starten
               </Button>
             </nav>
@@ -342,7 +352,9 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung für Ihren Hund, Ihre Katze oder Ihr Pferd</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              Beste Tierversicherung für Ihren Hund, Ihre Katze oder Ihr Pferd
+            </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck und CHECK24 bieten umfassenden Schutz und attraktive Boni.
             </p>
@@ -434,7 +446,11 @@ export default function Tierversicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <Link
+                    href={provider.url}
+                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
+                    rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
                       Zum Anbieter*
                     </Button>
@@ -476,28 +492,52 @@ export default function Tierversicherungen() {
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link></li>
-                <li><Link href="/banking" className="hover:text-white transition-colors">Banking</Link></li>
-                <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link></li>
-                <li><Link href="/trading" className="hover:text-white transition-colors">Trading</Link></li>
+                <li>
+                  <Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link>
+                </li>
+                <li>
+                  <Link href="/banking" className="hover:text-white transition-colors">Banking</Link>
+                </li>
+                <li>
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link>
+                </li>
+                <li>
+                  <Link href="/trading" className="hover:text-white transition-colors">Trading</Link>
+                </li>
               </ul>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
-                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
-                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
-                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
+                <li>
+                  <Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link>
+                </li>
+                <li>
+                  <Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link>
+                </li>
+                <li>
+                  <Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link>
+                </li>
+                <li>
+                  <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
+                </li>
               </ul>
             </div>
             <div>
               <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
-                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
-                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
-                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+                <li>
+                  <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
+                </li>
+                <li>
+                  <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
+                </li>
+                <li>
+                  <Link href="/agb" className="hover:text-white transition-colors">AGB</Link>
+                </li>
+                <li>
+                  <Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link>
+                </li>
               </ul>
             </div>
           </div>
