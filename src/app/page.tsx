@@ -382,27 +382,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kategorie-Navigation - ohne Icons */}
+      {/* Kategorie-Navigation - ohne Icons, mit allen 10 Kategorien */}
       <section className="bg-gray-50 py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
             {[
-              { key: 'versicherungen', label: 'VERSICHERUNGEN' },
-              { key: 'banking', label: 'BANKING' },
-              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG' },
-              { key: 'trading', label: 'TRADING' }
-            ].map(({ key, label }) => (
-              <Link
-                key={key}
-                href={`/${key}`}
-                className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
-                  activeCategory === key
-                    ? 'bg-green-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
-                }`}
-              >
-                {label}
-              </Link>
+              { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+              { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
+              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
+              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'mobilfunk', label: 'MOBILFUNK', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'pauschalreise', label: 'PAUSCHALREISE', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false }
+            ].map(({ key, label, url, isInternal }) => (
+              isInternal ? (
+                <Link
+                  key={key}
+                  href={url}
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
+                    activeCategory === key
+                      ? 'bg-green-600 text-white'
+                      : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
+                  }`}
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={key}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
+                    activeCategory === key
+                      ? 'bg-green-600 text-white'
+                      : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
+                  }`}
+                >
+                  {label}
+                </a>
+              )
             ))}
           </div>
         </div>
@@ -613,9 +635,13 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
-                    A
-                  </div>
+                  <Image
+                    src="/images/kundenbewertungen/anna.jpg"
+                    alt="Anna"
+                    width={80}
+                    height={80}
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                  />
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
                     <div className="flex items-center mt-1">
@@ -643,9 +669,13 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
-                    M
-                  </div>
+                  <Image
+                    src="/images/kundenbewertungen/markus.jpg"
+                    alt="Markus"
+                    width={80}
+                    height={80}
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                  />
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
                     <div className="flex items-center mt-1">
@@ -673,9 +703,13 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
-                    H
-                  </div>
+                  <Image
+                    src="/images/kundenbewertungen/helga.jpg"
+                    alt="Helga"
+                    width={80}
+                    height={80}
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                  />
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
                     <div className="flex items-center mt-1">
@@ -703,9 +737,13 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
-                    L
-                  </div>
+                  <Image
+                    src="/images/kundenbewertungen/lukas.jpg"
+                    alt="Lukas"
+                    width={80}
+                    height={80}
+                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                  />
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
                     <div className="flex items-center mt-1">
