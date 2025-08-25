@@ -47,24 +47,6 @@ const providerData = [
     url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
   },
   {
-    name: "auxmoney",
-    rating: 4.8,
-    features: [
-      "Kreditvermittlung auch für Selbstständige und Freiberufler",
-      "Kooperation mit SWK Bank für schnelle Abwicklung",
-      "eKomi Gold Siegel mit 4,8/5 Sternen",
-      "Über 10 Jahre Erfahrung im Kreditmarkt",
-      "Schufa-neutrale Kreditanfrage",
-      "Kostenlose Sondertilgungen für flexible Rückzahlung",
-      "Vergleich von über 20 Banken für beste Konditionen",
-      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung"
-    ],
-    price: "Bonitätsabhängige Zinsen",
-    bonus: "Flexible Kreditkonditionen",
-    logo: "💸",
-    url: "/anbieter/auxmoney"
-  },
-  {
     name: "finanzcheck.pro",
     rating: 4.6,
     features: [
