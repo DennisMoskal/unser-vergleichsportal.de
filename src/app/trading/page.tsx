@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp } from "lucide-react"
+import { Star, Check, TrendingUp, Shield, PiggyBank, Heart, Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 const providerData = {
@@ -87,8 +88,148 @@ const providerData = {
 }
 
 export default function Trading() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState("trading")
+
+  // Funktion zum Scrollen zu einem Abschnitt
+  const scrollToSection = (sectionId: string) => {
+    setActiveCategory(sectionId)
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  // Hash-Änderung verarbeiten, wenn die Seite geladen wird
+  useEffect(() => {
+    const hash = window.location.hash.substring(1)
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+      scrollToSection(hash)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm relative border-b">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <TrendingUp className="h-8 w-8 text-green-600" />
+            <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
+          </div>
+          <nav className="hidden md:flex space-x-6">
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Versicherungen
+            </Link>
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Banking
+            </Link>
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Tierversicherung
+            </Link>
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Trading
+            </Link>
+            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Kundenbewertungen
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              Vergleich starten
+            </Button>
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menü */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
+            <nav className="px-4 py-4 space-y-4">
+              <Link
+                href="/versicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Versicherungen
+              </Link>
+              <Link
+                href="/banking"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Banking
+              </Link>
+              <Link
+                href="/tierversicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Tierversicherung
+              </Link>
+              <Link
+                href="/trading"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Trading
+              </Link>
+              <Link
+                href="/#kundenbewertungen"
+                className="block text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Kundenbewertungen
+              </Link>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+                Vergleich starten
+              </Button>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      {/* Kategorie-Navigation */}
+      <section className="bg-gray-50 py-4 border-b" id="categories">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
+            {[
+              { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
+              { key: 'banking', label: 'BANKING', icon: PiggyBank },
+              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
+              { key: 'trading', label: 'TRADING', icon: TrendingUp }
+            ].map(({ key, label, icon: Icon }) => (
+              <Link
+                key={key}
+                href={`/${key}`}
+                className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
+                  activeCategory === key
+                    ? 'bg-green-600 text-white'
+                    : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
+                }`}
+              >
+                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zurück zur Startseite */}
+      <section className="py-4 bg-white">
+        <div className="container mx-auto px-4">
+          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+            ← Zurück zur Startseite
+          </Link>
+        </div>
+      </section>
+
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
@@ -97,13 +238,6 @@ export default function Trading() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Trading-Plattformen für Krypto, CFDs und Aktien. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Starten Sie mit unseren Testsiegern wie XTB und sparen Sie bis zu 0% Kommission!
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100 font-medium"
-              onClick={() => window.open("https://link-pso.xtb.com/pso/lMDhc", "_blank")}
-            >
-              Jetzt Trading-Plattformen vergleichen
-            </Button>
           </div>
         </div>
       </section>
@@ -153,7 +287,7 @@ export default function Trading() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Trading</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.trading.map((provider, index) => (
-              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 relative">
+              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {index === 0 && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
                 )}
@@ -162,17 +296,20 @@ export default function Trading() {
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      />
                     ))}
                     <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="text-center border-b pb-2">
+                <CardContent className="flex flex-col flex-1">
+                  <div className="text-center border-b pb-2 mb-4">
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
                     <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
                   </div>
-                  <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <ul className="space-y-1 flex-1 overflow-auto">
                     {provider.features.map((feature, i) => (
                       <li key={i} className="flex items-center text-sm">
                         <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -181,7 +318,7 @@ export default function Trading() {
                     ))}
                   </ul>
                   <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
                       Zum Anbieter*
                     </Button>
                   </Link>
@@ -199,6 +336,15 @@ export default function Trading() {
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Zurück zur Startseite */}
+      <section className="py-4 bg-white">
+        <div className="container mx-auto px-4">
+          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+            ← Zurück zur Startseite
+          </Link>
         </div>
       </section>
 
