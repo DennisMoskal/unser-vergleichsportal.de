@@ -1,3 +1,4 @@
+```typescript
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -86,9 +87,7 @@ const providerData = {
   ]
 }
 
-export default function聆
-
-function Trading() {
+export default function Trading() {
   return (
     <div className="min-h-screen bg-white">
       <h1 className="text-3xl font-bold mb-6 p-4">Trading Anbieter</h1>
@@ -191,3 +190,5 @@ function Trading() {
     </div>
   )
 }
+
+
