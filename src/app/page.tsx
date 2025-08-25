@@ -342,7 +342,9 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700">Vergleich starten</Button>
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              Vergleich starten
+            </Button>
             <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -391,7 +393,9 @@ export default function Home() {
               >
                 Kundenbewertungen
               </Link>
-              <Button className="w-full bg-green-600 hover:bg-green-700">Vergleich starten</Button>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+                Vergleich starten
+              </Button>
             </nav>
           </div>
         )}
@@ -484,7 +488,7 @@ export default function Home() {
       <section className="py-8 sm:py-12 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h3>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700">
+          <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
             Beste Empfehlungen ansehen
           </Button>
         </div>
@@ -536,7 +540,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
 
-        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+          <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
               <TabsTrigger value="versicherungen" className="flex items-center text-xs sm:text-sm">
                 <Shield className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 w-4" />
