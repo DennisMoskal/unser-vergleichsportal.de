@@ -538,7 +538,7 @@ export default function Home() {
       {/* Vergleichstabellen */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
         <div className="container mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Anbieter im Vergleich</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h3>
 
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-4 sm:mb-8 h-10 sm:h-12">
