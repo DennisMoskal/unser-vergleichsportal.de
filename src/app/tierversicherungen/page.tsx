@@ -212,6 +212,17 @@ const providerData = [
 export default function Tierversicherungen() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  // Debugging function to log navigation attempts
+  const handleNavigation = (path: string) => {
+    console.log(`Navigating to: ${path}`)
+    // Fallback to window.location.href if Next.js Link fails
+    try {
+      window.location.href = path
+    } catch (error) {
+      console.error(`Navigation error for ${path}:`, error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Meta Tags */}
@@ -258,19 +269,39 @@ export default function Tierversicherungen() {
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link
+              href="/versicherungen"
+              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
+              onClick={() => console.log("Clicked Versicherungen")}
+            >
               Versicherungen
             </Link>
-            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link
+              href="/banking"
+              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
+              onClick={() => console.log("Clicked Banking")}
+            >
               Banking
             </Link>
-            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link
+              href="/tierversicherungen"
+              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
+              onClick={() => console.log("Clicked Tierversicherung")}
+            >
               Tierversicherung
             </Link>
-            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link
+              href="/trading"
+              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
+              onClick={() => console.log("Clicked Trading")}
+            >
               Trading
             </Link>
-            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link
+              href="/#kundenbewertungen"
+              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
+              onClick={() => console.log("Clicked Kundenbewertungen")}
+            >
               Kundenbewertungen
             </Link>
           </nav>
@@ -293,35 +324,50 @@ export default function Tierversicherungen() {
               <Link
                 href="/versicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  handleNavigation("/versicherungen")
+                }}
               >
                 Versicherungen
               </Link>
               <Link
                 href="/banking"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  handleNavigation("/banking")
+                }}
               >
                 Banking
               </Link>
               <Link
                 href="/tierversicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  handleNavigation("/tierversicherungen")
+                }}
               >
                 Tierversicherung
               </Link>
               <Link
                 href="/trading"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  handleNavigation("/trading")
+                }}
               >
                 Trading
               </Link>
               <Link
                 href="/#kundenbewertungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  handleNavigation("/#kundenbewertungen")
+                }}
               >
                 Kundenbewertungen
               </Link>
@@ -334,7 +380,7 @@ export default function Tierversicherungen() {
               >
                 Vergleich starten
               </Button>
-            </nav>
+            </nav\xb0
           </div>
         )}
       </header>
@@ -342,7 +388,14 @@ export default function Tierversicherungen() {
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+          <Link
+            href="/"
+            className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base"
+            onClick={() => {
+              console.log("Clicked Zurück zur Startseite")
+              handleNavigation("/")
+            }}
+          >
             ← Zurück zur Startseite
           </Link>
         </div>
@@ -450,6 +503,7 @@ export default function Tierversicherungen() {
                     href={provider.url}
                     target={provider.url.startsWith('http') ? '_blank' : '_self'}
                     rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    onClick={() => console.log(`Navigating to provider: ${provider.url}`)}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
                       Zum Anbieter*
@@ -470,7 +524,14 @@ export default function Tierversicherungen() {
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+          <Link
+            href="/"
+            className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base"
+            onClick={() => {
+              console.log("Clicked Zurück zur Startseite")
+              handleNavigation("/")
+            }}
+          >
             ← Zurück zur Startseite
           </Link>
         </div>
@@ -493,16 +554,40 @@ export default function Tierversicherungen() {
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungen</Link>
+                  <Link
+                    href="/versicherungen"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Versicherungen")}
+                  >
+                    Versicherungen
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/banking" className="hover:text-white transition-colors">Banking</Link>
+                  <Link
+                    href="/banking"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Banking")}
+                  >
+                    Banking
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierversicherung</Link>
+                  <Link
+                    href="/tierversicherungen"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Tierversicherung")}
+                  >
+                    Tierversicherung
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/trading" className="hover:text-white transition-colors">Trading</Link>
+                  <Link
+                    href="/trading"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Trading")}
+                  >
+                    Trading
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -510,16 +595,40 @@ export default function Tierversicherungen() {
               <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link>
+                  <Link
+                    href="/ueber-uns"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Über uns")}
+                  >
+                    Über uns
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link>
+                  <Link
+                    href="/partnerprogramme"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Partnerprogramme")}
+                  >
+                    Partnerprogramme
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link>
+                  <Link
+                    href="/karriere"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Karriere")}
+                  >
+                    Karriere
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
+                  <Link
+                    href="/kontakt"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Kontakt")}
+                  >
+                    Kontakt
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -527,16 +636,40 @@ export default function Tierversicherungen() {
               <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
+                  <Link
+                    href="/datenschutz"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Datenschutz")}
+                  >
+                    Datenschutz
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
+                  <Link
+                    href="/impressum"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Impressum")}
+                  >
+                    Impressum
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/agb" className="hover:text-white transition-colors">AGB</Link>
+                  <Link
+                    href="/agb"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer AGB")}
+                  >
+                    AGB
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link>
+                  <Link
+                    href="/cookie-richtlinie"
+                    className="hover:text-white transition-colors"
+                    onClick={() => console.log("Clicked Footer Cookie-Richtlinie")}
+                  >
+                    Cookie-Richtlinie
+                  </Link>
                 </li>
               </ul>
             </div>
