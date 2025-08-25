@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp, Shield, PiggyBank, Heart, Menu, X } from "lucide-react"
-import { useState, useEffect } from "react"
+import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
+import { useState } from "react"
 import Link from "next/link"
 
 const providerData = {
@@ -89,24 +89,6 @@ const providerData = {
 
 export default function Trading() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("trading")
-
-  // Funktion zum Scrollen zu einem Abschnitt
-  const scrollToSection = (sectionId: string) => {
-    setActiveCategory(sectionId)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
-  // Hash-Änderung verarbeiten, wenn die Seite geladen wird
-  useEffect(() => {
-    const hash = window.location.hash.substring(1)
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
-      scrollToSection(hash)
-    }
-  }, [])
 
   return (
     <div className="min-h-screen bg-white">
@@ -193,33 +175,6 @@ export default function Trading() {
           </div>
         )}
       </header>
-
-      {/* Kategorie-Navigation */}
-      <section className="bg-gray-50 py-4 border-b" id="categories">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
-            {[
-              { key: 'versicherungen', label: 'VERSICHERUNGEN', icon: Shield },
-              { key: 'banking', label: 'BANKING', icon: PiggyBank },
-              { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', icon: Heart },
-              { key: 'trading', label: 'TRADING', icon: TrendingUp }
-            ].map(({ key, label, icon: Icon }) => (
-              <Link
-                key={key}
-                href={`/${key}`}
-                className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
-                  activeCategory === key
-                    ? 'bg-green-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
-                }`}
-              >
-                <Icon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                {label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
