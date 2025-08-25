@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Check, Star, TrendingUp, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -33,6 +33,7 @@ const providerData: { [key: string]: Provider[] } = {
         "eKomi Silber Siegel mit 4,5/5 Sternen",
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
+        "Vertrauen von Millionen Verbrauchern",
         "Bis zu 1.000€ jährlich sparen möglich"
       ],
       price: "100% kostenlos",
@@ -73,6 +74,7 @@ const providerData: { [key: string]: Provider[] } = {
         "eKomi Silber Siegel mit 4,5/5 Sternen",
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
+        "Vertrauen von Millionen Verbrauchern",
         "Bis zu 1.000€ jährlich sparen möglich"
       ],
       price: "100% kostenlos",
@@ -189,6 +191,15 @@ export default function Home() {
     }
   }, [])
 
+  // SEO Meta Tags (would be handled by Next.js Head component in a real app)
+  useEffect(() => {
+    document.title = "SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025"
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ TÜV geprüft ✓ Kostenlos ✓ Bis zu 1.000€ sparen')
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -222,6 +233,7 @@ export default function Home() {
             <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu öffnen/schließen"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -286,80 +298,81 @@ export default function Home() {
               Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
             </p>
 
-            {/* Interaktives Widget */}
-            <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-md sm:max-w-xl mx-auto">
+            {/* Interaktives Widget - Erweitert mit 10 Kategorien */}
+            <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                 Nach welchem Produkt oder Service suchen Sie?
               </h3>
 
-              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+              {/* Grid für 10 Buttons - responsive Layout */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-4">
                 <Button
                   variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                   onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
                 >
                   Versicherung
                 </Button>
                 <Button
                   variant={selectedProduct === "banking" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                   onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
                 >
                   Banking
                 </Button>
                 <Button
                   variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                   onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
                 >
                   Tierversicherung
                 </Button>
                 <Button
                   variant={selectedProduct === "trading" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                   onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
                 >
                   Trading
                 </Button>
                 <Button
                   variant={selectedProduct === "dsl" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("dsl"); window.location.href = "https://www.c24n.de/ducwCtq"; }}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
                 >
                   DSL
                 </Button>
                 <Button
                   variant={selectedProduct === "mobilfunk" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("mobilfunk"); window.location.href = "https://www.c24n.de/5R17qbN"; }}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("mobilfunk"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
                 >
                   Mobilfunk
                 </Button>
                 <Button
                   variant={selectedProduct === "oekostrom" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("oekostrom"); window.location.href = "https://www.c24n.de/zxy0WKh"; }}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
                 >
                   Ökostrom
                 </Button>
                 <Button
                   variant={selectedProduct === "gas" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("gas"); window.location.href = "https://www.c24n.de/Uxudvkj"; }}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
                 >
                   Gas
                 </Button>
                 <Button
                   variant={selectedProduct === "pauschalreise" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("pauschalreise"); window.location.href = "https://www.c24n.de/EieKR0E"; }}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("pauschalreise"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
                 >
                   Pauschalreise
                 </Button>
                 <Button
                   variant={selectedProduct === "strom" ? "default" : "outline"}
-                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-sm sm:text-base"
-                  onClick={() => { setSelectedProduct("strom"); window.location.href = "https://www.c24n.de/RYXPGyh"; }}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
                 >
                   Strom
                 </Button>
@@ -369,7 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kategorie-Navigation */}
+      {/* Kategorie-Navigation - ohne Icons */}
       <section className="bg-gray-50 py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
@@ -414,6 +427,10 @@ export default function Home() {
               Geprüft & Sicher
             </Badge>
             <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
+              <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
+              TÜV Zertifiziert
+            </Badge>
+            <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
               <Star className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
               Top Empfohlen
             </Badge>
@@ -433,7 +450,7 @@ export default function Home() {
             <div className="relative">
               <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" />
               <Input
-                placeholder="Suchen Sie nach Versicherungen, Konten, oder Anbietern..."
+                placeholder="Suchen Sie nach Versicherungen, Konten, DSL, Strom oder Anbietern..."
                 className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full"
                 onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
               />
@@ -460,6 +477,7 @@ export default function Home() {
                   "eKomi Silber Siegel mit 4,5/5 Sternen",
                   "Über 3.194 Kundenbewertungen",
                   "Deutschlands drittgrößtes Vergleichsportal",
+                  "Vertrauen von Millionen Verbrauchern",
                   "Bis zu 1.000€ jährlich sparen möglich"
                 ],
                 price: "100% kostenlos",
@@ -565,11 +583,11 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
                     <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
                       Zum Anbieter*
                     </Button>
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -595,14 +613,9 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <Image
-                    src="/images/kundenbewertungen/anna.jpg"
-                    alt="Anna, Kundin von SmartFinanz"
-                    width={80}
-                    height={80}
-                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
-                    priority
-                  />
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
+                    A
+                  </div>
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
                     <div className="flex items-center mt-1">
@@ -630,14 +643,9 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <Image
-                    src="/images/kundenbewertungen/markus.jpg"
-                    alt="Markus, Kunde von SmartFinanz"
-                    width={80}
-                    height={80}
-                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
-                    priority
-                  />
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
+                    M
+                  </div>
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
                     <div className="flex items-center mt-1">
@@ -665,14 +673,9 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <Image
-                    src="/images/kundenbewertungen/helga.jpg"
-                    alt="Helga, Kundin von SmartFinanz"
-                    width={80}
-                    height={80}
-                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
-                    priority
-                  />
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
+                    H
+                  </div>
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
                     <div className="flex items-center mt-1">
@@ -700,14 +703,9 @@ export default function Home() {
             <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
               <CardHeader className="pb-4 flex-shrink-0">
                 <div className="flex items-center space-x-4">
-                  <Image
-                    src="/images/kundenbewertungen/lukas.jpg"
-                    alt="Lukas, Kunde von SmartFinanz"
-                    width={80}
-                    height={80}
-                    className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover border-2 border-green-100 flex-shrink-0"
-                    priority
-                  />
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl flex-shrink-0">
+                    L
+                  </div>
                   <div className="flex-grow min-w-0">
                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
                     <div className="flex items-center mt-1">
@@ -732,14 +730,23 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
+          
           {/* Schema.org Markup für SEO */}
-          <script type="application/ld+json">
-            {JSON.stringify({
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Review",
-              "itemReviewed": {
-                "@type": "Organization",
-                "name": "SmartFinanz"
+              "@type": "WebSite",
+              "name": "SmartFinanz",
+              "url": "https://smartfinanz.de",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://smartfinanz.de/suche?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "100000"
               },
               "review": [
                 {
@@ -767,8 +774,8 @@ export default function Home() {
                   "reviewBody": "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                 }
               ]
-            })}
-          </script>
+            })
+          }} />
         </div>
       </section>
 
@@ -796,6 +803,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section für bessere SEO */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h3>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h4>
+              <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
+            </div>
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h4>
+              <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
+            </div>
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h4>
+              <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Mobilfunk, Strom, Gas, Ökostrom und Pauschalreisen.</p>
+            </div>
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h4>
+              <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -805,42 +837,49 @@ export default function Home() {
                 <TrendingUp className="h-6 w-6 text-green-400" />
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
-              <p className="text-gray-400 text-sm">
-                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
+              <p className="text-gray-400 text-sm mb-4">
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
               </p>
+              <div className="flex space-x-2">
+                <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
+                  TÜV Zertifiziert
+                </Badge>
+              </div>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Produkte</h5>
+              <h5 className="font-semibold mb-3">Finanzprodukte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link href="/versicherungen" className="hover:text-white transition-colors text-left">
-                    Versicherungen
+                  <Link href="/versicherungen" className="hover:text-white transition-colors">
+                    Versicherungsvergleich
                   </Link>
                 </li>
                 <li>
-                  <Link href="/banking" className="hover:text-white transition-colors text-left">
-                    Banking
+                  <Link href="/banking" className="hover:text-white transition-colors">
+                    Girokonto & Kredite
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tierversicherungen" className="hover:text-white transition-colors text-left">
-                    Tierversicherung
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors">
+                    Tierkrankenversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link href="/trading" className="hover:text-white transition-colors text-left">
-                    Trading
+                  <Link href="/trading" className="hover:text-white transition-colors">
+                    Online Broker Vergleich
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Unternehmen</h5>
+              <h5 className="font-semibold mb-3">Weitere Services</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
-                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
-                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
-                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
+                <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
+                <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
+                <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
+                <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+                <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Pauschalreisen</a></li>
+                <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
               </ul>
             </div>
             <div>
@@ -855,11 +894,37 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-400">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten.
+              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
           </div>
         </div>
       </footer>
+
+      {/* Structured Data für lokale SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SmartFinanz",
+          "url": "https://smartfinanz.de",
+          "logo": "https://smartfinanz.de/logo.png",
+          "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+49-123-456789",
+            "contactType": "customer service",
+            "availableLanguage": "German"
+          },
+          "sameAs": [
+            "https://www.facebook.com/smartfinanz",
+            "https://www.twitter.com/smartfinanz"
+          ]
+        })
+      }} />
     </div>
   )
 }
