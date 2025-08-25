@@ -9,6 +9,46 @@ import Link from "next/link"
 
 const providerData = [
   {
+    name: "Tarifcheck Tierversicherung",
+    rating: 4.5,
+    features: [
+      "Vergleich von über 200 Tierversicherungstarifen",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 verifizierte Kundenbewertungen",
+      "Bis zu 850€ Ersparnis bei Tierversicherungen",
+      "Schufa-neutrale Tarifanfrage",
+      "Kostenlose Beratung durch Experten"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.com/5dM0KnS",
+    metaTitle: "Tarifcheck Tierversicherung: Kostenloser Vergleich für Haustiere",
+    metaDescription: "Vergleichen Sie über 200 Tierversicherungen mit Tarifcheck. Kostenlos, unverbindlich und mit bis zu 850€ Ersparnis. Jetzt starten!"
+  },
+  {
+    name: "CHECK24 Tierversicherung",
+    rating: 4.7,
+    features: [
+      "Marktführer mit über 90% Marktabdeckung",
+      "Vergleich von über 250 Tierversicherungstarifen",
+      "Über 25 Testsiege im Versicherungsvergleich (Handelsblatt 09/2024)",
+      "Nirgendwo-Günstiger-Garantie für beste Preise",
+      "Kostenlose Beratung durch 300 Experten (08:00–22:00 Uhr)",
+      "Über 98% Kundenzufriedenheit",
+      "Transparente Provisionen bei Vermittlung",
+      "Zusätzliche Vergleiche für Kfz und Hausrat"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 100€ Cashback",
+    logo: "✅",
+    url: "https://www.tarifcheck.com/WeOIgnW",
+    metaTitle: "CHECK24 Tierversicherung: Testsieger für Hunde und Katzen",
+    metaDescription: "CHECK24 bietet Testsieger-Vergleiche für über 250 Tierversicherungen. Kostenlos, mit bis zu 100€ Cashback. Jetzt die beste Versicherung finden!"
+  },
+  {
     name: "Petprotect",
     rating: 4.65,
     features: [
@@ -167,46 +207,6 @@ const providerData = [
     url: "https://www.getsurance.de",
     metaTitle: "Getsurance Tierversicherung: Digitale Absicherung für Haustiere",
     metaDescription: "Getsurance bietet digitale Tierversicherungen mit bis zu 80% Erstattung und App-Verwaltung. Jetzt Tarife für Hunde und Katzen vergleichen!"
-  },
-  {
-    name: "Tarifcheck Tierversicherung",
-    rating: 4.5,
-    features: [
-      "Vergleich von über 200 Tierversicherungstarifen",
-      "100% kostenloser und unverbindlicher Vergleich",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
-      "eKomi Silber Siegel mit 4,5/5 Sternen",
-      "Über 3.194 verifizierte Kundenbewertungen",
-      "Bis zu 850€ Ersparnis bei Tierversicherungen",
-      "Schufa-neutrale Tarifanfrage",
-      "Kostenlose Beratung durch Experten"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 120€ Neukundenbonus",
-    logo: "🏆",
-    url: "https://www.tarifcheck.de",
-    metaTitle: "Tarifcheck Tierversicherung: Kostenloser Vergleich für Haustiere",
-    metaDescription: "Vergleichen Sie über 200 Tierversicherungen mit Tarifcheck. Kostenlos, unverbindlich und mit bis zu 850€ Ersparnis. Jetzt starten!"
-  },
-  {
-    name: "CHECK24 Tierversicherung",
-    rating: 4.7,
-    features: [
-      "Marktführer mit über 90% Marktabdeckung",
-      "Vergleich von über 250 Tierversicherungstarifen",
-      "Über 25 Testsiege im Versicherungsvergleich (Handelsblatt 09/2024)",
-      "Nirgendwo-Günstiger-Garantie für beste Preise",
-      "Kostenlose Beratung durch 300 Experten (08:00–22:00 Uhr)",
-      "Über 98% Kundenzufriedenheit",
-      "Transparente Provisionen bei Vermittlung",
-      "Zusätzliche Vergleiche für Kfz und Hausrat"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 100€ Cashback",
-    logo: "✅",
-    url: "https://www.check24.de/versicherungen/",
-    metaTitle: "CHECK24 Tierversicherung: Testsieger für Hunde und Katzen",
-    metaDescription: "CHECK24 bietet Testsieger-Vergleiche für über 250 Tierversicherungen. Kostenlos, mit bis zu 100€ Cashback. Jetzt die beste Versicherung finden!"
   }
 ]
 
@@ -270,7 +270,7 @@ export default function Tierversicherungen() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.check24.de/versicherungen/", "_blank")}>
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Vergleich starten
             </Button>
             <button
@@ -321,7 +321,7 @@ export default function Tierversicherungen() {
               >
                 Kundenbewertungen
               </Link>
-              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.check24.de/versicherungen/", "_blank")}>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
                 Vergleich starten
               </Button>
             </nav>
@@ -344,12 +344,12 @@ export default function Tierversicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung für Ihren Hund, Ihre Katze oder Ihr Pferd</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie CHECK24 und Agila bieten umfassenden Schutz und attraktive Boni.[](https://www.agila.de/)[](https://www.testsieger-berichte.de/tierkrankenversicherung-test/)
+              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck und CHECK24 bieten umfassenden Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
-              onClick={() => window.open("https://www.check24.de/versicherungen/", "_blank")}
+              onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}
             >
               Jetzt Tierversicherungen vergleichen
             </Button>
@@ -368,7 +368,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Hunde-, Katzen- oder Pferdeversicherungen zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.[](https://www.check24.de/hundekrankenversicherung/test/)
+                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Hunde-, Katzen- oder Pferdeversicherungen zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -378,7 +378,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Agila und Petprotect bieten bis zu 100% Erstattung und Testsieger-Qualität.[](https://vergleich-tierkrankenversicherungen.de/pet-protect/)[](https://www.agila.de/)
+                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Agila und Petprotect bieten bis zu 100% Erstattung und Testsieger-Qualität.
                 </p>
               </CardContent>
             </Card>
@@ -388,7 +388,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Agila) helfen, vertrauenswürdige Anbieter wie CHECK24 zu finden.[](https://de.trustpilot.com/review/petprotect.de)[](https://www.agila.de/)
+                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Agila) helfen, vertrauenswürdige Anbieter wie Tarifcheck und CHECK24 zu finden.
                 </p>
               </CardContent>
             </Card>
@@ -403,9 +403,9 @@ export default function Tierversicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {provider.name === "CHECK24 Tierversicherung" && (
+                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    Top Empfehlung
+                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : "2. Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
