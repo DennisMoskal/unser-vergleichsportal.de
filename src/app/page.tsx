@@ -500,7 +500,7 @@ export default function Home() {
               }
             ].map((provider, index) => (
               <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
-                <Badge className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm">
+                <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
                   Top Empfehlung
                 </Badge>
                 <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
@@ -546,6 +546,11 @@ export default function Home() {
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
             <p>
+              CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
+              72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
+              Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+            </p>
+            <p className="mt-4">
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
             </p>
           </div>
