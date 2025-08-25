@@ -60,7 +60,7 @@ const providerData = [
     price: "Bonitätsabhängige Zinsen",
     bonus: "Flexible Kreditkonditionen",
     logo: "💸",
-    url: "https://www.auxmoney.com/kredit/?pid=1285&cid=1&sub1=SmartFinanz"
+    url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&subid=&target=Startseite"
   },
   {
     name: "CHECK24",
