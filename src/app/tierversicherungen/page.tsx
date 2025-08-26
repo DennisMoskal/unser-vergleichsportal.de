@@ -48,6 +48,26 @@ const providerData = [
     metaDescription: "CHECK24 bietet Testsieger-Vergleiche für über 250 Tierversicherungen. Kostenlos, mit bis zu 100€ Cashback. Jetzt die beste Versicherung finden!"
   },
   {
+    name: "Uelzener Tierversicherung",
+    rating: 4.7,
+    features: [
+      "Über 150 Jahre Erfahrung in Tierversicherungen",
+      "Umfassender Schutz für Hunde, Katzen und Pferde",
+      "Hundehaftpflicht mit bis zu 50 Mio. € Deckungssumme",
+      "Testsieger in Leistungs- und Fairness-Tests 2024",
+      "Treue- und Altersrabatte für Hunde über 6 Jahre",
+      "Auslandsschutz für bis zu 12 Monate weltweit",
+      "Flexible Tarife für individuelle Bedürfnisse",
+      "Kranken- und OP-Versicherung mit Gesundheitspauschale"
+    ],
+    price: "ab 3,76€/Monat",
+    bonus: "Treue-Rabatt für Bestandskunden",
+    logo: "🏇",
+    url: "https://tidd.ly/3UN80GC",
+    metaTitle: "Uelzener Tierversicherung: Günstige Hundehaftpflicht und Krankenversicherung",
+    metaDescription: "Uelzener bietet seit 150 Jahren Schutz für Hunde, Katzen und Pferde. Testsieger 2024 mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen!"
+  },
+  {
     name: "Petprotect",
     rating: 4.65,
     features: [
@@ -65,27 +85,7 @@ const providerData = [
     logo: "🐾",
     url: "https://www.petprotect.de",
     metaTitle: "Petprotect Tierversicherung: Beste Hundekrankenversicherung in Deutschland",
-    metaDescription: "Schützen Sie Ihren Hund oder Ihre Katze mit Petprotect. Bis zu 100% Kostenübernahme und kostenfreie Videosprechstunde. Jetzt vergleichen!"
-  },
-  {
-    name: "Uelzener Tierversicherung",
-    rating: 4.7,
-    features: [
-      "Über 150 Jahre Erfahrung in Tierversicherungen",
-      "Umfassender Schutz für Hunde, Katzen und Pferde",
-      "Hundehaftpflicht mit bis zu 50 Mio. € Deckungssumme",
-      "Testsieger in Leistungs- und Fairness-Tests 2024",
-      "Treue- und Altersrabatte für Hunde über 6 Jahre",
-      "Auslandsschutz für bis zu 12 Monate weltweit",
-      "Flexible Tarife für individuelle Bedürfnisse",
-      "Kranken- und OP-Versicherung mit Gesundheitspauschale"
-    ],
-    price: "ab 3,76€/Monat",
-    bonus: "Treue-Rabatt für Bestandskunden",
-    logo: "🏇",
-    url: "https://www.uelzener.de",
-    metaTitle: "Uelzener Tierversicherung: Günstige Hundehaftpflicht und Krankenversicherung",
-    metaDescription: "Uelzener bietet seit 150 Jahren Schutz für Hunde, Katzen und Pferde. Testsieger 2024 mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen!"
+    metaDescription: "Schützen Sie Ihren Hund oder Ihre Katze mit Petprotect. Bis zu 100% Kostenübernahme mit kostenfreier Videosprechstunde. Jetzt vergleichen!"
   },
   {
     name: "Santevet",
@@ -382,7 +382,7 @@ export default function Tierversicherungen() {
               Beste Tierversicherung für Ihren Hund, Ihre Katze oder Ihr Pferd
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck und CHECK24 bieten umfassenden Schutz und attraktive Boni.
+              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck, CHECK24 und Uelzener bieten umfassenden Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -416,7 +416,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Agila und Petprotect bieten bis zu 100% Erstattung und Testsieger-Qualität.
+                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Uelzener, Agila und Petprotect bieten bis zu 100% Erstattung und Testsieger-Qualität.
                 </p>
               </CardContent>
             </Card>
@@ -426,7 +426,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Agila) helfen, vertrauenswürdige Anbieter wie Tarifcheck und CHECK24 zu finden.
+                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Uelzener) helfen, vertrauenswürdige Anbieter wie Tarifcheck, CHECK24 und Uelzener zu finden.
                 </p>
               </CardContent>
             </Card>
@@ -441,9 +441,9 @@ export default function Tierversicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung") && (
+                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : "2. Top Empfehlung"}
+                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : "3. Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
