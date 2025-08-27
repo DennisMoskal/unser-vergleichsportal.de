@@ -293,6 +293,473 @@ export default function Banking() {
         </div>
       </section>
 
+      {/* Detaillierter Banking-Vergleich */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
+          
+          {/* Girokonto kostenlos */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>Was kostet ein kostenloses Girokonto wirklich?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte 
+                    und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
+                  </p>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+                    <p className="text-sm text-green-700">
+                      Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu 
+                      Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>Girokonto Vergleich - Testsieger Eigenschaften</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bedingungslos kostenlose Kontoführung
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Kostenlose EC- und Kreditkarte
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Kostenloses Bargeldabheben deutschlandweit
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Mobile Banking App mit allen Funktionen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Dispozinsen unter 7% p.a.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Kredit online beantragen */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</h3>
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+              <h4 className="font-semibold mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Ratenkredit</h5>
+                  <p className="text-sm text-gray-600">
+                    Für Anschaffungen von 1.000€ bis 120.000€. 
+                    Zinsen ab 0,68% p.a. bei bester Bonität.
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Sofortkredit</h5>
+                  <p className="text-sm text-gray-600">
+                    Schnelle Auszahlung binnen 24h möglich. 
+                    Digitaler Abschluss mit VideoIdent-Verfahren.
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Umschuldung</h5>
+                  <p className="text-sm text-gray-600">
+                    Bestehende Kredite zusammenfassen und 
+                    bis zu 40% der Zinsen sparen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tagesgeld Vergleich */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</h3>
+            <Card className="bg-blue-50 border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-blue-800">📈 Aktuelle Tagesgeld Zinsen 2025</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-blue-700 mb-4">
+                  Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. 
+                  Täglich verfügbar, ohne Laufzeitbindung - ideal für Notreserven und kurzfristige Geldanlage.
+                </p>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div>
+                    <h5 className="font-semibold mb-2">Top-Anbieter:</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Bis zu 4,00% Zinsen für Neukunden</li>
+                      <li>• 100.000€ Einlagensicherung pro Bank</li>
+                      <li>• Täglich verfügbar, keine Kündigung nötig</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Wichtige Hinweise:</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Zinsbindung oft nur 3-12 Monate</li>
+                      <li>• Danach meist niedrigere Bestandskundenzinsen</li>
+                      <li>• Regelmäßiger Vergleich lohnt sich</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Baufinanzierung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Baufinanzierung Rechner - Ihren Traum vom Eigenheim verwirklichen</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Baufinanzierung: Das sollten Sie wissen</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li><strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
+                    <li><strong>Zinsbindung:</strong> 10-15 Jahre für Planungssicherheit</li>
+                    <li><strong>Tilgung:</strong> Initial 2-4% für zügige Rückzahlung</li>
+                    <li><strong>Nebenkosten:</strong> 10-15% zusätzlich zur Kaufsumme</li>
+                    <li><strong>Sondertilgungen:</strong> Jährlich 5-10% kostenfrei möglich</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle>Aktuelle Bauzinsen & Trends</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. 
+                    Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.
+                  </p>
+                  <div className="bg-orange-50 p-3 rounded">
+                    <h5 className="font-semibold text-orange-800 mb-1">💰 Spartipp:</h5>
+                    <p className="text-sm text-orange-700">
+                      Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre 
+                      etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Online Banking Guide */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
+          
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">1</span>
+                </div>
+                <CardTitle className="text-lg">Konto eröffnen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren 
+                  macht Postweg überflüssig - alles bequem von zu Hause.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">2</span>
+                </div>
+                <CardTitle className="text-lg">App herunterladen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Mobile Banking App installieren. Alle Bankgeschäfte 
+                  jederzeit und überall per Smartphone erledigen.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">3</span>
+                </div>
+                <CardTitle className="text-lg">Sicher anmelden</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Login mit PIN oder Fingerabdruck. Alle Transaktionen 
+                  durch TAN-Verfahren oder biometrische Freigabe geschützt.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">4</span>
+                </div>
+                <CardTitle className="text-lg">Banking nutzen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Überweisungen, Daueraufträge, Kontostände prüfen - 
+                  alles 24/7 verfügbar ohne Öffnungszeiten.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 bg-white p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-6 text-center">Häufige Fragen zum Online Banking</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Ist Online Banking sicher?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und 
+                  Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Welche TAN-Verfahren gibt es?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. 
+                  Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Kann ich alles online erledigen?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, 
+                  Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Was kostet Online Banking?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Bei den meisten Direktbanken ist Online Banking komplett kostenlos. 
+                  Auch viele Filialbanken bieten Online Services ohne Extragebühren an.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Kredit wechseln & Depot eröffnen */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
+          
+          <div className="grid gap-8 lg:grid-cols-2">
+            <Card className="border-2 border-green-200">
+              <CardHeader>
+                <CardTitle className="text-green-600">💳 Kredit umschulden und sparen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold mb-2">Wann lohnt sich eine Umschuldung?</h5>
+                    <p className="text-sm text-gray-600">
+                      Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. 
+                      Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Mögliche Ersparnis:</h5>
+                    <p className="text-sm text-gray-600">
+                      <strong className="text-green-600">Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. 
+                      Bei 20.000€ Kredit können das über 2.000€ sein.
+                    </p>
+                  </div>
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="text-sm text-green-700">
+                      <strong>Tipp:</strong> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-blue-600">📈 Depot eröffnen für Geldanlage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold mb-2">Warum ein Depot?</h5>
+                    <p className="text-sm text-gray-600">
+                      Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. 
+                      Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Kostenlose Depots:</h5>
+                    <p className="text-sm text-gray-600">
+                      Viele Online-Broker bieten <strong className="text-blue-600">kostenlose Depotführung</strong> 
+                      und günstige ETF-Sparpläne ab 0€ Ordergebühr.
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-3 rounded">
+                    <p className="text-sm text-blue-700">
+                      <strong>Wichtig:</strong> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
+            <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für optimale Finanzplanung</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <h5 className="font-semibold mb-2">Grundausstattung:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Kostenloses Girokonto für Alltag</li>
+                  <li>• Tagesgeldkonto für Notreserve (3-6 Monatsgehälter)</li>
+                  <li>• Kreditkarte ohne Jahresgebühr für Reisen</li>
+                  <li>• Dispozinsen unter 7% vereinbaren</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">Vermögensaufbau:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• ETF-Sparplan für langfristigen Vermögensaufbau</li>
+                  <li>• Depot mit kostenlosen ETF-Sparplänen</li>
+                  <li>• Alte Kredite auf bessere Konditionen prüfen</li>
+                  <li>• Regelmäßig Konditionen vergleichen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Kreditkarte ohne Jahresgebühr Sektion */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten</h2>
+          
+          <div className="mb-8 text-center">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. 
+              Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <Card className="border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-green-600">💳 Visa/Mastercard klassisch</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div>
+                    <h5 className="font-semibold mb-1">Leistungen:</h5>
+                    <ul className="text-sm space-y-1 text-gray-600">
+                      <li>• Weltweit akzeptiert</li>
+                      <li>• Kostenlose Bargeldabhebung im Ausland</li>
+                      <li>• Online-Shopping ohne Extragebühren</li>
+                      <li>• Reiseversicherungen inklusive</li>
+                    </ul>
+                  </div>
+                  <div className="bg-green-50 p-2 rounded text-sm">
+                    <strong className="text-green-600">0€ Jahresgebühr</strong> dauerhaft
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-blue-600">📱 Modern Digital Cards</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div>
+                    <h5 className="font-semibold mb-1">Features:</h5>
+                    <ul className="text-sm space-y-1 text-gray-600">
+                      <li>• Apple Pay / Google Pay ready</li>
+                      <li>• Echtzeit-Benachrichtigungen</li>
+                      <li>• Ausgabenkontrolle per App</li>
+                      <li>• Virtuelle Kartennummern</li>
+                    </ul>
+                  </div>
+                  <div className="bg-blue-50 p-2 rounded text-sm">
+                    <strong className="text-blue-600">Kostenlos</strong> + Cashback möglich
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-purple-200">
+              <CardHeader>
+                <CardTitle className="text-purple-600">✈️ Travel & Bonus Cards</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div>
+                    <h5 className="font-semibold mb-1">Extras:</h5>
+                    <ul className="text-sm space-y-1 text-gray-600">
+                      <li>• Meilen oder Punkte sammeln</li>
+                      <li>• Lounge-Zugang an Flughäfen</li>
+                      <li>• Umfassende Reiseversicherung</li>
+                      <li>• Priority Pass inklusive</li>
+                    </ul>
+                  </div>
+                  <div className="bg-purple-50 p-2 rounded text-sm">
+                    <strong className="text-purple-600">Premium-Features</strong> kostenlos
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 bg-orange-50 p-6 rounded-lg border-2 border-orange-200">
+            <h3 className="text-lg font-bold mb-4 text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <h5 className="font-semibold mb-2">Versteckte Kosten beachten:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Fremdwährungsgebühren (oft 1-2%)</li>
+                  <li>• Bargeldgebühren auch im Inland</li>
+                  <li>• Jahresgebühr ab dem 2. Jahr</li>
+                  <li>• Hohe Sollzinsen bei Teilzahlung</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">Smarte Nutzung:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Immer per Lastschrift vollständig begleichen</li>
+                  <li>• Kreditrahmen nicht als Kredit nutzen</li>
+                  <li>• Bei Auslandsreisen Geld sparen</li>
+                  <li>• Bonusprogramme gezielt nutzen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
