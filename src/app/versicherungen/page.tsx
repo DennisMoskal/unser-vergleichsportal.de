@@ -312,6 +312,373 @@ export default function Versicherungen() {
         </div>
       </section>
 
+      {/* Detaillierter Versicherungsvergleich */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Versicherungsvergleich 2025: Die wichtigsten Versicherungen im Test</h2>
+          
+          {/* KFZ Versicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">KFZ Versicherung Vergleich - Testsieger 2025</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>Was kostet eine KFZ Versicherung?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Die Kosten für eine KFZ Versicherung variieren stark je nach Fahrzeugtyp, Schadenfreiheitsklasse und Region. 
+                    Im Durchschnitt zahlen deutsche Autofahrer zwischen 200€ und 800€ jährlich für ihre Kfz-Haftpflichtversicherung.
+                  </p>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+                    <p className="text-sm text-green-700">
+                      Mit unserem KFZ Versicherung Vergleich können Sie bis zu 1.000€ jährlich sparen. 
+                      Besonders lohnenswert ist der Wechsel für Fahranfänger und bei Tariferhöhungen.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>KFZ Versicherung Test - Testsieger Eigenschaften</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Günstige Beiträge bei bester Leistung
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      24/7 Schadenservice und Pannenhilfe
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Flexible Selbstbeteiligung wählbar
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Online Abschluss mit Sofortschutz
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Schadenfreiheitsrabatt bis zu 85%
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Hausratversicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hausratversicherung günstig - Der große Vergleich</h3>
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+              <h4 className="font-semibold mb-4">Hausratversicherung Test 2025: Das sollten Sie wissen</h4>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Grundschutz</h5>
+                  <p className="text-sm text-gray-600">
+                    Schutz vor Einbruch, Brand, Leitungswasser und Sturm. 
+                    Bereits ab 40€ jährlich für eine 50m² Wohnung.
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Erweiterte Deckung</h5>
+                  <p className="text-sm text-gray-600">
+                    Zusätzlich Elementarschäden, Fahrraddiebstahl und 
+                    grobe Fahrlässigkeit. Empfehlung für Familien.
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Premium-Schutz</h5>
+                  <p className="text-sm text-gray-600">
+                    All-Risk-Deckung mit Cyber-Schutz, Hausrat unterwegs 
+                    und ohne Selbstbeteiligung.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Haftpflichtversicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Haftpflichtversicherung Test - Unverzichtbarer Schutz</h3>
+            <Card className="bg-yellow-50 border-yellow-200">
+              <CardHeader>
+                <CardTitle className="text-yellow-800">⚠️ Wichtiger Hinweis zur Haftpflichtversicherung</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-yellow-700 mb-4">
+                  Eine Haftpflichtversicherung ist die wichtigste Versicherung überhaupt! Sie schützt vor 
+                  Schadensersatzansprüchen bis zu mehreren Millionen Euro und kostet nur wenige Euro im Monat.
+                </p>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div>
+                    <h5 className="font-semibold mb-2">Mindestdeckung:</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• 10 Millionen Euro Personenschäden</li>
+                      <li>• 1 Million Euro Sachschäden</li>
+                      <li>• 100.000 Euro Vermögensschäden</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Empfohlene Extras:</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Ausfalldeckung bei unversicherten Schädigern</li>
+                      <li>• Schlüsselverlust (privat & beruflich)</li>
+                      <li>• Internetnutzung und Cyber-Risiken</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Rechtsschutzversicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Rechtsschutzversicherung - Wann lohnt sich der Abschluss?</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Rechtsschutz-Bereiche im Überblick</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li><strong>Verkehrsrechtsschutz:</strong> Unfälle, Bußgelder, Führerschein</li>
+                    <li><strong>Arbeitsrechtsschutz:</strong> Kündigung, Lohn, Mobbing</li>
+                    <li><strong>Wohnrechtsschutz:</strong> Mietstreitigkeiten, Nachbarrecht</li>
+                    <li><strong>Familienrechtsschutz:</strong> Scheidung, Unterhalt, Sorgerecht</li>
+                    <li><strong>Strafrechtsschutz:</strong> Vorwürfe und Anschuldigungen</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle>Kosten und Wartezeiten</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Rechtsschutzversicherungen kosten zwischen 150€ und 400€ jährlich je nach Baustein-Kombination.
+                  </p>
+                  <div className="bg-red-50 p-3 rounded">
+                    <h5 className="font-semibold text-red-800 mb-1">Wichtig:</h5>
+                    <p className="text-sm text-red-700">
+                      3 Monate Wartezeit bei Vertragsstreitigkeiten, 
+                      kein Rückwirkungsschutz für bestehende Probleme!
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Versicherung Online Abschließen Guide */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Versicherung online abschließen - So geht's richtig</h2>
+          
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">1</span>
+                </div>
+                <CardTitle className="text-lg">Vergleichen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Nutzen Sie Vergleichsportale wie CHECK24 oder Tarifcheck.de für einen 
+                  kostenlosen Versicherungsvergleich von über 300 Tarifen.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">2</span>
+                </div>
+                <CardTitle className="text-lg">Berechnen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Geben Sie Ihre Daten in den Rechner ein. Achten Sie auf korrekte Angaben 
+                  für eine genaue Beitragsberechnung.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">3</span>
+                </div>
+                <CardTitle className="text-lg">Prüfen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Vergleichen Sie nicht nur den Preis, sondern auch Leistungen, 
+                  Selbstbeteiligung und Kundenbewertungen der Versicherungsanbieter.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">4</span>
+                </div>
+                <CardTitle className="text-lg">Abschließen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Schließen Sie die Versicherung direkt online ab. 
+                  Sie erhalten sofort Ihren Versicherungsschein per E-Mail.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 bg-white p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-6 text-center">Häufige Fragen zum Online-Abschluss</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Ist der Online-Abschluss sicher?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Ja, alle unsere Partner-Portale verwenden SSL-Verschlüsselung und sind TÜV-geprüft. 
+                  Ihre Daten werden sicher übertragen und DSGVO-konform verarbeitet.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Kann ich online kündigen?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Die meisten Versicherungen können heute online gekündigt werden. 
+                  Beachten Sie die Kündigungsfristen (meist 1-3 Monate vor Ablauf).
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Bekomme ich Beratung?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  CHECK24 bietet kostenlose Beratung von 08:00-22:00 Uhr durch über 300 Versicherungsexperten. 
+                  Auch Telefon-Support ist verfügbar.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Welche Zahlungsmethoden gibt es?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Meist SEPA-Lastschrift (häufig mit Rabatt), Überweisung oder Kreditkarte. 
+                  Ratenzahlung ist oft gegen Aufpreis möglich.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Versicherung wechseln - Spartipps */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Versicherung wechseln und bis zu 1.000€ sparen</h2>
+          
+          <div className="mb-8 text-center">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Ein Versicherungswechsel lohnt sich oft mehr als gedacht. Mit dem richtigen Timing und Anbieter 
+              können Sie erhebliche Beträge sparen, ohne auf Leistungen zu verzichten.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            <Card className="border-2 border-green-200">
+              <CardHeader>
+                <CardTitle className="text-green-600">🚗 KFZ-Versicherung wechseln</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold mb-2">Beste Wechselzeit:</h5>
+                    <p className="text-sm text-gray-600">
+                      Stichtag 30. November für Wechsel zum 1. Januar. 
+                      Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Durchschnittliche Ersparnis:</h5>
+                    <p className="text-sm text-gray-600">
+                      <strong className="text-green-600">300-800€ jährlich</strong> bei gleichen Leistungen. 
+                      Besonders Fahranfänger profitieren vom Wechsel.
+                    </p>
+                  </div>
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="text-sm text-green-700">
+                      <strong>Tipp:</strong> Schadenfreiheitsklasse wird beim Wechsel übernommen!
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-blue-600">🏠 Hausrat & Haftpflicht wechseln</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold mb-2">Kündigungsfristen:</h5>
+                    <p className="text-sm text-gray-600">
+                      Meist 3 Monate vor Ablauf. Bei Schäden oder Beitragserhöhung: 
+                      Sonderkündigungsrecht oft bis 1 Monat danach.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Sparpotential:</h5>
+                    <p className="text-sm text-gray-600">
+                      Hausrat: <strong className="text-blue-600">50-200€ jährlich</strong><br/>
+                      Haftpflicht: <strong className="text-blue-600">20-100€ jährlich</strong>
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-3 rounded">
+                    <p className="text-sm text-blue-700">
+                      <strong>Achtung:</strong> Nahtloser Übergang wichtig - nie ohne Schutz sein!
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
+            <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für den Versicherungswechsel</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <h5 className="font-semibold mb-2">Vor dem Wechsel prüfen:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Kündigungsfrist der alten Versicherung</li>
+                  <li>• Vergleichbare Leistungen im neuen Tarif</li>
+                  <li>• Wartezeiten bei neuem Anbieter</li>
+                  <li>• Laufende Schadensfälle abwickeln</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">Nach dem Wechsel:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Kündigungsbestätigung prüfen</li>
+                  <li>• Neue Versicherungsunterlagen sicher aufbewahren</li>
+                  <li>• Bei KFZ: eVB-Nummer für Zulassung</li>
+                  <li>• Daueraufträge anpassen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
