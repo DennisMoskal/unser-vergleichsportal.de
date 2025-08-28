@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -66,6 +67,46 @@ const providerData = [
     url: "https://tidd.ly/3UN80GC",
     metaTitle: "Uelzener Tierversicherung: Günstige Hundehaftpflicht und Krankenversicherung",
     metaDescription: "Uelzener bietet seit 150 Jahren Schutz für Hunde, Katzen und Pferde. Testsieger 2024 mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen!"
+  },
+  {
+    name: "BavariaDirekt",
+    rating: 4.5,
+    features: [
+      "Günstige Hundehaftpflicht ab 23,13€/Jahr",
+      "Bis zu 50 Mio. € Deckungssumme",
+      "Welpen bis 12 Monate kostenfrei mitversichert",
+      "10% Treue-Rabatt nach 5 Jahren",
+      "Schutz auch bei grober Fahrlässigkeit",
+      "24h-Notfall-Hotline für schnellen Service",
+      "91% Kundenzufriedenheit und hohe Weiterempfehlung",
+      "Auszeichnung als 'Fairer Versicherer' (Focus Money)"
+    ],
+    price: "ab 23,13€/Jahr",
+    bonus: "10% Treue-Rabatt",
+    logo: "🐶",
+    url: "https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=",
+    metaTitle: "BavariaDirekt Hundehaftpflicht: Günstige Absicherung für Ihren Hund",
+    metaDescription: "BavariaDirekt bietet günstige Hundehaftpflicht ab 23,13€/Jahr mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen und Welpen kostenfrei mitversichern!"
+  },
+  {
+    name: "AXA",
+    rating: 4.4,
+    features: [
+      "Hundehalter-Haftpflicht mit bis zu 50 Mio. € Deckung",
+      "Schutz für Schäden durch Ihren Hund weltweit",
+      "Einfacher Online-Abschluss mit Sofortschutz",
+      "24/7 Schadenmeldung über My AXA Portal",
+      "Flexible Tarife mit wählbarer Selbstbeteiligung",
+      "Persönliche Beratung deutschlandweit",
+      "Inklusive Schutz bei grober Fahrlässigkeit",
+      "Kombinierbar mit weiteren AXA Versicherungen"
+    ],
+    price: "ab 25€/Jahr",
+    bonus: "Exklusives Smartphone-Gewinnspiel",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=3092888&clickref=",
+    metaTitle: "AXA Hundehaftpflicht: Zuverlässiger Schutz für Hundehalter",
+    metaDescription: "AXA bietet Hundehaftpflicht mit bis zu 50 Mio. € Deckung und weltweitem Schutz. Jetzt online abschließen und von Top-Beratung profitieren!"
   },
   {
     name: "Petprotect",
@@ -186,26 +227,6 @@ const providerData = [
     url: "https://www.agila.de",
     metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen",
     metaDescription: "Agila bietet Testsieger-Tarife mit bis zu 100% Kostenübernahme und Hundehaftpflicht. Jetzt Tierversicherungen vergleichen!"
-  },
-  {
-    name: "Getsurance",
-    rating: 4.3,
-    features: [
-      "Digitale Tierversicherung für Hunde und Katzen",
-      "Bis zu 80% Kostenübernahme für Behandlungen",
-      "Einfache Tarifverwaltung über App",
-      "Schnelle Schadenmeldung online",
-      "Keine Wartezeit bei Unfallbehandlungen",
-      "Optionale Haftpflichtversicherung",
-      "Kostenlose Beratung für Tarifauswahl",
-      "Rabatte für junge Tiere"
-    ],
-    price: "ab 10€/Monat",
-    bonus: "Kostenlose App-Nutzung",
-    logo: "📱",
-    url: "https://www.getsurance.de",
-    metaTitle: "Getsurance Tierversicherung: Digitale Absicherung für Haustiere",
-    metaDescription: "Getsurance bietet digitale Tierversicherungen mit bis zu 80% Erstattung und App-Verwaltung. Jetzt Tarife für Hunde und Katzen vergleichen!"
   }
 ]
 
@@ -382,7 +403,7 @@ export default function Tierversicherungen() {
               Beste Tierversicherung für Ihren Hund, Ihre Katze oder Ihr Pferd
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck, CHECK24 und Uelzener bieten umfassenden Schutz und attraktive Boni.
+              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt bieten umfassenden Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -416,7 +437,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Uelzener, Agila und Petprotect bieten bis zu 100% Erstattung und Testsieger-Qualität.
+                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt, AXA und Petprotect bietet bis zu 100% Erstattung und Testsieger-Qualität.
                 </p>
               </CardContent>
             </Card>
@@ -426,7 +447,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Uelzener) helfen, vertrauenswürdige Anbieter wie Tarifcheck, CHECK24 und Uelzener zu finden.
+                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Uelzener, BavariaDirekt) helfen, vertrauenswürdige Anbieter wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt zu finden.
                 </p>
               </CardContent>
             </Card>
@@ -441,9 +462,11 @@ export default function Tierversicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung") && (
+                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung" || provider.name === "BavariaDirekt") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : "3. Top Empfehlung"}
+                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : 
+                     provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : 
+                     provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : "4. Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -475,7 +498,7 @@ export default function Tierversicherungen() {
                   <Link
                     href={provider.url}
                     target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                    rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}
                     onClick={() => console.log(`Navigating to provider: ${provider.url}`)}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
@@ -490,6 +513,99 @@ export default function Tierversicherungen() {
             <p>
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Detaillierter Versicherungsvergleich */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Die wichtigsten Versicherungen im Test</h2>
+          
+          {/* Hunde-Haftpflichtversicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-Haftpflichtversicherung - Unverzichtbarer Schutz für Hundehalter</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>BavariaDirekt Hunde-Haftpflicht</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Günstige Tarife ab 23,13€/Jahr
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bis zu 50 Mio. € Deckungssumme
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Welpen bis 12 Monate kostenfrei mitversichert
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      10% Treue-Rabatt nach 5 Jahren
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Schutz bei grober Fahrlässigkeit
+                    </li>
+                  </ul>
+                  <Link
+                    href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref="
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    onClick={() => console.log("Navigating to BavariaDirekt Hunde-Haftpflicht")}
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                      Jetzt Hundehaftpflicht berechnen*
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>AXA Hunde-Haftpflicht</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bis zu 50 Mio. € Deckung für Schäden
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Weltweiter Schutz für Ihren Hund
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Einfacher Online-Abschluss mit Sofortschutz
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      24/7 Schadenmeldung über My AXA Portal
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Flexible Tarife mit wählbarer Selbstbeteiligung
+                    </li>
+                  </ul>
+                  <Link
+                    href="https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=3092888&clickref="
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    onClick={() => console.log("Navigating to AXA Hunde-Haftpflicht")}
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                      Zum AXA Hundehaftpflicht-Angebot*
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
