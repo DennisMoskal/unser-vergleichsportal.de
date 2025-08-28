@@ -403,7 +403,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Petprotect, Santevet und Uelzener bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
+                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt und Figo bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
                 </p>
               </CardContent>
             </Card>
@@ -413,7 +413,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder Handelsblatt Testsieger (Uelzener, CHECK24) helfen, vertrauenswürdige Anbieter für Hundeversicherung und Katzenversicherung zu finden.
+                  Kundenbewertungen wie Handelsblatt Testsieger (Uelzener, CHECK24) oder Focus Money (BavariaDirekt) helfen, vertrauenswürdige Anbieter für Hundeversicherung und Katzenversicherung zu finden.
                 </p>
               </CardContent>
             </Card>
@@ -563,7 +563,7 @@ export default function Tierversicherungen() {
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Erweiterte Deckung</h5>
                   <p className="text-sm text-gray-600">
-                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Petprotect). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
+                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
                   </p>
                 </div>
                 <div>
@@ -577,32 +577,32 @@ export default function Tierversicherungen() {
             <div className="grid gap-6 md:grid-cols-2">
               <Card className="border-2 hover:border-green-200">
                 <CardHeader>
-                  <CardTitle>Petprotect Tierkrankenversicherung</CardTitle>
+                  <CardTitle>Uelzener Tierkrankenversicherung</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 100% Kostenübernahme
+                      Umfassender Schutz für Hunde, Katzen und Pferde
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Kostenfreie Videosprechstunde mit FirstVet
+                      Kranken- und OP-Versicherung mit Gesundheitspauschale
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Stiftung Warentest prämiert
+                      Testsieger in Leistungs- und Fairness-Tests 2024
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Ohne Gesundheitsprüfung
+                      Auslandsschutz für bis zu 12 Monate weltweit
                     </li>
                   </ul>
                   <Link
-                    href="https://www.petprotect.de"
+                    href="https://tidd.ly/3UN80GC"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to Petprotect Tierkrankenversicherung")}
+                    onClick={() => console.log("Navigating to Uelzener Tierkrankenversicherung")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
                       Jetzt Tierkrankenversicherung abschließen*
@@ -612,35 +612,35 @@ export default function Tierversicherungen() {
               </Card>
               <Card className="border-2 hover:border-green-200">
                 <CardHeader>
-                  <CardTitle>Santevet Tierkrankenversicherung</CardTitle>
+                  <CardTitle>BavariaDirekt Tierkrankenversicherung</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 90% Kostenübernahme
+                      Günstige Hundehaftpflicht ab 23,13€/Jahr
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Vorsorgebudget für Impfungen
+                      Welpen bis 12 Monate kostenfrei mitversichert
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Keine Altersbeschränkung
+                      24h-Notfall-Hotline für schnellen Service
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Schnelle Erstattung
+                      Auszeichnung als 'Fairer Versicherer'
                     </li>
                   </ul>
                   <Link
-                    href="https://www.santevet.de"
+                    href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref="
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to Santevet Tierkrankenversicherung")}
+                    onClick={() => console.log("Navigating to BavariaDirekt Tierkrankenversicherung")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Zum Santevet Angebot*
+                      Zum BavariaDirekt Angebot*
                     </Button>
                   </Link>
                 </CardContent>
@@ -690,7 +690,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Petprotect oder Uelzener.
+                  Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Uelzener oder BavariaDirekt.
                 </p>
               </CardContent>
             </Card>
@@ -720,7 +720,7 @@ export default function Tierversicherungen() {
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Petprotect bieten bis zu 100% Erstattung.
+                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener bieten bis zu 100% Erstattung.
                 </p>
               </div>
               <div>
@@ -732,7 +732,7 @@ export default function Tierversicherungen() {
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Welche Zahlungsmethoden gibt es?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei Anbietern wie Santevet gegen Aufpreis möglich.
+                  SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei Anbietern wie BavariaDirekt gegen Aufpreis möglich.
                 </p>
               </div>
             </div>
@@ -791,7 +791,7 @@ export default function Tierversicherungen() {
                   <div>
                     <h5 className="font-semibold mb-2">Sparpotential:</h5>
                     <p className="text-sm text-gray-600">
-                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Petprotect oder Figo.
+                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder Figo.
                     </p>
                   </div>
                   <div className="bg-blue-50 p-3 rounded">
