@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://smart-finanz.vercel.app/sitemap.xml
