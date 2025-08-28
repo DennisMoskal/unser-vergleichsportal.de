@@ -47,6 +47,24 @@ const providerData = [
     url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
   },
   {
+    name: "InShared",
+    rating: 4.6,
+    features: [
+      "Günstige Kfz-Versicherung mit Top-Preisen",
+      "Geld-zurück-Garantie bei weniger Schäden",
+      "24/7 Notfallservice bei Schaden oder Panne",
+      "100% digitaler Abschluss in wenigen Minuten",
+      "Flexible Tarife mit wählbarer Selbstbeteiligung",
+      "Schnelle Schadenbearbeitung online",
+      "Partnerschaften mit Roland Assistance und Carglass",
+      "Transparente und faire Beitragsgestaltung"
+    ],
+    price: "ab 15€/Monat",
+    bonus: "Geld-zurück-Bonus",
+    logo: "🚗",
+    url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref="
+  },
+  {
     name: "finanzcheck.pro",
     rating: 4.6,
     features: [
@@ -205,7 +223,7 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck.de, InShared und CHECK24 bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -239,7 +257,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Unsere Anbieter wie Tarifcheck.de und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
+                  Unsere Anbieter wie Tarifcheck.de, InShared und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
                 </p>
               </CardContent>
             </Card>
@@ -264,9 +282,9 @@ export default function Versicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(index === 0 || index === 1) && (
+                {(index === 0 || index === 1 || index === 2) && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {index === 0 ? "Top Empfehlung" : "2. Top Empfehlung"}
+                    {index === 0 ? "Top Empfehlung" : index === 1 ? "2. Top Empfehlung" : "3. Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -295,7 +313,7 @@ export default function Versicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
                       Zum Anbieter*
                     </Button>
