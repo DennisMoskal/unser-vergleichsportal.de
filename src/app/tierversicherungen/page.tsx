@@ -233,12 +233,10 @@ const providerData = [
 export default function Tierversicherungen() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  // Debugging: Log when component mounts
   useEffect(() => {
     console.log("Tierversicherungen component mounted")
   }, [])
 
-  // Debugging: Log navigation attempts
   const handleNavigation = (path: string) => {
     console.log(`Navigating to: ${path}`)
     try {
@@ -258,47 +256,24 @@ export default function Tierversicherungen() {
             <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <Link
-              href="/versicherungen"
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-              onClick={() => console.log("Clicked Versicherungen")}
-            >
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Versicherungen")}>
               Versicherungen
             </Link>
-            <Link
-              href="/banking"
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-              onClick={() => console.log("Clicked Banking")}
-            >
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Banking")}>
               Banking
             </Link>
-            <Link
-              href="/tierversicherungen"
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-              onClick={() => console.log("Clicked Tierversicherung")}
-            >
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Tierversicherung")}>
               Tierversicherung
             </Link>
-            <Link
-              href="/trading"
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-              onClick={() => console.log("Clicked Trading")}
-            >
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Trading")}>
               Trading
             </Link>
-            <Link
-              href="/#kundenbewertungen"
-              className="text-gray-600 hover:text-green-600 transition-colors font-medium"
-              onClick={() => console.log("Clicked Kundenbewertungen")}
-            >
+            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Kundenbewertungen")}>
               Kundenbewertungen
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button
-              className="hidden md:block bg-green-600 hover:bg-green-700"
-              onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}
-            >
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Vergleich starten
             </Button>
             <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -306,6 +281,7 @@ export default function Tierversicherungen() {
             </button>
           </div>
         </div>
+
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
@@ -382,14 +358,10 @@ export default function Tierversicherungen() {
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
-          <Link
-            href="/"
-            className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base"
-            onClick={() => {
-              console.log("Clicked Zurück zur Startseite")
-              handleNavigation("/")
-            }}
-          >
+          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base" onClick={() => {
+            console.log("Clicked Zurück zur Startseite")
+            handleNavigation("/")
+          }}>
             ← Zurück zur Startseite
           </Link>
         </div>
@@ -399,17 +371,11 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Tierversicherung für Ihren Hund, Ihre Katze oder Ihr Pferd
-            </h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung 2025: Hundeversicherung & Katzenversicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Tierversicherung mit SmartFinanz. Vergleichen Sie über 250 Tarife für Hunde, Katzen und Pferde kostenlos und sparen Sie bis zu 850€ jährlich. Unsere Testsieger wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt bieten umfassenden Schutz und attraktive Boni.
+              Finden Sie die perfekte **Hundeversicherung**, **Katzenversicherung** oder **Tierkrankenversicherung** mit unserem **Tierversicherung Vergleich**. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt. Unsere Anbieter bieten **Hundehaftpflichtversicherung** und **Tierarztkosten Versicherung** für umfassenden Schutz Ihres Haustiers.
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100 font-medium"
-              onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}
-            >
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Jetzt Tierversicherungen vergleichen
             </Button>
           </div>
@@ -427,7 +393,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Hunde-, Katzen- oder Pferdeversicherungen zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.
+                  Nutzen Sie unseren **Tierversicherung Vergleich**, um **günstige Tierversicherungen** für Hunde, Katzen oder Pferde zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -437,7 +403,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Behandlungen, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt, AXA und Petprotect bietet bis zu 100% Erstattung und Testsieger-Qualität.
+                  Achten Sie auf **Kostenübernahme für Tierarztkosten**, Operationen und Vorsorge. Anbieter wie Petprotect, Santevet und Uelzener bieten bis zu 100% Erstattung für **Hunde OP Versicherung** und **Katzenkrankenversicherung**.
                 </p>
               </CardContent>
             </Card>
@@ -447,7 +413,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder TÜV-Auszeichnungen (Uelzener, BavariaDirekt) helfen, vertrauenswürdige Anbieter wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt zu finden.
+                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder Handelsblatt Testsieger (Uelzener, CHECK24) helfen, vertrauenswürdige Anbieter für **Hundeversicherung** und **Katzenversicherung** zu finden.
                 </p>
               </CardContent>
             </Card>
@@ -464,9 +430,7 @@ export default function Tierversicherungen() {
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung" || provider.name === "BavariaDirekt") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : 
-                     provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : 
-                     provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : "4. Top Empfehlung"}
+                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : "4. Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -520,87 +484,163 @@ export default function Tierversicherungen() {
       {/* Detaillierter Versicherungsvergleich */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Die wichtigsten Versicherungen im Test</h2>
-          
-          {/* Hunde-Haftpflichtversicherung */}
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Beste Hundeversicherung & Katzenversicherung</h2>
+
+          {/* Hundehaftpflichtversicherung */}
           <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-Haftpflichtversicherung - Unverzichtbarer Schutz für Hundehalter</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hundehaftpflichtversicherung – Unverzichtbarer Schutz für Hundehalter</h3>
             <div className="grid gap-6 md:grid-cols-2">
               <Card className="border-2 hover:border-green-200">
                 <CardHeader>
-                  <CardTitle>BavariaDirekt Hunde-Haftpflicht</CardTitle>
+                  <CardTitle>Was kostet eine Hundehaftpflichtversicherung?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Die Kosten für eine **Hundehaftpflichtversicherung** variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten **günstige Hundeversicherungen** mit hoher Deckung.
+                  </p>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+                    <p className="text-sm text-green-700">
+                      Mit einem **Tierversicherung Vergleich** sparen Sie bis zu 300€ jährlich. Nutzen Sie Testsieger wie Tarifcheck oder CHECK24 für die beste **Hundehaftpflichtversicherung**.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>Testsieger Hundehaftpflicht Eigenschaften</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Günstige Tarife ab 23,13€/Jahr
-                    </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
                       Bis zu 50 Mio. € Deckungssumme
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Welpen bis 12 Monate kostenfrei mitversichert
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      10% Treue-Rabatt nach 5 Jahren
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
                       Schutz bei grober Fahrlässigkeit
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Welpen bis 12 Monate oft kostenfrei mitversichert
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Weltweiter Schutz für Reisen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      24/7 Schadenmeldung online
                     </li>
                   </ul>
                   <Link
-                    href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref="
+                    href="https://www.tarifcheck.com/5dM0KnS"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to BavariaDirekt Hunde-Haftpflicht")}
+                    onClick={() => console.log("Navigating to Tarifcheck Hundehaftpflicht")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt Hundehaftpflicht berechnen*
+                      Jetzt Hundehaftpflicht vergleichen*
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
-              
+            </div>
+          </div>
+
+          {/* Tierkrankenversicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung – Schutz für Tierarztkosten</h3>
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+              <h4 className="font-semibold mb-4">Tierkrankenversicherung Test 2025: Das sollten Sie wissen</h4>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Grundschutz</h5>
+                  <p className="text-sm text-gray-600">
+                    **Katzenkrankenversicherung** und **Hunde OP Versicherung** ab 12€/Monat (z. B. Lassie). Deckt Tierarztkosten für Krankheiten und Unfälle.
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Erweiterte Deckung</h5>
+                  <p className="text-sm text-gray-600">
+                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Petprotect). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-green-600 mb-2">Premium-Schutz</h5>
+                  <p className="text-sm text-gray-600">
+                    Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo). Ideal für chronisch kranke Tiere.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
               <Card className="border-2 hover:border-green-200">
                 <CardHeader>
-                  <CardTitle>AXA Hunde-Haftpflicht</CardTitle>
+                  <CardTitle>Petprotect Tierkrankenversicherung</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 50 Mio. € Deckung für Schäden
+                      Bis zu 100% Kostenübernahme
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Weltweiter Schutz für Ihren Hund
+                      Kostenfreie Videosprechstunde mit FirstVet
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Einfacher Online-Abschluss mit Sofortschutz
+                      Stiftung Warentest prämiert
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      24/7 Schadenmeldung über My AXA Portal
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Flexible Tarife mit wählbarer Selbstbeteiligung
+                      Ohne Gesundheitsprüfung
                     </li>
                   </ul>
                   <Link
-                    href="https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=3092888&clickref="
+                    href="https://www.petprotect.de"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to AXA Hunde-Haftpflicht")}
+                    onClick={() => console.log("Navigating to Petprotect Tierkrankenversicherung")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Zum AXA Hundehaftpflicht-Angebot*
+                      Jetzt Tierkrankenversicherung abschließen*
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              <Card className="border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle>Santevet Tierkrankenversicherung</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bis zu 90% Kostenübernahme
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Vorsorgebudget für Impfungen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Keine Altersbeschränkung
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Schnelle Erstattung
+                    </li>
+                  </ul>
+                  <Link
+                    href="https://www.santevet.de"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    onClick={() => console.log("Navigating to Santevet Tierkrankenversicherung")}
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                      Zum Santevet Angebot*
                     </Button>
                   </Link>
                 </CardContent>
@@ -610,17 +650,192 @@ export default function Tierversicherungen() {
         </div>
       </section>
 
+      {/* Tierversicherung Online Abschließen Guide */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen – So finden Sie die beste Hundeversicherung</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">1</span>
+                </div>
+                <CardTitle className="text-lg">Vergleichen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen **Tierversicherung Vergleich** von über 250 Tarifen für **Hundeversicherung** und **Katzenversicherung**.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">2</span>
+                </div>
+                <CardTitle className="text-lg">Berechnen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für **Hundehaftpflichtversicherung** oder **Tierkrankenversicherung** zu erhalten.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">3</span>
+                </div>
+                <CardTitle className="text-lg">Prüfen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Vergleichen Sie Leistungen wie **Tierarztkosten Versicherung**, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Petprotect oder Uelzener.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">4</span>
+                </div>
+                <CardTitle className="text-lg">Abschließen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Schließen Sie Ihre **günstige Tierversicherung** online ab und erhalten Sie den Versicherungsschein sofort per E-Mail.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-12 bg-white p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-6 text-center">Häufige Fragen zur Tierversicherung</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Ist eine Hundehaftpflichtversicherung Pflicht?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die **Hundehaftpflichtversicherung** Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Eine **Tierkrankenversicherung** deckt **Tierarztkosten** für Krankheiten, Operationen und Vorsorge. Anbieter wie Petprotect bieten bis zu 100% Erstattung.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Kann ich online kündigen?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Ja, die meisten **Hundeversicherungen** und **Katzenversicherungen** können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-green-600">Welche Zahlungsmethoden gibt es?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei Anbietern wie Santevet gegen Aufpreis möglich.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tierversicherung wechseln - Spartipps */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h2>
+          <div className="mb-8 text-center">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Ein Wechsel der **Hundeversicherung** oder **Katzenversicherung** kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren **Tierversicherung Vergleich**, um die **beste Tierversicherung 2025** zu finden.
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <Card className="border-2 border-green-200">
+              <CardHeader>
+                <CardTitle className="text-green-600">🐶 Hundehaftpflichtversicherung wechseln</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold mb-2">Beste Wechselzeit:</h5>
+                    <p className="text-sm text-gray-600">
+                      Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Durchschnittliche Ersparnis:</h5>
+                    <p className="text-sm text-gray-600">
+                      <strong className="text-green-600">50-200€ jährlich</strong> durch Wechsel zu Anbietern wie BavariaDirekt oder AXA.
+                    </p>
+                  </div>
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="text-sm text-green-700">
+                      <strong>Tipp:</strong> Nutzen Sie Testsieger wie Tarifcheck für einen kostenlosen Vergleich.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-blue-600">🐱 Tierkrankenversicherung wechseln</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold mb-2">Kündigungsfristen:</h5>
+                    <p className="text-sm text-gray-600">
+                      Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2">Sparpotential:</h5>
+                    <p className="text-sm text-gray-600">
+                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Petprotect oder Figo.
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-3 rounded">
+                    <p className="text-sm text-blue-700">
+                      <strong>Achtung:</strong> Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
+            <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für den Tierversicherungswechsel</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <h5 className="font-semibold mb-2">Vor dem Wechsel prüfen:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Kündigungsfrist der alten Versicherung</li>
+                  <li>• Vergleichbare Leistungen im neuen Tarif</li>
+                  <li>• Wartezeiten bei **Tierkrankenversicherung**</li>
+                  <li>• Laufende Behandlungen oder Schäden</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">Nach dem Wechsel:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Kündigungsbestätigung prüfen</li>
+                  <li>• Neue Versicherungsunterlagen sicher aufbewahren</li>
+                  <li>• Zahlungsmethoden anpassen (z. B. SEPA-Lastschrift)</li>
+                  <li>• Telemedizin- oder Vorsorgeleistungen aktivieren</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
-          <Link
-            href="/"
-            className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base"
-            onClick={() => {
-              console.log("Clicked Zurück zur Startseite")
-              handleNavigation("/")
-            }}
-          >
+          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base" onClick={() => {
+            console.log("Clicked Zurück zur Startseite")
+            handleNavigation("/")
+          }}>
             ← Zurück zur Startseite
           </Link>
         </div>
@@ -643,38 +858,22 @@ export default function Tierversicherungen() {
               <h6 className="font-semibold mb-2 sm:mb-4">Produkte</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link
-                    href="/versicherungen"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Versicherungen")}
-                  >
+                  <Link href="/versicherungen" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Versicherungen")}>
                     Versicherungen
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/banking"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Banking")}
-                  >
+                  <Link href="/banking" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Banking")}>
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/tierversicherungen"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Tierversicherung")}
-                  >
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Tierversicherung")}>
                     Tierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/trading"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Trading")}
-                  >
+                  <Link href="/trading" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Trading")}>
                     Trading
                   </Link>
                 </li>
@@ -684,38 +883,22 @@ export default function Tierversicherungen() {
               <h6 className="font-semibold mb-2 sm:mb-4">Unternehmen</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link
-                    href="/ueber-uns"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Über uns")}
-                  >
+                  <Link href="/ueber-uns" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Über uns")}>
                     Über uns
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/partnerprogramme"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Partnerprogramme")}
-                  >
+                  <Link href="/partnerprogramme" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Partnerprogramme")}>
                     Partnerprogramme
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/karriere"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Karriere")}
-                  >
+                  <Link href="/karriere" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Karriere")}>
                     Karriere
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/kontakt"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Kontakt")}
-                  >
+                  <Link href="/kontakt" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Kontakt")}>
                     Kontakt
                   </Link>
                 </li>
@@ -725,38 +908,22 @@ export default function Tierversicherungen() {
               <h6 className="font-semibold mb-2 sm:mb-4">Rechtliches</h6>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link
-                    href="/datenschutz"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Datenschutz")}
-                  >
+                  <Link href="/datenschutz" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Datenschutz")}>
                     Datenschutz
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/impressum"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Impressum")}
-                  >
+                  <Link href="/impressum" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Impressum")}>
                     Impressum
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/agb"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer AGB")}
-                  >
+                  <Link href="/agb" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer AGB")}>
                     AGB
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/cookie-richtlinie"
-                    className="hover:text-white transition-colors"
-                    onClick={() => console.log("Clicked Footer Cookie-Richtlinie")}
-                  >
+                  <Link href="/cookie-richtlinie" className="hover:text-white transition-colors" onClick={() => console.log("Clicked Footer Cookie-Richtlinie")}>
                     Cookie-Richtlinie
                   </Link>
                 </li>
