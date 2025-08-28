@@ -373,7 +373,7 @@ export default function Tierversicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung 2025: Hundeversicherung & Katzenversicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte **Hundeversicherung**, **Katzenversicherung** oder **Tierkrankenversicherung** mit unserem **Tierversicherung Vergleich**. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt. Unsere Anbieter bieten **Hundehaftpflichtversicherung** und **Tierarztkosten Versicherung** für umfassenden Schutz Ihres Haustiers.
+              Finden Sie die perfekte Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt. Unsere Anbieter bieten **Hundehaftpflichtversicherung** und **Tierarztkosten Versicherung** für umfassenden Schutz Ihres Haustiers.
             </p>
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Jetzt Tierversicherungen vergleichen
@@ -393,7 +393,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren **Tierversicherung Vergleich**, um **günstige Tierversicherungen** für Hunde, Katzen oder Pferde zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.
+                  Nutzen Sie unseren Tierversicherung Vergleich, um günstige Tierversicherungen für Hunde, Katzen oder Pferde zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -403,7 +403,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf **Kostenübernahme für Tierarztkosten**, Operationen und Vorsorge. Anbieter wie Petprotect, Santevet und Uelzener bieten bis zu 100% Erstattung für **Hunde OP Versicherung** und **Katzenkrankenversicherung**.
+                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Petprotect, Santevet und Uelzener bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
                 </p>
               </CardContent>
             </Card>
@@ -413,7 +413,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder Handelsblatt Testsieger (Uelzener, CHECK24) helfen, vertrauenswürdige Anbieter für **Hundeversicherung** und **Katzenversicherung** zu finden.
+                  Kundenbewertungen wie Trustpilot (Petprotect 4,65/5) oder Handelsblatt Testsieger (Uelzener, CHECK24) helfen, vertrauenswürdige Anbieter für Hundeversicherung und Katzenversicherung zu finden.
                 </p>
               </CardContent>
             </Card>
@@ -496,12 +496,12 @@ export default function Tierversicherungen() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 mb-4">
-                    Die Kosten für eine **Hundehaftpflichtversicherung** variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten **günstige Hundeversicherungen** mit hoher Deckung.
+                    Die Kosten für eine Hundehaftpflichtversicherung variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten günstige Hundeversicherungen mit hoher Deckung.
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
                     <p className="text-sm text-green-700">
-                      Mit einem **Tierversicherung Vergleich** sparen Sie bis zu 300€ jährlich. Nutzen Sie Testsieger wie Tarifcheck oder CHECK24 für die beste **Hundehaftpflichtversicherung**.
+                      Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich. Nutzen Sie Testsieger wie Tarifcheck oder CHECK24 für die beste Hundehaftpflichtversicherung.
                     </p>
                   </div>
                 </CardContent>
@@ -557,7 +557,7 @@ export default function Tierversicherungen() {
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Grundschutz</h5>
                   <p className="text-sm text-gray-600">
-                    **Katzenkrankenversicherung** und **Hunde OP Versicherung** ab 12€/Monat (z. B. Lassie). Deckt Tierarztkosten für Krankheiten und Unfälle.
+                    Katzenkrankenversicherung und Hunde OP Versicherung ab 12€/Monat (z. B. Lassie). Deckt Tierarztkosten für Krankheiten und Unfälle.
                   </p>
                 </div>
                 <div>
@@ -664,7 +664,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen **Tierversicherung Vergleich** von über 250 Tarifen für **Hundeversicherung** und **Katzenversicherung**.
+                  Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung.
                 </p>
               </CardContent>
             </Card>
@@ -677,7 +677,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für **Hundehaftpflichtversicherung** oder **Tierkrankenversicherung** zu erhalten.
+                  Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten.
                 </p>
               </CardContent>
             </Card>
@@ -690,7 +690,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Vergleichen Sie Leistungen wie **Tierarztkosten Versicherung**, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Petprotect oder Uelzener.
+                  Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Petprotect oder Uelzener.
                 </p>
               </CardContent>
             </Card>
@@ -703,7 +703,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Schließen Sie Ihre **günstige Tierversicherung** online ab und erhalten Sie den Versicherungsschein sofort per E-Mail.
+                  Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail.
                 </p>
               </CardContent>
             </Card>
@@ -714,19 +714,19 @@ export default function Tierversicherungen() {
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Ist eine Hundehaftpflichtversicherung Pflicht?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die **Hundehaftpflichtversicherung** Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.
+                  In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die Hundehaftpflichtversicherung Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Eine **Tierkrankenversicherung** deckt **Tierarztkosten** für Krankheiten, Operationen und Vorsorge. Anbieter wie Petprotect bieten bis zu 100% Erstattung.
+                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Petprotect bieten bis zu 100% Erstattung.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Kann ich online kündigen?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Ja, die meisten **Hundeversicherungen** und **Katzenversicherungen** können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).
+                  Ja, die meisten Hundeversicherungen und Katzenversicherungen können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).
                 </p>
               </div>
               <div>
@@ -746,7 +746,7 @@ export default function Tierversicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h2>
           <div className="mb-8 text-center">
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Ein Wechsel der **Hundeversicherung** oder **Katzenversicherung** kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren **Tierversicherung Vergleich**, um die **beste Tierversicherung 2025** zu finden.
+              Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
             </p>
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
@@ -811,7 +811,7 @@ export default function Tierversicherungen() {
                 <ul className="text-sm space-y-1">
                   <li>• Kündigungsfrist der alten Versicherung</li>
                   <li>• Vergleichbare Leistungen im neuen Tarif</li>
-                  <li>• Wartezeiten bei **Tierkrankenversicherung**</li>
+                  <li>• Wartezeiten bei Tierkrankenversicherung</li>
                   <li>• Laufende Behandlungen oder Schäden</li>
                 </ul>
               </div>
