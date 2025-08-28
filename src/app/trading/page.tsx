@@ -28,7 +28,30 @@ const providerData = {
       price: "0€ Kommission",
       bonus: "Kostenlose Kontoeröffnung",
       logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc"
+      url: "https://link-pso.xtb.com/pso/lMDhc",
+      metaTitle: "XTB Trading: Testsieger CFD-Broker 2024/25",
+      metaDescription: "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!"
+    },
+    {
+      name: "LYNX",
+      rating: 4.7,
+      features: [
+        "Zugang zu über 100 Märkten in 30+ Ländern",
+        "Handel mit US- und Eurex-Optionen",
+        "TWS Handelsplattform mit TradingView-Charts",
+        "Stop-Loss & Trailing-Stop Orders für alle Produkte",
+        "Zinsen durch Aktienverleih",
+        "Optionsprämien durch Verkauf von Optionen",
+        "24/7 Kundensupport und Premium-Newsletter",
+        "Maximale Individualisierung für Profi-Trader",
+        "Reguliert durch BaFin für sicheres Trading"
+      ],
+      price: "ab 5,80€/Order",
+      bonus: "Kostenloses Demo-Konto",
+      logo: "💹",
+      url: "https://www.lynxbroker.de/",
+      metaTitle: "LYNX Trading: Professionelle Handelsplattform für Anleger",
+      metaDescription: "LYNX bietet Zugang zu über 100 Märkten, TWS Plattform mit TradingView-Charts und Optionenhandel. Jetzt Depot eröffnen und professionell traden!"
     },
     {
       name: "Kraken",
@@ -46,7 +69,9 @@ const providerData = {
       price: "0,16% Maker Fee",
       bonus: "Wöchentliche Staking-Rewards",
       logo: "🐙",
-      url: "https://www.kraken.com/de-de"
+      url: "https://www.kraken.com/de-de",
+      metaTitle: "Kraken Trading: Sichere Krypto-Plattform für Deutschland",
+      metaDescription: "Kraken bietet über 480 Kryptowährungen, niedrige Gebühren und wöchentliche Staking-Rewards. Jetzt sicher traden!"
     },
     {
       name: "Bybit",
@@ -64,7 +89,9 @@ const providerData = {
       price: "0,1% Taker Fee",
       bonus: "Willkommensbonus bis zu 5.000 USDT",
       logo: "⚡",
-      url: "/anbieter/bybit"
+      url: "/anbieter/bybit",
+      metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage",
+      metaDescription: "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!"
     },
     {
       name: "eToro",
@@ -82,7 +109,9 @@ const providerData = {
       price: "1% Spread",
       bonus: "Kostenloses Demo-Konto",
       logo: "🌐",
-      url: "https://www.etoro.com/de/"
+      url: "https://www.etoro.com/de/",
+      metaTitle: "eToro Trading: Social Trading für Krypto und Aktien",
+      metaDescription: "eToro bietet Social Trading, über 70 Kryptowährungen und 3.000+ Aktien/ETFs. Jetzt mit kostenlosem Demo-Konto starten!"
     }
   ]
 }
@@ -117,7 +146,7 @@ export default function Trading() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://link-pso.xtb.com/pso/lMDhc", "_blank")}>
               Vergleich starten
             </Button>
             <button
@@ -168,7 +197,7 @@ export default function Trading() {
               >
                 Kundenbewertungen
               </Link>
-              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://link-pso.xtb.com/pso/lMDhc", "_blank")}>
                 Vergleich starten
               </Button>
             </nav>
@@ -191,7 +220,7 @@ export default function Trading() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihre Reise zum erfolgreichen Trading</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Entdecken Sie die besten Trading-Plattformen für Krypto, CFDs und Aktien. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Starten Sie mit unseren Testsiegern wie XTB und sparen Sie bis zu 0% Kommission!
+              Entdecken Sie die besten Trading-Plattformen für Krypto, CFDs und Aktien. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Starten Sie mit unseren Testsiegern wie XTB und LYNX und profitieren Sie von 0% Kommission oder professionellen Tools!
             </p>
           </div>
         </div>
@@ -208,7 +237,7 @@ export default function Trading() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei XTB oder 0,1% Taker Fee bei Bybit, um Ihre Trading-Kosten zu minimieren.
+                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei XTB oder ab 5,80€/Order bei LYNX, um Ihre Trading-Kosten zu minimieren.
                 </p>
               </CardContent>
             </Card>
@@ -218,7 +247,7 @@ export default function Trading() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Wählen Sie regulierte Plattformen wie eToro (BaFin, CySec) oder Kraken (Bermuda Monetary Authority) für sicheres Trading.
+                  Wählen Sie regulierte Plattformen wie LYNX (BaFin), eToro (BaFin, CySec) oder Kraken (Bermuda Monetary Authority) für sicheres Trading.
                 </p>
               </CardContent>
             </Card>
@@ -228,7 +257,7 @@ export default function Trading() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Testen Sie Plattformen wie XTB oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren.
+                  Testen Sie Plattformen wie XTB, LYNX oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren.
                 </p>
               </CardContent>
             </Card>
@@ -243,8 +272,10 @@ export default function Trading() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.trading.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {index === 0 && (
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+                {(provider.name === "XTB" || provider.name === "LYNX") && (
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
+                    {provider.name === "XTB" ? "Top Empfehlung" : "2. Top Empfehlung"}
+                  </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
