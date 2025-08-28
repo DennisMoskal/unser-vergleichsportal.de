@@ -65,6 +65,24 @@ const providerData = [
     url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref="
   },
   {
+    name: "AXA",
+    rating: 4.4,
+    features: [
+      "Beste Privathaftpflichtversicherung mit Rundumschutz",
+      "Hausratversicherung für Einbruch, Brand und Sturm",
+      "Kfz-Versicherung Vergleich 2025 mit Top-Leistungen",
+      "Krankenhauszusatzversicherung ab 10,17€/Monat",
+      "24/7 Online-Schadenmeldung und Kundenservice",
+      "My AXA Kundenportal für einfache Verwaltung",
+      "Flexible Tarifrechner für individuelle Angebote",
+      "Persönliche Beratung deutschlandweit"
+    ],
+    price: "ab 10,17€/Monat",
+    bonus: "Exklusives Smartphone-Gewinnspiel",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2408461&clickref="
+  },
+  {
     name: "finanzcheck.pro",
     rating: 4.6,
     features: [
@@ -223,7 +241,7 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck.de, InShared und CHECK24 bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck.de, InShared, AXA und CHECK24 bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -257,7 +275,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Unsere Anbieter wie Tarifcheck.de, InShared und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
+                  Unsere Anbieter wie Tarifcheck.de, InShared, AXA und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
                 </p>
               </CardContent>
             </Card>
