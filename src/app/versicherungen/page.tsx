@@ -27,24 +27,40 @@ const providerData = [
     url: "https://www.tarifcheck.de/girokonto/"
   },
   {
-    name: "eRecht24",
-    rating: 4.3,
+    name: "AXA",
+    rating: 4.4,
     features: [
-      "Rechtssicherheit für Webseiten und Versicherungsverträge",
-      "DSGVO-konforme Rechtstexte für Versicherungsanbieter",
-      "Automatische Rechtstext-Generatoren für Impressum und Datenschutz",
-      "Abmahnschutz für Affiliate- und Vergleichsportale",
-      "Kostenlose Erstberatung zu rechtlichen Fragen",
-      "NEU: KI-gestützte Lösungen für Versicherungs-Compliance",
-      "Live-Webinare zu Internetrecht und Verbraucherschutz",
-      "Muster-Verträge für Versicherungs- und Finanzprodukte",
-      "Zentraler Projekt Manager für rechtliche Dokumente",
-      "Über 200.000 Nutzer vertrauen eRecht24"
+      "Beste Privathaftpflichtversicherung mit Rundumschutz",
+      "Hausratversicherung für Einbruch, Brand und Sturm",
+      "Kfz-Versicherung Vergleich 2025 mit Top-Leistungen",
+      "Krankenhauszusatzversicherung ab 10,17€/Monat",
+      "24/7 Online-Schadenmeldung und Kundenservice",
+      "My AXA Kundenportal für einfache Verwaltung",
+      "Flexible Tarifrechner für individuelle Angebote",
+      "Persönliche Beratung deutschlandweit"
     ],
-    price: "ab 20€/Monat",
-    bonus: "Gratis Rechtscheck",
-    logo: "⚖️",
-    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
+    price: "ab 10,17€/Monat",
+    bonus: "Exklusives Smartphone-Gewinnspiel",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2408461&clickref="
+  },
+  {
+    name: "BavariaDirekt",
+    rating: 4.5,
+    features: [
+      "Günstige Kfz-Versicherung ab 9,70€/Monat",
+      "Beste Haftpflichtversicherung mit bis zu 50 Mio. € Deckung",
+      "Hausratversicherung online ab 8,52€/Jahr",
+      "Hunde-Haftpflicht günstig ab 23,13€/Jahr",
+      "Rechtsschutz mit kostenloser Erstberatung",
+      "24h-Notfall-Hotline für schnellen Service",
+      "91% Kundenzufriedenheit und hohe Weiterempfehlung",
+      "Auszeichnung als 'Fairer Versicherer' (Focus Money)"
+    ],
+    price: "ab 3,38€/Monat",
+    bonus: "10% Treue-Rabatt nach 5 Jahren",
+    logo: "🔒",
+    url: "https://www.awin1.com/awclick.php?gid=355336&mid=13884&awinaffid=2524533&linkid=3445067&clickref="
   },
   {
     name: "InShared",
@@ -65,22 +81,24 @@ const providerData = [
     url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref="
   },
   {
-    name: "AXA",
-    rating: 4.4,
+    name: "eRecht24",
+    rating: 4.3,
     features: [
-      "Beste Privathaftpflichtversicherung mit Rundumschutz",
-      "Hausratversicherung für Einbruch, Brand und Sturm",
-      "Kfz-Versicherung Vergleich 2025 mit Top-Leistungen",
-      "Krankenhauszusatzversicherung ab 10,17€/Monat",
-      "24/7 Online-Schadenmeldung und Kundenservice",
-      "My AXA Kundenportal für einfache Verwaltung",
-      "Flexible Tarifrechner für individuelle Angebote",
-      "Persönliche Beratung deutschlandweit"
+      "Rechtssicherheit für Webseiten und Versicherungsverträge",
+      "DSGVO-konforme Rechtstexte für Versicherungsanbieter",
+      "Automatische Rechtstext-Generatoren für Impressum und Datenschutz",
+      "Abmahnschutz für Affiliate- und Vergleichsportale",
+      "Kostenlose Erstberatung zu rechtlichen Fragen",
+      "NEU: KI-gestützte Lösungen für Versicherungs-Compliance",
+      "Live-Webinare zu Internetrecht und Verbraucherschutz",
+      "Muster-Verträge für Versicherungs- und Finanzprodukte",
+      "Zentraler Projekt Manager für rechtliche Dokumente",
+      "Über 200.000 Nutzer vertrauen eRecht24"
     ],
-    price: "ab 10,17€/Monat",
-    bonus: "Exklusives Smartphone-Gewinnspiel",
-    logo: "🛡️",
-    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2408461&clickref="
+    price: "ab 20€/Monat",
+    bonus: "Gratis Rechtscheck",
+    logo: "⚖️",
+    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
   },
   {
     name: "finanzcheck.pro",
@@ -241,7 +259,7 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck.de, InShared, AXA und CHECK24 bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck.de, AXA, BavariaDirekt und CHECK24 bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -275,7 +293,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Unsere Anbieter wie Tarifcheck.de, InShared, AXA und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
+                  Unsere Anbieter wie Tarifcheck.de, AXA, BavariaDirekt und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
                 </p>
               </CardContent>
             </Card>
@@ -529,7 +547,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie Vergleichsportale wie CHECK24 oder Tarifcheck.de für einen 
+                  Nutzen Sie Vergleichsportale wie CHECK24, Tarifcheck.de oder BavariaDirekt für einen 
                   kostenlosen Versicherungsvergleich von über 300 Tarifen.
                 </p>
               </CardContent>
