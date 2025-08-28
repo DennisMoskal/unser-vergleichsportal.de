@@ -54,6 +54,27 @@ const providerData = {
       metaDescription: "LYNX bietet Zugang zu über 100 Märkten, TWS Plattform mit TradingView-Charts und Optionenhandel. Jetzt Depot eröffnen und professionell traden!"
     },
     {
+      name: "WEEX",
+      rating: 4.6,
+      features: [
+        "Über 1.700 Handelspaare für Kryptowährungen",
+        "Bis zu 400x Leverage für Futures-Trading",
+        "1.000 BTC Schutzfonds für maximale Sicherheit",
+        "Durchschnittliches tägliches Handelsvolumen von 8,71 Mrd. USD",
+        "Bis zu 450.000 Transaktionen pro Sekunde",
+        "Verfügbar in über 130 Ländern weltweit",
+        "Regulierte Plattform mit globalen Lizenzen",
+        "5% Coupon bei Einzahlung für neue Nutzer",
+        "24/7 Kundensupport und benutzerfreundliche Oberfläche"
+      ],
+      price: "0,1% Taker Fee",
+      bonus: "5% Einzahlungs-Coupon",
+      logo: "🔒",
+      url: "https://weex.com/register?vipCode=0pika",
+      metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
+      metaDescription: "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!"
+    },
+    {
       name: "Kraken",
       rating: 4.6,
       features: [
@@ -127,7 +148,7 @@ export default function Trading() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Beste Trading-Plattformen 2025 | SmartFinanz",
-          "description": "Vergleichen Sie die besten Trading-Plattformen für Krypto, CFDs und Aktien. Finden Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni mit Testsiegern wie XTB und LYNX.",
+          "description": "Vergleichen Sie die besten Trading-Plattformen für Krypto, CFDs und Aktien. Finden Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni mit Testsiegern wie XTB, LYNX und WEEX.",
           "url": "https://www.smartfinanz.de/trading",
           "mainEntity": {
             "@type": "ItemList",
@@ -253,7 +274,7 @@ export default function Trading() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Trading-Plattformen 2025: Ihr Weg zum Erfolg</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Entdecken Sie die besten Trading-Plattformen für Krypto, CFDs, Aktien und ETFs. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger wie XTB und LYNX bieten 0% Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise zum erfolgreichen Trading!
+              Entdecken Sie die besten Trading-Plattformen für Krypto, CFDs, Aktien und ETFs. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger wie XTB, LYNX und WEEX bieten 0% Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise zum erfolgreichen Trading!
             </p>
             <Button className="bg-white text-green-600 hover:bg-gray-100">
               <Link href="#anbieter">Jetzt vergleichen</Link>
@@ -308,9 +329,9 @@ export default function Trading() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.trading.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "XTB" || provider.name === "LYNX") && (
+                {(provider.name === "XTB" || provider.name === "LYNX" || provider.name === "WEEX") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "XTB" ? "Top Empfehlung" : "2. Top Empfehlung"}
+                    {provider.name === "XTB" ? "Top Empfehlung" : provider.name === "LYNX" ? "2. Top Empfehlung" : "3. Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -439,7 +460,7 @@ export default function Trading() {
               Viele Plattformen wie Kraken (Krypto-Akademie) oder eToro (eToro-Akademie) bieten Lernmaterialien für Einsteiger und Profis. Nutzen Sie diese, um Ihre Trading-Fähigkeiten zu verbessern.
             </p>
             <p className="text-gray-600 mb-4">
-              <strong>Fazit:</strong> Die besten Trading-Plattformen 2025 wie XTB, LYNX und Kraken bieten eine Kombination aus niedrigen Gebühren, hoher Sicherheit und benutzerfreundlichen Tools. Vergleichen Sie jetzt unsere Testsieger und starten Sie Ihre Trading-Reise!
+              <strong>Fazit:</strong> Die besten Trading-Plattformen 2025 wie XTB, LYNX und WEEX bieten eine Kombination aus niedrigen Gebühren, hoher Sicherheit und benutzerfreundlichen Tools. Vergleichen Sie jetzt unsere Testsieger und starten Sie Ihre Trading-Reise!
             </p>
             <Button className="bg-green-600 hover:bg-green-700 text-white">
               <Link href="#anbieter">Testsieger vergleichen</Link>
