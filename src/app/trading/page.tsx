@@ -448,22 +448,6 @@ export default function Trading() {
         </div>
       </section>
 
-      {/* Author Bio for E-E-A-T */}
-      <section className="py-8 sm:py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <Card className="bg-white border-2">
-            <CardHeader>
-              <CardTitle className="text-lg font-bold">Über den Autor</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-600">
-                Max Mustermann ist ein Finanzexperte mit über 10 Jahren Erfahrung im Bereich Trading und Investitionen. Als zertifizierter Finanzberater (CFA) hat er zahlreiche Artikel und Leitfäden zu Krypto-, CFD- und Aktienhandel veröffentlicht. Seine Analysen basieren auf fundierten Marktkenntnissen und praktischer Erfahrung.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Zurück zur Startseite */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
