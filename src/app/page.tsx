@@ -502,41 +502,80 @@ export default function Home() {
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h3>
 
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                name: "Tarifcheck.de",
+                name: "GVV",
+                rating: 4.8,
+                features: [
+                  "24/7 Support",
+                  "Online-Abschluss",
+                  "Sofortschutz"
+                ],
+                price: "ab 12€/Monat",
+                bonus: "3 Monate kostenlos",
+                logo: "🛡️",
+                url: "https://www.gvv.de/"
+              },
+              {
+                name: "DA-Direkt",
+                rating: 4.6,
+                features: [
+                  "Telefonberatung",
+                  "Schnelle Abwicklung",
+                  "Flexible Tarife"
+                ],
+                price: "ab 15€/Monat",
+                bonus: "Willkommensbonus",
+                logo: "🚗",
+                url: "https://www.da-direkt.de/"
+              },
+              {
+                name: "Münchener Verein",
+                rating: 4.7,
+                features: [
+                  "Traditionsunternehmen",
+                  "Persönliche Beratung",
+                  "Umfassender Schutz"
+                ],
+                price: "ab 18€/Monat",
+                bonus: "Familienrabatt",
+                logo: "🏛️",
+                url: "https://www.muenchener-verein.de/"
+              },
+              {
+                name: "Maxcare",
                 rating: 4.5,
                 features: [
-                  "Über 20 Jahre Erfahrung als Vergleichsportal",
-                  "100% kostenloser und unverbindlicher Vergleich",
-                  "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-                  "Mehrfach ausgezeichnet mit 'sehr gut'",
-                  "eKomi Silber Siegel mit 4,5/5 Sternen",
-                  "Über 3.194 Kundenbewertungen",
-                  "Deutschlands drittgrößtes Vergleichsportal",
-                  "Vertrauen von Millionen Verbrauchern",
-                  "Bis zu 1.000€ jährlich sparen möglich"
+                  "Digitale Services",
+                  "Günstige Prämien",
+                  "Schnelle Regulierung"
                 ],
-                price: "100% kostenlos",
-                bonus: "Bis zu 120€ Neukundenbonus",
-                logo: "🏆",
-                url: "https://www.tarifcheck.de/girokonto/"
+                price: "ab 14€/Monat",
+                bonus: "Online-Rabatt",
+                logo: "💊",
+                url: "https://www.maxcare.de/"
+              },
+              {
+                name: "Tarifcheck",
+                rating: 4.4,
+                features: [
+                  "Vergleichsportal",
+                  "Viele Anbieter",
+                  "Transparente Preise"
+                ],
+                price: "ab 10€/Monat",
+                bonus: "Cashback",
+                logo: "💰",
+                url: "https://www.tarifcheck.de/"
               },
               {
                 name: "eRecht24",
                 rating: 4.3,
                 features: [
-                  "Rechtssicherheit für Webseiten",
-                  "DSGVO-konform mit Premium Tools",
-                  "Automatische Rechtstext-Generatoren",
-                  "Abmahnschutz inklusive",
-                  "Praxis-Tools für Social Media",
-                  "Kostenlose Erstberatung",
-                  "NEU: KI-gestützte Lösungen",
-                  "Zentraler Projekt Manager",
-                  "Live-Webinare zu Internetrecht",
-                  "Muster-Verträge & Checklisten"
+                  "Rechtssicherheit",
+                  "DSGVO-konform",
+                  "Beratung inklusive"
                 ],
                 price: "ab 20€/Monat",
                 bonus: "Gratis Rechtscheck",
@@ -544,124 +583,55 @@ export default function Home() {
                 url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
               },
               {
-                name: "XTB",
+                name: "BavariaDirekt",
                 rating: 4.5,
                 features: [
-                  "Gratis Aktie für neue Investoren",
-                  "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-                  "Über 8000 Aktien & ETFs",
-                  "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-                  "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-                  "eWallet mit virtueller Mastercard",
-                  "Smarte ETF-Sparpläne",
-                  "0% Kommission bis 100.000€ Umsatz",
-                  "Kostenlose Ein- & Auszahlungen",
-                  "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-                  "Platz 1 CFD-Broker 2024/25"
+                  "Regional stark",
+                  "Persönlicher Service",
+                  "Faire Preise"
                 ],
-                price: "0€ Kommission",
-                bonus: "Demo-Konto",
-                logo: "📊",
-                url: "https://link-pso.xtb.com/pso/lMDhc"
-              },
-              {
-                name: "Credimaxx",
-                rating: 4.9,
-                features: [
-                  "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-                  "Sofortvermittlung durch erfahrene Kreditprofis",
-                  "Digitaler Abschluss mit WebID oder VideoIdent",
-                  "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-                  "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-                  "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-                  "Vermittlung in bis zu 1 Minute",
-                  "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-                  "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-                  "25 Jahre Erfahrung in der Kreditvermittlung"
-                ],
-                price: "ab 10,99% eff. Zins p.a.",
-                bonus: "Schnelle Auszahlung",
-                logo: "💳",
-                url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
-              },
-              {
-                name: "HanseMerkur",
-                rating: 4.7,
-                features: [
-                  "Umfassender Schutz für Hunde und Katzen",
-                  "Bis zu 100% Kostenerstattung",
-                  "Freie Tierarztwahl",
-                  "Keine Altersbeschränkung",
-                  "Schnelle Schadensbearbeitung",
-                  "Flexible Tarifoptionen",
-                  "Zusatzleistungen wie Physiotherapie",
-                  "Online-Vertragsmanagement",
-                  "24/7 Kundenhotline"
-                ],
-                price: "ab 10€/Monat",
-                bonus: "Kostenloser Gesundheitscheck",
-                logo: "🐾",
-                url: "https://www.hansemerkur.de/tierkrankenversicherung"
-              },
-              {
-                name: "CHECK24",
-                rating: 4.8,
-                features: [
-                  "Kostenloser Kontowechselservice",
-                  "Über 50 Banken im Vergleich",
-                  "Bis zu 250€ Willkommensbonus",
-                  "Kostenlose Kontoführung",
-                  "Schnelle Kontoeröffnung",
-                  "TÜV-geprüfter Vergleich",
-                  "24/7 Kundensupport",
-                  "Mobile Banking App",
-                  "Kreditkartenoptionen verfügbar",
-                  "Attraktive Zinsen auf Tagesgeld"
-                ],
-                price: "0€ Kontoführung",
-                bonus: "Bis zu 250€ Bonus",
-                logo: "🏦",
-                url: "https://www.check24.de/girokonto/"
+                price: "ab 16€/Monat",
+                bonus: "Treuebonus",
+                logo: "🍺",
+                url: "https://www.bavariadirekt.de/"
               }
             ].map((provider, index) => (
-              <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
-                <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
+              <Card key={provider.name} className="relative hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full">
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
                   Top Empfehlung
                 </Badge>
-                <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
+                <CardHeader className="text-center pb-2 sm:pb-4">
                   <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
                   <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
                       />
                     ))}
                     <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
                   </div>
                 </CardHeader>
-                <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
-                  <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
+                <CardContent className="flex flex-col flex-1 p-4 sm:p-6">
+                  <div className="text-center border-b pb-2 sm:pb-4 mb-3 sm:mb-4">
                     <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
                     <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
                       {provider.bonus}
                     </Badge>
                   </div>
-                  <div className="flex-grow overflow-hidden">
-                    <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{scrollbarWidth: 'thin'}}>
-                      <ul className="space-y-1.5">
-                        {provider.features.map((feature, i) => (
-                          <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
-                            <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" />
-                            <span className="break-words overflow-wrap-anywhere">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="flex-1 overflow-hidden">
+                    <ul className="space-y-1.5">
+                      {provider.features.map((feature, i) => (
+                        <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
+                          <Check className="mr-2 h-3 w-3 sm:h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span className="break-words overflow-wrap-anywhere">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
-                    <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-4">
                       Zum Anbieter*
                     </Button>
                   </a>
@@ -671,11 +641,6 @@ export default function Home() {
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
             <p>
-              CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
-              72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
-              Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
-            </p>
-            <p className="mt-4">
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
             </p>
           </div>
