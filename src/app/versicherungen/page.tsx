@@ -266,7 +266,7 @@ export default function Versicherungen() {
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(index === 0 || index === 1) && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {index === 0 ? "Top Empfehlung" : "2. Top Empfehlung"}
+                    {index === 0 ? "Top Empfehlung" : "Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
