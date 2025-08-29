@@ -1,3 +1,4 @@
+```typescript
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -87,6 +88,26 @@ const providerData = [
     url: "https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=",
     metaTitle: "BavariaDirekt Hundehaftpflicht: Günstige Absicherung für Ihren Hund",
     metaDescription: "BavariaDirekt bietet günstige Hundehaftpflicht ab 23,13€/Jahr mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen und Welpen kostenfrei mitversichern!"
+  },
+  {
+    name: "HanseMerkur Tierversicherung",
+    rating: 4.6,
+    features: [
+      "Testsieger Tierkrankenversicherung (AssCompact Trends 2/2025)",
+      "Hundehaftpflicht ab 3,36€/Monat für kleine Rassen",
+      "Bis zu 100% Kostenübernahme für Tierarztbehandlungen",
+      "Flexible Tarife: Smart, Easy, Best für OP-Versicherung",
+      "Optional Zahn-Baustein für erweiterten Schutz",
+      "Freie Tierarzt- und Klinikwahl weltweit",
+      "Ausgezeichnet als 'Fairster Tierversicherer' (Focus Money 2025)",
+      "Schnelle Schadenbearbeitung und Online-Abschluss"
+    ],
+    price: "ab 3,36€/Monat",
+    bonus: "Rundum-Schutz für Hunde und Katzen",
+    logo: "🐾",
+    url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
+    metaTitle: "HanseMerkur Tierversicherung: Testsieger für Hunde und Katzen",
+    metaDescription: "HanseMerkur bietet preisgekrönte Hundeversicherung und Katzenversicherung ab 3,36€/Monat. Bis zu 100% Tierarztkosten-Erstattung. Jetzt vergleichen!"
   },
   {
     name: "AXA",
@@ -428,9 +449,14 @@ export default function Tierversicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung" || provider.name === "BavariaDirekt") && (
+                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung" || provider.name === "BavariaDirekt" || provider.name === "HanseMerkur Tierversicherung" || provider.name === "AXA") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : "4. Top Empfehlung"}
+                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : 
+                     provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : 
+                     provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : 
+                     provider.name === "BavariaDirekt" ? "4. Top Empfehlung" : 
+                     provider.name === "HanseMerkur Tierversicherung" ? "Testsieger Kostenübernahme" : 
+                     "Testsieger Hundehalterhaftpflicht"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -938,3 +964,4 @@ export default function Tierversicherungen() {
     </div>
   )
 }
+```
