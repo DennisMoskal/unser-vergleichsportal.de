@@ -451,9 +451,9 @@ export default function Tierversicherungen() {
                 {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung" || provider.name === "BavariaDirekt" || provider.name === "HanseMerkur Tierversicherung" || provider.name === "AXA") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
                     {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : 
-                     provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : 
-                     provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : 
-                     provider.name === "BavariaDirekt" ? "4. Top Empfehlung" : 
+                     provider.name === "CHECK24 Tierversicherung" ? "Top Empfehlung" : 
+                     provider.name === "Uelzener Tierversicherung" ? "Top Empfehlung" : 
+                     provider.name === "BavariaDirekt" ? "Top Empfehlung" : 
                      provider.name === "HanseMerkur Tierversicherung" ? "Top Kostenübernahme" : 
                      "Top Hundehalterhaftpflicht"}
                   </Badge>
