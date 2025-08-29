@@ -9,6 +9,42 @@ import Link from "next/link"
 
 const providerData = [
   {
+    name: "Tarifcheck.de",
+    rating: 4.5,
+    features: [
+      "Über 20 Jahre Erfahrung als Vergleichsportal",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Vergleich von über 300 Kfz-Versicherungstarifen",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 verifizierte Kundenbewertungen",
+      "Deutschlands drittgrößtes Vergleichsportal",
+      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.de/girokonto/"
+  },
+  {
+    name: "CHECK24",
+    rating: 4.7,
+    features: [
+      "Marktführer mit über 90% Marktabdeckung bei Kfz-Versicherungen",
+      "Über 25 Testsiege im Kfz-Versicherungsvergleich (Handelsblatt 09/2024)",
+      "Vergleich von über 330 Kfz-Versicherungstarifen",
+      "Nirgendwo-Günstiger-Garantie für beste Preise",
+      "Kostenlose Beratung durch 300 Versicherungsexperten (08:00–22:00 Uhr)",
+      "Über 98% Kundenzufriedenheit",
+      "Vermittlung von Versicherungen mit Provisionstransparenz",
+      "Zusätzliche Vergleiche für Strom, Gas und Reisen"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 100€ Cashback",
+    logo: "✅",
+    url: "https://www.check24.de/versicherungen/"
+  },
+  {
     name: "InShared",
     rating: 4.6,
     features: [
@@ -77,24 +113,6 @@ const providerData = [
     url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref="
   },
   {
-    name: "Tarifcheck.de",
-    rating: 4.5,
-    features: [
-      "Über 20 Jahre Erfahrung als Vergleichsportal",
-      "100% kostenloser und unverbindlicher Vergleich",
-      "Vergleich von über 300 Kfz-Versicherungstarifen",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
-      "eKomi Silber Siegel mit 4,5/5 Sternen",
-      "Über 3.194 verifizierte Kundenbewertungen",
-      "Deutschlands drittgrößtes Vergleichsportal",
-      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 120€ Neukundenbonus",
-    logo: "🏆",
-    url: "https://www.tarifcheck.de/girokonto/"
-  },
-  {
     name: "eRecht24",
     rating: 4.3,
     features: [
@@ -131,24 +149,6 @@ const providerData = [
     bonus: "Kostenlose Kreditanfrage",
     logo: "🔍",
     url: "/anbieter/finanzcheck-pro"
-  },
-  {
-    name: "CHECK24",
-    rating: 4.7,
-    features: [
-      "Marktführer mit über 90% Marktabdeckung bei Kfz-Versicherungen",
-      "Über 25 Testsiege im Kfz-Versicherungsvergleich (Handelsblatt 09/2024)",
-      "Vergleich von über 330 Kfz-Versicherungstarifen",
-      "Nirgendwo-Günstiger-Garantie für beste Preise",
-      "Kostenlose Beratung durch 300 Versicherungsexperten (08:00–22:00 Uhr)",
-      "Über 98% Kundenzufriedenheit",
-      "Vermittlung von Versicherungen mit Provisionstransparenz",
-      "Zusätzliche Vergleiche für Strom, Gas und Reisen"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 100€ Cashback",
-    logo: "✅",
-    url: "https://www.check24.de/versicherungen/"
   },
   {
     name: "Verivox",
@@ -332,10 +332,11 @@ export default function Versicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(index === 0 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>) ||
-                 (index === 1 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hausratversicherung</Badge>) ||
-                 (index === 2 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
-                 (index === 3 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>)}
+                {(index === 0 || index === 1) && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge> ||
+                 (index === 2 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>) ||
+                 (index === 3 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hausratversicherung</Badge>) ||
+                 (index === 4 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
+                 (index === 5 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>)}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
@@ -364,10 +365,10 @@ export default function Versicherungen() {
                   </ul>
                   <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                      {index === 0 ? "Die Versicherungen von InShared: einfach, schnell, smart. Jetzt Beitrag berechnen!" : 
-                       index === 1 ? "Entdecken Sie die zuverlässige und preiswerte Hausrat-Versicherung von AXA: Für jeden ein individuelles Angebot! Jetzt zu AXA!" :
-                       index === 2 ? "BavariaDirekt: Jetzt Ihre günstige Kfz-Versicherung berechnen" :
-                       index === 3 ? "HanseMerkur Zahnzusatzversicherung" : "Zum Anbieter*"}
+                      {index === 2 ? "Die Versicherungen von InShared: einfach, schnell, smart. Jetzt Beitrag berechnen!" : 
+                       index === 3 ? "Entdecken Sie die zuverlässige und preiswerte Hausrat-Versicherung von AXA: Für jeden ein individuelles Angebot! Jetzt zu AXA!" :
+                       index === 4 ? "BavariaDirekt: Jetzt Ihre günstige Kfz-Versicherung berechnen" :
+                       index === 5 ? "HanseMerkur Zahnzusatzversicherung" : "Zum Anbieter*"}
                     </Button>
                   </Link>
                 </CardContent>
