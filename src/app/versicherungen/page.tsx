@@ -9,6 +9,74 @@ import Link from "next/link"
 
 const providerData = [
   {
+    name: "InShared",
+    rating: 4.6,
+    features: [
+      "Günstige Autoversicherung mit Top-Preisen",
+      "Geld-zurück-Garantie bei weniger Schäden",
+      "24/7 Notfallservice für schnelle Hilfe",
+      "Einfacher und digitaler Vertragsabschluss",
+      "Transparente Beitragsberechnung online",
+      "Partnerschaften mit Roland Assistance und Carglass",
+      "Kfz-Versicherung vergleichen und sparen"
+    ],
+    price: "ab 9,90€/Monat",
+    bonus: "Geld-zurück-Garantie",
+    logo: "🚗",
+    url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref="
+  },
+  {
+    name: "AXA",
+    rating: 4.5,
+    features: [
+      "Individueller Schutz für Hausrat und Eigentum",
+      "Leistungsstarke Tarife nach Ihren Bedürfnissen",
+      "Inklusive Smart Home Basisabsicherung",
+      "Schnelle Schadenmeldung online oder telefonisch",
+      "Kundenservice rund um die Uhr verfügbar",
+      "Tarifrechner für maßgeschneiderte Angebote",
+      "Testsieger bei Stiftung Warentest (2024)"
+    ],
+    price: "ab 8,52€/Jahr",
+    bonus: "Kostenloser Tarifrechner",
+    logo: "🏠",
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref="
+  },
+  {
+    name: "BavariaDirekt",
+    rating: 4.5,
+    features: [
+      "Günstige Kfz-Versicherung ab 9,70€/Monat",
+      "Bis zu 350€ Ersparnis beim Vergleich",
+      "91% Weiterempfehlungsrate von Kunden",
+      "24h Notfall-Hotline für schnelle Unterstützung",
+      "Schufa-neutrale Tarifberechnung",
+      "Einfacher Online-Abschluss in 3 Minuten",
+      "Ausgezeichnet als 'Fairer Versicherer' (Focus Money)"
+    ],
+    price: "ab 9,70€/Monat",
+    bonus: "Bis zu 350€ Ersparnis",
+    logo: "🚘",
+    url: "https://www.awin1.com/awclick.php?gid=355334&mid=13884&awinaffid=2524533&linkid=2322280&clickref="
+  },
+  {
+    name: "HanseMerkur",
+    rating: 4.7,
+    features: [
+      "Zahnzusatzversicherung ohne Wartezeit",
+      "Bis zu 100% Kostenerstattung für Zahnersatz",
+      "SEHR GUT bei Stiftung Warentest (07/2025)",
+      "Tarife für Vorsorge und Implantate",
+      "Neue ServiceApp für einfache Verwaltung",
+      "150 Jahre Erfahrung und Kundennähe",
+      "Ausgezeichnet als fairster Tierversicherer"
+    ],
+    price: "ab 5€/Monat",
+    bonus: "Kostenlose Erstberatung",
+    logo: "🦷",
+    url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref="
+  },
+  {
     name: "Tarifcheck.de",
     rating: 4.5,
     features: [
@@ -213,7 +281,7 @@ export default function Versicherungen() {
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
               Jetzt Versicherungen vergleichen
-            </Button>
+            </ButtonSmall>
           </div>
         </div>
       </section>
@@ -264,11 +332,10 @@ export default function Versicherungen() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(index === 0 || index === 1) && (
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {index === 0 ? "Top Empfehlung" : "Top Empfehlung"}
-                  </Badge>
-                )}
+                {(index === 0 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>) ||
+                 (index === 1 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hausratversicherung</Badge>) ||
+                 (index === 2 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
+                 (index === 3 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>)}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
@@ -295,9 +362,12 @@ export default function Versicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                      Zum Anbieter*
+                      {index === 0 ? "Die Versicherungen von InShared: einfach, schnell, smart. Jetzt Beitrag berechnen!" : 
+                       index === 1 ? "Entdecken Sie die zuverlässige und preiswerte Hausrat-Versicherung von AXA: Für jeden ein individuelles Angebot! Jetzt zu AXA!" :
+                       index === 2 ? "BavariaDirekt: Jetzt Ihre günstige Kfz-Versicherung berechnen" :
+                       index === 3 ? "HanseMerkur Zahnzusatzversicherung" : "Zum Anbieter*"}
                     </Button>
                   </Link>
                 </CardContent>
@@ -322,108 +392,108 @@ export default function Versicherungen() {
       </section>
 
       {/* Footer */}
-     <footer className="bg-gray-900 text-white py-8 sm:py-12">
-  <div className="container mx-auto px-4">
-    <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
-      <div>
-        <div className="flex items-center space-x-2 mb-4">
-          <TrendingUp className="h-6 w-6 text-green-400" />
-          <h4 className="text-xl font-bold">SmartFinanz</h4>
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <TrendingUp className="h-6 w-6 text-green-400" />
+                <h4 className="text-xl font-bold">SmartFinanz</h4>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
+              </p>
+              <div className="flex space-x-2">
+                <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
+                  TÜV Zertifiziert
+                </Badge>
+              </div>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Finanzprodukte</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/versicherungen" className="hover:text-white transition-colors">
+                    Versicherungsvergleich
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/banking" className="hover:text-white transition-colors">
+                    Girokonto & Kredite
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors">
+                    Tierkrankenversicherung
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/trading" className="hover:text-white transition-colors">
+                    Online Broker Vergleich
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Weitere Services</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
+                <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
+                <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
+                <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+                <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
+                <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
+                <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
+                <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Unternehmen</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/ueber-uns" className="hover:text-white transition-colors">
+                    Über uns
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/partnerprogramme" className="hover:text-white transition-colors">
+                    Partnerprogramme
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/karriere" className="hover:text-white transition-colors">
+                    Karriere
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/kontakt" className="hover:text-white transition-colors">
+                    Kontakt
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Rechtliches</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
+                <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
+                <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
+                <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-sm text-gray-400 mb-4">
+              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+            </p>
+            <Link href="/">
+              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
+                Zurück zur Startseite
+              </Button>
+            </Link>
+          </div>
         </div>
-        <p className="text-gray-400 text-sm mb-4">
-          Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
-        </p>
-        <div className="flex space-x-2">
-          <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
-            TÜV Zertifiziert
-          </Badge>
-        </div>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-3">Finanzprodukte</h5>
-        <ul className="space-y-2 text-sm text-gray-400">
-          <li>
-            <Link href="/versicherungen" className="hover:text-white transition-colors">
-              Versicherungsvergleich
-            </Link>
-          </li>
-          <li>
-            <Link href="/banking" className="hover:text-white transition-colors">
-              Girokonto & Kredite
-            </Link>
-          </li>
-          <li>
-            <Link href="/tierversicherungen" className="hover:text-white transition-colors">
-              Tierkrankenversicherung
-            </Link>
-          </li>
-          <li>
-            <Link href="/trading" className="hover:text-white transition-colors">
-              Online Broker Vergleich
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-3">Weitere Services</h5>
-        <ul className="space-y-2 text-sm text-gray-400">
-          <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
-          <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
-          <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-          <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
-          <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
-          <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
-          <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
-          <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-3">Unternehmen</h5>
-        <ul className="space-y-2 text-sm text-gray-400">
-          <li>
-            <Link href="/ueber-uns" className="hover:text-white transition-colors">
-              Über uns
-            </Link>
-          </li>
-          <li>
-            <Link href="/partnerprogramme" className="hover:text-white transition-colors">
-              Partnerprogramme
-            </Link>
-          </li>
-          <li>
-            <Link href="/karriere" className="hover:text-white transition-colors">
-              Karriere
-            </Link>
-          </li>
-          <li>
-            <Link href="/kontakt" className="hover:text-white transition-colors">
-              Kontakt
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-3">Rechtliches</h5>
-        <ul className="space-y-2 text-sm text-gray-400">
-          <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
-          <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
-          <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
-          <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
-        </ul>
-      </div>
-    </div>
-    <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-      <p className="text-sm text-gray-400 mb-4">
-        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-      </p>
-      <Link href="/">
-        <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
-          Zurück zur Startseite
-        </Button>
-      </Link>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   )
 }
