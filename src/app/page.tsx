@@ -298,14 +298,14 @@ export default function Home() {
               Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
             </p>
 
-            {/* Interaktives Widget - Erweitert mit 10 Kategorien */}
+            {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
             <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                 Nach welchem Produkt oder Service suchen Sie?
               </h3>
 
-              {/* Grid für 10 Buttons - responsive Layout */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-4">
+              {/* Grid für 12 Buttons - responsive Layout */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
                 <Button
                   variant={selectedProduct === "versicherung" ? "default" : "outline"}
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
@@ -342,11 +342,11 @@ export default function Home() {
                   DSL
                 </Button>
                 <Button
-                  variant={selectedProduct === "mobilfunk" ? "default" : "outline"}
+                  variant={selectedProduct === "handytarife" ? "default" : "outline"}
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                  onClick={() => { setSelectedProduct("mobilfunk"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
+                  onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
                 >
-                  Mobilfunk
+                  Handytarife
                 </Button>
                 <Button
                   variant={selectedProduct === "oekostrom" ? "default" : "outline"}
@@ -363,11 +363,11 @@ export default function Home() {
                   Gas
                 </Button>
                 <Button
-                  variant={selectedProduct === "pauschalreise" ? "default" : "outline"}
+                  variant={selectedProduct === "reisen" ? "default" : "outline"}
                   className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                  onClick={() => { setSelectedProduct("pauschalreise"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
+                  onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
                 >
-                  Pauschalreise
+                  Reisen
                 </Button>
                 <Button
                   variant={selectedProduct === "strom" ? "default" : "outline"}
@@ -376,13 +376,27 @@ export default function Home() {
                 >
                   Strom
                 </Button>
+                <Button
+                  variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                >
+                  Kreditkarte
+                </Button>
+                <Button
+                  variant={selectedProduct === "mietwagen" ? "default" : "outline"}
+                  className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                  onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
+                >
+                  Mietwagen
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Kategorie-Navigation - ohne Icons, mit allen 10 Kategorien */}
+      {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
       <section className="bg-gray-50 py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
@@ -392,11 +406,13 @@ export default function Home() {
               { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
               { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
               { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-              { key: 'mobilfunk', label: 'MOBILFUNK', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
               { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
               { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-              { key: 'pauschalreise', label: 'PAUSCHALREISE', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false }
+              { key: 'reisen', label: 'REISEN', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false }
             ].map(({ key, label, url, isInternal }) => (
               isInternal ? (
                 <Link
@@ -486,7 +502,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h3>
 
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {[
               {
                 name: "Tarifcheck.de",
@@ -567,6 +583,45 @@ export default function Home() {
                 bonus: "Schnelle Auszahlung",
                 logo: "💳",
                 url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
+              },
+              {
+                name: "HanseMerkur",
+                rating: 4.7,
+                features: [
+                  "Umfassender Schutz für Hunde und Katzen",
+                  "Bis zu 100% Kostenerstattung",
+                  "Freie Tierarztwahl",
+                  "Keine Altersbeschränkung",
+                  "Schnelle Schadensbearbeitung",
+                  "Flexible Tarifoptionen",
+                  "Zusatzleistungen wie Physiotherapie",
+                  "Online-Vertragsmanagement",
+                  "24/7 Kundenhotline"
+                ],
+                price: "ab 10€/Monat",
+                bonus: "Kostenloser Gesundheitscheck",
+                logo: "🐾",
+                url: "https://www.hansemerkur.de/tierkrankenversicherung"
+              },
+              {
+                name: "CHECK24",
+                rating: 4.8,
+                features: [
+                  "Kostenloser Kontowechselservice",
+                  "Über 50 Banken im Vergleich",
+                  "Bis zu 250€ Willkommensbonus",
+                  "Kostenlose Kontoführung",
+                  "Schnelle Kontoeröffnung",
+                  "TÜV-geprüfter Vergleich",
+                  "24/7 Kundensupport",
+                  "Mobile Banking App",
+                  "Kreditkartenoptionen verfügbar",
+                  "Attraktive Zinsen auf Tagesgeld"
+                ],
+                price: "0€ Kontoführung",
+                bonus: "Bis zu 250€ Bonus",
+                logo: "🏦",
+                url: "https://www.check24.de/girokonto/"
               }
             ].map((provider, index) => (
               <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
@@ -856,7 +911,7 @@ export default function Home() {
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h4>
-              <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Mobilfunk, Strom, Gas, Ökostrom und Pauschalreisen.</p>
+              <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h4>
@@ -916,8 +971,10 @@ export default function Home() {
                 <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
                 <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
-                <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Pauschalreisen</a></li>
+                <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
                 <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
+                <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
+                <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
               </ul>
             </div>
             <div>
