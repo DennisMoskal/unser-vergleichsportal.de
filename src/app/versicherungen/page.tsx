@@ -377,10 +377,10 @@ export default function Versicherungen() {
                   </ul>
                   <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                      {index === 2 ? "Die Versicherungen von InShared: einfach, schnell, smart. Jetzt Beitrag berechnen!" : 
-                       index === 3 ? "Entdecken Sie die zuverlässige und preiswerte Hausrat-Versicherung von AXA: Für jeden ein individuelles Angebot! Jetzt zu AXA!" :
-                       index === 4 ? "BavariaDirekt: Jetzt Ihre günstige Kfz-Versicherung berechnen" :
-                       index === 5 ? "HanseMerkur Zahnzusatzversicherung" : "Zum Anbieter*"}
+                      {index === 2 ? "Zum Anbieter*" : 
+                       index === 3 ? "Zum Anbieter*" :
+                       index === 4 ? "Zum Anbieter*" :
+                       index === 5 ? "Zum Anbieter*" : "Zum Anbieter*"}
                     </Button>
                   </Link>
                 </CardContent>
