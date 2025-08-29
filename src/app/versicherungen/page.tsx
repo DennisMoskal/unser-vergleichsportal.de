@@ -281,7 +281,7 @@ export default function Versicherungen() {
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
               Jetzt Versicherungen vergleichen
-            </ButtonSmall>
+            </Button>
           </div>
         </div>
       </section>
