@@ -247,7 +247,7 @@ export default function Banking() {
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck.de" ? "Top Empfehlung" : "2. Top Empfehlung"}
+                    {provider.name === "Tarifcheck.de" ? "Top Empfehlung" : "Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
