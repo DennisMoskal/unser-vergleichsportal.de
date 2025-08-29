@@ -129,7 +129,7 @@ export default function UeberUnsPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Ihr Weg zu besseren Finanzlösungen</h2>
           <p className="text-gray-600 mb-8">
-            Ohne Versicherungen, Banking oder Trading funktioniert kein modernes Leben. Doch die Wahl der richtigen Produkte wird oft aufgeschoben – mit schlechtem Gewissen. SmartFinanz hilft Ihnen, diesen Schritt einfach zu meistern und komplexe Themen zugänglich zu machen.
+            Ohne Versicherungen, Banking oder Trading funktioniert kein modernes Leben. Doch die Wahl der richtigen Produkte wird oft aufgeschoben – mit schlechtem Gewissen. SmartFinanz macht es Ihnen leicht und öffnet den Zugang zu komplexen Themen.
           </p>
           <p className="text-gray-600 mb-8">
             Profitieren Sie von unserer Expertise! Seit 10 Jahren führen wir Sie zielsicher und nutzerfreundlich durch den Finanzdschungel – von Versicherungen bis Trading. Mit einem Sparpotenzial von bis zu 1.000 € jährlich überlassen Sie uns die Recherchen und genießen Ihre Freizeit.
@@ -137,9 +137,6 @@ export default function UeberUnsPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Badge variant="secondary" className="bg-white border text-green-600">
               TÜV Zertifiziert
-            </Badge>
-            <Badge variant="secondary" className="bg-white border text-green-600">
-              Testsieger 2025
             </Badge>
             <Badge variant="secondary" className="bg-white border text-green-600">
               4.8/5 Sterne
@@ -211,6 +208,14 @@ export default function UeberUnsPage() {
                 <p className="mb-2">Seit 2023 dabei, unterstützt er Sie mit 8 Jahren Trading-Erfahrung für erfolgreiche Anlagen.</p>
               </CardContent>
             </Card>
+            <Card className="bg-gray-50 border border-gray-200 rounded-lg">
+              <CardHeader className="text-center pb-2">
+                <CardTitle className="text-lg sm:text-xl font-semibold">Vanessa Harksel</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-gray-600">
+                <p className="mb-2">Seit 2019 im Team, bringt sie technisches Know-how für Internet- und Mobilfunktarife, angepasst an Ihre Bedürfnisse.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -220,16 +225,57 @@ export default function UeberUnsPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Persönlicher Kundenservice</h2>
           <p className="text-sm mb-6 max-w-2xl mx-auto">
-            Keine Chat-Bots, sondern echte Experten stehen Ihnen zur Verfügung. Rufen Sie an, schreiben Sie uns oder nutzen Sie unser Kontaktformular.
-          </p>
-          <p className="text-sm mb-4">
-            <strong>Telefon:</strong> 0800 - 123 456 78<br />
-            <strong>E-Mail:</strong> info@smartfinanz.de<br />
-            <Link href="/kontakt" className="underline hover:text-white">Kontaktformular</Link>
+            Keine Chat-Bots, sondern echte Experten stehen Ihnen zur Verfügung. Wir freuen uns, Sie kompetent durch unsere Vergleiche zu führen.
           </p>
           <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.location.href = "/kontakt"}>
             Kontakt aufnehmen
           </Button>
+        </div>
+      </section>
+
+      {/* Wie wir Geld verdienen */}
+      <section className="py-12 sm:py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Wie wir Geld verdienen – verbraucherorientiert und unparteiisch</h2>
+          <p className="text-gray-600 mb-4">
+            Ihre Bedürfnisse stehen im Mittelpunkt. Die Nutzung unserer Dienste ist für Sie jederzeit kostenlos. Alle Produkte werden unparteiisch nach Ihren Wünschen gefiltert, sodass Sie nur passende Ergebnisse sehen.
+          </p>
+          <p className="text-gray-600 mb-4">
+            Entscheiden Sie sich für ein Produkt und schließen Sie es über uns ab – das bleibt für Sie kostenfrei. Wir erhalten eine Provision vom Produktanbieter für jeden erfolgreichen Vertragsabschluss.
+          </p>
+          <ul className="text-gray-600 text-left max-w-xl mx-auto space-y-2 mb-6">
+            <li>Für Anbieter sind unsere Vergleiche ein kostengünstiger Vertriebsweg.</li>
+            <li>Für Sie bieten sie einen unparteiischen, kostenfreien Marktüberblick.</li>
+            <li>Für uns ist dies die Basis für einen transparenten, kundenorientierten Service.</li>
+          </ul>
+          <p className="text-gray-600">
+            Unsere Vision seit 10 Jahren: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über uns. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* Nachhaltigkeit */}
+      <section className="py-12 sm:py-16 px-4 bg-green-600 text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Unsere Nachhaltigkeit</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-green-700 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Strom- und Wasserverbrauch</h3>
+              <p className="text-sm">Wir nutzen Ökostrom, LED-Lampen und energiesparende Geräte (z. B. AAA+++ Kühlschränke) in unseren gut gedämmten Büroräumen.</p>
+            </div>
+            <div className="bg-green-700 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Ökologischer Fußabdruck</h3>
+              <p className="text-sm">Wir setzen auf Produkte mit EU-Umweltzeichen und inländische, schadstoffarme Möbel für einen aktiven Umweltschutz.</p>
+            </div>
+            <div className="bg-green-700 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Nachhaltige Lebensmittel</h3>
+              <p className="text-sm">Unser Team genießt kostenlos Bio-Obst, Fairtrade-Kaffee und regionale Säfte in recycelbaren Flaschen.</p>
+            </div>
+            <div className="bg-green-700 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Müllvermeidung</h3>
+              <p className="text-sm">Wir trennen Müll, nutzen Recycling-Papier und fördern wiederverwendbare Container, um Plastikmüll zu reduzieren.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -357,7 +403,6 @@ export default function UeberUnsPage() {
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+49-800-12345678",
               "contactType": "Kundenservice",
               "availableLanguage": "Deutsch"
             },
@@ -365,7 +410,8 @@ export default function UeberUnsPage() {
               { "@type": "Person", "name": "Sophie Müller", "jobTitle": "Versicherungsexpertin" },
               { "@type": "Person", "name": "Thomas Weber", "jobTitle": "Finanzberater" },
               { "@type": "Person", "name": "Julia Schmidt", "jobTitle": "Tierversicherungsberaterin" },
-              { "@type": "Person", "name": "David Fischer", "jobTitle": "Tradingexperte" }
+              { "@type": "Person", "name": "David Fischer", "jobTitle": "Tradingexperte" },
+              { "@type": "Person", "name": "Vanessa Harksel", "jobTitle": "Technologieexpertin" }
             ],
             "sameAs": ["https://www.facebook.com/smartfinanz", "https://www.twitter.com/smartfinanz"]
           })
