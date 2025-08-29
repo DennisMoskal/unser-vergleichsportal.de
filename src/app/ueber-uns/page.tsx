@@ -173,7 +173,7 @@ export default function UeberUnsPage() {
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">Unser Expertenteam</h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            Unser Team in München arbeitet täglich daran, Ihnen einen einfachen und erfolgreichen Vergleich zu bieten. Mit Feedback und Branchenentwicklungen optimieren wir stetig unsere Dienstleistungen.
+            Unser Team in Bonn arbeitet täglich daran, Ihnen einen einfachen und erfolgreichen Vergleich zu bieten. Mit Feedback und Branchenentwicklungen optimieren wir stetig unsere Dienstleistungen.
           </p>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
@@ -210,7 +210,7 @@ export default function UeberUnsPage() {
             </Card>
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Vanessa Harksel</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Saskia Schmidt</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
                 <p className="mb-2">Seit 2019 im Team, bringt sie technisches Know-how für Internet- und Mobilfunktarife, angepasst an Ihre Bedürfnisse.</p>
@@ -398,8 +398,8 @@ export default function UeberUnsPage() {
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "DE",
-              "addressRegion": "Bayern",
-              "addressLocality": "München"
+              "addressRegion": "Nordrheinwestfahlen",
+              "addressLocality": "Bonn"
             },
             "contactPoint": {
               "@type": "ContactPoint",
