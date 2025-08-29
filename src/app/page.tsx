@@ -924,7 +924,7 @@ export default function Home() {
       {/* Footer */}
      <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
-    <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
+    <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
       <div>
         <div className="flex items-center space-x-2 mb-4">
           <TrendingUp className="h-6 w-6 text-green-400" />
@@ -965,6 +965,19 @@ export default function Home() {
         </ul>
       </div>
       <div>
+        <h5 className="font-semibold mb-3">Weitere Services</h5>
+        <ul className="space-y-2 text-sm text-gray-400">
+          <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
+          <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
+          <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
+          <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+          <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
+          <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
+          <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
+          <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
+        </ul>
+      </div>
+      <div>
         <h5 className="font-semibold mb-3">Unternehmen</h5>
         <ul className="space-y-2 text-sm text-gray-400">
           <li>
@@ -987,19 +1000,6 @@ export default function Home() {
               Kontakt
             </Link>
           </li>
-        </ul>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-3">Weitere Services</h5>
-        <ul className="space-y-2 text-sm text-gray-400">
-          <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
-          <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
-          <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-          <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
-          <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
-          <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
-          <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
-          <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
         </ul>
       </div>
       <div>
