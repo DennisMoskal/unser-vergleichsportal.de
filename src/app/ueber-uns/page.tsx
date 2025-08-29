@@ -12,12 +12,12 @@ export default function UeberUnsPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    document.title = "Über uns | SmartFinanz - Experten für Finanzvergleiche in Deutschland"
+    document.title = "Über uns | SmartFinanz - Ihr Experte für Finanzvergleiche"
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Erfahren Sie mehr über SmartFinanz, Ihr führendes Vergleichsportal für unabhängige Finanzlösungen in Versicherungen, Banking und mehr. Vertrauen Sie unserer Expertise seit 2015."
+        "Erfahren Sie mehr über SmartFinanz, Ihr vertrauenswürdiger Partner für unabhängige Finanzvergleiche seit 2015. Sparen Sie Zeit und Geld mit unseren Expertenlösungen."
       )
     }
   }, [])
@@ -113,10 +113,10 @@ export default function UeberUnsPage() {
       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Über uns: Ihr Partner für sichere Finanzentscheidungen
+            SmartFinanz: Finanzkompetenz seit 10 Jahren
           </h2>
           <p className="text-sm sm:text-base text-green-100 mb-6 max-w-2xl mx-auto">
-            Seit 2015 unterstützt SmartFinanz Millionen Kunden mit unabhängigen Vergleichen in Versicherungen, Banking und mehr. Entdecken Sie unser Engagement!
+            Mit uns sparen Sie Zeit, Geld und Stress. Überzeugen Sie sich selbst von unseren unabhängigen Finanzvergleichen!
           </p>
           <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
             Jetzt vergleichen
@@ -127,12 +127,12 @@ export default function UeberUnsPage() {
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Finanzkompetenz seit über einem Jahrzehnt</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Ihr Weg zu besseren Finanzlösungen</h2>
           <p className="text-gray-600 mb-8">
-            Bei SmartFinanz sparen Sie Zeit, Geld und Stress durch unsere unabhängigen Finanzvergleiche. Mit über 500 geprüften Anbietern und einem Fokus auf Transparenz helfen wir Ihnen, die besten Lösungen für Versicherungen, Banking, Tierversicherungen und Trading zu finden. Unser Ziel: Ihr finanzielles Wohlbefinden mit maßgeschneiderten Empfehlungen.
+            Ohne Versicherungen, Banking oder Trading funktioniert kein modernes Leben. Doch die Wahl der richtigen Produkte wird oft aufgeschoben – mit schlechtem Gewissen. SmartFinanz hilft Ihnen, diesen Schritt einfach zu meistern und komplexe Themen zugänglich zu machen.
           </p>
           <p className="text-gray-600 mb-8">
-            Unsere Expertise reicht zurück bis 2015, als wir begannen, den Markt zu revolutionieren. Heute profitieren über 100.000 Kunden jährlich von unseren Dienstleistungen, mit einem durchschnittlichen Sparpotenzial von bis zu 1.000 € pro Jahr. Überzeugen Sie sich selbst von unserer Qualität!
+            Profitieren Sie von unserer Expertise! Seit 10 Jahren führen wir Sie zielsicher und nutzerfreundlich durch den Finanzdschungel – von Versicherungen bis Trading. Mit einem Sparpotenzial von bis zu 1.000 € jährlich überlassen Sie uns die Recherchen und genießen Ihre Freizeit.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Badge variant="secondary" className="bg-white border text-green-600">
@@ -146,78 +146,89 @@ export default function UeberUnsPage() {
             </Badge>
           </div>
           <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-            Sparpotenzial prüfen
+            Sparpotenzial checken
           </Button>
         </div>
       </section>
 
-      {/* Unser Team */}
+      {/* Vergleichsprozess */}
       <section className="py-12 sm:py-16 px-4 bg-green-600 text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Vergleichen und sparen – so funktioniert es</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-green-700 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">1. Minutenschnell vergleichen</h3>
+              <p className="text-sm">Wählen Sie Ihr Produkt, geben Sie Ihre Wünsche ein und erhalten Sie kostenlose, unverbindliche Angebote – sortiert nach Preis und Bedarf.</p>
+            </div>
+            <div className="bg-green-700 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">2. Ohne Kosten abschließen</h3>
+              <p className="text-sm">Finden Sie das passende Produkt, schließen Sie es kostenfrei ab und sparen Sie bis zu 1.000 € – mit höchstem Datenschutz.</p>
+            </div>
+          </div>
+          <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 mt-6" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+            Jetzt starten
+          </Button>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-12 sm:py-16 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">Unser Expertenteam</h2>
-          <p className="text-center mb-8 max-w-3xl mx-auto">
-            Hinter SmartFinanz steht ein engagiertes Team mit über 40 Jahren Erfahrung, das Ihnen mit Kompetenz und Empathie zur Seite steht. Lernen Sie die Gesichter kennen, die Ihre Finanzen optimieren.
+          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+            Unser Team in München arbeitet täglich daran, Ihnen einen einfachen und erfolgreichen Vergleich zu bieten. Mit Feedback und Branchenentwicklungen optimieren wir stetig unsere Dienstleistungen.
           </p>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="bg-green-700 border-0 rounded-lg">
+            <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Anna Schmidt</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Sophie Müller</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="mb-2">Mit 12 Jahren Erfahrung im Versicherungsbereich bietet sie verlässliche Lösungen, die Ihnen Sicherheit und Ruhe geben.</p>
+              <CardContent className="text-center text-gray-600">
+                <p className="mb-2">Seit 2018 bei uns, unterstützt sie Sie mit 10 Jahren Erfahrung in Versicherungen und schafft klare Lösungen.</p>
               </CardContent>
             </Card>
-            <Card className="bg-green-700 border-0 rounded-lg">
+            <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Michael Bauer</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Thomas Weber</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="mb-2">Sein 15-jähriges Wissen im Bankingbereich hilft Ihnen, Ihre Finanzen effizient und zukunftssicher zu planen.</p>
+              <CardContent className="text-center text-gray-600">
+                <p className="mb-2">Seit 2015 dabei, bringt er 12 Jahre Banking-Expertise für Ihre finanziellen Pläne ein.</p>
               </CardContent>
             </Card>
-            <Card className="bg-green-700 border-0 rounded-lg">
+            <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Laura Fischer</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Julia Schmidt</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="mb-2">Mit 8 Jahren Erfahrung im Tierschutzsektor schafft sie maßgeschneiderte Versicherungen für Ihre Haustiere.</p>
+              <CardContent className="text-center text-gray-600">
+                <p className="mb-2">Seit 2020 im Team, kennt sie als Tierversicherungs-Expertin die Bedürfnisse Ihrer Haustiere.</p>
               </CardContent>
             </Card>
-            <Card className="bg-green-700 border-0 rounded-lg">
+            <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Paul Hoffmann</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">David Fischer</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="mb-2">Seine 10-jährige Expertise im Tradingbereich unterstützt Sie bei erfolgreichen Anlagestrategien.</p>
+              <CardContent className="text-center text-gray-600">
+                <p className="mb-2">Seit 2023 dabei, unterstützt er Sie mit 8 Jahren Trading-Erfahrung für erfolgreiche Anlagen.</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Wie wir arbeiten */}
-      <section className="py-12 sm:py-16 px-4 bg-white">
+      {/* Kundenservice */}
+      <section className="py-12 sm:py-16 px-4 bg-green-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">So funktioniert unser Vergleich</h2>
-          <p className="text-gray-600 mb-8">
-            Mit nur wenigen Klicks finden Sie die besten Angebote – kostenlos und unverbindlich. Unser Prozess ist einfach, sicher und auf Ihre Bedürfnisse zugeschnitten.
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Persönlicher Kundenservice</h2>
+          <p className="text-sm mb-6 max-w-2xl mx-auto">
+            Keine Chat-Bots, sondern echte Experten stehen Ihnen zur Verfügung. Rufen Sie an, schreiben Sie uns oder nutzen Sie unser Kontaktformular.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">1. Auswahl & Eingabe</h3>
-              <p className="text-gray-600">Wählen Sie Ihr Produkt und geben Sie Ihre Wünsche ein – in Minuten erhalten Sie maßgeschneiderte Angebote.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">2. Vergleich & Entscheidung</h3>
-              <p className="text-gray-600">Vergleichen Sie Angebote nach Preis und Konditionen – ohne versteckte Kosten oder Verpflichtungen.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">3. Abschluss</h3>
-              <p className="text-gray-600">Schließen Sie den Vertrag direkt ab und profitieren Sie von Ihrem Sparpotenzial – wir unterstützen Sie dabei.</p>
-            </div>
-          </div>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 mt-6" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-            Jetzt starten
+          <p className="text-sm mb-4">
+            <strong>Telefon:</strong> 0800 - 123 456 78<br />
+            <strong>E-Mail:</strong> info@smartfinanz.de<br />
+            <Link href="/kontakt" className="underline hover:text-white">Kontaktformular</Link>
+          </p>
+          <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.location.href = "/kontakt"}>
+            Kontakt aufnehmen
           </Button>
         </div>
       </section>
@@ -232,7 +243,7 @@ export default function UeberUnsPage() {
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
+                Ihr vertrauensvoller Partner für Finanzvergleiche. Über 500 Anbieter, mehr als 100.000 zufriedene Kunden.
               </p>
               <div className="flex space-x-2">
                 <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
@@ -336,7 +347,7 @@ export default function UeberUnsPage() {
             "name": "SmartFinanz",
             "url": "https://smartfinanz.de/ueber-uns",
             "logo": "https://smartfinanz.de/logo.png",
-            "description": "Erfahren Sie mehr über SmartFinanz, Ihr führendes Vergleichsportal für unabhängige Finanzlösungen in Deutschland seit 2015.",
+            "description": "Erfahren Sie mehr über SmartFinanz, Ihr führendes Vergleichsportal für unabhängige Finanzlösungen seit 2015.",
             "foundingDate": "2015",
             "address": {
               "@type": "PostalAddress",
@@ -346,15 +357,15 @@ export default function UeberUnsPage() {
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+49-89-123456",
+              "telephone": "+49-800-12345678",
               "contactType": "Kundenservice",
               "availableLanguage": "Deutsch"
             },
             "employee": [
-              { "@type": "Person", "name": "Anna Schmidt", "jobTitle": "Versicherungsexpertin" },
-              { "@type": "Person", "name": "Michael Bauer", "jobTitle": "Finanzberater" },
-              { "@type": "Person", "name": "Laura Fischer", "jobTitle": "Tierversicherungsberaterin" },
-              { "@type": "Person", "name": "Paul Hoffmann", "jobTitle": "Tradingexperte" }
+              { "@type": "Person", "name": "Sophie Müller", "jobTitle": "Versicherungsexpertin" },
+              { "@type": "Person", "name": "Thomas Weber", "jobTitle": "Finanzberater" },
+              { "@type": "Person", "name": "Julia Schmidt", "jobTitle": "Tierversicherungsberaterin" },
+              { "@type": "Person", "name": "David Fischer", "jobTitle": "Tradingexperte" }
             ],
             "sameAs": ["https://www.facebook.com/smartfinanz", "https://www.twitter.com/smartfinanz"]
           })
