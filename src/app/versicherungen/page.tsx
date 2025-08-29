@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
+import { Star, Check, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -190,8 +190,7 @@ export default function Versicherungen() {
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <TrendingUp className="h-8 w-8 text-green-600" />
+          <div className="flex items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -410,8 +409,7 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <TrendingUp className="h-6 w-6 text-green-400" />
+              <div className="flex items-center mb-4">
                 <SmartFinanzLogo className="text-xl" />
               </div>
               <p className="text-gray-400 text-sm mb-4">
