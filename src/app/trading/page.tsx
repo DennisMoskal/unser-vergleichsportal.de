@@ -331,7 +331,7 @@ export default function Trading() {
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(provider.name === "XTB" || provider.name === "LYNX" || provider.name === "WEEX") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "XTB" ? "Top Empfehlung" : provider.name === "LYNX" ? "2. Top Empfehlung" : "3. Top Empfehlung"}
+                    {provider.name === "XTB" ? "Top Empfehlung" : provider.name === "LYNX" ? "Top Empfehlung" : "Top Empfehlung"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
