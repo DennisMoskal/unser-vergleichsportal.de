@@ -454,8 +454,8 @@ export default function Tierversicherungen() {
                      provider.name === "CHECK24 Tierversicherung" ? "2. Top Empfehlung" : 
                      provider.name === "Uelzener Tierversicherung" ? "3. Top Empfehlung" : 
                      provider.name === "BavariaDirekt" ? "4. Top Empfehlung" : 
-                     provider.name === "HanseMerkur Tierversicherung" ? "Testsieger Kostenübernahme" : 
-                     "Testsieger Hundehalterhaftpflicht"}
+                     provider.name === "HanseMerkur Tierversicherung" ? "Top Kostenübernahme" : 
+                     "Top Hundehalterhaftpflicht"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
