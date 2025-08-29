@@ -922,7 +922,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-     <footer className="bg-gray-900 text-white py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
             <div>
@@ -930,49 +930,42 @@ export default function Home() {
                 <TrendingUp className="h-6 w-6 text-green-400" />
                 <h4 className="text-xl font-bold">SmartFinanz</h4>
               </div>
-              <p className="text-gray-400 text-sm mb-4">
-                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
+              <p className="text-gray-400 text-sm">
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland.
               </p>
-              <div className="flex space-x-2">
-                <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
-                  TÜV Zertifiziert
-                </Badge>
-              </div>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Finanzprodukte</h5>
+              <h5 className="font-semibold mb-3">Produkte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link href="/versicherungen" className="hover:text-white transition-colors">
-                    Versicherungsvergleich
+                  <Link href="/versicherungen" className="hover:text-white transition-colors text-left">
+                    Versicherungen
                   </Link>
                 </li>
                 <li>
-                  <Link href="/banking" className="hover:text-white transition-colors">
-                    Girokonto & Kredite
+                  <Link href="/banking" className="hover:text-white transition-colors text-left">
+                    Banking
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tierversicherungen" className="hover:text-white transition-colors">
-                    Tierkrankenversicherung
+                  <Link href="/tierversicherungen" className="hover:text-white transition-colors text-left">
+                    Tierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link href="/trading" className="hover:text-white transition-colors">
-                    Online Broker Vergleich
+                  <Link href="/trading" className="hover:text-white transition-colors text-left">
+                    Trading
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-3">Weitere Services</h5>
+              <h5 className="font-semibold mb-3">Unternehmen</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
-                <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
-                <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-                <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
-                <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Pauschalreisen</a></li>
-                <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
               </ul>
             </div>
             <div>
@@ -987,7 +980,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-400">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              © 2025 SmartFinanz. Alle Rechte vorbehalten.
             </p>
           </div>
         </div>
