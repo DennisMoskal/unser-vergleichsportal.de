@@ -10,12 +10,15 @@ import Link from "next/link"
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={`flex items-center space-x-1 ${className}`}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-        <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
-        <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-      </svg>
-      <span className="font-bold">martFinanz</span>
+    <div className={`flex flex-col items-start ${className}`}>
+      <div className="flex items-center space-x-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+          <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
+        </svg>
+        <span className="font-bold">martFinanz</span>
+      </div>
+      <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
     </div>
   )
 }
@@ -284,7 +287,7 @@ export default function Tierversicherungen() {
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-start">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -386,18 +389,6 @@ export default function Tierversicherungen() {
           </div>
         )}
       </header>
-
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base" onClick={() => {
-            console.log("Clicked Zurück zur Startseite")
-            handleNavigation("/")
-          }}>
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
 
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
@@ -866,24 +857,12 @@ export default function Tierversicherungen() {
         </div>
       </section>
 
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base" onClick={() => {
-            console.log("Clicked Zurück zur Startseite")
-            handleNavigation("/")
-          }}>
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
               </div>
               <p className="text-gray-400 text-sm mb-4">
@@ -972,11 +951,6 @@ export default function Tierversicherungen() {
             <p className="text-sm text-gray-400 mb-4">
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
-            <Link href="/">
-              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
-                Zurück zur Startseite
-              </Button>
-            </Link>
           </div>
         </div>
       </footer>
