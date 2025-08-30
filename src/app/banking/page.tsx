@@ -107,6 +107,7 @@ export default function Banking() {
             <SmartFinanzLogo className="text-2xl text-gray-900" />
             <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
+
           <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Versicherungen
@@ -124,13 +125,17 @@ export default function Banking() {
               Kundenbewertungen
             </Link>
           </nav>
+
           <div className="flex items-center space-x-4">
             <Link href="/kontakt">
               <Button className="hidden md:block bg-white text-green-600 border border-green-600 hover:bg-green-50">
                 Kontakt
               </Button>
             </Link>
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+            <Button 
+              className="hidden md:block bg-green-600 hover:bg-green-700"
+              onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+            >
               Vergleich starten
             </Button>
             <button
@@ -187,7 +192,10 @@ export default function Banking() {
                   Kontakt
                 </Button>
               </Link>
-              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              <Button 
+                className="w-full bg-green-600 hover:bg-green-700"
+                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+              >
                 Vergleich starten
               </Button>
             </nav>
@@ -212,8 +220,8 @@ export default function Banking() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie mit SmartFinanz das perfekte Girokonto oder den idealen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
-            <Button
-              size="lg"
+            <Button 
+              size="lg" 
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
@@ -279,9 +287,9 @@ export default function Banking() {
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      <Star 
+                        key={i} 
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
                       />
                     ))}
                     <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
@@ -300,7 +308,11 @@ export default function Banking() {
                       </li>
                     ))}
                   </ul>
-                  <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <a 
+                    href={provider.url} 
+                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
+                    rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
                       Zum Anbieter*
                     </Button>
@@ -332,19 +344,16 @@ export default function Banking() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 mb-4">
-                    Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte 
-                    und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
+                    Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
                     <p className="text-sm text-green-700">
-                      Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu 
-                      Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
+                      Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
                     </p>
                   </div>
                 </CardContent>
               </Card>
-              
               <Card className="border-2 hover:border-green-200">
                 <CardHeader>
                   <CardTitle>Girokonto Vergleich - Testsieger Eigenschaften</CardTitle>
@@ -386,22 +395,19 @@ export default function Banking() {
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Ratenkredit</h5>
                   <p className="text-sm text-gray-600">
-                    Für Anschaffungen von 1.000€ bis 120.000€. 
-                    Zinsen ab 0,68% p.a. bei bester Bonität.
+                    Für Anschaffungen von 1.000€ bis 120.000€. Zinsen ab 0,68% p.a. bei bester Bonität.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Sofortkredit</h5>
                   <p className="text-sm text-gray-600">
-                    Schnelle Auszahlung binnen 24h möglich. 
-                    Digitaler Abschluss mit VideoIdent-Verfahren.
+                    Schnelle Auszahlung binnen 24h möglich. Digitaler Abschluss mit VideoIdent-Verfahren.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Umschuldung</h5>
                   <p className="text-sm text-gray-600">
-                    Bestehende Kredite zusammenfassen und 
-                    bis zu 40% der Zinsen sparen.
+                    Bestehende Kredite zusammenfassen und bis zu 40% der Zinsen sparen.
                   </p>
                 </div>
               </div>
@@ -417,8 +423,7 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-blue-700 mb-4">
-                  Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. 
-                  Täglich verfügbar, ohne Laufzeitbindung - ideal für Notreserven und kurzfristige Geldanlage.
+                  Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung - ideal für Notreserven und kurzfristige Geldanlage.
                 </p>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
@@ -460,21 +465,18 @@ export default function Banking() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card>
                 <CardHeader>
                   <CardTitle>Aktuelle Bauzinsen & Trends</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 mb-4">
-                    Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. 
-                    Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.
+                    Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.
                   </p>
                   <div className="bg-orange-50 p-3 rounded">
                     <h5 className="font-semibold text-orange-800 mb-1">💰 Spartipp:</h5>
                     <p className="text-sm text-orange-700">
-                      Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre 
-                      etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.
+                      Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.
                     </p>
                   </div>
                 </CardContent>
@@ -488,7 +490,6 @@ export default function Banking() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
-          
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <Card className="text-center">
               <CardHeader>
@@ -499,12 +500,10 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren 
-                  macht Postweg überflüssig - alles bequem von zu Hause.
+                  Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig - alles bequem von zu Hause.
                 </p>
               </CardContent>
             </Card>
-
             <Card className="text-center">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -514,12 +513,10 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Mobile Banking App installieren. Alle Bankgeschäfte 
-                  jederzeit und überall per Smartphone erledigen.
+                  Mobile Banking App installieren. Alle Bankgeschäfte jederzeit und überall per Smartphone erledigen.
                 </p>
               </CardContent>
             </Card>
-
             <Card className="text-center">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -529,12 +526,10 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Login mit PIN oder Fingerabdruck. Alle Transaktionen 
-                  durch TAN-Verfahren oder biometrische Freigabe geschützt.
+                  Login mit PIN oder Fingerabdruck. Alle Transaktionen durch TAN-Verfahren oder biometrische Freigabe geschützt.
                 </p>
               </CardContent>
             </Card>
-
             <Card className="text-center">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -544,42 +539,36 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Überweisungen, Daueraufträge, Kontostände prüfen - 
-                  alles 24/7 verfügbar ohne Öffnungszeiten.
+                  Überweisungen, Daueraufträge, Kontostände prüfen - alles 24/7 verfügbar ohne Öffnungszeiten.
                 </p>
               </CardContent>
             </Card>
           </div>
-
           <div className="mt-12 bg-white p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-6 text-center">Häufige Fragen zum Online Banking</h3>
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Ist Online Banking sicher?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und 
-                  Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.
+                  Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Welche TAN-Verfahren gibt es?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. 
-                  Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.
+                  pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Kann ich alles online erledigen?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, 
-                  Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.
+                  95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Was kostet Online Banking?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Bei den meisten Direktbanken ist Online Banking komplett kostenlos. 
-                  Auch viele Filialbanken bieten Online Services ohne Extragebühren an.
+                  Bei den meisten Direktbanken ist Online Banking komplett kostenlos. Auch viele Filialbanken bieten Online Services ohne Extragebühren an.
                 </p>
               </div>
             </div>
@@ -591,7 +580,6 @@ export default function Banking() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
-          
           <div className="grid gap-8 lg:grid-cols-2">
             <Card className="border-2 border-green-200">
               <CardHeader>
@@ -602,15 +590,13 @@ export default function Banking() {
                   <div>
                     <h5 className="font-semibold mb-2">Wann lohnt sich eine Umschuldung?</h5>
                     <p className="text-sm text-gray-600">
-                      Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. 
-                      Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.
+                      Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.
                     </p>
                   </div>
                   <div>
                     <h5 className="font-semibold mb-2">Mögliche Ersparnis:</h5>
                     <p className="text-sm text-gray-600">
-                      <strong className="text-green-600">Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. 
-                      Bei 20.000€ Kredit können das über 2.000€ sein.
+                      <strong className="text-green-600">Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.
                     </p>
                   </div>
                   <div className="bg-green-50 p-3 rounded">
@@ -621,7 +607,6 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
-
             <Card className="border-2 border-blue-200">
               <CardHeader>
                 <CardTitle className="text-blue-600">📈 Depot eröffnen für Geldanlage</CardTitle>
@@ -631,15 +616,13 @@ export default function Banking() {
                   <div>
                     <h5 className="font-semibold mb-2">Warum ein Depot?</h5>
                     <p className="text-sm text-gray-600">
-                      Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. 
-                      Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.
+                      Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.
                     </p>
                   </div>
                   <div>
                     <h5 className="font-semibold mb-2">Kostenlose Depots:</h5>
                     <p className="text-sm text-gray-600">
-                      Viele Online-Broker bieten <strong className="text-blue-600">kostenlose Depotführung</strong> 
-                      und günstige ETF-Sparpläne ab 0€ Ordergebühr.
+                      Viele Online-Broker bieten <strong className="text-blue-600">kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.
                     </p>
                   </div>
                   <div className="bg-blue-50 p-3 rounded">
@@ -651,7 +634,6 @@ export default function Banking() {
               </CardContent>
             </Card>
           </div>
-
           <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
             <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für optimale Finanzplanung</h3>
             <div className="grid gap-4 md:grid-cols-2">
@@ -682,14 +664,11 @@ export default function Banking() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten</h2>
-          
           <div className="mb-8 text-center">
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. 
-              Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
+              Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
             </p>
           </div>
-
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="border-2 hover:border-green-200">
               <CardHeader>
@@ -712,7 +691,6 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
-
             <Card className="border-2 hover:border-blue-200">
               <CardHeader>
                 <CardTitle className="text-blue-600">📱 Modern Digital Cards</CardTitle>
@@ -734,7 +712,6 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
-
             <Card className="border-2 hover:border-purple-200">
               <CardHeader>
                 <CardTitle className="text-purple-600">✈️ Travel & Bonus Cards</CardTitle>
@@ -757,7 +734,6 @@ export default function Banking() {
               </CardContent>
             </Card>
           </div>
-
           <div className="mt-8 bg-orange-50 p-6 rounded-lg border-2 border-orange-200">
             <h3 className="text-lg font-bold mb-4 text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</h3>
             <div className="grid gap-4 md:grid-cols-2">
@@ -794,14 +770,29 @@ export default function Banking() {
       </section>
 
       {/* Footer */}
-    <footer className="bg-gray-900 text-white py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
               <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
                 <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
-              </div>rokonto & Kredite
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Ihr unabhängiger Partner für Finanzvergleiche. Kostenlos, transparent und immer aktuell.
+              </p>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-3">Vergleiche</h5>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/versicherungen" className="hover:text-white transition-colors">
+                    Versicherungen
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/banking" className="hover:text-white transition-colors">
+                    Girokonto & Kredite
                   </Link>
                 </li>
                 <li>
