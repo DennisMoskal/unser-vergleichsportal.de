@@ -14,7 +14,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
         <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
         <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
       </svg>
-      <span className="font-bold">martFinanz</span>
+      <span className="font-bold">Unser-Vergleichsportal.de</span>
     </div>
   )
 }
@@ -25,8 +25,9 @@ export default function CookieRichtliniePage() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
+            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
           <div className="flex items-center space-x-4">
             <Link href="/kontakt">
@@ -223,8 +224,9 @@ export default function CookieRichtliniePage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
+                <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
