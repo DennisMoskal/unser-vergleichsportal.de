@@ -577,7 +577,7 @@ export default function Tierversicherungen() {
                     onClick={() => console.log("Navigating to Tarifcheck Hundehaftpflicht")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt Hundehaftpf불렀다pflicht vergleichen*
+                      Jetzt Hundehaftpflicht vergleichen*
                     </Button>
                   </Link>
                 </CardContent>
