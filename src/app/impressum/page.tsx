@@ -137,7 +137,7 @@ export default function ImpressumPage() {
               <p>
                 <strong>Kontakt:</strong><br />
                 Telefon: <a href="tel:01722058855" className="text-green-600 hover:underline">0172 2058855</a><br />
-                E-Mail: <a href="mailto:dennismoskal@yahoo.com" className="text-green-600 hover:underline">dennismoskal@yahoo.com</a>
+                E-Mail: <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>
               </p>
               <p>
                 <strong>Aufsichtsbehörde:</strong><br />
