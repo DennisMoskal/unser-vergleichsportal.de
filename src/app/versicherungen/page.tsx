@@ -212,11 +212,6 @@ export default function Versicherungen() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Link href="/kontakt">
-              <Button className="hidden md:block bg-white text-green-600 border border-green-600 hover:bg-green-50">
-                Kontakt
-              </Button>
-            </Link>
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
               Vergleich starten
             </Button>
@@ -269,11 +264,6 @@ export default function Versicherungen() {
               >
                 Kundenbewertungen
               </Link>
-              <Link href="/kontakt">
-                <Button className="w-full bg-white text-green-600 border border-green-600 hover:bg-green-50">
-                  Kontakt
-                </Button>
-              </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
                 Vergleich starten
               </Button>
@@ -281,15 +271,6 @@ export default function Versicherungen() {
           </div>
         )}
       </header>
-
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
 
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
@@ -407,15 +388,6 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -469,7 +441,9 @@ export default function Versicherungen() {
                 <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
                 <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
-                <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
+                <li><a href="https://www.c
+
+24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
               </ul>
             </div>
             <div>
