@@ -1,9 +1,10 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Handshake, Shield, Users, Star, Globe, Menu, X, TrendingUp } from "lucide-react"
+import { useState } from "react"
 import Link from "next/link"
 
 // SmartFinanzLogo-Komponente
@@ -19,84 +20,180 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-export default function KontaktPage() {
+export default function PartnerprogrammePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
+            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
+          <nav className="hidden md:flex space-x-6">
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Versicherungen
+            </Link>
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Banking
+            </Link>
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Tierversicherung
+            </Link>
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Trading
+            </Link>
+            <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Kundenbewertungen
+            </Link>
+          </nav>
           <div className="flex items-center space-x-4">
-            {/* Button entfernt */}
+            <Link href="/kontakt">
+              <Button className="hidden md:block bg-white text-green-600 border border-green-600 hover:bg-green-50">
+                Kontakt
+              </Button>
+            </Link>
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              Vergleich starten
+            </Button>
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu öffnen/schließen"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menü */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
+            <nav className="px-4 py-4 space-y-4">
+              <Link
+                href="/versicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Versicherungen
+              </Link>
+              <Link
+                href="/banking"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Banking
+              </Link>
+              <Link
+                href="/tierversicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Tierversicherung
+              </Link>
+              <Link
+                href="/trading"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Trading
+              </Link>
+              <Link
+                href="#kundenbewertungen"
+                className="block text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Kundenbewertungen
+              </Link>
+              <Link href="/kontakt">
+                <Button className="w-full bg-white text-green-600 border border-green-600 hover:bg-green-50">
+                  Kontakt
+                </Button>
+              </Link>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+                Vergleich starten
+              </Button>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Kontakt</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Werden Sie Partner von SmartFinanz</h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8">
-            Wir freuen uns darauf, von Ihnen zu hören! Hier finden Sie alle Informationen, um mit uns in Kontakt zu treten, sei es für Fragen zu unseren Dienstleistungen, Partnerschaften oder Karrieremöglichkeiten.
+            Schließen Sie sich unserem Netzwerk an und präsentieren Sie Ihre Finanzprodukte einem breiten Publikum. SmartFinanz ist Ihr vertrauenswürdiger Partner, um Ihre Marke zu stärken und neue Kunden zu erreichen. Wir freuen uns auf Ihre Bewerbung, um gemeinsam transparente und hochwertige Vergleichslösungen anzubieten.
           </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">Kontaktinformationen</CardTitle>
+              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">Warum eine Partnerschaft mit SmartFinanz?</CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
-                Unser Team steht Ihnen gerne zur Verfügung, um Ihre Anliegen zu bearbeiten. Sie können uns über verschiedene Kanäle erreichen, um Unterstützung zu erhalten oder weitere Informationen zu unseren Angeboten zu erhalten. Wir legen großen Wert auf eine schnelle und zuverlässige Kommunikation.
+                SmartFinanz ist eines der führenden Vergleichsportale in Deutschland, das täglich tausende Kunden bei der Suche nach den besten Finanzprodukten unterstützt. Als Partner profitieren Sie von unserer etablierten Plattform, unserem starken Markenvertrauen und unserer Expertise im Finanzbereich. Wir bieten Ihnen:
               </p>
-              <div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <Phone className="h-5 w-5 text-green-600" />
-                  <span>Telefon: 01722058855</span>
-                </div>
-                <p>Unsere Hotline ist montags bis freitags von 9:00 bis 17:00 Uhr erreichbar.</p>
-              </div>
-              <div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <Mail className="h-5 w-5 text-green-600" />
-                  <span>E-Mail: smart-finanz@yahoo.com</span>
-                </div>
-                <p>Schreiben Sie uns jederzeit eine Nachricht, und wir antworten Ihnen so schnell wie möglich.</p>
-              </div>
-              <div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <MapPin className="h-5 w-5 text-green-600" />
-                  <span>Adresse: Westpreußenstraße 26, 53119 Bonn, Deutschland</span>
-                </div>
-                <p>Besuchen Sie uns vor Ort nach vorheriger Absprache.</p>
-              </div>
-              <div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <Clock className="h-5 w-5 text-green-600" />
-                  <span>Öffnungszeiten</span>
-                </div>
-                <p>Montag bis Freitag: 9:00 - 17:00 Uhr | Samstag und Sonntag: Geschlossen</p>
-              </div>
+              <ul className="list-disc pl-5 space-y-2">
+                <li><strong>Erhöhte Sichtbarkeit:</strong> Präsentieren Sie Ihre Produkte einer großen Zielgruppe auf unserer Plattform.</li>
+                <li><strong>Vertrauen der Kunden:</strong> Nutzen Sie unsere TÜV-zertifizierte Plattform, um Ihre Glaubwürdigkeit zu stärken.</li>
+                <li><strong>Einfache Integration:</strong> Unser unkomplizierter Bewerbungsprozess und unsere Unterstützung sorgen für eine schnelle Zusammenarbeit.</li>
+                <li><strong>Maßgeschneiderte Lösungen:</strong> Wir arbeiten eng mit Ihnen zusammen, um Ihre Produkte optimal zu präsentieren.</li>
+              </ul>
+              <p>
+                Unsere Partnerschaften basieren auf Transparenz, Qualität und langfristiger Zusammenarbeit. Ob Versicherungen, Banking, Kredite oder andere Finanzprodukte – wir helfen Ihnen, Ihre Zielgruppe effektiv zu erreichen.
+              </p>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Zusätzliche Informationen */}
+      {/* Vorteile */}
       <section className="py-12 sm:py-16 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-gray-900">Wie können wir Ihnen helfen?</h3>
-          <div className="text-gray-600 space-y-6">
-            <p>
-              Egal, ob Sie Fragen zu unseren Finanzvergleichsprodukten, Unterstützung bei der Nutzung unserer Plattform benötigen oder Informationen zu unseren Partnerprogrammen und Karrieremöglichkeiten suchen – unser Kundenservice-Team ist für Sie da. Wir bieten Ihnen eine umfassende Beratung und stehen Ihnen bei allen Anliegen zur Seite. Unsere Experten verfügen über fundiertes Wissen in den Bereichen Versicherungen, Banking, Tierversicherungen und Krypto-Trading, sodass Sie von maßgeschneiderter Unterstützung profitieren können.
-            </p>
-            <p>
-              Für dringende Anfragen empfehlen wir den Telefonkontakt, während E-Mail-Anfragen für detaillierte oder weniger zeitkritische Themen geeignet sind. Bitte beachten Sie unsere Öffnungszeiten, um eine reibungslose Kommunikation zu gewährleisten. Alternativ können Sie auch unsere Website regelmäßig besuchen, um aktuelle Updates und weitere Kontaktmöglichkeiten zu finden.
-            </p>
-            <p>
-              Wir freuen uns darauf, Sie kennenzulernen und Ihnen bestmöglich zu helfen. Ihre Zufriedenheit ist unser oberstes Ziel, und wir arbeiten stets daran, Ihre Erwartungen zu übertreffen. Besuchen Sie auch unsere anderen Seiten wie „Über uns“ oder „Karriere“, um mehr über unser Unternehmen zu erfahren.
-            </p>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-gray-900">Ihre Vorteile als Partner</h3>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <Card className="bg-gray-50 border-2 hover:border-green-200 transition-shadow hover:shadow-lg">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full mx-auto flex items-center justify-center mb-2">
+                  <Users className="h-8 w-8 sm:h-10 w-10 text-green-600" />
+                </div>
+                <CardTitle className="text-lg sm:text-xl">Große Reichweite</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-gray-600">
+                <p>
+                  Erreichen Sie täglich tausende Kunden, die aktiv nach Finanzprodukten suchen, und steigern Sie die Sichtbarkeit Ihrer Marke auf unserer Plattform.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-50 border-2 hover:border-green-200 transition-shadow hover:shadow-lg">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full mx-auto flex items-center justify-center mb-2">
+                  <Star className="h-8 w-8 sm:h-10 w-10 text-green-600" />
+                </div>
+                <CardTitle className="text-lg sm:text-xl">Vertrauen & Reputation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-gray-600">
+                <p>
+                  Profitieren Sie von unserer TÜV-zertifizierten Plattform und unserem etablierten Ruf, um das Vertrauen Ihrer potenziellen Kunden zu gewinnen.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-50 border-2 hover:border-green-200 transition-shadow hover:shadow-lg">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full mx-auto flex items-center justify-center mb-2">
+                  <Globe className="h-8 w-8 sm:h-10 w-10 text-green-600" />
+                </div>
+                <CardTitle className="text-lg sm:text-xl">Einfache Integration</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-gray-600">
+                <p>
+                  Unser unkomplizierter Bewerbungsprozess und unsere Unterstützung ermöglichen eine schnelle und effiziente Aufnahme Ihrer Produkte in unser Portal.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -104,11 +201,15 @@ export default function KontaktPage() {
       {/* Call to Action */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Bleiben Sie mit uns verbunden</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Starten Sie Ihre Partnerschaft mit SmartFinanz</h3>
           <p className="text-lg sm:text-xl mb-8 text-green-100">
-            Informieren Sie sich über unsere neuesten Angebote und Dienstleistungen, indem Sie uns kontaktieren oder unsere Website regelmäßig besuchen. Wir sind hier, um Ihnen zu helfen und Ihre Fragen zu beantworten.
+            Werden Sie Teil unseres Netzwerks und nutzen Sie die Chance, Ihre Finanzprodukte einem breiten Publikum zu präsentieren. Kontaktieren Sie uns noch heute, um mehr über die Möglichkeiten einer Partnerschaft zu erfahren.
           </p>
-          {/* Button entfernt */}
+          <Link href="/kontakt">
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              Jetzt bewerben
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -117,8 +218,9 @@ export default function KontaktPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
+                <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
