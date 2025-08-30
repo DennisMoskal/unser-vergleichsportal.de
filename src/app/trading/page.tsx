@@ -7,6 +7,19 @@ import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
+// SmartFinanzLogo-Komponente
+const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <div className={`flex items-center space-x-1 ${className}`}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+        <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+        <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
+      </svg>
+      <span className="font-bold">martFinanz</span>
+    </div>
+  )
+}
+
 const providerData = {
   trading: [
     {
@@ -178,9 +191,8 @@ export default function Trading() {
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <TrendingUp className="h-8 w-8 text-green-600" />
-            <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
+          <div className="flex items-center">
+            <SmartFinanzLogo className="text-2xl text-gray-900" />
           </div>
           <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
