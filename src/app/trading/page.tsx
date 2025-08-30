@@ -43,7 +43,8 @@ const providerData = {
       logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc",
       metaTitle: "XTB Trading: Testsieger CFD-Broker 2025",
-      metaDescription: "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!"
+      metaDescription: "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!",
+      isTopRecommendation: true
     },
     {
       name: "LYNX",
@@ -51,7 +52,7 @@ const providerData = {
       features: [
         "Zugang zu über 100 Märkten in 30+ Ländern",
         "Handel mit US- und Eurex-Optionen",
-        "TWS Handelsplattform mit TradingView-Charts",
+        "TWS Handelsplatform mit TradingView-Charts",
         "Stop-Loss & Trailing-Stop Orders für alle Produkte",
         "Zinsen durch Aktienverleih",
         "Optionsprämien durch Verkauf von Optionen",
@@ -64,7 +65,8 @@ const providerData = {
       logo: "💹",
       url: "https://www.lynxbroker.de/",
       metaTitle: "LYNX Trading: Professionelle Handelsplattform für Anleger 2025",
-      metaDescription: "LYNX bietet Zugang zu über 100 Märkten, TWS Plattform mit TradingView-Charts und Optionenhandel. Jetzt Depot eröffnen und professionell traden!"
+      metaDescription: "LYNX bietet Zugang zu über 100 Märkten, TWS Plattform mit TradingView-Charts und Optionenhandel. Jetzt Depot eröffnen und professionell traden!",
+      isTopRecommendation: true
     },
     {
       name: "WEEX",
@@ -85,7 +87,8 @@ const providerData = {
       logo: "🔒",
       url: "https://weex.com/register?vipCode=0pika",
       metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
-      metaDescription: "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!"
+      metaDescription: "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!",
+      isTopRecommendation: true
     },
     {
       name: "Kraken",
@@ -123,7 +126,7 @@ const providerData = {
       price: "0,1% Taker Fee",
       bonus: "Willkommensbonus bis zu 5.000 USDT",
       logo: "⚡",
-      url: "/anbieter/bybit",
+      url: "https://www.bybit.eu/invite?ref=RME6DV2",
       metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage 2025",
       metaDescription: "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!"
     },
@@ -153,6 +156,13 @@ const providerData = {
 export default function Trading() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  // Sort providers: Top recommendations first, then others
+  const sortedProviders = [...providerData.trading].sort((a, b) => {
+    if (a.isTopRecommendation && !b.isTopRecommendation) return -1
+    if (!a.isTopRecommendation && b.isTopRecommendation) return 1
+    return 0
+  })
+
   return (
     <div className="min-h-screen bg-white">
       {/* Schema Markup for SEO */}
@@ -165,7 +175,7 @@ export default function Trading() {
           "url": "https://www.smartfinanz.de/trading",
           "mainEntity": {
             "@type": "ItemList",
-            "itemListElement": providerData.trading.map((provider, index) => ({
+            "itemListElement": sortedProviders.map((provider, index) => ({
               "@type": "ListItem",
               "position": index + 1,
               "item": {
@@ -213,11 +223,6 @@ export default function Trading() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Link href="/kontakt">
-              <Button className="hidden md:block bg-white text-green-600 border border-green-600 hover:bg-green-50">
-                Kontakt
-              </Button>
-            </Link>
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://link-pso.xtb.com/pso/lMDhc", "_blank")}>
               Vergleich starten
             </Button>
@@ -270,11 +275,6 @@ export default function Trading() {
               >
                 Kundenbewertungen
               </Link>
-              <Link href="/kontakt">
-                <Button className="w-full bg-white text-green-600 border border-green-600 hover:bg-green-50">
-                  Kontakt
-                </Button>
-              </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://link-pso.xtb.com/pso/lMDhc", "_blank")}>
                 Vergleich starten
               </Button>
@@ -282,15 +282,6 @@ export default function Trading() {
           </div>
         )}
       </header>
-
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
 
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
@@ -338,7 +329,7 @@ export default function Trading() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Testen Sie Plattformen wie XTB, LYNX oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren und die Plattform kennenzulernen, bevor Sie investieren.
+                  Testen Sie Plattformen Eltern wie XTB, LYNX oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren und die Plattform kennenzulernen, bevor Sie investieren.
                 </p>
               </CardContent>
             </Card>
@@ -351,11 +342,11 @@ export default function Trading() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Trading 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.trading.map((provider, index) => (
+            {sortedProviders.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "XTB" || provider.name === "LYNX" || provider.name === "WEEX") && (
+                {provider.isTopRecommendation && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "XTB" ? "Top Empfehlung" : provider.name === "LYNX" ? "Top Empfehlung" : "Top Empfehlung"}
+                    Top Empfehlung
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -490,15 +481,6 @@ export default function Trading() {
               <Link href="#anbieter">Testsieger vergleichen</Link>
             </Button>
           </div>
-        </div>
-      </section>
-
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
-            ← Zurück zur Startseite
-          </Link>
         </div>
       </section>
 
