@@ -21,12 +21,13 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
 
 export default function AgbPage() {
   return (
-    <div className="min-h-screen bg-white">
+   <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
+            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
           <div className="flex items-center space-x-4">
             <Link href="/kontakt">
