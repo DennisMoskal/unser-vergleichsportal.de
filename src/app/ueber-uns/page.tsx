@@ -39,8 +39,9 @@ export default function UeberUnsPage() {
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
+            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
           <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
@@ -260,7 +261,7 @@ export default function UeberUnsPage() {
             <li>Für uns ist dies die Basis für einen transparenten, kundenorientierten Service.</li>
           </ul>
           <p className="text-gray-600">
-            Unsere Vision seit 10 Jahren: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über us. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
+            Unsere Vision seit 10 Jahren: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über uns. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
           </p>
         </div>
       </section>
@@ -295,8 +296,9 @@ export default function UeberUnsPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
+                <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
