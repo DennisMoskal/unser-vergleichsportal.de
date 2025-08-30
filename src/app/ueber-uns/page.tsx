@@ -3,10 +3,22 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { TrendingUp } from "lucide-react"
+import { TrendingUp, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+
+// SmartFinanzLogo-Komponente
+const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <div className={`flex items-center space-x-1 ${className}`}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+        <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+        <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
+      </svg>
+      <span className="font-bold">martFinanz</span>
+    </div>
+  )
+}
 
 export default function UeberUnsPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -27,9 +39,8 @@ export default function UeberUnsPage() {
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <TrendingUp className="h-8 w-8 text-green-600" />
-            <h1 className="text-2xl font-bold text-gray-900">SmartFinanz</h1>
+          <div className="flex items-center">
+            <SmartFinanzLogo className="text-2xl text-gray-900" />
           </div>
           <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
@@ -249,7 +260,7 @@ export default function UeberUnsPage() {
             <li>Für uns ist dies die Basis für einen transparenten, kundenorientierten Service.</li>
           </ul>
           <p className="text-gray-600">
-            Unsere Vision seit 10 Jahren: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über uns. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
+            Unsere Vision seit 10 Jahren: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über us. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
           </p>
         </div>
       </section>
@@ -284,12 +295,11 @@ export default function UeberUnsPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <TrendingUp className="h-6 w-6 text-green-400" />
-                <h4 className="text-xl font-bold">SmartFinanz</h4>
+              <div className="flex items-center mb-4">
+                <SmartFinanzLogo className="text-xl" />
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Ihr vertrauensvoller Partner für Finanzvergleiche. Über 500 Anbieter, mehr als 100.000 zufriedene Kunden.
+                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
               </p>
               <div className="flex space-x-2">
                 <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
@@ -411,7 +421,7 @@ export default function UeberUnsPage() {
               { "@type": "Person", "name": "Thomas Weber", "jobTitle": "Finanzberater" },
               { "@type": "Person", "name": "Julia Schmidt", "jobTitle": "Tierversicherungsberaterin" },
               { "@type": "Person", "name": "David Fischer", "jobTitle": "Tradingexperte" },
-              { "@type": "Person", "name": "Vanessa Harksel", "jobTitle": "Technologieexpertin" }
+              { "@type": "Person", "name": "Saskia Schmidt", "jobTitle": "Technologieexpertin" }
             ],
             "sameAs": ["https://www.facebook.com/smartfinanz", "https://www.twitter.com/smartfinanz"]
           })
