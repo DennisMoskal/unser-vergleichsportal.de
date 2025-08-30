@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
+import { Star, Check, TrendingUp, Menu, X, Users, Globe, Handshake, Shield } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -103,8 +103,9 @@ export default function Banking() {
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
+            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
           <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
@@ -124,12 +125,18 @@ export default function Banking() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
+            <Link href="/kontakt">
+              <Button className="hidden md:block bg-white text-green-600 border border-green-600 hover:bg-green-50">
+                Kontakt
+              </Button>
+            </Link>
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
               Vergleich starten
             </Button>
             <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu öffnen/schließen"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -174,6 +181,11 @@ export default function Banking() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kundenbewertungen
+              </Link>
+              <Link href="/kontakt">
+                <Button className="w-full bg-white text-green-600 border border-green-600 hover:bg-green-50">
+                  Kontakt
+                </Button>
               </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
                 Vergleich starten
@@ -782,33 +794,14 @@ export default function Banking() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+    <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
-              </div>
-              <p className="text-gray-400 text-sm mb-4">
-                Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
-              </p>
-              <div className="flex space-x-2">
-                <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
-                  TÜV Zertifiziert
-                </Badge>
-              </div>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-3">Finanzprodukte</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/versicherungen" className="hover:text-white transition-colors">
-                    Versicherungsvergleich
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/banking" className="hover:text-white transition-colors">
-                    Girokonto & Kredite
+                <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
+              </div>rokonto & Kredite
                   </Link>
                 </li>
                 <li>
