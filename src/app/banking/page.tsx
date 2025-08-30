@@ -127,11 +127,6 @@ export default function Banking() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Link href="/kontakt">
-              <Button className="hidden md:block bg-white text-green-600 border border-green-600 hover:bg-green-50">
-                Kontakt
-              </Button>
-            </Link>
             <Button 
               className="hidden md:block bg-green-600 hover:bg-green-700"
               onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
@@ -187,11 +182,6 @@ export default function Banking() {
               >
                 Kundenbewertungen
               </Link>
-              <Link href="/kontakt">
-                <Button className="w-full bg-white text-green-600 border border-green-600 hover:bg-green-50">
-                  Kontakt
-                </Button>
-              </Link>
               <Button 
                 className="w-full bg-green-600 hover:bg-green-700"
                 onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
@@ -202,15 +192,6 @@ export default function Banking() {
           </div>
         )}
       </header>
-
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
 
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
@@ -757,15 +738,6 @@ export default function Banking() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Zurück zur Startseite */}
-      <section className="py-4 bg-white">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
-            ← Zurück zur Startseite
-          </Link>
         </div>
       </section>
 
