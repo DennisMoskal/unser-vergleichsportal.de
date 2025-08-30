@@ -120,8 +120,8 @@ export default function ImpressumPage() {
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
                 <strong>Versicherer:</strong><br />
-                Muster Versicherung AG<br />
-                Musterstraße 10, 80331 München<br />
+                andsafe Aktiengesellschaft<br />
+                Provinzial-Allee 1, 48159 Münster<br />
                 Deutschland
               </p>
               <p>
