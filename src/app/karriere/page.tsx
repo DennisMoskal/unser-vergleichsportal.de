@@ -1,9 +1,10 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Briefcase, Users, Star, Clock } from "lucide-react"
+import { Briefcase, Users, Star, Clock, TrendingUp, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { useState } from "react"
 import Link from "next/link"
 
 // SmartFinanzLogo-Komponente
@@ -20,22 +21,95 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
 }
 
 export default function KarrierePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
             <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
-          <div className="flex items-center space-x-4">
-            <Link href="/kontakt">
-              <Button className="bg-green-600 hover:bg-green-700">Kontakt</Button>
+          <nav className="hidden md:flex space-x-6">
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Versicherungen
             </Link>
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Banking
+            </Link>
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Tierversicherung
+            </Link>
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Trading
+            </Link>
+            <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Kundenbewertungen
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              Vergleich starten
+            </Button>
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu öffnen/schließen"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
-      </header> 
+
+        {/* Mobile Menü */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
+            <nav className="px-4 py-4 space-y-4">
+              <Link
+                href="/versicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Versicherungen
+              </Link>
+              <Link
+                href="/banking"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Banking
+              </Link>
+              <Link
+                href="/tierversicherungen"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Tierversicherung
+              </Link>
+              <Link
+                href="/trading"
+                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Trading
+              </Link>
+              <Link
+                href="#kundenbewertungen"
+                className="block text-gray-600 hover:text-green-600 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Kundenbewertungen
+              </Link>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+                Vergleich starten
+              </Button>
+            </nav>
+          </div>
+        )}
+      </header>
+
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl text-center">
@@ -214,17 +288,17 @@ export default function KarrierePage() {
                 <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
               </ul>
             </div>
-            </div>
-            <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-              <p className="text-sm text-gray-400 mb-4">
-                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-              </p>
-              <Link href="/">
-                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
-                  Zurück zur Startseite
-                </Button>
-              </Link>
-            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-sm text-gray-400 mb-4">
+              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+            </p>
+            <Link href="/">
+              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
+                Zurück zur Startseite
+              </Button>
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
