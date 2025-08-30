@@ -943,7 +943,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
-                <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
+               
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
