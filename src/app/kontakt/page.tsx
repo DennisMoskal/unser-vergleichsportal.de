@@ -191,7 +191,7 @@ export default function KontaktPage() {
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-gray-900">Wie können wir Ihnen helfen?</h3>
           <div className="text-gray-600 space-y-6">
             <p>
-              Bei SmartFinanz steht Ihre Zufriedenheit an erster Stelle. Egal, ob Sie Unterstützung bei der Auswahl eines Finanzproduktes, Informationen zu unseren Partnerprogrammen oder Fragen zu Karrieremöglichkeiten haben – unser Team in Bonn ist für Sie da. Wir bieten Ihnen fundierte Beratung in den Bereichen Versicherungen, Banking, Tierversicherungen und Trading.
+              Bei SmartFinanz steht Ihre Zufriedenheit an erster Stelle. Egal, ob Sie Unterstützung bei der Auswahl eines Finanzproduktes, Informationen zu unseren Partnerprogrammen oder Fragen zu Karrieremöglichkeiten haben – unser Team in Bonn ist für Sie da. Wir bieten Ihnen fundierte Beratung in vielen Bereichen des Lebens für bestmögliche Ergebnisse. 
             </p>
             <p>
               Für dringende Anfragen empfehlen wir unsere Telefon-Hotline, während E-Mail-Anfragen ideal für detaillierte Anliegen sind. Bitte beachten Sie unsere Öffnungszeiten, um eine schnelle Bearbeitung zu gewährleisten. Alternativ finden Sie auf unserer Website weitere Informationen zu unseren Dienstleistungen, einschließlich unserer unabhängigen Vergleichsangebote und Datenschutzrichtlinien.
