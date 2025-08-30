@@ -25,15 +25,17 @@ export default function KarrierePage() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
+            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
           <div className="flex items-center space-x-4">
-            {/* Button entfernt */}
+            <Link href="/kontakt">
+              <Button className="bg-green-600 hover:bg-green-700">Kontakt</Button>
+            </Link>
           </div>
         </div>
-      </header>
-
+      </header> 
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl text-center">
