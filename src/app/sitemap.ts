@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://smartfinanz.de'; // Ersetze mit deiner Domain
+  const baseUrl = 'https://smart-finanz.vercel.app'; // Ersetze mit deiner Domain
 
   // Statische Seiten
   const staticPages = [
