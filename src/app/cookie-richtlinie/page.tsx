@@ -119,10 +119,10 @@ export default function CookieRichtliniePage() {
                 Sie können Cookies auch über Ihre Browsereinstellungen verwalten:
               </p>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Google Chrome: Einstellungen > Datenschutz und Sicherheit > Cookies und andere Websitedaten</li>
-                <li>Mozilla Firefox: Einstellungen > Datenschutz & Sicherheit > Cookies und Website-Daten</li>
-                <li>Safari: Einstellungen > Datenschutz > Alle Cookies blockieren</li>
-                <li>Microsoft Edge: Einstellungen > Datenschutz, Suche und Dienste > Cookies verwalten</li>
+                <li>Google Chrome: Einstellungen &gt; Datenschutz und Sicherheit &gt; Cookies und andere Websitedaten</li>
+                <li>Mozilla Firefox: Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Cookies und Website-Daten</li>
+                <li>Safari: Einstellungen &gt; Datenschutz &gt; Alle Cookies blockieren</li>
+                <li>Microsoft Edge: Einstellungen &gt; Datenschutz, Suche und Dienste &gt; Cookies verwalten</li>
               </ul>
               <p>
                 Bitte beachten Sie, dass das Deaktivieren von Cookies die Funktionalität unserer Website beeinträchtigen kann.
@@ -203,8 +203,8 @@ export default function CookieRichtliniePage() {
         </div>
       </section>
 
-      {/* Call to action */}
-      <section className="py-12 dialectic sm:pyconfigs-16 bg-green-600 text-white">
+      {/* Call to Action */}
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-6">Ihre Privatsphäre schützen</h3>
           <p className="text-lg sm:text-xl mb-8 text-green-100">
