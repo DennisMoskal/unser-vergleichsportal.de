@@ -422,7 +422,7 @@ export default function Home() {
                     variant={selectedProduct === "strom" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                    aria-label="Strom vergleichen"
+                    aria-label="Stromvergleich"
                   >
                     Strom
                   </Button>
