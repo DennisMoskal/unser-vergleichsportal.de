@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://smart-finanz.vercel.app/sitemap.xml
+Sitemap: https://www.unser-vergleichsportal.de/sitemap.xml
