@@ -115,7 +115,7 @@ export default function AgbPage() {
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Allgemeine Geschäftsbedingungen (AGB)</h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
-            Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen der SmartFinanz GmbH, die für die Nutzung unserer Vergleichsdienste gelten. Bitte lesen Sie diese sorgfältig durch.
+            Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen der SmartFinanz, die für die Nutzung unserer Vergleichsdienste gelten. Bitte lesen Sie diese sorgfältig durch.
           </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
@@ -124,12 +124,12 @@ export default function AgbPage() {
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
-                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen der SmartFinanz GmbH, Westpreußenstraße 26, 53119 Bonn, Deutschland (nachfolgend „Anbieter“), vertreten durch den Geschäftsführer Dennis Moskal. Der Anbieter betreibt eine Online-Plattform für den Vergleich von Finanzprodukten wie Versicherungen, Girokonten, Kredite, Tierversicherungen und Krypto-Trading (nachfolgend „Plattform“). Kunde ist jede natürliche oder juristische Person, die die Plattform nutzt (nachfolgend „Kunde“). Abweichende oder ergänzende Bedingungen des Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt diesen ausdrücklich schriftlich zu.
+                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen der SmartFinanz, Westpreußenstraße 26, 53119 Bonn, Deutschland (nachfolgend „Anbieter“), vertreten durch den Geschäftsführer Dennis Moskal. Der Anbieter betreibt eine Online-Plattform für den Vergleich von Finanzprodukten wie Versicherungen, Girokonten, Kredite, Tierversicherungen und Krypto-Trading (nachfolgend „Plattform“). Kunde ist jede natürliche oder juristische Person, die die Plattform nutzt (nachfolgend „Kunde“). Abweichende oder ergänzende Bedingungen des Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt diesen ausdrücklich schriftlich zu.
               </p>
               <p>
                 <strong>Kontakt:</strong><br />
                 Telefon: <a href="tel:01722058855" className="text-green-600 hover:underline">0172 2058855</a><br />
-                E-Mail: <a href="mailto:dennismoskal@yahoo.com" className="text-green-600 hover:underline">dennismoskal@yahoo.com</a>
+                E-Mail: <a href="mailto:dennismoskal@yahoo.com" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>
               </p>
             </CardContent>
           </Card>
@@ -223,7 +223,7 @@ export default function AgbPage() {
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">https://ec.europa.eu/consumers/odr</a> erreichbar ist. Der Anbieter ist nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
               <p>
-                Für Beschwerden oder Anliegen wenden Sie sich bitte an: SmartFinanz GmbH, Westpreußenstraße 26, 53119 Bonn, E-Mail: <a href="mailto:dennismoskal@yahoo.com" className="text-green-600 hover:underline">dennismoskal@yahoo.com</a>.
+                Für Beschwerden oder Anliegen wenden Sie sich bitte an: SmartFinanz, Westpreußenstraße 26, 53119 Bonn, E-Mail: <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">dennismoskal@yahoo.com</a>.
               </p>
             </CardContent>
           </Card>
