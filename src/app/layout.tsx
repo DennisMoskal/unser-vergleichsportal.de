@@ -35,6 +35,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
+        <meta name="verification" content="f97e97c1e8f6cf5274f5d6d0cc18505c" />
         <Script
           crossOrigin="anonymous"
           src="//unpkg.com/same-runtime/dist/index.global.js"
