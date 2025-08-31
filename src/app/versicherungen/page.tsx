@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Star, Check, Menu, X, Users, Globe, Handshake, Shield, TrendingUp } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import Head from "next/head"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -187,6 +188,33 @@ export default function Versicherungen() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Head>
+        <title>Krankenzusatzversicherung & Zahnzusatzversicherung vergleichen | SmartFinanz</title>
+        <meta name="description" content="Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Haftpflichtversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
+        <meta name="keywords" content="Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-Versicherung, Hausratversicherung, Haftpflichtversicherung, Versicherungsvergleich, HanseMerkur" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="SmartFinanz" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Versicherungen vergleichen bei SmartFinanz",
+              "description": "Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Haftpflichtversicherungen. Sparen Sie mit unseren Testsiegern wie HanseMerkur bis zu 1.000€ jährlich.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "SmartFinanz",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "/favicon.svg"
+                }
+              }
+            }
+          `}
+        </script>
+      </Head>
+
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -207,7 +235,7 @@ export default function Versicherungen() {
             <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Trading
             </Link>
-            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/#二维码" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Kundenbewertungen
             </Link>
           </nav>
@@ -278,7 +306,7 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat- oder Haftpflichtversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat-, Haftpflicht-, Kranken- oder Zahnzusatzversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -302,7 +330,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Kfz-, Hausrat- oder Haftpflichtversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
+                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Kfz-, Hausrat-, Haftpflicht- oder Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -388,6 +416,110 @@ export default function Versicherungen() {
         </div>
       </section>
 
+      {/* Krankenzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h2>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Krankenzusatzversicherung</strong> ergänzt Ihre gesetzliche Krankenversicherung und bietet zusätzlichen Schutz für Leistungen, die nicht oder nur teilweise abgedeckt sind. Dazu gehören Behandlungen wie <strong>Chefarztbehandlung</strong>, <strong>Einzelzimmer im Krankenhaus</strong> oder <strong>alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong> interessant, die Zuschüsse für Sehhilfen bietet.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Krankenzusatzversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Kostenerstattung für Heilpraktikerbehandlungen und alternative Medizin.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Zuschüsse für Sehhilfen, Hörgeräte oder Lasik-Operationen.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Zugang zu exklusiven Krankenhausleistungen wie Chefarztbehandlung.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Flexible Tarife ohne lange Wartezeiten.</span>
+              </li>
+            </ul>
+            <p className="mb-6">
+              Anbieter wie <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" className="text-green-600 hover:underline">HanseMerkur Zusatzkrankenversicherung</a> bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer <strong>Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt HanseMerkur Krankenzusatzversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Zahnzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h2>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder <strong>professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was eine <strong>Zahnzusatzversicherung für Implantate</strong> oder <strong>Zahnprophylaxe</strong> besonders attraktiv macht.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Vorteile einer Zahnzusatzversicherung</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Bis zu 100% Kostenerstattung für Zahnersatz und Implantate.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Zuschüsse für professionelle Zahnreinigung und Vorsorge.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Keine oder kurze Wartezeiten für sofortigen Schutz.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Transparente Tarife mit einfacher Online-Verwaltung.</span>
+              </li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Wie wähle ich die richtige Zahnzusatzversicherung?</h3>
+            <p className="mb-4">
+              Achten Sie auf folgende Punkte:
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Implantate, Inlays oder Prophylaxe abgedeckt sind.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Wartezeiten</strong>: Wählen Sie Tarife ohne Wartezeit für schnellen Schutz.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Kostenerstattung</strong>: Tarife mit hohen Erstattungssätzen sparen Ihnen langfristig Geld.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Kundenbewertungen</strong>: Anbieter wie HanseMerkur punkten mit Top-Bewertungen (z. B. Stiftung Warentest 07/2025).</span>
+              </li>
+            </ul>
+            <p className="mb-6">
+              Die <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" className="text-green-600 hover:underline">HanseMerkur Zahnzusatzversicherung</a> bietet umfassenden Schutz ohne Wartezeit und bis zu 100% Kostenerstattung für Zahnersatz. Vergleichen Sie jetzt und sichern Sie sich den besten Tarif!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt HanseMerkur Zahnzusatzversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -437,13 +569,11 @@ export default function Versicherungen() {
                 <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
                 <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-                <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+                <li><a href="https://www.c24n/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
                 <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
                 <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
-                <li><a href="https://www.c
-
-24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
+                <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
               </ul>
             </div>
             <div>
