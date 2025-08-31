@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.unser-vergleichsportal.de'; // Neue Domain
+  const baseUrl = 'https://unser-vergleichsportal.de'; // Neue Domain
 
   // Statische Seiten
   const staticPages = [
