@@ -201,7 +201,7 @@ export default function UeberUnsPage() {
                 <CardTitle className="text-lg sm:text-xl font-semibold">Thomas Weber</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                <p className="mb-2">Seit 2015 dabei, bringt er 12 Jahre Banking-Expertise für Ihre finanziellen Pläne ein.</p>
+                <p className="mb-2">Seit 2015 dabei, bringt er 12 Jahre Finanz-Expertise für Ihre finanziellen Pläne ein.</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
