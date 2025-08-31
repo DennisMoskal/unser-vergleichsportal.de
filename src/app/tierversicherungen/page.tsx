@@ -864,6 +864,7 @@ export default function Tierversicherungen() {
             <div>
               <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
+                <span className="text-sm text-gray-400 mt-1">Unser-Vergleichsportal.de</span>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Ihr vertrauensvoller Partner für Finanzvergleiche in Deutschland. Über 500 geprüfte Anbieter, mehr als 100.000 zufriedene Kunden.
@@ -905,7 +906,7 @@ export default function Tierversicherungen() {
                 <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
                 <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-                <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+                <li><a href="https://www.c24n/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
                 <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
                 <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
@@ -951,6 +952,11 @@ export default function Tierversicherungen() {
             <p className="text-sm text-gray-400 mb-4">
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
+            <Link href="/">
+              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
+                Zurück zur Startseite
+              </Button>
+            </Link>
           </div>
         </div>
       </footer>
