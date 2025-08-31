@@ -1,1 +1,1 @@
-Sitemap: https://www.unser-vergleichsportal.de/sitemap.xml
+Sitemap: https://unser-vergleichsportal.de/sitemap.xml
