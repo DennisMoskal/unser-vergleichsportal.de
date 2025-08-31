@@ -30,15 +30,16 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        {/* ✅ Dein Google Verification Tag */}
+        {/* Impact Site Verification Tag */}
+        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+        {/* Google Verification Tag */}
         <meta
           name="google-site-verification"
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
         <meta name="verification" content="f97e97c1e8f6cf5274f5d6d0cc18505c" />
         <Script
-          crossOrigin="anonymous"
-          src="//unpkg.com/same-runtime/dist/index.global.js"
+          crossOrigin="anonymous  src="//unpkg.com/same-runtime/dist/index.global.js"
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
