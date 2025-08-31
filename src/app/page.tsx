@@ -219,7 +219,7 @@ export default function Home() {
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <link rel="canonical" href="https://smartfinanz.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" />
@@ -238,6 +238,9 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
         <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
         <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
+        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
+        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
+        <link rel="dns-prefetch" href="https://www.check24.de" />
       </Head>
       <div className="min-h-screen bg-white">
         {/* Header */}
@@ -347,6 +350,7 @@ export default function Home() {
                     variant={selectedProduct === "versicherung" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
+                    aria-label="Versicherungen vergleichen"
                   >
                     Versicherung
                   </Button>
@@ -354,6 +358,7 @@ export default function Home() {
                     variant={selectedProduct === "banking" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
+                    aria-label="Banking vergleichen"
                   >
                     Banking
                   </Button>
@@ -361,6 +366,7 @@ export default function Home() {
                     variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
+                    aria-label="Tierversicherungen vergleichen"
                   >
                     Tierversicherung
                   </Button>
@@ -368,6 +374,7 @@ export default function Home() {
                     variant={selectedProduct === "trading" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
+                    aria-label="Trading vergleichen"
                   >
                     Trading
                   </Button>
@@ -375,6 +382,7 @@ export default function Home() {
                     variant={selectedProduct === "dsl" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
+                    aria-label="DSL vergleichen"
                   >
                     DSL
                   </Button>
@@ -382,6 +390,7 @@ export default function Home() {
                     variant={selectedProduct === "handytarife" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
+                    aria-label="Handytarife vergleichen"
                   >
                     Handytarife
                   </Button>
@@ -389,6 +398,7 @@ export default function Home() {
                     variant={selectedProduct === "oekostrom" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
+                    aria-label="Ökostrom vergleichen"
                   >
                     Ökostrom
                   </Button>
@@ -396,6 +406,7 @@ export default function Home() {
                     variant={selectedProduct === "gas" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
+                    aria-label="Gas vergleichen"
                   >
                     Gas
                   </Button>
@@ -403,6 +414,7 @@ export default function Home() {
                     variant={selectedProduct === "reisen" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
+                    aria-label="Reisen vergleichen"
                   >
                     Reisen
                   </Button>
@@ -410,6 +422,7 @@ export default function Home() {
                     variant={selectedProduct === "strom" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                    aria-label="Strom vergleichen"
                   >
                     Strom
                   </Button>
@@ -417,6 +430,7 @@ export default function Home() {
                     variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                    aria-label="Kreditkarten vergleichen"
                   >
                     Kreditkarte
                   </Button>
@@ -424,6 +438,7 @@ export default function Home() {
                     variant={selectedProduct === "mietwagen" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
                     onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
+                    aria-label="Mietwagen vergleichen"
                   >
                     Mietwagen
                   </Button>
@@ -460,6 +475,7 @@ export default function Home() {
                         ? 'bg-green-600 text-white'
                         : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                     }`}
+                    aria-label={`Zu ${label} navigieren`}
                   >
                     {label}
                   </Link>
@@ -474,6 +490,7 @@ export default function Home() {
                         ? 'bg-green-600 text-white'
                         : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                     }`}
+                    aria-label={`${label} vergleichen (externer Link)`}
                   >
                     {label}
                   </a>
@@ -487,7 +504,7 @@ export default function Home() {
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h3>
-            <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+            <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} aria-label="Beste Finanzprodukte ansehen">
               Beste Empfehlungen ansehen
             </Button>
           </div>
@@ -498,19 +515,19 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
               <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Check className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
+                <Check className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
                 Geprüft & Sicher
               </Badge>
               <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
+                <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
                 TÜV Zertifiziert
               </Badge>
               <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Star className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
+                <Star className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
                 Top Empfohlen
               </Badge>
               <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Zap className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" />
+                <Zap className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
                 Blitzschnell
               </Badge>
             </div>
@@ -673,7 +690,7 @@ export default function Home() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-3 w-3 sm:h-4 quar w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                          className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
                           aria-hidden="true"
                         />
                       ))}
@@ -699,7 +716,7 @@ export default function Home() {
                         </ul>
                       </div>
                     </div>
-                    <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
                       <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
                         Zum Anbieter*
                       </Button>
@@ -731,7 +748,7 @@ export default function Home() {
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/images/kundenbewertungen/anna.jpg"
-                      alt="Kundenbewertung von Anna"
+                      alt="Kundenbewertung von Anna, 30"
                       width={80}
                       height={80}
                       loading="lazy"
@@ -755,6 +772,7 @@ export default function Home() {
                     variant="default"
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+                    aria-label="Jetzt Finanzprodukte vergleichen"
                   >
                     Jetzt vergleichen
                   </Button>
@@ -766,7 +784,7 @@ export default function Home() {
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/images/kundenbewertungen/markus.jpg"
-                      alt="Kundenbewertung von Markus"
+                      alt="Kundenbewertung von Markus, 42"
                       width={80}
                       height={80}
                       loading="lazy"
@@ -790,6 +808,7 @@ export default function Home() {
                     variant="default"
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+                    aria-label="Jetzt Finanzprodukte vergleichen"
                   >
                     Jetzt vergleichen
                   </Button>
@@ -801,7 +820,7 @@ export default function Home() {
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/images/kundenbewertungen/helga.jpg"
-                      alt="Kundenbewertung von Helga"
+                      alt="Kundenbewertung von Helga, 60"
                       width={80}
                       height={80}
                       loading="lazy"
@@ -825,6 +844,7 @@ export default function Home() {
                     variant="default"
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+                    aria-label="Jetzt Finanzprodukte vergleichen"
                   >
                     Jetzt vergleichen
                   </Button>
@@ -836,7 +856,7 @@ export default function Home() {
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/images/kundenbewertungen/lukas.jpg"
-                      alt="Kundenbewertung von Lukas"
+                      alt="Kundenbewertung von Lukas, 29"
                       width={80}
                       height={80}
                       loading="lazy"
@@ -860,6 +880,7 @@ export default function Home() {
                     variant="default"
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+                    aria-label="Jetzt Finanzprodukte vergleichen"
                   >
                     Jetzt vergleichen
                   </Button>
@@ -1019,22 +1040,22 @@ export default function Home() {
                 <h5 className="font-semibold mb-3">Finanzprodukte</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <Link href="/versicherungen" className="hover:text-white transition-colors">
+                    <Link href="/versicherungen" className="hover:text-white transition-colors" aria-label="Versicherungsvergleich">
                       Versicherungsvergleich
                     </Link>
                   </li>
                   <li>
-                    <Link href="/banking" className="hover:text-white transition-colors">
+                    <Link href="/banking" className="hover:text-white transition-colors" aria-label="Girokonto und Kredite">
                       Girokonto & Kredite
                     </Link>
                   </li>
                   <li>
-                    <Link href="/tierversicherungen" className="hover:text-white transition-colors">
+                    <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenversicherung">
                       Tierkrankenversicherung
                     </Link>
                   </li>
                   <li>
-                    <Link href="/trading" className="hover:text-white transition-colors">
+                    <Link href="/trading" className="hover:text-white transition-colors" aria-label="Online Broker Vergleich">
                       Online Broker Vergleich
                     </Link>
                   </li>
@@ -1043,36 +1064,36 @@ export default function Home() {
               <div>
                 <h5 className="font-semibold mb-3">Weitere Services</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
-                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
-                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
-                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mietwagen</a></li>
+                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="DSL Vergleich (externer Link)">DSL Vergleich</a></li>
+                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarife vergleichen (externer Link)">Handytarife</a></li>
+                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Stromvergleich (externer Link)">Stromvergleich</a></li>
+                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Gasvergleich (externer Link)">Gasvergleich</a></li>
+                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Reisen vergleichen (externer Link)">Reisen</a></li>
+                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Ökostrom vergleichen (externer Link)">Ökostrom</a></li>
+                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Kreditkarten vergleichen (externer Link)">Kreditkarte</a></li>
+                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Mietwagen vergleichen (externer Link)">Mietwagen</a></li>
                 </ul>
               </div>
               <div>
                 <h5 className="font-semibold mb-3">Unternehmen</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <Link href="/ueber-uns" className="hover:text-white transition-colors">
+                    <Link href="/ueber-uns" className="hover:text-white transition-colors" aria-label="Über uns">
                       Über uns
                     </Link>
                   </li>
                   <li>
-                    <Link href="/partnerprogramme" className="hover:text-white transition-colors">
+                    <Link href="/partnerprogramme" className="hover:text-white transition-colors" aria-label="Partnerprogramme">
                       Partnerprogramme
                     </Link>
                   </li>
                   <li>
-                    <Link href="/karriere" className="hover:text-white transition-colors">
+                    <Link href="/karriere" className="hover:text-white transition-colors" aria-label="Karriere">
                       Karriere
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kontakt" className="hover:text-white transition-colors">
+                    <Link href="/kontakt" className="hover:text-white transition-colors" aria-label="Kontakt">
                       Kontakt
                     </Link>
                   </li>
@@ -1081,10 +1102,10 @@ export default function Home() {
               <div>
                 <h5 className="font-semibold mb-3">Rechtliches</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
-                  <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
-                  <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
-                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors">Cookie-Richtlinie</Link></li>
+                  <li><Link href="/datenschutz" className="hover:text-white transition-colors" aria-label="Datenschutz">Datenschutz</Link></li>
+                  <li><Link href="/impressum" className="hover:text-white transition-colors" aria-label="Impressum">Impressum</Link></li>
+                  <li><Link href="/agb" className="hover:text-white transition-colors" aria-label="AGB">AGB</Link></li>
+                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors" aria-label="Cookie-Richtlinie">Cookie-Richtlinie</Link></li>
                 </ul>
               </div>
             </div>
@@ -1092,7 +1113,7 @@ export default function Home() {
               <p className="text-sm text-gray-400 mb-4">
                 © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
               </p>
-              <Link href="/">
+              <Link href="/" aria-label="Zurück zur Startseite">
                 <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
                   Zurück zur Startseite
                 </Button>
