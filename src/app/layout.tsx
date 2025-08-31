@@ -39,7 +39,8 @@ export default function RootLayout({
         />
         <meta name="verification" content="f97e97c1e8f6cf5274f5d6d0cc18505c" />
         <Script
-          crossOrigin="anonymous  src="//unpkg.com/same-runtime/dist/index.global.js"
+          crossOrigin="anonymous"
+          src="//unpkg.com/same-runtime/dist/index.global.js"
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
