@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X, Users, Globe, Handshake, Shield, TrendingUp } from "lucide-react"
+import { Star, Check, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -189,9 +189,9 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Krankenzusatzversicherung & Zahnzusatzversicherung vergleichen | SmartFinanz</title>
-        <meta name="description" content="Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Wohngebäudeversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
-        <meta name="keywords" content="Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-Versicherung, Hausratversicherung, Wohngebäudeversicherung, Versicherungsvergleich, Tarifcheck, HanseMerkur" />
+        <title>Wohngebäudeversicherung, Krankenzusatzversicherung & Zahnzusatzversicherung vergleichen | SmartFinanz</title>
+        <meta name="description" content="Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz- und Hausratversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern wie Tarifcheck und HanseMerkur!" />
+        <meta name="keywords" content="Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-Versicherung, Hausratversicherung, Versicherungsvergleich, Tarifcheck, HanseMerkur, Gebäudeversicherung, Hausversicherung" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
@@ -201,7 +201,7 @@ export default function Versicherungen() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Versicherungen vergleichen bei SmartFinanz",
-              "description": "Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Wohngebäudeversicherungen. Sparen Sie mit unseren Testsiegern wie Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
+              "description": "Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz- und Hausratversicherungen. Sparen Sie mit unseren Testsiegern wie Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
               "publisher": {
                 "@type": "Organization",
                 "name": "SmartFinanz",
@@ -306,14 +306,14 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat-, Haftpflicht-, Kranken- oder Wohngebäudeversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Kranken- oder Zahnzusatzversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
             >
-              Jetzt Versicherungen vergleichen
+              Jetzt Wohngebäudeversicherung vergleichen
             </Button>
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Kfz-, Hausrat-, Haftpflicht- oder Wohngebäudeversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
+                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Wohngebäude-, Kfz-, Hausrat-, Haftpflicht- oder Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -414,8 +414,71 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Krankenzusatzversicherung Section */}
+      {/* Wohngebäudeversicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h2>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Wohngebäudeversicherung</strong> ist für Hausbesitzer unverzichtbar, um Ihr Eigentum vor Schäden durch Feuer, Sturm, Hagel, Überschwemmung oder Vandalismus zu schützen. Sie deckt Reparatur-, Instandsetzungs- oder Wiederaufbaukosten für Ihr Haus und fest installierte Elemente wie Heizungsanlagen oder Einbauküchen ab. Mit einem <strong>Vergleich Wohngebäudeversicherung</strong> auf Plattformen wie Tarifcheck finden Sie maßgeschneiderte Tarife, die Ihren Bedürfnissen entsprechen und bis zu 500€ jährlich sparen können.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Wohngebäudeversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Schutz vor Elementarschäden wie Überschwemmungen oder Sturm.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Absicherung von Reparaturkosten bei Leitungswasser- oder Feuerschäden.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Flexible Bausteine für individuelle Bedürfnisse, z. B. Photovoltaik oder Vandalismus.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Kostenloser und unverbindlicher Vergleich für optimale Tarife.</span>
+              </li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">
+              Um die richtige <strong>Gebäudeversicherung</strong> zu finden, beachten Sie folgende Punkte:
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass die Versicherung den Wiederaufbauwert Ihres Hauses abdeckt.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Risiken</strong>: Wählen Sie Bausteine, die relevante Gefahren wie Elementarschäden oder Vandalismus abdecken.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Gleitender Neuwert</strong>: Nutzen Sie die gleitende Neuwertversicherung, um den Wert Ihres Hauses aktuell zu halten.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Kundenbewertungen</strong>: Anbieter wie Tarifcheck punkten mit Top-Bewertungen (z. B. Handelsblatt 09/2024).</span>
+              </li>
+            </ul>
+            <p className="mb-6">
+              Mit <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" className="text-green-600 hover:underline">Tarifcheck Wohngebäudeversicherung</a> vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt Wohngebäudeversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Krankenzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h2>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
@@ -456,7 +519,7 @@ export default function Versicherungen() {
       </section>
 
       {/* Zahnzusatzversicherung Section */}
-      <section className="py-12 sm:py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h2>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
