@@ -180,6 +180,24 @@ const providerData = [
     bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
     url: "https://www.verivox.de/versicherungen/"
+  },
+  {
+    name: "ROLAND Rechtsschutz",
+    rating: 4.8,
+    features: [
+      "Umfassender Schutz für Privat, Beruf und Verkehr",
+      "Mehrfacher Testsieger 'Fairster Leistungsregulierer' (Focus Money 2025)",
+      "60 Tage Widerrufsrecht für maximale Flexibilität",
+      "24/7 Schadenmeldung und telefonische Erstberatung",
+      "eKomi-Bewertung 4,9/5 für höchste Kundenzufriedenheit",
+      "Spezialtarife wie Manager- und Internet-Rechtsschutz",
+      "Kostenloser Datenleck-Check für Ihre Datensicherheit",
+      "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
+    ],
+    price: "ab 12,50€/Monat",
+    bonus: "Bis zu 70€ Empfehlungsbonus",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref="
   }
 ]
 
@@ -313,7 +331,7 @@ export default function Versicherungen() {
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
             >
-              Jetzt Versicherung vergleichen
+              Jetzt Wohngebäudeversicherung vergleichen
             </Button>
           </div>
         </div>
@@ -370,7 +388,8 @@ export default function Versicherungen() {
                  (index === 3 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hausratversicherung</Badge>) ||
                  (index === 4 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
                  (index === 5 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>) ||
-                 (index === 7 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Wohngebäudeversicherung</Badge>)}
+                 (index === 7 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Wohngebäudeversicherung</Badge>) ||
+                 (index === 9 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Rechtsschutzversicherung</Badge>)}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
