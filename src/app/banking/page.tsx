@@ -276,7 +276,7 @@ export default function Banking() {
           {/* DKB Seal 1 */}
           <div className="mb-6 text-center">
             <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2273778&v=11329&q=441826&r=2524533">
-              <img src="https://www.awin1.com/cshow.php?s=2273778&v=11329&q=441826&r=2524533" className="border-0 mx-auto" alt="DKB Banking Angebote" width="300" height="60" />
+              <img src="https://www.awin1.com/cshow.php?s=2273778&v=11329&q=441826&r=2524533" className="border-0 mx-auto" alt="DKB Banking Angebote" width="150" height="30" />
             </a>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -329,7 +329,7 @@ export default function Banking() {
           {/* DKB Seal 2 */}
           <div className="mt-6 text-center">
             <a rel="sponsored" href="https://www.awin1.com/cread.php?s=3035369&v=11329&q=441816&r=2524533">
-              <img src="https://www.awin1.com/cshow.php?s=3035369&v=11329&q=441816&r=2524533" className="border-0 mx-auto" alt="DKB Finanzprodukte" width="300" height="60" />
+              <img src="https://www.awin1.com/cshow.php?s=3035369&v=11329&q=441816&r=2524533" className="border-0 mx-auto" alt="DKB Finanzprodukte" width="150" height="30" />
             </a>
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
@@ -423,6 +423,17 @@ export default function Banking() {
                 </div>
               </div>
             </div>
+            <div className="text-center">
+              <a 
+                href="https://www.check24.de/kredit/" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Online Kredit berechnen lassen
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Tagesgeld Vergleich */}
@@ -456,6 +467,19 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+
+          {/* DKB Tagesgeldkonto Button */}
+          <div className="mb-12 text-center">
+            <a 
+              href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
+              target="_blank" 
+              rel="sponsored"
+            >
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                Jetzt kostenloses Konto eröffnen
+              </Button>
+            </a>
           </div>
 
           {/* Baufinanzierung */}
