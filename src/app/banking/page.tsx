@@ -276,7 +276,7 @@ export default function Banking() {
           {/* DKB Seal 1 */}
           <div className="mb-6 text-center">
             <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2273778&v=11329&q=441826&r=2524533">
-              <img src="https://www.awin1.com/cshow.php?s=2273778&v=11329&q=441826&r=2524533" border="0" alt="DKB Banking Angebote" />
+              <img src="https://www.awin1.com/cshow.php?s=2273778&v=11329&q=441826&r=2524533" className="border-0 mx-auto" alt="DKB Banking Angebote" width="300" height="60" />
             </a>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -329,7 +329,7 @@ export default function Banking() {
           {/* DKB Seal 2 */}
           <div className="mt-6 text-center">
             <a rel="sponsored" href="https://www.awin1.com/cread.php?s=3035369&v=11329&q=441816&r=2524533">
-              <img src="https://www.awin1.com/cshow.php?s=3035369&v=11329&q=441816&r=2524533" border="0" alt="DKB Finanzprodukte" />
+              <img src="https://www.awin1.com/cshow.php?s=3035369&v=11329&q=441816&r=2524533" className="border-0 mx-auto" alt="DKB Finanzprodukte" width="300" height="60" />
             </a>
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
