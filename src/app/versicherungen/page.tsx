@@ -147,22 +147,22 @@ const providerData = [
     url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
   },
   {
-    name: "finanzcheck.pro",
+    name: "Tarifcheck Wohngebäudeversicherung",
     rating: 4.6,
     features: [
-      "TÜV-geprüftes Kreditvergleichsportal seit 2012",
-      "Vergleich von über 20 Banken für Ratenkredite",
-      "Schufa-neutrale Anfrage für bessere Konditionen",
-      "Teil der Smava GmbH für vertrauensvolle Vermittlung",
-      "Dezente Bewerbung von Restschuldversicherungen",
-      "Kostenloser Vergleich für Kfz- und Hausratversicherungen",
-      "Bis zu 1.000€ Ersparnis durch Umschuldung",
-      "Kostenlose Beratung für Finanzoptimierung"
+      "Vergleich von über 200 Wohngebäudeversicherungen",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Schutz für Haus und Eigentum vor Feuer, Sturm und mehr",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Bis zu 500€ jährliche Ersparnis",
+      "Schneller Online-Abschluss in wenigen Minuten",
+      "Kostenlose Beratung für maßgeschneiderte Tarife"
     ],
     price: "100% kostenlos",
-    bonus: "Kostenlose Kreditanfrage",
-    logo: "🔍",
-    url: "/anbieter/finanzcheck-pro"
+    bonus: "Bis zu 500€ Ersparnis",
+    logo: "🏡",
+    url: "https://www.tarifcheck.com/xLfTPmG"
   },
   {
     name: "Verivox",
@@ -190,8 +190,8 @@ export default function Versicherungen() {
     <div className="min-h-screen bg-white">
       <Head>
         <title>Krankenzusatzversicherung & Zahnzusatzversicherung vergleichen | SmartFinanz</title>
-        <meta name="description" content="Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Haftpflichtversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
-        <meta name="keywords" content="Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-Versicherung, Hausratversicherung, Haftpflichtversicherung, Versicherungsvergleich, HanseMerkur" />
+        <meta name="description" content="Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Wohngebäudeversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
+        <meta name="keywords" content="Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-Versicherung, Hausratversicherung, Wohngebäudeversicherung, Versicherungsvergleich, Tarifcheck, HanseMerkur" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
@@ -201,7 +201,7 @@ export default function Versicherungen() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Versicherungen vergleichen bei SmartFinanz",
-              "description": "Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Haftpflichtversicherungen. Sparen Sie mit unseren Testsiegern wie HanseMerkur bis zu 1.000€ jährlich.",
+              "description": "Vergleichen Sie Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-, Hausrat- und Wohngebäudeversicherungen. Sparen Sie mit unseren Testsiegern wie Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
               "publisher": {
                 "@type": "Organization",
                 "name": "SmartFinanz",
@@ -235,7 +235,7 @@ export default function Versicherungen() {
             <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Trading
             </Link>
-            <Link href="/#二维码" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Kundenbewertungen
             </Link>
           </nav>
@@ -306,12 +306,12 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat-, Haftpflicht-, Kranken- oder Zahnzusatzversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Kfz-, Hausrat-, Haftpflicht-, Kranken- oder Wohngebäudeversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
-              onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
+              onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
             >
               Jetzt Versicherungen vergleichen
             </Button>
@@ -330,7 +330,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Kfz-, Hausrat-, Haftpflicht- oder Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
+                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Kfz-, Hausrat-, Haftpflicht- oder Wohngebäudeversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -340,7 +340,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Unsere Anbieter wie Tarifcheck.de und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
+                  Unsere Anbieter wie Tarifcheck und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
                 </p>
               </CardContent>
             </Card>
@@ -366,10 +366,11 @@ export default function Versicherungen() {
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(index === 0 || index === 1) && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge> ||
-                 (index === 2 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>) ||
+                 (index === 2 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
                  (index === 3 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hausratversicherung</Badge>) ||
                  (index === 4 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
-                 (index === 5 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>)}
+                 (index === 5 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>) ||
+                 (index === 7 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Wohngebäudeversicherung</Badge>)}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
@@ -398,10 +399,7 @@ export default function Versicherungen() {
                   </ul>
                   <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                      {index === 2 ? "Zum Anbieter*" : 
-                       index === 3 ? "Zum Anbieter*" :
-                       index === 4 ? "Zum Anbieter*" :
-                       index === 5 ? "Zum Anbieter*" : "Zum Anbieter*"}
+                      Zum Anbieter*
                     </Button>
                   </Link>
                 </CardContent>
@@ -569,7 +567,7 @@ export default function Versicherungen() {
                 <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
                 <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-                <li><a href="https://www.c24n/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+                <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
                 <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
                 <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
