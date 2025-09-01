@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp, Menu, X, Users, Globe, Handshake, Shield } from "lucide-react"
+import { Star, Check, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -38,6 +38,24 @@ const providerData = [
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
     url: "https://www.tarifcheck.de/girokonto/"
+  },
+  {
+    name: "DKB",
+    rating: 4.7,
+    features: [
+      "Kostenloses Girokonto mit 100€ Prämie (ab 700€ Geldeingang oder unter 28 Jahre)",
+      "Visa Kreditkarte ohne Jahresgebühr, weltweit kostenlos bezahlen",
+      "Tagesgeldkonto mit attraktiven Zinsen bis 3,5% p.a.",
+      "Nachhaltige Bank: Finanziererin erneuerbarer Energien",
+      "Online-Broker mit ETF-Sparplänen ab 1,90€ pro Trade",
+      "Kinderkonto für finanzielle Bildung der Jüngsten",
+      "Baufinanzierung mit flexiblen Konditionen und LBS-Bausparen",
+      "DKB-App: Sicher und mobil Bankgeschäfte erledigen"
+    ],
+    price: "100% kostenlos",
+    bonus: "100€ Prämie + 30€ Kreditkarten-Bonus",
+    logo: "🏦",
+    url: "https://www.awin1.com/awclick.php?gid=441815&mid=11329&awinaffid=2524533&linkid=2273909&clickref="
   },
   {
     name: "Credimaxx",
@@ -255,12 +273,18 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Banking</h2>
+          {/* DKB Seal 1 */}
+          <div className="mb-6 text-center">
+            <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2273778&v=11329&q=441826&r=2524533">
+              <img src="https://www.awin1.com/cshow.php?s=2273778&v=11329&q=441826&r=2524533" border="0" alt="DKB Banking Angebote" />
+            </a>
+          </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24") && (
+                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck.de" ? "Top Empfehlung" : "Top Empfehlung"}
+                    Top Empfehlung
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -292,7 +316,7 @@ export default function Banking() {
                   <a 
                     href={provider.url} 
                     target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                    rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
                       Zum Anbieter*
@@ -301,6 +325,12 @@ export default function Banking() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          {/* DKB Seal 2 */}
+          <div className="mt-6 text-center">
+            <a rel="sponsored" href="https://www.awin1.com/cread.php?s=3035369&v=11329&q=441816&r=2524533">
+              <img src="https://www.awin1.com/cshow.php?s=3035369&v=11329&q=441816&r=2524533" border="0" alt="DKB Finanzprodukte" />
+            </a>
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
             <p>
