@@ -313,7 +313,7 @@ export default function Versicherungen() {
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
             >
-              Jetzt Wohngebäudeversicherung vergleichen
+              Jetzt Versicherung vergleichen
             </Button>
           </div>
         </div>
