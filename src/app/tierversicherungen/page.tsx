@@ -288,7 +288,7 @@ export default function Tierversicherungen() {
       <Head>
         <title>Tierversicherung Vergleich 2025: Beste Hunde- & Katzenversicherung | SmartFinanz</title>
         <meta name="description" content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster!" />
-        <meta name="keywords" content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, hepster" />
+        <meta name="keywords" content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Hunde-OP-Versicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, hepster" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
@@ -424,7 +424,7 @@ export default function Tierversicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung 2025: Hundeversicherung & Katzenversicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und BavariaDirekt. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
+              Finden Sie die perfekte Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
             </p>
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Jetzt Tierversicherungen vergleichen
@@ -454,7 +454,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt und Figo bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
+                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt und hepster bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
                 </p>
               </CardContent>
             </Card>
@@ -613,25 +613,26 @@ export default function Tierversicherungen() {
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Grundschutz</h5>
                   <p className="text-sm text-gray-600">
-                    Katzenkrankenversicherung und Hunde OP Versicherung ab 12€/Monat (z. B. Lassie). Deckt Tierarztkosten für Krankheiten und Unfälle.
+                    Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. hepster). Deckt Tierarztkosten für Krankheiten und Unfälle.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Erweiterte Deckung</h5>
                   <p className="text-sm text-gray-600">
-                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
+                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, hepster). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Premium-Schutz</h5>
                   <p className="text-sm text-gray-600">
-                    Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo). Ideal für chronisch kranke Tiere.
+                    Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, hepster). Ideal für chronisch kranke Tiere.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              <Card className="border-2 hover:border-green-200">
+            <div className="grid gap-6 md:grid-cols-3">
+              <Card className="border-2 hover:border-green-200 relative">
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
                 <CardHeader>
                   <CardTitle>Uelzener Tierkrankenversicherung</CardTitle>
                 </CardHeader>
@@ -666,7 +667,8 @@ export default function Tierversicherungen() {
                   </Link>
                 </CardContent>
               </Card>
-              <Card className="border-2 hover:border-green-200">
+              <Card className="border-2 hover:border-green-200 relative">
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
                 <CardHeader>
                   <CardTitle>BavariaDirekt Tierkrankenversicherung</CardTitle>
                 </CardHeader>
@@ -697,6 +699,42 @@ export default function Tierversicherungen() {
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
                       Zum BavariaDirekt Angebot*
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              <Card className="border-2 hover:border-green-200 relative">
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hunde Krankenversicherung</Badge>
+                <CardHeader>
+                  <CardTitle>hepster Hunde-OP-Versicherung</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bis zu 100% Kostenübernahme für Operationen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Freie Tierarzt- und Klinikwahl
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Sofortschutz bei Unfällen ohne Wartezeit
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Stabiler Beitrag unabhängig vom Hundealter
+                    </li>
+                  </ul>
+                  <Link
+                    href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref="
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    onClick={() => console.log("Navigating to hepster Hunde-OP-Versicherung")}
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                      Jetzt hepster Hunde-OP-Versicherung abschließen*
                     </Button>
                   </Link>
                 </CardContent>
@@ -762,44 +800,6 @@ export default function Tierversicherungen() {
                   </Button>
                 </a>
               </div>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 mt-6">
-              <Card className="border-2 hover:border-green-200 relative">
-                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hunde Krankenversicherung</Badge>
-                <CardHeader>
-                  <CardTitle>hepster Hunde-OP-Versicherung</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 100% Kostenübernahme für Operationen
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Keine Wartezeiten für sofortigen Schutz
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Trusted Shops zertifiziert mit 4,6/5 Sternen
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Flexible Monats- oder Jahresabos
-                    </li>
-                  </ul>
-                  <a
-                    rel="sponsored"
-                    href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref="
-                    target="_blank"
-                    onClick={() => console.log("Navigating to hepster Hunde-OP-Versicherung")}
-                  >
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt hepster Hunde-OP-Versicherung abschließen*
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -875,7 +875,7 @@ export default function Tierversicherungen() {
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener bieten bis zu 100% Erstattung.
+                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener und hepster bieten bis zu 100% Erstattung.
                 </p>
               </div>
               <div>
@@ -946,7 +946,7 @@ export default function Tierversicherungen() {
                   <div>
                     <h5 className="font-semibold mb-2">Sparpotential:</h5>
                     <p className="text-sm text-gray-600">
-                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder Figo.
+                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder hepster.
                     </p>
                   </div>
                   <div className="bg-blue-50 p-3 rounded">
