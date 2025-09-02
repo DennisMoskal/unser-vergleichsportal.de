@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Head from "next/head"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -284,6 +285,33 @@ export default function Tierversicherungen() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Head>
+        <title>Tierversicherung Vergleich 2025: Beste Hunde- & Katzenversicherung | SmartFinanz</title>
+        <meta name="description" content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster!" />
+        <meta name="keywords" content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, hepster" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="SmartFinanz" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Tierversicherung Vergleich bei SmartFinanz",
+              "description": "Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung. Sparen Sie mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster bis zu 850€ jährlich.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "SmartFinanz",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "/favicon.svg"
+                }
+              }
+            }
+          `}
+        </script>
+      </Head>
+
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -675,6 +703,105 @@ export default function Tierversicherungen() {
               </Card>
             </div>
           </div>
+
+          {/* Hunde-OP-Versicherung */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung – Optimaler Schutz für Operationen mit hepster</h3>
+            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+              <p className="mb-4">
+                Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=" className="text-green-600 hover:underline">hepster Hunde-OP-Versicherung</a> sichern Sie Ihren Hund flexibel und digital ab – ohne Wartezeiten und mit bis zu 100% Kostenübernahme. hepster ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,6/5, 09/2025).
+              </p>
+              <h4 className="text-lg font-semibold mb-4">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Abdeckung von Operationskosten bis zu 100%.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Keine Wartezeiten für sofortigen Schutz.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Flexible Tarife mit Monats- oder Jahresabo.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>100% digitale Verwaltung für einfache Schadenmeldung.</span>
+                </li>
+              </ul>
+              <h4 className="text-lg font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h4>
+              <p className="mb-4">
+                Um die beste <strong>Hunde-OP-Versicherung</strong> zu finden, beachten Sie folgende Punkte:
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit) abgedeckt sind.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 100%) und ohne Selbstbeteiligung.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span><strong>Flexibilität</strong>: Tarife mit kurzen Laufzeiten sind ideal für wechselnde Bedürfnisse.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span><strong>Kundenbewertungen</strong>: hepster punktet mit Trusted Shops Zertifizierung und 4,6/5 Sternen.</span>
+                </li>
+              </ul>
+              <p className="mb-6">
+                Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=" className="text-green-600 hover:underline">hepster Hunde-OP-Versicherung</a> schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie den Tarif an Ihre Bedürfnisse an und profitieren Sie von einer einfachen Online-Verwaltung. Starten Sie jetzt und sichern Sie Ihren Vierbeiner optimal ab!
+              </p>
+              <div className="text-center">
+                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=" target="_blank">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                    Jetzt die hepster Hunde-OP-Versicherung online abschließen!*
+                  </Button>
+                </a>
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 mt-6">
+              <Card className="border-2 hover:border-green-200 relative">
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hunde Krankenversicherung</Badge>
+                <CardHeader>
+                  <CardTitle>hepster Hunde-OP-Versicherung</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bis zu 100% Kostenübernahme für Operationen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Keine Wartezeiten für sofortigen Schutz
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Trusted Shops zertifiziert mit 4,6/5 Sternen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Flexible Monats- oder Jahresabos
+                    </li>
+                  </ul>
+                  <a
+                    rel="sponsored"
+                    href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref="
+                    target="_blank"
+                    onClick={() => console.log("Navigating to hepster Hunde-OP-Versicherung")}
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
+                      Jetzt hepster Hunde-OP-Versicherung abschließen*
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -906,7 +1033,7 @@ export default function Tierversicherungen() {
                 <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DSL Vergleich</a></li>
                 <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Handytarife</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Stromvergleich</a></li>
-                <li><a href="https://www.c24n/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
+                <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gasvergleich</a></li>
                 <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Reisen</a></li>
                 <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Ökostrom</a></li>
                 <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kreditkarte</a></li>
