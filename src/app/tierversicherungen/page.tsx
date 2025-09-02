@@ -662,7 +662,7 @@ export default function Tierversicherungen() {
                     onClick={() => console.log("Navigating to Uelzener Tierkrankenversicherung")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt Tierkrankenversicherung abschließen*
+                      Jetzt Uelzener Tierkrankenversicherung abschließen*
                     </Button>
                   </Link>
                 </CardContent>
