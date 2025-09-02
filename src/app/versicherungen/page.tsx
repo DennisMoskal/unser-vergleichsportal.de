@@ -38,7 +38,8 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
-    url: "https://www.tarifcheck.de/girokonto/"
+    url: "https://www.tarifcheck.de/girokonto/",
+    badge: "Top Empfehlung"
   },
   {
     name: "CHECK24",
@@ -56,7 +57,8 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
-    url: "https://www.check24.de/versicherungen/"
+    url: "https://www.check24.de/versicherungen/",
+    badge: "Top Empfehlung"
   },
   {
     name: "InShared",
@@ -73,7 +75,8 @@ const providerData = [
     price: "ab 9,90€/Monat",
     bonus: "Geld-zurück-Garantie",
     logo: "🚗",
-    url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref="
+    url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref=",
+    badge: "Top Kfz-Versicherung"
   },
   {
     name: "AXA",
@@ -90,7 +93,8 @@ const providerData = [
     price: "ab 8,52€/Jahr",
     bonus: "Kostenloser Tarifrechner",
     logo: "🏠",
-    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref="
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref=",
+    badge: "Top Hausratversicherung"
   },
   {
     name: "BavariaDirekt",
@@ -107,7 +111,8 @@ const providerData = [
     price: "ab 9,70€/Monat",
     bonus: "Bis zu 350€ Ersparnis",
     logo: "🚘",
-    url: "https://www.awin1.com/awclick.php?gid=355334&mid=13884&awinaffid=2524533&linkid=2322280&clickref="
+    url: "https://www.awin1.com/awclick.php?gid=355334&mid=13884&awinaffid=2524533&linkid=2322280&clickref=",
+    badge: "Top Kfz-Versicherung"
   },
   {
     name: "HanseMerkur",
@@ -124,7 +129,27 @@ const providerData = [
     price: "ab 5€/Monat",
     bonus: "Kostenlose Erstberatung",
     logo: "🦷",
-    url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref="
+    url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=",
+    badge: "Top Zahnzusatzversicherung"
+  },
+  {
+    name: "hepster",
+    rating: 4.6,
+    features: [
+      "Flexible E-Bike- und Fahrradversicherungen ohne Selbstbeteiligung",
+      "100% digitale Buchung und Schadenmeldung",
+      "Monats- oder Jahresabo für maximale Flexibilität",
+      "Trusted Shops zertifiziert mit Top-Kundenbewertungen",
+      "Tierversicherungen für Katzen und Hunde",
+      "Reiseversicherungen mit kurzfristiger Buchung",
+      "Haftpflichtversicherung für Alltagsrisiken",
+      "Partnerschaften mit Helvetia und Europäische Reiseversicherung"
+    ],
+    price: "ab 3,99€/Monat",
+    bonus: "14 Tage kostenlos widerrufbar",
+    logo: "🚲",
+    url: "https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=",
+    badge: "Top Sachversicherung"
   },
   {
     name: "eRecht24",
@@ -144,7 +169,8 @@ const providerData = [
     price: "ab 20€/Monat",
     bonus: "Gratis Rechtscheck",
     logo: "⚖️",
-    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
+    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
+    badge: "Top Rechtsberatung"
   },
   {
     name: "Tarifcheck Wohngebäudeversicherung",
@@ -162,7 +188,8 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 500€ Ersparnis",
     logo: "🏡",
-    url: "https://www.tarifcheck.com/xLfTPmG"
+    url: "https://www.tarifcheck.com/xLfTPmG",
+    badge: "Top Wohngebäudeversicherung"
   },
   {
     name: "Verivox",
@@ -179,7 +206,8 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
-    url: "https://www.verivox.de/versicherungen/"
+    url: "https://www.verivox.de/versicherungen/",
+    badge: "Top Empfehlung"
   },
   {
     name: "ROLAND Rechtsschutz",
@@ -197,7 +225,27 @@ const providerData = [
     price: "ab 12,50€/Monat",
     bonus: "Bis zu 70€ Empfehlungsbonus",
     logo: "🛡️",
-    url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref="
+    url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
+    badge: "Top Rechtsschutzversicherung"
+  },
+  {
+    name: "TravelSecure",
+    rating: 4.7,
+    features: [
+      "Testsieger bei Stiftung Warentest (01/2025, Note 1,4)",
+      "Reiserücktritts- und Auslandskrankenversicherung für Einzelpersonen und Familien",
+      "Jahresreiseversicherung Reisekarte4you für Vielreisende",
+      "Spezialtarife für Work & Travel, Au-Pair und Studenten",
+      "Ski-Haftpflichtversicherung für Italien & Südtirol",
+      "Gruppenreiseversicherung ab 8 Personen ohne Altersbegrenzung",
+      "Beste Kundenhotline 2024 (Focus Money)",
+      "eKomi-Bewertung 4,3/5 für hohe Kundenzufriedenheit"
+    ],
+    price: "ab 6,90€/Jahr",
+    bonus: "Kostenlose Beratung",
+    logo: "✈️",
+    url: "https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=",
+    badge: "Top Auslandsreisekrankenversicherung"
   }
 ]
 
@@ -208,8 +256,8 @@ export default function Versicherungen() {
     <div className="min-h-screen bg-white">
       <Head>
         <title>Wohngebäudeversicherung, Krankenzusatzversicherung & Zahnzusatzversicherung vergleichen | SmartFinanz</title>
-        <meta name="description" content="Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz- und Hausratversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern wie Tarifcheck und HanseMerkur!" />
-        <meta name="keywords" content="Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz-Versicherung, Hausratversicherung, Versicherungsvergleich, Tarifcheck, HanseMerkur, Gebäudeversicherung, Hausversicherung" />
+        <meta name="description" content="Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz- und Hausratversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern wie hepster, TravelSecure, Tarifcheck und HanseMerkur!" />
+        <meta name="keywords" content="Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz-Versicherung, Hausratversicherung, Versicherungsvergleich, hepster, TravelSecure, Tarifcheck, HanseMerkur, Gebäudeversicherung, Hausversicherung" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
@@ -219,7 +267,7 @@ export default function Versicherungen() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Versicherungen vergleichen bei SmartFinanz",
-              "description": "Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Kfz- und Hausratversicherungen. Sparen Sie mit unseren Testsiegern wie Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
+              "description": "Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz- und Hausratversicherungen. Sparen Sie mit unseren Testsiegern wie hepster, TravelSecure, Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
               "publisher": {
                 "@type": "Organization",
                 "name": "SmartFinanz",
@@ -324,7 +372,7 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Kranken- oder Zahnzusatzversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie Tarifcheck bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Kranken-, Zahnzusatz-, E-Bike- oder Reiseversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und Verivox bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
@@ -348,7 +396,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Wohngebäude-, Kfz-, Hausrat-, Haftpflicht- oder Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
+                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Reise-, E-Bike- oder Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
                 </p>
               </CardContent>
             </Card>
@@ -358,7 +406,7 @@ export default function Versicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Unsere Anbieter wie Tarifcheck und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
+                  Unsere Anbieter wie hepster, TravelSecure, Tarifcheck und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf verifizierte Kundenmeinungen.
                 </p>
               </CardContent>
             </Card>
@@ -381,15 +429,9 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Versicherungen</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.map((provider, index) => (
+            {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(index === 0 || index === 1) && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge> ||
-                 (index === 2 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
-                 (index === 3 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hausratversicherung</Badge>) ||
-                 (index === 4 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Kfz-Versicherung</Badge>) ||
-                 (index === 5 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Zahnzusatzversicherung</Badge>) ||
-                 (index === 7 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Wohngebäudeversicherung</Badge>) ||
-                 (index === 9 && <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Rechtsschutzversicherung</Badge>)}
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">{provider.badge}</Badge>
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
@@ -429,6 +471,132 @@ export default function Versicherungen() {
             <p>
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* E-Bike-Versicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h2>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte. Besonders für teure E-Bikes ist eine Absicherung essenziell, um hohe Reparatur- oder Ersatzkosten zu vermeiden. Mit Anbietern wie <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" className="text-green-600 hover:underline">hepster</a> erhalten Sie flexible Tarife ohne Selbstbeteiligung und Altersbeschränkung, die sich an Ihren Bedarf anpassen.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine E-Bike-Versicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Schutz vor Diebstahl, auch bei unterwegs abgestellten E-Bikes.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Abdeckung von Reparaturkosten bei Unfällen oder Vandalismus.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Keine Selbstbeteiligung für geringere Eigenkosten.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Flexible Laufzeiten im Monats- oder Jahresabo.</span>
+              </li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">
+              Um die passende <strong>E-Bike-Versicherung</strong> zu finden, beachten Sie folgende Punkte:
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass der Wert Ihres E-Bikes vollständig abgedeckt ist.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Diebstahl, Unfallschäden und Batterie-Defekte eingeschlossen sind.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Flexibilität</strong>: Wählen Sie Tarife mit kurzen Laufzeiten für saisonale Nutzung.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Kundenbewertungen</strong>: Anbieter wie hepster sind Trusted Shops zertifiziert und punkten mit Top-Bewertungen.</span>
+              </li>
+            </ul>
+            <p className="mb-6">
+              Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" className="text-green-600 hover:underline">hepster E-Bike-Versicherung</a> sichern Sie Ihr E-Bike einfach online ab. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie die Versicherungsleistungen an und profitieren Sie von 100% digitaler Verwaltung. Starten Sie jetzt und schützen Sie Ihr E-Bike optimal!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt hepster E-Bike-Versicherung abschließen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reiseversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h2>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob Urlaub, Geschäftsreise oder Work & Travel – mit <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" className="text-green-600 hover:underline">TravelSecure</a> finden Sie maßgeschneiderte Tarife für Einzelpersonen, Familien, Gruppen oder junge Reisende. TravelSecure ist mehrfacher Testsieger bei Stiftung Warentest (01/2025, Note 1,4).
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Reiseversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Schutz vor Stornokosten bei Reiseabbruch oder -rücktritt.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Absicherung von Krankheitskosten im Ausland, inkl. Rücktransport.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Spezialtarife für Work & Travel, Au-Pair, Studenten oder Gruppen.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span>Jahresreiseversicherung für Vielreisende ohne Selbstbeteiligung.</span>
+              </li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">
+              Um die passende <strong>Reiseversicherung</strong> zu finden, beachten Sie folgende Punkte:
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Reiserücktritt, Reiseabbruch, Auslandskrankenversicherung oder Gepäckschutz enthalten sind.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Reisedauer</strong>: Wählen Sie Tarife für Kurzreisen (bis 56 Tage) oder Langzeitreisen (bis 365 Tage).</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Selbstbeteiligung</strong>: Entscheiden Sie sich für Tarife ohne Selbstbehalt für maximale Kostensicherheit.</span>
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <span><strong>Kundenbewertungen</strong>: TravelSecure punktet mit eKomi 4,3/5 und Focus Money „Beste Kundenhotline 2024“.</span>
+              </li>
+            </ul>
+            <p className="mb-6">
+              Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" className="text-green-600 hover:underline">TravelSecure Reiseversicherung</a> sichern Sie Ihre Reisen einfach online ab. Ob Jahresreiseversicherung Reisekarte4you oder Spezialtarife für Gruppen und junge Reisende – TravelSecure bietet flexible Lösungen für jeden Reiseanlass. Starten Sie jetzt und reisen Sie sorgenfrei!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt TravelSecure Reiseversicherung abschließen*
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
