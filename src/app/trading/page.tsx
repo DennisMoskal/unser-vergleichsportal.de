@@ -21,166 +21,101 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
 }
 
 const providerData = {
-  trading: [
-    {
-      name: "Moneta Markets",
-      rating: 4.5,
-      features: [
-        "Über 1000 Instrumente: Forex, CFDs, ETFs",
-        "PRIME ECN Spreads ab 0.0 Pips",
-        "Bis zu 1000:1 Leverage auf Gold",
-        "50% Cashback Bonus bei Einzahlung ab $500",
-        "Metatrader 4, Metatrader 5 & AppTrader",
-        "Ultra-schnelle Ausführung unter 15ms",
-        "Reguliert durch SLIBC und FSCA",
-        "Segregierte Konten bei AA-Rated Bank",
-        "Kostenloses Demo-Konto für risikofreies Trading",
-        "Erweiterte Tools: Premium Economic Calendar, AI Market Buzz"
-      ],
-      price: "0.0 Pips Spread",
-      bonus: "50% Cashback Bonus",
-      logo: "💸",
-      url: "https://www.monetamarkets.com/?affid=Nzc0MjU0OA==",
-      metaTitle: "Moneta Markets: Top Online Trading Plattform 2025",
-      metaDescription: "Moneta Markets bietet über 1000 Instrumente, Spreads ab 0.0 Pips, bis zu 1000:1 Leverage und 50% Cashback Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
-    },
+  defi: [
     {
       name: "XTB",
       rating: 4.5,
       features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
+        "Trade über 40 Krypto-CFDs (Bitcoin, Ethereum, etc.)",
         "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
+        "Bis zu 2,3% Zinsen auf Guthaben",
+        "Reguliert durch BaFin für maximale Sicherheit",
+        "Kostenloses Demo-Konto für risikofreies Trading",
+        "Smarte ETF- und Krypto-Sparpläne",
+        "eWallet mit virtueller Mastercard",
+        "24/7 Kundensupport in Deutsch",
+        "Krypto-Akademie für Einsteiger",
+        "Sichere Aufbewahrung mit Cold Storage"
       ],
       price: "0€ Kommission",
-      bonus: "Kostenlose Kontoeröffnung",
+      bonus: "Gratis Aktie für Neukunden",
       logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc",
-      metaTitle: "XTB Trading: Testsieger CFD-Broker 2025",
-      metaDescription: "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!",
-      isTopRecommendation: true
-    },
-    {
-      name: "WEEX",
-      rating: 4.6,
-      features: [
-        "Über 1.700 Handelspaare für Kryptowährungen",
-        "Bis zu 400x Leverage für Futures-Trading",
-        "1.000 BTC Schutzfonds für maximale Sicherheit",
-        "Durchschnittliches tägliches Handelsvolumen von 8,71 Mrd. USD",
-        "Bis zu 450.000 Transaktionen pro Sekunde",
-        "Verfügbar in über 130 Ländern weltweit",
-        "Regulierte Plattform mit globalen Lizenzen",
-        "5% Coupon bei Einzahlung für neue Nutzer",
-        "24/7 Kundensupport und benutzerfreundliche Oberfläche"
-      ],
-      price: "0,1% Taker Fee",
-      bonus: "5% Einzahlungs-Coupon",
-      logo: "🔒",
-      url: "https://weex.com/register?vipCode=0pika",
-      metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
-      metaDescription: "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!",
+      metaTitle: "XTB Krypto-Trading: Sicher Bitcoin handeln 2025",
+      metaDescription: "XTB bietet 0% Kommission, über 40 Krypto-CFDs und sichere Aufbewahrung für Bitcoin. Jetzt mit gratis Aktie starten!",
       isTopRecommendation: true
     },
     {
       name: "Kraken",
       rating: 4.6,
       features: [
-        "Über 480 Kryptowährungen zum Kaufen und Verkaufen",
-        "Niedrige Spreads und 0,16% Maker Fee",
-        "Wöchentliche Staking-Rewards mit über 800 Mio. € ausgezahlt",
-        "24/7 preisgekrönter Kundensupport",
-        "Kostenlose Euro-Einzahlungen via SEPA oder PayPal",
-        "Reguliert durch die Bermuda Monetary Authority",
+        "Über 480 Kryptowährungen, inkl. Bitcoin und Memecoins",
+        "Niedrige Gebühren: 0,16% Maker Fee",
+        "Wöchentliche Staking-Rewards für DeFi-Investoren",
+        "Reguliert durch Bermuda Monetary Authority",
+        "Kostenlose SEPA-Einzahlungen",
         "Hohe Liquidität für stabiles Trading",
-        "Krypto-Akademie für Einsteiger und Profis"
+        "Krypto-Akademie für DeFi und Bitcoin",
+        "Sichere Cold Wallets für Krypto-Aufbewahrung",
+        "24/7 preisgekrönter Support"
       ],
       price: "0,16% Maker Fee",
-      bonus: "Wöchentliche Staking-Rewards",
+      bonus: "Staking-Rewards",
       logo: "🐙",
       url: "https://www.kraken.com/de-de",
-      metaTitle: "Kraken Trading: Sichere Krypto-Plattform für Deutschland 2025",
-      metaDescription: "Kraken bietet über 480 Kryptowährungen, niedrige Gebühren und wöchentliche Staking-Rewards. Jetzt sicher traden!"
+      metaTitle: "Kraken: Sicheres DeFi- und Bitcoin-Trading 2025",
+      metaDescription: "Kraken bietet über 480 Kryptowährungen, Staking-Rewards und sichere Cold Wallets. Jetzt DeFi-Trading starten!",
+      isTopRecommendation: true
+    },
+    {
+      name: "Uniswap",
+      rating: 4.4,
+      features: [
+        "Leading DeFi protocol for decentralized trading",
+        "Swap Bitcoin, Ethereum, and memecoins instantly",
+        "No KYC required for wallet-based trading",
+        "Liquidity pools for earning DeFi rewards",
+        "Compatible with MetaMask and WalletConnect",
+        "Supports cross-chain bridging (e.g., Ethereum to Polygon)",
+        "Transparent fees (0,3% per swap)",
+        "Community-driven governance",
+        "Open-source and audited smart contracts"
+      ],
+      price: "0,3% Swap Fee",
+      bonus: "Liquidity Pool Rewards",
+      logo: "🦄",
+      url: "https://uniswap.org",
+      metaTitle: "Uniswap: Beste DeFi-Plattform für Krypto-Swaps 2025",
+      metaDescription: "Uniswap bietet dezentrales Trading für Bitcoin, Ethereum und Memecoins mit 0,3% Gebühren. Jetzt DeFi starten!"
     },
     {
       name: "Bybit",
       rating: 4.4,
       features: [
-        "Über 100 Kryptowährungen für Spot- und Derivate-Trading",
-        "Bis zu 100x Leverage für fortgeschrittene Trader",
-        "Niedrige Gebühren mit 0,1% Taker Fee",
-        "Intuitive Plattform mit fortschrittlichen Trading-Tools",
-        "Kostenlose Einzahlungen via SEPA oder Kreditkarte",
-        "24/7 mehrsprachiger Kundensupport",
-        "Bybit Learn für Krypto-Wissen und Strategien",
-        "Reguliert und sicher für globale Nutzer"
+        "Über 100 Kryptowährungen, inkl. Bitcoin und Memecoins",
+        "Bis zu 100x Leverage für Krypto-Trading",
+        "0,1% Taker Fee für Spot-Trading",
+        "Advanced tools for DeFi and futures trading",
+        "Kostenlose SEPA-Einzahlungen",
+        "Bybit Learn für DeFi- und Bitcoin-Strategien",
+        "24/7 mehrsprachiger Support",
+        "Secure hot and cold wallet storage"
       ],
       price: "0,1% Taker Fee",
-      bonus: "Willkommensbonus bis zu 5.000 USDT",
+      bonus: "Bis zu 5.000 USDT Bonus",
       logo: "⚡",
       url: "https://www.bybit.eu/invite?ref=RME6DV2",
-      metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage 2025",
-      metaDescription: "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!"
-    },
-    {
-      name: "eToro",
-      rating: 4.3,
-      features: [
-        "Social Trading mit CopyTrader™ für automatische Trades",
-        "Über 70 Kryptowährungen und 3.000+ Aktien/ETFs",
-        "Bis zu 4,3% Zinsen auf USD-Guthaben",
-        "Einlagen bis 100.000€ pro Bank geschützt",
-        "Reguliert durch BaFin und CySec",
-        "Kostenlose Euro-Einzahlungen ohne Umrechnungsgebühren",
-        "eToro-Akademie mit kostenlosen Kursen",
-        "Über 35 Mio. Nutzer weltweit"
-      ],
-      price: "1% Spread",
-      bonus: "Kostenloses Demo-Konto",
-      logo: "🌐",
-      url: "https://www.etoro.com/de/",
-      metaTitle: "eToro Trading: Social Trading für Krypto und Aktien 2025",
-      metaDescription: "eToro bietet Social Trading, über 70 Kryptowährungen und 3.000+ Aktien/ETFs. Jetzt mit kostenlosem Demo-Konto starten!"
-    },
-    {
-      name: "LYNX",
-      rating: 4.7,
-      features: [
-        "Zugang zu über 100 Märkten in 30+ Ländern",
-        "Handel mit US- und Eurex-Optionen",
-        "TWS Handelsplatform mit TradingView-Charts",
-        "Stop-Loss & Trailing-Stop Orders für alle Produkte",
-        "Zinsen durch Aktienverleih",
-        "Optionsprämien durch Verkauf von Optionen",
-        "24/7 Kundensupport und Premium-Newsletter",
-        "Maximale Individualisierung für Profi-Trader",
-        "Reguliert durch BaFin für sicheres Trading"
-      ],
-      price: "ab 5,80€/Order",
-      bonus: "Kostenloses Demo-Konto",
-      logo: "💹",
-      url: "https://www.lynxbroker.de/",
-      metaTitle: "LYNX Trading: Professionelle Handelsplattform für Anleger 2025",
-      metaDescription: "LYNX bietet Zugang zu über 100 Märkten, TWS Plattform mit TradingView-Charts und Optionenhandel. Jetzt Depot eröffnen und professionell traden!",
-      isTopRecommendation: false
+      metaTitle: "Bybit: Krypto-Trading mit Leverage und Memecoins 2025",
+      metaDescription: "Bybit bietet Bitcoin- und Memecoin-Trading mit bis zu 100x Leverage. Jetzt mit 5.000 USDT Bonus starten!"
     }
   ]
 }
 
-export default function Trading() {
+export default function DeFi() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  // Sort providers: Top recommendations first, then others
-  const sortedProviders = [...providerData.trading].sort((a, b) => {
+  // Sort providers: Top recommendations first
+  const sortedProviders = [...providerData.defi].sort((a, b) => {
     if (a.isTopRecommendation && !b.isTopRecommendation) return -1
     if (!a.isTopRecommendation && b.isTopRecommendation) return 1
     return 0
@@ -193,9 +128,9 @@ export default function Trading() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Beste Trading-Plattformen 2025 | SmartFinanz",
-          "description": "Vergleichen Sie die besten Trading-Plattformen für Krypto, CFDs und Aktien. Finden Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni mit Testsiegern wie Moneta Markets, XTB, und WEEX.",
-          "url": "https://www.smartfinanz.de/trading",
+          "name": "DeFi & Krypto-Trading 2025: Bitcoin, Memecoins & mehr | SmartFinanz",
+          "description": "Entdecken Sie die besten DeFi- und Krypto-Trading-Plattformen 2025 für Bitcoin, Memecoins und mehr. Vergleichen Sie XTB, Kraken, Uniswap und Bybit für sicheres Trading, Bridging und Staking.",
+          "url": "https://www.smartfinanz.de/defi",
           "mainEntity": {
             "@type": "ItemList",
             "itemListElement": sortedProviders.map((provider, index) => ({
@@ -310,12 +245,12 @@ export default function Trading() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Trading-Plattformen 2025: Ihr Weg zum Erfolg</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">DeFi & Krypto-Trading 2025: Bitcoin, Memecoins & mehr</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Entdecken Sie die besten Trading-Plattformen für Krypto, CFDs, Aktien und ETFs. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger wie Moneta Markets, XTB, und WEEX bieten 0% Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise zum erfolgreichen Trading!
+              Tauchen Sie ein in die Welt des DeFi-Marktes und Kryptowährungshandels! Vergleichen Sie die besten Plattformen für Bitcoin-Trading, Memecoins und Bridging. Unsere Testsieger wie <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="underline">XTB</a>, Kraken und Uniswap bieten niedrige Gebühren, sichere Wallets und DeFi-Funktionen wie Staking und Liquidity Pools. Starten Sie jetzt sicher mit Bitcoin und Memecoins!
             </p>
             <Button className="bg-white text-green-600 hover:bg-gray-100">
-              <Link href="#anbieter">Jetzt vergleichen</Link>
+              <Link href="#anbieter">Jetzt DeFi-Plattformen vergleichen</Link>
             </Button>
           </div>
         </div>
@@ -324,35 +259,41 @@ export default function Trading() {
       {/* Tipps zur Auswahl */}
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Wie wähle ich die beste Trading-Plattform?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Wie wähle ich die beste DeFi- und Krypto-Plattform?</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Vergleichen Sie Gebühren</CardTitle>
+                <CardTitle className="text-lg font-bold flex items-center">
+                  <Globe className="mr-2 h-5 w-5" /> Niedrige Gebühren
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei Moneta Markets und XTB oder ab 5,80€/Order bei LYNX, um Ihre Trading-Kosten zu minimieren. Prüfen Sie auch versteckte Kosten wie Spreads oder Einzahlungsgebühren.
+                  Achten Sie auf niedrige Trading-Gebühren wie 0% Kommission bei <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> oder 0,16% Maker Fee bei Kraken. Prüfen Sie Swap-Gebühren bei DeFi-Plattformen wie Uniswap (0,3%).
                 </p>
               </CardContent>
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Sicherheit und Regulierung</CardTitle>
+                <CardTitle className="text-lg font-bold flex items-center">
+                  <Shield className="mr-2 h-5 w-5" /> Sicherheit & Regulierung
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Wählen Sie regulierte Plattformen wie Moneta Markets (SLIBC, FSCA), LYNX (BaFin), eToro (BaFin, CySec) oder Kraken (Bermuda Monetary Authority) für sicheres Trading. Achten Sie auf Einlagensicherung und transparente Richtlinien.
+                  Wählen Sie regulierte Plattformen wie XTB (BaFin) oder Kraken (Bermuda Monetary Authority). Nutzen Sie sichere Wallets wie Cold Storage bei XTB für Bitcoin-Aufbewahrung.
                 </p>
               </CardContent>
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Demo-Konten nutzen</CardTitle>
+                <CardTitle className="text-lg font-bold flex items-center">
+                  <Users className="mr-2 h-5 w-5" /> Benutzerfreundlichkeit
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Testen Sie Plattformen wie Moneta Markets, XTB, LYNX oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren und die Plattform kennenzulernen, bevor Sie investieren.
+                  Für Anfänger sind Plattformen wie XTB und Uniswap ideal, dank intuitiver Oberflächen und Lernressourcen wie der Krypto-Akademie. Testen Sie mit Demo-Konten risikofrei.
                 </p>
               </CardContent>
             </Card>
@@ -363,7 +304,7 @@ export default function Trading() {
       {/* Anbieterübersicht */}
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Trading 2025</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für DeFi & Krypto-Trading 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider, index) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -409,9 +350,9 @@ export default function Trading() {
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
             <p>
-              CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
-              72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
-              Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+              Kryptowährungen sind volatile Instrumente und bergen ein hohes Risiko, schnell Geld zu verlieren. 
+              72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit Anbietern wie XTB. 
+              Sie sollten überlegen, ob Sie das Risiko eingehen können, Ihr Geld zu verlieren.
             </p>
             <p className="mt-4">
               *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
@@ -420,89 +361,175 @@ export default function Trading() {
         </div>
       </section>
 
-      {/* New FAQ Section */}
-      <section className="py-12 sm:py-16 bg-gray-50">
+      {/* DeFi & Krypto-Trading Guide */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Häufig gestellte Fragen zu Trading-Plattformen</h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Was ist die beste Trading-Plattform für Anfänger?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Für Anfänger empfehlen wir Plattformen wie Moneta Markets und eToro, die mit Social Trading (CopyTrader™) und einer benutzerfreundlichen Oberfläche überzeugen. Auch XTB bietet mit kostenlosen Demo-Konten und einer Krypto-Akademie einen einfachen Einstieg.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Welche Gebühren fallen beim Trading an?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Die Gebühren variieren je nach Plattform. Moneta Markets und XTB bieten 0% Kommission bis 100.000€ Umsatz, während Kraken eine Maker Fee von 0,16% berechnet. Achten Sie auf Spreads, Taker Fees und Ein-/Auszahlungsgebühren.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Wie sicher ist Krypto-Trading?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Krypto-Trading ist sicher, wenn Sie regulierte Plattformen wie Moneta Markets (SLIBC, FSCA), Kraken (Bermuda Monetary Authority) oder eToro (BaFin, CySec) nutzen. Achten Sie auf Einlagensicherung und Zwei-Faktor-Authentifizierung.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Was ist der Unterschied zwischen CFD- und Krypto-Trading?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  CFD-Trading (z.B. bei Moneta Markets, XTB) erlaubt spekulative Wetten auf Preisbewegungen ohne Besitz des Vermögenswerts, während Krypto-Trading (z.B. bei Kraken) den Kauf/Verkauf echter Kryptowährungen beinhaltet.
-                </p>
-              </CardContent>
-            </Card>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">DeFi & Krypto-Trading 2025: Ihr Weg zu Bitcoin, Memecoins & Bridging</h2>
+          <div className="prose max-w-4xl mx-auto">
+            <h3 className="text-xl font-bold mb-4 text-green-600">Was ist DeFi? Der dezentrale Finanzmarkt erklärt</h3>
+            <p className="text-gray-600 mb-4">
+              DeFi (Decentralized Finance) revolutioniert den Finanzmarkt durch Blockchain-Technologie. Anstelle zentraler Banken ermöglichen Smart Contracts auf Plattformen wie Ethereum oder Polygon direkte Transaktionen wie Kredite, Staking oder Swaps. Im Jahr 2025 hat der DeFi-Markt ein Total Value Locked (TVL) von über $150 Mrd. erreicht, mit Plattformen wie Uniswap und Aave an der Spitze. DeFi bietet:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Dezentrales Trading ohne Zwischenhändler
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Staking für passive Einkünfte (z. B. Kraken)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Liquidity Pools für hohe Renditen
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              Starten Sie mit <a href="https://uniswap.org" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Uniswap</a> für dezentrales Trading oder <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> für reguliertes Krypto-Trading.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4 text-green-600">Bitcoin-Trading: Sicher handeln mit XTB</h3>
+            <p className="text-gray-600 mb-4">
+              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 09/2025). Mit <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                0% Kommission bis 100.000€ Umsatz
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Sichere Aufbewahrung mit Cold Storage
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Bis zu 2,3% Zinsen auf Guthaben
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              <strong>Tipp:</strong> Nutzen Sie XTB’s Demo-Konto, um Bitcoin-Trading risikofrei zu testen. <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Jetzt Bitcoin sicher handeln</a>.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4 text-green-600">Bridging in DeFi: Kryptowährungen zwischen Blockchains bewegen</h3>
+            <p className="text-gray-600 mb-4">
+              Bridging ermöglicht den Transfer von Kryptowährungen (z. B. Bitcoin, Ethereum) zwischen Blockchains wie Ethereum, Polygon oder Binance Smart Chain. Dies ist essenziell für DeFi, da viele Protokolle auf spezifischen Chains laufen. Beispielsweise können Sie mit Uniswap’s Bridge-Feature Tokens von Ethereum zu Polygon transferieren.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Warum Bridging?</strong> Zugang zu niedrigeren Gasgebühren (z. B. Polygon) oder spezifischen DeFi-Protokollen.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Wie funktioniert’s?</strong> Nutzen Sie Bridges wie Polygon Bridge oder Anyswap, verbinden Sie Ihre Wallet (z. B. MetaMask) und transferieren Sie Tokens.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Risiken:</strong> Achten Sie auf vertrauenswürdige Bridges, um Hacks zu vermeiden. Prüfen Sie Audits der Smart Contracts.
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Nutzen Sie Plattformen wie Uniswap für sicheres Bridging ohne KYC. <a href="https://uniswap.org" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Jetzt Bridging starten</a>.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4 text-green-600">Memecoin-Trading: Die Rolle von Telegram-Bots</h3>
+            <p className="text-gray-600 mb-4">
+              Memecoins wie Dogecoin oder Shiba Inu sind im Jahr 2025 weiterhin ein Trend, besonders durch Telegram-Bots wie Banana Gun oder Maestro. Diese Bots ermöglichen schnelles Trading direkt über Telegram, ideal für volatile Memecoin-Märkte.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Vorteile von Telegram-Bots:</strong> Automatisiertes Sniper-Trading, Echtzeit-Preisalarme, direkte Wallet-Integration.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Beliebte Bots:</strong> Banana Gun (für Solana-Memecoins), Maestro (für Ethereum-basierte Coins).
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Risiken:</strong> Bots können teure Abos haben (ab $50/Monat) und erfordern technisches Wissen. Nutzen Sie nur verifizierte Bots.
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              <strong>Tipp:</strong> Kombinieren Sie Telegram-Bots mit Plattformen wie Bybit für Memecoin-Trading mit Leverage. <a href="https://www.bybit.eu/invite?ref=RME6DV2" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Jetzt Memecoins traden</a>.
+            </p>
+
+            <h3 className="text-xl font-bold mb-4 text-green-600">Sicher Kryptowährungen kaufen und aufbewahren mit XTB</h3>
+            <p className="text-gray-600 mb-4">
+              Sicherheit ist beim Krypto-Trading entscheidend. Mit <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> kaufen und lagern Sie Bitcoin sicher:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Kauf:</strong> Kaufen Sie Bitcoin-CFDs mit 0% Kommission und nutzen Sie die eWallet-Funktion.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Aufbewahrung:</strong> XTB nutzt Cold Storage für maximale Sicherheit Ihrer Coins.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Zwei-Faktor-Authentifizierung:</strong> Schützen Sie Ihr Konto vor unbefugtem Zugriff.
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              <strong>Sicherheits-Tipp:</strong> Verwenden Sie Hardware-Wallets wie Ledger für langfristige Bitcoin-Aufbewahrung und aktivieren Sie 2FA. <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Mit XTB sicher Bitcoin kaufen</a>.
+            </p>
+
+            <div className="text-center">
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                <Link href="#anbieter">Beste DeFi- und Krypto-Plattformen vergleichen</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* New Comparison Guide Section */}
-      <section className="py-12 sm:py-16 bg-white">
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Ihr Weg zur richtigen Trading-Plattform: Der ultimative Leitfaden</h2>
-          <div className="prose max-w-4xl mx-auto">
-            <p className="text-gray-600 mb-4">
-              Die Wahl der richtigen Trading-Plattform ist entscheidend für Ihren Erfolg als Investor. Ob Sie in Kryptowährungen, CFDs, Aktien oder ETFs investieren möchten – die Plattform muss zu Ihren Zielen, Ihrem Budget und Ihrem Erfahrungslevel passen. Unser Leitfaden hilft Ihnen, die besten Trading-Plattformen 2025 zu finden, basierend auf Gebühren, Sicherheit, und Funktionen.
-            </p>
-            <h3 className="text-xl font-bold mb-2">1. Definieren Sie Ihre Trading-Ziele</h3>
-            <p className="text-gray-600 mb-4">
-              Möchten Sie kurzfristig traden oder langfristig investieren? Für kurzfristiges Trading (z.B. Krypto oder CFDs) sind Plattformen wie Moneta Markets, Bybit oder Kraken ideal, während XTB und eToro für langfristige ETF- oder Aktieninvestitionen geeignet sind.
-            </p>
-            <h3 className="text-xl font-bold mb-2">2. Achten Sie auf Gebühren und Kosten</h3>
-            <p className="text-gray-600 mb-4">
-              Niedrige Gebühren sind essenziell. Moneta Markets und XTB bieten 0% Kommission bis 100.000€ Umsatz, während Bybit mit 0,1% Taker Fee punktet. Prüfen Sie auch Spreads und Einzahlungsgebühren, um versteckte Kosten zu vermeiden.
-            </p>
-            <h3 className="text-xl font-bold mb-2">3. Sicherheit und Regulierung prüfen</h3>
-            <p className="text-gray-600 mb-4">
-              Wählen Sie Plattformen, die durch Behörden wie SLIBC, FSCA (Moneta Markets), BaFin (LYNX, eToro) oder die Bermuda Monetary Authority (Kraken) reguliert sind. Dies gewährleistet Einlagensicherung und Transparenz.
-            </p>
-            <h3 className="text-xl font-bold mb-2">4. Testen Sie mit Demo-Konten</h3>
-            <p className="text-gray-600 mb-4">
-              Plattformen wie Moneta Markets, LYNX und eToro bieten kostenlose Demo-Konten, mit denen Sie risikofrei Handelsstrategien testen können. Dies ist besonders für Anfänger wichtig, um die Plattform kennenzulernen.
-            </p>
-            <h3 className="text-xl font-bold mb-2">5. Nutzen Sie Lernressourcen</h3>
-            <p className="text-gray-600 mb-4">
-              Viele Plattformen wie Moneta Markets (AI Market Buzz, Premium Economic Calendar), Kraken (Krypto-Akademie) oder eToro (eToro-Akademie) bieten Lernmaterialien für Einsteiger und Profis. Nutzen Sie diese, um Ihre Trading-Fähigkeiten zu verbessern.
-            </p>
-            <p className="text-gray-600 mb-4">
-              <strong>Fazit:</strong> Die besten Trading-Plattformen 2025 wie Moneta Markets, XTB, und WEEX bieten eine Kombination aus niedrigen Gebühren, hoher Sicherheit und benutzerfreundlichen Tools. Vergleichen Sie jetzt unsere Testsieger und starten Sie Ihre Trading-Reise!
-            </p>
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
-              <Link href="#anbieter">Testsieger vergleichen</Link>
-            </Button>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Häufig gestellte Fragen zu DeFi & Krypto-Trading</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Was ist der Unterschied zwischen DeFi und traditionellem Krypto-Trading?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  DeFi ermöglicht dezentrales Trading über Smart Contracts (z. B. Uniswap), während traditionelles Trading (z. B. XTB, Kraken) zentralisierte Börsen nutzt. DeFi bietet mehr Anonymität, hat aber höhere Gasgebühren.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Ist Bitcoin-Trading sicher?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Ja, mit regulierten Plattformen wie <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> (BaFin) oder Kraken. Nutzen Sie Cold Storage und 2FA für maximale Sicherheit.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Wie funktionieren Telegram-Bots für Memecoin-Trading?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Telegram-Bots wie Banana Gun automatisieren Memecoin-Trades, bieten Preisalarme und Wallet-Integration. Sie sind ideal für schnelle Trades, erfordern aber Vorsicht wegen Abokosten und Sicherheitsrisiken.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Was sind die Risiken beim Bridging?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Bridging birgt Risiken wie Smart-Contract-Hacks oder Gebührenverluste. Nutzen Sie geprüfte Bridges wie Polygon Bridge und überprüfen Sie Audits, z. B. bei Uniswap.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
