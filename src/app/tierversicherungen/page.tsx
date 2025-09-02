@@ -698,7 +698,7 @@ export default function Tierversicherungen() {
                     onClick={() => console.log("Navigating to BavariaDirekt Tierkrankenversicherung")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Zum BavariaDirekt Angebot*
+                      Jetzt BavariaDirekt Tierkrankenversicherung abschließen*
                     </Button>
                   </Link>
                 </CardContent>
