@@ -336,7 +336,7 @@ export default function Home() {
                 Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
               </h2>
               <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
-                Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
+                Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
               </p>
 
               {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
