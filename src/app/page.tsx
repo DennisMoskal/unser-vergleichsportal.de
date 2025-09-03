@@ -241,7 +241,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
         <link rel="dns-prefetch" href="https://www.check24.de" />
-        <meta name='impact-site-verification' value='f34232c9-40b1-4773-b281-9b596b88cd82' />
+        <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
         {/* Header */}
