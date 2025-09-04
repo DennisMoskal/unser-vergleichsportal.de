@@ -155,7 +155,7 @@ export default function KontaktPage() {
               <div>
                 <div className="flex items-center space-x-2 mb-2">
                   <Phone className="h-5 w-5 text-green-600" />
-                  <span>Telefon: +49 228 763 699 12</span>
+                  <span>Telefon: +49 172 2058855</span>
                 </div>
                 <p>Erreichbar Montag bis Freitag von 9:00 bis 17:00 Uhr.</p>
               </div>
