@@ -331,10 +331,10 @@ export default function Home() {
         </header>
 
         {/* Hero-Bereich */}
-        <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
+       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto text-center flex flex-col sm:flex-row items-center">
-              <div className="sm:w-1/3 mb-6 sm:mb-0 sm:mr-6" style={{ marginTop: '20px', marginLeft: '-20px' }}>
+              <div className="sm:w-1/3 mb-6 sm:mb-0 sm:mr-6" style={{ position: 'relative', top: '100px', left: '-100px' }}>
                 <Image
                   src="/images/Paar.jpg"
                   alt="Paar"
@@ -461,7 +461,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
           <div className="container mx-auto px-4">
