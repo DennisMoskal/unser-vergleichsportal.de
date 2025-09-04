@@ -241,6 +241,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
         <link rel="dns-prefetch" href="https://www.check24.de" />
+        <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
         {/* Header */}
@@ -332,10 +333,10 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
-                Finanzentscheidungen leicht gemacht? Lassen Sie uns das für Sie erledigen.
+                Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
               </h2>
               <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
-                Beantworten Sie ein paar Fragen. Erhalten Sie personalisierte Empfehlungen.
+                Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
               </p>
 
               {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
