@@ -183,28 +183,6 @@ const providerData: { [key: string]: Provider[] } = {
       logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc"
     }
-  ],
-  dsl: [
-    {
-      name: "Vodafone",
-      rating: 4.7,
-      features: [
-        "Kabel-Internet mit bis zu 1.000 Mbit/s",
-        "Schnelle und zuverlässige DSL-Verbindungen",
-        "Top Mobilfunk- und DSL-Anbieter",
-        "Besondere Angebote für Selbständige zu Top-Preisen",
-        "Flexible Tarife für Privat- und Geschäftskunden",
-        "Kostenloser WLAN-Router bei vielen Tarifen",
-        "Hohe Netzabdeckung in Deutschland",
-        "24/7 Kundensupport",
-        "Kombi-Vorteile mit Mobilfunk und Festnetz",
-        "Schnelle Installation und Einrichtung"
-      ],
-      price: "ab 9,99€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "📡",
-      url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
-    }
   ]
 }
 
@@ -225,7 +203,7 @@ export default function Home() {
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
     const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading", "dsl"].includes(hash)) {
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -263,8 +241,6 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
         <link rel="dns-prefetch" href="https://www.check24.de" />
-        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-        <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
         {/* Header */}
@@ -285,9 +261,6 @@ export default function Home() {
               </Link>
               <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Trading
-              </Link>
-              <Link href="/dsl" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                DSL
               </Link>
               <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Kundenbewertungen
@@ -338,13 +311,6 @@ export default function Home() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Trading
-                </Link>
-                <Link
-                  href="/dsl"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  DSL
                 </Link>
                 <Link
                   href="#kundenbewertungen"
@@ -502,7 +468,7 @@ export default function Home() {
                 { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
                 { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
                 { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
-                { key: 'dsl', label: 'DSL', url: '/dsl', isInternal: true },
+                { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
                 { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
                 { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
                 { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
@@ -722,31 +688,11 @@ export default function Home() {
                   bonus: "Bis zu 250€ Bonus",
                   logo: "🏦",
                   url: "https://www.check24.de/girokonto/"
-                },
-                {
-                  name: "Vodafone",
-                  rating: 4.7,
-                  features: [
-                    "Kabel-Internet mit bis zu 1.000 Mbit/s",
-                    "Schnelle und zuverlässige DSL-Verbindungen",
-                    "Top Mobilfunk- und DSL-Anbieter",
-                    "Besondere Angebote für Selbständige zu Top-Preisen",
-                    "Flexible Tarife für Privat- und Geschäftskunden",
-                    "Kostenloser WLAN-Router bei vielen Tarifen",
-                    "Hohe Netzabdeckung in Deutschland",
-                    "24/7 Kundensupport",
-                    "Kombi-Vorteile mit Mobilfunk und Festnetz",
-                    "Schnelle Installation und Einrichtung"
-                  ],
-                  price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 100€ Startguthaben",
-                  logo: "📡",
-                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
                   <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
-                    {provider.name === "Vodafone" ? "Top Mobilfunk & DSL Anbieter" : "Top Empfehlung"}
+                    Top Empfehlung
                   </Badge>
                   <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
                     <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
@@ -782,16 +728,9 @@ export default function Home() {
                       </div>
                     </div>
                     <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
-                      {provider.name === "Vodafone" ? (
-                        <>
-                          Kabel-Internet mit bis zu 1.000 Mbit/s
-                          <img src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T" alt="" border="0" width="0" height="0" />
-                        </>
-                      ) : (
-                        <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                          Zum Anbieter*
-                        </Button>
-                      )}
+                      <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                        Zum Anbieter*
+                      </Button>
                     </a>
                   </CardContent>
                 </Card>
@@ -1131,16 +1070,12 @@ export default function Home() {
                       Online Broker Vergleich
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/dsl" className="hover:text-white transition-colors" aria-label="DSL Vergleich">
-                      DSL Vergleich
-                    </Link>
-                  </li>
                 </ul>
               </div>
               <div>
                 <h5 className="font-semibold mb-3">Weitere Services</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="DSL Vergleich (externer Link)">DSL Vergleich</a></li>
                   <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarife vergleichen (externer Link)">Handytarife</a></li>
                   <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Stromvergleich (externer Link)">Stromvergleich</a></li>
                   <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Gasvergleich (externer Link)">Gasvergleich</a></li>
