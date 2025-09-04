@@ -330,23 +330,21 @@ export default function Home() {
 
         {/* Hero-Bereich */}
         <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
-          <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
-            {/* Bild links mittig */}
-            <div className="w-full sm:w-1/3 flex justify-center">
-              <Image
-                src="/images/Paar.jpg"
-                alt="Zwei Personen am Laptop"
-                width={360}
-                height={240}
-                className="object-contain"
-              />
-            </div>
-            {/* Interaktives Widget in der Mitte */}
-            <div className="w-full sm:w-1/3 max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900">
+          <div className="container mx-auto">
+            <div className="max-w-6xl mx-auto text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
+                Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
+              </h2>
+              <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
+                Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
+              </p>
+
+              {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
+              <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
                 <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                   Nach welchem Produkt oder Service suchen Sie?
                 </h3>
+
                 {/* Grid für 12 Buttons - responsive Layout */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
                   <Button
@@ -680,26 +678,6 @@ export default function Home() {
                   bonus: "Bis zu 250€ Bonus",
                   logo: "🏦",
                   url: "https://www.check24.de/girokonto/"
-                },
-                {
-                  name: "Vodafone",
-                  rating: 4.6,
-                  features: [
-                    "Breites Mobilfunk-Angebot",
-                    "Schnelles 5G-Netz",
-                    "Flexible Tarifoptionen",
-                    "Kostenlose Hotline",
-                    "GigaKombi-Tarife",
-                    "Keine Vertragsbindung",
-                    "Top-Kundenservice",
-                    "Daten-Flatrate",
-                    "Zusätzliche Rabatte für Neukunden",
-                    "Kostenloses Upgrade bei Verlängerung"
-                  ],
-                  price: "ab 19,99€/Monat",
-                  bonus: "Gratis Smartphone bei Vertrag",
-                  logo: "📱",
-                  url: "https://www.vodafone.de/"
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
