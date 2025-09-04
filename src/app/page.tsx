@@ -241,6 +241,8 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
         <link rel="dns-prefetch" href="https://www.check24.de" />
+        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
+        <link rel="dns-prefetch" href="https://www.awin1.com" />
         <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
@@ -678,6 +680,66 @@ export default function Home() {
                   bonus: "Bis zu 250€ Bonus",
                   logo: "🏦",
                   url: "https://www.check24.de/girokonto/"
+                },
+                {
+                  name: "Vodafone",
+                  rating: 4.6,
+                  features: [
+                    "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
+                    "Günstige Mobilfunktarife mit 5G-Unterstützung",
+                    "Spezielle Angebote für Selbstständige und Geschäftskunden",
+                    "Kombi-Vorteile für DSL und Mobilfunk",
+                    "Kostenloser WLAN-Router bei Vertragsabschluss",
+                    "Flexibles Streaming mit GigaTV",
+                    "24/7 Kundenhotline für schnellen Support",
+                    "Bis zu 100€ Startguthaben für Neukunden",
+                    "Schnelle Installation und Einrichtung",
+                    "Testsieger für Kundenservice (connect 2025)"
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 100€ Startguthaben",
+                  logo: "📡",
+                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
+                },
+                {
+                  name: "1&1",
+                  rating: 4.7,
+                  features: [
+                    "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
+                    "Testsieger für Internetgeschwindigkeit (connect 2025)",
+                    "Kostenloser HomeServer für optimales WLAN",
+                    "Spezielle Angebote für Selbstständige und Firmen",
+                    "Kombi-Vorteile mit Mobilfunktarifen",
+                    "30 Tage Testphase für alle Tarife",
+                    "Bis zu 50€ Startguthaben für junge Kunden",
+                    "24h Austausch-Service bei Defekten",
+                    "Umfassender Umzugsservice",
+                    "Attraktive Bundle-Angebote mit Smartphones"
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 50€ Startguthaben",
+                  logo: "🌐",
+                  url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref="
+                },
+                {
+                  name: "Verivox",
+                  rating: 4.9,
+                  features: [
+                    "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
+                    "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
+                    "Spezielle Angebote für Selbstständige und Unternehmen",
+                    "TÜV-geprüftes Vergleichsportal mit 4.9/5 Bewertung",
+                    "Bis zu 200€ Prämie für Freundschaftswerbung",
+                    "Kostenloser Wechselservice für Tarife",
+                    "Transparente Tarifübersicht in der Verivox-App",
+                    "Schneller Online-Abschluss für Versicherungen",
+                    "Über 25 Jahre Erfahrung im Vergleichsmarkt",
+                    "Bis zu 1.000€ jährliche Einsparungen möglich"
+                  ],
+                  price: "100% kostenlos",
+                  bonus: "Bis zu 200€ Prämie",
+                  logo: "🏠",
+                  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
@@ -719,7 +781,11 @@ export default function Home() {
                     </div>
                     <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
                       <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                        Zum Anbieter*
+                        {provider.name === "Vodafone" ? "Kabel-Internet mit bis zu 1.000 MBit/s" : 
+                         provider.name === "1&1" ? "1und1 Highspeed DSL Tarife" : 
+                         provider.name === "Verivox" ? "Wohngebäudeversicherungen bei VERIVOX!" : 
+                         "Zum Anbieter*"}
+                        {provider.name === "Vodafone" && <img src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T" alt="" border="0" width="0" height="0" />}
                       </Button>
                     </a>
                   </CardContent>
