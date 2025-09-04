@@ -329,7 +329,7 @@ export default function Home() {
         </header>
 
         {/* Hero-Bereich */}
-        <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
+          <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
@@ -341,11 +341,28 @@ export default function Home() {
 
               {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
               <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
-                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
-                  Nach welchem Produkt oder Service suchen Sie?
-                </h3>
+                {/* Flexbox Container für Bild und Suchbereich */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                  {/* Bild links zentriert */}
+                  <div className="flex-shrink-0 sm:order-1 order-2">
+                    <Image
+                      src="/images/Paar.jpg"
+                      alt="Glückliches Paar bei der Finanzberatung"
+                      width={360}
+                      height={240}
+                      className="rounded-lg shadow-lg"
+                      loading="lazy"
+                    />
+                  </div>
 
-                {/* Grid für 12 Buttons - responsive Layout */}
+                  {/* Suchbereich rechts */}
+                  <div className="flex-grow sm:order-2 order-1 w-full">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
+                      Nach welchem Produkt oder Service suchen Sie?
+                    </h3>
+
+
+               {/* Grid für 12 Buttons - responsive Layout */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
                   <Button
                     variant={selectedProduct === "versicherung" ? "default" : "outline"}
