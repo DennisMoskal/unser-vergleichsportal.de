@@ -359,7 +359,7 @@ export default function KontaktPage() {
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+4922876369912",
+                  "telephone": "+491722058855",
                   "contactType": "Kundenservice",
                   "email": "info@unser-vergleichsportal.de",
                   "availableLanguage": "Deutsch",
