@@ -329,7 +329,7 @@ export default function Home() {
         </header>
 
         {/* Hero-Bereich */}
-       "use client"
+        "use client"
 
 import Head from "next/head"
 import { Button } from "@/components/ui/button"
