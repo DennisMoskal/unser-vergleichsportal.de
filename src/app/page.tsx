@@ -4,9 +4,8 @@ import Head from "next/head"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Shield, Check, Star, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -112,7 +111,6 @@ const providerData: { [key: string]: Provider[] } = {
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
       ],
       price: "0€ Kommission",
@@ -175,13 +173,34 @@ const providerData: { [key: string]: Provider[] } = {
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
       ],
       price: "0€ Kommission",
       bonus: "Demo-Konto",
       logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc"
+    }
+  ],
+  dsl: [
+    {
+      name: "Vodafone",
+      rating: 4.7,
+      features: [
+        "Kabel-Internet mit bis zu 1.000 Mbit/s",
+        "Schnelle und zuverlässige DSL-Verbindungen",
+        "Top Mobilfunk- und DSL-Anbieter",
+        "Besondere Angebote für Selbständige zu Top-Preisen",
+        "Flexible Tarife für Privat- und Geschäftskunden",
+        "Kostenloser WLAN-Router bei vielen Tarifen",
+        "Hohe Netzabdeckung in Deutschland",
+        "24/7 Kundensupport",
+        "Kombi-Vorteile mit Mobilfunk und Festnetz",
+        "Schnelle Installation und Einrichtung"
+      ],
+      price: "ab 9,99€/Monat",
+      bonus: "Bis zu 100€ Startguthaben",
+      logo: "📡",
+      url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
     }
   ]
 }
@@ -202,8 +221,8 @@ export default function Home() {
 
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
-    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+    const hash = window.location.hash.substring(1)
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading", "dsl"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -241,6 +260,8 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
         <link rel="dns-prefetch" href="https://www.check24.de" />
+        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
+        <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
         {/* Header */}
@@ -262,6 +283,9 @@ export default function Home() {
               <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Trading
               </Link>
+              <Link href="/dsl" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                DSL
+              </Link>
               <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Kundenbewertungen
               </Link>
@@ -279,8 +303,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-
-          {/* Mobile Menü */}
           {mobileMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
               <nav className="px-4 py-4 space-y-4" aria-label="Mobiles Menü">
@@ -311,6 +333,13 @@ export default function Home() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Trading
+                </Link>
+                <Link
+                  href="/dsl"
+                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  DSL
                 </Link>
                 <Link
                   href="#kundenbewertungen"
@@ -347,14 +376,10 @@ export default function Home() {
                 <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto sm:mx-0">
                   Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
                 </p>
-
-                {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
                 <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto sm:mx-0">
                   <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                     Nach welchem Produkt oder Service suchen Sie?
                   </h3>
-
-                  {/* Grid für 12 Buttons - responsive Layout */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
                     <Button
                       variant={selectedProduct === "versicherung" ? "default" : "outline"}
@@ -391,7 +416,7 @@ export default function Home() {
                     <Button
                       variant={selectedProduct === "dsl" ? "default" : "outline"}
                       className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                      onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
+                      onClick={() => { setSelectedProduct("dsl"); window.location.href = "/dsl"; }}
                       aria-label="DSL vergleichen"
                     >
                       DSL
@@ -459,7 +484,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
+        {/* Kategorie-Navigation */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
@@ -468,7 +493,7 @@ export default function Home() {
                 { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
                 { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
                 { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
-                { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                { key: 'dsl', label: 'DSL', url: '/dsl', isInternal: true },
                 { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
                 { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
                 { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
@@ -537,10 +562,6 @@ export default function Home() {
                 <Star className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
                 Top Empfohlen
               </Badge>
-              <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Zap className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
-                Blitzschnell
-              </Badge>
             </div>
           </div>
         </section>
@@ -567,7 +588,6 @@ export default function Home() {
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
             <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h3>
-
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
@@ -622,7 +642,6 @@ export default function Home() {
                     "Smarte ETF-Sparpläne",
                     "0% Kommission bis 100.000€ Umsatz",
                     "Kostenlose Ein- & Auszahlungen",
-                    "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
                     "Platz 1 CFD-Broker 2024/25"
                   ],
                   price: "0€ Kommission",
@@ -688,11 +707,31 @@ export default function Home() {
                   bonus: "Bis zu 250€ Bonus",
                   logo: "🏦",
                   url: "https://www.check24.de/girokonto/"
+                },
+                {
+                  name: "Vodafone",
+                  rating: 4.7,
+                  features: [
+                    "Kabel-Internet mit bis zu 1.000 Mbit/s",
+                    "Schnelle und zuverlässige DSL-Verbindungen",
+                    "Top Mobilfunk- und DSL-Anbieter",
+                    "Besondere Angebote für Selbständige zu Top-Preisen",
+                    "Flexible Tarife für Privat- und Geschäftskunden",
+                    "Kostenloser WLAN-Router bei vielen Tarifen",
+                    "Hohe Netzabdeckung in Deutschland",
+                    "24/7 Kundensupport",
+                    "Kombi-Vorteile mit Mobilfunk und Festnetz",
+                    "Schnelle Installation und Einrichtung"
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 100€ Startguthaben",
+                  logo: "📡",
+                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
                   <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
-                    Top Empfehlung
+                    {provider.name === "Vodafone" ? "Top Mobilfunk & DSL Anbieter" : "Top Empfehlung"}
                   </Badge>
                   <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
                     <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
@@ -731,6 +770,9 @@ export default function Home() {
                       <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
                         Zum Anbieter*
                       </Button>
+                      {provider.name === "Vodafone" && (
+                        <img src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T" alt="" width="0" height="0" />
+                      )}
                     </a>
                   </CardContent>
                 </Card>
@@ -789,7 +831,6 @@ export default function Home() {
                   </Button>
                 </CardContent>
               </Card>
-
               <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
@@ -825,7 +866,6 @@ export default function Home() {
                   </Button>
                 </CardContent>
               </Card>
-
               <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
@@ -861,7 +901,6 @@ export default function Home() {
                   </Button>
                 </CardContent>
               </Card>
-
               <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
@@ -898,8 +937,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-            
-            {/* Schema.org Markup für SEO */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
@@ -1005,7 +1042,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ Section für bessere SEO */}
+        {/* FAQ Section */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h3>
@@ -1070,12 +1107,16 @@ export default function Home() {
                       Online Broker Vergleich
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/dsl" className="hover:text-white transition-colors" aria-label="DSL Vergleich">
+                      DSL Vergleich
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h5 className="font-semibold mb-3">Weitere Services</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="DSL Vergleich (externer Link)">DSL Vergleich</a></li>
                   <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarife vergleichen (externer Link)">Handytarife</a></li>
                   <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Stromvergleich (externer Link)">Stromvergleich</a></li>
                   <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Gasvergleich (externer Link)">Gasvergleich</a></li>
@@ -1088,26 +1129,10 @@ export default function Home() {
               <div>
                 <h5 className="font-semibold mb-3">Unternehmen</h5>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li>
-                    <Link href="/ueber-uns" className="hover:text-white transition-colors" aria-label="Über uns">
-                      Über uns
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/partnerprogramme" className="hover:text-white transition-colors" aria-label="Partnerprogramme">
-                      Partnerprogramme
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/karriere" className="hover:text-white transition-colors" aria-label="Karriere">
-                      Karriere
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/kontakt" className="hover:text-white transition-colors" aria-label="Kontakt">
-                      Kontakt
-                    </Link>
-                  </li>
+                  <li><Link href="/ueber-uns" className="hover:text-white transition-colors" aria-label="Über uns">Über uns</Link></li>
+                  <li><Link href="/partnerprogramme" className="hover:text-white transition-colors" aria-label="Partnerprogramme">Partnerprogramme</Link></li>
+                  <li><Link href="/karriere" className="hover:text-white transition-colors" aria-label="Karriere">Karriere</Link></li>
+                  <li><Link href="/kontakt" className="hover:text-white transition-colors" aria-label="Kontakt">Kontakt</Link></li>
                 </ul>
               </div>
               <div>
@@ -1133,7 +1158,6 @@ export default function Home() {
           </div>
         </footer>
 
-        {/* Structured Data für lokale SEO */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
