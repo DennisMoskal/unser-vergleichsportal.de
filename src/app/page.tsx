@@ -341,113 +341,132 @@ export default function Home() {
 
               {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
               <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
-                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
-                  Nach welchem Produkt oder Service suchen Sie?
-                </h3>
+                {/* Flexbox Container für Bild und Suchbereich */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                  {/* Bild links zentriert */}
+                  <div className="flex-shrink-0 sm:order-1 order-2">
+                    <Image
+                      src="/images/Paar.jpg"
+                      alt="Glückliches Paar bei der Finanzberatung"
+                      width={360}
+                      height={240}
+                      className="rounded-lg shadow-lg"
+                      loading="lazy"
+                    />
+                  </div>
 
-                {/* Grid für 12 Buttons - responsive Layout */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
-                  <Button
-                    variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
-                    aria-label="Versicherungen vergleichen"
-                  >
-                    Versicherung
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "banking" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
-                    aria-label="Banking vergleichen"
-                  >
-                    Banking
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
-                    aria-label="Tierversicherungen vergleichen"
-                  >
-                    Tierversicherung
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "trading" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
-                    aria-label="Trading vergleichen"
-                  >
-                    Trading
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "dsl" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
-                    aria-label="DSL vergleichen"
-                  >
-                    DSL
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "handytarife" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
-                    aria-label="Handytarife vergleichen"
-                  >
-                    Handytarife
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "oekostrom" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
-                    aria-label="Ökostrom vergleichen"
-                  >
-                    Ökostrom
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "gas" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
-                    aria-label="Gas vergleichen"
-                  >
-                    Gas
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "reisen" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
-                    aria-label="Reisen vergleichen"
-                  >
-                    Reisen
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "strom" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                    aria-label="Stromvergleich"
-                  >
-                    Strom
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                    aria-label="Kreditkarten vergleichen"
-                  >
-                    Kreditkarte
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "mietwagen" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
-                    aria-label="Mietwagen vergleichen"
-                  >
-                    Mietwagen
-                  </Button>
+                  {/* Suchbereich rechts */}
+                  <div className="flex-grow sm:order-2 order-1 w-full">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
+                      Nach welchem Produkt oder Service suchen Sie?
+                    </h3>
+
+                    {/* Grid für 12 Buttons - responsive Layout */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 mb-4">
+                      <Button
+                        variant={selectedProduct === "versicherung" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
+                        aria-label="Versicherungen vergleichen"
+                      >
+                        Versicherung
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "banking" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
+                        aria-label="Banking vergleichen"
+                      >
+                        Banking
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
+                        aria-label="Tierversicherungen vergleichen"
+                      >
+                        Tierversicherung
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "trading" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
+                        aria-label="Trading vergleichen"
+                      >
+                        Trading
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "dsl" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
+                        aria-label="DSL vergleichen"
+                      >
+                        DSL
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "handytarife" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
+                        aria-label="Handytarife vergleichen"
+                      >
+                        Handytarife
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "oekostrom" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
+                        aria-label="Ökostrom vergleichen"
+                      >
+                        Ökostrom
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "gas" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
+                        aria-label="Gas vergleichen"
+                      >
+                        Gas
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "reisen" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
+                        aria-label="Reisen vergleichen"
+                      >
+                        Reisen
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "strom" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                        aria-label="Stromvergleich"
+                      >
+                        Strom
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                        aria-label="Kreditkarten vergleichen"
+                      >
+                        Kreditkarte
+                      </Button>
+                      <Button
+                        variant={selectedProduct === "mietwagen" ? "default" : "outline"}
+                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                        onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
+                        aria-label="Mietwagen vergleichen"
+                      >
+                        Mietwagen
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
