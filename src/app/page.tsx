@@ -366,7 +366,8 @@ export default function Home() {
                   alt="Ein Paar freut sich über ihre Finanzprodukte"
                   width={360}
                   height={240}
-                  className="object-cover"
+                  className="object-cover ml-0"
+                  style={{ transform: 'none' }}
                 />
               </div>
               <div className="w-full sm:w-3/4 text-center sm:text-left">
@@ -1107,89 +1108,3 @@ export default function Home() {
                       Online Broker Vergleich
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/dsl" className="hover:text-white transition-colors" aria-label="DSL Vergleich">
-                      DSL Vergleich
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-3">Weitere Services</h5>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarife vergleichen (externer Link)">Handytarife</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Stromvergleich (externer Link)">Stromvergleich</a></li>
-                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Gasvergleich (externer Link)">Gasvergleich</a></li>
-                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Reisen vergleichen (externer Link)">Reisen</a></li>
-                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Ökostrom vergleichen (externer Link)">Ökostrom</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Kreditkarten vergleichen (externer Link)">Kreditkarte</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Mietwagen vergleichen (externer Link)">Mietwagen</a></li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-3">Unternehmen</h5>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/ueber-uns" className="hover:text-white transition-colors" aria-label="Über uns">Über uns</Link></li>
-                  <li><Link href="/partnerprogramme" className="hover:text-white transition-colors" aria-label="Partnerprogramme">Partnerprogramme</Link></li>
-                  <li><Link href="/karriere" className="hover:text-white transition-colors" aria-label="Karriere">Karriere</Link></li>
-                  <li><Link href="/kontakt" className="hover:text-white transition-colors" aria-label="Kontakt">Kontakt</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-3">Rechtliches</h5>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/datenschutz" className="hover:text-white transition-colors" aria-label="Datenschutz">Datenschutz</Link></li>
-                  <li><Link href="/impressum" className="hover:text-white transition-colors" aria-label="Impressum">Impressum</Link></li>
-                  <li><Link href="/agb" className="hover:text-white transition-colors" aria-label="AGB">AGB</Link></li>
-                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors" aria-label="Cookie-Richtlinie">Cookie-Richtlinie</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-              <p className="text-sm text-gray-400 mb-4">
-                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-              </p>
-              <Link href="/" aria-label="Zurück zur Startseite">
-                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
-                  Zurück zur Startseite
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </footer>
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "SmartFinanz",
-            "url": "https://smartfinanz.de",
-            "logo": "https://smartfinanz.de/logo.png",
-            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "DE"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+49-123-456789",
-              "contactType": "customer service",
-              "availableLanguage": "German"
-            },
-            "sameAs": [
-              "https://www.facebook.com/smartfinanz",
-              "https://www.twitter.com/smartfinanz",
-              "https://www.linkedin.com/company/smartfinanz",
-              "https://www.instagram.com/smartfinanz"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "100000"
-            }
-          })
-        }} />
-      </div>
-    </>
-  )
-}
