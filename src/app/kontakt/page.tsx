@@ -222,7 +222,7 @@ export default function KontaktPage() {
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.location.href = "mailto:info@unser-vergleichsportal.de"}>
               E-Mail senden
             </Button>
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.location.href = "tel:+4922876369912"}>
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.location.href = "tel:+491722058855"}>
               Jetzt anrufen
             </Button>
           </div>
