@@ -332,8 +332,8 @@ export default function Home() {
         {/* Hero-Bereich */}
         <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-end">
-              <div className="flex-shrink-0 mb-6 md:mb-0">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-end gap-4">
+              <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
                 <Image
                   src="/images/Paar.jpg"
                   alt="Paar freut sich über Finanzvergleich"
@@ -342,7 +342,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex-grow text-center md:text-left md:ml-8">
+              <div className="flex-grow text-center md:text-left">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
                   Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
                 </h2>
@@ -1094,8 +1094,7 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenvers_above
-icherung">
+                    <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenversicherung">
                       Tierkrankenversicherung
                     </Link>
                   </li>
