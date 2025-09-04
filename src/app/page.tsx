@@ -44,7 +44,7 @@ const providerData: { [key: string]: Provider[] } = {
       rating: 4.5,
       features: [
         "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und"..vergleichsportal.de
+        "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
         "eKomi Silber Siegel mit 4,5/5 Sternen",
