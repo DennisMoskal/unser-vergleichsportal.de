@@ -785,7 +785,15 @@ export default function Home() {
                          provider.name === "1&1" ? "1und1 Highspeed DSL Tarife" : 
                          provider.name === "Verivox" ? "Wohngebäudeversicherungen bei VERIVOX!" : 
                          "Zum Anbieter*"}
-                        {provider.name === "Vodafone" && <img src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T" alt="" border="0" width="0" height="0" />}
+                        {provider.name === "Vodafone" && (
+                          <Image
+                            src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
+                            alt=""
+                            width={0}
+                            height={0}
+                            className="border-0"
+                          />
+                        )}
                       </Button>
                     </a>
                   </CardContent>
@@ -819,7 +827,7 @@ export default function Home() {
                       width={80}
                       height={80}
                       loading="lazy"
-                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                     />
                     <div className="flex-grow min-w-0">
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
@@ -855,7 +863,7 @@ export default function Home() {
                       width={80}
                       height={80}
                       loading="lazy"
-                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                     />
                     <div className="flex-grow min-w-0">
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
@@ -891,7 +899,7 @@ export default function Home() {
                       width={80}
                       height={80}
                       loading="lazy"
-                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                     />
                     <div className="flex-grow min-w-0">
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
@@ -927,7 +935,7 @@ export default function Home() {
                       width={80}
                       height={80}
                       loading="lazy"
-                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                     />
                     <div className="flex-grow min-w-0">
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
