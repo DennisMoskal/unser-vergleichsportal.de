@@ -329,468 +329,120 @@ export default function Home() {
         </header>
 
         {/* Hero-Bereich */}
-        "use client"
-
-import Head from "next/head"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-
-// SmartFinanzLogo-Komponente
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
-  return (
-    <div className={`flex flex-col items-start ${className}`}>
-      <div className="flex items-center space-x-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
-          <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-        </svg>
-        <span className="font-bold">martFinanz</span>
-      </div>
-      <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
-    </div>
-  )
-}
-
-export interface Provider {
-  name: string;
-  rating: number;
-  features: string[];
-  price: string;
-  bonus: string;
-  logo: string;
-  url: string;
-}
-
-const providerData: { [key: string]: Provider[] } = {
-  versicherungen: [
-    {
-      name: "Tarifcheck.de",
-      rating: 4.5,
-      features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich"
-      ],
-      price: "100% kostenlos",
-      bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/"
-    },
-    {
-      name: "eRecht24",
-      rating: 4.3,
-      features: [
-        "Rechtssicherheit für Webseiten",
-        "DSGVO-konform mit Premium Tools",
-        "Automatische Rechtstext-Generatoren",
-        "Abmahnschutz inklusive",
-        "Praxis-Tools für Social Media",
-        "Kostenlose Erstberatung",
-        "NEU: KI-gestützte Lösungen",
-        "Zentraler Projekt Manager",
-        "Live-Webinare zu Internetrecht",
-        "Muster-Verträge & Checklisten"
-      ],
-      price: "ab 20€/Monat",
-      bonus: "Gratis Rechtscheck",
-      logo: "⚖️",
-      url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
-    }
-  ],
-  banking: [
-    {
-      name: "Tarifcheck.de",
-      rating: 4.5,
-      features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich"
-      ],
-      price: "100% kostenlos",
-      bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/"
-    },
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
-      ],
-      price: "0€ Kommission",
-      bonus: "Demo-Konto",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc"
-    },
-    {
-      name: "Credimaxx",
-      rating: 4.9,
-      features: [
-        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-        "Sofortvermittlung durch erfahrene Kreditprofis",
-        "Digitaler Abschluss mit WebID oder VideoIdent",
-        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-        "Vermittlung in bis zu 1 Minute",
-        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-        "25 Jahre Erfahrung in der Kreditvermittlung"
-      ],
-      price: "ab 10,99% eff. Zins p.a.",
-      bonus: "Schnelle Auszahlung",
-      logo: "💳",
-      url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
-    }
-  ],
-  tierversicherungen: [
-    {
-      name: "PetProtect",
-      rating: 4.9,
-      features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"],
-      price: "ab 8€/Monat",
-      bonus: "1. Monat gratis",
-      logo: "🐕",
-      url: "/anbieter/petprotect"
-    },
-    {
-      name: "FigoPet",
-      rating: 4.6,
-      features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"],
-      price: "ab 12€/Monat",
-      bonus: "Willkommensgeschenk",
-      logo: "🐱",
-      url: "/anbieter/figopet"
-    }
-  ],
-  trading: [
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
-      ],
-      price: "0€ Kommission",
-      bonus: "Demo-Konto",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc"
-    }
-  ]
-}
-
-export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("versicherungen")
-  const [selectedProduct, setSelectedProduct] = useState("")
-
-  // Funktion zum Scrollen zu einem Abschnitt
-  const scrollToSection = (sectionId: string) => {
-    setActiveCategory(sectionId)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
-  // Hash-Änderung verarbeiten, wenn die Seite geladen wird
-  useEffect(() => {
-    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
-      scrollToSection(hash)
-    }
-  }, [])
-
-  return (
-    <>
-      <Head>
-        <title>SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
-        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ TÜV geprüft ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
-        <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Reisen, Kreditkarten, Mietwagen, SmartFinanz, Testsieger 2025" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
-        <meta name="author" content="SmartFinanz" />
-        <meta name="revisit-after" content="7 days" />
-        <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://smartfinanz.de" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://smartfinanz.de" />
-        <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
-        <meta property="og:site_name" content="SmartFinanz" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
-        <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
-        <meta name="twitter:site" content="@smartfinanz" />
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
-        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
-        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-        <link rel="dns-prefetch" href="https://www.check24.de" />
-        <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
-      </Head>
-      <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-white shadow-sm relative border-b">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center">
-              <SmartFinanzLogo className="text-2xl text-gray-900" />
-            </div>
-            <nav className="hidden md:flex space-x-6" aria-label="Hauptmenü">
-              <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Versicherungen
-              </Link>
-              <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Banking
-              </Link>
-              <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Tierversicherung
-              </Link>
-              <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Trading
-              </Link>
-              <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Kundenbewertungen
-              </Link>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-                Vergleich starten
-              </Button>
-              <button
-                className="md:hidden"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label="Menü öffnen/schließen"
-              >
-                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Menü */}
-          {mobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-              <nav className="px-4 py-4 space-y-4" aria-label="Mobiles Menü">
-                <Link
-                  href="/versicherungen"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Versicherungen
-                </Link>
-                <Link
-                  href="/banking"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Banking
-                </Link>
-                <Link
-                  href="/tierversicherungen"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Tierversicherung
-                </Link>
-                <Link
-                  href="/trading"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Trading
-                </Link>
-                <Link
-                  href="#kundenbewertungen"
-                  className="block text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Kundenbewertungen
-                </Link>
-                <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-                  Vergleich starten
-                </Button>
-              </nav>
-            </div>
-          )}
-        </header>
-
-        {/* Hero-Bereich mit Bild */}
         <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-                {/* Linke Seite - Bild */}
-                <div className="flex-shrink-0 lg:mr-8">
-                  <Image
-                    src="/images/Paar.jpg"
-                    alt="Glückliches Paar bei Finanzberatung"
-                    width={360}
-                    height={240}
-                    className="rounded-lg shadow-lg"
-                    priority
-                  />
-                </div>
-                
-                {/* Rechte Seite - Content */}
-                <div className="flex-1 text-center lg:text-left">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
-                    Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
-                  </h2>
-                  <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto lg:mx-0">
-                    Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
-                  </p>
+            <div className="max-w-6xl mx-auto text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
+                Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
+              </h2>
+              <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
+                Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
+              </p>
 
-                  {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
-                  <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto lg:mx-0">
-                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
-                      Nach welchem Produkt oder Service suchen Sie?
-                    </h3>
+              {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
+              <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
+                  Nach welchem Produkt oder Service suchen Sie?
+                </h3>
 
-                    {/* Grid für 12 Buttons - responsive Layout */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
-                      <Button
-                        variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
-                        aria-label="Versicherungen vergleichen"
-                      >
-                        Versicherung
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "banking" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
-                        aria-label="Banking vergleichen"
-                      >
-                        Banking
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
-                        aria-label="Tierversicherungen vergleichen"
-                      >
-                        Tierversicherung
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "trading" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
-                        aria-label="Trading vergleichen"
-                      >
-                        Trading
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "dsl" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
-                        aria-label="DSL vergleichen"
-                      >
-                        DSL
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "handytarife" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
-                        aria-label="Handytarife vergleichen"
-                      >
-                        Handytarife
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "oekostrom" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
-                        aria-label="Ökostrom vergleichen"
-                      >
-                        Ökostrom
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "gas" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
-                        aria-label="Gas vergleichen"
-                      >
-                        Gas
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "reisen" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
-                        aria-label="Reisen vergleichen"
-                      >
-                        Reisen
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "strom" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                        aria-label="Stromvergleich"
-                      >
-                        Strom
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                        aria-label="Kreditkarten vergleichen"
-                      >
-                        Kreditkarte
-                      </Button>
-                      <Button
-                        variant={selectedProduct === "mietwagen" ? "default" : "outline"}
-                        className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                        onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
-                        aria-label="Mietwagen vergleichen"
-                      >
-                        Mietwagen
-                      </Button>
-                    </div>
-                  </div>
+                {/* Grid für 12 Buttons - responsive Layout */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
+                  <Button
+                    variant={selectedProduct === "versicherung" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
+                    aria-label="Versicherungen vergleichen"
+                  >
+                    Versicherung
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "banking" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
+                    aria-label="Banking vergleichen"
+                  >
+                    Banking
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
+                    aria-label="Tierversicherungen vergleichen"
+                  >
+                    Tierversicherung
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "trading" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
+                    aria-label="Trading vergleichen"
+                  >
+                    Trading
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "dsl" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
+                    aria-label="DSL vergleichen"
+                  >
+                    DSL
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "handytarife" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
+                    aria-label="Handytarife vergleichen"
+                  >
+                    Handytarife
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "oekostrom" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
+                    aria-label="Ökostrom vergleichen"
+                  >
+                    Ökostrom
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "gas" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
+                    aria-label="Gas vergleichen"
+                  >
+                    Gas
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "reisen" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
+                    aria-label="Reisen vergleichen"
+                  >
+                    Reisen
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "strom" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                    aria-label="Stromvergleich"
+                  >
+                    Strom
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                    aria-label="Kreditkarten vergleichen"
+                  >
+                    Kreditkarte
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "mietwagen" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
+                    aria-label="Mietwagen vergleichen"
+                  >
+                    Mietwagen
+                  </Button>
                 </div>
               </div>
             </div>
