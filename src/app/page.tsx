@@ -241,6 +241,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
         <link rel="dns-prefetch" href="https://www.check24.de" />
+        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
         <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
@@ -329,7 +330,7 @@ export default function Home() {
         </header>
 
         {/* Hero-Bereich */}
-       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
+        <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-end">
               <div className="flex-shrink-0 mb-6 md:mb-0">
@@ -459,7 +460,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
@@ -690,11 +690,31 @@ export default function Home() {
                   bonus: "Bis zu 250€ Bonus",
                   logo: "🏦",
                   url: "https://www.check24.de/girokonto/"
+                },
+                {
+                  name: "Vodafone",
+                  rating: 4.6,
+                  features: [
+                    "Schnelles Kabel-Internet mit bis zu 1.000 Mbit/s",
+                    "Top Mobilfunk- und DSL-Tarife für Selbstständige",
+                    "Günstige Kombi-Angebote für Internet und Telefon",
+                    "Zuverlässiges Glasfasernetz für Business-Kunden",
+                    "Flexible Tarife ohne Vertragslaufzeit",
+                    "Kostenlose Hardware wie Fritz!Box bei Abschluss",
+                    "24/7 Business-Kundensupport",
+                    "Spezialtarife für Gewerbekunden zu Top-Preisen",
+                    "Hochgeschwindigkeits-Internet für Home-Office",
+                    "TÜV-geprüfte Kundenzufriedenheit"
+                  ],
+                  price: "ab 29,99€/Monat",
+                  bonus: "Kostenlose Hardware",
+                  logo: "📡",
+                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
                   <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
-                    Top Empfehlung
+                    {provider.name === "Vodafone" ? "Top Mobilfunk & DSL Anbieter" : "Top Empfehlung"}
                   </Badge>
                   <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
                     <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
@@ -729,11 +749,22 @@ export default function Home() {
                         </ul>
                       </div>
                     </div>
-                    <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                        Zum Anbieter*
-                      </Button>
-                    </a>
+                    {provider.name === "Vodafone" ? (
+                      <div>
+                        <a href={provider.url} target="_blank" rel="noopener noreferrer" aria-label={`Zum Anbieter ${provider.name}`}>
+                          <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                            Kabel-Internet mit bis zu 1.000 Mbit/s
+                          </Button>
+                        </a>
+                        <img src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T" alt="" border="0" width="0" height="0" />
+                      </div>
+                    ) : (
+                      <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
+                        <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                          Zum Anbieter*
+                        </Button>
+                      </a>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -1063,7 +1094,8 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenversicherung">
+                    <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenvers_above
+icherung">
                       Tierkrankenversicherung
                     </Link>
                   </li>
