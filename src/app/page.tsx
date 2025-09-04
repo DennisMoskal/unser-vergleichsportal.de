@@ -334,7 +334,7 @@ export default function Home() {
         <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto text-center flex flex-col sm:flex-row items-center">
-              <div className="sm:w-1/3 mb-6 sm:mb-0 sm:mr-6">
+              <div className="sm:w-1/3 mb-6 sm:mb-0 sm:mr-6" style={{ marginTop: '20px', marginLeft: '-20px' }}>
                 <Image
                   src="/images/Paar.jpg"
                   alt="Paar"
@@ -778,7 +778,7 @@ export default function Home() {
                         {provider.bonus}
                       </Badge>
                     </div>
-                    <div className="flex-grow overflow隠">
+                    <div className="flex-grow overflow-hidden">
                       <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{scrollbarWidth: 'thin'}}>
                         <ul className="space-y-1.5">
                           {provider.features.map((feature, i) => (
