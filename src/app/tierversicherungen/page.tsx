@@ -13,7 +13,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={`flex flex-col items-start ${className}`}>
       <div className="flex items-center space-x-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+        <svg loading="lazy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
           <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
           <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
         </svg>
@@ -189,21 +189,24 @@ const providerData = [
     name: "Figo",
     rating: 4.5,
     features: [
-      "Flexible Tarife für Hunde- und Katzenkrankenversicherung",
-      "Bis zu 100% Erstattung für Tierarztkosten",
-      "Digitale App für einfache Schadenmeldung",
-      "Kein Jahreslimit in Premium-Tarifen",
-      "Inklusive Vorsorgeleistungen wie Zahnreinigung",
-      "24/7 Zugang zu Tierärzten via Telemedizin",
-      "Erstattung für alternative Behandlungen",
-      "Rabatte für Mehrfachtier-Versicherungen"
+      "Ein Paket für den Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente und Spezialbehandlungen",
+      "Flexible Beitragsgestaltung",
+      "Bis zu 90 % Erstattung der Tierarztrechnung – ohne Jahreslimit",
+      "Jedes Alter und alle Rassen versicherbar – ein Tierleben lang",
+      "Vorsorge- und SOS-Budget",
+      "Hausbesuche und Alternativmedizin",
+      "Übernahme von Gelenkerkrankungen",
+      "Kostenerstattung immer bis zum Höchstsatz der GOT",
+      "Freie Tierarzt- & Klinikwahl",
+      "Unbegrenzt kostenlose Videosprechstunden mit Tierärzten",
+      "Kein Kündigungsrecht für die Versicherung im Schadenfall"
     ],
     price: "ab 18€/Monat",
     bonus: "Kostenlose Telemedizin",
     logo: "🐱",
-    url: "https://www.figopetinsurance.de",
-    metaTitle: "Figo Tierversicherung: Flexible Krankenversicherung für Haustiere",
-    metaDescription: "Figo bietet flexible Tarife mit bis zu 100% Erstattung und Telemedizin. Vergleichen Sie jetzt Tierversicherungen für Hunde und Katzen!"
+    url: "https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=",
+    metaTitle: "Figo Tierversicherung: Flexible Krankenversicherung für Hunde und Katzen",
+    metaDescription: "Figo bietet Rundumschutz mit bis zu 90% Erstattung ohne Jahreslimit, inklusive Telemedizin und Vorsorgebudget. Jetzt die beste Tierversicherung vergleichen!"
   },
   {
     name: "Lassie",
@@ -287,18 +290,23 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
       <Head>
         <title>Tierversicherung Vergleich 2025: Beste Hunde- & Katzenversicherung | SmartFinanz</title>
-        <meta name="description" content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster!" />
-        <meta name="keywords" content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Hunde-OP-Versicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, hepster" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo!" />
+        <meta name="keywords" content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Hunde-OP-Versicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, Figo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
+        <meta charSet="UTF-8" />
+        <link rel="canonical" href="https://www.smartfinanz.de/tierversicherungen" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Tierversicherung Vergleich bei SmartFinanz",
-              "description": "Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung. Sparen Sie mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster bis zu 850€ jährlich.",
+              "description": "Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung. Sparen Sie mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo bis zu 850€ jährlich.",
               "publisher": {
                 "@type": "Organization",
                 "name": "SmartFinanz",
@@ -306,6 +314,11 @@ export default function Tierversicherungen() {
                   "@type": "ImageObject",
                   "url": "/favicon.svg"
                 }
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.smartfinanz.de/tierversicherungen?search={search_term_string}",
+                "query-input": "required name=search_term_string"
               }
             }
           `}
@@ -339,7 +352,7 @@ export default function Tierversicherungen() {
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Vergleich starten
             </Button>
-            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
@@ -424,7 +437,7 @@ export default function Tierversicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung 2025: Hundeversicherung & Katzenversicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und hepster. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
+              Finden Sie die perfekte Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
             </p>
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Jetzt Tierversicherungen vergleichen
@@ -454,7 +467,7 @@ export default function Tierversicherungen() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt und hepster bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
+                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt und Figo bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
                 </p>
               </CardContent>
             </Card>
@@ -613,19 +626,19 @@ export default function Tierversicherungen() {
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Grundschutz</h5>
                   <p className="text-sm text-gray-600">
-                    Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. hepster). Deckt Tierarztkosten für Krankheiten und Unfälle.
+                    Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Erweiterte Deckung</h5>
                   <p className="text-sm text-gray-600">
-                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, hepster). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
+                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, Figo). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Premium-Schutz</h5>
                   <p className="text-sm text-gray-600">
-                    Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, hepster). Ideal für chronisch kranke Tiere.
+                    Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.
                   </p>
                 </div>
               </div>
@@ -706,13 +719,17 @@ export default function Tierversicherungen() {
               <Card className="border-2 hover:border-green-200 relative">
                 <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hunde Krankenversicherung</Badge>
                 <CardHeader>
-                  <CardTitle>hepster Hunde-OP-Versicherung</CardTitle>
+                  <CardTitle>Figo Hunde-OP-Versicherung</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 100% Kostenübernahme für Operationen
+                      Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bis zu 90% Erstattung ohne Jahreslimit
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -720,21 +737,17 @@ export default function Tierversicherungen() {
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Sofortschutz bei Unfällen ohne Wartezeit
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Stabiler Beitrag unabhängig vom Hundealter
+                      Unbegrenzt kostenlose Videosprechstunden
                     </li>
                   </ul>
                   <Link
-                    href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref="
+                    href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref="
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to hepster Hunde-OP-Versicherung")}
+                    onClick={() => console.log("Navigating to Figo Hunde-OP-Versicherung")}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt hepster Hunde-OP-Versicherung abschließen*
+                      Jetzt Figo Hunde-OP-Versicherung abschließen*
                     </Button>
                   </Link>
                 </CardContent>
@@ -744,28 +757,28 @@ export default function Tierversicherungen() {
 
           {/* Hunde-OP-Versicherung */}
           <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung – Optimaler Schutz für Operationen mit hepster</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung – Optimaler Schutz für Operationen mit Figo</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <p className="mb-4">
-                Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=" className="text-green-600 hover:underline">hepster Hunde-OP-Versicherung</a> sichern Sie Ihren Hund flexibel und digital ab – ohne Wartezeiten und mit bis zu 100% Kostenübernahme. hepster ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,6/5, 09/2025).
+                Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" className="text-green-600 hover:underline">Figo Hunde-OP-Versicherung</a> sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
               </p>
               <h4 className="text-lg font-semibold mb-4">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Abdeckung von Operationskosten bis zu 100%.</span>
+                  <span>Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit.</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Keine Wartezeiten für sofortigen Schutz.</span>
+                  <span>Freie Tierarzt- und Klinikwahl weltweit.</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Flexible Tarife mit Monats- oder Jahresabo.</span>
+                  <span>Unbegrenzt kostenlose Videosprechstunden mit Tierärzten.</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>100% digitale Verwaltung für einfache Schadenmeldung.</span>
+                  <span>Flexible Beitragsgestaltung für alle Rassen und Altersgruppen.</span>
                 </li>
               </ul>
               <h4 className="text-lg font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h4>
@@ -775,28 +788,28 @@ export default function Tierversicherungen() {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit) abgedeckt sind.</span>
+                  <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 100%) und ohne Selbstbeteiligung.</span>
+                  <span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Flexibilität</strong>: Tarife mit kurzen Laufzeiten sind ideal für wechselnde Bedürfnisse.</span>
+                  <span><strong>Flexibilität</strong>: Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse.</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Kundenbewertungen</strong>: hepster punktet mit Trusted Shops Zertifizierung und 4,6/5 Sternen.</span>
+                  <span><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</span>
                 </li>
               </ul>
               <p className="mb-6">
-                Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=" className="text-green-600 hover:underline">hepster Hunde-OP-Versicherung</a> schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie den Tarif an Ihre Bedürfnisse an und profitieren Sie von einer einfachen Online-Verwaltung. Starten Sie jetzt und sichern Sie Ihren Vierbeiner optimal ab!
+                Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" className="text-green-600 hover:underline">Figo Hunde-OP-Versicherung</a> schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
               </p>
               <div className="text-center">
-                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=" target="_blank">
+                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank">
                   <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt die hepster Hunde-OP-Versicherung online abschließen!*
+                    Jetzt die Figo Hunde-OP-Versicherung online abschließen!*
                   </Button>
                 </a>
               </div>
@@ -875,7 +888,7 @@ export default function Tierversicherungen() {
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener und hepster bieten bis zu 100% Erstattung.
+                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener und Figo bieten bis zu 100% Erstattung.
                 </p>
               </div>
               <div>
@@ -946,7 +959,7 @@ export default function Tierversicherungen() {
                   <div>
                     <h5 className="font-semibold mb-2">Sparpotential:</h5>
                     <p className="text-sm text-gray-600">
-                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder hepster.
+                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder Figo.
                     </p>
                   </div>
                   <div className="bg-blue-50 p-3 rounded">
