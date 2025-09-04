@@ -44,7 +44,7 @@ const providerData: { [key: string]: Provider[] } = {
       rating: 4.5,
       features: [
         "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
+        "100% kostenloser und"..vergleichsportal.de
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
         "eKomi Silber Siegel mit 4,5/5 Sternen",
@@ -333,13 +333,13 @@ export default function Home() {
         <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-end gap-4">
-              <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+              <div className="flex-shrink-0 mb-6 md:mb-0 order-first md:order-first">
                 <Image
                   src="/images/Paar.jpg"
                   alt="Paar freut sich über Finanzvergleich"
                   width={360}
                   height={240}
-                  className="object-cover"
+                  className="object-cover border-2 border-white"
                 />
               </div>
               <div className="flex-grow text-center md:text-left">
@@ -351,7 +351,7 @@ export default function Home() {
                 </p>
 
                 {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
-                <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
+                <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto md:mx-0">
                   <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                     Nach welchem Produkt oder Service suchen Sie?
                   </h3>
