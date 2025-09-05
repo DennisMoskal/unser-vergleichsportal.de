@@ -781,9 +781,9 @@ export default function Home() {
                     </div>
                     <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
                       <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                        {provider.name === "Vodafone" ? "Kabel-Internet mit bis zu 1.000 MBit/s" : 
-                         provider.name === "1&1" ? "1und1 Highspeed DSL Tarife" : 
-                         provider.name === "Verivox" ? "Wohngebäudeversicherungen bei VERIVOX!" : 
+                        {provider.name === "Vodafone" ? "Zum Anbieter*" : 
+                         provider.name === "1&1" ? "Zum Anbieter*" : 
+                         provider.name === "Verivox" ? "Zum Anbieter*" : 
                          "Zum Anbieter*"}
                         {provider.name === "Vodafone" && (
                           <Image
