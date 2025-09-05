@@ -335,7 +335,7 @@ export default function DeFi() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Trading-Plattformen 2025: DeFi, Bitcoin & mehr</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Entdecken Sie die besten Trading-Plattformen für DeFi, Krypto, CFDs, Aktien und ETFs. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="underline">TradingView</a>, Moneta Markets, <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="underline">XTB</a>, und WEEX bieten 0% Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise zum erfolgreichen DeFi- und Krypto-Trading!
+              Entdecken Sie die besten Trading-Plattformen für DeFi, Krypto, CFDs, Aktien und ETFs. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger wie TradingView, Moneta Markets, XTB, und WEEX bieten 0% Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise zum erfolgreichen DeFi- und Krypto-Trading!
             </p>
             <Button className="bg-white text-green-600 hover:bg-gray-100">
               <Link href="#anbieter">Jetzt vergleichen</Link>
@@ -355,7 +355,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a>, Moneta Markets und <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> oder ab 5,80€/Order bei LYNX, um Ihre Trading-Kosten zu minimieren. Prüfen Sie auch versteckte Kosten wie Spreads oder Einzahlungsgebühren.
+                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, Moneta Markets und XTB oder ab 5,80€/Order bei LYNX, um Ihre Trading-Kosten zu minimieren. Prüfen Sie auch versteckte Kosten wie Spreads oder Einzahlungsgebühren.
                 </p>
               </CardContent>
             </Card>
@@ -375,7 +375,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Testen Sie Plattformen wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a>, Moneta Markets, XTB oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren und die Plattform kennenzulernen, bevor Sie investieren.
+                  Testen Sie Plattformen wie TradingView, Moneta Markets, XTB oder eToro mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren und die Plattform kennenzulernen, bevor Sie investieren.
                 </p>
               </CardContent>
             </Card>
@@ -467,7 +467,7 @@ export default function DeFi() {
               </li>
             </ul>
             <p className="text-gray-600 mb-6">
-              Starten Sie mit <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> für Top Screener und Social Trading oder erkunden Sie dezentrale Plattformen für DeFi.
+              Starten Sie mit TradingView für Top Screener und Social Trading oder erkunden Sie dezentrale Plattformen für DeFi.
             </p>
 
             <h3 className="text-xl font-bold mb-4 text-green-600">Krypto-Trading mit TradingView: Tools für Anfänger und Profis</h3>
@@ -494,7 +494,7 @@ export default function DeFi() {
 
             <h3 className="text-xl font-bold mb-4 text-green-600">Bitcoin-Trading: Sicher handeln mit XTB</h3>
             <p className="text-gray-600 mb-4">
-              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 09/2025). Mit <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
+              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 09/2025). Mit XTB können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
             </p>
             <ul className="space-y-2 text-sm text-gray-600 mb-6">
               <li className="flex items-center">
@@ -555,12 +555,12 @@ export default function DeFi() {
               </li>
             </ul>
             <p className="text-gray-600 mb-6">
-              <strong>Tipp:</strong> Kombinieren Sie Telegram-Bots mit <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> für präzise Marktanalysen und Memecoin-Trading.
+              <strong>Tipp:</strong> Kombinieren Sie Telegram-Bots mit TradingView für präzise Marktanalysen und Memecoin-Trading.
             </p>
 
             <h3 className="text-xl font-bold mb-4 text-green-600">Sicher Kryptowährungen kaufen und aufbewahren mit TradingView</h3>
             <p className="text-gray-600 mb-4">
-              Sicherheit ist beim Krypto-Trading entscheidend. Mit <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> analysieren Sie Märkte und traden sicher über verifizierte Broker:
+              Sicherheit ist beim Krypto-Trading entscheidend. Mit TradingView analysieren Sie Märkte und traden sicher über verifizierte Broker:
             </p>
             <ul className="space-y-2 text-sm text-gray-600 mb-6">
               <li className="flex items-center">
@@ -600,7 +600,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Für Anfänger empfehlen wir Plattformen wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> und eToro, die mit Social Trading und benutzerfreundlichen Oberflächen überzeugen. Auch <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> bietet mit kostenlosen Demo-Konten und einer Krypto-Akademie einen einfachen Einstieg.
+                  Für Anfänger empfehlen wir Plattformen wie TradingView und eToro, die mit Social Trading und benutzerfreundlichen Oberflächen überzeugen. Auch XTB bietet mit kostenlosen Demo-Konten und einer Krypto-Akademie einen einfachen Einstieg.
                 </p>
               </CardContent>
             </Card>
@@ -610,7 +610,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Die Gebühren variieren je nach Plattform. <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> bietet kostenlose Kontoeröffnung, Moneta Markets und XTB bieten 0% Kommission bis 100.000€ Umsatz, während Kraken eine Maker Fee von 0,16% berechnet. Achten Sie auf Spreads, Taker Fees und Ein-/Auszahlungsgebühren.
+                  Die Gebühren variieren je nach Plattform. TradingView bietet kostenlose Kontoeröffnung, Moneta Markets und XTB bieten 0% Kommission bis 100.000€ Umsatz, während Kraken eine Maker Fee von 0,16% berechnet. Achten Sie auf Spreads, Taker Fees und Ein-/Auszahlungsgebühren.
                 </p>
               </CardContent>
             </Card>
@@ -620,7 +620,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Krypto-Trading ist sicher, wenn Sie regulierte Plattformen wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> (mit verifizierten Brokern) oder <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> (BaFin) nutzen. Achten Sie auf Einlagensicherung und Zwei-Faktor-Authentifizierung.
+                  Krypto-Trading ist sicher, wenn Sie regulierte Plattformen wie TradingView (mit verifizierten Brokern) oder XTB (BaFin) nutzen. Achten Sie auf Einlagensicherung und Zwei-Faktor-Authentifizierung.
                 </p>
               </CardContent>
             </Card>
@@ -630,7 +630,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  CFD-Trading (z.B. bei Moneta Markets, XTB) erlaubt spekulative Wetten auf Preisbewegungen ohne Besitz des Vermögenswerts, während Krypto-Trading (z.B. bei Kraken oder via <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a>-Broker) den Kauf/Verkauf echter Kryptowährungen beinhaltet.
+                  CFD-Trading (z.B. bei Moneta Markets, XTB) erlaubt spekulative Wetten auf Preisbewegungen ohne Besitz des Vermögenswerts, während Krypto-Trading (z.B. bei Kraken oder via TradingView-Broker) den Kauf/Verkauf echter Kryptowährungen beinhaltet.
                 </p>
               </CardContent>
             </Card>
@@ -668,11 +668,11 @@ export default function DeFi() {
             </p>
             <h3 className="text-xl font-bold mb-2">1. Definieren Sie Ihre Trading-Ziele</h3>
             <p className="text-gray-600 mb-4">
-              Möchten Sie kurzfristig traden oder langfristig investieren? Für kurzfristiges Trading (z.B. Krypto oder CFDs) sind Plattformen wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a>, Moneta Markets, Bybit oder Kraken ideal, während <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a> und eToro für langfristige ETF- oder Aktieninvestitionen geeignet sind.
+              Möchten Sie kurzfristig traden oder langfristig investieren? Für kurzfristiges Trading (z.B. Krypto oder CFDs) sind Plattformen wie TradingView, Moneta Markets, Bybit oder Kraken ideal, während XTB und eToro für langfristige ETF- oder Aktieninvestitionen geeignet sind.
             </p>
             <h3 className="text-xl font-bold mb-2">2. Achten Sie auf Gebühren und Kosten</h3>
             <p className="text-gray-600 mb-4">
-              Niedrige Gebühren sind essenziell. <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> bietet kostenlose Kontoeröffnung, Moneta Markets und XTB bieten 0% Kommission bis 100.000€ Umsatz, während Bybit mit 0,1% Taker Fee punktet. Prüfen Sie auch Spreads und Einzahlungsgebühren, um versteckte Kosten zu vermeiden.
+              Niedrige Gebühren sind essenziell. TradingView bietet kostenlose Kontoeröffnung, Moneta Markets und XTB bieten 0% Kommission bis 100.000€ Umsatz, während Bybit mit 0,1% Taker Fee punktet. Prüfen Sie auch Spreads und Einzahlungsgebühren, um versteckte Kosten zu vermeiden.
             </p>
             <h3 className="text-xl font-bold mb-2">3. Sicherheit und Regulierung prüfen</h3>
             <p className="text-gray-600 mb-4">
@@ -680,14 +680,14 @@ export default function DeFi() {
             </p>
             <h3 className="text-xl font-bold mb-2">4. Testen Sie mit Demo-Konten</h3>
             <p className="text-gray-600 mb-4">
-              Plattformen wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a>, Moneta Markets, LYNX und eToro bieten kostenlose Demo-Konten, mit denen Sie risikofrei Handelsstrategien testen können. Dies ist besonders für Anfänger wichtig, um die Plattform kennenzulernen.
+              Plattformen wie TradingView, Moneta Markets, LYNX und eToro bieten kostenlose Demo-Konten, mit denen Sie risikofrei Handelsstrategien testen können. Dies ist besonders für Anfänger wichtig, um die Plattform kennenzulernen.
             </p>
             <h3 className="text-xl font-bold mb-2">5. Nutzen Sie Lernressourcen</h3>
             <p className="text-gray-600 mb-4">
-              Viele Plattformen wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a> (Community-Ideen), Moneta Markets (AI Market Buzz, Premium Economic Calendar), Kraken (Krypto-Akademie) oder eToro (eToro-Akademie) bieten Lernmaterialien für Einsteiger und Profis. Nutzen Sie diese, um Ihre Trading-Fähigkeiten zu verbessern.
+              Viele Plattformen wie TradingView (Community-Ideen), Moneta Markets (AI Market Buzz, Premium Economic Calendar), Kraken (Krypto-Akademie) oder eToro (eToro-Akademie) bieten Lernmaterialien für Einsteiger und Profis. Nutzen Sie diese, um Ihre Trading-Fähigkeiten zu verbessern.
             </p>
             <p className="text-gray-600 mb-4">
-              <strong>Fazit:</strong> Die besten Trading-Plattformen 2025 wie <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">TradingView</a>, Moneta Markets, <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">XTB</a>, und WEEX bieten eine Kombination aus niedrigen Gebühren, hoher Sicherheit und benutzerfreundlichen Tools. Vergleichen Sie jetzt unsere Testsieger und starten Sie Ihre Trading-Reise!
+              <strong>Fazit:</strong> Die besten Trading-Plattformen 2025 wie TradingView, Moneta Markets, XTB, und WEEX bieten eine Kombination aus niedrigen Gebühren, hoher Sicherheit und benutzerfreundlichen Tools. Vergleichen Sie jetzt unsere Testsieger und starten Sie Ihre Trading-Reise!
             </p>
             <Button className="bg-green-600 hover:bg-green-700 text-white">
               <Link href="#anbieter">Testsieger vergleichen</Link>
@@ -695,6 +695,7 @@ export default function DeFi() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -778,7 +779,7 @@ export default function DeFi() {
             </div>
             <div>
               <h5 className="font-semibold mb-3">Rechtliches</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-600">
                 <li><Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link></li>
                 <li><Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link></li>
                 <li><Link href="/agb" className="hover:text-white transition-colors">AGB</Link></li>
