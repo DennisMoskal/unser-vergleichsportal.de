@@ -70,7 +70,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Kostenlose Erstberatung",
         "NEU: KI-gestützte Lösungen",
         "Zentraler Projekt Manager",
-        "Live-Webinare zu Internetrecht",
+        "Online Vertragsmanagement",
         "Muster-Verträge & Checklisten"
       ],
       price: "ab 20€/Monat",
