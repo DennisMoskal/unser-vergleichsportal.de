@@ -30,6 +30,8 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
+        {/* Bing-Verifizierung für Yahoo/Bing */}
+        <meta name="msvalidate.01" content="5201AAEF61BC57DF0BFD9257B6E8B51A" />
         {/* Impact Site Verification Tag */}
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
         {/* Google Verification Tag */}
@@ -38,6 +40,18 @@ export default function RootLayout({
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
         <meta name="verification" content="f97e97c1e8f6cf5274f5d6d0cc18505c" />
+        {/* Favicon für ältere Browser und Suchmaschinen */}
+        <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Apple Touch Icon für iOS-Geräte */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Sitemap für Suchmaschinen */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        {/* Zusätzliche SEO-Meta-Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="SmartFinanz" />
+        <meta name="revisit-after" content="7 days" />
+        <meta charSet="UTF-8" />
+        <link rel="canonical" href="https://smartfinanz.de" />
         <Script
           crossOrigin="anonymous"
           src="//unpkg.com/same-runtime/dist/index.global.js"
