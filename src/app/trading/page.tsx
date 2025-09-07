@@ -580,6 +580,83 @@ export default function DeFi() {
               <strong>Sicherheits-Tipp:</strong> Verwenden Sie Hardware-Wallets wie Ledger für langfristige Krypto-Aufbewahrung und aktivieren Sie 2FA. <a href="https://de.tradingview.com/?aff_id=156504" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Mit TradingView sicher traden</a>.
             </p>
 
+            <h3 className="text-xl font-bold mb-4 text-green-600">So bauen Sie Vermögen mit Bitcoin-Trading auf – steuerfrei nach einem Jahr</h3>
+            <p className="text-gray-600 mb-4">
+              Bitcoin bietet eine einzigartige Möglichkeit, Vermögen aufzubauen, insbesondere durch die steuerliche Behandlung in Deutschland. Gemäß § 23 Abs. 1 Nr. 2 EStG sind Gewinne aus dem Verkauf von Kryptowährungen wie Bitcoin steuerfrei, wenn Sie diese länger als ein Jahr halten. Dies macht Bitcoin zu einer attraktiven Option für langfristige Investoren, die Kapital aufbauen möchten, ohne Kapitalertragssteuer zahlen zu müssen.
+            </p>
+            <h4 className="text-lg font-semibold mb-2">Warum Bitcoin für Vermögensaufbau?</h4>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Hohe Wertsteigerung:</strong> Bitcoin hat in der Vergangenheit starke Kurssteigerungen erlebt. Seit 2020 hat Bitcoin eine durchschnittliche jährliche Rendite von über 50% erzielt (Stand 09/2025).
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Steuerfreiheit nach einem Jahr:</strong> Wenn Sie Bitcoin kaufen und mindestens 12 Monate halten, sind Gewinne steuerfrei, unabhängig von der Höhe. Dies gilt für Privatpersonen, die Bitcoin als privates Verägensgut halten.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Dezentrale Natur:</strong> Bitcoin ist unabhängig von zentralen Banken, was es zu einer Absicherung gegen Inflation macht.
+              </li>
+            </ul>
+            <h4 className="text-lg font-semibold mb-2">Wie funktioniert steuerfreies Bitcoin-Trading?</h4>
+            <p className="text-gray-600 mb-4">
+              Um von der Steuerfreiheit zu profitieren, kaufen Sie Bitcoin auf einer regulierten Plattform wie XTB und halten Sie die Coins für mindestens ein Jahr. Nach Ablauf dieser Frist können Sie die Bitcoin verkaufen, und die Gewinne sind von der Kapitalertragssteuer befreit. Wichtig: Die Haltefrist beginnt mit dem Kaufdatum und endet mit dem Verkauf. Beispiel:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Kauf:</strong> Sie investieren 5.000 € in Bitcoin am 01.09.2025 über XTB.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Holding:</strong> Sie halten die Bitcoin bis mindestens 02.09.2026.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Verkauf:</strong> Nach einem Kursanstieg verkaufen Sie die Bitcoin für 10.000 €. Der Gewinn von 5.000 € ist steuerfrei.
+              </li>
+            </ul>
+            <h4 className="text-lg font-semibold mb-2">Warum XTB für Bitcoin-Trading?</h4>
+            <p className="text-gray-600 mb-4">
+              XTB ist eine regulierte Plattform (BaFin), die Bitcoin-CFDs mit 0% Kommission bis 100.000 € Umsatz anbietet. Zusätzlich bietet XTB:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kostenloses Demo-Konto zum Testen von Strategien
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Bis zu 2,3% Zinsen auf Ihr Guthaben
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Benutzerfreundliche Plattform für Anfänger und Profis
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              <strong>Tipp:</strong> Starten Sie mit XTB, um Bitcoin sicher zu kaufen und von der steuerfreien Haltefrist zu profitieren. <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Jetzt Bitcoin mit XTB kaufen</a>.
+            </p>
+            <h4 className="text-lg font-semibold mb-2">Wichtige Hinweise zur Steuerfreiheit</h4>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Private Nutzung:</strong> Die Steuerfreiheit gilt nur für private Anleger, nicht für gewerbliche Trader.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Haltefrist:</strong> Die Bitcoin müssen mindestens 12 Monate ununterbrochen gehalten werden.
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <strong>Risiken:</strong> Bitcoin ist volatil. Kursverluste sind möglich, und die Steuerfreiheit schützt nicht vor Verlusten.
+              </li>
+            </ul>
+            <p className="text-gray-600 mb-6">
+              <strong>Fazit:</strong> Bitcoin-Trading mit einer Haltefrist von über einem Jahr bietet eine einzigartige Chance, Vermögen steuerfrei aufzubauen. Mit XTB können Sie sicher und einfach in Bitcoin investieren. <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Jetzt mit XTB starten</a>.
+            </p>
+
             <div className="text-center">
               <Button className="bg-green-600 hover:bg-green-700 text-white">
                 <Link href="#anbieter">Testsieger vergleichen</Link>
