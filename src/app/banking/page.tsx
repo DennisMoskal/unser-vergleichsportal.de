@@ -227,20 +227,17 @@ export default function Banking() {
               Jetzt Banking-Produkte vergleichen
             </Button>
 
-            {/* OPTION 1 – zusätzlicher Hero-Button ohne Icon */}
+            {/* TRADING-LINK #1 – im Hero, gleicher Look wie der Banking-Button */}
             <div className="mt-3 flex justify-center">
-              <Link
-                href="/trading"
-                aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
-                title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
-              >
-                <Button
-                  size="lg"
-                  className="border border-white bg-transparent text-white hover:bg-white hover:text-green-600"
+              <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium">
+                <Link
+                  href="/trading"
+                  aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                  title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
                   Broker-Vergleich für Investitionen
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -361,7 +358,7 @@ export default function Banking() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
           
-          {/* Girokonto kostenlos */}
+        {/* Girokonto kostenlos */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</h3>
             <div className="grid gap-6 md:grid-cols-2">
@@ -498,7 +495,7 @@ export default function Banking() {
             </a>
           </div>
 
-          {/* OPTION 2 – CTA-Box nach Tagesgeld, ohne Icon, grün/neutral */}
+          {/* TRADING-LINK #2 – CTA-Box nach Tagesgeld, gleicher Button-Look */}
           <div className="mb-12 bg-green-50 border border-green-200 rounded-xl p-5">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
@@ -507,15 +504,15 @@ export default function Banking() {
                   Notgroschen gesichert? Vergleichen Sie jetzt Broker für langfristigen Vermögensaufbau mit Aktien &amp; ETFs.
                 </p>
               </div>
-              <Link
-                href="/trading"
-                aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
-                title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
-              >
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
+              <Button asChild className="bg-white text-green-600 hover:bg-gray-100 font-medium">
+                <Link
+                  href="/trading"
+                  aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+                  title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+                >
                   Zum Broker-Vergleich
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
 
@@ -707,10 +704,10 @@ export default function Banking() {
             </Card>
           </div>
 
-          {/* Checkliste: Farbwelt vereinheitlicht (nicht mehr gelb) */}
+          {/* ✅ GRÜNE Checkliste mit Versicherungen-CTA (interner Link #3) */}
           <div className="mt-8 bg-green-50 p-6 rounded-lg border-2 border-green-200">
             <h3 className="text-lg font-bold mb-4 text-green-800">✅ Checkliste für optimale Finanzplanung</h3>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-3">
               <div>
                 <h5 className="font-semibold mb-2">Grundausstattung:</h5>
                 <ul className="text-sm space-y-1">
@@ -728,6 +725,25 @@ export default function Banking() {
                   <li>• Alte Kredite auf bessere Konditionen prüfen</li>
                   <li>• Regelmäßig Konditionen vergleichen</li>
                 </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">Absicherung &amp; Eigenheim:</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Wohngebäudeversicherung fürs Eigenheim</li>
+                  <li>• Hausrat &amp; private Haftpflicht</li>
+                  <li>• BU- oder Risikolebensversicherung</li>
+                </ul>
+                <div className="mt-3">
+                  <Button asChild className="bg-white text-green-600 hover:bg-gray-100 font-medium">
+                    <Link
+                      href="/versicherungen"
+                      title="Versicherungen vergleichen – Wohngebäude, Hausrat, Haftpflicht & mehr"
+                      aria-label="Versicherungen vergleichen – Wohngebäude, Hausrat, Haftpflicht & mehr"
+                    >
+                      Versicherungen vergleichen
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -809,7 +825,7 @@ export default function Banking() {
             </Card>
           </div>
 
-          {/* Dieser Kasten bleibt bewusst gelb/orange */}
+          {/* Gelber Hinweis-Kasten bleibt so */}
           <div className="mt-8 bg-orange-50 p-6 rounded-lg border-2 border-orange-200">
             <h3 className="text-lg font-bold mb-4 text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</h3>
             <div className="grid gap-4 md:grid-cols-2">
