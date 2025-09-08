@@ -408,7 +408,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Trading 2025</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {provider.isTopRecommendation && (
@@ -448,6 +448,19 @@ export default function DeFi() {
               </Card>
             ))}
           </div>
+
+          {/* INTERNAL LINK: Banking – Auszahlungen & Konten für Trader */}
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <h3 className="text-base sm:text-lg font-semibold mb-2">
+              Auszahlungen & Banking für Trader: SEPA Instant, Gebühren & Karten
+            </h3>
+            <p className="text-sm text-gray-600">
+              Zum Trading und dem <strong>Auszahlen von Beträgen</strong> gehört auch ein starkes Banking – schnelle
+              SEPA-Instant-Überweisungen, niedrige Gebühren und zuverlässige Kartenfunktionen.{" "}
+              <Link href="/banking">Jetzt Banking-Anbieter vergleichen</Link>.
+            </p>
+          </div>
+
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
             <p>
               CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
@@ -529,6 +542,13 @@ export default function DeFi() {
             </ul>
             <p className="text-gray-600 mb-6"><strong>Sicherheits-Tipp:</strong> Seed-Phrase offline lagern, nie digital teilen.</p>
 
+            {/* INTERNAL LINK: Versicherungen – Eigenverwahrung von Bitcoin */}
+            <p className="text-sm text-gray-600 mt-2">
+              Bewahren Sie Bitcoin in <strong>Eigenverwahrung (Hardware-Wallet)</strong> auf? Denken Sie auch an Absicherung gegen
+              Einbruchdiebstahl, Phishing & Rechtsstreitigkeiten – je nach Tarif über Hausrat-, Cyber- und Rechtsschutzversicherung.{" "}
+              <Link href="/versicherungen">Versicherungen für Krypto-Anleger vergleichen</Link>.
+            </p>
+
             <h3 className="text-xl font-bold mb-4 text-green-600">Vermögen mit Bitcoin aufbauen – steuerfrei nach einem Jahr</h3>
             <p className="text-gray-600 mb-4">
               Gemäß § 23 Abs. 1 Nr. 2 EStG sind Gewinne aus dem Verkauf von Kryptowährungen bei privater Nutzung nach einer Haltefrist von über 12 Monaten steuerfrei. Das macht langfristiges Halten attraktiv.
@@ -554,7 +574,7 @@ export default function DeFi() {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Häufig gestellte Fragen zu Trading-Plattformen</h2>
+          <h2 className="text-2xl sm:py-0 sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Häufig gestellte Fragen zu Trading-Plattformen</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
@@ -624,7 +644,7 @@ export default function DeFi() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Ihr Weg zur richtigen Trading-Plattform: Der ultimative Leitfaden</h2>
-        <div className="prose max-w-4xl mx-auto">
+          <div className="prose max-w-4xl mx-auto">
             <p className="text-gray-600 mb-4">
               Die Wahl der richtigen Trading-Plattform ist entscheidend für Ihren Erfolg als Investor. Ob Sie in Kryptowährungen, CFDs, Aktien oder ETFs investieren – die Plattform muss zu Ihren Zielen, Ihrem Budget und Ihrem Erfahrungslevel passen. Unser Leitfaden hilft, die besten Trading-Plattformen 2025 zu finden.
             </p>
