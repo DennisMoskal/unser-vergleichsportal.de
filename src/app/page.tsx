@@ -822,11 +822,7 @@ export default function Home() {
                     </div>
                     <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
                       <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                        {provider.name === "Vodafone" ? "Zum Anbieter*" : 
-                         provider.name === "1&1" ? "Zum Anbieter*" : 
-                         provider.name === "Verivox" ? "Zum Anbieter*" : 
-                         provider.name === "freenet" ? "Vodafone Giga Mobil M 5G*" : 
-                         "Zum Anbieter*"}
+                        Zum Anbieter*
                         {provider.name === "Vodafone" && (
                           <Image
                             src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
@@ -1267,3 +1263,11 @@ export default function Home() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
+              "reviewCount": "100000"
+            }
+          })
+        }} />
+      </div>
+    </>
+  )
+}
