@@ -246,6 +246,25 @@ const providerData = [
     logo: "✈️",
     url: "https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=",
     badge: "Top Auslandsreisekrankenversicherung"
+  },
+  {
+    name: "Die Bayerische",
+    rating: 4.8,
+    features: [
+      "Optimaler Hinterbliebenenschutz für Ihre Familie",
+      "Flexibler Vergleichsrechner für maßgeschneiderte Tarife",
+      "Bis zu 100% Absicherung des Familieneinkommens",
+      "Testsieger bei Stiftung Warentest (09/2025, Note 1,3)",
+      "Einfacher Online-Abschluss in wenigen Minuten",
+      "Kostenlose Beratung durch Experten",
+      "Anpassbare Versicherungssumme und Laufzeit",
+      "Über 160 Jahre Erfahrung und Vertrauen"
+    ],
+    price: "ab 5,90€/Monat",
+    bonus: "10% Rabatt bei Abschluss bis 31.12.2025",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=391372&mid=17046&awinaffid=2524533&linkid=2659747&clickref=",
+    badge: "Top Risikolebensversicherung"
   }
 ]
 
@@ -255,9 +274,9 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Wohngebäudeversicherung, Krankenzusatzversicherung & Zahnzusatzversicherung vergleichen | SmartFinanz</title>
-        <meta name="description" content="Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz- und Hausratversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern wie hepster, TravelSecure, Tarifcheck und HanseMerkur!" />
-        <meta name="keywords" content="Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz-Versicherung, Hausratversicherung, Versicherungsvergleich, hepster, TravelSecure, Tarifcheck, HanseMerkur, Gebäudeversicherung, Hausversicherung" />
+        <title>Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung & Risikolebensversicherung vergleichen | SmartFinanz</title>
+        <meta name="description" content="Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Risikolebensversicherung, E-Bike-, Reise-, Kfz- und Hausratversicherungen bei SmartFinanz. Sparen Sie bis zu 1.000€ jährlich mit Testsiegern wie Die Bayerische, hepster, TravelSecure, Tarifcheck und HanseMerkur!" />
+        <meta name="keywords" content="Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Risikolebensversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz-Versicherung, Hausratversicherung, Hinterbliebenenschutz, Versicherungsvergleich, Die Bayerische, hepster, TravelSecure, Tarifcheck, HanseMerkur, Gebäudeversicherung, Hausversicherung" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
@@ -267,7 +286,7 @@ export default function Versicherungen() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Versicherungen vergleichen bei SmartFinanz",
-              "description": "Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, E-Bike-Versicherung, Reiseversicherung, Kfz- und Hausratversicherungen. Sparen Sie mit unseren Testsiegern wie hepster, TravelSecure, Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
+              "description": "Vergleichen Sie Wohngebäudeversicherung, Krankenzusatzversicherung, Zahnzusatzversicherung, Risikolebensversicherung, E-Bike-, Reise-, Kfz- und Hausratversicherungen. Sparen Sie mit Testsiegern wie Die Bayerische, hepster, TravelSecure, Tarifcheck und HanseMerkur bis zu 1.000€ jährlich.",
               "publisher": {
                 "@type": "Organization",
                 "name": "SmartFinanz",
@@ -372,7 +391,7 @@ export default function Versicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zur besten Versicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie mit SmartFinanz die perfekte Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Kranken-, Zahnzusatz-, E-Bike- oder Reiseversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und Verivox bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie mit SmartFinanz die perfekte Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Kranken-, Zahnzusatz-, E-Bike- oder Reiseversicherung. Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und HanseMerkur bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
             <Button
               size="lg"
