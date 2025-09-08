@@ -226,6 +226,22 @@ export default function Banking() {
             >
               Jetzt Banking-Produkte vergleichen
             </Button>
+
+            {/* OPTION 1 – zusätzlicher Hero-Button ohne Icon */}
+            <div className="mt-3 flex justify-center">
+              <Link
+                href="/trading"
+                aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+              >
+                <Button
+                  size="lg"
+                  className="border border-white bg-transparent text-white hover:bg-white hover:text-green-600"
+                >
+                  Broker-Vergleich für Investitionen
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -280,7 +296,7 @@ export default function Banking() {
             </a>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.map((provider, index) => (
+            {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
@@ -439,13 +455,13 @@ export default function Banking() {
           {/* Tagesgeld Vergleich */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</h3>
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-green-50 border-green-200">
               <CardHeader>
-                <CardTitle className="text-blue-800">📈 Aktuelle Tagesgeld Zinsen 2025</CardTitle>
+                <CardTitle className="text-green-800">📈 Aktuelle Tagesgeld Zinsen 2025</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-blue-700 mb-4">
-                  Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung - ideal für Notreserven und kurzfristige Geldanlage.
+                <p className="text-sm text-green-700 mb-4">
+                  Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.
                 </p>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
@@ -459,7 +475,7 @@ export default function Banking() {
                   <div>
                     <h5 className="font-semibold mb-2">Wichtige Hinweise:</h5>
                     <ul className="text-sm space-y-1">
-                      <li>• Zinsbindung oft nur 3-12 Monate</li>
+                      <li>• Zinsbindung oft nur 3–12 Monate</li>
                       <li>• Danach meist niedrigere Bestandskundenzinsen</li>
                       <li>• Regelmäßiger Vergleich lohnt sich</li>
                     </ul>
@@ -482,25 +498,46 @@ export default function Banking() {
             </a>
           </div>
 
+          {/* OPTION 2 – CTA-Box nach Tagesgeld, ohne Icon, grün/neutral */}
+          <div className="mb-12 bg-green-50 border border-green-200 rounded-xl p-5">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-green-800">Ersparnisse sinnvoll anlegen</h3>
+                <p className="text-sm sm:text-base text-gray-700">
+                  Notgroschen gesichert? Vergleichen Sie jetzt Broker für langfristigen Vermögensaufbau mit Aktien &amp; ETFs.
+                </p>
+              </div>
+              <Link
+                href="/trading"
+                aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+                title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Zum Broker-Vergleich
+                </Button>
+              </Link>
+            </div>
+          </div>
+
           {/* Baufinanzierung */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Baufinanzierung Rechner - Ihren Traum vom Eigenheim verwirklichen</h3>
             <div className="grid gap-6 md:grid-cols-2">
-              <Card>
+              <Card className="border-2 hover:border-green-200">
                 <CardHeader>
                   <CardTitle>Baufinanzierung: Das sollten Sie wissen</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li><strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
-                    <li><strong>Zinsbindung:</strong> 10-15 Jahre für Planungssicherheit</li>
-                    <li><strong>Tilgung:</strong> Initial 2-4% für zügige Rückzahlung</li>
-                    <li><strong>Nebenkosten:</strong> 10-15% zusätzlich zur Kaufsumme</li>
-                    <li><strong>Sondertilgungen:</strong> Jährlich 5-10% kostenfrei möglich</li>
+                    <li><strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
+                    <li><strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
+                    <li><strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
+                    <li><strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
                   </ul>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-2 hover:border-green-200">
                 <CardHeader>
                   <CardTitle>Aktuelle Bauzinsen & Trends</CardTitle>
                 </CardHeader>
@@ -508,9 +545,9 @@ export default function Banking() {
                   <p className="text-sm text-gray-600 mb-4">
                     Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.
                   </p>
-                  <div className="bg-orange-50 p-3 rounded">
-                    <h5 className="font-semibold text-orange-800 mb-1">💰 Spartipp:</h5>
-                    <p className="text-sm text-orange-700">
+                  <div className="bg-green-50 p-3 rounded">
+                    <h5 className="font-semibold text-green-800 mb-1">💰 Spartipp:</h5>
+                    <p className="text-sm text-green-700">
                       Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.
                     </p>
                   </div>
@@ -535,7 +572,7 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig - alles bequem von zu Hause.
+                  Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig – alles bequem von zu Hause.
                 </p>
               </CardContent>
             </Card>
@@ -574,7 +611,7 @@ export default function Banking() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Überweisungen, Daueraufträge, Kontostände prüfen - alles 24/7 verfügbar ohne Öffnungszeiten.
+                  Überweisungen, Daueraufträge, Kontostände prüfen – alles 24/7 verfügbar ohne Öffnungszeiten.
                 </p>
               </CardContent>
             </Card>
@@ -642,9 +679,9 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-blue-200">
+            <Card className="border-2 border-green-200">
               <CardHeader>
-                <CardTitle className="text-blue-600">📈 Depot eröffnen für Geldanlage</CardTitle>
+                <CardTitle className="text-green-600">📈 Depot eröffnen für Geldanlage</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -657,11 +694,11 @@ export default function Banking() {
                   <div>
                     <h5 className="font-semibold mb-2">Kostenlose Depots:</h5>
                     <p className="text-sm text-gray-600">
-                      Viele Online-Broker bieten <strong className="text-blue-600">kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.
+                      Viele Online-Broker bieten <strong className="text-green-600">kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.
                     </p>
                   </div>
-                  <div className="bg-blue-50 p-3 rounded">
-                    <p className="text-sm text-blue-700">
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="text-sm text-green-700">
                       <strong>Wichtig:</strong> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!
                     </p>
                   </div>
@@ -669,14 +706,16 @@ export default function Banking() {
               </CardContent>
             </Card>
           </div>
-          <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
-            <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für optimale Finanzplanung</h3>
+
+          {/* Checkliste: Farbwelt vereinheitlicht (nicht mehr gelb) */}
+          <div className="mt-8 bg-green-50 p-6 rounded-lg border-2 border-green-200">
+            <h3 className="text-lg font-bold mb-4 text-green-800">✅ Checkliste für optimale Finanzplanung</h3>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <h5 className="font-semibold mb-2">Grundausstattung:</h5>
                 <ul className="text-sm space-y-1">
                   <li>• Kostenloses Girokonto für Alltag</li>
-                  <li>• Tagesgeldkonto für Notreserve (3-6 Monatsgehälter)</li>
+                  <li>• Tagesgeldkonto für Notreserve (3–6 Monatsgehälter)</li>
                   <li>• Kreditkarte ohne Jahresgebühr für Reisen</li>
                   <li>• Dispozinsen unter 7% vereinbaren</li>
                 </ul>
@@ -726,9 +765,9 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 hover:border-blue-200">
+            <Card className="border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-blue-600">📱 Modern Digital Cards</CardTitle>
+                <CardTitle className="text-green-600">📱 Modern Digital Cards</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
@@ -741,15 +780,15 @@ export default function Banking() {
                       <li>• Virtuelle Kartennummern</li>
                     </ul>
                   </div>
-                  <div className="bg-blue-50 p-2 rounded text-sm">
-                    <strong className="text-blue-600">Kostenlos</strong> + Cashback möglich
+                  <div className="bg-green-50 p-2 rounded text-sm">
+                    <strong className="text-green-600">Kostenlos</strong> + Cashback möglich
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 hover:border-purple-200">
+            <Card className="border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-purple-600">✈️ Travel & Bonus Cards</CardTitle>
+                <CardTitle className="text-green-600">✈️ Travel & Bonus Cards</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
@@ -762,20 +801,22 @@ export default function Banking() {
                       <li>• Priority Pass inklusive</li>
                     </ul>
                   </div>
-                  <div className="bg-purple-50 p-2 rounded text-sm">
-                    <strong className="text-purple-600">Premium-Features</strong> kostenlos
+                  <div className="bg-green-50 p-2 rounded text-sm">
+                    <strong className="text-green-600">Viele Premium-Features</strong> ohne Zusatzkosten
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
+
+          {/* Dieser Kasten bleibt bewusst gelb/orange */}
           <div className="mt-8 bg-orange-50 p-6 rounded-lg border-2 border-orange-200">
             <h3 className="text-lg font-bold mb-4 text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</h3>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <h5 className="font-semibold mb-2">Versteckte Kosten beachten:</h5>
                 <ul className="text-sm space-y-1">
-                  <li>• Fremdwährungsgebühren (oft 1-2%)</li>
+                  <li>• Fremdwährungsgebühren (oft 1–2%)</li>
                   <li>• Bargeldgebühren auch im Inland</li>
                   <li>• Jahresgebühr ab dem 2. Jahr</li>
                   <li>• Hohe Sollzinsen bei Teilzahlung</li>
