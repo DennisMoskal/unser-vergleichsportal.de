@@ -438,7 +438,7 @@ export default function Tierversicherungen() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Beste Tierversicherung 2025: Hundeversicherung & Katzenversicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Finden Sie die perfekte Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
+              Finden Sie die passende Hundeversicherung, Katzenversicherung oder Tierkrankenversicherung mit unserem Tierversicherung Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
             </p>
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
               Jetzt Tierversicherungen vergleichen
@@ -514,7 +514,7 @@ export default function Tierversicherungen() {
             ))}
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
-            <p>*Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.</p>
+            <p>*Wir erhalten eine Provision für Käufe über diesen Button.</p>
           </div>
         </div>
       </section>
@@ -522,7 +522,7 @@ export default function Tierversicherungen() {
       {/* Detaillierter Versicherungsvergleich */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Beste Hundeversicherung & Katzenversicherung</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Beste & günstigste Hundeversicherung und Katzenversicherung</h1>
 
           {/* Hundehaftpflichtversicherung */}
           <div className="mb-12">
@@ -596,7 +596,7 @@ export default function Tierversicherungen() {
                     <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auslandsschutz für bis zu 12 Monate weltweit</li>
                   </ul>
                   <Link href="https://tidd.ly/3UN80GC" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt Uelzener Tierkrankenversicherung abschließen*</Button>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -613,7 +613,7 @@ export default function Tierversicherungen() {
                     <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auszeichnung als 'Fairer Versicherer'</li>
                   </ul>
                   <Link href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt BavariaDirekt Tierkrankenversicherung abschließen*</Button>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -630,7 +630,7 @@ export default function Tierversicherungen() {
                     <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden</li>
                   </ul>
                   <Link href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt Figo Hunde-OP-Versicherung abschließen*</Button>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -639,7 +639,7 @@ export default function Tierversicherungen() {
 
           {/* Hunde-OP-Versicherung */}
           <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung – Optimaler Schutz für Operationen mit Figo</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung – Optimaler Schutz für Operationen</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <p className="mb-4">
                 Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
@@ -652,7 +652,7 @@ export default function Tierversicherungen() {
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Beitragsgestaltung für alle Rassen und Altersgruppen.</span></li>
               </ul>
               <h4 className="text-lg font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h4>
-              <p className="mb-4">Um die beste <strong>Hunde-OP-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+              <p className="mb-4">Um die beste & billigste <strong>Hunde-OP-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</span></li>
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</span></li>
@@ -660,11 +660,11 @@ export default function Tierversicherungen() {
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</span></li>
               </ul>
               <p className="mb-6">
-                Mit der Figo Hunde-OP-Versicherung schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
+                Mit der Hunde-OP-Versicherung schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
               </p>
               <div className="text-center">
                 <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt die Figo Hunde-OP-Versicherung online abschließen!*</Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt die Top Hunde-OP-Versicherung online abschließen!*</Button>
                 </a>
               </div>
             </div>
@@ -675,7 +675,7 @@ export default function Tierversicherungen() {
       {/* Tierversicherung Online Abschließen Guide */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen – So finden Sie die beste Hundeversicherung</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen – So finden Sie die beste & billigste Hundeversicherung</h1>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               { step: "1", title: "Vergleichen", text: "Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung." },
