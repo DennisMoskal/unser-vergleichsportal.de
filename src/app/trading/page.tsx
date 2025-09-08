@@ -495,7 +495,7 @@ export default function DeFi() {
               <Link href="/versicherungen" aria-label="Versicherungen für Krypto-Anleger" title="Versicherungen für Krypto-Anleger">
                 <Button className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700">
                   <Shield className="h-4 w-4" />
-                  Versicherungen für Krypto-Anleger
+                  Zu den Versicherungen
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
