@@ -497,10 +497,10 @@ export default function Versicherungen() {
       {/* E-Bike-Versicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h1>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
-              Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte. Besonders für teure E-Bikes ist eine Absicherung essenziell, um hohe Reparatur- oder Ersatzkosten zu vermeiden. Mit Anbietern wie <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" className="text-green-600 hover:underline">hepster</a> erhalten Sie flexible Tarife ohne Selbstbeteiligung und Altersbeschränkung, die sich an Ihren Bedarf anpassen.
+              Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte. Besonders für teure E-Bikes ist eine Absicherung essenziell, um hohe Reparatur- oder Ersatzkosten zu vermeiden. Mit Anbietern wie hepster erhalten Sie flexible Tarife ohne Selbstbeteiligung und Altersbeschränkung, die sich an Ihren Bedarf anpassen.
             </p>
             <h3 className="text-xl font-semibold mb-4">Warum eine E-Bike-Versicherung sinnvoll ist</h3>
             <ul className="space-y-2 mb-6">
@@ -544,7 +544,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <p className="mb-6">
-              Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" className="text-green-600 hover:underline">hepster E-Bike-Versicherung</a> sichern Sie Ihr E-Bike einfach online ab. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie die Versicherungsleistungen an und profitieren Sie von 100% digitaler Verwaltung. Starten Sie jetzt und schützen Sie Ihr E-Bike optimal!
+              Mit der hepster E-Bike-Versicherung sichern Sie Ihr E-Bike einfach online ab. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie die Versicherungsleistungen an und profitieren Sie von 100% digitaler Verwaltung. Starten Sie jetzt und schützen Sie Ihr E-Bike optimal!
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" target="_blank">
@@ -560,10 +560,10 @@ export default function Versicherungen() {
       {/* Reiseversicherung Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h1>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
-              Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob Urlaub, Geschäftsreise oder Work & Travel – mit <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" className="text-green-600 hover:underline">TravelSecure</a> finden Sie maßgeschneiderte Tarife für Einzelpersonen, Familien, Gruppen oder junge Reisende. TravelSecure ist mehrfacher Testsieger bei Stiftung Warentest (01/2025, Note 1,4).
+              Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob Urlaub, Geschäftsreise oder Work & Travel – mit TravelSecure finden Sie maßgeschneiderte Tarife für Einzelpersonen, Familien, Gruppen oder junge Reisende. TravelSecure ist mehrfacher Testsieger bei Stiftung Warentest (01/2025, Note 1,4).
             </p>
             <h3 className="text-xl font-semibold mb-4">Warum eine Reiseversicherung sinnvoll ist</h3>
             <ul className="space-y-2 mb-6">
@@ -607,7 +607,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <p className="mb-6">
-              Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" className="text-green-600 hover:underline">TravelSecure Reiseversicherung</a> sichern Sie Ihre Reisen einfach online ab. Ob Jahresreiseversicherung Reisekarte4you oder Spezialtarife für Gruppen und junge Reisende – TravelSecure bietet flexible Lösungen für jeden Reiseanlass. Starten Sie jetzt und reisen Sie sorgenfrei!
+              Mit der TravelSecure Reiseversicherung sichern Sie Ihre Reisen einfach online ab. Ob Jahresreiseversicherung Reisekarte4you oder Spezialtarife für Gruppen und junge Reisende – TravelSecure bietet flexible Lösungen für jeden Reiseanlass. Starten Sie jetzt und reisen Sie sorgenfrei!
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" target="_blank">
@@ -623,7 +623,7 @@ export default function Versicherungen() {
       {/* Wohngebäudeversicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h1>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Wohngebäudeversicherung</strong> ist für Hausbesitzer unverzichtbar, um Ihr Eigentum vor Schäden durch Feuer, Sturm, Hagel, Überschwemmung oder Vandalismus zu schützen. Sie deckt Reparatur-, Instandsetzungs- oder Wiederaufbaukosten für Ihr Haus und fest installierte Elemente wie Heizungsanlagen oder Einbauküchen ab. Mit einem <strong>Vergleich Wohngebäudeversicherung</strong> auf Plattformen wie Tarifcheck finden Sie maßgeschneiderte Tarife, die Ihren Bedürfnissen entsprechen und bis zu 500€ jährlich sparen können.
@@ -670,7 +670,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <p className="mb-6">
-              Mit <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" className="text-green-600 hover:underline">Tarifcheck Wohngebäudeversicherung</a> vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
+              Mit Tarifcheck Wohngebäudeversicherung vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" target="_blank">
@@ -686,7 +686,7 @@ export default function Versicherungen() {
       {/* Krankenzusatzversicherung Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h1>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Krankenzusatzversicherung</strong> ergänzt Ihre gesetzliche Krankenversicherung und bietet zusätzlichen Schutz für Leistungen, die nicht oder nur teilweise abgedeckt sind. Dazu gehören Behandlungen wie <strong>Chefarztbehandlung</strong>, <strong>Einzelzimmer im Krankenhaus</strong> oder <strong>alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong> interessant, die Zuschüsse für Sehhilfen bietet.
@@ -711,7 +711,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <p className="mb-6">
-              Anbieter wie <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" className="text-green-600 hover:underline">HanseMerkur Zusatzkrankenversicherung</a> bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer <strong>Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
+              Anbieter wie HanseMerkur Zusatzkrankenversicherung bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer <strong>Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" target="_blank">
@@ -727,7 +727,7 @@ export default function Versicherungen() {
       {/* Zahnzusatzversicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h1>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder <strong>professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was eine <strong>Zahnzusatzversicherung für Implantate</strong> oder <strong>Zahnprophylaxe</strong> besonders attraktiv macht.
@@ -774,7 +774,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <p className="mb-6">
-              Die <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" className="text-green-600 hover:underline">HanseMerkur Zahnzusatzversicherung</a> bietet umfassenden Schutz ohne Wartezeit und bis zu 100% Kostenerstattung für Zahnersatz. Vergleichen Sie jetzt und sichern Sie sich den besten Tarif!
+              Die HanseMerkur Zahnzusatzversicherung bietet umfassenden Schutz ohne Wartezeit und bis zu 100% Kostenerstattung für Zahnersatz. Vergleichen Sie jetzt und sichern Sie sich den besten Tarif!
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" target="_blank">
