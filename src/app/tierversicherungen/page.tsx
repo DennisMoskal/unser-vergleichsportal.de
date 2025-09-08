@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, TrendingUp, Menu, X } from "lucide-react"
+import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -14,7 +14,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
     <div className={`flex flex-col items-start ${className}`}>
       <div className="flex items-center space-x-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
           <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
         </svg>
         <span className="font-bold">martFinanz</span>
@@ -290,8 +290,14 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
       <Head>
         <title>Tierversicherung Vergleich 2025: Beste Hunde- & Katzenversicherung | SmartFinanz</title>
-        <meta name="description" content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo!" />
-        <meta name="keywords" content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Hunde-OP-Versicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, Figo" />
+        <meta
+          name="description"
+          content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo!"
+        />
+        <meta
+          name="keywords"
+          content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Hunde-OP-Versicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, Figo"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
@@ -332,19 +338,19 @@ export default function Tierversicherungen() {
             <SmartFinanzLogo className="text-2xl text-gray-900" />
           </div>
           <nav className="hidden md:flex space-x-6">
-            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Versicherungen")}>
+            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Versicherungen
             </Link>
-            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Banking")}>
+            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Banking
             </Link>
-            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Tierversicherung")}>
+            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Tierversicherung
             </Link>
-            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Trading")}>
+            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Trading
             </Link>
-            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium" onClick={() => console.log("Clicked Kundenbewertungen")}>
+            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Kundenbewertungen
             </Link>
           </nav>
@@ -367,7 +373,6 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
-                  console.log("Clicked Mobile Versicherungen")
                   handleNavigation("/versicherungen")
                 }}
               >
@@ -378,7 +383,6 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
-                  console.log("Clicked Mobile Banking")
                   handleNavigation("/banking")
                 }}
               >
@@ -389,7 +393,6 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
-                  console.log("Clicked Mobile Tierversicherung")
                   handleNavigation("/tierversicherungen")
                 }}
               >
@@ -400,7 +403,6 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
-                  console.log("Clicked Mobile Trading")
                   handleNavigation("/trading")
                 }}
               >
@@ -411,7 +413,6 @@ export default function Tierversicherungen() {
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                 onClick={() => {
                   setMobileMenuOpen(false)
-                  console.log("Clicked Mobile Kundenbewertungen")
                   handleNavigation("/#kundenbewertungen")
                 }}
               >
@@ -450,56 +451,34 @@ export default function Tierversicherungen() {
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die richtige Tierversicherung</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Vergleichen Sie Tarife</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Was kostet eine Hundekrankenversicherung im Monat? Nutzen Sie unseren Tierversicherung Vergleich, um günstige Tierversicherungen für Hunde, Katzen oder Pferde zu finden. Über 250 Tarife stehen Ihnen zur Verfügung.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Prüfen Sie Leistungen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Achten Sie auf Kostenübernahme für Tierarztkosten, Operationen und Vorsorge. Anbieter wie Uelzener, BavariaDirekt und Figo bieten bis zu 100% Erstattung für Hunde OP Versicherung und Katzenkrankenversicherung.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Vertrauen Sie Bewertungen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Kundenbewertungen wie Handelsblatt Testsieger (Uelzener, CHECK24) oder Focus Money (BavariaDirekt) helfen, vertrauenswürdige Anbieter für Hundeversicherung und Katzenversicherung zu finden.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
       {/* Anbieterübersicht */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Tierversicherungen</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Tierversicherungen</h1>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.map((provider, index) => (
+            {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck Tierversicherung" || provider.name === "CHECK24 Tierversicherung" || provider.name === "Uelzener Tierversicherung" || provider.name === "BavariaDirekt" || provider.name === "HanseMerkur Tierversicherung" || provider.name === "AXA") && (
+                {(provider.name === "Tarifcheck Tierversicherung" ||
+                  provider.name === "CHECK24 Tierversicherung" ||
+                  provider.name === "Uelzener Tierversicherung" ||
+                  provider.name === "BavariaDirekt" ||
+                  provider.name === "HanseMerkur Tierversicherung" ||
+                  provider.name === "AXA") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                    {provider.name === "Tarifcheck Tierversicherung" ? "Top Empfehlung" : 
-                     provider.name === "CHECK24 Tierversicherung" ? "Top Empfehlung" : 
-                     provider.name === "Uelzener Tierversicherung" ? "Top Empfehlung" : 
-                     provider.name === "BavariaDirekt" ? "Top Empfehlung" : 
-                     provider.name === "HanseMerkur Tierversicherung" ? "Top Kostenübernahme" : 
-                     "Top Hundehalterhaftpflicht"}
+                    {provider.name === "Tarifcheck Tierversicherung"
+                      ? "Top Empfehlung"
+                      : provider.name === "CHECK24 Tierversicherung"
+                      ? "Top Empfehlung"
+                      : provider.name === "Uelzener Tierversicherung"
+                      ? "Top Empfehlung"
+                      : provider.name === "BavariaDirekt"
+                      ? "Top Empfehlung"
+                      : provider.name === "HanseMerkur Tierversicherung"
+                      ? "Top Kostenübernahme"
+                      : "Top Hundehalterhaftpflicht"}
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
@@ -507,10 +486,7 @@ export default function Tierversicherungen() {
                   <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
-                      />
+                      <Star key={i} className={`h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`} />
                     ))}
                     <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
                   </div>
@@ -518,7 +494,9 @@ export default function Tierversicherungen() {
                 <CardContent className="flex flex-col flex-1">
                   <div className="text-center border-b pb-2 mb-4">
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
+                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">
+                      {provider.bonus}
+                    </Badge>
                   </div>
                   <ul className="space-y-1 flex-1 overflow-auto">
                     {provider.features.map((feature, i) => (
@@ -528,24 +506,15 @@ export default function Tierversicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={provider.url}
-                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                    rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}
-                    onClick={() => console.log(`Navigating to provider: ${provider.url}`)}
-                  >
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                      Zum Anbieter*
-                    </Button>
+                  <Link href={provider.url} target={provider.url.startsWith("http") ? "_blank" : "_self"} rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">Zum Anbieter*</Button>
                   </Link>
                 </CardContent>
               </Card>
             ))}
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
-            <p>
-              *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
-            </p>
+            <p>*Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.</p>
           </div>
         </div>
       </section>
@@ -553,7 +522,7 @@ export default function Tierversicherungen() {
       {/* Detaillierter Versicherungsvergleich */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Beste Hundeversicherung & Katzenversicherung</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherungsvergleich 2025: Beste Hundeversicherung & Katzenversicherung</h1>
 
           {/* Hundehaftpflichtversicherung */}
           <div className="mb-12">
@@ -569,9 +538,7 @@ export default function Tierversicherungen() {
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
-                    <p className="text-sm text-green-700">
-                      Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich. Nutzen Sie Testsieger wie Tarifcheck oder CHECK24 für die beste Hundehaftpflichtversicherung.
-                    </p>
+                    <p className="text-sm text-green-700">Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich. Nutzen Sie Testsieger wie Tarifcheck oder CHECK24 für die beste Hundehaftpflichtversicherung.</p>
                   </div>
                 </CardContent>
               </Card>
@@ -581,36 +548,14 @@ export default function Tierversicherungen() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 50 Mio. € Deckungssumme
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Schutz bei grober Fahrlässigkeit
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Welpen bis 12 Monate oft kostenfrei mitversichert
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Weltweiter Schutz für Reisen
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      24/7 Schadenmeldung online
-                    </li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 50 Mio. € Deckungssumme</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Schutz bei grober Fahrlässigkeit</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate oft kostenfrei mitversichert</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Weltweiter Schutz für Reisen</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24/7 Schadenmeldung online</li>
                   </ul>
-                  <Link
-                    href="https://www.tarifcheck.com/5dM0KnS"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to Tarifcheck Hundehaftpflicht")}
-                  >
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt Hundehaftpflicht vergleichen*
-                    </Button>
+                  <Link href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt Hundehaftpflicht vergleichen*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -625,21 +570,15 @@ export default function Tierversicherungen() {
               <div className="grid gap-4 md:grid-cols-3">
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Grundschutz</h5>
-                  <p className="text-sm text-gray-600">
-                    Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.
-                  </p>
+                  <p className="text-sm text-gray-600">Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.</p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Erweiterte Deckung</h5>
-                  <p className="text-sm text-gray-600">
-                    Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, Figo). Inklusive Vorsorge wie Impfungen und Zahnreinigung.
-                  </p>
+                  <p className="text-sm text-gray-600">Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, Figo). Inklusive Vorsorge wie Impfungen und Zahnreinigung.</p>
                 </div>
                 <div>
                   <h5 className="font-medium text-green-600 mb-2">Premium-Schutz</h5>
-                  <p className="text-sm text-gray-600">
-                    Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.
-                  </p>
+                  <p className="text-sm text-gray-600">Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.</p>
                 </div>
               </div>
             </div>
@@ -651,32 +590,13 @@ export default function Tierversicherungen() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Umfassender Schutz für Hunde, Katzen und Pferde
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Kranken- und OP-Versicherung mit Gesundheitspauschale
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Testsieger in Leistungs- und Fairness-Tests 2024
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Auslandsschutz für bis zu 12 Monate weltweit
-                    </li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Umfassender Schutz für Hunde, Katzen und Pferde</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Kranken- und OP-Versicherung mit Gesundheitspauschale</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Testsieger in Leistungs- und Fairness-Tests 2024</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auslandsschutz für bis zu 12 Monate weltweit</li>
                   </ul>
-                  <Link
-                    href="https://tidd.ly/3UN80GC"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to Uelzener Tierkrankenversicherung")}
-                  >
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt Uelzener Tierkrankenversicherung abschließen*
-                    </Button>
+                  <Link href="https://tidd.ly/3UN80GC" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt Uelzener Tierkrankenversicherung abschließen*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -687,32 +607,13 @@ export default function Tierversicherungen() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Günstige Hundehaftpflicht ab 23,13€/Jahr
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Welpen bis 12 Monate kostenfrei mitversichert
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      24h-Notfall-Hotline für schnellen Service
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Auszeichnung als 'Fairer Versicherer'
-                    </li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Günstige Hundehaftpflicht ab 23,13€/Jahr</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate kostenfrei mitversichert</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24h-Notfall-Hotline für schnellen Service</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auszeichnung als 'Fairer Versicherer'</li>
                   </ul>
-                  <Link
-                    href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref="
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to BavariaDirekt Tierkrankenversicherung")}
-                  >
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt BavariaDirekt Tierkrankenversicherung abschließen*
-                    </Button>
+                  <Link href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt BavariaDirekt Tierkrankenversicherung abschließen*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -723,32 +624,13 @@ export default function Tierversicherungen() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bis zu 90% Erstattung ohne Jahreslimit
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Freie Tierarzt- und Klinikwahl
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Unbegrenzt kostenlose Videosprechstunden
-                    </li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 90% Erstattung ohne Jahreslimit</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Freie Tierarzt- und Klinikwahl</li>
+                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden</li>
                   </ul>
-                  <Link
-                    href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref="
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    onClick={() => console.log("Navigating to Figo Hunde-OP-Versicherung")}
-                  >
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">
-                      Jetzt Figo Hunde-OP-Versicherung abschließen*
-                    </Button>
+                  <Link href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt Figo Hunde-OP-Versicherung abschließen*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -760,57 +642,29 @@ export default function Tierversicherungen() {
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung – Optimaler Schutz für Operationen mit Figo</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <p className="mb-4">
-                Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" className="text-green-600 hover:underline">Figo Hunde-OP-Versicherung</a> sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
+                Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
               </p>
               <h4 className="text-lg font-semibold mb-4">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
               <ul className="space-y-2 mb-6">
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit.</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Freie Tierarzt- und Klinikwahl weltweit.</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Unbegrenzt kostenlose Videosprechstunden mit Tierärzten.</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Flexible Beitragsgestaltung für alle Rassen und Altersgruppen.</span>
-                </li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Freie Tierarzt- und Klinikwahl weltweit.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Unbegrenzt kostenlose Videosprechstunden mit Tierärzten.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Beitragsgestaltung für alle Rassen und Altersgruppen.</span></li>
               </ul>
               <h4 className="text-lg font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h4>
-              <p className="mb-4">
-                Um die beste <strong>Hunde-OP-Versicherung</strong> zu finden, beachten Sie folgende Punkte:
-              </p>
+              <p className="mb-4">Um die beste <strong>Hunde-OP-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
               <ul className="space-y-2 mb-6">
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Flexibilität</strong>: Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse.</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</span>
-                </li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Flexibilität</strong>: Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</span></li>
               </ul>
               <p className="mb-6">
-                Mit der <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" className="text-green-600 hover:underline">Figo Hunde-OP-Versicherung</a> schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
+                Mit der Figo Hunde-OP-Versicherung schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
               </p>
               <div className="text-center">
                 <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt die Figo Hunde-OP-Versicherung online abschließen!*
-                  </Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt die Figo Hunde-OP-Versicherung online abschließen!*</Button>
                 </a>
               </div>
             </div>
@@ -821,87 +675,46 @@ export default function Tierversicherungen() {
       {/* Tierversicherung Online Abschließen Guide */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen – So finden Sie die beste Hundeversicherung</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen – So finden Sie die beste Hundeversicherung</h1>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">1</span>
-                </div>
-                <CardTitle className="text-lg">Vergleichen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">2</span>
-                </div>
-                <CardTitle className="text-lg">Berechnen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">3</span>
-                </div>
-                <CardTitle className="text-lg">Prüfen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Uelzener oder BavariaDirekt.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">4</span>
-                </div>
-                <CardTitle className="text-lg">Abschließen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail.
-                </p>
-              </CardContent>
-            </Card>
+            {[
+              { step: "1", title: "Vergleichen", text: "Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung." },
+              { step: "2", title: "Berechnen", text: "Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten." },
+              { step: "3", title: "Prüfen", text: "Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Uelzener oder BavariaDirekt." },
+              { step: "4", title: "Abschließen", text: "Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail." }
+            ].map((item) => (
+              <Card key={item.step} className="text-center">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-green-600">{item.step}</span>
+                  </div>
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600">{item.text}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
+
           <div className="mt-12 bg-white p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-6 text-center">Häufige Fragen zur Tierversicherung</h3>
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Ist eine Hundehaftpflichtversicherung Pflicht?</h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die Hundehaftpflichtversicherung Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.
-                </p>
+                <p className="text-sm text-gray-600 mb-4">In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die Hundehaftpflichtversicherung Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener und Figo bieten bis zu 100% Erstattung.
-                </p>
+                <p className="text-sm text-gray-600 mb-4">Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener und Figo bieten bis zu 100% Erstattung.</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Kann ich online kündigen?</h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  Ja, die meisten Hundeversicherungen und Katzenversicherungen können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).
-                </p>
+                <p className="text-sm text-gray-600 mb-4">Ja, die meisten Hundeversicherungen und Katzenversicherungen können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-green-600">Welche Zahlungsmethoden gibt es?</h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei Anbietern wie BavariaDirekt gegen Aufpreis möglich.
-                </p>
+                <p className="text-sm text-gray-600 mb-4">SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei Anbietern wie BavariaDirekt gegen Aufpreis möglich.</p>
               </div>
             </div>
           </div>
@@ -911,13 +724,16 @@ export default function Tierversicherungen() {
       {/* Tierversicherung wechseln - Spartipps */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h2>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h1>
+
           <div className="mb-8 text-center">
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
             </p>
           </div>
+
           <div className="grid gap-8 lg:grid-cols-2">
+            {/* Kasten 1: hellgrün */}
             <Card className="border-2 border-green-200">
               <CardHeader>
                 <CardTitle className="text-green-600">🐶 Hundehaftpflichtversicherung wechseln</CardTitle>
@@ -926,9 +742,7 @@ export default function Tierversicherungen() {
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold mb-2">Beste Wechselzeit:</h5>
-                    <p className="text-sm text-gray-600">
-                      Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.
-                    </p>
+                    <p className="text-sm text-gray-600">Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</p>
                   </div>
                   <div>
                     <h5 className="font-semibold mb-2">Durchschnittliche Ersparnis:</h5>
@@ -944,26 +758,26 @@ export default function Tierversicherungen() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-blue-200">
+
+            {/* Kasten 2: ehemals blau → hellgrün angleichen */}
+            <Card className="border-2 border-green-200">
               <CardHeader>
-                <CardTitle className="text-blue-600">🐱 Tierkrankenversicherung wechseln</CardTitle>
+                <CardTitle className="text-green-600">🐱 Tierkrankenversicherung wechseln</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold mb-2">Kündigungsfristen:</h5>
-                    <p className="text-sm text-gray-600">
-                      Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.
-                    </p>
+                    <p className="text-sm text-gray-600">Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.</p>
                   </div>
                   <div>
                     <h5 className="font-semibold mb-2">Sparpotential:</h5>
                     <p className="text-sm text-gray-600">
-                      <strong className="text-blue-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder Figo.
+                      <strong className="text-green-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder Figo.
                     </p>
                   </div>
-                  <div className="bg-blue-50 p-3 rounded">
-                    <p className="text-sm text-blue-700">
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="text-sm text-green-700">
                       <strong>Achtung:</strong> Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!
                     </p>
                   </div>
@@ -971,6 +785,8 @@ export default function Tierversicherungen() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Gelber Kasten bleibt */}
           <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
             <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für den Tierversicherungswechsel</h3>
             <div className="grid gap-4 md:grid-cols-2">
@@ -1018,26 +834,10 @@ export default function Tierversicherungen() {
             <div>
               <h5 className="font-semibold mb-3">Finanzprodukte</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/versicherungen" className="hover:text-white transition-colors">
-                    Versicherungsvergleich
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/banking" className="hover:text-white transition-colors">
-                    Girokonto & Kredite
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tierversicherungen" className="hover:text-white transition-colors">
-                    Tierkrankenversicherung
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/trading" className="hover:text-white transition-colors">
-                    Online Broker Vergleich
-                  </Link>
-                </li>
+                <li><Link href="/versicherungen" className="hover:text-white transition-colors">Versicherungsvergleich</Link></li>
+                <li><Link href="/banking" className="hover:text-white transition-colors">Girokonto & Kredite</Link></li>
+                <li><Link href="/tierversicherungen" className="hover:text-white transition-colors">Tierkrankenversicherung</Link></li>
+                <li><Link href="/trading" className="hover:text-white transition-colors">Online Broker Vergleich</Link></li>
               </ul>
             </div>
             <div>
@@ -1056,26 +856,10 @@ export default function Tierversicherungen() {
             <div>
               <h5 className="font-semibold mb-3">Unternehmen</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/ueber-uns" className="hover:text-white transition-colors">
-                    Über uns
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/partnerprogramme" className="hover:text-white transition-colors">
-                    Partnerprogramme
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/karriere" className="hover:text-white transition-colors">
-                    Karriere
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/kontakt" className="hover:text-white transition-colors">
-                    Kontakt
-                  </Link>
-                </li>
+                <li><Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link></li>
+                <li><Link href="/partnerprogramme" className="hover:text-white transition-colors">Partnerprogramme</Link></li>
+                <li><Link href="/karriere" className="hover:text-white transition-colors">Karriere</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link></li>
               </ul>
             </div>
             <div>
@@ -1093,9 +877,7 @@ export default function Tierversicherungen() {
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/">
-              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
-                Zurück zur Startseite
-              </Button>
+              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">Zurück zur Startseite</Button>
             </Link>
           </div>
         </div>
