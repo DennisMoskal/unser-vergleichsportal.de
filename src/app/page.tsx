@@ -77,6 +77,25 @@ const providerData: { [key: string]: Provider[] } = {
       bonus: "Gratis Rechtscheck",
       logo: "⚖️",
       url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
+    },
+    {
+      name: "freenet",
+      rating: 4.8,
+      features: [
+        "Flexible Mobilfunktarife mit und ohne Handy",
+        "Unlimited-Deals mit bis zu 300 Mbit/s 5G (Telekom, Vodafone, o2 Netze)",
+        "Monatlich kündbare Tarife verfügbar",
+        "Bis zu 65€ monatlicher Rabatt auf ausgewählte Tarife",
+        "Kombi-Angebote mit Smartphones und Tablets",
+        "waipu.tv für flexibles Streaming ohne Kabel",
+        "Kostenloser Kundenservice im Shop oder telefonisch",
+        "Klimaneutrale Bezahlung und Versand",
+        "Top Anbieter wie Telekom, Vodafone, o2 integriert"
+      ],
+      price: "ab 14,99€/Monat",
+      bonus: "Bis zu 250€ Tauschprämien-Bonus",
+      logo: "📱",
+      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=2524343&clickref="
     }
   ],
   banking: [
@@ -161,78 +180,6 @@ const providerData: { [key: string]: Provider[] } = {
       url: "/anbieter/figopet"
     }
   ],
-  mobilfunk: [
-    {
-      name: "freenet",
-      rating: 4.8,
-      features: [
-        "Flexible Tarife mit und ohne Handy",
-        "Unlimited-Deals mit bis zu 300 Mbit/s 5G",
-        "Monatlich kündbare Tarife verfügbar",
-        "Top Netzwerke: Telekom, Vodafone, o2",
-        "Bis zu 65€ monatlicher Rabatt auf ausgewählte Tarife",
-        "Kombi-Angebote mit Smartphones und Tablets",
-        "waipu.tv für flexibles Streaming ohne Kabel",
-        "Kostenloser Kundenservice im Shop oder telefonisch",
-        "Klimaneutrale Bezahlung und Versand"
-      ],
-      price: "ab 14,99€/Monat",
-      bonus: "Bis zu 250€ Tauschprämien-Bonus",
-      logo: "📱",
-      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=2524343&clickref="
-    },
-    {
-      name: "Telekom",
-      rating: 4.7,
-      features: [
-        "Zuverlässiges 5G-Netz mit hoher Abdeckung",
-        "MagentaMobil Partnerkarten für Familien",
-        "Tarife mit und ohne Handy verfügbar",
-        "Bis zu 300 Mbit/s Downloadgeschwindigkeit",
-        "Monatlich kündbare Optionen",
-        "Kostenloser Kundensupport 24/7",
-        "Spezielle Tarife für junge Leute"
-      ],
-      price: "ab 19,95€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "🌐",
-      url: "https://www.freenet-mobilfunk.de/telekom-tarife/"
-    },
-    {
-      name: "Vodafone",
-      rating: 4.6,
-      features: [
-        "Highspeed 5G mit bis zu 300 Mbit/s",
-        "GigaTV-Integration für Streaming",
-        "Kombi-Vorteile mit DSL-Tarifen",
-        "Kostenloser WLAN-Router bei Vertragsabschluss",
-        "Tarife für Selbstständige und Geschäftskunden",
-        "Bis zu 100€ Neukundenbonus",
-        "Schnelle Installation und Support"
-      ],
-      price: "ab 9,99€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "📡",
-      url: "https://www.freenet-mobilfunk.de/vodafone-tarife/"
-    },
-    {
-      name: "o2",
-      rating: 4.5,
-      features: [
-        "Unlimited Max Tarife mit hohem Datenvolumen",
-        "5G-Unterstützung in allen Tarifen",
-        "Monatlich kündbare Tarife verfügbar",
-        "Kombi-Angebote mit FRITZ!Box 6860 5G",
-        "Kostenloser Support und Online-Verwaltung",
-        "Tarife für Kinder und Senioren",
-        "Bis zu 65€ monatlicher Rabatt"
-      ],
-      price: "ab 14,99€/Monat",
-      bonus: "Bis zu 50€ Startguthaben",
-      logo: "📶",
-      url: "https://www.freenet-mobilfunk.de/o2-tarife/"
-    }
-  ],
   trading: [
     {
       name: "XTB",
@@ -275,7 +222,7 @@ export default function Home() {
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
     const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "mobilfunk", "trading"].includes(hash)) {
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -335,9 +282,6 @@ export default function Home() {
               <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Tierversicherung
               </Link>
-              <Link href="/mobilfunk" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Mobilfunk
-              </Link>
               <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Trading
               </Link>
@@ -383,13 +327,6 @@ export default function Home() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Tierversicherung
-                </Link>
-                <Link
-                  href="/mobilfunk"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Mobilfunk
                 </Link>
                 <Link
                   href="/trading"
@@ -455,14 +392,6 @@ export default function Home() {
                     aria-label="Tierversicherungen vergleichen"
                   >
                     Tierversicherung
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "mobilfunk" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("mobilfunk"); window.location.href = "/mobilfunk"; }}
-                    aria-label="Mobilfunk vergleichen"
-                  >
-                    Mobilfunk
                   </Button>
                   <Button
                     variant={selectedProduct === "trading" ? "default" : "outline"}
@@ -550,7 +479,6 @@ export default function Home() {
                 { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
                 { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
                 { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
-                { key: 'mobilfunk', label: 'MOBILFUNK', url: '/mobilfunk', isInternal: true },
                 { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
                 { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
                 { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
@@ -637,7 +565,7 @@ export default function Home() {
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" aria-hidden="true" />
                 <Input
-                  placeholder="Suchen Sie nach Versicherungen, Konten, Mobilfunk, DSL, Strom oder Anbietern..."
+                  placeholder="Suchen Sie nach Versicherungen, Konten, Strom oder Anbietern..."
                   className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                   aria-label="Suche nach Finanzprodukten"
@@ -917,7 +845,7 @@ export default function Home() {
                     "name": "Wie funktioniert der Vergleich bei SmartFinanz?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                      "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern, einschließlich freenet für Mobilfunk, DSL und Internet. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
                     }
                   },
                   {
@@ -933,7 +861,7 @@ export default function Home() {
                     "name": "Welche Kategorien bietet SmartFinanz an?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Mobilfunk, Internet, DSL, Festnetz, Trading-Plattformen, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                      "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, Strom, Gas, Ökostrom, Reisen, Kreditkarten, Mietwagen und Mobilfunk über Anbieter wie freenet, Telekom, Vodafone und o2."
                     }
                   },
                   {
@@ -981,7 +909,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h4>
-                <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
+                <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern, einschließlich freenet für Mobilfunk, DSL und Internet. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h4>
@@ -989,7 +917,7 @@ export default function Home() {
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h4>
-                <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Mobilfunk, Internet, DSL, Festnetz, Trading-Plattformen, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
+                <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, Strom, Gas, Ökostrom, Reisen, Kreditkarten, Mietwagen und Mobilfunk über Anbieter wie freenet, Telekom, Vodafone und o2.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h4>
@@ -1032,11 +960,6 @@ export default function Home() {
                   <li>
                     <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenversicherung">
                       Tierkrankenversicherung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/mobilfunk" className="hover:text-white transition-colors" aria-label="Mobilfunk, DSL & Internet">
-                      Mobilfunk, DSL & Internet
                     </Link>
                   </li>
                   <li>
@@ -1115,7 +1038,7 @@ export default function Home() {
             "name": "SmartFinanz",
             "url": "https://smartfinanz.de",
             "logo": "https://smartfinanz.de/logo.png",
-            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, Mobilfunk, DSL, Internet, Festnetz, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
+            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, Mobilfunk, DSL, Internet, Festnetz, Strom, Gas und mehr. Über 500 geprüfte Anbieter, einschließlich freenet, kostenloser Vergleich.",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "DE"
