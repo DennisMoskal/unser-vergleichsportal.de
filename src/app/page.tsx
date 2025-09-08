@@ -158,7 +158,7 @@ const providerData: { [key: string]: Provider[] } = {
       price: "ab 9,99€/Monat",
       bonus: "Bis zu 100€ Startguthaben",
       logo: "📱",
-      url: "https://www.freenet.de"
+      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref="
     }
   ],
   tierversicherungen: [
@@ -718,7 +718,7 @@ export default function Home() {
                     "Testsieger für Kundenservice (connect 2025)"
                   ],
                   price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 120€ Cashback",
+                  bonus: "Bis zu 100€ Startguthaben",
                   logo: "📡",
                   url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
                 },
@@ -780,9 +780,7 @@ export default function Home() {
                   price: "ab 9,99€/Monat",
                   bonus: "Bis zu 100€ Startguthaben",
                   logo: "📱",
-                  url: "
-<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=">Vodafone Giga Mobil M 5G</a>
-"
+                  url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref="
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
@@ -827,7 +825,7 @@ export default function Home() {
                         {provider.name === "Vodafone" ? "Zum Anbieter*" : 
                          provider.name === "1&1" ? "Zum Anbieter*" : 
                          provider.name === "Verivox" ? "Zum Anbieter*" : 
-                         provider.name === "freenet" ? "Zum Anbieter*" : 
+                         provider.name === "freenet" ? "Vodafone Giga Mobil M 5G*" : 
                          "Zum Anbieter*"}
                         {provider.name === "Vodafone" && (
                           <Image
@@ -1269,11 +1267,3 @@ export default function Home() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
-              "reviewCount": "100000"
-            }
-          })
-        }} />
-      </div>
-    </>
-  )
-}
