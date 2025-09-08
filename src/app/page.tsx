@@ -161,6 +161,78 @@ const providerData: { [key: string]: Provider[] } = {
       url: "/anbieter/figopet"
     }
   ],
+  mobilfunk: [
+    {
+      name: "freenet",
+      rating: 4.8,
+      features: [
+        "Flexible Tarife mit und ohne Handy",
+        "Unlimited-Deals mit bis zu 300 Mbit/s 5G",
+        "Monatlich kündbare Tarife verfügbar",
+        "Top Netzwerke: Telekom, Vodafone, o2",
+        "Bis zu 65€ monatlicher Rabatt auf ausgewählte Tarife",
+        "Kombi-Angebote mit Smartphones und Tablets",
+        "waipu.tv für flexibles Streaming ohne Kabel",
+        "Kostenloser Kundenservice im Shop oder telefonisch",
+        "Klimaneutrale Bezahlung und Versand"
+      ],
+      price: "ab 14,99€/Monat",
+      bonus: "Bis zu 250€ Tauschprämien-Bonus",
+      logo: "📱",
+      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=2524343&clickref="
+    },
+    {
+      name: "Telekom",
+      rating: 4.7,
+      features: [
+        "Zuverlässiges 5G-Netz mit hoher Abdeckung",
+        "MagentaMobil Partnerkarten für Familien",
+        "Tarife mit und ohne Handy verfügbar",
+        "Bis zu 300 Mbit/s Downloadgeschwindigkeit",
+        "Monatlich kündbare Optionen",
+        "Kostenloser Kundensupport 24/7",
+        "Spezielle Tarife für junge Leute"
+      ],
+      price: "ab 19,95€/Monat",
+      bonus: "Bis zu 100€ Startguthaben",
+      logo: "🌐",
+      url: "https://www.freenet-mobilfunk.de/telekom-tarife/"
+    },
+    {
+      name: "Vodafone",
+      rating: 4.6,
+      features: [
+        "Highspeed 5G mit bis zu 300 Mbit/s",
+        "GigaTV-Integration für Streaming",
+        "Kombi-Vorteile mit DSL-Tarifen",
+        "Kostenloser WLAN-Router bei Vertragsabschluss",
+        "Tarife für Selbstständige und Geschäftskunden",
+        "Bis zu 100€ Neukundenbonus",
+        "Schnelle Installation und Support"
+      ],
+      price: "ab 9,99€/Monat",
+      bonus: "Bis zu 100€ Startguthaben",
+      logo: "📡",
+      url: "https://www.freenet-mobilfunk.de/vodafone-tarife/"
+    },
+    {
+      name: "o2",
+      rating: 4.5,
+      features: [
+        "Unlimited Max Tarife mit hohem Datenvolumen",
+        "5G-Unterstützung in allen Tarifen",
+        "Monatlich kündbare Tarife verfügbar",
+        "Kombi-Angebote mit FRITZ!Box 6860 5G",
+        "Kostenloser Support und Online-Verwaltung",
+        "Tarife für Kinder und Senioren",
+        "Bis zu 65€ monatlicher Rabatt"
+      ],
+      price: "ab 14,99€/Monat",
+      bonus: "Bis zu 50€ Startguthaben",
+      logo: "📶",
+      url: "https://www.freenet-mobilfunk.de/o2-tarife/"
+    }
+  ],
   trading: [
     {
       name: "XTB",
@@ -203,7 +275,7 @@ export default function Home() {
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
     const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "mobilfunk", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -211,9 +283,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
-        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ TÜV geprüft ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
-        <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Reisen, Kreditkarten, Mietwagen, SmartFinanz, Testsieger 2025" />
+        <title>SmartFinanz - Vergleich für Versicherungen, Banking, Mobilfunk, DSL & mehr | Testsieger 2025</title>
+        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, Mobilfunk, DSL, Internet, Festnetz, Strom, Gas & Reisen. ✓ TÜV geprüft ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
+        <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherungen, Mobilfunk, DSL, Internet, Festnetz, Trading, Strom, Gas, Reisen, Kreditkarten, Mietwagen, freenet, SmartFinanz, Testsieger 2025" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
@@ -223,15 +295,15 @@ export default function Home() {
         <link rel="canonical" href="https://smartfinanz.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
+        <meta property="og:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, Mobilfunk, DSL & mehr" />
+        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, Mobilfunk, DSL, Internet, Festnetz, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://smartfinanz.de" />
         <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
+        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, Mobilfunk, DSL & mehr" />
+        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, Mobilfunk, DSL, Internet, Festnetz, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
         <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta name="twitter:site" content="@smartfinanz" />
         <link rel="preload" href="/logo.png" as="image" />
@@ -243,6 +315,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.check24.de" />
         <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
         <link rel="dns-prefetch" href="https://www.awin1.com" />
+        <link rel="dns-prefetch" href="https://www.freenet-mobilfunk.de" />
         <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
       </Head>
       <div className="min-h-screen bg-white">
@@ -261,6 +334,9 @@ export default function Home() {
               </Link>
               <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Tierversicherung
+              </Link>
+              <Link href="/mobilfunk" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                Mobilfunk
               </Link>
               <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Trading
@@ -309,6 +385,13 @@ export default function Home() {
                   Tierversicherung
                 </Link>
                 <Link
+                  href="/mobilfunk"
+                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Mobilfunk
+                </Link>
+                <Link
                   href="/trading"
                   className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
@@ -341,13 +424,13 @@ export default function Home() {
                 Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
               </p>
 
-              {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
+              {/* Interaktives Widget - Erweitert mit 13 Kategorien */}
               <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
                 <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                   Nach welchem Produkt oder Service suchen Sie?
                 </h3>
 
-                {/* Grid für 12 Buttons - responsive Layout */}
+                {/* Grid für 13 Buttons - responsive Layout */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
                   <Button
                     variant={selectedProduct === "versicherung" ? "default" : "outline"}
@@ -372,6 +455,14 @@ export default function Home() {
                     aria-label="Tierversicherungen vergleichen"
                   >
                     Tierversicherung
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "mobilfunk" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("mobilfunk"); window.location.href = "/mobilfunk"; }}
+                    aria-label="Mobilfunk vergleichen"
+                  >
+                    Mobilfunk
                   </Button>
                   <Button
                     variant={selectedProduct === "trading" ? "default" : "outline"}
@@ -451,7 +542,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
+        {/* Kategorie-Navigation - ohne Icons, mit allen 13 Kategorien */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
@@ -459,6 +550,7 @@ export default function Home() {
                 { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
                 { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
                 { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
+                { key: 'mobilfunk', label: 'MOBILFUNK', url: '/mobilfunk', isInternal: true },
                 { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
                 { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
                 { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
@@ -545,7 +637,7 @@ export default function Home() {
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" aria-hidden="true" />
                 <Input
-                  placeholder="Suchen Sie nach Versicherungen, Konten, DSL, Strom oder Anbietern..."
+                  placeholder="Suchen Sie nach Versicherungen, Konten, Mobilfunk, DSL, Strom oder Anbietern..."
                   className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full"
                   onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                   aria-label="Suche nach Finanzprodukten"
@@ -560,246 +652,59 @@ export default function Home() {
           <div className="container mx-auto">
             <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h3>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  name: "Tarifcheck.de",
-                  rating: 4.5,
-                  features: [
-                    "Über 20 Jahre Erfahrung als Vergleichsportal",
-                    "100% kostenloser und unverbindlicher Vergleich",
-                    "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-                    "Mehrfach ausgezeichnet mit 'sehr gut'",
-                    "eKomi Silber Siegel mit 4,5/5 Sternen",
-                    "Über 3.194 Kundenbewertungen",
-                    "Deutschlands drittgrößtes Vergleichsportal",
-                    "Vertrauen von Millionen Verbrauchern",
-                    "Bis zu 1.000€ jährlich sparen möglich"
-                  ],
-                  price: "100% kostenlos",
-                  bonus: "Bis zu 120€ Neukundenbonus",
-                  logo: "🏆",
-                  url: "https://www.tarifcheck.de/girokonto/"
-                },
-                {
-                  name: "eRecht24",
-                  rating: 4.3,
-                  features: [
-                    "Rechtssicherheit für Webseiten",
-                    "DSGVO-konform mit Premium Tools",
-                    "Automatische Rechtstext-Generatoren",
-                    "Abmahnschutz inklusive",
-                    "Praxis-Tools für Social Media",
-                    "Kostenlose Erstberatung",
-                    "NEU: KI-gestützte Lösungen",
-                    "Zentraler Projekt Manager",
-                    "Live-Webinare zu Internetrecht",
-                    "Muster-Verträge & Checklisten"
-                  ],
-                  price: "ab 20€/Monat",
-                  bonus: "Gratis Rechtscheck",
-                  logo: "⚖️",
-                  url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
-                },
-                {
-                  name: "XTB",
-                  rating: 4.5,
-                  features: [
-                    "Gratis Aktie für neue Investoren",
-                    "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-                    "Über 8000 Aktien & ETFs",
-                    "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-                    "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-                    "eWallet mit virtueller Mastercard",
-                    "Smarte ETF-Sparpläne",
-                    "0% Kommission bis 100.000€ Umsatz",
-                    "Kostenlose Ein- & Auszahlungen",
-                    "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-                    "Platz 1 CFD-Broker 2024/25"
-                  ],
-                  price: "0€ Kommission",
-                  bonus: "Demo-Konto",
-                  logo: "📊",
-                  url: "https://link-pso.xtb.com/pso/lMDhc"
-                },
-                {
-                  name: "Credimaxx",
-                  rating: 4.9,
-                  features: [
-                    "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-                    "Sofortvermittlung durch erfahrene Kreditprofis",
-                    "Digitaler Abschluss mit WebID oder VideoIdent",
-                    "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-                    "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-                    "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-                    "Vermittlung in bis zu 1 Minute",
-                    "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-                    "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-                    "25 Jahre Erfahrung in der Kreditvermittlung"
-                  ],
-                  price: "ab 10,99% eff. Zins p.a.",
-                  bonus: "Schnelle Auszahlung",
-                  logo: "💳",
-                  url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
-                },
-                {
-                  name: "HanseMerkur",
-                  rating: 4.7,
-                  features: [
-                    "Umfassender Schutz für Hunde und Katzen",
-                    "Bis zu 100% Kostenerstattung",
-                    "Freie Tierarztwahl",
-                    "Keine Altersbeschränkung",
-                    "Schnelle Schadensbearbeitung",
-                    "Flexible Tarifoptionen",
-                    "Zusatzleistungen wie Physiotherapie",
-                    "Online-Vertragsmanagement",
-                    "24/7 Kundenhotline"
-                  ],
-                  price: "ab 10€/Monat",
-                  bonus: "Kostenloser Gesundheitscheck",
-                  logo: "🐾",
-                  url: "https://www.hansemerkur.de/tierkrankenversicherung"
-                },
-                {
-                  name: "CHECK24",
-                  rating: 4.8,
-                  features: [
-                    "Kostenloser Kontowechselservice",
-                    "Über 50 Banken im Vergleich",
-                    "Bis zu 250€ Willkommensbonus",
-                    "Kostenlose Kontoführung",
-                    "Schnelle Kontoeröffnung",
-                    "TÜV-geprüfter Vergleich",
-                    "24/7 Kundensupport",
-                    "Mobile Banking App",
-                    "Kreditkartenoptionen verfügbar",
-                    "Attraktive Zinsen auf Tagesgeld"
-                  ],
-                  price: "0€ Kontoführung",
-                  bonus: "Bis zu 250€ Bonus",
-                  logo: "🏦",
-                  url: "https://www.check24.de/girokonto/"
-                },
-                {
-                  name: "Vodafone",
-                  rating: 4.6,
-                  features: [
-                    "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
-                    "Günstige Mobilfunktarife mit 5G-Unterstützung",
-                    "Spezielle Angebote für Selbstständige und Geschäftskunden",
-                    "Kombi-Vorteile für DSL und Mobilfunk",
-                    "Kostenloser WLAN-Router bei Vertragsabschluss",
-                    "Flexibles Streaming mit GigaTV",
-                    "24/7 Kundenhotline für schnellen Support",
-                    "Bis zu 100€ Startguthaben für Neukunden",
-                    "Schnelle Installation und Einrichtung",
-                    "Testsieger für Kundenservice (connect 2025)"
-                  ],
-                  price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 100€ Startguthaben",
-                  logo: "📡",
-                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
-                },
-                {
-                  name: "1&1",
-                  rating: 4.7,
-                  features: [
-                    "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
-                    "Testsieger für Internetgeschwindigkeit (connect 2025)",
-                    "Kostenloser HomeServer für optimales WLAN",
-                    "Spezielle Angebote für Selbstständige und Firmen",
-                    "Kombi-Vorteile mit Mobilfunktarifen",
-                    "30 Tage Testphase für alle Tarife",
-                    "Bis zu 50€ Startguthaben für junge Kunden",
-                    "24h Austausch-Service bei Defekten",
-                    "Umfassender Umzugsservice",
-                    "Attraktive Bundle-Angebote mit Smartphones"
-                  ],
-                  price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 50€ Startguthaben",
-                  logo: "🌐",
-                  url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref="
-                },
-                {
-                  name: "Verivox",
-                  rating: 4.9,
-                  features: [
-                    "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
-                    "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
-                    "Spezielle Angebote für Selbstständige und Unternehmen",
-                    "TÜV-geprüftes Vergleichsportal mit 4.9/5 Bewertung",
-                    "Bis zu 200€ Prämie für Freundschaftswerbung",
-                    "Kostenloser Wechselservice für Tarife",
-                    "Transparente Tarifübersicht in der Verivox-App",
-                    "Schneller Online-Abschluss für Versicherungen",
-                    "Über 25 Jahre Erfahrung im Vergleichsmarkt",
-                    "Bis zu 1.000€ jährliche Einsparungen möglich"
-                  ],
-                  price: "100% kostenlos",
-                  bonus: "Bis zu 200€ Prämie",
-                  logo: "🏠",
-                  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                }
-              ].map((provider, index) => (
-                <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
-                  <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
-                    Top Empfehlung
-                  </Badge>
-                  <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
-                    <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
-                    <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
-                    <div className="flex items-center justify-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
-                          aria-hidden="true"
-                        />
-                      ))}
-                      <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
-                    <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
-                      <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
-                      <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
-                        {provider.bonus}
+            {Object.entries(providerData).map(([category, providers]) => (
+              <div key={category} id={category} className="mb-12">
+                <h4 className="text-xl sm:text-2xl font-semibold mb-6 capitalize">{category}</h4>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {providers.map((provider) => (
+                    <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
+                      <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
+                        Top Empfehlung
                       </Badge>
-                    </div>
-                    <div className="flex-grow overflow-hidden">
-                      <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{scrollbarWidth: 'thin'}}>
-                        <ul className="space-y-1.5">
-                          {provider.features.map((feature, i) => (
-                            <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
-                              <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                              <span className="break-words overflow-wrap-anywhere">{feature}</span>
-                            </li>
+                      <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
+                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
+                        <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
+                        <div className="flex items-center justify-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                              aria-hidden="true"
+                            />
                           ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                        {provider.name === "Vodafone" ? "Zum Anbieter*" : 
-                         provider.name === "1&1" ? "Zum Anbieter*" : 
-                         provider.name === "Verivox" ? "Zum Anbieter*" : 
-                         "Zum Anbieter*"}
-                        {provider.name === "Vodafone" && (
-                          <Image
-                            src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
-                            alt=""
-                            width={0}
-                            height={0}
-                            className="border-0"
-                          />
-                        )}
-                      </Button>
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                          <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
+                        <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
+                          <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
+                          <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
+                            {provider.bonus}
+                          </Badge>
+                        </div>
+                        <div className="flex-grow overflow-hidden">
+                          <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{scrollbarWidth: 'thin'}}>
+                            <ul className="space-y-1.5">
+                              {provider.features.map((feature, i) => (
+                                <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
+                                  <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                                  <span className="break-words overflow-wrap-anywhere">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                        <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
+                          <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                            Zum Anbieter*
+                          </Button>
+                        </a>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
             <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
               <p>
                 CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
@@ -1028,7 +933,7 @@ export default function Home() {
                     "name": "Welche Kategorien bietet SmartFinanz an?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                      "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Mobilfunk, Internet, DSL, Festnetz, Trading-Plattformen, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
                     }
                   },
                   {
@@ -1084,7 +989,7 @@ export default function Home() {
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h4>
-                <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
+                <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Mobilfunk, Internet, DSL, Festnetz, Trading-Plattformen, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h4>
@@ -1127,6 +1032,11 @@ export default function Home() {
                   <li>
                     <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Tierkrankenversicherung">
                       Tierkrankenversicherung
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/mobilfunk" className="hover:text-white transition-colors" aria-label="Mobilfunk, DSL & Internet">
+                      Mobilfunk, DSL & Internet
                     </Link>
                   </li>
                   <li>
@@ -1186,7 +1096,7 @@ export default function Home() {
             </div>
             <div className="border-t border-gray-800 mt-8 pt-6 text-center">
               <p className="text-sm text-gray-400 mb-4">
-                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, Mobilfunk, DSL & mehr
               </p>
               <Link href="/" aria-label="Zurück zur Startseite">
                 <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
@@ -1205,7 +1115,7 @@ export default function Home() {
             "name": "SmartFinanz",
             "url": "https://smartfinanz.de",
             "logo": "https://smartfinanz.de/logo.png",
-            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
+            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, Mobilfunk, DSL, Internet, Festnetz, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "DE"
