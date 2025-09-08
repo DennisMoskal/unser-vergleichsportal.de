@@ -219,6 +219,8 @@ export default function Banking() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie mit SmartFinanz das perfekte Girokonto oder den idealen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
+
+            {/* Button 1 – Banking */}
             <Button 
               size="lg" 
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
@@ -227,7 +229,12 @@ export default function Banking() {
               Jetzt Banking-Produkte vergleichen
             </Button>
 
-            {/* TRADING-LINK #1 – im Hero, gleicher Look wie der Banking-Button */}
+            {/* kurze Erklärung zwischen den Buttons */}
+            <p className="mt-2 text-xs sm:text-sm text-green-100">
+              Zur Vermögensbildung: Nutzen Sie den Button „Broker-Vergleich für Investitionen“, um passende Online-Broker für Aktien &amp; ETFs zu vergleichen.
+            </p>
+
+            {/* Button 2 – Trading (gleicher Look) */}
             <div className="mt-3 flex justify-center">
               <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium">
                 <Link
@@ -247,7 +254,7 @@ export default function Banking() {
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie das richtige Girokonto oder den passenden Kredit</h2>
-          <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
                 <CardTitle className="text-lg font-bold">Vergleichen Sie Angebote</CardTitle>
@@ -358,7 +365,7 @@ export default function Banking() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
           
-        {/* Girokonto kostenlos */}
+          {/* Girokonto kostenlos */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</h3>
             <div className="grid gap-6 md:grid-cols-2">
@@ -495,7 +502,7 @@ export default function Banking() {
             </a>
           </div>
 
-          {/* TRADING-LINK #2 – CTA-Box nach Tagesgeld, gleicher Button-Look */}
+          {/* OPTION 2 – Trading-CTA-Box */}
           <div className="mb-12 bg-green-50 border border-green-200 rounded-xl p-5">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
@@ -504,15 +511,15 @@ export default function Banking() {
                   Notgroschen gesichert? Vergleichen Sie jetzt Broker für langfristigen Vermögensaufbau mit Aktien &amp; ETFs.
                 </p>
               </div>
-              <Button asChild className="bg-white text-green-600 hover:bg-gray-100 font-medium">
-                <Link
-                  href="/trading"
-                  aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
-                  title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
-                >
+              <Link
+                href="/trading"
+                aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+                title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
                   Zum Broker-Vergleich
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -704,10 +711,10 @@ export default function Banking() {
             </Card>
           </div>
 
-          {/* ✅ GRÜNE Checkliste mit Versicherungen-CTA (interner Link #3) */}
+          {/* Checkliste – grün & inkl. Versicherungs-Link */}
           <div className="mt-8 bg-green-50 p-6 rounded-lg border-2 border-green-200">
             <h3 className="text-lg font-bold mb-4 text-green-800">✅ Checkliste für optimale Finanzplanung</h3>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <h5 className="font-semibold mb-2">Grundausstattung:</h5>
                 <ul className="text-sm space-y-1">
@@ -718,32 +725,19 @@ export default function Banking() {
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold mb-2">Vermögensaufbau:</h5>
+                <h5 className="font-semibold mb-2">Vermögensaufbau & Absicherung:</h5>
                 <ul className="text-sm space-y-1">
                   <li>• ETF-Sparplan für langfristigen Vermögensaufbau</li>
                   <li>• Depot mit kostenlosen ETF-Sparplänen</li>
                   <li>• Alte Kredite auf bessere Konditionen prüfen</li>
                   <li>• Regelmäßig Konditionen vergleichen</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-2">Absicherung &amp; Eigenheim:</h5>
-                <ul className="text-sm space-y-1">
-                  <li>• Wohngebäudeversicherung fürs Eigenheim</li>
-                  <li>• Hausrat &amp; private Haftpflicht</li>
-                  <li>• BU- oder Risikolebensversicherung</li>
-                </ul>
-                <div className="mt-3">
-                  <Button asChild className="bg-white text-green-600 hover:bg-gray-100 font-medium">
-                    <Link
-                      href="/versicherungen"
-                      title="Versicherungen vergleichen – Wohngebäude, Hausrat, Haftpflicht & mehr"
-                      aria-label="Versicherungen vergleichen – Wohngebäude, Hausrat, Haftpflicht & mehr"
-                    >
+                  <li>
+                    • Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren –{" "}
+                    <Link href="/versicherungen" className="text-green-700 underline hover:text-green-800 font-medium">
                       Versicherungen vergleichen
                     </Link>
-                  </Button>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -825,7 +819,7 @@ export default function Banking() {
             </Card>
           </div>
 
-          {/* Gelber Hinweis-Kasten bleibt so */}
+          {/* Dieser Kasten bleibt bewusst gelb/orange */}
           <div className="mt-8 bg-orange-50 p-6 rounded-lg border-2 border-orange-200">
             <h3 className="text-lg font-bold mb-4 text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</h3>
             <div className="grid gap-4 md:grid-cols-2">
