@@ -60,7 +60,7 @@ const providerData = {
         "Bitcoin handeln mit niedrigen Gebühren",
         "Krypto-Trading sicher mit Cold Storage"
       ],
-      price: "1% Spread",
+      price: "1% Spread bei Krypto",
       bonus: "Kostenloses Demo-Konto",
       logo: "🌐",
       url: "https://med.etoro.com/B19298_A126856_TClick.aspx",
