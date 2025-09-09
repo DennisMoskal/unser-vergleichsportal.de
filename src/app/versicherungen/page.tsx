@@ -536,7 +536,7 @@ export default function Versicherungen() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
                 <h3 className="text-base sm:text-lg font-semibold text-green-800">
-                  Haustiere absichern – Tierarzt- &amp; OP-Kosten im Griff
+                  Sie möchten zusätzlich Ihre Haustiere absichern – Tierarzt- &amp; OP-Kosten im Griff
                 </h3>
                 <p className="text-sm sm:text-base text-gray-700">
                   Von Basis bis OP-Schutz: Vergleichen Sie Tarife für Hunde &amp; Katzen – schnell, transparent und 100% online.
