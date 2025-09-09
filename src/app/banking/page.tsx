@@ -226,7 +226,7 @@ export default function Banking() {
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
-              Zum Tarif-Vergleichsrechner
+              Jetzt Tarife vergleichen
             </Button>
 
             {/* kurze Erklärung zwischen den Buttons */}
@@ -242,7 +242,7 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  Zum Broker-Vergleich
+                  Jetzt Broker vergleichen
                 </Link>
               </Button>
             </div>
@@ -517,7 +517,7 @@ export default function Banking() {
                 title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
               >
                 <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  Zum Broker-Vergleich
+                  Jetzt Broker vergleichen
                 </Button>
               </Link>
             </div>
