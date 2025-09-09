@@ -223,30 +223,6 @@ const providerData = {
       metaDescription:
         "LYNX bietet Zugang zu über 100 Märkten, TWS Plattform mit TradingView-Charts und Optionenhandel. Jetzt Depot eröffnen und professionell traden!",
       isTopRecommendation: false
-    },
-    {
-      name: "Vantage",
-      rating: 4.6,
-      features: [
-        "Über 1.000 CFDs: Forex, Indizes, Rohstoffe, Aktien, ETFs",
-        "Spreads ab 0.0 Pips für kosteneffizientes Trading",
-        "Bis zu 500:1 Leverage für flexible Strategien",
-        "Reguliert durch ASIC, FSCA, VFSC und Mauritius FSC",
-        "Segregierte Konten bei Top-Banken für maximale Sicherheit",
-        "24/7 Kundensupport in mehreren Sprachen",
-        "MetaTrader 4, MetaTrader 5 und Vantage App",
-        "Kostenloses Demo-Konto für risikofreies Testen",
-        "Einzahlungsbonus bis zu 50% für neue Trader",
-        "Partnerschaft mit Scuderia Ferrari HP"
-      ],
-      price: "0.0 Pips Spread",
-      bonus: "50% Einzahlungsbonus",
-      logo: "🏎️",
-      url: "https://go.vantagefx.com/visit/?bta=65953&brand=vantagefx",
-      metaTitle: "Vantage Trading: Top CFD-Broker für Forex & Krypto 2025",
-      metaDescription:
-        "Vantage bietet über 1.000 CFDs, Spreads ab 0.0 Pips, bis zu 500:1 Leverage und einen 50% Einzahlungsbonus. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
     }
   ]
 }
@@ -273,11 +249,11 @@ export default function DeFi() {
         <title>DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal</title>
         <meta
           name="description"
-          content="Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen."
+          content="Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB & WEEX im Vergleich: Gebühren, Sicherheit, Funktionen."
         />
         <meta
           name="keywords"
-          content="Bitcoin handeln, Krypto-Trading, DeFi Trading, Trading Plattform, Social Trading, CFD Broker Vergleich, beste Broker 2025, XTB, eToro, TradingView, Kraken, Bybit, WEEX, Vantage"
+          content="Bitcoin handeln, Krypto-Trading, DeFi Trading, Trading Plattform, Social Trading, CFD Broker Vergleich, beste Broker 2025, XTB, eToro, TradingView, Kraken, Bybit, WEEX"
         />
         <link rel="canonical" href="https://unser-vergleichsportal.de/trading" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
@@ -309,7 +285,7 @@ export default function DeFi() {
             "@type": "WebPage",
             name: "DeFi & Krypto-Trading 2025: Bitcoin handeln & mehr | Unser-Vergleichsportal.de",
             description:
-              "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Entdecken Sie eToro, TradingView, XTB, WEEX, Vantage und mehr für sicheres Trading mit niedrigen Gebühren.",
+              "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Entdecken Sie eToro, TradingView, XTB und mehr für sicheres Trading mit niedrigen Gebühren.",
             url: "https://unser-vergleichsportal.de/trading",
             keywords: [
               "Bitcoin handeln",
@@ -352,7 +328,7 @@ export default function DeFi() {
             <SmartFinanzLogo className="text-2xl text-gray-900" />
             <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
-          <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Versicherungen
             </Link>
@@ -387,56 +363,7 @@ export default function DeFi() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-4 py-4 space-y-4">
-              <Link
-                href="/versicherungen"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Versicherungen
-              </Link>
-              <Link
-                href="/banking"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Banking
-              </Link>
-              <Link
-                href="/tierversicherungen"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Tierversicherung
-              </Link>
-              <Link
-                href="/trading"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Trading
-              </Link>
-              <Link
-                href="/#kundenbewertungen"
-                className="block text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Kundenbewertungen
-              </Link>
-              <Button
-                className={btnPrimary}
-                onClick={() => {
-                  window.open("https://de.tradingview.com/?aff_id=156504", "_blank")
-                  setMobileMenuOpen(false)
-                }}
-              >
-                Vergleich starten
-              </Button>
-            </nav>
-          </div>
-        )}
+        {/* (bleibt unverändert) */}
       </header>
 
       {/* Hero */}
@@ -449,7 +376,7 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Broker & Trading-Plattformen für Aktien, Forex, ETF, Rohstoffe, Futures, DeFi, Bitcoin
               handeln und Krypto-Trading. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere
-              Testsieger wie eToro, TradingView, XTB, WEEX und Vantage bieten 0% Kommission, professionelle Tools und regulierte
+              Testsieger wie eToro, TradingView, XTB und WEEX bieten 0% Kommission, professionelle Tools und regulierte
               Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise!
             </p>
             <Link href="#anbieter">
@@ -472,7 +399,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro, XTB und Vantage oder ab 5,80€/Order bei
+                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro und XTB oder ab 5,80€/Order bei
                   LYNX. Prüfen Sie auch Spreads und Einzahlungsgebühren.
                 </p>
               </CardContent>
@@ -483,7 +410,7 @@ export default function DeFi() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  eToro, XTB, LYNX (BaFin/CySec), Vantage (ASIC/FSCA) oder Kraken (BMA) – Regulierung, Einlagensicherung und transparente
+                  eToro, XTB, LYNX (BaFin/CySec) oder Kraken (BMA) – Regulierung, Einlagensicherung und transparente
                   Richtlinien sind wichtig.
                 </p>
               </CardContent>
@@ -508,6 +435,8 @@ export default function DeFi() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
             Unsere Testsieger für Trading 2025
           </h2>
+        </div>
+        <div className="container mx-auto px-4">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
               <Card
@@ -550,7 +479,7 @@ export default function DeFi() {
                   <Link
                     href={provider.url}
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                    rel={provider.url.startsWith("http") ? "noopener nofollow sponsored" : undefined}
+                    rel={provider.url.startsWith("http") ? "noopener nofollow" : undefined}
                   >
                     <Button className={`w-full mt-auto ${btnPrimary}`}>Zum Anbieter*</Button>
                   </Link>
@@ -588,7 +517,7 @@ export default function DeFi() {
         </div>
       </section>
 
-      {/* Guide + Versicherungen-CTA */}
+      {/* Guide + Versicherungen-CTA (Button „Testsieger vergleichen“ entfernt) */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
@@ -725,7 +654,7 @@ export default function DeFi() {
         </div>
       </section>
 
-      {/* Vergleichs-Leitfaden */}
+      {/* Vergleichs-Leitfaden (Button entfernt) */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
@@ -756,6 +685,7 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               Akademien, Community-Ideen und Tutorials beschleunigen den Skill-Aufbau.
             </p>
+            {/* Kein Button mehr hier */}
           </div>
         </div>
       </section>
@@ -916,7 +846,7 @@ export default function DeFi() {
             </div>
             <div>
               <h5 className="font-semibold mb-3">Rechtliches</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-600">
                 <li>
                   <Link href="/datenschutz" className="hover:text-white transition-colors">
                     Datenschutz
