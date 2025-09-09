@@ -499,7 +499,7 @@ export default function DeFi() {
                 </p>
               </div>
               <Link href="/banking" aria-label="Zum Banking-Vergleich" title="Zum Banking-Vergleich">
-                <Button className={btnPrimary}>Banking-Vergleich ansehen</Button>
+                <Button className={btnPrimary}>Jetzt Banken vergleichen</Button>
               </Link>
             </div>
           </div>
