@@ -946,4 +946,3 @@ export default function Banking() {
     </div>
   )
 }
-```
