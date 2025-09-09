@@ -1,3 +1,4 @@
+```tsx
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -126,7 +127,7 @@ export default function Banking() {
         <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
       </Head>
 
       {/* Header */}
@@ -946,3 +947,4 @@ export default function Banking() {
     </div>
   )
 }
+```
