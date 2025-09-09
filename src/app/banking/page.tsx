@@ -242,7 +242,7 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  Broker-Vergleich für Investitionen
+                  Zum Broker Vergleich
                 </Link>
               </Button>
             </div>
