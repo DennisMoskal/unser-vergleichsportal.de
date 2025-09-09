@@ -519,6 +519,33 @@ export default function Tierversicherungen() {
         </div>
       </section>
 
+      {/* ↘↘ NEU: Grüner CTA-Kasten – Link zurück zu /versicherungen ↙↙ */}
+      <section className="py-6 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="bg-green-50 border border-green-200 rounded-xl p-5">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-green-800">
+                  Sie möchten sich selbst oder Ihr Eigentum versichern?
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700">
+                  Entdecken Sie Vergleiche für Hausrat, Haftpflicht, Kfz, Wohngebäude, Reise & Gesundheit – transparent und 100% online.
+                </p>
+              </div>
+              <Link
+                href="/versicherungen"
+                aria-label="Zu allen Versicherungen für Sie & Ihr Eigentum"
+                title="Versicherungen vergleichen"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Zu den Versicherungen
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Detaillierter Versicherungsvergleich */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -733,7 +760,7 @@ export default function Tierversicherungen() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
-            {/* Kasten 1: hellgrün */}
+            {/* Kasten 1 */}
             <Card className="border-2 border-green-200">
               <CardHeader>
                 <CardTitle className="text-green-600">🐶 Hundehaftpflichtversicherung wechseln</CardTitle>
@@ -759,7 +786,7 @@ export default function Tierversicherungen() {
               </CardContent>
             </Card>
 
-            {/* Kasten 2: ehemals blau → hellgrün angleichen */}
+            {/* Kasten 2 */}
             <Card className="border-2 border-green-200">
               <CardHeader>
                 <CardTitle className="text-green-600">🐱 Tierkrankenversicherung wechseln</CardTitle>
@@ -786,7 +813,7 @@ export default function Tierversicherungen() {
             </Card>
           </div>
 
-          {/* Gelber Kasten bleibt */}
+          {/* Checkliste */}
           <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
             <h3 className="text-lg font-bold mb-4 text-yellow-800">✅ Checkliste für den Tierversicherungswechsel</h3>
             <div className="grid gap-4 md:grid-cols-2">
