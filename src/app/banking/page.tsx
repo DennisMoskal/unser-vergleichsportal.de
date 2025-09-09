@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Star, Check, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import Head from "next/head"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -118,6 +119,16 @@ export default function Banking() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Meta-Tags für SEO */}
+      <Head>
+        <title>Finden Sie mit SmartFinanz das passende Girokonto und Kredit 2025</title>
+        <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
+        <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+      </Head>
+
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -215,7 +226,7 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ihr Weg zum besten Kredit und Girokonto 2025</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Finden Sie mit SmartFinanz das passende Girokonto</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie das passende Girokonto und den richtigen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
@@ -254,7 +265,7 @@ export default function Banking() {
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
-        <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
                 <CardTitle className="text-lg font-bold">Vergleichen Sie Angebote</CardTitle>
@@ -293,12 +304,6 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Girokonto-Vergleich 2025</h2>
-          {/* DKB Seal 1 */}
-          <div className="mb-6 text-center">
-            <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2273778&v=11329&q=441826&r=2524533">
-              <img src="https://www.awin1.com/cshow.php?s=2273778&v=11329&q=441826&r=2524533" className="border-0 mx-auto" alt="DKB Banking Angebote" width="150" height="30" />
-            </a>
-          </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -345,12 +350,6 @@ export default function Banking() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-          {/* DKB Seal 2 */}
-          <div className="mt-6 text-center">
-            <a rel="sponsored" href="https://www.awin1.com/cread.php?s=3035369&v=11329&q=441816&r=2524533">
-              <img src="https://www.awin1.com/cshow.php?s=3035369&v=11329&q=441816&r=2524533" className="border-0 mx-auto" alt="DKB Finanzprodukte" width="150" height="30" />
-            </a>
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
             <p>
