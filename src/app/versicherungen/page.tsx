@@ -479,7 +479,7 @@ export default function Versicherungen() {
       {/* Anbieterübersicht */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Versicherungen</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger Versicherungen</h2>
         </div>
 
         <div className="container mx-auto px-4">
