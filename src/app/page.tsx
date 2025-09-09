@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
-import { Search, Shield, Check, Star, TrendingUp, Heart, Zap, PiggyBank, Menu, X } from "lucide-react"
+import { Search, Check, Star, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -232,10 +232,10 @@ export default function Home() {
     <>
       <Head>
         <title>SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
-        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ TÜV geprüft ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
+        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
         <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Reisen, Kreditkarten, Mietwagen, SmartFinanz, Testsieger 2025" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
@@ -244,14 +244,14 @@ export default function Home() {
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
+        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, bis zu 1.000€ sparen!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://smartfinanz.de" />
         <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, TÜV-geprüft, bis zu 1.000€ sparen!" />
+        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, bis zu 1.000€ sparen!" />
         <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta name="twitter:site" content="@smartfinanz" />
         <link rel="preload" href="/logo.png" as="image" />
@@ -264,7 +264,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
-        <meta name='impact-site-verification' content='f34232c9-40b1-4773-b281-9b596b88cd82' />
+        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
       </Head>
       <div className="min-h-screen bg-white">
         {/* Header */}
@@ -343,7 +343,10 @@ export default function Home() {
                 >
                   Kundenbewertungen
                 </Link>
-                <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+                <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => {
+                  window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")
+                  setMobileMenuOpen(false)
+                }}>
                   Vergleich starten
                 </Button>
               </nav>
@@ -355,18 +358,18 @@ export default function Home() {
         <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
                 Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
-              </h2>
+              </h1>
               <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
                 Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
               </p>
 
               {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
               <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
-                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
+                <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
                   Nach welchem Produkt oder Service suchen Sie?
-                </h3>
+                </h2>
 
                 {/* Grid für 12 Buttons - responsive Layout */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
@@ -527,34 +530,10 @@ export default function Home() {
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h3>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h2>
             <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} aria-label="Beste Finanzprodukte ansehen">
               Beste Empfehlungen ansehen
             </Button>
-          </div>
-        </section>
-
-        {/* Vertrauensabzeichen */}
-        <section className="py-6 sm:py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
-              <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Check className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
-                Geprüft & Sicher
-              </Badge>
-              <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Shield className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
-                TÜV Zertifiziert
-              </Badge>
-              <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Star className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
-                Top Empfohlen
-              </Badge>
-              <Badge variant="secondary" className="text-sm sm:text-lg py-2 sm:py-3 px-3 sm:px-6 bg-white border">
-                <Zap className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 w-5 text-green-600" aria-hidden="true" />
-                Blitzschnell
-              </Badge>
-            </div>
           </div>
         </section>
 
@@ -562,7 +541,7 @@ export default function Home() {
         <section className="py-8 sm:py-12 bg-white" id="search-section">
           <div className="container mx-auto px-4">
             <div className="max-w-xl sm:max-w-2xl mx-auto">
-              <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das perfekte Angebot</h3>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das perfekte Angebot</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" aria-hidden="true" />
                 <Input
@@ -579,7 +558,7 @@ export default function Home() {
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h3>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -854,7 +833,7 @@ export default function Home() {
         {/* Kundenbewertungen */}
         <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
           <div className="container mx-auto px-4">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h3>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h2>
             <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
               <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
@@ -1088,19 +1067,19 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
               <div>
-                <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h4>
+                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h2>
                 <p className="text-green-100 text-sm sm:text-base">Anbieter verglichen</p>
               </div>
               <div>
-                <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h4>
+                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h2>
                 <p className="text-green-100 text-sm sm:text-base">Zufriedene Kunden</p>
               </div>
               <div>
-                <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h4>
+                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h2>
                 <p className="text-green-100 text-sm sm:text-base">Gespart insgesamt</p>
               </div>
               <div>
-                <h4 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h4>
+                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h2>
                 <p className="text-green-100 text-sm sm:text-base">Durchschnittsbewertung</p>
               </div>
             </div>
@@ -1110,22 +1089,22 @@ export default function Home() {
         {/* FAQ Section für bessere SEO */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h3>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h4>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h3>
                 <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h4>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h3>
                 <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h4>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h3>
                 <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h4>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h3>
                 <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
               </div>
             </div>
@@ -1150,7 +1129,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h5 className="font-semibold mb-3">Finanzprodukte</h5>
+                <h2 className="font-semibold mb-3">Finanzprodukte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
                     <Link href="/versicherungen" className="hover:text-white transition-colors" aria-label="Versicherungsvergleich">
@@ -1175,7 +1154,7 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold mb-3">Weitere Services</h5>
+                <h2 className="font-semibold mb-3">Weitere Services</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="DSL Vergleich (externer Link)">DSL Vergleich</a></li>
                   <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarife vergleichen (externer Link)">Handytarife</a></li>
@@ -1188,7 +1167,7 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold mb-3">Unternehmen</h5>
+                <h2 className="font-semibold mb-3">Unternehmen</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
                     <Link href="/ueber-uns" className="hover:text-white transition-colors" aria-label="Über uns">
@@ -1213,7 +1192,7 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold mb-3">Rechtliches</h5>
+                <h2 className="font-semibold mb-3">Rechtliches</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><Link href="/datenschutz" className="hover:text-white transition-colors" aria-label="Datenschutz">Datenschutz</Link></li>
                   <li><Link href="/impressum" className="hover:text-white transition-colors" aria-label="Impressum">Impressum</Link></li>
