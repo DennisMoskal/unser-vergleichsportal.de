@@ -226,7 +226,7 @@ export default function Banking() {
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
-              Zum Tarif Vergleich
+              Zum Tarif-Vergleich
             </Button>
 
             {/* kurze Erklärung zwischen den Buttons */}
@@ -242,7 +242,7 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  Zum Broker Vergleich
+                  Zum Broker-Vergleich
                 </Link>
               </Button>
             </div>
@@ -734,7 +734,7 @@ export default function Banking() {
                   <li>
                     • Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren –{" "}
                     <Link href="/versicherungen" className="text-green-700 underline hover:text-green-800 font-medium">
-                      Zum Versicherungen Vergleich
+                      Versicherungen vergleichen
                     </Link>
                   </li>
                 </ul>
