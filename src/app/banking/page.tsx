@@ -226,7 +226,7 @@ export default function Banking() {
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
-              Zum Tarif-Vergleich
+              Zum Tarif-Vergleichsrechner
             </Button>
 
             {/* kurze Erklärung zwischen den Buttons */}
