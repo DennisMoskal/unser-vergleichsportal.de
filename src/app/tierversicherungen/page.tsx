@@ -289,7 +289,7 @@ export default function Tierversicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Tierversicherung Vergleich 2025: Beste Hunde- & Katzenversicherung | SmartFinanz</title>
+        <title>Beste Tierversicherung-Vergleich 2025 | SmartFinanz</title>
         <meta
           name="description"
           content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo!"
