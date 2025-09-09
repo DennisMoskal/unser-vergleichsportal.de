@@ -226,12 +226,12 @@ export default function Banking() {
               className="bg-white text-green-600 hover:bg-gray-100 font-medium"
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
-              Jetzt Banking-Produkte vergleichen
+              Zum Banking-Produkte Vergleich
             </Button>
 
             {/* kurze Erklärung zwischen den Buttons */}
             <p className="mt-2 text-xs sm:text-sm text-green-100">
-              Zur Vermögensbildung: Nutzen Sie den Button „Broker-Vergleich für Investitionen“, um passende Online-Broker für Aktien &amp; ETFs zu vergleichen.
+              Zur Vermögensbildung: Nutzen Sie den Button, um passende Online-Broker für Aktien, ETFs &amp; Krypto Investitionen zu vergleichen.
             </p>
 
             {/* Button 2 – Trading (gleicher Look) */}
@@ -734,7 +734,7 @@ export default function Banking() {
                   <li>
                     • Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren –{" "}
                     <Link href="/versicherungen" className="text-green-700 underline hover:text-green-800 font-medium">
-                      Versicherungen vergleichen
+                      Zum Versicherungen Vergleich
                     </Link>
                   </li>
                 </ul>
