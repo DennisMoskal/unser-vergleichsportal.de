@@ -292,7 +292,7 @@ export default function Banking() {
       {/* Anbieterübersicht */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger für Banking</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Girokonto-Vergleich 2025</h2>
           {/* DKB Seal 1 */}
           <div className="mb-6 text-center">
             <a rel="sponsored" href="https://www.awin1.com/cread.php?s=2273778&v=11329&q=441826&r=2524533">
