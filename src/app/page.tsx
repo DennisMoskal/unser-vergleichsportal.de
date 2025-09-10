@@ -541,7 +541,7 @@ export default function Home() {
         <section className="py-8 sm:py-12 bg-white" id="search-section">
           <div className="container mx-auto px-4">
             <div className="max-w-xl sm:max-w-2xl mx-auto">
-              <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das perfekte Angebot</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das passende Angebot</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" aria-hidden="true" />
                 <Input
@@ -558,7 +558,7 @@ export default function Home() {
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Testsieger Finanz-Vergleich 2025</h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -801,7 +801,7 @@ export default function Home() {
                     </div>
                     <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
                       <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
-                        Zum Anbieter*
+                        Direkt zum Anbieter*
                         {provider.name === "Vodafone" && (
                           <Image
                             src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
