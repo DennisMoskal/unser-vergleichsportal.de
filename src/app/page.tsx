@@ -469,7 +469,7 @@ export default function Home() {
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ganz einfach die Top-Angebote 2025 vergleichen und sofort sparen</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Unabhängiger Finanzvergleich 2025: Versicherung, Strom & Banking kostenlos vergleichen </h2>
             <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} aria-label="Beste Finanzprodukte ansehen">
               Jetzt vergleichen
             </Button>
