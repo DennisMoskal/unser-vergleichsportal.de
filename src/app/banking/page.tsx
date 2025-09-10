@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
-    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
+    const hash = window.location.hash.substring(1)
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
@@ -180,7 +180,6 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
-
       {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
@@ -191,7 +190,7 @@ const Header: React.FC = () => {
               { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
               { key: 'versicherungen', label: 'VERSICHERUNG', url: '/versicherungen', isInternal: true },
               { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-              { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: fertilizer: false },
+              { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'HANDYTARIF', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
               { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
               { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
@@ -1266,5 +1265,5 @@ export default function Banking() {
         </div>
       </footer>
     </div>
-  )
 }
+
