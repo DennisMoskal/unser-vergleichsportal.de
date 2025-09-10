@@ -20,7 +20,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
+        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
       </div>
     </Link>
   )
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <SmartFinanzLogo className="text-xl text-gray-900" />
+            <SmartFinanzLogo className="text-xl" />
           </div>
           <button
             className="sm:hidden flex items-center justify-center"
@@ -69,130 +69,135 @@ const Header: React.FC = () => {
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold mb-3 text-xl text-gray-900">Finanzprodukte</h2>
-                <div className="flex flex-col gap-2">
+                <h2 className="font-semibold text-2xl mb-3">Finanzprodukte</h2>
+                <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
-                    { key: 'haustierversicherung', label: 'HAUSTIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
-                    { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
-                    { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
                   ].map(({ key, label, url, isInternal }) => (
-                    <Link
-                      key={key}
-                      href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
-                      onClick={() => {
-                        setMobileMenuOpen(false)
-                        setActiveCategory(key)
-                      }}
-                      aria-label={`Zu ${label} navigieren`}
-                    >
-                      {label}
-                    </Link>
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl text-gray-900">Weitere Produkte</h2>
+                <h2 className="font-semibold text-2xl mb-3">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="flex flex-col gap-2">
+                  <ul className="flex flex-col gap-2 text-base">
                     {[
                       { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                      { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                      { key: 'handytarif', label: 'HANDYTARIF', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                      { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
                     ].map(({ key, label, url, isInternal }) => (
-                      <a
-                        key={key}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
-                        aria-label={`${label} vergleichen (externer Link)`}
-                      >
-                        {label}
-                      </a>
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
+                      </li>
                     ))}
-                  </div>
-                  <div className="flex flex-col gap-2">
+                  </ul>
+                  <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                      { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                      { key: 'reise', label: 'REISE', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                      { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
                     ].map(({ key, label, url, isInternal }) => (
-                      <a
-                        key={key}
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2 className="font-semibold text-2xl mb-3">Unternehmen</h2>
+                <ul className="flex flex-col gap-2 text-base">
+                  {[
+                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
                         href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
-                        aria-label={`${label} vergleichen (externer Link)`}
+                        aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h2 className="font-semibold mb-3 text-xl text-gray-900">Unternehmen</h2>
-                <div className="flex flex-col gap-2">
-                  {[
-                    { key: 'karriere', label: 'KARRIERE', url: '/karriere', isInternal: true },
-                    { key: 'kontakt', label: 'KONTAKT', url: '/kontakt', isInternal: true },
-                    { key: 'partnerprogramm', label: 'PARTNERPROGRAMM', url: '/partnerprogramme', isInternal: true },
-                    { key: 'ueber-uns', label: 'ÜBER UNS', url: '/ueber-uns', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
-                    <Link
-                      key={key}
-                      href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
-                      onClick={() => {
-                        setMobileMenuOpen(false)
-                        setActiveCategory(key)
-                      }}
-                      aria-label={`Zu ${label} navigieren`}
-                    >
-                      {label}
-                    </Link>
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl text-gray-900">Rechtliches</h2>
-                <div className="flex flex-col gap-2">
+                <h2 className="font-semibold text-2xl mb-3">Rechtliches</h2>
+                <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
-                    { key: 'cookie-richtlinie', label: 'COOKIE-RICHTLINIE', url: '/cookie-richtlinie', isInternal: true },
-                    { key: 'datenschutz', label: 'DATENSCHUTZ', url: '/datenschutz', isInternal: true },
-                    { key: 'impressum', label: 'IMPRESSUM', url: '/impressum', isInternal: true },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
                   ].map(({ key, label, url, isInternal }) => (
-                    <Link
-                      key={key}
-                      href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
-                      onClick={() => {
-                        setMobileMenuOpen(false)
-                        setActiveCategory(key)
-                      }}
-                      aria-label={`Zu ${label} navigieren`}
-                    >
-                      {label}
-                    </Link>
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               <Button
-                className="w-full bg-green-600 text-white font-medium text-sm py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                className="w-full bg-green-600 text-white font-medium text-base py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Startseite
@@ -205,46 +210,46 @@ const Header: React.FC = () => {
       {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-2 sm:gap-4">
+          <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
             {[
-              { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
-              { key: 'haustierversicherung', label: 'HAUSTIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
-              { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
-              { key: 'versicherungen', label: 'VERSICHERUNG', url: '/versicherungen', isInternal: true },
+              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
               { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-              { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-              { key: 'handytarif', label: 'HANDYTARIF', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-              { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-              { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-              { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-              { key: 'reise', label: 'REISE', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
             ].map(({ key, label, url, isInternal }) => (
-              isInternal ? (
-                <Link
-                  key={key}
-                  href={url}
-                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
-                  onClick={() => setActiveCategory(key)}
-                  aria-label={`Zu ${label} navigieren`}
-                >
-                  {label}
-                </Link>
-              ) : (
-                <a
-                  key={key}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
-                  onClick={() => setActiveCategory(key)}
-                  aria-label={`${label} vergleichen (externer Link)`}
-                >
-                  {label}
-                </a>
-              )
+              <li key={key}>
+                {isInternal ? (
+                  <Link
+                    href={url}
+                    className="block px-2 sm:px-4 py-1 sm:py-2 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`Zu ${label} navigieren`}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-2 sm:px-4 py-1 sm:py-2 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`${label} vergleichen (externer Link)`}
+                  >
+                    {label}
+                  </a>
+                )}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
     </>
@@ -365,7 +370,6 @@ export default function Banking() {
       <section className="py-8 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl font-bold mb-4">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h1>
             <p className="text-base mb-6">
               Finden Sie das passende Girokonto und den richtigen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
@@ -377,7 +381,7 @@ export default function Banking() {
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mt-2 text-2xl font-bold text-gray-900">
+            <h2 className="mt-2 text-2xl font-bold">
               Sie möchten Vermögen bilden?
             </h2>
             <div className="mt-3 flex justify-center">
@@ -398,7 +402,7 @@ export default function Banking() {
       {/* Tipps zur Auswahl */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2">Vergleichen Sie Angebote</h3>
             <ul className="list-disc list-inside text-base mb-6">
@@ -472,29 +476,32 @@ export default function Banking() {
             <ul className="list-disc list-inside text-base mb-6">
               <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Visa/Mastercard klassisch</h3>
+            <h3 className="text-lg font-bold mb-2">💳 Visa/Mastercard klassisch</h3>
+            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Weltweit akzeptiert</li>
               <li>Kostenlose Bargeldabhebung im Ausland</li>
               <li>Online-Shopping ohne Extragebühren</li>
               <li>Reiseversicherungen inklusive</li>
-              <li><strong>0€ Jahresgebühr dauerhaft</strong></li>
+              <li>0€ Jahresgebühr dauerhaft</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Modern Digital Cards</h3>
+            <h3 className="text-lg font-bold mb-2">📱 Modern Digital Cards</h3>
+            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Apple Pay / Google Pay ready</li>
               <li>Echtzeit-Benachrichtigungen</li>
               <li>Ausgabenkontrolle per App</li>
               <li>Virtuelle Kartennummern</li>
-              <li><strong>Kostenlos + Cashback möglich</strong></li>
+              <li>Kostenlos + Cashback möglich</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Travel & Bonus Cards</h3>
+            <h3 className="text-lg font-bold mb-2">✈️ Travel & Bonus Cards</h3>
+            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Meilen oder Punkte sammeln</li>
               <li>Lounge-Zugang an Flughäfen</li>
               <li>Umfassende Reiseversicherung</li>
               <li>Priority Pass inklusive</li>
-              <li><strong>Viele Premium-Features ohne Zusatzkosten</strong></li>
+              <li>Viele Premium-Features ohne Zusatzkosten</li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -601,7 +608,7 @@ export default function Banking() {
       {/* Detaillierter Banking-Vergleich */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
+          {/* Removed the heading "Banking Vergleich 2025: Die besten Girokonten und Kredite im Test" */}
           
           {/* Baufinanzierung */}
           <div className="max-w-4xl mx-auto text-left">
@@ -640,7 +647,7 @@ export default function Banking() {
       {/* Online Banking Guide */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2">1. Konto eröffnen</h3>
             <ul className="list-disc text-base mb-6">
@@ -693,7 +700,7 @@ export default function Banking() {
       {/* Kredit wechseln & Depot eröffnen */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2">💳 Kredit umschulden und sparen</h3>
             <h3 className="text-lg font-bold mb-2">Wann lohnt sich eine Umschuldung?</h3>
@@ -730,7 +737,7 @@ export default function Banking() {
             </ul>
             <h3 className="text-lg font-bold mb-2">Wichtig:</h3>
             <ul className="list-disc text-base mb-6">
-              <li>Nur investieren, what Sie langfristig entbehren können. Risiko streuen!</li>
+              <li>Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -757,24 +764,8 @@ export default function Banking() {
               <li>Depot mit kostenlosen ETF-Sparplänen</li>
               <li>Alte Kredite auf bessere Konditionen prüfen</li>
               <li>Regelmäßig Konditionen vergleichen</li>
-              <li>
-                Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren –{" "}
-                <Link href="/versicherungen" className="underline hover:text-gray-800 font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm">
-                  Versicherungen vergleichen
-                </Link>
-              </li>
+              <li>Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
-              <Link
-                href="/versicherungen"
-                aria-label="Versicherungen vergleichen für optimale Absicherung"
-                title="Versicherungen vergleichen für optimale Absicherung"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Versicherungen vergleichen
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -782,7 +773,7 @@ export default function Banking() {
       {/* Kreditkarte ohne Jahresgebühr Sektion */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
           <div className="max-w-4xl mx-auto text-left">
             <ul className="list-disc text-base mb-6">
               <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
@@ -794,7 +785,7 @@ export default function Banking() {
               <li>Kostenlose Bargeldabhebung im Ausland</li>
               <li>Online-Shopping ohne Extragebühren</li>
               <li>Reiseversicherungen inklusive</li>
-              <li><strong>0€ Jahresgebühr dauerhaft</strong></li>
+              <li>0€ Jahresgebühr dauerhaft</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">📱 Modern Digital Cards</h3>
             <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
@@ -803,7 +794,7 @@ export default function Banking() {
               <li>Echtzeit-Benachrichtigungen</li>
               <li>Ausgabenkontrolle per App</li>
               <li>Virtuelle Kartennummern</li>
-              <li><strong>Kostenlos + Cashback möglich</strong></li>
+              <li>Kostenlos + Cashback möglich</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">✈️ Travel & Bonus Cards</h3>
             <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
@@ -812,7 +803,7 @@ export default function Banking() {
               <li>Lounge-Zugang an Flughäfen</li>
               <li>Umfassende Reiseversicherung</li>
               <li>Priority Pass inklusive</li>
-              <li><strong>Viele Premium-Features ohne Zusatzkosten</strong></li>
+              <li>Viele Premium-Features ohne Zusatzkosten</li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -832,7 +823,7 @@ export default function Banking() {
               <CardContent>
                 <div className="grid gap-6 lg:grid-cols-2">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Versteckte Kosten beachten:</h3>
+                    <h3 className="text-lg font-bold mb-2">Versteckte Kosten beachten:</h3>
                     <ul className="list-disc text-base space-y-1">
                       <li>Fremdwährungsgebühren (oft 1–2%)</li>
                       <li>Bargeldgebühren auch im Inland</li>
@@ -841,7 +832,7 @@ export default function Banking() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Smarte Nutzung:</h3>
+                    <h3 className="text-lg font-bold mb-2">Smarte Nutzung:</h3>
                     <ul className="list-disc text-base space-y-1">
                       <li>Immer per Lastschrift vollständig begleichen</li>
                       <li>Kreditrahmen nicht als Kredit nutzen</li>
