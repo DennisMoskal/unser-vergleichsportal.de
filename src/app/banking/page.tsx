@@ -1263,7 +1263,7 @@ export default function Banking() {
             </Link>
           </div>
         </div>
-      </footer>
+         </footer>
     </div>
+  )
 }
-
