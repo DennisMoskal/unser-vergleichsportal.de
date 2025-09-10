@@ -223,7 +223,7 @@ export default function Home() {
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
     const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading", "dsl", "handytarife", "oekostrom", "gas", "reisen", "strom", "kreditkarte", "mietwagen"].includes(hash)) {
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -338,102 +338,6 @@ export default function Home() {
                         aria-label="TRADING vergleichen (externer Link)"
                       >
                         TRADING
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/5R17qbN"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="DSL vergleichen (externer Link)"
-                      >
-                        DSL
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/zxy0WKh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="HANDYTARIFE vergleichen (externer Link)"
-                      >
-                        HANDYTARIFE
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/Uxudvkj"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="ÖKOSTROM vergleichen (externer Link)"
-                      >
-                        ÖKOSTROM
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/EieKR0E"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="GAS vergleichen (externer Link)"
-                      >
-                        GAS
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/RYXPGyh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="REISEN vergleichen (externer Link)"
-                      >
-                        REISEN
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/RYXPGyh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="STROM vergleichen (externer Link)"
-                      >
-                        STROM
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/FZ9nd0R"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="KREDITKARTE vergleichen (externer Link)"
-                      >
-                        KREDITKARTE
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/FZ9nd0R"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
-                        onClick={() => setMobileMenuOpen(false)}
-                        aria-label="MIETWAGEN vergleichen (externer Link)"
-                      >
-                        MIETWAGEN
                       </a>
                     </li>
                   </ul>
@@ -585,28 +489,44 @@ export default function Home() {
                     Trading
                   </Button>
                   <Button
-                    variant={selectedProduct === "dsl" ? "default" : "outline"}
+                    variant={selectedProduct === "gas" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
-                    aria-label="DSL vergleichen"
+                    onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
+                    aria-label="Gas vergleichen"
                   >
-                    DSL
+                    Gas
                   </Button>
                   <Button
-                    variant={selectedProduct === "handytarife" ? "default" : "outline"}
+                    variant={selectedProduct === "strom" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
-                    aria-label="Handytarife vergleichen"
+                    onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                    aria-label="Strom vergleichen"
                   >
-                    Handytarife
+                    Strom
                   </Button>
                   <Button
-                    variant={selectedProduct === "oekostrom" ? "default" : "outline"}
+                    variant={selectedProduct === "mietwagen" ? "default" : "outline"}
                     className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
-                    aria-label="Ökostrom vergleichen"
+                    onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
+                    aria-label="Mietwagen vergleichen"
                   >
-                    Ökostrom
+                    Mietwagen
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
+                    aria-label="Kreditkarte vergleichen"
+                  >
+                    Kreditkarte
+                  </Button>
+                  <Button
+                    variant={selectedProduct === "reisen" ? "default" : "outline"}
+                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
+                    onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
+                    aria-label="Reisen vergleichen"
+                  >
+                    Reisen
                   </Button>
                 </div>
               </div>
@@ -614,19 +534,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
+        {/* Kategorie-Navigation */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
               {[
-                { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                { key: 'reisen', label: 'REISEN', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false }
+                { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+                { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
+                { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
+                { key: 'trading', label: 'TRADING', url: 'https://www.c24n.de/ducwCtq', isInternal: false }
               ].map(({ key, label, url, isInternal }) => (
                 isInternal ? (
                   <Link
@@ -1252,14 +1168,6 @@ export default function Home() {
                 <h2 className="font-semibold mb-3">Weitere Services</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Trading Vergleich (externer Link)">Trading</a></li>
-                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="DSL Vergleich (externer Link)">DSL</a></li>
-                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarife vergleichen (externer Link)">Handytarife</a></li>
-                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Ökostrom vergleichen (externer Link)">Ökostrom</a></li>
-                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Gasvergleich (externer Link)">Gas</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Reisen vergleichen (externer Link)">Reisen</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Stromvergleich (externer Link)">Strom</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Kreditkarten vergleichen (externer Link)">Kreditkarte</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Mietwagen vergleichen (externer Link)">Mietwagen</a></li>
                 </ul>
               </div>
               <div>
