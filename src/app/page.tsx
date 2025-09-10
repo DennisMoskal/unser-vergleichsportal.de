@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-colors flex items-center text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-2 py-1 rounded-lg font-medium transition-colors flex items-center text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -137,7 +137,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-colors flex items-center text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -161,7 +161,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-colors flex items-center text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -174,7 +174,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <Button
-                className="w-full bg-green-600 hover:bg-green-700 text-sm py-2"
+                className="w-full bg-green-600 text-white font-medium text-sm py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Startseite
@@ -206,7 +206,7 @@ const Header: React.FC = () => {
                 <Link
                   key={key}
                   href={url}
-                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white`}
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                   onClick={() => setActiveCategory(key)}
                   aria-label={`Zu ${label} navigieren`}
                 >
@@ -218,7 +218,7 @@ const Header: React.FC = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white`}
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                   onClick={() => setActiveCategory(key)}
                   aria-label={`${label} vergleichen (externer Link)`}
                 >
@@ -460,7 +460,12 @@ export default function Home() {
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Unabhängiger Finanzvergleich 2025: Versicherung, Strom & Banking kostenlos vergleichen </h2>
-            <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} aria-label="Beste Finanzprodukte ansehen">
+            <Button 
+              size="lg" 
+              className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
+              onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} 
+              aria-label="Beste Finanzprodukte ansehen"
+            >
               Jetzt vergleichen
             </Button>
           </div>
@@ -692,7 +697,7 @@ export default function Home() {
                 }
               ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
-                  <Badge className="absolute top-0 right-0 bg-yellow-500 hover:bg-yellow-600 z-10 text-xs sm:text-sm px-3 py-1">
+                  <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
                   </Badge>
                   <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
@@ -728,8 +733,15 @@ export default function Home() {
                         </ul>
                       </div>
                     </div>
-                    <a href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={`Zum Anbieter ${provider.name}`}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 font-medium text-sm sm:text-base mt-auto flex-shrink-0">
+                    <a 
+                      href={provider.url} 
+                      target={provider.url.startsWith('http') ? '_blank' : '_self'} 
+                      rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} 
+                      aria-label={`Zum Anbieter ${provider.name}`}
+                    >
+                      <Button 
+                        className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
+                      >
                         Jetzt abschließen*
                         {provider.name === "Vodafone" && (
                           <Image
@@ -791,7 +803,7 @@ export default function Home() {
                   </p>
                   <Button
                     variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
+                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                     aria-label="Jetzt Finanzprodukte vergleichen"
                   >
@@ -827,7 +839,7 @@ export default function Home() {
                   </p>
                   <Button
                     variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
+                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                     aria-label="Jetzt Finanzprodukte vergleichen"
                   >
@@ -863,7 +875,7 @@ export default function Home() {
                   </p>
                   <Button
                     variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
+                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                     aria-label="Jetzt Finanzprodukte vergleichen"
                   >
@@ -899,7 +911,7 @@ export default function Home() {
                   </p>
                   <Button
                     variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
+                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
                     aria-label="Jetzt Finanzprodukte vergleichen"
                   >
@@ -1053,22 +1065,38 @@ export default function Home() {
                 <h2 className="font-semibold mb-3">Finanzprodukte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <Link href="/banking" className="hover:text-white transition-colors" aria-label="Banking">
+                    <Link 
+                      href="/banking" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Banking"
+                    >
                       Banking
                     </Link>
                   </li>
                   <li>
-                    <Link href="/tierversicherungen" className="hover:text-white transition-colors" aria-label="Haustierversicherung">
+                    <Link 
+                      href="/tierversicherungen" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Haustierversicherung"
+                    >
                       Haustierversicherung
                     </Link>
                   </li>
                   <li>
-                    <Link href="/trading" className="hover:text-white transition-colors" aria-label="Trading">
+                    <Link 
+                      href="/trading" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Trading"
+                    >
                       Trading
                     </Link>
                   </li>
                   <li>
-                    <Link href="/versicherungen" className="hover:text-white transition-colors" aria-label="Versicherungen">
+                    <Link 
+                      href="/versicherungen" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Versicherungen"
+                    >
                       Versicherungen
                     </Link>
                   </li>
@@ -1077,36 +1105,132 @@ export default function Home() {
               <div>
                 <h2 className="font-semibold mb-3">Weitere Produkte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="DSL Vergleich (externer Link)">DSL</a></li>
-                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Gasvergleich (externer Link)">Gas</a></li>
-                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Handytarif vergleichen (externer Link)">Handytarif</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Kreditkarten vergleichen (externer Link)">Kreditkarte</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Mietwagen vergleichen (externer Link)">Mietwagen</a></li>
-                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Ökostrom vergleichen (externer Link)">Ökostrom</a></li>
-                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Reise vergleichen (externer Link)">Reise</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Stromvergleich (externer Link)">Strom</a></li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/ducwCtq" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="DSL Vergleich (externer Link)"
+                    >
+                      DSL
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/Uxudvkj" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Gasvergleich (externer Link)"
+                    >
+                      Gas
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/5R17qbN" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Handytarif vergleichen (externer Link)"
+                    >
+                      Handytarif
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kreditkarten vergleichen (externer Link)"
+                    >
+                      Kreditkarte
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/FZ9nd0R" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Mietwagen vergleichen (externer Link)"
+                    >
+                      Mietwagen
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/zxy0WKh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Ökostrom vergleichen (externer Link)"
+                    >
+                      Ökostrom
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/EieKR0E" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Reise vergleichen (externer Link)"
+                    >
+                      Reise
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Stromvergleich (externer Link)"
+                    >
+                      Strom
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Unternehmen</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <Link href="/karriere" className="hover:text-white transition-colors" aria-label="Karriere">
+                    <Link 
+                      href="/karriere" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Karriere"
+                    >
                       Karriere
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kontakt" className="hover:text-white transition-colors" aria-label="Kontakt">
+                    <Link 
+                      href="/kontakt" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kontakt"
+                    >
                       Kontakt
                     </Link>
                   </li>
                   <li>
-                    <Link href="/partnerprogramme" className="hover:text-white transition-colors" aria-label="Partnerprogramm">
+                    <Link 
+                      href="/partnerprogramme" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Partnerprogramm"
+                    >
                       Partnerprogramm
                     </Link>
                   </li>
                   <li>
-                    <Link href="/ueber-uns" className="hover:text-white transition-colors" aria-label="Über uns">
+                    <Link 
+                      href="/ueber-uns" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Über uns"
+                    >
                       Über uns
                     </Link>
                   </li>
@@ -1115,10 +1239,42 @@ export default function Home() {
               <div>
                 <h2 className="font-semibold mb-3">Rechtliches</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/agb" className="hover:text-white transition-colors" aria-label="AGB">AGB</Link></li>
-                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition-colors" aria-label="Cookie-Richtlinie">Cookie-Richtlinie</Link></li>
-                  <li><Link href="/datenschutz" className="hover:text-white transition-colors" aria-label="Datenschutz">Datenschutz</Link></li>
-                  <li><Link href="/impressum" className="hover:text-white transition-colors" aria-label="Impressum">Impressum</Link></li>
+                  <li>
+                    <Link 
+                      href="/agb" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="AGB"
+                    >
+                      AGB
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/cookie-richtlinie" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Cookie-Richtlinie"
+                    >
+                      Cookie-Richtlinie
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/datenschutz" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Datenschutz"
+                    >
+                      Datenschutz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/impressum" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Impressum"
+                    >
+                      Impressum
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1127,7 +1283,9 @@ export default function Home() {
                 © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
               </p>
               <Link href="/" aria-label="Zurück zur Startseite">
-                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
+                <Button 
+                  className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                >
                   Zurück zur Startseite
                 </Button>
               </Link>
