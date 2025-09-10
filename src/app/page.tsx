@@ -292,7 +292,7 @@ export default function Home() {
             </nav>
             <div className="flex items-center space-x-4">
               <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-                Vergleich starten
+                Jetzt vergleichen
               </Button>
               <button
                 className="md:hidden"
@@ -347,7 +347,7 @@ export default function Home() {
                   window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")
                   setMobileMenuOpen(false)
                 }}>
-                  Vergleich starten
+                  Jetzt Vergleichen
                 </Button>
               </nav>
             </div>
@@ -532,7 +532,7 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h2>
             <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} aria-label="Beste Finanzprodukte ansehen">
-              Beste Empfehlungen ansehen
+              Jetzt vergleichen
             </Button>
           </div>
         </section>
