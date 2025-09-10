@@ -121,7 +121,7 @@ export default function Banking() {
     <div className="min-h-screen bg-white">
       {/* Meta-Tags für SEO */}
       <Head>
-        <title>Finden Sie mit SmartFinanz das passende Girokonto und Kredit 2025</title>
+        <title>So finden Sie das passende Girokonto und den richtigen Kredit</title>
         <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
         <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
         <meta name="robots" content="index, follow" />
@@ -160,7 +160,7 @@ export default function Banking() {
               className="hidden md:block bg-green-600 hover:bg-green-700"
               onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
             >
-              Vergleich starten
+              Jetzt vergleichen
             </Button>
             <button
               className="md:hidden"
@@ -215,7 +215,7 @@ export default function Banking() {
                 className="w-full bg-green-600 hover:bg-green-700"
                 onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
               >
-                Vergleich starten
+                Jetzt vergleichen
               </Button>
             </nav>
           </div>
@@ -344,7 +344,7 @@ export default function Banking() {
                     rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
                   >
                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                      Zum Anbieter*
+                      Jetzt abschließen*
                     </Button>
                   </a>
                 </CardContent>
@@ -353,7 +353,7 @@ export default function Banking() {
           </div>
           <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
             <p>
-              *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
+              *Wir erhalten eine Provision für Käufe über diese Links.
             </p>
           </div>
         </div>
@@ -449,7 +449,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  Online Kredit berechnen lassen
+                  Jetzt Kredit berechnen
                 </Button>
               </a>
             </div>
@@ -746,7 +746,7 @@ export default function Banking() {
       {/* Kreditkarte ohne Jahresgebühr Sektion */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
           <div className="mb-8 text-center">
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
