@@ -341,7 +341,7 @@ export default function Home() {
                   className="w-full bg-green-600 hover:bg-green-700 text-sm py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Schließen
+                  Startseite
                 </Button>
               </nav>
             </div>
@@ -987,8 +987,8 @@ export default function Home() {
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-8 sm:py-12">
           <div className="container mx-auto px-4">
-            <div className="grid gap-6 sm:gap-8 md:grid-cols-5">
-              <div>
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+              <div className="col-span-2 md:col-span-1">
                 <div className="flex flex-col items-start mb-4">
                   <SmartFinanzLogo className="text-xl" />
                 </div>
