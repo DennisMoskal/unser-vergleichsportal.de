@@ -391,62 +391,72 @@ export default function Banking() {
             <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
               <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Girokonto kostenlos - Die besten Anbieter 2025</h3>
-              <div className="grid gap-8 lg:grid-cols-2">
-                <div>
-                  <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
-                  </p>
+
+            {/* Girokonto kostenlos */}
+            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-8 lg:grid-cols-2">
                   <div>
-                    <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
-                    <p className="text-sm text-green-700">
-                      Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
                     </p>
+                    <div>
+                      <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+                      <p className="text-sm text-green-700">
+                        Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        Bedingungslos kostenlose Kontoführung
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        Kostenlose EC- und Kreditkarte
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        Kostenloses Bargeldabheben deutschlandweit
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        Mobile Banking App mit allen Funktionen
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        Dispozinsen unter 7% p.a.
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Bedingungslos kostenlose Kontoführung
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Kostenlose EC- und Kreditkarte
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Kostenloses Bargeldabheben deutschlandweit
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Mobile Banking App mit allen Funktionen
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-600" />
-                      Dispozinsen unter 7% p.a.
-                    </li>
-                  </ul>
+                <div className="mt-8 text-center">
+                  <a 
+                    href="https://www.tarifcheck.de/girokonto/" 
+                    target="_blank" 
+                    rel="sponsored"
+                  >
+                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                      Jetzt Tarife vergleichen
+                    </Button>
+                  </a>
                 </div>
-              </div>
-              <div className="mt-8 text-center">
-                <a 
-                  href="https://www.tarifcheck.de/girokonto/" 
-                  target="_blank" 
-                  rel="sponsored"
-                >
-                  <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                    Jetzt Tarife vergleichen
-                  </Button>
-                </a>
-              </div>
-            </div>
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h3>
-              <div>
+              </CardContent>
+            </Card>
+
+            {/* Kreditkarte ohne Jahresgebühr */}
+            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <p className="text-sm text-gray-600 mb-6">
                   Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
                 </p>
@@ -482,11 +492,15 @@ export default function Banking() {
                     <p className="text-sm text-green-600 mt-2">Viele Premium-Features ohne Zusatzkosten</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Kredit online beantragen - Schnell & günstig finanzieren</h3>
-              <div>
+              </CardContent>
+            </Card>
+
+            {/* Kredit online beantragen */}
+            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
                 <div className="grid gap-6 lg:grid-cols-3">
                   <div>
@@ -511,20 +525,21 @@ export default function Banking() {
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div className="mt-8 text-center">
-                <a 
-                  href="https://www.check24.de/kredit/" 
-                  target="_blank" 
-                  rel="sponsored"
-                >
-                  <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                    Jetzt Kredit berechnen
-                  </Button>
-                </a>
-              </div>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
+                <div className="mt-8 text-center">
+                  <a 
+                    href="https://www.check24.de/kredit/" 
+                    target="_blank" 
+                    rel="sponsored"
+                  >
+                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                      Jetzt Kredit berechnen
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testsieger Girokonto-Vergleich */}
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {providerData.map((provider) => (
@@ -578,9 +593,13 @@ export default function Banking() {
                 *Wir erhalten eine Provision für Käufe über diese Links.
               </p>
             </div>
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</h3>
-              <div>
+
+            {/* Tagesgeld Vergleich */}
+            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <h4 className="text-lg text-green-800 mb-2">📈 Aktuelle Tagesgeld Zinsen 2025</h4>
                 <p className="text-sm text-green-700 mb-6">
                   Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.
@@ -614,8 +633,8 @@ export default function Banking() {
                     </Button>
                   </a>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -623,7 +642,9 @@ export default function Banking() {
       {/* Detaillierter Banking-Vergleich */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* OPTION 2 – Trading-CTA-Box */}
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
+          
+          {/* Trading-CTA-Box */}
           <Card className="mb-12 border-2 border-gray-200 rounded-lg">
             <CardContent className="pt-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
@@ -915,7 +936,6 @@ export default function Banking() {
             ))}
           </div>
 
-          {/* Gelber Kasten bleibt erhalten */}
           <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
             <CardHeader>
               <CardTitle className="text-lg font-bold text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</CardTitle>
