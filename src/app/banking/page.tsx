@@ -9,7 +9,7 @@ import Link from "next/link"
 import Head from "next/head"
 
 // SmartFinanzLogo-Komponente
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+const SmartFinanzLogo = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
       <div className={`flex flex-col items-start ${className}`}>
@@ -27,12 +27,12 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
 }
 
 // Reusable Header Component
-const Header: React.FC = () => {
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("versicherungen")
 
   // Funktion zum Scrollen zu einem Abschnitt und Setzen der aktiven Kategorie
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
     if (element) {
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
-    const hash = window.location.hash.substring(1)
+    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
@@ -180,6 +180,7 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
+
       {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
@@ -379,222 +380,68 @@ export default function Banking() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Vergleichen Sie Angebote</h3>
-            <ul className="list-none list-inside text-sm text-gray-600 mb-6">
-              <li className="flex items-start">
-                <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung.
-              </li>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
+              <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung.</li>
             </ul>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Achten Sie auf Bewertungen</h3>
-            <ul className="list-none list-inside text-sm text-gray-600 mb-6">
-              <li className="flex items-start">
-                <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.
-              </li>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
+              <li>Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
             </ul>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Prüfen Sie Konditionen</h3>
-            <ul className="list-none list-inside text-sm text-gray-600 mb-6">
-              <li className="flex items-start">
-                <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.
-              </li>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
+              <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
 
             {/* Girokonto kostenlos */}
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</h3>
-            <div className="grid gap-6 lg:grid-cols-2 mb-12">
-              <div>
-                <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
-                <ul className="list-none list-inside text-sm text-gray-600 mb-4">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen.
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
-                  </li>
-                </ul>
-                <div>
-                  <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
-                  <ul className="list-none list-inside text-sm text-green-700">
-                    <li className="flex items-start">
-                      <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                      Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken.
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                      Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center">
-                    <Check className="mr-2 h-4 w-4 text-green-600" />
-                    Bedingungslos kostenlose Kontoführung
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="mr-2 h-4 w-4 text-green-600" />
-                    Kostenlose EC- und Kreditkarte
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="mr-2 h-4 w-4 text-green-600" />
-                    Kostenloses Bargeldabheben deutschlandweit
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="mr-2 h-4 w-4 text-green-600" />
-                    Mobile Banking App mit allen Funktionen
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="mr-2 h-4 w-4 text-green-600" />
-                    Dispozinsen unter 7% p.a.
-                  </li>
-                </ul>
-                <div className="mt-8 text-center">
-                  <a 
-                    href="https://www.tarifcheck.de/girokonto/" 
-                    target="_blank" 
-                    rel="sponsored"
-                  >
-                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt Tarife vergleichen
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Kreditkarte ohne Jahresgebühr */}
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600 mt-12">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h3>
-            <p className="text-sm text-gray-600 mb-6">
-              Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
-            </p>
-            <div className="grid gap-6 lg:grid-cols-3 mb-12">
-              <div>
-                <h5 className="font-semibold mb-2 text-gray-900">Visa/Mastercard klassisch</h5>
-                <ul className="list-none list-inside text-sm space-y-1">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Weltweit akzeptiert
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Kostenlose Bargeldabhebung im Ausland
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Online-Shopping ohne Extragebühren
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Reiseversicherungen inklusive
-                  </li>
-                </ul>
-                <p className="text-sm text-green-600 mt-2">0€ Jahresgebühr dauerhaft</p>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-2 text-gray-900">Modern Digital Cards</h5>
-                <ul className="list-none list-inside text-sm space-y-1">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Apple Pay / Google Pay ready
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Echtzeit-Benachrichtigungen
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Ausgabenkontrolle per App
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Virtuelle Kartennummern
-                  </li>
-                </ul>
-                <p className="text-sm text-green-600 mt-2">Kostenlos + Cashback möglich</p>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-2 text-gray-900">Travel & Bonus Cards</h5>
-                <ul className="list-none list-inside text-sm space-y-1">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Meilen oder Punkte sammeln
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Lounge-Zugang an Flughäfen
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Umfassende Reiseversicherung
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Priority Pass inklusive
-                  </li>
-                </ul>
-                <p className="text-sm text-green-600 mt-2">Viele Premium-Features ohne Zusatzkosten</p>
-              </div>
-            </div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
+              <li>Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
+            </ul>
+            <div className="mb-6">
+              <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+              <p className="text-sm text-green-600 mb-6">Kostenlos + Cashback möglich</p>
+            
+            <h4 className="text-lg font-semibold text-gray-900 mb-2">Travel & Bonus Cards</h4>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-4">
+              <li>Meilen oder Punkte sammeln</li>
+              <li>Lounge-Zugang an Flughäfen</li>
+              <li>Umfassende Reiseversicherung</li>
+              <li>Priority Pass inklusive</li>
+            </ul>
+            <p className="text-sm text-green-600 mb-6">Viele Premium-Features ohne Zusatzkosten</p>
 
             {/* Kredit online beantragen */}
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</h3>
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
-            <div className="grid gap-6 lg:grid-cols-3 mb-12">
-              <div>
-                <h5 className="font-semibold mb-2 text-gray-900">Ratenkredit</h5>
-                <ul className="list-none list-inside text-sm space-y-1">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Für Anschaffungen von 1.000€ bis 120.000€
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Zinsen ab 0,68% p.a. bei bester Bonität
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-2 text-gray-900">Sofortkredit</h5>
-                <ul className="list-none list-inside text-sm space-y-1">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Schnelle Auszahlung binnen 24h möglich
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Digitaler Abschluss mit VideoIdent-Verfahren
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold mb-2 text-gray-900">Umschuldung</h5>
-                <ul className="list-none list-inside text-sm space-y-1">
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Bestehende Kredite zusammenfassen
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    Bis zu 40% der Zinsen sparen
-                  </li>
-                </ul>
-                <div className="mt-8 text-center">
-                  <a 
-                    href="https://www.check24.de/kredit/" 
-                    target="_blank" 
-                    rel="sponsored"
-                  >
-                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt Kredit berechnen
-                    </Button>
-                  </a>
-                </div>
-              </div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600 mt-12">Kredit online beantragen - Schnell & günstig finanzieren</h3>
+            <h4 className="text-lg font-semibold text-gray-900 mb-2">Kredit Vergleich 2025: Die besten Konditionen</h4>
+            
+            <h5 className="text-lg font-semibold text-gray-900 mb-2">Ratenkredit</h5>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-4">
+              <li>Für Anschaffungen von 1.000€ bis 120.000€</li>
+              <li>Zinsen ab 0,68% p.a. bei bester Bonität</li>
+            </ul>
+            
+            <h5 className="text-lg font-semibold text-gray-900 mb-2">Sofortkredit</h5>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-4">
+              <li>Schnelle Auszahlung binnen 24h möglich</li>
+              <li>Digitaler Abschluss mit VideoIdent-Verfahren</li>
+            </ul>
+            
+            <h5 className="text-lg font-semibold text-gray-900 mb-2">Umschuldung</h5>
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
+              <li>Bestehende Kredite zusammenfassen</li>
+              <li>Bis zu 40% der Zinsen sparen</li>
+            </ul>
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.check24.de/kredit/" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Kredit berechnen
+                </Button>
+              </a>
             </div>
 
             {/* Testsieger Girokonto-Vergleich */}
@@ -625,23 +472,25 @@ export default function Banking() {
                       <p className="text-xl font-bold text-green-600">{provider.price}</p>
                       <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
                     </div>
-                    <ul className="space-y-1 flex-1 overflow-auto">
+                    <ul className="space-y-1 flex-1 overflow-auto min-h-[200px]">
                       {provider.features.map((feature, i) => (
-                        <li key={i} className="flex items-center text-sm">
-                          <Check className="mr-2 h-4 w-4 text-green-600" />
-                          {feature}
+                        <li key={i} className="flex items-start text-sm">
+                          <Check className="mr-2 h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <a 
-                      href={provider.url} 
-                      target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                      rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
-                    >
-                      <Button className="w-full bg-green-600 text-white font-medium text-sm transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
-                        Jetzt abschließen*
-                      </Button>
-                    </a>
+                    <div className="mt-4">
+                      <a 
+                        href={provider.url} 
+                        target={provider.url.startsWith('http') ? '_blank' : '_self'}
+                        rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
+                      >
+                        <Button className="w-full bg-green-600 text-white font-medium text-sm transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                          Jetzt abschließen*
+                        </Button>
+                      </a>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -974,10 +823,7 @@ export default function Banking() {
                       <h5 className="font-semibold mb-1 text-gray-900">Leistungen:</h5>
                       <ul className="text-sm space-y-1 text-gray-600">
                         {card.features.map((feature, i) => (
-                          <li key={i} className="flex items-start">
-                            <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                            {feature}
-                          </li>
+                          <li key={i}>• {feature}</li>
                         ))}
                       </ul>
                     </div>
