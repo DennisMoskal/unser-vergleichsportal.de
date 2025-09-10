@@ -341,7 +341,7 @@ export default function Home() {
                   className="w-full bg-green-600 hover:bg-green-700 text-sm py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Startseite
+                  Schließen
                 </Button>
               </nav>
             </div>
