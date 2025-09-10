@@ -507,7 +507,7 @@ export default function Tierversicherungen() {
                     ))}
                   </ul>
                   <Link href={provider.url} target={provider.url.startsWith("http") ? "_blank" : "_self"} rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}>
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">Zum Anbieter*</Button>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">Jetzt abschließen*</Button>
                   </Link>
                 </CardContent>
               </Card>
