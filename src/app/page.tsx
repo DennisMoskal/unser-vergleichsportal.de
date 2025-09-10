@@ -223,7 +223,7 @@ export default function Home() {
   // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
     const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading", "dsl", "handytarife", "oekostrom", "gas", "reisen", "strom", "kreditkarte", "mietwagen"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
@@ -286,9 +286,6 @@ export default function Home() {
               <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
                 Trading
               </Link>
-              <Link href="#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-                Kundenbewertungen
-              </Link>
             </nav>
             <div className="flex items-center space-x-4">
               <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
@@ -308,47 +305,44 @@ export default function Home() {
           {mobileMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
               <nav className="px-4 py-4 space-y-4" aria-label="Mobiles Menü">
-                <Link
-                  href="/versicherungen"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Versicherungen
-                </Link>
-                <Link
-                  href="/banking"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Banking
-                </Link>
-                <Link
-                  href="/tierversicherungen"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Tierversicherung
-                </Link>
-                <Link
-                  href="/trading"
-                  className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Trading
-                </Link>
-                <Link
-                  href="#kundenbewertungen"
-                  className="block text-gray-600 hover:text-green-600 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Kundenbewertungen
-                </Link>
-                <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => {
-                  window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")
-                  setMobileMenuOpen(false)
-                }}>
-                  Jetzt Vergleichen
-                </Button>
+                {[
+                  { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+                  { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
+                  { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
+                  { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
+                  { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                  { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                  { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                  { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                  { key: 'reisen', label: 'REISEN', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                  { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                  { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                  { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false }
+                ].map(({ key, label, url, isInternal }) => (
+                  isInternal ? (
+                    <Link
+                      key={key}
+                      href={url}
+                      className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
+                      onClick={() => setMobileMenuOpen(false)}
+                      aria-label={`Zu ${label} navigieren`}
+                    >
+                      {label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={key}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors font-medium text-sm"
+                      onClick={() => setMobileMenuOpen(false)}
+                      aria-label={`${label} vergleichen (externer Link)`}
+                    >
+                      {label}
+                    </a>
+                  )
+                ))}
               </nav>
             </div>
           )}
@@ -860,14 +854,6 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
                 </CardContent>
               </Card>
 
@@ -896,14 +882,6 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
                 </CardContent>
               </Card>
 
@@ -932,14 +910,6 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
                 </CardContent>
               </Card>
 
@@ -968,14 +938,6 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
                 </CardContent>
               </Card>
             </div>
