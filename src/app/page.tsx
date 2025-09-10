@@ -209,9 +209,8 @@ const providerData: { [key: string]: Provider[] } = {
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("versicherungen")
-  const [selectedProduct, setSelectedProduct] = useState("")
 
-  // Funktion zum Scrollen zu einem Abschnitt
+  // Funktion zum Scrollen zu einem Abschnitt und Setzen der aktiven Kategorie
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
@@ -303,7 +302,10 @@ export default function Home() {
                             ? 'bg-green-600 text-white'
                             : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                         }`}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
                         aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
@@ -334,7 +336,10 @@ export default function Home() {
                             ? 'bg-green-600 text-white'
                             : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                         }`}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
                         aria-label={`${label} vergleichen (externer Link)`}
                       >
                         {label}
@@ -359,7 +364,10 @@ export default function Home() {
                             ? 'bg-green-600 text-white'
                             : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                         }`}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
                         aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
@@ -384,7 +392,10 @@ export default function Home() {
                             ? 'bg-green-600 text-white'
                             : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
                         }`}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
                         aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
@@ -404,63 +415,54 @@ export default function Home() {
         </header>
 
         {/* Kategorie-Navigation */}
-        <section className="bg-gray-50 py-4 border-b" id="versicherungen">
+        <section className="bg-green-50 py-4 border-b" id="versicherungen">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
               {[
-                { key: 'finanzprodukte', label: 'Finanzprodukte', items: [
-                  { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
-                  { key: 'haustierversicherung', label: 'HAUSTIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
-                  { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
-                  { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
-                ]},
-                { key: 'weitere-produkte', label: 'Weitere Produkte', items: [
-                  { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                  { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                  { key: 'handytarif', label: 'HANDYTARIF', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                  { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                  { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                  { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                  { key: 'reise', label: 'REISE', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                  { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                ]},
-              ].map((category) => (
-                <div key={category.key} className="flex flex-col items-center">
-                  <h3 className="font-semibold mb-2 text-gray-900 text-sm sm:text-base">{category.label}</h3>
-                  <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
-                    {category.items.map(({ key, label, url, isInternal }) => (
-                      isInternal ? (
-                        <Link
-                          key={key}
-                          href={url}
-                          className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
-                            activeCategory === key
-                              ? 'bg-green-600 text-white'
-                              : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
-                          }`}
-                          aria-label={`Zu ${label} navigieren`}
-                        >
-                          {label}
-                        </Link>
-                      ) : (
-                        <a
-                          key={key}
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
-                            activeCategory === key
-                              ? 'bg-green-600 text-white'
-                              : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
-                          }`}
-                          aria-label={`${label} vergleichen (externer Link)`}
-                        >
-                          {label}
-                        </a>
-                      )
-                    ))}
-                  </div>
-                </div>
+                { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
+                { key: 'haustierversicherung', label: 'HAUSTIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
+                { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
+                { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+                { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                { key: 'handytarif', label: 'HANDYTARIF', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                { key: 'reise', label: 'REISE', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              ].map(({ key, label, url, isInternal }) => (
+                isInternal ? (
+                  <Link
+                    key={key}
+                    href={url}
+                    className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
+                      activeCategory === key
+                        ? 'bg-green-600 text-white'
+                        : 'bg-white text-gray-600 hover:bg-green-600 hover:text-white'
+                    }`}
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`Zu ${label} navigieren`}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    key={key}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm ${
+                      activeCategory === key
+                        ? 'bg-green-600 text-white'
+                        : 'bg-white text-gray-600 hover:bg-green-600 hover:text-white'
+                    }`}
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`${label} vergleichen (externer Link)`}
+                  >
+                    {label}
+                  </a>
+                )
               ))}
             </div>
           </div>
