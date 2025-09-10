@@ -66,7 +66,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menü */}
         {mobileMenuOpen && (
-          <div className="sm:hidden absolute top-full left-0 right-0 bg-green-100 shadow-lg border-t z-50">
+          <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4" aria-label="Mobile Menü">
               <div>
                 <h2 className="font-semibold mb-3 text-gray-900">Finanzprodukte</h2>
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -134,7 +134,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -158,7 +158,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -182,7 +182,7 @@ const Header: React.FC = () => {
       </header>
 
       {/* Kategorie-Navigation */}
-      <section className="bg-green-100 py-4 border-b" id="versicherungen">
+      <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
             {[
@@ -203,7 +203,7 @@ const Header: React.FC = () => {
                 <Link
                   key={key}
                   href={url}
-                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                   onClick={() => setActiveCategory(key)}
                   aria-label={`Zu ${label} navigieren`}
                 >
@@ -215,7 +215,7 @@ const Header: React.FC = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                   onClick={() => setActiveCategory(key)}
                   aria-label={`${label} vergleichen (externer Link)`}
                 >
@@ -340,32 +340,39 @@ export default function Banking() {
 
       <Header />
 
-      {/* Einführungsabschnitt */}
-      <section className="py-12 sm:py-16 bg-green-600 text-white">
+      {/* Einführungsabschnitt (Dark Green) */}
+      <section className="py-8 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Finden Sie mit SmartFinanz das passende Girokonto</h1>
-            <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4">Finden Sie mit SmartFinanz das passende Girokonto</h1>
+            <p className="text-sm sm:text-base text-green-100 mb-6">
               Finden Sie das passende Girokonto und den richtigen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
+          </div>
+        </div>
+      </section>
 
+      {/* Button Section (White) */}
+      <section className="py-4 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             {/* Button 1 – Banking */}
             <Button 
               size="lg" 
-              className="bg-white text-green-600 font-medium transition-all duration-300 ease-in-out hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-gray-100 hover:to-gray-200"
+              className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               onClick={() => window.open("https://www.tarifcheck.de/girokonto/", "_blank")}
             >
               Jetzt Tarife vergleichen
             </Button>
 
             {/* kurze Erklärung zwischen den Buttons */}
-            <p className="mt-2 text-xs sm:text-sm text-green-100">
+            <p className="mt-2 text-xs sm:text-sm text-gray-900">
               Zur Vermögensbildung: Nutzen Sie den Button, um passende Online-Broker für Aktien, ETFs &amp; Krypto Investitionen zu vergleichen.
             </p>
 
             {/* Button 2 – Trading */}
             <div className="mt-3 flex justify-center">
-              <Button asChild size="lg" className="bg-white text-green-600 font-medium transition-all duration-300 ease-in-out hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-gray-100 hover:to-gray-200">
+              <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
@@ -383,30 +390,60 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {[
-              {
-                title: "Vergleichen Sie Angebote",
-                content: "Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung."
-              },
-              {
-                title: "Achten Sie auf Bewertungen",
-                content: "Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung."
-              },
-              {
-                title: "Prüfen Sie Konditionen",
-                content: "Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden."
-              }
-            ].map((tip, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:shadow-lg transition-shadow rounded-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg font-bold text-gray-900">{tip.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">{tip.content}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Vergleichen Sie Angebote</h3>
+            <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
+              <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung.</li>
+            </ul>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Achten Sie auf Bewertungen</h3>
+            <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
+              <li>Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
+            </ul>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Prüfen Sie Konditionen</h3>
+            <ul className="list-disc list-inside text-sm text-gray-900">
+              <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Kredit online beantragen */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Kredit online beantragen - Schnell & günstig finanzieren</h2>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h3>
+            <div className="grid gap-6 lg:grid-cols-3">
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Ratenkredit</h4>
+                <ul className="list-disc list-inside text-sm text-gray-900">
+                  <li>Für Anschaffungen von 1.000€ bis 120.000€. Zinsen ab 0,68% p.a. bei bester Bonität.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Sofortkredit</h4>
+                <ul className="list-disc list-inside text-sm text-gray-900">
+                  <li>Schnelle Auszahlung binnen 24h möglich. Digitaler Abschluss mit VideoIdent-Verfahren.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Umschuldung</h4>
+                <ul className="list-disc list-inside text-sm text-gray-900">
+                  <li>Bestehende Kredite zusammenfassen und bis zu 40% der Zinsen sparen.</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.check24.de/kredit/" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Kredit berechnen
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -519,49 +556,6 @@ export default function Banking() {
                     </li>
                   </ul>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Kredit online beantragen */}
-          <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-            <CardHeader>
-              <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="mb-6">
-                <h4 className="font-semibold text-lg text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
-                <div className="grid gap-6 lg:grid-cols-3">
-                  <div>
-                    <h5 className="font-medium text-green-600 mb-2">Ratenkredit</h5>
-                    <p className="text-sm text-gray-600">
-                      Für Anschaffungen von 1.000€ bis 120.000€. Zinsen ab 0,68% p.a. bei bester Bonität.
-                    </p>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-green-600 mb-2">Sofortkredit</h5>
-                    <p className="text-sm text-gray-600">
-                      Schnelle Auszahlung binnen 24h möglich. Digitaler Abschluss mit VideoIdent-Verfahren.
-                    </p>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-green-600 mb-2">Umschuldung</h5>
-                    <p className="text-sm text-gray-600">
-                      Bestehende Kredite zusammenfassen und bis zu 40% der Zinsen sparen.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <a 
-                  href="https://www.check24.de/kredit/" 
-                  target="_blank" 
-                  rel="sponsored"
-                >
-                  <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                    Jetzt Kredit berechnen
-                  </Button>
-                </a>
               </div>
             </CardContent>
           </Card>
