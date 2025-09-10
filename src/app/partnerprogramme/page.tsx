@@ -51,7 +51,7 @@ export default function PartnerprogrammePage() {
           </nav>
           <div className="flex items-center space-x-4">
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-              Vergleich starten
+              Jetzt vergleichen
             </Button>
             <button
               className="md:hidden"
@@ -103,7 +103,7 @@ export default function PartnerprogrammePage() {
                 Kundenbewertungen
               </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-                Vergleich starten
+                Jetzt vergleichen
               </Button>
             </nav>
           </div>
@@ -124,11 +124,11 @@ export default function PartnerprogrammePage() {
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
-                SmartFinanz ist eines der führenden Vergleichsportale in Deutschland, das täglich tausende Kunden bei der Suche nach den besten Finanzprodukten unterstützt. Als Partner profitieren Sie von unserer etablierten Plattform, unserem starken Markenvertrauen und unserer Expertise im Finanzbereich. Wir bieten Ihnen:
+                SmartFinanz Unser-Vergleichsportal.de ist ein Deutsches Vergleichsportal, das täglich Kunden bei der Suche nach den besten Finanzprodukten unterstützt. Als Partner profitieren Sie von unserer etablierten Plattform, unserem starken Markenvertrauen und unserer Expertise im Finanzbereich. Wir bieten Ihnen:
               </p>
               <ul className="list-disc pl-5 space-y-2">
                 <li><strong>Erhöhte Sichtbarkeit:</strong> Präsentieren Sie Ihre Produkte einer großen Zielgruppe auf unserer Plattform.</li>
-                <li><strong>Vertrauen der Kunden:</strong> Nutzen Sie unsere TÜV-zertifizierte Plattform, um Ihre Glaubwürdigkeit zu stärken.</li>
+                <li><strong>Vertrauen der Kunden:</strong> Nutzen Sie unsere zertifizierte Plattform, um Ihre Glaubwürdigkeit zu stärken.</li>
                 <li><strong>Einfache Integration:</strong> Unser unkomplizierter Bewerbungsprozess und unsere Unterstützung sorgen für eine schnelle Zusammenarbeit.</li>
                 <li><strong>Maßgeschneiderte Lösungen:</strong> Wir arbeiten eng mit Ihnen zusammen, um Ihre Produkte optimal zu präsentieren.</li>
               </ul>
@@ -154,7 +154,7 @@ export default function PartnerprogrammePage() {
               </CardHeader>
               <CardContent className="text-center text-gray-600">
                 <p>
-                  Erreichen Sie täglich tausende Kunden, die aktiv nach Finanzprodukten suchen, und steigern Sie die Sichtbarkeit Ihrer Marke auf unserer Plattform.
+                  Erreichen Sie täglich ein Vielzahl von Kunden, die aktiv nach Finanzprodukten suchen, und steigern Sie die Sichtbarkeit Ihrer Marke auf unserer Plattform.
                 </p>
               </CardContent>
             </Card>
@@ -167,7 +167,7 @@ export default function PartnerprogrammePage() {
               </CardHeader>
               <CardContent className="text-center text-gray-600">
                 <p>
-                  Profitieren Sie von unserer TÜV-zertifizierten Plattform und unserem etablierten Ruf, um das Vertrauen Ihrer potenziellen Kunden zu gewinnen.
+                  Profitieren Sie von unserer zertifizierten Plattform und unserem etablierten Ruf, um das Vertrauen Ihrer potenziellen Kunden zu gewinnen.
                 </p>
               </CardContent>
             </Card>
@@ -191,7 +191,7 @@ export default function PartnerprogrammePage() {
       {/* Call to Action */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Starten Sie Ihre Partnerschaft mit SmartFinanz</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Starten Sie Ihre Partnerschaft mit SmartFinanz Unser-Vergleichsportal.de</h3>
           <p className="text-lg sm:text-xl mb-8 text-green-100">
             Werden Sie Teil unseres Netzwerks und nutzen Sie die Chance, Ihre Finanzprodukte einem breiten Publikum zu präsentieren. Kontaktieren Sie uns noch heute, um mehr über die Möglichkeiten einer Partnerschaft zu erfahren.
           </p>
@@ -217,7 +217,7 @@ export default function PartnerprogrammePage() {
               </p>
               <div className="flex space-x-2">
                 <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
-                  TÜV Zertifiziert
+                  Zertifiziert
                 </Badge>
               </div>
             </div>
@@ -296,7 +296,7 @@ export default function PartnerprogrammePage() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-400 mb-4">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              © 2025 SmartFinanz Unser-Vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/">
               <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
