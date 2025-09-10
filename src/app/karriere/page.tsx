@@ -212,7 +212,7 @@ export default function KarrierePage() {
               </p>
               <div className="flex space-x-2">
                 <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
-                  TÜV Zertifiziert
+                  Zertifiziert
                 </Badge>
               </div>
             </div>
