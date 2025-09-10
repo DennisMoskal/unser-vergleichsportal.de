@@ -192,7 +192,7 @@ const Header: React.FC = () => {
               { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'HAUSTIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
               { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
-              { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+              { key: 'versicherungen', label: 'VERSICHERUNG', url: '/versicherungen', isInternal: true },
               { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'HANDYTARIF', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
