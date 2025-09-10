@@ -380,167 +380,149 @@ export default function Banking() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Vergleichen Sie Angebote</h3>
-            <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
               <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung.</li>
             </ul>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Achten Sie auf Bewertungen</h3>
-            <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
               <li>Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
             </ul>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Prüfen Sie Konditionen</h3>
-            <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
+            <ul className="list-disc list-inside text-sm text-gray-600 mb-6">
               <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
 
             {/* Girokonto kostenlos */}
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid gap-8 lg:grid-cols-2">
-                  <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
-                    </p>
-                    <div>
-                      <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
-                      <p className="text-sm text-green-700">
-                        Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Bedingungslos kostenlose Kontoführung
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Kostenlose EC- und Kreditkarte
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Kostenloses Bargeldabheben deutschlandweit
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Mobile Banking App mit allen Funktionen
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Dispozinsen unter 7% p.a.
-                      </li>
-                    </ul>
-                  </div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</h3>
+            <div className="grid gap-6 lg:grid-cols-2 mb-12">
+              <div>
+                <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
+                </p>
+                <div>
+                  <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+                  <p className="text-sm text-green-700">
+                    Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
+                  </p>
                 </div>
-                <div className="mt-8 text-center">
-                  <a 
-                    href="https://www.tarifcheck.de/girokonto/" 
-                    target="_blank" 
-                    rel="sponsored"
-                  >
-                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt Tarife vergleichen
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    Bedingungslos kostenlose Kontoführung
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    Kostenlose EC- und Kreditkarte
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    Kostenloses Bargeldabheben deutschlandweit
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    Mobile Banking App mit allen Funktionen
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-600" />
+                    Dispozinsen unter 7% p.a.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.tarifcheck.de/girokonto/" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Tarife vergleichen
+                </Button>
+              </a>
+            </div>
 
             {/* Kreditkarte ohne Jahresgebühr */}
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 mb-6">
-                  Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
-                </p>
-                <div className="grid gap-6 lg:grid-cols-3">
-                  <div>
-                    <h5 className="font-semibold mb-2 text-gray-900">Visa/Mastercard klassisch</h5>
-                    <ul className="text-sm space-y-1">
-                      <li>• Weltweit akzeptiert</li>
-                      <li>• Kostenlose Bargeldabhebung im Ausland</li>
-                      <li>• Online-Shopping ohne Extragebühren</li>
-                      <li>• Reiseversicherungen inklusive</li>
-                    </ul>
-                    <p className="text-sm text-green-600 mt-2">0€ Jahresgebühr dauerhaft</p>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold mb-2 text-gray-900">Modern Digital Cards</h5>
-                    <ul className="text-sm space-y-1">
-                      <li>• Apple Pay / Google Pay ready</li>
-                      <li>• Echtzeit-Benachrichtigungen</li>
-                      <li>• Ausgabenkontrolle per App</li>
-                      <li>• Virtuelle Kartennummern</li>
-                    </ul>
-                    <p className="text-sm text-green-600 mt-2">Kostenlos + Cashback möglich</p>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold mb-2 text-gray-900">Travel & Bonus Cards</h5>
-                    <ul className="text-sm space-y-1">
-                      <li>• Meilen oder Punkte sammeln</li>
-                      <li>• Lounge-Zugang an Flughäfen</li>
-                      <li>• Umfassende Reiseversicherung</li>
-                      <li>• Priority Pass inklusive</li>
-                    </ul>
-                    <p className="text-sm text-green-600 mt-2">Viele Premium-Features ohne Zusatzkosten</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600 mt-12">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h3>
+            <p className="text-sm text-gray-600 mb-6">
+              Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
+            </p>
+            <div className="grid gap-6 lg:grid-cols-3 mb-12">
+              <div>
+                <h5 className="font-semibold mb-2 text-gray-900">Visa/Mastercard klassisch</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Weltweit akzeptiert</li>
+                  <li>• Kostenlose Bargeldabhebung im Ausland</li>
+                  <li>• Online-Shopping ohne Extragebühren</li>
+                  <li>• Reiseversicherungen inklusive</li>
+                </ul>
+                <p className="text-sm text-green-600 mt-2">0€ Jahresgebühr dauerhaft</p>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2 text-gray-900">Modern Digital Cards</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Apple Pay / Google Pay ready</li>
+                  <li>• Echtzeit-Benachrichtigungen</li>
+                  <li>• Ausgabenkontrolle per App</li>
+                  <li>• Virtuelle Kartennummern</li>
+                </ul>
+                <p className="text-sm text-green-600 mt-2">Kostenlos + Cashback möglich</p>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2 text-gray-900">Travel & Bonus Cards</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Meilen oder Punkte sammeln</li>
+                  <li>• Lounge-Zugang an Flughäfen</li>
+                  <li>• Umfassende Reiseversicherung</li>
+                  <li>• Priority Pass inklusive</li>
+                </ul>
+                <p className="text-sm text-green-600 mt-2">Viele Premium-Features ohne Zusatzkosten</p>
+              </div>
+            </div>
 
             {/* Kredit online beantragen */}
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
-                <div className="grid gap-6 lg:grid-cols-3">
-                  <div>
-                    <h5 className="font-semibold mb-2 text-gray-900">Ratenkredit</h5>
-                    <ul className="text-sm space-y-1">
-                      <li>• Für Anschaffungen von 1.000€ bis 120.000€</li>
-                      <li>• Zinsen ab 0,68% p.a. bei bester Bonität</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold mb-2 text-gray-900">Sofortkredit</h5>
-                    <ul className="text-sm space-y-1">
-                      <li>• Schnelle Auszahlung binnen 24h möglich</li>
-                      <li>• Digitaler Abschluss mit VideoIdent-Verfahren</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold mb-2 text-gray-900">Umschuldung</h5>
-                    <ul className="text-sm space-y-1">
-                      <li>• Bestehende Kredite zusammenfassen</li>
-                      <li>• Bis zu 40% der Zinsen sparen</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="mt-8 text-center">
-                  <a 
-                    href="https://www.check24.de/kredit/" 
-                    target="_blank" 
-                    rel="sponsored"
-                  >
-                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt Kredit berechnen
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</h3>
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
+            <div className="grid gap-6 lg:grid-cols-3 mb-12">
+              <div>
+                <h5 className="font-semibold mb-2 text-gray-900">Ratenkredit</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Für Anschaffungen von 1.000€ bis 120.000€</li>
+                  <li>• Zinsen ab 0,68% p.a. bei bester Bonität</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2 text-gray-900">Sofortkredit</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Schnelle Auszahlung binnen 24h möglich</li>
+                  <li>• Digitaler Abschluss mit VideoIdent-Verfahren</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2 text-gray-900">Umschuldung</h5>
+                <ul className="text-sm space-y-1">
+                  <li>• Bestehende Kredite zusammenfassen</li>
+                  <li>• Bis zu 40% der Zinsen sparen</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.check24.de/kredit/" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Kredit berechnen
+                </Button>
+              </a>
+            </div>
 
             {/* Testsieger Girokonto-Vergleich */}
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900 mt-12">Testsieger Girokonto-Vergleich 2025</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {providerData.map((provider) => (
                 <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -635,70 +617,63 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* Detaillierter Banking-Vergleich */}
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
-          
-          {/* Trading-CTA-Box */}
-          <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-            <CardContent className="pt-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-green-800">Ersparnisse sinnvoll anlegen</h3>
-                  <p className="text-sm sm:text-base text-gray-700">
-                    Notgroschen gesichert? Vergleichen Sie jetzt Broker für langfristigen Vermögensaufbau mit Aktien &amp; ETFs.
-                  </p>
-                </div>
-                <Link
-                  href="/trading"
-                  aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
-                  title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
-                >
-                  <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                    Jetzt Broker vergleichen
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Baufinanzierung */}
-          <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-            <CardHeader>
-              <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Baufinanzierung Rechner - Ihren Traum vom Eigenheim verwirklichen</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid gap-8 lg:grid-cols-2">
-                <div>
-                  <h4 className="text-lg text-gray-900 mb-2">Baufinanzierung: Das sollten Sie wissen</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li><strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
-                    <li><strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
-                    <li><strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
-                    <li><strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
-                    <li><strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-lg text-gray-900 mb-2">Aktuelle Bauzinsen & Trends</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.
-                  </p>
+            {/* Trading-CTA-Box */}
+            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
+              <CardContent className="pt-6">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
                   <div>
-                    <h5 className="font-semibold text-green-800 mb-1">💰 Spartipp:</h5>
-                    <p className="text-sm text-green-700">
-                      Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.
+                    <h3 className="text-base sm:text-lg font-semibold text-green-800">Ersparnisse sinnvoll anlegen</h3>
+                    <p className="text-sm sm:text-base text-gray-700">
+                      Notgroschen gesichert? Vergleichen Sie jetzt Broker für langfristigen Vermögensaufbau mit Aktien &amp; ETFs.
                     </p>
                   </div>
+                  <Link
+                    href="/trading"
+                    aria-label="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+                    title="Broker vergleichen und mit Ersparnissen Vermögen aufbauen"
+                  >
+                    <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                      Jetzt Broker vergleichen
+                    </Button>
+                  </Link>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+
+            {/* Baufinanzierung */}
+            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Baufinanzierung Rechner - Ihren Traum vom Eigenheim verwirklichen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-8 lg:grid-cols-2">
+                  <div>
+                    <h4 className="text-lg text-gray-900 mb-2">Baufinanzierung: Das sollten Sie wissen</h4>
+                    <ul className="space-y-2 text-sm">
+                      <li><strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
+                      <li><strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
+                      <li><strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
+                      <li><strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
+                      <li><strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg text-gray-900 mb-2">Aktuelle Bauzinsen & Trends</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.
+                    </p>
+                    <div>
+                      <h5 className="font-semibold text-green-800 mb-1">💰 Spartipp:</h5>
+                      <p className="text-sm text-green-700">
+                        Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
