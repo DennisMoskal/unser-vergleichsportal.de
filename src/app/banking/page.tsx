@@ -1,6 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -18,7 +20,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
+        <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
       </div>
     </Link>
   )
@@ -48,10 +50,10 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="relative border-b">
+      <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <SmartFinanzLogo className="text-xl" />
+            <SmartFinanzLogo className="text-xl text-gray-900" />
           </div>
           <button
             className="sm:hidden flex items-center justify-center"
@@ -64,10 +66,10 @@ const Header: React.FC = () => {
 
         {/* Mobile Menü */}
         {mobileMenuOpen && (
-          <div className="sm:hidden absolute top-full left-0 right-0 border-t z-50">
+          <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+                <h2 className="font-semibold mb-3 text-xl text-gray-900">Finanzprodukte</h2>
                 <div className="flex flex-col gap-2">
                   {[
                     { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
@@ -78,7 +80,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className="px-2 py-1 font-medium text-sm"
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -91,7 +93,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+                <h2 className="font-semibold mb-3 text-xl text-gray-900">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="flex flex-col gap-2">
                     {[
@@ -105,7 +107,7 @@ const Header: React.FC = () => {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2 py-1 font-medium text-sm"
+                        className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -128,7 +130,7 @@ const Header: React.FC = () => {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2 py-1 font-medium text-sm"
+                        className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -142,7 +144,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+                <h2 className="font-semibold mb-3 text-xl text-gray-900">Unternehmen</h2>
                 <div className="flex flex-col gap-2">
                   {[
                     { key: 'karriere', label: 'KARRIERE', url: '/karriere', isInternal: true },
@@ -153,7 +155,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className="px-2 py-1 font-medium text-sm"
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -166,7 +168,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+                <h2 className="font-semibold mb-3 text-xl text-gray-900">Rechtliches</h2>
                 <div className="flex flex-col gap-2">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -177,7 +179,7 @@ const Header: React.FC = () => {
                     <Link
                       key={key}
                       href={url}
-                      className="px-2 py-1 font-medium text-sm"
+                      className={`px-2 py-1 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setActiveCategory(key)
@@ -190,7 +192,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <Button
-                className="w-full font-medium text-sm py-2"
+                className="w-full bg-green-600 text-white font-medium text-sm py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Startseite
@@ -201,7 +203,7 @@ const Header: React.FC = () => {
       </header>
 
       {/* Kategorie-Navigation */}
-      <section className="py-4 border-b" id="versicherungen">
+      <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-2 sm:gap-4">
             {[
@@ -222,7 +224,7 @@ const Header: React.FC = () => {
                 <Link
                   key={key}
                   href={url}
-                  className="px-2 sm:px-4 py-1 sm:py-2 font-medium text-sm"
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                   onClick={() => setActiveCategory(key)}
                   aria-label={`Zu ${label} navigieren`}
                 >
@@ -234,7 +236,7 @@ const Header: React.FC = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-2 sm:px-4 py-1 sm:py-2 font-medium text-sm"
+                  className={`px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-sm bg-white text-gray-600 hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`}
                   onClick={() => setActiveCategory(key)}
                   aria-label={`${label} vergleichen (externer Link)`}
                 >
@@ -346,10 +348,10 @@ export default function Banking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Meta-Tags für SEO */}
       <Head>
-        <title>So finden Sie das passende Girokonto und den richtigen Kredit</title>
+        <title>Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</title>
         <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
         <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
         <meta name="robots" content="index, follow" />
@@ -359,11 +361,11 @@ export default function Banking() {
 
       <Header />
 
-      {/* Einführungsabschnitt */}
+      {/* Einführungsabschnitt (Dark Green) */}
       <section className="py-8 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl font-bold mb-4">Finden Sie mit SmartFinanz das passende Girokonto</h1>
+            <h1 className="text-3xl font-bold mb-4">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h1>
             <p className="text-base mb-6">
               Finden Sie das passende Girokonto und den richtigen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
@@ -371,15 +373,15 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Button Section */}
-      <section className="py-4">
+      {/* Button Section (White) */}
+      <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mt-2 text-2xl font-bold">
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">
               Sie möchten Vermögen bilden?
             </h2>
             <div className="mt-3 flex justify-center">
-              <Button asChild size="lg" className="font-medium">
+              <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
@@ -394,9 +396,9 @@ export default function Banking() {
       </section>
 
       {/* Tipps zur Auswahl */}
-      <section className="py-12 sm:py-16">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2">Vergleichen Sie Angebote</h3>
             <ul className="list-disc list-inside text-base mb-6">
@@ -410,12 +412,12 @@ export default function Banking() {
             <ul className="list-disc list-inside text-base mb-6">
               <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
-            <h2 className="text-3xl font-bold mb-6">Girokonto kostenlos - Die besten Anbieter 2025</h2>
+            <h2 className="text-3xl font-bold mb-6">Die besten Anbieter 2025 bieten ein kostenloses Girokonto</h2>
             <h3 className="text-lg font-bold mb-2">Was kostet ein kostenloses Girokonto wirklich?</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Spartipp:</h3>
+            <h3 className="text-lg font-bold mb-2">💡 Spartipp:</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
             </ul>
@@ -433,13 +435,13 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Tarife vergleichen
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</h2>
-            <h3 className="text-lg font-bold mb-2">Aktuelle Tagesgeld Zinsen 2025</h3>
+            <h2 className="text-3xl font-bold mb-6">Tagesgeld Vergleich lohnt sich - Top Zinsen bis 4,00% sichern</h2>
+            <h3 className="text-lg font-bold mb-2">📈 Aktuelle Tagesgeld Zinsen 2025</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
             </ul>
@@ -461,12 +463,12 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt kostenloses Konto eröffnen
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
+            <h2 className="text-3xl font-bold mb-6">Die besten kostenlosen Karten 2025 - Kreditkarte ohne Jahresgebühr</h2>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
             </ul>
@@ -476,7 +478,7 @@ export default function Banking() {
               <li>Kostenlose Bargeldabhebung im Ausland</li>
               <li>Online-Shopping ohne Extragebühren</li>
               <li>Reiseversicherungen inklusive</li>
-              <li>0€ Jahresgebühr dauerhaft</li>
+              <li><strong>0€ Jahresgebühr dauerhaft</strong></li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Modern Digital Cards</h3>
             <ul className="list-disc list-inside text-base mb-6">
@@ -484,7 +486,7 @@ export default function Banking() {
               <li>Echtzeit-Benachrichtigungen</li>
               <li>Ausgabenkontrolle per App</li>
               <li>Virtuelle Kartennummern</li>
-              <li>Kostenlos + Cashback möglich</li>
+              <li><strong>Kostenlos + Cashback möglich</strong></li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Travel & Bonus Cards</h3>
             <ul className="list-disc list-inside text-base mb-6">
@@ -492,7 +494,7 @@ export default function Banking() {
               <li>Lounge-Zugang an Flughäfen</li>
               <li>Umfassende Reiseversicherung</li>
               <li>Priority Pass inklusive</li>
-              <li>Viele Premium-Features ohne Zusatzkosten</li>
+              <li><strong>Viele Premium-Features ohne Zusatzkosten</strong></li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -500,7 +502,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kreditkarte vergleichen
                 </Button>
               </a>
@@ -528,7 +530,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kredit berechnen
                 </Button>
               </a>
@@ -538,39 +540,39 @@ export default function Banking() {
       </section>
 
       {/* Anbieterübersicht */}
-      <section className="py-12 sm:py-16">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Testsieger Girokonto-Vergleich 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
-              <div key={provider.name} className="flex flex-col h-full relative">
+              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
                 {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB") && (
-                  <span className="absolute -top-2 -right-2 text-base z-10">
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
-                  </span>
+                  </Badge>
                 )}
-                <div className="text-center pb-2">
+                <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
-                  <h3 className="text-xl font-bold">{provider.name}</h3>
+                  <CardTitle className="text-xl font-bold">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'fill-current' : ''}`} 
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
                       />
                     ))}
-                    <span className="ml-2 text-base font-medium">{provider.rating}</span>
+                    <span className="ml-2 text-base font-medium text-gray-600">{provider.rating}</span>
                   </div>
-                </div>
-                <div className="flex flex-col flex-1">
+                </CardHeader>
+                <CardContent className="flex flex-col flex-1">
                   <div className="text-center border-b pb-2 mb-4">
-                    <p className="text-xl font-bold">{provider.price}</p>
-                    <span className="mt-1 text-base">{provider.bonus}</span>
+                    <p className="text-xl font-bold text-green-600">{provider.price}</p>
+                    <Badge variant="outline" className="mt-1 border-green-200 text-base text-green-700">{provider.bonus}</Badge>
                   </div>
                   <ul className="space-y-1 flex-1 overflow-auto">
                     {provider.features.map((feature, i) => (
                       <li key={i} className="flex items-center text-base">
-                        <Check className="mr-2 h-4 w-4" />
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
                         {feature}
                       </li>
                     ))}
@@ -580,15 +582,15 @@ export default function Banking() {
                     target={provider.url.startsWith('http') ? '_blank' : '_self'}
                     rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
                   >
-                    <Button className="w-full font-medium text-base mt-auto">
+                    <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
                       Jetzt abschließen*
                     </Button>
                   </a>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
-          <div className="mt-8 text-center text-base p-4">
+          <div className="mt-8 text-center text-base text-gray-600 p-4">
             <p>
               *Wir erhalten eine Provision für Käufe über diese Links.
             </p>
@@ -596,24 +598,27 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Baufinanzierung */}
-      <section className="py-12 sm:py-16">
+      {/* Detaillierter Banking-Vergleich */}
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
+          
+          {/* Baufinanzierung */}
           <div className="max-w-4xl mx-auto text-left">
             <h2 className="text-3xl font-bold mb-6">Baufinanzierung Rechner - Ihren Traum vom Eigenheim verwirklichen</h2>
             <h3 className="text-lg font-bold mb-2">Baufinanzierung: Das sollten Sie wissen</h3>
             <ul className="list-disc text-base mb-6">
-              <li>Eigenkapital: Mindestens 20% der Kaufsumme empfohlen</li>
-              <li>Zinsbindung: 10–15 Jahre für Planungssicherheit</li>
-              <li>Tilgung: Initial 2–4% für zügige Rückzahlung</li>
-              <li>Nebenkosten: 10–15% zusätzlich zur Kaufsumme</li>
-              <li>Sondertilgungen: Jährlich 5–10% kostenfrei möglich</li>
+              <li><strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
+              <li><strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
+              <li><strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
+              <li><strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
+              <li><strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Aktuelle Bauzinsen & Trends</h3>
             <ul className="list-disc text-base mb-6">
               <li>Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Spartipp:</h3>
+            <h3 className="text-lg font-bold mb-2">💰 Spartipp:</h3>
             <ul className="list-disc text-base mb-6">
               <li>Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
             </ul>
@@ -623,7 +628,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Baufinanzierung berechnen
                 </Button>
               </a>
@@ -633,9 +638,9 @@ export default function Banking() {
       </section>
 
       {/* Online Banking Guide */}
-      <section className="py-12 sm:py-16">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2">1. Konto eröffnen</h3>
             <ul className="list-disc text-base mb-6">
@@ -676,7 +681,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Online Banking starten
                 </Button>
               </a>
@@ -686,18 +691,18 @@ export default function Banking() {
       </section>
 
       {/* Kredit wechseln & Depot eröffnen */}
-      <section className="py-12 sm:py-16">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
           <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2">Kredit umschulden und sparen</h3>
+            <h3 className="text-lg font-bold mb-2">💳 Kredit umschulden und sparen</h3>
             <h3 className="text-lg font-bold mb-2">Wann lohnt sich eine Umschuldung?</h3>
             <ul className="list-disc text-base mb-6">
               <li>Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Mögliche Ersparnis:</h3>
             <ul className="list-disc text-base mb-6">
-              <li>Bis zu 40% der Zinskosten bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.</li>
+              <li><strong>Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Tipp:</h3>
             <ul className="list-disc text-base mb-6">
@@ -709,23 +714,23 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kredit umschulden
                 </Button>
               </a>
             </div>
-            <h3 className="text-lg font-bold mb-2">Depot eröffnen für Geldanlage</h3>
+            <h3 className="text-lg font-bold mb-2">📈 Depot eröffnen für Geldanlage</h3>
             <h3 className="text-lg font-bold mb-2">Warum ein Depot?</h3>
             <ul className="list-disc text-base mb-6">
               <li>Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Kostenlose Depots:</h3>
             <ul className="list-disc text-base mb-6">
-              <li>Viele Online-Broker bieten kostenlose Depotführung und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
+              <li>Viele Online-Broker bieten <strong>kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Wichtig:</h3>
             <ul className="list-disc text-base mb-6">
-              <li>Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
+              <li>Nur investieren, what Sie langfristig entbehren können. Risiko streuen!</li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -733,12 +738,12 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Depot eröffnen
                 </Button>
               </a>
             </div>
-            <h3 className="text-lg font-bold mb-2">Checkliste für optimale Finanzplanung</h3>
+            <h3 className="text-lg font-bold mb-2">✅ Checkliste für optimale Finanzplanung</h3>
             <h3 className="text-lg font-bold mb-2">Grundausstattung:</h3>
             <ul className="list-disc text-base mb-6">
               <li>Kostenloses Girokonto für Alltag</li>
@@ -752,46 +757,62 @@ export default function Banking() {
               <li>Depot mit kostenlosen ETF-Sparplänen</li>
               <li>Alte Kredite auf bessere Konditionen prüfen</li>
               <li>Regelmäßig Konditionen vergleichen</li>
-              <li>Eigenheim absichern: Wohngebäude-, Hausrat- & Haftpflicht sinnvoll kombinieren</li>
+              <li>
+                Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren –{" "}
+                <Link href="/versicherungen" className="underline hover:text-gray-800 font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm">
+                  Versicherungen vergleichen
+                </Link>
+              </li>
             </ul>
+            <div className="mt-8 mb-12 text-center">
+              <Link
+                href="/versicherungen"
+                aria-label="Versicherungen vergleichen für optimale Absicherung"
+                title="Versicherungen vergleichen für optimale Absicherung"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Versicherungen vergleichen
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Kreditkarte ohne Jahresgebühr Sektion */}
-      <section className="py-12 sm:py-16">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
           <div className="max-w-4xl mx-auto text-left">
             <ul className="list-disc text-base mb-6">
               <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Visa/Mastercard klassisch</h3>
+            <h3 className="text-lg font-bold mb-2">💳 Visa/Mastercard klassisch</h3>
             <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
             <ul className="list-disc text-base mb-6">
               <li>Weltweit akzeptiert</li>
               <li>Kostenlose Bargeldabhebung im Ausland</li>
               <li>Online-Shopping ohne Extragebühren</li>
               <li>Reiseversicherungen inklusive</li>
-              <li>0€ Jahresgebühr dauerhaft</li>
+              <li><strong>0€ Jahresgebühr dauerhaft</strong></li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Modern Digital Cards</h3>
+            <h3 className="text-lg font-bold mb-2">📱 Modern Digital Cards</h3>
             <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
             <ul className="list-disc text-base mb-6">
               <li>Apple Pay / Google Pay ready</li>
               <li>Echtzeit-Benachrichtigungen</li>
               <li>Ausgabenkontrolle per App</li>
               <li>Virtuelle Kartennummern</li>
-              <li>Kostenlos + Cashback möglich</li>
+              <li><strong>Kostenlos + Cashback möglich</strong></li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Travel & Bonus Cards</h3>
+            <h3 className="text-lg font-bold mb-2">✈️ Travel & Bonus Cards</h3>
             <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
             <ul className="list-disc text-base mb-6">
               <li>Meilen oder Punkte sammeln</li>
               <li>Lounge-Zugang an Flughäfen</li>
               <li>Umfassende Reiseversicherung</li>
               <li>Priority Pass inklusive</li>
-              <li>Viele Premium-Features ohne Zusatzkosten</li>
+              <li><strong>Viele Premium-Features ohne Zusatzkosten</strong></li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -799,38 +820,44 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="font-medium">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kreditkarte vergleichen
                 </Button>
               </a>
             </div>
-            <h3 className="text-lg font-bold mb-2">Kreditkarten-Fallen vermeiden</h3>
-            <div className="grid gap-6 lg:grid-cols-2">
-              <div>
-                <h4 className="text-base font-bold mb-2">Versteckte Kosten beachten:</h4>
-                <ul className="list-disc text-base space-y-1">
-                  <li>Fremdwährungsgebühren (oft 1–2%)</li>
-                  <li>Bargeldgebühren auch im Inland</li>
-                  <li>Jahresgebühr ab dem 2. Jahr</li>
-                  <li>Hohe Sollzinsen bei Teilzahlung</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-base font-bold mb-2">Smarte Nutzung:</h4>
-                <ul className="list-disc text-base space-y-1">
-                  <li>Immer per Lastschrift vollständig begleichen</li>
-                  <li>Kreditrahmen nicht als Kredit nutzen</li>
-                  <li>Bei Auslandsreisen Geld sparen</li>
-                  <li>Bonusprogramme gezielt nutzen</li>
-                </ul>
-              </div>
-            </div>
+            <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-6 lg:grid-cols-2">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Versteckte Kosten beachten:</h3>
+                    <ul className="list-disc text-base space-y-1">
+                      <li>Fremdwährungsgebühren (oft 1–2%)</li>
+                      <li>Bargeldgebühren auch im Inland</li>
+                      <li>Jahresgebühr ab dem 2. Jahr</li>
+                      <li>Hohe Sollzinsen bei Teilzahlung</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Smarte Nutzung:</h3>
+                    <ul className="list-disc text-base space-y-1">
+                      <li>Immer per Lastschrift vollständig begleichen</li>
+                      <li>Kreditrahmen nicht als Kredit nutzen</li>
+                      <li>Bei Auslandsreisen Geld sparen</li>
+                      <li>Bonusprogramme gezielt nutzen</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
             <div className="col-span-2 md:col-span-1">
@@ -840,11 +867,11 @@ export default function Banking() {
             </div>
             <div>
               <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
-              <ul className="space-y-2 text-base">
+              <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
                     href="/banking" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Banking"
                   >
                     Banking
@@ -853,7 +880,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/tierversicherungen" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Haustierversicherung"
                   >
                     Haustierversicherung
@@ -862,7 +889,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/trading" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Trading"
                   >
                     Trading
@@ -871,7 +898,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/versicherungen" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Versicherungen"
                   >
                     Versicherungen
@@ -882,13 +909,13 @@ export default function Banking() {
             <div>
               <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
               <div className="grid grid-cols-2 gap-4">
-                <ul className="space-y-2 text-base">
+                <ul className="space-y-2 text-base text-gray-400">
                   <li>
                     <a 
                       href="https://www.c24n.de/ducwCtq" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="DSL Vergleich (externer Link)"
                     >
                       DSL
@@ -899,7 +926,7 @@ export default function Banking() {
                       href="https://www.c24n.de/Uxudvkj" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Gasvergleich (externer Link)"
                     >
                       Gas
@@ -910,7 +937,7 @@ export default function Banking() {
                       href="https://www.c24n.de/5R17qbN" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Handytarif vergleichen (externer Link)"
                     >
                       Handytarif
@@ -921,20 +948,20 @@ export default function Banking() {
                       href="https://www.c24n.de/RYXPGyh" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Kreditkarten vergleichen (externer Link)"
                     >
                       Kreditkarte
                     </a>
                   </li>
                 </ul>
-                <ul className="space-y-2 text-base">
+                <ul className="space-y-2 text-base text-gray-400">
                   <li>
                     <a 
                       href="https://www.c24n.de/FZ9nd0R" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Mietwagen vergleichen (externer Link)"
                     >
                       Mietwagen
@@ -945,7 +972,7 @@ export default function Banking() {
                       href="https://www.c24n.de/zxy0WKh" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Ökostrom vergleichen (externer Link)"
                     >
                       Ökostrom
@@ -956,7 +983,7 @@ export default function Banking() {
                       href="https://www.c24n.de/EieKR0E" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Reise vergleichen (externer Link)"
                     >
                       Reise
@@ -967,7 +994,7 @@ export default function Banking() {
                       href="https://www.c24n.de/RYXPGyh" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="font-medium" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Stromvergleich (externer Link)"
                     >
                       Strom
@@ -978,11 +1005,11 @@ export default function Banking() {
             </div>
             <div>
               <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
-              <ul className="space-y-2 text-base">
+              <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
                     href="/karriere" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Karriere"
                   >
                     Karriere
@@ -991,7 +1018,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/kontakt" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Kontakt"
                   >
                     Kontakt
@@ -1000,7 +1027,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/partnerprogramme" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Partnerprogramm"
                   >
                     Partnerprogramm
@@ -1009,7 +1036,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/ueber-uns" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Über uns"
                   >
                     Über uns
@@ -1019,11 +1046,11 @@ export default function Banking() {
             </div>
             <div>
               <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
-              <ul className="space-y-2 text-base">
+              <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
                     href="/agb" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="AGB"
                   >
                     AGB
@@ -1032,7 +1059,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/cookie-richtlinie" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Cookie-Richtlinie"
                   >
                     Cookie-Richtlinie
@@ -1041,7 +1068,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/datenschutz" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Datenschutz"
                   >
                     Datenschutz
@@ -1050,7 +1077,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/impressum" 
-                    className="font-medium" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Impressum"
                   >
                     Impressum
@@ -1059,12 +1086,14 @@ export default function Banking() {
               </ul>
             </div>
           </div>
-          <div className="border-t mt-8 pt-6 text-center">
-            <p className="text-base mb-4">
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-base text-gray-400 mb-4">
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
-              <Button className="font-medium text-base">
+              <Button 
+                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              >
                 Zurück zur Startseite
               </Button>
             </Link>
