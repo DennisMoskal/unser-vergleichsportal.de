@@ -29,7 +29,7 @@ export default function KontaktPage() {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Kontaktieren Sie SmartFinanz für Fragen zu Finanzvergleichen, Partnerschaften oder Karrieremöglichkeiten. Unser Team in Bonn steht Ihnen zur Verfügung."
+        "Kontaktieren Sie SmartFinanz Unser-Vergleichsportal.de für Fragen zu Finanzvergleichen, Partnerschaften oder Karrieremöglichkeiten. Unser Team in Bonn steht Ihnen zur Verfügung."
       )
     }
   }, [])
@@ -62,7 +62,7 @@ export default function KontaktPage() {
           </nav>
           <div className="flex items-center space-x-4">
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-              Vergleich starten
+              Jetzt vergleichen
             </Button>
             <button
               className="md:hidden"
@@ -114,7 +114,7 @@ export default function KontaktPage() {
                 Kundenbewertungen
               </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-                Vergleich starten
+                Jetzt vergleichen
               </Button>
             </nav>
           </div>
@@ -125,10 +125,10 @@ export default function KontaktPage() {
       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Kontaktieren Sie SmartFinanz
+            Kontaktieren Sie SmartFinanz Unser-Verleichsportal.de
           </h2>
           <p className="text-sm sm:text-base text-green-100 mb-6 max-w-2xl mx-auto">
-            Unser Team in Bonn steht Ihnen für alle Fragen zu Finanzvergleichen, Partnerschaften oder Karrieremöglichkeiten zur Verfügung. Nehmen Sie Kontakt auf – wir freuen uns auf Sie!
+            Unser Team steht Ihnen für alle Fragen zu Finanzvergleichen, Partnerschaften oder Karrieremöglichkeiten zur Verfügung. Nehmen Sie Kontakt auf – wir freuen uns auf Sie!
           </p>
           <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={() => window.location.href = "mailto:info@unser-vergleichsportal.de"}>
             Jetzt kontaktieren
@@ -141,7 +141,7 @@ export default function KontaktPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">So erreichen Sie uns</h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8">
-            Ob per Telefon, E-Mail oder vor Ort – wir sind für Sie da. Unser Kundenservice-Team in Bonn unterstützt Sie kompetent und schnell bei allen Anliegen rund um unsere Vergleichsdienste.
+            Ob per Telefon, E-Mail oder vor Ort – wir sind für Sie da. Unser Kundenservice-Team unterstützt Sie kompetent und schnell bei allen Anliegen rund um unsere Vergleichsdienste.
           </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
@@ -191,17 +191,17 @@ export default function KontaktPage() {
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-gray-900">Wie können wir Ihnen helfen?</h3>
           <div className="text-gray-600 space-y-6">
             <p>
-              Bei SmartFinanz steht Ihre Zufriedenheit an erster Stelle. Egal, ob Sie Unterstützung bei der Auswahl eines Finanzproduktes, Informationen zu unseren Partnerprogrammen oder Fragen zu Karrieremöglichkeiten haben – unser Team in Bonn ist für Sie da. Wir bieten Ihnen fundierte Beratung in vielen Bereichen des Lebens für bestmögliche Ergebnisse. 
+              Bei SmartFinanz Unser-Vergleichsportal.de steht Ihre Zufriedenheit an erster Stelle. Egal, ob Sie Unterstützung bei der Auswahl eines Finanzproduktes, Informationen zu unseren Partnerprogrammen oder Fragen zu Karrieremöglichkeiten haben – unser Team in Bonn ist für Sie da. Wir bieten Ihnen fundierte Beratung in vielen Bereichen des Lebens für bestmögliche Ergebnisse. 
             </p>
             <p>
               Für dringende Anfragen empfehlen wir unsere Telefon-Hotline, während E-Mail-Anfragen ideal für detaillierte Anliegen sind. Bitte beachten Sie unsere Öffnungszeiten, um eine schnelle Bearbeitung zu gewährleisten. Alternativ finden Sie auf unserer Website weitere Informationen zu unseren Dienstleistungen, einschließlich unserer unabhängigen Vergleichsangebote und Datenschutzrichtlinien.
             </p>
             <p>
-              Als TÜV-zertifiziertes Vergleichsportal legen wir großen Wert auf Transparenz und Kundennähe. Lernen Sie uns besser kennen, indem Sie unsere <Link href="/ueber-uns" className="underline hover:text-green-600">Über-uns-Seite</Link> besuchen oder sich direkt mit uns in Verbindung setzen.
+              Als zertifiziertes Vergleichsportal legen wir großen Wert auf Transparenz und Kundennähe. Lernen Sie uns besser kennen, indem Sie unsere <Link href="/ueber-uns" className="underline hover:text-green-600">Über-uns-Seite</Link> besuchen oder sich direkt mit uns in Verbindung setzen.
             </p>
             <div className="flex justify-center gap-4">
               <Badge variant="secondary" className="bg-white border text-green-600">
-                TÜV Zertifiziert
+                Zertifiziert
               </Badge>
               <Badge variant="secondary" className="bg-white border text-green-600">
                 4.8/5 Sterne
@@ -243,7 +243,7 @@ export default function KontaktPage() {
               </p>
               <div className="flex space-x-2">
                 <Badge variant="secondary" className="bg-gray-800 text-green-400 border-green-400">
-                  TÜV Zertifiziert
+                  Zertifiziert
                 </Badge>
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function KontaktPage() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-400 mb-4">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              © 2025 SmartFinanz Unser-Vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/">
               <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-sm sm:text-base">
