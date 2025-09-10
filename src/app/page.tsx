@@ -285,225 +285,60 @@ export default function Home() {
           {/* Mobile Menü */}
           {mobileMenuOpen && (
             <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-              <nav className="px-4 py-4 space-y-4" aria-label="Menü">
+              <nav className="px-4 py-4 space-y-4" aria-label="Mobile Menü">
                 <div>
-                  <h2 className="font-semibold mb-3 text-gray-900">Finanzprodukte</h2>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li>
-                      <Link
-                        href="/banking"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Banking
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/haustierversicherung"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Haustierversicherung
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/versicherungen"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Versicherung
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2 className="font-semibold mb-3 text-gray-900">Weitere Produkte</h2>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li>
-                      <a
-                        href="https://www.c24n.de/ducwCtq"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        DSL
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/Uxudvkj"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Gas
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/5R17qbN"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Handytarif
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/RYXPGyh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Kreditkarte
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/FZ9nd0R"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Mietwagen
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/zxy0WKh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Ökostrom
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/EieKR0E"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Reise
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.c24n.de/RYXPGyh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Strom
-                      </a>
-                    </li>
-                    <li>
-                      <Link
-                        href="/trading"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Trading
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2 className="font-semibold mb-3 text-gray-900">Unternehmen</h2>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li>
-                      <Link
-                        href="/karriere"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Karriere
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/kontakt"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Kontakt
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/partnerprogramm"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Partnerprogramm
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/ueber-uns"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Über uns
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2 className="font-semibold mb-3 text-gray-900">Rechtliches</h2>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li>
-                      <Link
-                        href="/agb"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        AGB
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/cookie-richtlinie"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Cookie-Richtlinie
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/datenschutz"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Datenschutz
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/impressum"
-                        className="block w-full text-left hover:text-green-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Impressum
-                      </Link>
-                    </li>
-                  </ul>
+                  <h2 className="font-semibold mb-3 text-gray-900">Kategorien</h2>
+                  <div className="flex flex-col gap-2">
+                    {[
+                      { key: 'versicherungen', label: 'VERSICHERUNGEN', url: '/versicherungen', isInternal: true },
+                      { key: 'banking', label: 'BANKING', url: '/banking', isInternal: true },
+                      { key: 'tierversicherungen', label: 'TIERVERSICHERUNG', url: '/tierversicherungen', isInternal: true },
+                      { key: 'trading', label: 'TRADING', url: '/trading', isInternal: true },
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'handytarife', label: 'HANDYTARIFE', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'oekostrom', label: 'ÖKOSTROM', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'reisen', label: 'REISEN', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'STROM', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                      { key: 'kreditkarte', label: 'KREDITKARTE', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                      { key: 'mietwagen', label: 'MIETWAGEN', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false }
+                    ].map(({ key, label, url, isInternal }) => (
+                      isInternal ? (
+                        <Link
+                          key={key}
+                          href={url}
+                          className={`px-2 py-1 rounded-lg font-medium transition-colors flex items-center text-sm ${
+                            activeCategory === key
+                              ? 'bg-green-600 text-white'
+                              : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
+                          }`}
+                          onClick={() => setMobileMenuOpen(false)}
+                          aria-label={`Zu ${label} navigieren`}
+                        >
+                          {label}
+                        </Link>
+                      ) : (
+                        <a
+                          key={key}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`px-2 py-1 rounded-lg font-medium transition-colors flex items-center text-sm ${
+                            activeCategory === key
+                              ? 'bg-green-600 text-white'
+                              : 'bg-white text-gray-600 hover:bg-green-50 hover:text-green-600'
+                          }`}
+                          onClick={() => setMobileMenuOpen(false)}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
+                      )
+                    ))}
+                  </div>
                 </div>
                 <Button
-                  className="w-full bg-green-600 hover:bg-green-700"
+                  className="w-full bg-green-600 hover:bg-green-700 text-sm py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
