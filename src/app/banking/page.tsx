@@ -94,7 +94,7 @@ const Header: React.FC = () => {
               </div>
               <div>
                 <h2 className="font-semibold mb-3 text-gray-900">Weitere Produkte</h2>
-                <div className="flex flex-col gap-2">
+                <div className="grid grid-cols-2 gap-2">
                   {[
                     { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
                     { key: 'gas', label: 'GAS', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
@@ -356,7 +356,9 @@ export default function Banking() {
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Button – Trading */}
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">
+              Sie möchten Vermögen bilden?
+            </h2>
             <div className="mt-3 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
@@ -368,9 +370,6 @@ export default function Banking() {
                 </Link>
               </Button>
             </div>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">
-              Sie möchten Vermögen bilden?
-            </h2>
           </div>
         </div>
       </section>
@@ -392,241 +391,231 @@ export default function Banking() {
             <ul className="list-disc list-inside text-sm text-gray-900 mb-6">
               <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Girokonto kostenlos - Die besten Anbieter 2025</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid gap-8 lg:grid-cols-2">
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Girokonto kostenlos - Die besten Anbieter 2025</h3>
+              <div className="grid gap-8 lg:grid-cols-2">
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
+                  </p>
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Was kostet ein kostenloses Girokonto wirklich?</h4>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.
+                    <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
+                    <p className="text-sm text-green-700">
+                      Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
                     </p>
-                    <div>
-                      <h4 className="font-semibold text-green-800 mb-2">💡 Spartipp:</h4>
-                      <p className="text-sm text-green-700">
-                        Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.
-                      </p>
-                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Bedingungslos kostenlose Kontoführung
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Kostenlose EC- und Kreditkarte
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Kostenloses Bargeldabheben deutschlandweit
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Mobile Banking App mit allen Funktionen
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-600" />
+                      Dispozinsen unter 7% p.a.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <a 
+                  href="https://www.tarifcheck.de/girokonto/" 
+                  target="_blank" 
+                  rel="sponsored"
+                >
+                  <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                    Jetzt Tarife vergleichen
+                  </Button>
+                </a>
+              </div>
+            </div>
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h3>
+              <div>
+                <p className="text-sm text-gray-600 mb-6">
+                  Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
+                </p>
+                <div className="grid gap-6 lg:grid-cols-3">
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Visa/Mastercard klassisch</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Weltweit akzeptiert</li>
+                      <li>• Kostenlose Bargeldabhebung im Ausland</li>
+                      <li>• Online-Shopping ohne Extragebühren</li>
+                      <li>• Reiseversicherungen inklusive</li>
+                    </ul>
+                    <p className="text-sm text-green-600 mt-2">0€ Jahresgebühr dauerhaft</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Bedingungslos kostenlose Kontoführung
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Kostenlose EC- und Kreditkarte
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Kostenloses Bargeldabheben deutschlandweit
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Mobile Banking App mit allen Funktionen
-                      </li>
-                      <li className="flex items-center">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        Dispozinsen unter 7% p.a.
-                      </li>
+                    <h5 className="font-semibold mb-2 text-gray-900">Modern Digital Cards</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Apple Pay / Google Pay ready</li>
+                      <li>• Echtzeit-Benachrichtigungen</li>
+                      <li>• Ausgabenkontrolle per App</li>
+                      <li>• Virtuelle Kartennummern</li>
+                    </ul>
+                    <p className="text-sm text-green-600 mt-2">Kostenlos + Cashback möglich</p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Travel & Bonus Cards</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Meilen oder Punkte sammeln</li>
+                      <li>• Lounge-Zugang an Flughäfen</li>
+                      <li>• Umfassende Reiseversicherung</li>
+                      <li>• Priority Pass inklusive</li>
+                    </ul>
+                    <p className="text-sm text-green-600 mt-2">Viele Premium-Features ohne Zusatzkosten</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Kredit online beantragen - Schnell & günstig finanzieren</h3>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
+                <div className="grid gap-6 lg:grid-cols-3">
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Ratenkredit</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Für Anschaffungen von 1.000€ bis 120.000€</li>
+                      <li>• Zinsen ab 0,68% p.a. bei bester Bonität</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Sofortkredit</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Schnelle Auszahlung binnen 24h möglich</li>
+                      <li>• Digitaler Abschluss mit VideoIdent-Verfahren</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Umschuldung</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Bestehende Kredite zusammenfassen</li>
+                      <li>• Bis zu 40% der Zinsen sparen</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <a 
+                  href="https://www.check24.de/kredit/" 
+                  target="_blank" 
+                  rel="sponsored"
+                >
+                  <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                    Jetzt Kredit berechnen
+                  </Button>
+                </a>
+              </div>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {providerData.map((provider) => (
+                <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
+                  {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB") && (
+                    <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
+                      Top Empfehlung
+                    </Badge>
+                  )}
+                  <CardHeader className="text-center pb-2">
+                    <div className="text-3xl mb-2">{provider.logo}</div>
+                    <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
+                    <div className="flex items-center justify-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                        />
+                      ))}
+                      <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-1">
+                    <div className="text-center border-b pb-2 mb-4">
+                      <p className="text-xl font-bold text-green-600">{provider.price}</p>
+                      <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
+                    </div>
+                    <ul className="space-y-1 flex-1 overflow-auto">
+                      {provider.features.map((feature, i) => (
+                        <li key={i} className="flex items-center text-sm">
+                          <Check className="mr-2 h-4 w-4 text-green-600" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <a 
+                      href={provider.url} 
+                      target={provider.url.startsWith('http') ? '_blank' : '_self'}
+                      rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
+                    >
+                      <Button className="w-full bg-green-600 text-white font-medium text-sm transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
+                        Jetzt abschließen*
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-8 text-center text-xs sm:text-sm text-gray-600 p-4">
+              <p>
+                *Wir erhalten eine Provision für Käufe über diese Links.
+              </p>
+            </div>
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold text-green-600 mb-4">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</h3>
+              <div>
+                <h4 className="text-lg text-green-800 mb-2">📈 Aktuelle Tagesgeld Zinsen 2025</h4>
+                <p className="text-sm text-green-700 mb-6">
+                  Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.
+                </p>
+                <div className="grid gap-6 lg:grid-cols-2">
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Top-Anbieter:</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Bis zu 4,00% Zinsen für Neukunden</li>
+                      <li>• 100.000€ Einlagensicherung pro Bank</li>
+                      <li>• Täglich verfügbar, keine Kündigung nötig</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold mb-2 text-gray-900">Wichtige Hinweise:</h5>
+                    <ul className="text-sm space-y-1">
+                      <li>• Zinsbindung oft nur 3–12 Monate</li>
+                      <li>• Danach meist niedrigere Bestandskundenzinsen</li>
+                      <li>• Regelmäßiger Vergleich lohnt sich</li>
                     </ul>
                   </div>
                 </div>
                 <div className="mt-8 text-center">
                   <a 
-                    href="https://www.tarifcheck.de/girokonto/" 
+                    href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
                     target="_blank" 
                     rel="sponsored"
                   >
                     <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt Tarife vergleichen
+                      Jetzt kostenloses Konto eröffnen
                     </Button>
                   </a>
                 </div>
-              </CardContent>
-            </Card>
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Tagesgeld Vergleich - Top Zinsen bis 4,00% sichern</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <h4 className="text-lg text-green-800 mb-2">📈 Aktuelle Tagesgeld Zinsen 2025</h4>
-                  <p className="text-sm text-green-700 mb-6">
-                    Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.
-                  </p>
-                  <div className="grid gap-6 lg:grid-cols-2">
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Top-Anbieter:</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Bis zu 4,00% Zinsen für Neukunden</li>
-                        <li>• 100.000€ Einlagensicherung pro Bank</li>
-                        <li>• Täglich verfügbar, keine Kündigung nötig</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Wichtige Hinweise:</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Zinsbindung oft nur 3–12 Monate</li>
-                        <li>• Danach meist niedrigere Bestandskundenzinsen</li>
-                        <li>• Regelmäßiger Vergleich lohnt sich</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <p className="text-sm text-gray-600 mb-6">
-                    Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.
-                  </p>
-                  <div className="grid gap-6 lg:grid-cols-3">
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Visa/Mastercard klassisch</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Weltweit akzeptiert</li>
-                        <li>• Kostenlose Bargeldabhebung im Ausland</li>
-                        <li>• Online-Shopping ohne Extragebühren</li>
-                        <li>• Reiseversicherungen inklusive</li>
-                      </ul>
-                      <p className="text-sm text-green-600 mt-2">0€ Jahresgebühr dauerhaft</p>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Modern Digital Cards</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Apple Pay / Google Pay ready</li>
-                        <li>• Echtzeit-Benachrichtigungen</li>
-                        <li>• Ausgabenkontrolle per App</li>
-                        <li>• Virtuelle Kartennummern</li>
-                      </ul>
-                      <p className="text-sm text-green-600 mt-2">Kostenlos + Cashback möglich</p>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Travel & Bonus Cards</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Meilen oder Punkte sammeln</li>
-                        <li>• Lounge-Zugang an Flughäfen</li>
-                        <li>• Umfassende Reiseversicherung</li>
-                        <li>• Priority Pass inklusive</li>
-                      </ul>
-                      <p className="text-sm text-green-600 mt-2">Viele Premium-Features ohne Zusatzkosten</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="mb-12 border-2 border-gray-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-bold text-green-600">Kredit online beantragen - Schnell & günstig finanzieren</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Kredit Vergleich 2025: Die besten Konditionen</h4>
-                  <div className="grid gap-6 lg:grid-cols-3">
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Ratenkredit</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Für Anschaffungen von 1.000€ bis 120.000€</li>
-                        <li>• Zinsen ab 0,68% p.a. bei bester Bonität</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Sofortkredit</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Schnelle Auszahlung binnen 24h möglich</li>
-                        <li>• Digitaler Abschluss mit VideoIdent-Verfahren</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-2 text-gray-900">Umschuldung</h5>
-                      <ul className="text-sm space-y-1">
-                        <li>• Bestehende Kredite zusammenfassen</li>
-                        <li>• Bis zu 40% der Zinsen sparen</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <div className="mb-12 text-center">
-              <a 
-                href="https://www.check24.de/kredit/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kredit berechnen
-                </Button>
-              </a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Anbieterübersicht */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.map((provider) => (
-              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB") && (
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
-                    Top Empfehlung
-                  </Badge>
-                )}
-                <CardHeader className="text-center pb-2">
-                  <div className="text-3xl mb-2">{provider.logo}</div>
-                  <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-                      />
-                    ))}
-                    <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex flex-col flex-1">
-                  <div className="text-center border-b pb-2 mb-4">
-                    <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
-                  </div>
-                  <ul className="space-y-1 flex-1 overflow-auto">
-                    {provider.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-sm">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a 
-                    href={provider.url} 
-                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                    rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
-                  >
-                    <Button className="w-full bg-green-600 text-white font-medium text-sm transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
-                      Jetzt abschließen*
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="mt-8 text-center text-xs sm:text-sm text-gray-600 p-4">
-            <p>
-              *Wir erhalten eine Provision für Käufe über diese Links.
-            </p>
           </div>
         </div>
       </section>
@@ -634,21 +623,6 @@ export default function Banking() {
       {/* Detaillierter Banking-Vergleich */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</h2>
-          
-          {/* DKB Tagesgeldkonto Button */}
-          <div className="mb-12 text-center">
-            <a 
-              href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
-              target="_blank" 
-              rel="sponsored"
-            >
-              <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                Jetzt kostenloses Konto eröffnen
-              </Button>
-            </a>
-          </div>
-
           {/* OPTION 2 – Trading-CTA-Box */}
           <Card className="mb-12 border-2 border-gray-200 rounded-lg">
             <CardContent className="pt-6">
@@ -941,7 +915,7 @@ export default function Banking() {
             ))}
           </div>
 
-          {/* Dieser Kasten bleibt bewusst gelb/orange */}
+          {/* Gelber Kasten bleibt erhalten */}
           <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
             <CardHeader>
               <CardTitle className="text-lg font-bold text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</CardTitle>
@@ -1024,96 +998,100 @@ export default function Banking() {
             </div>
             <div>
               <h2 className="font-semibold mb-3">Weitere Produkte</h2>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a 
-                    href="https://www.c24n.de/ducwCtq" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="DSL Vergleich (externer Link)"
-                  >
-                    DSL
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/Uxudvkj" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Gasvergleich (externer Link)"
-                  >
-                    Gas
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/5R17qbN" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Handytarif vergleichen (externer Link)"
-                  >
-                    Handytarif
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/RYXPGyh" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Kreditkarten vergleichen (externer Link)"
-                  >
-                    Kreditkarte
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/FZ9nd0R" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Mietwagen vergleichen (externer Link)"
-                  >
-                    Mietwagen
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/zxy0WKh" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Ökostrom vergleichen (externer Link)"
-                  >
-                    Ökostrom
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/EieKR0E" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Reise vergleichen (externer Link)"
-                  >
-                    Reise
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.c24n.de/RYXPGyh" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Stromvergleich (externer Link)"
-                  >
-                    Strom
-                  </a>
-                </li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/ducwCtq" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="DSL Vergleich (externer Link)"
+                    >
+                      DSL
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/Uxudvkj" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Gasvergleich (externer Link)"
+                    >
+                      Gas
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/5R17qbN" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Handytarif vergleichen (externer Link)"
+                    >
+                      Handytarif
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kreditkarten vergleichen (externer Link)"
+                    >
+                      Kreditkarte
+                    </a>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/FZ9nd0R" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Mietwagen vergleichen (externer Link)"
+                    >
+                      Mietwagen
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/zxy0WKh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Ökostrom vergleichen (externer Link)"
+                    >
+                      Ökostrom
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/EieKR0E" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Reise vergleichen (externer Link)"
+                    >
+                      Reise
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Stromvergleich (externer Link)"
+                    >
+                      Strom
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div>
               <h2 className="font-semibold mb-3">Unternehmen</h2>
