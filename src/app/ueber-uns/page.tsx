@@ -29,7 +29,7 @@ export default function UeberUnsPage() {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Erfahren Sie mehr über SmartFinanz, Ihr vertrauenswürdiger Partner für unabhängige Finanzvergleiche seit 2015. Sparen Sie Zeit und Geld mit unseren Expertenlösungen."
+        "Erfahren Sie mehr über SmartFinanz, Ihr vertrauenswürdiger Partner für unabhängige Finanzvergleiche. Sparen Sie Zeit und Geld mit unseren Expertenlösungen."
       )
     }
   }, [])
@@ -62,7 +62,7 @@ export default function UeberUnsPage() {
           </nav>
           <div className="flex items-center space-x-4">
             <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-              Vergleich starten
+              Jetzt vergleichen
             </Button>
             <button
               className="md:hidden"
@@ -114,7 +114,7 @@ export default function UeberUnsPage() {
                 Kundenbewertungen
               </Link>
               <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-                Vergleich starten
+                Jetzt vergleichen
               </Button>
             </nav>
           </div>
@@ -125,7 +125,7 @@ export default function UeberUnsPage() {
       <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            SmartFinanz: Finanzkompetenz seit 10 Jahren
+            SmartFinanz Unser-Vergleichsportal.de: Finanzkompetenz und Transparenz
           </h2>
           <p className="text-sm sm:text-base text-green-100 mb-6 max-w-2xl mx-auto">
             Mit uns sparen Sie Zeit, Geld und Stress. Überzeugen Sie sich selbst von unseren unabhängigen Finanzvergleichen!
@@ -144,7 +144,7 @@ export default function UeberUnsPage() {
             Ohne Versicherungen, Banking oder Trading funktioniert kein modernes Leben. Doch die Wahl der richtigen Produkte wird oft aufgeschoben – mit schlechtem Gewissen. SmartFinanz macht es Ihnen leicht und öffnet den Zugang zu komplexen Themen.
           </p>
           <p className="text-gray-600 mb-8">
-            Profitieren Sie von unserer Expertise! Seit 10 Jahren führen wir Sie zielsicher und nutzerfreundlich durch den Finanzdschungel – von Versicherungen bis Trading. Mit einem Sparpotenzial von bis zu 1.000 € jährlich überlassen Sie uns die Recherchen und genießen Ihre Freizeit.
+            Profitieren Sie von unserer Expertise! Seit Jahren führen wir Sie zielsicher und nutzerfreundlich durch den Finanzdschungel – von Versicherungen bis Trading. Mit einem Sparpotenzial von bis zu 1.000 € jährlich überlassen Sie uns die Recherchen und genießen Ihre Freizeit.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Badge variant="secondary" className="bg-white border text-green-600">
@@ -175,7 +175,7 @@ export default function UeberUnsPage() {
             </div>
           </div>
           <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 mt-6" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
-            Jetzt starten
+            Jetzt vergleichen
           </Button>
         </div>
       </section>
@@ -190,10 +190,10 @@ export default function UeberUnsPage() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Sophie Müller</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Sophie Bentler</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                <p className="mb-2">Seit 2018 bei uns, unterstützt sie Sie mit 10 Jahren Erfahrung in Versicherungen und schafft klare Lösungen.</p>
+                <p className="mb-2">Seit 2023 bei uns, unterstützt sie Sie mit Ihrer Erfahrung in Versicherungen und schafft klare Lösungen.</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
@@ -201,15 +201,15 @@ export default function UeberUnsPage() {
                 <CardTitle className="text-lg sm:text-xl font-semibold">Thomas Weber</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                <p className="mb-2">Seit 2015 dabei, bringt er 12 Jahre Finanz-Expertise für Ihre finanziellen Pläne ein.</p>
+                <p className="mb-2">Seit Anfang an dabei, bringt er Finanz-Expertise für Ihre finanziellen Pläne ein.</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Julia Schmidt</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Julia Kleins</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                <p className="mb-2">Seit 2020 im Team, kennt sie als Tierversicherungs-Expertin die Bedürfnisse Ihrer Haustiere.</p>
+                <p className="mb-2">Seit 2024 im Team, kennt sie als Tierversicherungs-Expertin die Bedürfnisse Ihrer Haustiere.</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
@@ -217,15 +217,15 @@ export default function UeberUnsPage() {
                 <CardTitle className="text-lg sm:text-xl font-semibold">David Fischer</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                <p className="mb-2">Seit 2023 dabei, unterstützt er Sie mit 8 Jahren Trading-Erfahrung für erfolgreiche Anlagen.</p>
+                <p className="mb-2">Seit 2023 dabei, unterstützt er Sie mit seiner Trading-Erfahrung für erfolgreiche Anlagen.</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-50 border border-gray-200 rounded-lg">
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-lg sm:text-xl font-semibold">Saskia Schmidt</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-semibold">Asya Schilds</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                <p className="mb-2">Seit 2019 im Team, bringt sie technisches Know-how für Internet- und Mobilfunktarife, angepasst an Ihre Bedürfnisse.</p>
+                <p className="mb-2">Frisch im Team, bringt sie technisches Know-how für Internet- und Mobilfunktarife, angepasst an Ihre Bedürfnisse.</p>
               </CardContent>
             </Card>
           </div>
@@ -261,7 +261,7 @@ export default function UeberUnsPage() {
             <li>Für uns ist dies die Basis für einen transparenten, kundenorientierten Service.</li>
           </ul>
           <p className="text-gray-600">
-            Unsere Vision seit 10 Jahren: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über uns. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
+            Unsere Vision: Sie sollen sich bei uns wohlfühlen, egal ob Sie Online-Vergleiche kennen oder nicht. Wir arbeiten mit externen Partnern für die Vermittlung; der Abschluss erfolgt nicht direkt über uns. Mehr dazu unter <Link href="/datenschutz" className="underline hover:text-green-600">Datenschutz</Link>.
           </p>
         </div>
       </section>
