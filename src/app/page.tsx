@@ -469,7 +469,7 @@ export default function Home() {
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Unsere Experten haben 500+ Finanzprodukte recherchiert, damit Sie es nicht tun müssen.</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ganz einfach die Top-Angebote 2025 vergleichen und sofort sparen</h2>
             <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} aria-label="Beste Finanzprodukte ansehen">
               Jetzt vergleichen
             </Button>
@@ -480,7 +480,7 @@ export default function Home() {
         <section className="py-8 sm:py-12 bg-white" id="search-section">
           <div className="container mx-auto px-4">
             <div className="max-w-xl sm:max-w-2xl mx-auto">
-              <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das perfekte Angebot</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das passende Angebot</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" aria-hidden="true" />
                 <Input
