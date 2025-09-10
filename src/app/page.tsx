@@ -274,7 +274,7 @@ export default function Home() {
               <SmartFinanzLogo className="text-2xl text-gray-900" />
             </div>
             <button
-              className="flex items-center justify-center"
+              className="sm:hidden flex items-center justify-center"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Menü öffnen/schließen"
             >
@@ -282,9 +282,9 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile und Desktop Menü */}
+          {/* Mobile Menü */}
           {mobileMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
+            <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
               <nav className="px-4 py-4 space-y-4" aria-label="Menü">
                 <div>
                   <h2 className="font-semibold mb-3 text-gray-900">Finanzprodukte</h2>
@@ -513,128 +513,7 @@ export default function Home() {
           )}
         </header>
 
-        {/* Hero-Bereich */}
-        <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
-          <div className="container mx-auto">
-            <div className="max-w-6xl mx-auto text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 leading-tight">
-                Sicher entscheiden und sparen – dein zuverlässiges Vergleichsportal für Finanzen & Co.
-              </h1>
-              <p className="text-sm sm:text-base text-green-100 mb-4 sm:mb-6 max-w-xl mx-auto">
-                Tarifchaos war gestern. Jetzt Anbieter finden, Preise checken & entspannt sparen – alles auf einen Klick.
-              </p>
-
-              {/* Interaktives Widget - Erweitert mit 12 Kategorien */}
-              <div className="bg-white rounded-lg p-4 sm:p-6 text-gray-900 max-w-4xl mx-auto">
-                <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">
-                  Nach welchem Produkt oder Service suchen Sie?
-                </h2>
-
-                {/* Grid für 12 Buttons - responsive Layout */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-4">
-                  <Button
-                    variant={selectedProduct === "versicherung" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("versicherung"); window.location.href = "/versicherungen"; }}
-                    aria-label="Versicherungen vergleichen"
-                  >
-                    Versicherung
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "banking" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("banking"); window.location.href = "/banking"; }}
-                    aria-label="Banking vergleichen"
-                  >
-                    Banking
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "tierversicherung" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("tierversicherung"); window.location.href = "/tierversicherungen"; }}
-                    aria-label="Tierversicherungen vergleichen"
-                  >
-                    Tierversicherung
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "trading" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("trading"); window.location.href = "/trading"; }}
-                    aria-label="Trading vergleichen"
-                  >
-                    Trading
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "dsl" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("dsl"); window.open("https://www.c24n.de/ducwCtq", "_blank"); }}
-                    aria-label="DSL vergleichen"
-                  >
-                    DSL
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "handytarife" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("handytarife"); window.open("https://www.c24n.de/5R17qbN", "_blank"); }}
-                    aria-label="Handytarife vergleichen"
-                  >
-                    Handytarife
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "oekostrom" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("oekostrom"); window.open("https://www.c24n.de/zxy0WKh", "_blank"); }}
-                    aria-label="Ökostrom vergleichen"
-                  >
-                    Ökostrom
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "gas" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("gas"); window.open("https://www.c24n.de/Uxudvkj", "_blank"); }}
-                    aria-label="Gas vergleichen"
-                  >
-                    Gas
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "reisen" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("reisen"); window.open("https://www.c24n.de/EieKR0E", "_blank"); }}
-                    aria-label="Reisen vergleichen"
-                  >
-                    Reisen
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "strom" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("strom"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                    aria-label="Stromvergleich"
-                  >
-                    Strom
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "kreditkarte" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("kreditkarte"); window.open("https://www.c24n.de/RYXPGyh", "_blank"); }}
-                    aria-label="Kreditkarten vergleichen"
-                  >
-                    Kreditkarte
-                  </Button>
-                  <Button
-                    variant={selectedProduct === "mietwagen" ? "default" : "outline"}
-                    className="h-12 sm:h-14 w-full text-center flex items-center justify-center text-xs sm:text-sm px-2"
-                    onClick={() => { setSelectedProduct("mietwagen"); window.open("https://www.c24n.de/FZ9nd0R", "_blank"); }}
-                    aria-label="Mietwagen vergleichen"
-                  >
-                    Mietwagen
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Kategorie-Navigation - ohne Icons, mit allen 12 Kategorien */}
+        {/* Kategorie-Navigation */}
         <section className="bg-gray-50 py-4 border-b" id="versicherungen">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
@@ -1269,6 +1148,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-8 sm:py-12">
           <div className="container mx-auto px-4">
