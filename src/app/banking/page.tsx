@@ -411,8 +411,8 @@ export default function Banking() {
             <ul className="list-disc list-inside text-base mb-6">
               <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
-            <h2 className="text-3xl font-bold mb-6">Sie wollen ein kostenloses Girokonto?</h2>
-            <h3 className="text-lg font-bold mb-2">Darauf sollten Sie achten</h3>
+            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto?</h2>
+            <h3 className="text-lg font-bold mb-2">Darauf sollten Sie achten!</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
             </ul>
@@ -469,7 +469,7 @@ export default function Banking() {
             </div>
             <h2 className="text-3xl font-bold mb-6">Sie möchten eine kostenlose Kreditkarte ohne Jahresgebühr?</h2>
             <ul className="list-disc list-inside text-base mb-6">
-              <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
+              <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. In Unseren Top-Empfehlungen finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">💳 Visa/Mastercard klassisch</h3>
             <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
