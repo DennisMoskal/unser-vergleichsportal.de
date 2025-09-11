@@ -370,7 +370,7 @@ export default function Banking() {
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Die besten Girokonto und Banking Anbieter im Vergleich 2025</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Girokonto und Kredite im Vergleich 09/2025</h1>
             <p className="text-base mb-6">
               Finden Sie das passende Girokonto und den richtigen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
