@@ -368,7 +368,7 @@ export default function Banking() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-6">Girokonto und Kredite im Vergleich 09/2025</h1>
             <p className="text-base mb-6">
-              Finden Sie das passende Girokonto und den richtigen Kredit. Vergleichen Sie über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
+              Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
           </div>
         </div>
@@ -378,7 +378,7 @@ export default function Banking() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mt-2 text-2xl font-bold">
-              Sie möchten Vermögen bilden?
+              Sie möchten nicht nur sparen sondern Vermögen bilden?
             </h2>
             <div className="mt-3 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
@@ -387,7 +387,7 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  Jetzt Broker vergleichen <ArrowRight className="ml-2 h-5 w-5" />
+                  Jetzt Depots vergleichen <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
