@@ -491,6 +491,228 @@ export default function Versicherungen() {
         </div>
       </section>
 
+      {/* Tierversicherung CTA-Box */}
+      <section className="py-6 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="bg-green-50 border border-green-200 rounded-xl p-5">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-green-800">
+                  Sie möchten zusätzlich Ihre Haustiere absichern – Tierarzt- &amp; OP-Kosten im Griff
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700">
+                  Von Basis bis OP-Schutz: Vergleichen Sie Tarife für Hunde &amp; Katzen – schnell, transparent und 100% online.
+                </p>
+              </div>
+              <Link
+                href="/tierversicherungen"
+                aria-label="Tierversicherung vergleichen – Schutz für Hund & Katze"
+                title="Tierversicherung vergleichen – Schutz für Hund & Katze"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Zu den Tierversicherungen
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* E-Bike-Versicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte.
+              Besonders für teure E-Bikes ist eine Absicherung essenziell, um hohe Reparatur- oder Ersatzkosten zu vermeiden. Mit Anbietern wie hepster
+              erhalten Sie flexible Tarife ohne Selbstbeteiligung und Altersbeschränkung, die sich an Ihren Bedarf anpassen.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine E-Bike-Versicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Diebstahl, auch bei unterwegs abgestellten E-Bikes.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Abdeckung von Reparaturkosten bei Unfällen oder Vandalismus.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Keine Selbstbeteiligung für geringere Eigenkosten.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Laufzeiten im Monats- oder Jahresabo.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">Um die passende <strong>E-Bike-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass der Wert Ihres E-Bikes vollständig abgedeckt ist.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Diebstahl, Unfallschäden und Batterie-Defekte eingeschlossen sind.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Flexibilität</strong>: Wählen Sie Tarife mit kurzen Laufzeiten für saisonale Nutzung.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie hepster sind Trusted Shops zertifiziert und punkten mit Top-Bewertungen.</span></li>
+            </ul>
+            <p className="mb-6">
+              Mit der hepster E-Bike-Versicherung sichern Sie Ihr E-Bike einfach online ab. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie die
+              Versicherungsleistungen an und profitieren Sie von 100% digitaler Verwaltung. Starten Sie jetzt und schützen Sie Ihr E-Bike optimal!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt hepster E-Bike-Versicherung abschließen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reiseversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob
+              Urlaub, Geschäftsreise oder Work & Travel – mit TravelSecure finden Sie maßgeschneiderte Tarife für Einzelpersonen, Familien, Gruppen oder
+              junge Reisende. TravelSecure ist mehrfacher Testsieger bei Stiftung Warentest (01/2025, Note 1,4).
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Reiseversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Stornokosten bei Reiseabbruch oder -rücktritt.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Absicherung von Krankheitskosten im Ausland, inkl. Rücktransport.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Spezialtarife für Work & Travel, Au-Pair, Studenten oder Gruppen.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Jahresreiseversicherung für Vielreisende ohne Selbstbeteiligung.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">Um die passende <strong>Reiseversicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Reiserücktritt, Reiseabbruch, Auslandskrankenversicherung oder Gepäckschutz enthalten sind.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Reisedauer</strong>: Wählen Sie Tarife für Kurzreisen (bis 56 Tage) oder Langzeitreisen (bis 365 Tage).</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Selbstbeteiligung</strong>: Entscheiden Sie sich für Tarife ohne Selbstbehalt für maximale Kostensicherheit.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: TravelSecure punktet mit eKomi 4,3/5 und Focus Money „Beste Kundenhotline 2024“.</span></li>
+            </ul>
+            <p className="mb-6">
+              Mit der TravelSecure Reiseversicherung sichern Sie Ihre Reisen einfach online ab. Ob Jahresreiseversicherung Reisekarte4you oder Spezialtarife
+              für Gruppen und junge Reisende – TravelSecure bietet flexible Lösungen für jeden Reiseanlass. Starten Sie jetzt und reisen Sie sorgenfrei!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt TravelSecure Reiseversicherung abschließen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Wohngebäudeversicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Wohngebäudeversicherung</strong> ist für Hausbesitzer unverzichtbar, um Ihr Eigentum vor Schäden durch Feuer, Sturm, Hagel,
+              Überschwemmung oder Vandalismus zu schützen. Sie deckt Reparatur-, Instandsetzungs- oder Wiederaufbaukosten für Ihr Haus und fest
+              installierte Elemente wie Heizungsanlagen oder Einbauküchen ab. Mit einem <strong>Vergleich Wohngebäudeversicherung</strong> auf Plattformen wie
+              Tarifcheck finden Sie maßgeschneiderte Tarife, die Ihren Bedürfnissen entsprechen und bis zu 500€ jährlich sparen können.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Wohngebäudeversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Elementarschäden wie Überschwemmungen oder Sturm.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Absicherung von Reparaturkosten bei Leitungswasser- oder Feuerschäden.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Bausteine für individuelle Bedürfnisse, z. B. Photovoltaik oder Vandalismus.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Kostenloser und unverbindlicher Vergleich für optimale Tarife.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">Um die richtige <strong>Gebäudeversicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass die Versicherung den Wiederaufbauwert Ihres Hauses abdeckt.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Risiken</strong>: Wählen Sie Bausteine, die relevante Gefahren wie Elementarschäden oder Vandalismus abdecken.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Gleitender Neuwert</strong>: Nutzen Sie die gleitende Neuwertversicherung, um den Wert Ihres Hauses aktuell zu halten.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie Tarifcheck punkten mit Top-Bewertungen (z. B. Handelsblatt 09/2024).</span></li>
+            </ul>
+            <p className="mb-6">
+              Mit Tarifcheck Wohngebäudeversicherung vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres
+              Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie
+              jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt Wohngebäudeversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Krankenzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Krankenzusatzversicherung</strong> ergänzt Ihre gesetzliche Krankenversicherung und bietet zusätzlichen Schutz für Leistungen, die
+              nicht oder nur teilweise abgedeckt sind. Dazu gehören Behandlungen wie <strong>Chefarztbehandlung</strong>, <strong>Einzelzimmer im Krankenhaus</strong> oder
+              <strong> alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong>
+              interessant, die Zuschüsse für Sehhilfen bietet.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Krankenzusatzversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Kostenerstattung für Heilpraktikerbehandlungen und alternative Medizin.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zuschüsse für Sehhilfen, Hörgeräte oder Lasik-Operationen.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zugang zu exklusiven Krankenhausleistungen wie Chefarztbehandlung.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Tarife ohne lange Wartezeiten.</span></li>
+            </ul>
+            <p className="mb-6">
+              Anbieter wie HanseMerkur Zusatzkrankenversicherung bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer
+              <strong> Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt HanseMerkur Krankenzusatzversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Zahnzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder
+              <strong> professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was
+              eine <strong>Zahnzusatzversicherung für Implantate</strong> oder <strong>Zahnprophylaxe</strong> besonders attraktiv macht.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Vorteile einer Zahnzusatzversicherung</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Bis zu 100% Kostenerstattung für Zahnersatz und Implantate.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zuschüsse für professionelle Zahnreinigung und Vorsorge.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Keine oder kurze Wartezeiten für sofortigen Schutz.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Transparente Tarife mit einfacher Online-Verwaltung.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Wie wähle ich die richtige Zahnzusatzversicherung?</h3>
+            <p className="mb-4">Achten Sie auf folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Implantate, Inlays oder Prophylaxe abgedeckt sind.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Wartezeiten</strong>: Wählen Sie Tarife ohne Wartezeit für schnellen Schutz.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kostenerstattung</strong>: Tarife mit hohen Erstattungssätzen sparen Ihnen langfristig Geld.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie HanseMerkur punkten mit Top-Bewertungen (z. B. Stiftung Warentest 07/2025).</span></li>
+            </ul>
+            <p className="mb-6">
+              Die HanseMerkur Zahnzusatzversicherung bietet umfassenden Schutz ohne Wartezeit und bis zu 100% Kostenerstattung für Zahnersatz. Vergleichen Sie
+              jetzt und sichern Sie sich den besten Tarif!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt HanseMerkur Zahnzusatzversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
