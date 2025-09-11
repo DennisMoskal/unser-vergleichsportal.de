@@ -480,9 +480,6 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger Versicherungen</h2>
-        </div>
-
-        <div className="container mx-auto px-4">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -529,7 +526,7 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* OPTION 3 – Tierversicherung CTA-Box (zwischen Anbieter-Grid und Detail-Sektionen) */}
+      {/* Tierversicherung CTA-Box */}
       <section className="py-6 bg-white">
         <div className="container mx-auto px-4">
           <div className="bg-green-50 border border-green-200 rounded-xl p-5">
@@ -715,7 +712,7 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h1>
-        <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder
               <strong> professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was
