@@ -509,8 +509,8 @@ export default function Banking() {
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Kredit online beantragen - Schnell & günstig finanzieren</h2>
-            <h3 className="text-lg font-bold mb-2">Kredit Vergleich 2025: Die besten Konditionen</h3>
+            <h2 className="text-3xl font-bold mb-6">Kredit online berechnen lassen - Schnell & günstig finanzieren</h2>
+            <h3 className="text-lg font-bold mb-2">Für Ihre Wünsche den passenden Kredit mit den besten Konditionen</h3>
             <h3 className="text-lg font-bold mb-2">Ratenkredit</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Für Anschaffungen von 1.000€ bis 120.000€</li>
