@@ -31,7 +31,6 @@ const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("versicherungen")
 
-  // Funktion zum Scrollen zu einem Abschnitt und Setzen der aktiven Kategorie
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
@@ -40,9 +39,8 @@ const Header: React.FC = () => {
     }
   }
 
-  // Hash-Änderung verarbeiten, wenn die Seite geladen wird
   useEffect(() => {
-    const hash = window.location.hash.substring(1) // Entferne das '#' aus dem Hash
+    const hash = window.location.hash.substring(1)
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
@@ -67,9 +65,9 @@ const Header: React.FC = () => {
         {/* Mobile Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-4 py-4 space-y-4" aria-label="Mobile Menü">
+            <nav className="px-4 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold text-2xl mb-3">Finanzprodukte</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-center">Finanzprodukte</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -80,7 +78,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -94,7 +92,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3">Weitere Produkte</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-center">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -108,7 +106,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -132,7 +130,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -147,7 +145,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3">Unternehmen</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-center">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -158,7 +156,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -172,7 +170,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3">Rechtliches</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-center">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -183,7 +181,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -197,7 +195,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <Button
-                className="w-full bg-green-600 text-white font-medium text-base py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                className="w-full bg-green-600 text-white font-medium text-base py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 rounded-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Startseite
@@ -229,7 +227,7 @@ const Header: React.FC = () => {
                 {isInternal ? (
                   <Link
                     href={url}
-                    className="block px-2 sm:px-4 py-1 sm:py-2 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`Zu ${label} navigieren`}
                   >
@@ -240,7 +238,7 @@ const Header: React.FC = () => {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-2 sm:px-4 py-1 sm:py-2 font-medium transition-all duration-300 ease-in-out text-base hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
@@ -354,7 +352,6 @@ export default function Banking() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Meta-Tags für SEO */}
       <Head>
         <title>Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</title>
         <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
@@ -366,7 +363,6 @@ export default function Banking() {
 
       <Header />
 
-      {/* Einführungsabschnitt (Dark Green) */}
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -378,7 +374,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Button Section (White) */}
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -386,7 +381,7 @@ export default function Banking() {
               Sie möchten Vermögen bilden?
             </h2>
             <div className="mt-3 flex justify-center">
-              <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
@@ -400,7 +395,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Tipps zur Auswahl */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
@@ -440,7 +434,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Tarife vergleichen
                 </Button>
               </a>
@@ -468,7 +462,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt kostenloses Konto eröffnen
                 </Button>
               </a>
@@ -510,7 +504,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kreditkarte vergleichen
                 </Button>
               </a>
@@ -538,7 +532,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kredit berechnen
                 </Button>
               </a>
@@ -547,14 +541,13 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Anbieterübersicht */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB") && (
+                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
                   </Badge>
@@ -590,7 +583,7 @@ export default function Banking() {
                     target={provider.url.startsWith('http') ? '_blank' : '_self'}
                     rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
                   >
-                    <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
+                    <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
                       Jetzt abschließen*
                     </Button>
                   </a>
@@ -606,7 +599,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Detaillierter Banking-Vergleich */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-left">
@@ -633,7 +625,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Baufinanzierung berechnen
                 </Button>
               </a>
@@ -642,7 +634,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Online Banking Guide */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
@@ -686,7 +677,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Online Banking starten
                 </Button>
               </a>
@@ -695,7 +686,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Kredit wechseln & Depot eröffnen */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
@@ -719,7 +709,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kredit umschulden
                 </Button>
               </a>
@@ -743,7 +733,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Depot eröffnen
                 </Button>
               </a>
@@ -768,7 +758,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Kreditkarte ohne Jahresgebühr Sektion */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
@@ -809,7 +798,7 @@ export default function Banking() {
                 target="_blank" 
                 rel="sponsored"
               >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kreditkarte vergleichen
                 </Button>
               </a>
@@ -845,7 +834,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
@@ -860,7 +848,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/banking" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Banking"
                   >
                     Banking
@@ -869,7 +857,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/tierversicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Haustierversicherung"
                   >
                     Haustierversicherung
@@ -878,7 +866,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/trading" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Trading"
                   >
                     Trading
@@ -887,7 +875,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/versicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Versicherungen"
                   >
                     Versicherungen
@@ -904,7 +892,7 @@ export default function Banking() {
                       href="https://www.c24n.de/ducwCtq" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="DSL Vergleich (externer Link)"
                     >
                       DSL
@@ -915,7 +903,7 @@ export default function Banking() {
                       href="https://www.c24n.de/Uxudvkj" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Gasvergleich (externer Link)"
                     >
                       Gas
@@ -926,7 +914,7 @@ export default function Banking() {
                       href="https://www.c24n.de/5R17qbN" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Handytarif vergleichen (externer Link)"
                     >
                       Handytarif
@@ -937,7 +925,7 @@ export default function Banking() {
                       href="https://www.c24n.de/RYXPGyh" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Kreditkarten vergleichen (externer Link)"
                     >
                       Kreditkarte
@@ -950,7 +938,7 @@ export default function Banking() {
                       href="https://www.c24n.de/FZ9nd0R" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Mietwagen vergleichen (externer Link)"
                     >
                       Mietwagen
@@ -961,7 +949,7 @@ export default function Banking() {
                       href="https://www.c24n.de/zxy0WKh" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Ökostrom vergleichen (externer Link)"
                     >
                       Ökostrom
@@ -972,7 +960,7 @@ export default function Banking() {
                       href="https://www.c24n.de/EieKR0E" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Reise vergleichen (externer Link)"
                     >
                       Reise
@@ -983,7 +971,7 @@ export default function Banking() {
                       href="https://www.c24n.de/RYXPGyh" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                       aria-label="Stromvergleich (externer Link)"
                     >
                       Strom
@@ -998,7 +986,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/karriere" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Karriere"
                   >
                     Karriere
@@ -1007,7 +995,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/kontakt" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Kontakt"
                   >
                     Kontakt
@@ -1016,7 +1004,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/partnerprogramme" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Partnerprogramm"
                   >
                     Partnerprogramm
@@ -1025,7 +1013,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/ueber-uns" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Über uns"
                   >
                     Über uns
@@ -1039,7 +1027,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/agb" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="AGB"
                   >
                     AGB
@@ -1048,7 +1036,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/cookie-richtlinie" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Cookie-Richtlinie"
                   >
                     Cookie-Richtlinie
@@ -1057,7 +1045,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/datenschutz" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Datenschutz"
                   >
                     Datenschutz
@@ -1066,7 +1054,7 @@ export default function Banking() {
                 <li>
                   <Link 
                     href="/impressum" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                     aria-label="Impressum"
                   >
                     Impressum
@@ -1081,7 +1069,7 @@ export default function Banking() {
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
               <Button 
-                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
                 Zurück zur Startseite
               </Button>
