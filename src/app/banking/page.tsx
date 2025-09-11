@@ -194,12 +194,14 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <Button
-                className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 ml-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Startseite
-              </Button>
+              <div className="text-center mt-4">
+                <Button
+                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Startseite
+                </Button>
+              </div>
             </nav>
           </div>
         )}
