@@ -65,9 +65,9 @@ const Header: React.FC = () => {
         {/* Mobile Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-4 py-4 space-y-6" aria-label="Mobile Menü">
+            <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-center">Finanzprodukte</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-center">Weitere Produkte</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -106,7 +106,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -130,7 +130,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-center">Unternehmen</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -170,7 +170,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-center">Rechtliches</h2>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -181,7 +181,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="block px-2 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -195,7 +195,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <Button
-                className="w-full bg-green-600 text-white font-medium text-base py-2 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 rounded-lg"
+                className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 ml-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Startseite
