@@ -256,25 +256,49 @@ const Header: React.FC = () => {
         </div>
       </section>
 
-      {/* Grüner Statistik-Bereich ohne Texte */}
-      <section className="py-12 sm:py-16 bg-green-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
-            <div>
-              <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h2>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h2>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h2>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h2>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Grüner Value-/Trust-Bereich (ersetzt den bisherigen Statistik-Block) */}
+<section className="py-12 sm:py-16 bg-green-600 text-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-5xl mx-auto">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-center leading-tight">
+        unser-vergleichsportal.de – <span className="whitespace-nowrap">für bessere Entscheidungen</span>
+      </h2>
+
+      <ul className="mt-6 sm:mt-8 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Ø <strong className="font-semibold">350 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            <strong className="font-semibold">4,8★</strong> aus echten Kundenstimmen
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
     </>
   )
 }
