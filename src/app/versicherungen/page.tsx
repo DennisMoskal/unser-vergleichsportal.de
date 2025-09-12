@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X } from "lucide-react"
+import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -355,10 +355,7 @@ export default function Versicherungen() {
                       <Link
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
+                        onClick={() => setMobileMenuOpen(false)}
                         aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
@@ -383,10 +380,7 @@ export default function Versicherungen() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                          onClick={() => {
-                            setMobileMenuOpen(false)
-                            setActiveCategory(key)
-                          }}
+                          onClick={() => setMobileMenuOpen(false)}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
                           {label}
@@ -407,10 +401,7 @@ export default function Versicherungen() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                          onClick={() => {
-                            setMobileMenuOpen(false)
-                            setActiveCategory(key)
-                          }}
+                          onClick={() => setMobileMenuOpen(false)}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
                           {label}
@@ -433,10 +424,7 @@ export default function Versicherungen() {
                       <Link
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
+                        onClick={() => setMobileMenuOpen(false)}
                         aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
@@ -458,10 +446,7 @@ export default function Versicherungen() {
                       <Link
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
+                        onClick={() => setMobileMenuOpen(false)}
                         aria-label={`Zu ${label} navigieren`}
                       >
                         {label}
@@ -505,7 +490,7 @@ export default function Versicherungen() {
                   <Link
                     href={url}
                     className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => setActiveCategory(key)}
+                    onClick={() => {}}
                     aria-label={`Zu ${label} navigieren`}
                   >
                     {label}
@@ -516,7 +501,7 @@ export default function Versicherungen() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => setActiveCategory(key)}
+                    onClick={() => {}}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
                     {label}
@@ -531,10 +516,19 @@ export default function Versicherungen() {
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Girokonto und Kredite im Vergleich 09/2025</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Versicherungen Vergleich 09/2025</h1>
             <p className="text-base mb-6">
-              Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
+              Finden Sie die richtige Versicherung.
+              Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und
+              HanseMerkur bieten Ihnen erstklassigen Schutz und attraktive Boni.
             </p>
+            <Button
+              size="lg"
+              className="bg-white text-green-600 hover:bg-gray-100 font-medium"
+              onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
+            >
+              Jetzt Versicherungen vergleichen
+            </Button>
           </div>
         </div>
       </section>
