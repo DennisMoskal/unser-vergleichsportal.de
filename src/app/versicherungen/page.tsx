@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</div>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</div>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</div>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -170,7 +170,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</div>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -207,24 +207,23 @@ const Header: React.FC = () => {
         )}
       </header>
 
-     {/* Kategorie-Navigation */}
+      {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
-
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
               { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
               { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
               { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
               { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
               { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
               { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24/1fed5b4d-e468-4988-afcb-d6585aa94d9bn.de/RYXPGyh', isInternal: false },
             ].map(({ key, label, url, isInternal }) => (
               <li key={key}>
                 {isInternal ? (
@@ -274,7 +273,10 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
-    url: "https://www.check24.de/versicherungen/"
+    url: "https://www.check24.de/versicherungen/",
+    metaTitle: "CHECK24 Versicherungsvergleich: Testsieger 2025 mit bis zu 50% Ersparnis",
+    metaDescription: "Vergleichen Sie über 300 Versicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 50% mit unseren Testsiegern!",
+    isTopRecommendation: true
   },
   {
     name: "HUK-COBURG",
@@ -292,7 +294,10 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Bis zu 20% Kombirabatt",
     logo: "🚗",
-    url: "https://www.huk.de/versicherungen/"
+    url: "https://www.huk.de/versicherungen/",
+    metaTitle: "HUK-COBURG Versicherungen: Top Kfz-Versicherung und Kombirabatte 2025",
+    metaDescription: "HUK-COBURG bietet Top Kfz-Versicherungen, günstige Tarife und bis zu 20% Kombirabatt. Jetzt Tarife prüfen und sparen!",
+    isTopRecommendation: true
   },
   {
     name: "Allianz",
@@ -310,7 +315,10 @@ const providerData = [
     price: "Bonitätsabhängige Tarife",
     bonus: "Treuebonus für Bestandskunden",
     logo: "🛡️",
-    url: "https://www.allianz.de/versicherungen/"
+    url: "https://www.allianz.de/versicherungen/",
+    metaTitle: "Allianz Versicherungen: Zuverlässiger Schutz für Kfz und Hausrat 2025",
+    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr mit 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
+    isTopRecommendation: true
   },
   {
     name: "CosmosDirekt",
@@ -328,7 +336,10 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
-    url: "https://www.cosmosdirekt.de/versicherungen/"
+    url: "https://www.cosmosdirekt.de/versicherungen/",
+    metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
+    metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
+    isTopRecommendation: true
   },
   {
     name: "ARAG",
@@ -346,219 +357,234 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Bis zu 30% Online-Rabatt",
     logo: "⚖️",
-    url: "https://www.arag.de/versicherungen/"
+    url: "https://www.arag.de/versicherungen/",
+    metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
+    metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat- und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
+    isTopRecommendation: true
   }
 ]
 
 export default function Versicherungen() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  // Top-Empfehlungen zuerst
+  const sortedProviders = [...providerData].sort((a, b) => {
+    if (a.isTopRecommendation && !b.isTopRecommendation) return -1
+    if (!a.isTopRecommendation && b.isTopRecommendation) return 1
+    return 0
+  })
+
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Versicherungsvergleich 2025: Die besten Versicherungen im Test</title>
-        <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Versicherungen. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 50% mit unseren Testsiegern!" />
-        <meta name="keywords" content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, SmartFinanz, Testsieger 2025, Hausratversicherung, Rechtsschutzversicherung" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charSet="UTF-8" />
+        <title>Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat</title>
+        <meta
+          name="description"
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG und Allianz."
+        />
+        <meta
+          name="keywords"
+          content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
+        <meta
+          property="og:description"
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG und Allianz."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
+        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
+        <meta
+          name="twitter:description"
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern."
+        />
+        <meta name="format-detection" content="telephone=no" />
       </Head>
+
+      {/* Schema Markup for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat",
+            description:
+              "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG und Allianz.",
+            url: "https://unser-vergleichsportal.de/versicherungen",
+            keywords: [
+              "Versicherungsvergleich",
+              "Kfz-Versicherung",
+              "Haftpflichtversicherung",
+              "Hausratversicherung",
+              "Rechtsschutzversicherung",
+              "Testsieger 2025"
+            ],
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: sortedProviders.map((provider, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "Product",
+                  name: provider.name,
+                  description: provider.metaDescription,
+                  offers: {
+                    "@type": "Offer",
+                    price: provider.price,
+                    url: provider.url
+                  },
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: provider.rating,
+                    reviewCount: "100"
+                  },
+                  keywords: [
+                    "Versicherungsvergleich",
+                    "Kfz-Versicherung",
+                    "Haftpflichtversicherung",
+                    "Hausratversicherung",
+                    "Rechtsschutzversicherung"
+                  ]
+                }
+              }))
+            }
+          })
+        }}
+      />
 
       <Header />
 
+      {/* Hero */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Versicherungen 2025 | Kfz, Haftpflicht & Hausrat Testsieger</h1>
-            <p className="text-base sm:text-lg mb-8">
-              Wir haben für Sie die besten Versicherungsanbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Versicherungsprodukte kostenlos und sparen Sie bis zu 50% jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat
+            </h1>
+            <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
+              Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
+              Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt und ARAG. Finden Sie die besten Tarife für Kfz,
+              Haftpflicht, Hausrat und Rechtsschutz mit transparenten Bewertungen und attraktiven Boni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-              <a
-                href="https://www.check24.de/versicherungen/"
-                target="_blank"
-                rel="sponsored"
-                className="inline-block"
-              >
-                
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored" className="inline-block">
+                <Button
+                  className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100"
+                >
+                  Jetzt mit CHECK24 vergleichen
+                </Button>
               </a>
-              <a
-                href="https://www.huk.de/versicherungen/kfz-versicherung.html"
-                target="_blank"
-                rel="sponsored"
-                className="inline-block"
-              >
-               
+              <a href="https://www.huk.de/versicherungen/kfz-versicherung.html" target="_blank" rel="sponsored" className="inline-block">
+                <Button
+                  className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100"
+                >
+                  HUK-COBURG Tarife prüfen
+                </Button>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 bg-gray-50">
+      {/* Tipps */}
+      <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie die passende Versicherung</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2">Vergleichen Sie Angebote</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Versicherungen zu finden. Über 300 Angebote von Top-Anbietern wie CHECK24 und HUK-COBURG stehen Ihnen zur Verfügung.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Achten Sie auf Bewertungen</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Unsere Anbieter wie Allianz und ARAG haben Top-Bewertungen (z. B. eKomi 4,8/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Prüfen Sie Leistungen</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte, wie sie z. B. von HUK-COBURG und CosmosDirekt angeboten werden.</li>
-            </ul>
-            <h2 className="text-3xl font-bold mb-6">Kfz-Versicherung?</h2>
-            <h3 className="text-lg font-bold mb-2">Darauf sollten Sie achten!</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Eine gute Kfz-Versicherung bietet umfassenden Schutz ohne versteckte Kosten. Achten Sie auf Rabatte (z. B. für Werkstattbindung) und flexible Zusatzbausteine wie Schutzbrief oder Insassenunfallversicherung.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">💡 Spartipp:</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Kfz-Versicherung Testsieger Eigenschaften</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Günstige Prämien bei guter Schadenquote</li>
-              <li>Kostenloser Schutzbrief bei Unfällen</li>
-              <li>Schneller Schadensservice (24/7)</li>
-              <li>Flexible Zusatzbausteine (z. B. Mallorca-Police)</li>
-              <li>Rabatte für Fahranfänger oder Vielfahrer</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.huk.de/versicherungen/kfz-versicherung.html" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kfz-Versicherung vergleichen
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Haftpflichtversicherung</h2>
-            <h3 className="text-lg font-bold mb-2">Warum wichtig?</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Eine Privathaftpflichtversicherung schützt Sie vor finanziellen Risiken bei Schäden, die Sie anderen zufügen. Sie ist essenziell für jeden Haushalt.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Top-Leistungen:</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Deckt Schäden bis zu 50 Mio. €</li>
-              <li>Schutz bei Schlüsselverlust oder Mietsachschäden</li>
-              <li>Familienabsicherung inklusive</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Wichtige Hinweise:</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Vergleichen Sie jährlich, da Tarife sich ändern</li>
-              <li>Achten Sie auf Ausschlüsse (z. B. berufliche Schäden)</li>
-              <li>Kombination mit Hausrat spart bis zu 20%</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.check24.de/haftpflichtversicherung/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Haftpflicht vergleichen
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Hausratversicherung</h2>
-            <h3 className="text-lg font-bold mb-2">Schutz für Ihr Zuhause</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Schützt Ihr Hab und Gut bei Einbruch, Feuer oder Wasserschäden. Ideal für Mieter und Eigentümer.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Neuwertentschädigung bei Totalschaden</li>
-              <li>Schutz bei Elementarschäden (z. B. Sturm, Hagel)</li>
-              <li>Fahrraddiebstahl optional einschließbar</li>
-              <li>Schnelle Schadenmeldung per App</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.check24.de/hausratversicherung/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Hausratversicherung vergleichen
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Risikolebensversicherung</h2>
-            <h3 className="text-lg font-bold mb-2">Familie absichern</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Schützt Ihre Liebsten finanziell im Todesfall. Besonders wichtig für Familien mit Kindern oder Hypotheken.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Flexible Versicherungssummen (50.000€–1 Mio. €)</li>
-              <li>Günstige Beiträge für Nichtraucher</li>
-              <li>Schneller Abschluss ohne Gesundheitsprüfung (bei kleinen Summen)</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.cosmosdirekt.de/risikolebensversicherung/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Risikoleben vergleichen
-                </Button>
-              </a>
-            </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
+            So finden Sie die beste Versicherung
+          </h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Vergleichen Sie Angebote</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Nutzen Sie unseren kostenlosen Vergleich, um über 300 Angebote von Top-Anbietern wie CHECK24 und HUK-COBURG zu prüfen.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Achten Sie auf Bewertungen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Vertrauen Sie auf verifizierte Kundenbewertungen (z. B. eKomi 4,8/5 für Allianz und ARAG) für Ihre Entscheidung.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Prüfen Sie Leistungen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte bei HUK-COBURG und CosmosDirekt.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
+      {/* Anbieterübersicht */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Versicherungsvergleich 2025</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            Testsieger Versicherungsvergleich 2025
+          </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.map((provider) => (
-              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "CHECK24" || provider.name === "HUK-COBURG" || provider.name === "Allianz" || provider.name === "CosmosDirekt" || provider.name === "ARAG") && (
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
-                    Top Empfehlung
-                  </Badge>
+            {sortedProviders.map((provider) => (
+              <Card
+                key={provider.name}
+                className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative"
+              >
+                {provider.isTopRecommendation && (
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
                 )}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
-                  <CardTitle className="text-xl font-bold">{provider.name}</CardTitle>
+                  <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 ${
+                          i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
+                        }`}
                       />
                     ))}
-                    <span className="ml-2 text-base font-medium text-gray-600">{provider.rating}</span>
+                    <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
                   </div>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-1">
                   <div className="text-center border-b pb-2 mb-4">
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                    <Badge variant="outline" className="mt-1 border-green-200 text-base text-green-700">{provider.bonus}</Badge>
+                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">
+                      {provider.bonus}
+                    </Badge>
                   </div>
                   <ul className="space-y-1 flex-1 overflow-auto">
                     {provider.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-base">
+                      <li key={i} className="flex items-center text-sm">
                         <Check className="mr-2 h-4 w-4 text-green-600" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <a 
-                    href={provider.url} 
-                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                    rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
+                  <a
+                    href={provider.url}
+                    target={provider.url.startsWith("http") ? "_blank" : "_self"}
+                    rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
-                    <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
+                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                       Jetzt abschließen*
                     </Button>
                   </a>
@@ -566,65 +592,171 @@ export default function Versicherungen() {
               </Card>
             ))}
           </div>
-          <div className="mt-8 text-center text-base text-gray-600 p-4">
-            <p>
-              *Wir erhalten eine Provision für Käufe über diese Links.
-            </p>
+          <div className="mt-8 text-center text-xs sm:text-sm text-gray-600 p-4">
+            <p>*Wir erhalten eine Provision für Käufe über diese Links.</p>
           </div>
         </div>
       </section>
 
+      {/* Guide */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            Ihr Weg zur besten Versicherung 2025
+          </h2>
           <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-3xl font-bold mb-6">Rechtsschutzversicherung - Ihre Rechte schützen</h2>
-            <h3 className="text-lg font-bold mb-2">Warum wichtig?</h3>
-            <ul className="list-disc text-base mb-6">
-              <li>Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten.</li>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Günstige Kfz-Versicherung mit maximalem Schutz
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine gute Kfz-Versicherung bietet umfassenden Schutz ohne versteckte Kosten. Achten Sie auf Rabatte (z. B. für Werkstattbindung) und flexible Zusatzbausteine wie Schutzbrief oder Insassenunfallversicherung.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Günstige Prämien bei guter Schadenquote
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kostenloser Schutzbrief bei Unfällen
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schneller Schadensservice (24/7)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Zusatzbausteine (z. B. Mallorca-Police)
+              </li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
-            <ul className="list-disc text-base mb-6">
-              <li>Deckt Kosten bis zu 1 Mio. € pro Fall</li>
-              <li>Kostenlose Erstberatung durch Anwälte</li>
-              <li>Schutz bei Mietstreitigkeiten oder Nachbarschaftsstreit</li>
-              <li>Online-Schadenmeldung und schneller Service</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">💡 Spartipp:</h3>
-            <ul className="list-disc text-base mb-6">
-              <li>Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit anderen Versicherungen, um Rabatte zu sichern.</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.arag.de/rechtsschutzversicherung/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Rechtsschutz vergleichen
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.huk.de/versicherungen/kfz-versicherung.html" target="_blank" rel="sponsored">
+                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Kfz-Versicherung vergleichen
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Häufige Fragen zu Versicherungen</h2>
-            <h3 className="text-lg font-bold mb-2">Wie wechsle ich meine Versicherung?</h3>
-            <ul className="list-disc text-base mb-6">
-              <li>Prüfen Sie die Kündigungsfrist (meist 1–3 Monate). Nutzen Sie unseren Vergleich, um einen besseren Tarif zu finden, und lassen Sie den neuen Anbieter die Kündigung übernehmen.</li>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Privathaftpflichtversicherung für jeden Haushalt
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Privathaftpflichtversicherung schützt Sie vor finanziellen Risiken bei Schäden, die Sie anderen zufügen. Sie ist essenziell für jeden Haushalt.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Deckt Schäden bis zu 50 Mio. €
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz bei Schlüsselverlust oder Mietsachschäden
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Familienabsicherung inklusive
+              </li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Was kostet eine Versicherung?</h3>
-            <ul className="list-disc text-base mb-6">
-              <li>Kosten variieren je nach Versicherungstyp. Haftpflicht ab 30€/Jahr, Kfz ab 150€/Jahr, Hausrat ab 50€/Jahr. Regelmäßiger Vergleich spart Geld.</li>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Wichtiger Hinweis:</strong> Vergleichen Sie jährlich, da Tarife sich ändern. Kombination mit Hausrat spart bis zu 20%.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="sponsored">
+                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Haftpflichtversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Günstige Hausratversicherung für Mieter und Eigentümer
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Hausratversicherung schützt Ihr Hab und Gut bei Einbruch, Feuer oder Wasserschäden. Ideal für Mieter und Eigentümer.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Neuwertentschädigung bei Totalschaden
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz bei Elementarschäden (z. B. Sturm, Hagel)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Fahrraddiebstahl optional einschließbar
+              </li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Sind Online-Abschlüsse sicher?</h3>
-            <ul className="list-disc text-base mb-6">
-              <li>Ja, mit 256-Bit-SSL-Verschlüsselung und VideoIdent sind Online-Abschlüsse sicher und bequem.</li>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Hausratversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Risikolebensversicherung für junge Familien
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Risikolebensversicherung schützt Ihre Liebsten finanziell im Todesfall. Besonders wichtig für Familien mit Kindern oder Hypotheken.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Versicherungssummen (50.000€–1 Mio. €)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Günstige Beiträge für Nichtraucher
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schneller Abschluss ohne Gesundheitsprüfung (bei kleinen Summen)
+              </li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.check24.de/versicherungen/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Versicherungen vergleichen
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
+                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Risikolebensversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Rechtsschutzversicherung für Miet- und Verkehrsstreitigkeiten
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Deckt Kosten bis zu 1 Mio. € pro Fall
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kostenlose Erstberatung durch Anwälte
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz bei Mietstreitigkeiten oder Nachbarschaftsstreit
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
+                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Rechtsschutzversicherung vergleichen
                 </Button>
               </a>
             </div>
@@ -632,12 +764,91 @@ export default function Versicherungen() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            Häufige Fragen zu Versicherungen
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <h3 className="text-lg font-bold">Wie wechsle ich meine Versicherung?</h3>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Prüfen Sie die Kündigungsfrist (meist 1–3 Monate). Nutzen Sie unseren Vergleich, um einen besseren Tarif zu finden, und lassen Sie den neuen Anbieter die Kündigung übernehmen.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <h3 className="text-lg font-bold">Was kostet eine Versicherung?</h3>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Kosten variieren: Haftpflicht ab 30€/Jahr, Kfz ab 150€/Jahr, Hausrat ab 50€/Jahr. Regelmäßiger Vergleich spart Geld.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <h3 className="text-lg font-bold">Sind Online-Abschlüsse sicher?</h3>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Ja, mit 256-Bit-SSL-Verschlüsselung und VideoIdent sind Online-Abschlüsse sicher und bequem.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <h3 className="text-lg font-bold">Welche Versicherung für junge Familien?</h3>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Risikolebensversicherung (z. B. CosmosDirekt) und Haftpflicht sind ideal, um Familie und Haushalt abzusichern.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <h3 className="text-lg font-bold">Was deckt eine Hausratversicherung?</h3>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Schutz bei Einbruch, Feuer, Wasserschäden und optional Fahrraddiebstahl. Neuwertentschädigung inklusive.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <h3 className="text-lg font-bold">Warum Rechtsschutzversicherung?</h3>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Deckt Anwalts- und Gerichtskosten bei Miet-, Arbeits- oder Verkehrsstreitigkeiten. ARAG bietet bis zu 1 Mio. € Schutz.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-8 text-center">
+            <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
+              <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                Jetzt Versicherungen vergleichen
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt vergleichen | einfach sparen</h2>
-            <p className="text-base sm:text-lg">
-              Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Schnell und einfach zum besten Versicherungsangebot</h2>
+            <p className="text-sm sm:text-base text-green-100">
+              Finden Sie mit wenigen Klicks die besten Tarife für Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie Zeit und Geld mit unserem kostenlosen Vergleich.
             </p>
           </div>
         </div>
@@ -652,39 +863,39 @@ export default function Versicherungen() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+              <div className="font-semibold mb-3 text-xl">Finanzprodukte</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/banking" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/banking"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Banking"
                   >
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/tierversicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/tierversicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Haustierversicherung"
                   >
                     Haustierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/trading" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/trading"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Trading"
                   >
                     Trading
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/versicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/versicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Versicherungen"
                   >
                     Versicherungen
@@ -693,48 +904,48 @@ export default function Versicherungen() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+              <div className="font-semibold mb-3 text-xl">Weitere Produkte</div>
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/ducwCtq" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/ducwCtq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="DSL Vergleich (externer Link)"
                     >
                       DSL
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/Uxudvkj" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/Uxudvkj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Gasvergleich (externer Link)"
                     >
                       Gas
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/5R17qbN" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/5R17qbN"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Handytarif vergleichen (externer Link)"
                     >
                       Handytarif
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Kreditkarten vergleichen (externer Link)"
                     >
                       Kreditkarte
@@ -743,44 +954,44 @@ export default function Versicherungen() {
                 </ul>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/FZ9nd0R" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/FZ9nd0R"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Mietwagen vergleichen (externer Link)"
                     >
                       Mietwagen
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/zxy0WKh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/zxy0WKh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Ökostrom vergleichen (externer Link)"
                     >
                       Ökostrom
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/EieKR0E" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/EieKR0E"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Reise vergleichen (externer Link)"
                     >
                       Reise
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Stromvergleich (externer Link)"
                     >
                       Strom
@@ -790,39 +1001,39 @@ export default function Versicherungen() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+              <div className="font-semibold mb-3 text-xl">Unternehmen</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/karriere" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/karriere"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Karriere"
                   >
                     Karriere
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/kontakt" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/kontakt"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Kontakt"
                   >
                     Kontakt
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/partnerprogramme" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/partnerprogramme"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Partnerprogramm"
                   >
                     Partnerprogramm
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/ueber-uns" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/ueber-uns"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Über uns"
                   >
                     Über uns
@@ -831,39 +1042,39 @@ export default function Versicherungen() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+              <div className="font-semibold mb-3 text-xl">Rechtliches</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/agb" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/agb"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="AGB"
                   >
                     AGB
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/cookie-richtlinie" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/cookie-richtlinie"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Cookie-Richtlinie"
                   >
                     Cookie-Richtlinie
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/datenschutz" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/datenschutz"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Datenschutz"
                   >
                     Datenschutz
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/impressum" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/impressum"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Impressum"
                   >
                     Impressum
@@ -877,7 +1088,7 @@ export default function Versicherungen() {
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
-              <Button 
+              <Button
                 className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
                 Zurück zur Startseite
