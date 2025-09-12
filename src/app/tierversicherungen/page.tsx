@@ -568,7 +568,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Haustierversicherung Vergleich 09/2025 | Beste Tarife für Hund & Katze</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Haustierversicherung Vergleich 2025 | Beste Tarife für Hund & Katze</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie die passende Haustierversicherung in Unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten Versicherung für umfassenden Schutz Ihres Haustiers.
             </p>
