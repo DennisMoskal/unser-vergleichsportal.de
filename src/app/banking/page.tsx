@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</span>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -170,7 +170,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -211,7 +211,6 @@ const Header: React.FC = () => {
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
-
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
@@ -357,7 +356,7 @@ export default function Banking() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Banking Vergleich 2025: Die besten Girokonten und Kredite im Test</title>
+        <title>Banking Vergleich 2025: Beste Girokonten und Kredite im Test</title>
         <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich mit unseren Testsiegern!" />
         <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
         <meta name="robots" content="index, follow" />
@@ -370,7 +369,7 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank September 2025 | Girokonto, Kredit & Baufinanzierung Testsieger</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Banking Vergleich 2025: Beste Girokonten und Kredite im Test</h1>
             <p className="text-base sm:text-lg mb-8">
               Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
@@ -399,9 +398,7 @@ export default function Banking() {
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mt-2 text-2xl font-bold">
-              Sie möchten nicht nur sparen sondern Vermögen bilden?
-            </h2>
+            <h2 className="mt-2 text-2xl font-bold">Vermögensaufbau durch intelligente Geldanlage</h2>
             <div className="mt-3 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
@@ -419,30 +416,30 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das passende Girokonto und den richtigen Kredit</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
           <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2">Vergleichen Sie Angebote</h3>
+            <h3 className="text-lg font-bold mb-2">Vergleich von Finanzprodukten</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Achten Sie auf Bewertungen</h3>
+            <h3 className="text-lg font-bold mb-2">Kundenbewertungen prüfen</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Prüfen Sie Konditionen</h3>
+            <h3 className="text-lg font-bold mb-2">Konditionen analysieren</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
             </ul>
-            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto?</h2>
-            <h3 className="text-lg font-bold mb-2">Darauf sollten Sie achten!</h3>
+            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto finden</h2>
+            <h3 className="text-lg font-bold mb-2">Wichtige Kriterien für ein kostenloses Girokonto</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">💡 Spartipp:</h3>
+            <h3 className="text-lg font-bold mb-2">Spartipp für Girokonten</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Die besten kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Girokonto Vergleich - Testsieger Eigenschaften</h3>
+            <h3 className="text-lg font-bold mb-2">Eigenschaften der Testsieger-Girokonten</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Bedingungslos kostenlose Kontoführung</li>
               <li>Kostenlose EC- und Kreditkarte</li>
@@ -457,22 +454,22 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Tarife vergleichen
+                  Jetzt Girokonten vergleichen
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Tagesgeld Vergleich lohnt sich!</h2>
-            <h3 className="text-lg font-bold mb-2">📈 Aktuelle Tagesgeld Zinsen 2025</h3>
+            <h2 className="text-3xl font-bold mb-6">Tagesgeldkonto für sichere Geldanlage</h2>
+            <h3 className="text-lg font-bold mb-2">Aktuelle Tagesgeldzinsen 2025</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Die besten Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Top-Anbieter:</h3>
+            <h3 className="text-lg font-bold mb-2">Top-Tagesgeldkonten</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Bis zu 4,00% Zinsen für Neukunden</li>
               <li>100.000€ Einlagensicherung pro Bank</li>
               <li>Täglich verfügbar, keine Kündigung nötig</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Wichtige Hinweise:</h3>
+            <h3 className="text-lg font-bold mb-2">Wichtige Hinweise zu Tagesgeld</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Zinsbindung oft nur 3–12 Monate</li>
               <li>Danach meist niedrigere Bestandskundenzinsen</li>
@@ -485,16 +482,12 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt kostenloses Konto eröffnen
+                  Jetzt Tagesgeldkonto eröffnen
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Sie möchten eine kostenlose Kreditkarte ohne Jahresgebühr?</h2>
-            <ul className="list-disc list-inside text-base mb-6">
-              <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. In Unseren Top-Empfehlungen finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2">💳 Visa/Mastercard klassisch</h3>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
+            <h2 className="text-3xl font-bold mb-6">Kostenlose Kreditkarte ohne Jahresgebühr</h2>
+            <h3 className="text-lg font-bold mb-2">Klassische Visa/Mastercard ohne Gebühren</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Weltweit akzeptiert</li>
               <li>Kostenlose Bargeldabhebung im Ausland</li>
@@ -502,8 +495,7 @@ export default function Banking() {
               <li>Reiseversicherungen inklusive</li>
               <li>0€ Jahresgebühr dauerhaft</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">📱 Modern Digital Cards</h3>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
+            <h3 className="text-lg font-bold mb-2">Moderne digitale Kreditkarten</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Apple Pay / Google Pay ready</li>
               <li>Echtzeit-Benachrichtigungen</li>
@@ -511,8 +503,7 @@ export default function Banking() {
               <li>Virtuelle Kartennummern</li>
               <li>Kostenlos + Cashback möglich</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">✈️ Travel & Bonus Cards</h3>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
+            <h3 className="text-lg font-bold mb-2">Reise- und Bonuskarten</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Meilen oder Punkte sammeln</li>
               <li>Lounge-Zugang an Flughäfen</li>
@@ -527,23 +518,22 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kreditkarte vergleichen
+                  Jetzt Kreditkarten vergleichen
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Kredit online berechnen lassen - Schnell & günstig finanzieren</h2>
-            <h3 className="text-lg font-bold mb-2">Für Ihre Wünsche den passenden Kredit mit den besten Konditionen</h3>
-            <h3 className="text-lg font-bold mb-2">Ratenkredit</h3>
+            <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
+            <h3 className="text-lg font-bold mb-2">Optimaler Ratenkredit für Ihre Wünsche</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Für Anschaffungen von 1.000€ bis 120.000€</li>
               <li>Zinsen ab 0,68% p.a. bei bester Bonität</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Sofortkredit</h3>
+            <h3 className="text-lg font-bold mb-2">Schneller Sofortkredit</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Schnelle Auszahlung binnen 24h möglich</li>
               <li>Digitaler Abschluss mit VideoIdent-Verfahren</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Umschuldung</h3>
+            <h3 className="text-lg font-bold mb-2">Umschuldung für Zinsersparnis</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Bestehende Kredite zusammenfassen</li>
               <li>Bis zu 40% der Zinsen sparen</li>
@@ -565,7 +555,7 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich September 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -624,8 +614,8 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-3xl font-bold mb-6">Baufinanzierung Rechner - Ihren Traum vom Eigenheim verwirklichen</h2>
-            <h3 className="text-lg font-bold mb-2">Baufinanzierung: Das sollten Sie wissen</h3>
+            <h2 className="text-3xl font-bold mb-6">Baufinanzierung für Ihr Eigenheim</h2>
+            <h3 className="text-lg font-bold mb-2">Wichtige Aspekte der Baufinanzierung</h3>
             <ul className="list-disc text-base mb-6">
               <li><strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
               <li><strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
@@ -633,11 +623,11 @@ export default function Banking() {
               <li><strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
               <li><strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Aktuelle Bauzinsen & Trends</h3>
+            <h3 className="text-lg font-bold mb-2">Aktuelle Bauzinsen 2025</h3>
             <ul className="list-disc text-base mb-6">
               <li>Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">💰 Spartipp:</h3>
+            <h3 className="text-lg font-bold mb-2">Spartipp für Baufinanzierung</h3>
             <ul className="list-disc text-base mb-6">
               <li>Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
             </ul>
@@ -658,26 +648,26 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking - Sicher und einfach Bankgeschäfte erledigen</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking: Sicher und bequem</h2>
           <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2">1. Konto eröffnen</h3>
+            <h3 className="text-lg font-bold mb-2">Kontoeröffnung online</h3>
             <ul className="list-disc text-base mb-6">
               <li>Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig – alles bequem von zu Hause.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">2. App herunterladen</h3>
+            <h3 className="text-lg font-bold mb-2">Mobile Banking App</h3>
             <ul className="list-disc text-base mb-6">
               <li>Mobile Banking App installieren. Alle Bankgeschäfte jederzeit und überall per Smartphone erledigen.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">3. Sicher anmelden</h3>
+            <h3 className="text-lg font-bold mb-2">Sicheres Login</h3>
             <ul className="list-disc text-base mb-6">
               <li>Login mit PIN oder Fingerabdruck. Alle Transaktionen durch TAN-Verfahren oder biometrische Freigabe geschützt.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">4. Banking nutzen</h3>
+            <h3 className="text-lg font-bold mb-2">Bankgeschäfte online verwalten</h3>
             <ul className="list-disc text-base mb-6">
               <li>Überweisungen, Daueraufträge, Kontostände prüfen – alles 24/7 verfügbar ohne Öffnungszeiten.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Häufige Fragen zum Online Banking</h3>
-            <h3 className="text-lg font-bold mb-2">Ist Online Banking sicher?</h3>
+            <h2 className="text-3xl font-bold mb-6">Häufige Fragen zum Online Banking</h2>
+            <h3 className="text-lg font-bold mb-2">Wie sicher ist Online Banking?</h3>
             <ul className="list-disc text-base mb-6">
               <li>Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.</li>
             </ul>
@@ -685,7 +675,7 @@ export default function Banking() {
             <ul className="list-disc text-base mb-6">
               <li>pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Kann ich alles online erledigen?</h3>
+            <h3 className="text-lg font-bold mb-2">Können alle Bankgeschäfte online erledigt werden?</h3>
             <ul className="list-disc text-base mb-6">
               <li>95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.</li>
             </ul>
@@ -710,18 +700,18 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit wechseln & Depot eröffnen - Ihre Finanzen optimieren</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit umschulden und Depot eröffnen</h2>
           <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2">💳 Kredit umschulden und sparen</h3>
+            <h3 className="text-lg font-bold mb-2">Kredit umschulden für Ersparnisse</h3>
             <h3 className="text-lg font-bold mb-2">Wann lohnt sich eine Umschuldung?</h3>
             <ul className="list-disc text-base mb-6">
               <li>Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Mögliche Ersparnis:</h3>
+            <h3 className="text-lg font-bold mb-2">Ersparnis durch Umschuldung</h3>
             <ul className="list-disc text-base mb-6">
               <li><strong>Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Tipp:</h3>
+            <h3 className="text-lg font-bold mb-2">Tipp für Umschuldung</h3>
             <ul className="list-disc text-base mb-6">
               <li>Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
             </ul>
@@ -736,16 +726,16 @@ export default function Banking() {
                 </Button>
               </a>
             </div>
-            <h3 className="text-lg font-bold mb-2">📈 Depot eröffnen für Geldanlage</h3>
-            <h3 className="text-lg font-bold mb-2">Warum ein Depot?</h3>
+            <h3 className="text-lg font-bold mb-2">Depot für langfristigen Vermögensaufbau</h3>
+            <h3 className="text-lg font-bold mb-2">Vorteile eines Depots</h3>
             <ul className="list-disc text-base mb-6">
               <li>Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Kostenlose Depots:</h3>
+            <h3 className="text-lg font-bold mb-2">Kostenlose Depotführung</h3>
             <ul className="list-disc text-base mb-6">
               <li>Viele Online-Broker bieten <strong>kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Wichtig:</h3>
+            <h3 className="text-lg font-bold mb-2">Wichtige Hinweise für Depots</h3>
             <ul className="list-disc text-base mb-6">
               <li>Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
             </ul>
@@ -760,15 +750,15 @@ export default function Banking() {
                 </Button>
               </a>
             </div>
-            <h3 className="text-lg font-bold mb-2">✅ Checkliste für optimale Finanzplanung</h3>
-            <h3 className="text-lg font-bold mb-2">Grundausstattung:</h3>
+            <h2 className="text-3xl font-bold mb-6">Checkliste für Ihre Finanzplanung</h2>
+            <h3 className="text-lg font-bold mb-2">Grundausstattung für Finanzen</h3>
             <ul className="list-disc text-base mb-6">
               <li>Kostenloses Girokonto für Alltag</li>
               <li>Tagesgeldkonto für Notreserve (3–6 Monatsgehälter)</li>
               <li>Kreditkarte ohne Jahresgebühr für Reisen</li>
               <li>Dispozinsen unter 7% vereinbaren</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">Vermögensaufbau & Absicherung:</h3>
+            <h3 className="text-lg font-bold mb-2">Vermögensaufbau und Absicherung</h3>
             <ul className="list-disc text-base mb-6">
               <li>ETF-Sparplan für langfristigen Vermögensaufbau</li>
               <li>Depot mit kostenlosen ETF-Sparplänen</li>
@@ -782,13 +772,13 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kreditkarte ohne Jahresgebühr - Die besten kostenlosen Karten 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kostenlose Kreditkarten im Vergleich 2025</h2>
           <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2">Beste kostenlose Kreditkarten finden</h3>
             <ul className="list-disc text-base mb-6">
               <li>Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">💳 Visa/Mastercard klassisch</h3>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
+            <h3 className="text-lg font-bold mb-2">Klassische Visa/Mastercard ohne Gebühren</h3>
             <ul className="list-disc text-base mb-6">
               <li>Weltweit akzeptiert</li>
               <li>Kostenlose Bargeldabhebung im Ausland</li>
@@ -796,8 +786,7 @@ export default function Banking() {
               <li>Reiseversicherungen inklusive</li>
               <li>0€ Jahresgebühr dauerhaft</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">📱 Modern Digital Cards</h3>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
+            <h3 className="text-lg font-bold mb-2">Moderne digitale Kreditkarten</h3>
             <ul className="list-disc text-base mb-6">
               <li>Apple Pay / Google Pay ready</li>
               <li>Echtzeit-Benachrichtigungen</li>
@@ -805,8 +794,7 @@ export default function Banking() {
               <li>Virtuelle Kartennummern</li>
               <li>Kostenlos + Cashback möglich</li>
             </ul>
-            <h3 className="text-lg font-bold mb-2">✈️ Travel & Bonus Cards</h3>
-            <h3 className="text-lg font-bold mb-2">Leistungen:</h3>
+            <h3 className="text-lg font-bold mb-2">Reise- und Bonuskarten</h3>
             <ul className="list-disc text-base mb-6">
               <li>Meilen oder Punkte sammeln</li>
               <li>Lounge-Zugang an Flughäfen</li>
@@ -821,18 +809,18 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kreditkarte vergleichen
+                  Jetzt Kreditkarten vergleichen
                 </Button>
               </a>
             </div>
             <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-orange-800">⚠️ Kreditkarten-Fallen vermeiden</CardTitle>
+                <CardTitle className="text-xl font-bold text-orange-800">Kreditkarten-Fallen vermeiden</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-6 lg:grid-cols-2">
                   <div>
-                    <h3 className="text-lg font-bold mb-2">Versteckte Kosten beachten:</h3>
+                    <h3 className="text-lg font-bold mb-2">Versteckte Kosten vermeiden</h3>
                     <ul className="list-disc text-base space-y-1">
                       <li>Fremdwährungsgebühren (oft 1–2%)</li>
                       <li>Bargeldgebühren auch im Inland</li>
@@ -841,7 +829,7 @@ export default function Banking() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">Smarte Nutzung:</h3>
+                    <h3 className="text-lg font-bold mb-2">Smarte Kreditkartennutzung</h3>
                     <ul className="list-disc text-base space-y-1">
                       <li>Immer per Lastschrift vollständig begleichen</li>
                       <li>Kreditrahmen nicht als Kredit nutzen</li>
@@ -859,7 +847,7 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt vergleichen | einfach sparen</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt Finanzprodukte vergleichen und sparen</h2>
             <p className="text-base sm:text-lg">
               Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
             </p>
@@ -876,7 +864,7 @@ export default function Banking() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+              <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
@@ -917,7 +905,7 @@ export default function Banking() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+              <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
@@ -1014,7 +1002,7 @@ export default function Banking() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+              <span className="font-semibold mb-3 text-xl">Unternehmen</span>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
@@ -1055,7 +1043,7 @@ export default function Banking() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+              <span className="font-semibold mb-3 text-xl">Rechtliches</span>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
