@@ -1049,6 +1049,354 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ Section für bessere SEO */}
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h2>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h3>
+                <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h3>
+                <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h3>
+                <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h3>
+                <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-8 sm:py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+              <div className="col-span-2 md:col-span-1">
+                <div className="flex flex-col items-start mb-4">
+                  <SmartFinanzLogo className="text-xl" />
+                </div>
+              </div>
+              <div>
+                <h2 className="font-semibold mb-3">Finanzprodukte</h2>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>
+                    <Link 
+                      href="/banking" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Banking"
+                    >
+                      Banking
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/tierversicherungen" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Haustierversicherung"
+                    >
+                      Haustierversicherung
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/trading" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Trading"
+                    >
+                      Trading
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/versicherungen" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Versicherungen"
+                    >
+                      Versicherungen
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-semibold mb-3">Weitere Produkte</h2>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/ducwCtq" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="DSL Vergleich (externer Link)"
+                    >
+                      DSL
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/Uxudvkj" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Gasvergleich (externer Link)"
+                    >
+                      Gas
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/5R17qbN" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Handytarif vergleichen (externer Link)"
+                    >
+                      Handytarif
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kreditkarten vergleichen (externer Link)"
+                    >
+                      Kreditkarte
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/FZ9nd0R" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Mietwagen vergleichen (externer Link)"
+                    >
+                      Mietwagen
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/zxy0WKh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Ökostrom vergleichen (externer Link)"
+                    >
+                      Ökostrom
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/EieKR0E" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Reise vergleichen (externer Link)"
+                    >
+                      Reise
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Stromvergleich (externer Link)"
+                    >
+                      Strom
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-semibold mb-3">Unternehmen</h2>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>
+                    <Link 
+                      href="/karriere" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Karriere"
+                    >
+                      Karriere
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/kontakt" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kontakt"
+                    >
+                      Kontakt
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/partnerprogramme" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Partnerprogramm"
+                    >
+                      Partnerprogramm
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/ueber-uns" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Über uns"
+                    >
+                      Über uns
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-semibold mb-3">Rechtliches</h2>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>
+                    <Link 
+                      href="/agb" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="AGB"
+                    >
+                      AGB
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/cookie-richtlinie" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Cookie-Richtlinie"
+                    >
+                      Cookie-Richtlinie
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/datenschutz" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Datenschutz"
+                    >
+                      Datenschutz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/impressum" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Impressum"
+                    >
+                      Impressum
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+              <p className="text-sm text-gray-400 mb-4">
+                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              </p>
+              <Link href="/" aria-label="Zurück zur Startseite">
+                <Button 
+                  className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                >
+                  Zurück zur Startseite
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </footer>
+            
+            {/* Schema.org Markup für SEO */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "SmartFinanz",
+                "url": "https://smartfinanz.de",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://smartfinanz.de/suche?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "100000"
+                },
+                "review": [
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Anna" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                    "reviewBody": "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                  },
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Markus" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "4" },
+                    "reviewBody": "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
+                  },
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Helga" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                    "reviewBody": "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                  },
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Lukas" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                    "reviewBody": "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
+                  }
+                ],
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Wie funktioniert der Vergleich bei SmartFinanz?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Ist der Vergleich wirklich kostenlos?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Welche Kategorien bietet SmartFinanz an?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Wie schnell erhalte ich meine Empfehlungen?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten."
+                    }
+                  }
+                ]
+              })
+            }} />
+          </div>
+        </section>
+
         {/* Statistik-Bereich */}
         <section className="py-12 sm:py-16 bg-green-600 text-white">
           <div className="container mx-auto px-4">
