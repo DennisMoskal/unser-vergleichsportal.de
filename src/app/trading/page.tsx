@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</div>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</div>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</div>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -170,7 +170,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
+                <div className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</div>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -528,7 +528,7 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Neo Broker 09/2025 | Kostenlos ETF kaufen - Testsieger
+              Beste Trading-Plattformen 2025: Krypto, Bitcoin & DeFi Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker & Trading-Plattformen für Aktien, Forex, ETF, Rohstoffe, Futures, DeFi, Bitcoin
@@ -547,12 +547,12 @@ export default function DeFi() {
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
-            Wie wähle ich die passende Trading-Plattform?
+            So finden Sie die passende Trading-Plattform
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Vergleichen Sie Gebühren</CardTitle>
+                <CardTitle className="text-lg font-bold">Gebühren vergleichen</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -562,22 +562,22 @@ export default function DeFi() {
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Sicherheit und Regulierung</CardTitle>
+                <CardTitle className="text-lg font-bold">Sicherheit gewährleisten</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
                   eToro, XTB, Vantage (ASIC/FSCA) – Regulierung, Einlagensicherung und transparente
-                  Richtlinien sind wichtig.
+                  Richtlinien sind entscheidend.
                 </p>
               </CardContent>
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Demo-Konten nutzen</CardTitle>
+                <CardTitle className="text-lg font-bold">Demo-Konten testen</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Testen Sie Plattformen mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren.
+                  Nutzen Sie kostenlose Demo-Konten, um Strategien risikofrei auszuprobieren.
                 </p>
               </CardContent>
             </Card>
@@ -589,7 +589,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Testsieger Aktiendepots & Online-Broker-Vergleich 2025
+            Top Online-Broker für Krypto und Aktien 2025
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -646,7 +646,7 @@ export default function DeFi() {
           <div className="mt-10 bg-gray-50 border border-gray-200 rounded-xl p-5">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <h3 className="text-base sm:text-lg font-semibold">Auszahlungen & Einzahlungen schnell erledigen</h3>
+                <p className="text-base sm:text-lg font-semibold">Schnelle Auszahlungen & Einzahlungen für Trader</p>
                 <p className="text-sm sm:text-base text-gray-600">
                   Zum Trading und dem <strong>Auszahlen von Beträgen</strong> gehört ein starkes Banking – SEPA Instant,
                   niedrige Gebühren & verlässliche Karten.
@@ -674,13 +674,13 @@ export default function DeFi() {
       {/* Guide + Versicherungen-CTA */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
-            DeFi & Krypto-Trading 2025: Ihr Weg zu Bitcoin, Memecoins & Bridging
-          </h1>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
+            Ihr Weg zu DeFi und Krypto-Trading 2025
+          </h2>
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Was ist DeFi? Der dezentrale Finanzmarkt erklärt
-            </h2>
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               DeFi (Decentralized Finance) revolutioniert den Finanzmarkt durch Blockchain-Technologie. Anstelle zentraler Banken ermöglichen Smart Contracts auf Plattformen wie Ethereum oder Polygon direkte Transaktionen wie Kredite, Staking oder Swaps. Im Jahr 2025 hat der DeFi-Markt ein Total Value Locked (TVL) von über $150 Mrd. erreicht. DeFi bietet:
             </p>
@@ -702,9 +702,9 @@ export default function DeFi() {
               Starten Sie mit TradingView für Top Screener und Social Trading oder erkunden Sie dezentrale Plattformen für DeFi.
             </p>
 
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Krypto-Trading mit TradingView: Tools für Anfänger und Profis
-            </h2>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Krypto-Trading mit TradingView für Anfänger und Profis
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               TradingView ist die führende Plattform für technische Analysen und Social Trading mit über 100 Millionen Nutzern. Ob Bitcoin, Ethereum oder Memecoins – mit Supercharts, Top Screener und Community-Ideen finden Anfänger und Profis die besten Handelsmöglichkeiten. Vorteile:
             </p>
@@ -726,9 +726,9 @@ export default function DeFi() {
               Tipp: Nutzen Sie TradingView’s Demo-Konto, um Strategien risikofrei zu testen.
             </p>
 
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Bitcoin-Trading: Sicher handeln mit XTB
-            </h2>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Sicher Bitcoin handeln mit XTB
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 09/2025). Mit XTB können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
             </p>
@@ -750,9 +750,9 @@ export default function DeFi() {
               Tipp: Nutzen Sie XTB’s Demo-Konto, um Bitcoin-Trading risikofrei zu testen.
             </p>
 
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Bridging in DeFi: Kryptowährungen zwischen Blockchains bewegen
-            </h2>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Bridging in DeFi: Kryptowährungen zwischen Blockchains transferieren
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Bridging ermöglicht den Transfer von Kryptowährungen wie Bitcoin oder Ethereum zwischen Blockchains (z. B. Ethereum zu Polygon). Dies ist essenziell für DeFi, da viele Protokolle auf spezifischen Chains laufen.
             </p>
@@ -774,9 +774,9 @@ export default function DeFi() {
               Spartipp: Kombinieren Sie Bridging mit Plattformen für sicheres Trading nach dem Transfer.
             </p>
 
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Memecoin-Trading: Die Rolle von Telegram-Bots
-            </h2>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Memecoin-Trading mit Telegram-Bots
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Memecoins wie Dogecoin oder Shiba Inu sind im Jahr 2025 ein Trend, besonders durch Telegram-Bots wie Banana Gun oder Maestro. Diese Bots ermöglichen schnelles Trading direkt über Telegram, ideal für volatile Memecoin-Märkte.
             </p>
@@ -798,9 +798,9 @@ export default function DeFi() {
               Tipp: Kombinieren Sie Telegram-Bots mit TradingView für präzise Marktanalysen und Memecoin-Trading.
             </p>
 
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Sicher Kryptowährungen kaufen und aufbewahren mit TradingView
-            </h2>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Sicher Kryptowährungen kaufen mit TradingView
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Sicherheit ist beim Krypto-Trading entscheidend. Mit TradingView analysieren Sie Märkte und traden sicher über verifizierte Broker:
             </p>
@@ -822,13 +822,13 @@ export default function DeFi() {
               Sicherheits-Tipp: Verwenden Sie Hardware-Wallets wie Ledger für langfristige Krypto-Aufbewahrung und aktivieren Sie 2FA.
             </p>
 
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              So bauen Sie Vermögen mit Bitcoin-Trading auf – steuerfrei nach einem Jahr
-            </h2>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Steuerfreies Bitcoin-Trading nach einem Jahr
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Bitcoin bietet eine einzigartige Möglichkeit, Vermögen aufzubauen, insbesondere durch die steuerliche Behandlung in Deutschland. Gemäß § 23 Abs. 1 Nr. 2 EStG sind Gewinne aus dem Verkauf von Kryptowährungen wie Bitcoin steuerfrei, wenn Sie diese länger als ein Jahr halten. Dies macht Bitcoin zu einer attraktiven Option für langfristige Investoren, die Kapital aufbauen möchten, ohne Kapitalertragssteuer zahlen zu müssen.
+              Bitcoin bietet eine einzigartige Möglichkeit, Vermögen aufzubauen, insbesondere durch die steuerliche Behandlung in Deutschland. Gemäß § 23 Abs. 1 Nr. 2 EStG sind Gewinne aus dem Verkauf von Kryptowährungen wie Bitcoin steuerfrei, wenn Sie diese länger als ein Jahr halten. Dies macht Bitcoin zu einer attraktiven Option für langfristige Investoren.
             </p>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Warum Bitcoin für Vermögensaufbau?</h3>
+            <h4 className="text-base sm:text-lg font-semibold mb-2">Warum Bitcoin für Vermögensaufbau?</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -836,16 +836,16 @@ export default function DeFi() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Steuerfreiheit nach einem Jahr:</strong> Wenn Sie Bitcoin kaufen und mindestens 12 Monate halten, sind Gewinne steuerfrei, unabhängig von der Höhe. Dies gilt für Privatpersonen, die Bitcoin als privates Verägensgut halten.
+                <strong>Steuerfreiheit nach einem Jahr:</strong> Gewinne sind steuerfrei, wenn Sie Bitcoin mindestens 12 Monate halten.
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 <strong>Dezentrale Natur:</strong> Bitcoin ist unabhängig von zentralen Banken, was es zu einer Absicherung gegen Inflation macht.
               </li>
             </ul>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Wie funktioniert steuerfreies Bitcoin-Trading?</h3>
+            <h4 className="text-base sm:text-lg font-semibold mb-2">Wie funktioniert steuerfreies Bitcoin-Trading?</h4>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Um von der Steuerfreiheit zu profitieren, kaufen Sie Bitcoin auf einer regulierten Plattform wie XTB und halten Sie die Coins für mindestens ein Jahr. Nach Ablauf dieser Frist können Sie die Bitcoin verkaufen, und die Gewinne sind von der Kapitalertragssteuer befreit. Wichtig: Die Haltefrist beginnt mit dem Kaufdatum und endet mit dem Verkauf. Beispiel:
+              Kaufen Sie Bitcoin auf einer regulierten Plattform wie XTB und halten Sie die Coins für mindestens ein Jahr. Nach Ablauf dieser Frist sind die Gewinne steuerfrei. Beispiel:
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
@@ -861,7 +861,7 @@ export default function DeFi() {
                 <strong>Verkauf:</strong> Nach einem Kursanstieg verkaufen Sie die Bitcoin für 10.000 €. Der Gewinn von 5.000 € ist steuerfrei.
               </li>
             </ul>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Warum XTB für Bitcoin-Trading?</h3>
+            <h4 className="text-base sm:text-lg font-semibold mb-2">Warum XTB für steuerfreies Bitcoin-Trading?</h4>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               XTB ist eine regulierte Plattform (BaFin), die Bitcoin-CFDs mit 0% Kommission bis 100.000 € Umsatz anbietet. Zusätzlich bietet XTB:
             </p>
@@ -882,7 +882,7 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               Tipp: Starten Sie mit XTB, um Bitcoin sicher zu kaufen und von der steuerfreien Haltefrist zu profitieren.
             </p>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Wichtige Hinweise zur Steuerfreiheit</h3>
+            <h4 className="text-base sm:text-lg font-semibold mb-2">Wichtige Hinweise zur Steuerfreiheit</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -919,12 +919,12 @@ export default function DeFi() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Häufig gestellte Fragen zu Trading-Plattformen
+            Häufige Fragen zu Trading-Plattformen
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Was ist die beste Trading-Plattform für Anfänger?</CardTitle>
+                <h3 className="text-lg font-bold">Beste Trading-Plattform für Anfänger?</h3>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -935,7 +935,7 @@ export default function DeFi() {
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Welche Gebühren fallen beim Trading an?</CardTitle>
+                <h3 className="text-lg font-bold">Welche Gebühren fallen beim Trading an?</h3>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -946,7 +946,7 @@ export default function DeFi() {
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Wie sicher ist Krypto-Trading?</CardTitle>
+                <h3 className="text-lg font-bold">Wie sicher ist Krypto-Trading?</h3>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -957,7 +957,7 @@ export default function DeFi() {
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Was ist der Unterschied zwischen CFD- und Krypto-Trading?</CardTitle>
+                <h3 className="text-lg font-bold">Unterschied zwischen CFD- und Krypto-Trading?</h3>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -968,7 +968,7 @@ export default function DeFi() {
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Was sind Telegram-Bots im Memecoin-Trading?</CardTitle>
+                <h3 className="text-lg font-bold">Was sind Telegram-Bots im Memecoin-Trading?</h3>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -978,7 +978,7 @@ export default function DeFi() {
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Wie funktioniert Bridging in DeFi?</CardTitle>
+                <h3 className="text-lg font-bold">Wie funktioniert Bridging in DeFi?</h3>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
@@ -994,30 +994,30 @@ export default function DeFi() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Ihr Weg zur richtigen Trading-Plattform: Der ultimative Leitfaden
+            Ultimativer Leitfaden zur Wahl der besten Trading-Plattform
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Die Wahl der passenden Plattform hängt von Zielen, Budget und Erfahrung ab. Unser Leitfaden hilft bei der
               Vorauswahl.
             </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">1. Trading-Ziele definieren</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Trading-Ziele definieren</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Kurzfristiges Krypto/CFD-Trading vs. langfristiges Investieren (Aktien/ETFs) erfordert unterschiedliche Tools.
             </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">2. Gebühren & Kosten prüfen</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Gebühren und Kosten prüfen</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Kommissionen, Spreads, Einzahlungen. Entscheidend ist die Summe pro Strategie.
             </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">3. Sicherheit & Regulierung</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Sicherheit und Regulierung</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Regulierung, Einlagensicherung, transparente AGB, verlässlicher Support.
             </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">4. Demo nutzen</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Demo-Konten nutzen</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Erst simuliert handeln – Lernkurve steigt, Fehlerkosten sinken.
             </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">5. Lernressourcen</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Lernressourcen einbeziehen</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               Akademien, Community-Ideen und Tutorials beschleunigen den Skill-Aufbau.
             </p>
@@ -1034,7 +1034,7 @@ export default function DeFi() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+              <div className="font-semibold mb-3 text-xl">Finanzprodukte</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
@@ -1075,7 +1075,7 @@ export default function DeFi() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+              <div className="font-semibold mb-3 text-xl">Weitere Produkte</div>
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
@@ -1172,7 +1172,7 @@ export default function DeFi() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+              <div className="font-semibold mb-3 text-xl">Unternehmen</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
@@ -1213,7 +1213,7 @@ export default function DeFi() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+              <div className="font-semibold mb-3 text-xl">Rechtliches</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
                   <Link 
