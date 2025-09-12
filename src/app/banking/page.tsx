@@ -370,7 +370,7 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank 2025 | Girokonto, Kredit & Baufinanzierung Testsieger</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank September 2025 | Girokonto, Kredit & Baufinanzierung Testsieger</h1>
             <p className="text-base sm:text-lg mb-8">
               Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
