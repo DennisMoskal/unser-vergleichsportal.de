@@ -412,6 +412,40 @@ const providerData: { [key: string]: Provider[] } = {
   ]
 }
 
+const products = [
+  { name: "Girokonto", href: "/banking/girokonto" },
+  { name: "Kreditkarte", href: "/banking/kreditkarte" },
+  { name: "Tagesgeld", href: "/banking/tagesgeld" },
+  { name: "Festgeld", href: "/banking/festgeld" },
+  { name: "Baufinanzierung", href: "/banking/baufinanzierung" },
+  { name: "Kredit", href: "/banking/kredit" },
+  { name: "Depot", href: "/banking/depot" },
+  { name: "Ratenkredit", href: "/banking/ratenkredit" },
+  { name: "Sparplan", href: "/banking/sparplan" },
+  { name: "Investmentfonds", href: "/banking/investmentfonds" },
+  { name: "ETF", href: "/banking/etf" },
+  { name: "Versicherung", href: "/banking/versicherung" },
+];
+
+const features = [
+  {
+    name: "Kostenloser Vergleich",
+    description: "Vergleichen Sie Finanzprodukte kostenlos und unverbindlich.",
+  },
+  {
+    name: "Transparente Konditionen",
+    description: "Wir zeigen Ihnen alle Konditionen und Gebühren klar und übersichtlich.",
+  },
+  {
+    name: "Schnelle Ergebnisse",
+    description: "Finden Sie in wenigen Minuten die besten Angebote für Ihre Bedürfnisse.",
+  },
+  {
+    name: "Unabhängige Bewertung",
+    description: "Unsere Vergleiche sind unabhängig und basieren auf objektiven Kriterien.",
+  },
+];
+
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen")
 
@@ -454,6 +488,69 @@ export default function Home() {
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
       </Head>
       <div className="min-h-screen bg-white">
+        {/* Logo + Text */}
+        <section className="py-12 bg-gray-50 text-center">
+          <div className="container mx-auto px-4">
+            <Image
+              src="/logo.png"
+              alt="Unser Vergleichsportal Logo"
+              width={150}
+              height={150}
+              className="mx-auto mb-6"
+            />
+            <h1 className="text-4xl font-bold mb-8">
+              Finden Sie die besten Finanzprodukte
+            </h1>
+          </div>
+        </section>
+
+        {/* 12 Buttons + Eigenschaften */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {products.map((product) => (
+                <Link
+                  key={product.name}
+                  href={product.href}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition text-center"
+                >
+                  <h3 className="text-xl font-semibold">{product.name}</h3>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature) => (
+                <div key={feature.name} className="text-center">
+                  <h3 className="text-lg font-semibold">{feature.name}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mobiles Menü */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <details className="md:hidden">
+              <summary className="text-lg font-semibold cursor-pointer">
+                Menü
+              </summary>
+              <div className="mt-4 space-y-2">
+                {products.map((product) => (
+                  <Link
+                    key={product.name}
+                    href={product.href}
+                    className="block text-blue-600 hover:underline"
+                  >
+                    {product.name}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          </div>
+        </section>
+
         <Header />
 
         {/* Hauptüberschrift */}
