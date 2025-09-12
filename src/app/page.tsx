@@ -213,7 +213,8 @@ const Header: React.FC = () => {
       {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
-          <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
+          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
+
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
