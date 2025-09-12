@@ -404,6 +404,7 @@ export default function Home() {
   return (
     <>
       <Head>
+    
         {/* #1 Branding + #2 H1 korrespondierender Title/Meta */}
         <title>Unser-Vergleichsportal.de – Anbieter- & Finanzvergleich | Testsieger 2025</title>
         <meta
@@ -451,6 +452,93 @@ export default function Home() {
 
       <div className="min-h-screen bg-white">
         <Header />
+{/* KOMBINIERTER GRÜNER BLOCK – direkt NACH <Header /> und VOR der Hauptüberschrift einfügen */}
+<section className="py-6 sm:py-10 bg-green-600 text-white">
+  <div className="container mx-auto px-4">
+    {/* Kategorien als Chips im grünen Bereich */}
+    <div className="max-w-6xl mx-auto">
+      <ul className="flex flex-wrap justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+        {[
+          { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+          { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+          { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+          { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
+          { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+          { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+          { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+          { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+          { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+          { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+          { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+          { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+        ].map(({ key, label, url, isInternal }) => (
+          <li key={key}>
+            {isInternal ? (
+              <Link
+                href={url}
+                className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:shadow-lg transition-all duration-300 text-white"
+                onClick={() => setActiveCategory(key)}
+                aria-label={`Zu ${label} navigieren`}
+              >
+                {label}
+              </Link>
+            ) : (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:shadow-lg transition-all duration-300 text-white"
+                onClick={() => setActiveCategory(key)}
+                aria-label={`${label} vergleichen (externer Link)`}
+              >
+                {label}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* dünne Trennlinie */}
+    <div className="mt-6 sm:mt-8 border-t border-white/20" />
+
+    {/* Trust-Points */}
+    <div className="max-w-5xl mx-auto mt-6 sm:mt-8">
+      <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Star className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            <strong className="font-semibold">4,8★</strong> Kundenstimmen
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
         {/* Hauptüberschrift (#2) */}
         <section className="py-8 sm:py-12 bg-white">
@@ -474,91 +562,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Kategorie-Navigation (bewusst schlank gelassen – #5) */}
-        <section className="bg-white py-4 border-b" id="versicherungen">
-          <div className="container mx-auto px-4">
-            <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
-              {[
-                { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-                { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-                { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-                { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-                { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-              ].map(({ key, label, url, isInternal }) => (
-                <li key={key}>
-                  {isInternal ? (
-                    <Link
-                      href={url}
-                      className="block px-3 py-2 font-medium text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300"
-                      onClick={() => setActiveCategory(key)}
-                      aria-label={`Zu ${label} navigieren`}
-                    >
-                      {label}
-                    </Link>
-                  ) : (
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-3 py-2 font-medium text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300"
-                      onClick={() => setActiveCategory(key)}
-                      aria-label={`${label} vergleichen (externer Link)`}
-                    >
-                      {label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Grüner Value-/Trust-Bereich ohne Überschrift */}
-        <section className="py-12 sm:py-16 bg-green-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    <strong className="font-semibold">4,8★</strong> Kundenstimmen
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
