@@ -1065,8 +1065,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-         <footer className="bg-gray-900 text-white py-8 sm:py-12">
+<footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
             <div className="col-span-2 md:col-span-1">
@@ -1309,6 +1308,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+         
 
         {/* Structured Data für lokale SEO */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
