@@ -276,13 +276,13 @@ const Header: React.FC = () => {
         <li className="flex items-start">
           <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
           <span className="ml-3 text-base sm:text-lg">
-            Ø <strong className="font-semibold">350 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+            Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
           </span>
         </li>
         <li className="flex items-start">
           <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
           <span className="ml-3 text-base sm:text-lg">
-            <strong className="font-semibold">4,8★</strong> aus echten Kundenstimmen
+            <strong className="font-semibold">4,8★</strong>Kundenstimmen
           </span>
         </li>
         <li className="flex items-start">
