@@ -23,7 +23,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <h3 className="text-sm mt-1">unser-vergleichsportal.de - einfach sparen!</h3>
+        <h3 className="text-sm mt-1">unser-vergleichsportal.de</h3>
       </div>
     </Link>
   )
