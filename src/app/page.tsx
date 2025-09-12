@@ -493,209 +493,26 @@ export default function Home() {
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger</h2>
-
+            <Tabs defaultValue="versicherungen" className="w-full mb-8">
+              <TabsList className="flex justify-center gap-2 sm:gap-4 bg-gray-50">
+                {Object.keys(providerData).map((category) => (
+                  <TabsTrigger
+                    key={category}
+                    value={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out text-xs sm:text-sm ${
+                      activeCategory === category
+                        ? "bg-green-600 text-white"
+                        : "bg-green-100 text-gray-600 hover:bg-green-600 hover:text-white"
+                    }`}
+                  >
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  name: "Tarifcheck.de",
-                  rating: 4.5,
-                  features: [
-                    "Über 20 Jahre Erfahrung als Vergleichsportal",
-                    "100% kostenloser und unverbindlicher Vergleich",
-                    "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-                    "Mehrfach ausgezeichnet mit 'sehr gut'",
-                    "eKomi Silber Siegel mit 4,5/5 Sternen",
-                    "Über 3.194 Kundenbewertungen",
-                    "Deutschlands drittgrößtes Vergleichsportal",
-                    "Vertrauen von Millionen Verbrauchern",
-                    "Bis zu 1.000€ jährlich sparen möglich"
-                  ],
-                  price: "100% kostenlos",
-                  bonus: "Bis zu 120€ Neukundenbonus",
-                  logo: "🏆",
-                  url: "https://www.tarifcheck.de/girokonto/"
-                },
-                {
-                  name: "eRecht24",
-                  rating: 4.3,
-                  features: [
-                    "Rechtssicherheit für Webseiten",
-                    "DSGVO-konform mit Premium Tools",
-                    "Automatische Rechtstext-Generatoren",
-                    "Abmahnschutz inklusive",
-                    "Praxis-Tools für Social Media",
-                    "Kostenlose Erstberatung",
-                    "NEU: KI-gestützte Lösungen",
-                    "Zentraler Projekt Manager",
-                    "Live-Webinare zu Internetrecht",
-                    "Muster-Verträge & Checklisten"
-                  ],
-                  price: "ab 20€/Monat",
-                  bonus: "Gratis Rechtscheck",
-                  logo: "⚖️",
-                  url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
-                },
-                {
-                  name: "XTB",
-                  rating: 4.5,
-                  features: [
-                    "Gratis Aktie für neue Investoren",
-                    "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-                    "Über 8000 Aktien & ETFs",
-                    "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-                    "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-                    "eWallet mit virtueller Mastercard",
-                    "Smarte ETF-Sparpläne",
-                    "0% Kommission bis 100.000€ Umsatz",
-                    "Kostenlose Ein- & Auszahlungen",
-                    "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-                    "Platz 1 CFD-Broker 2024/25"
-                  ],
-                  price: "0€ Kommission",
-                  bonus: "Demo-Konto",
-                  logo: "📊",
-                  url: "https://link-pso.xtb.com/pso/lMDhc"
-                },
-                {
-                  name: "Credimaxx",
-                  rating: 4.9,
-                  features: [
-                    "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-                    "Sofortvermittlung durch erfahrene Kreditprofis",
-                    "Digitaler Abschluss mit WebID oder VideoIdent",
-                    "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-                    "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-                    "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-                    "Vermittlung in bis zu 1 Minute",
-                    "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-                    "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-                    "25 Jahre Erfahrung in der Kreditvermittlung"
-                  ],
-                  price: "ab 10,99% eff. Zins p.a.",
-                  bonus: "Schnelle Auszahlung",
-                  logo: "💳",
-                  url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
-                },
-                {
-                  name: "HanseMerkur",
-                  rating: 4.7,
-                  features: [
-                    "Umfassender Schutz für Hunde und Katzen",
-                    "Bis zu 100% Kostenerstattung",
-                    "Freie Tierarztwahl",
-                    "Keine Altersbeschränkung",
-                    "Schnelle Schadensbearbeitung",
-                    "Flexible Tarifoptionen",
-                    "Zusatzleistungen wie Physiotherapie",
-                    "Online-Vertragsmanagement",
-                    "24/7 Kundenhotline"
-                  ],
-                  price: "ab 10€/Monat",
-                  bonus: "Kostenloser Gesundheitscheck",
-                  logo: "🐾",
-                  url: "https://www.hansemerkur.de/tierkrankenversicherung"
-                },
-                {
-                  name: "CHECK24",
-                  rating: 4.8,
-                  features: [
-                    "Kostenloser Kontowechselservice",
-                    "Über 50 Banken im Vergleich",
-                    "Bis zu 250€ Willkommensbonus",
-                    "Kostenlose Kontoführung",
-                    "Schnelle Kontoeröffnung",
-                    "TÜV-geprüfter Vergleich",
-                    "24/7 Kundensupport",
-                    "Mobile Banking App",
-                    "Kreditkartenoptionen verfügbar",
-                    "Attraktive Zinsen auf Tagesgeld"
-                  ],
-                  price: "0€ Kontoführung",
-                  bonus: "Bis zu 250€ Bonus",
-                  logo: "🏦",
-                  url: "https://www.check24.de/girokonto/"
-                },
-                {
-                  name: "Vodafone",
-                  rating: 4.6,
-                  features: [
-                    "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
-                    "Günstige Mobilfunktarife mit 5G-Unterstützung",
-                    "Spezielle Angebote für Selbstständige und Geschäftskunden",
-                    "Kombi-Vorteile für DSL und Mobilfunk",
-                    "Kostenloser WLAN-Router bei Vertragsabschluss",
-                    "Flexibles Streaming mit GigaTV",
-                    "24/7 Kundenhotline für schnellen Support",
-                    "Bis zu 100€ Startguthaben für Neukunden",
-                    "Schnelle Installation und Einrichtung",
-                    "Testsieger für Kundenservice (connect 2025)"
-                  ],
-                  price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 100€ Startguthaben",
-                  logo: "📡",
-                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons="
-                },
-                {
-                  name: "1&1",
-                  rating: 4.7,
-                  features: [
-                    "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
-                    "Testsieger für Internetgeschwindigkeit (connect 2025)",
-                    "Kostenloser HomeServer für optimales WLAN",
-                    "Spezielle Angebote für Selbstständige und Firmen",
-                    "Kombi-Vorteile mit Mobilfunktarifen",
-                    "30 Tage Testphase für alle Tarife",
-                    "Bis zu 50€ Startguthaben für junge Kunden",
-                    "24h Austausch-Service bei Defekten",
-                    "Umfassender Umzugsservice",
-                    "Attraktive Bundle-Angebote mit Smartphones"
-                  ],
-                  price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 50€ Startguthaben",
-                  logo: "🌐",
-                  url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref="
-                },
-                {
-                  name: "Verivox",
-                  rating: 4.9,
-                  features: [
-                    "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
-                    "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
-                    "Spezielle Angebote für Selbstständige und Unternehmen",
-                    "TÜV-geprüftes Vergleichsportal mit 4.9/5 Bewertung",
-                    "Bis zu 200€ Prämie für Freundschaftswerbung",
-                    "Kostenloser Wechselservice für Tarife",
-                    "Transparente Tarifübersicht in der Verivox-App",
-                    "Schneller Online-Abschluss für Versicherungen",
-                    "Über 25 Jahre Erfahrung im Vergleichsmarkt",
-                    "Bis zu 1.000€ jährliche Einsparungen möglich"
-                  ],
-                  price: "100% kostenlos",
-                  bonus: "Bis zu 200€ Prämie",
-                  logo: "🏠",
-                  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                },
-                {
-                  name: "freenet",
-                  rating: 4.7,
-                  features: [
-                    "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-                    "Kostenloser Wechselservice für Mobilfunkverträge",
-                    "5G-Unterstützung in allen Tarifen",
-                    "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-                    "Bis zu 100€ Startguthaben für Neukunden",
-                    "Kostenlose Hotline für Kunden",
-                    "Schnelle Vertragsabwicklung online",
-                    "Testsieger für Kundenservice (connect 2025)",
-                    "Zusätzliche Rabatte für junge Kunden unter 28",
-                    "Umweltfreundliche Tarife mit CO₂-Kompensation"
-                  ],
-                  price: "ab 9,99€/Monat",
-                  bonus: "Bis zu 100€ Startguthaben",
-                  logo: "📱",
-                  url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref="
-                }
-              ].map((provider, index) => (
+              {providerData[activeCategory].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
                   <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
