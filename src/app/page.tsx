@@ -852,14 +852,7 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
+                  
                 </CardContent>
               </Card>
 
@@ -888,14 +881,7 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
+                 
                 </CardContent>
               </Card>
 
@@ -924,14 +910,7 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
+                 
                 </CardContent>
               </Card>
 
@@ -960,14 +939,7 @@ export default function Home() {
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                   </p>
-                  <Button
-                    variant="default"
-                    className="w-full bg-green-600 text-white font-medium text-sm sm:text-base rounded-lg mt-4 flex-shrink-0 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                    aria-label="Jetzt Finanzprodukte vergleichen"
-                  >
-                    Jetzt vergleichen
-                  </Button>
+                 
                 </CardContent>
               </Card>
             </div>
