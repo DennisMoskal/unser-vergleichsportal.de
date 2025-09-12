@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -5,7 +7,7 @@ import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
-// Metadata for SEO (replacing Head)
+// Metadata für SEO (ersetzt Head)
 export const metadata = {
   title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal",
   description:
@@ -44,8 +46,7 @@ export const metadata = {
   },
 }
 
-// SmartFinanzLogo Component (Client Component)
-"use client"
+// SmartFinanzLogo Component
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
@@ -63,8 +64,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-// Header Component (Client Component)
-"use client"
+// Header Component
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("trading")
