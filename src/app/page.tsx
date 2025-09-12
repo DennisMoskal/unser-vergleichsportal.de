@@ -256,15 +256,11 @@ const Header: React.FC = () => {
         </div>
       </section>
 
-      {/* Grüner Value-/Trust-Bereich (ersetzt den bisherigen Statistik-Block) */}
+{/* Grüner Value-/Trust-Bereich ohne Überschrift */}
 <section className="py-12 sm:py-16 bg-green-600 text-white">
   <div className="container mx-auto px-4">
     <div className="max-w-5xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-center leading-tight">
-        unser-vergleichsportal.de – <span className="whitespace-nowrap">| einfach sparen! </span>
-      </h2>
-
-      <ul className="mt-6 sm:mt-8 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <li className="flex items-start">
           <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
           <span className="ml-3 text-base sm:text-lg">
@@ -299,6 +295,7 @@ const Header: React.FC = () => {
     </div>
   </div>
 </section>
+
     </>
   )
 }
