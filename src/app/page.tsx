@@ -9,14 +9,14 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-// SmartFinanzLogo-Komponente (Logo vorerst behalten)
+// SmartFinanzLogo-Komponente (Logo bleibt vorerst)
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
-      <div className={`flex flex-col items-start ${className}`}>
+      <div className={`flex flex-col items-start ${className || ""}`}>
         <div className="flex items-center space-x-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
+            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
             <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
           </svg>
           <span className="font-bold">martFinanz</span>
@@ -35,9 +35,7 @@ const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" })
   }
 
   useEffect(() => {
@@ -79,7 +77,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-200 text-base rounded-lg hover:bg-green-600 hover:text-white hover:shadow-md"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -101,14 +99,14 @@ const Header: React.FC = () => {
                       { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq' },
                       { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj' },
                       { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN' },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh' }, // korrigiert
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh' },
                     ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-200 text-base rounded-lg hover:bg-green-600 hover:text-white hover:shadow-md"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -132,7 +130,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-200 text-base rounded-lg hover:bg-green-600 hover:text-white hover:shadow-md"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -159,7 +157,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-200 text-base rounded-lg hover:bg-green-600 hover:text-white hover:shadow-md"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -185,7 +183,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-200 text-base rounded-lg hover:bg-green-600 hover:text-white hover:shadow-md"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -201,7 +199,7 @@ const Header: React.FC = () => {
 
               <div className="text-center mt-4">
                 <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-700 hover:shadow-md"
+                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -234,9 +232,9 @@ const providerData: { [key: string]: Provider[] } = {
         "Über 20 Jahre Erfahrung als Vergleichsportal",
         "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet",
-        "eKomi Bewertung 4,5/5 Sterne",
-        "Über 3.000 Kundenbewertungen",
+        "Mehrfach ausgezeichnet mit 'sehr gut'",
+        "eKomi Silber Siegel mit 4,5/5 Sternen",
+        "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
         "Vertrauen von Millionen Verbrauchern",
         "Bis zu 1.000€ jährlich sparen möglich"
@@ -251,13 +249,13 @@ const providerData: { [key: string]: Provider[] } = {
       rating: 4.3,
       features: [
         "Rechtssicherheit für Webseiten",
-        "DSGVO-konforme Premium-Tools",
+        "DSGVO-konform mit Premium Tools",
         "Automatische Rechtstext-Generatoren",
         "Abmahnschutz inklusive",
         "Praxis-Tools für Social Media",
         "Kostenlose Erstberatung",
-        "KI-gestützte Lösungen",
-        "Zentraler Projekt-Manager",
+        "NEU: KI-gestützte Lösungen",
+        "Zentraler Projekt Manager",
         "Online Vertragsmanagement",
         "Muster-Verträge & Checklisten"
       ],
@@ -275,9 +273,9 @@ const providerData: { [key: string]: Provider[] } = {
         "Über 20 Jahre Erfahrung als Vergleichsportal",
         "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet",
-        "eKomi Bewertung 4,5/5 Sterne",
-        "Über 3.000 Kundenbewertungen",
+        "Mehrfach ausgezeichnet mit 'sehr gut'",
+        "eKomi Silber Siegel mit 4,5/5 Sternen",
+        "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
         "Vertrauen von Millionen Verbrauchern",
         "Bis zu 1.000€ jährlich sparen möglich"
@@ -300,7 +298,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien, 0,2% Gebühr >100.000 EUR",
+        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
       ],
       price: "0€ Kommission",
@@ -312,16 +310,16 @@ const providerData: { [key: string]: Provider[] } = {
       name: "Credimaxx",
       rating: 4.9,
       features: [
-        "Kredite von 4.000€ bis 50.000€",
-        "Schnelle Sofortvermittlung",
-        "Digitaler Abschluss mit WebID/VideoIdent",
-        "Kredit ohne Schufa, Sofortkredit oder Umschuldung",
-        "Keine unnötigen Zusatzprodukte",
-        "eKomi 4,9/5",
+        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+        "Sofortvermittlung durch erfahrene Kreditprofis",
+        "Digitaler Abschluss mit WebID oder VideoIdent",
+        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
+        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
         "Vermittlung in bis zu 1 Minute",
-        "256-Bit-SSL-Verschlüsselung",
-        "Anschlussfinanzierungen & Immobilienkredite",
-        "25 Jahre Erfahrung"
+        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
+        "25 Jahre Erfahrung in der Kreditvermittlung"
       ],
       price: "ab 10,99% eff. Zins p.a.",
       bonus: "Schnelle Auszahlung",
@@ -332,16 +330,16 @@ const providerData: { [key: string]: Provider[] } = {
       name: "freenet",
       rating: 4.7,
       features: [
-        "Flexible Mobilfunktarife bis 40 GB",
-        "Kostenloser Wechselservice",
+        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+        "Kostenloser Wechselservice für Mobilfunkverträge",
         "5G-Unterstützung in allen Tarifen",
-        "Kombi-Vorteile mit DSL/Festnetz",
-        "Bis zu 100€ Startguthaben",
-        "Kostenlose Hotline",
-        "Schnelle Online-Vertragsabwicklung",
-        "Ausgezeichneter Kundenservice",
-        "Zusätzliche Rabatte für junge Kunden",
-        "Tarife mit CO₂-Kompensation"
+        "Kombi-Vorteile mit DSL- und Festnetzanschluss",
+        "Bis zu 100€ Startguthaben für Neukunden",
+        "Kostenlose Hotline für Kunden",
+        "Schnelle Vertragsabwicklung online",
+        "Testsieger für Kundenservice (connect 2025)",
+        "Zusätzliche Rabatte für junge Kunden unter 28",
+        "Umweltfreundliche Tarife mit CO₂-Kompensation"
       ],
       price: "ab 9,99€/Monat",
       bonus: "Bis zu 100€ Startguthaben",
@@ -383,7 +381,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien, 0,2% Gebühr >100.000 EUR",
+        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25"
       ],
       price: "0€ Kommission",
@@ -400,50 +398,32 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* SEO-optimiert & bereinigt */}
-        <title>unser-vergleichsportal.de – Finanzvergleich für Versicherungen, Banking, DSL & mehr</title>
-        <meta
-          name="description"
-          content="Vergleiche Versicherungen, Banking, DSL, Strom, Gas, Handytarife & mehr. Über 500 Anbieter, Ø 850 € Ersparnis/Jahr, 100% kostenlos. Jetzt Angebote finden & einfach sparen."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>unser-vergleichsportal.de – Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
+        <meta name="description" content="Vergleichen Sie Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas, Reisen & mehr. Kostenlos, sicher & schnell – jetzt sparen." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
         <link rel="canonical" href="https://unser-vergleichsportal.de" />
-
-        {/* Open Graph / Twitter */}
-        <meta property="og:title" content="unser-vergleichsportal.de – Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta property="og:description" content="Über 500 Anbieter im Vergleich. Ø 850 € Ersparnis pro Jahr. Schnell, sicher & kostenlos." />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="unser-vergleichsportal.de – Finanzvergleich & Anbieterübersicht" />
+        <meta property="og:description" content="Über 500 Anbieter im Vergleich. Ø 850 € sparen pro Jahr. Schnell, sicher & kostenlos." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://unser-vergleichsportal.de" />
         <meta property="og:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
         <meta property="og:site_name" content="unser-vergleichsportal.de" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="unser-vergleichsportal.de – Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta name="twitter:description" content="Vergleiche Top-Tarife & spare einfach. Kostenlos & sicher." />
+        <meta name="twitter:title" content="unser-vergleichsportal.de – Testsieger & aktuelle Vergleiche" />
+        <meta name="twitter:description" content="Versicherungen, Banking, DSL, Strom, Gas u.v.m. vergleichen & sparen." />
         <meta name="twitter:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
-
-        {/* Assets & Prefetch */}
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
-        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
-        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-        <link rel="dns-prefetch" href="https://www.check24.de" />
-        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-        <link rel="dns-prefetch" href="https://www.awin1.com" />
-        <link rel="dns-prefetch" href="https://www.freenet.de" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="min-h-screen bg-white">
         <Header />
 
-        {/* 🔼 Kombinierter GRÜNER BLOCK (Kategorien + Trust-Points) – direkt NACH dem Header, VOR dem Hero */}
+        {/* KOMBINIERTER GRÜNER BLOCK – Kategorien + Trust-Points (OBERHALB der Hauptüberschrift) */}
         <section className="py-6 sm:py-10 bg-green-600 text-white">
           <div className="container mx-auto px-4">
-            {/* Kategorien als Chips im grünen Bereich */}
+            {/* Kategorien */}
             <div className="max-w-6xl mx-auto">
               <ul className="flex flex-wrap justify-center gap-2 sm:gap-3 text-sm sm:text-base">
                 {[
@@ -454,7 +434,7 @@ export default function Home() {
                   { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
                   { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
                   { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                  { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false }, // korrigiert
+                  { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
                   { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
                   { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
                   { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
@@ -464,7 +444,7 @@ export default function Home() {
                     {isInternal ? (
                       <Link
                         href={url}
-                        className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-md transition-all duration-200 text-white"
+                        className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:shadow-lg transition-all duration-300 text-white"
                         onClick={() => setActiveCategory(key)}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -475,7 +455,7 @@ export default function Home() {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-md transition-all duration-200 text-white"
+                        className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:shadow-lg transition-all duration-300 text-white"
                         onClick={() => setActiveCategory(key)}
                         aria-label={`${label} vergleichen (externer Link)`}
                       >
@@ -528,13 +508,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Hauptüberschrift (Hero) */}
+        {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de | einfach sparen!</h1>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de | einfach sparen!</h2>
             <Button
               size="lg"
-              className="bg-green-600 text-white font-medium transition-all duration-200 hover:bg-green-700 hover:shadow-md"
+              className="bg-green-600 text-white font-medium transition-all duration-300 hover:bg-green-700 hover:scale-105 hover:shadow-lg"
               onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
               aria-label="Beste Finanzprodukte ansehen"
             >
@@ -547,7 +527,7 @@ export default function Home() {
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-              Unsere Testsieger September 2025 | Anbieter- &amp; Finanzvergleich aktuell
+              Unsere Testsieger September 2025 | Anbieter- & Finanzvergleich aktuell
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -555,38 +535,82 @@ export default function Home() {
                 {
                   name: "Tarifcheck.de",
                   rating: 4.5,
-                  features: providerData.versicherungen[0].features,
-                  price: providerData.versicherungen[0].price,
-                  bonus: providerData.versicherungen[0].bonus,
-                  logo: providerData.versicherungen[0].logo,
-                  url: providerData.versicherungen[0].url
+                  features: [
+                    "Über 20 Jahre Erfahrung als Vergleichsportal",
+                    "100% kostenloser und unverbindlicher Vergleich",
+                    "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+                    "Mehrfach ausgezeichnet mit 'sehr gut'",
+                    "eKomi Silber Siegel mit 4,5/5 Sternen",
+                    "Über 3.194 Kundenbewertungen",
+                    "Deutschlands drittgrößtes Vergleichsportal",
+                    "Vertrauen von Millionen Verbrauchern",
+                    "Bis zu 1.000€ jährlich sparen möglich"
+                  ],
+                  price: "100% kostenlos",
+                  bonus: "Bis zu 120€ Neukundenbonus",
+                  logo: "🏆",
+                  url: "https://www.tarifcheck.de/girokonto/"
                 },
                 {
                   name: "eRecht24",
                   rating: 4.3,
-                  features: providerData.versicherungen[1].features,
-                  price: providerData.versicherungen[1].price,
-                  bonus: providerData.versicherungen[1].bonus,
-                  logo: providerData.versicherungen[1].logo,
-                  url: providerData.versicherungen[1].url
+                  features: [
+                    "Rechtssicherheit für Webseiten",
+                    "DSGVO-konform mit Premium Tools",
+                    "Automatische Rechtstext-Generatoren",
+                    "Abmahnschutz inklusive",
+                    "Praxis-Tools für Social Media",
+                    "Kostenlose Erstberatung",
+                    "NEU: KI-gestützte Lösungen",
+                    "Zentraler Projekt Manager",
+                    "Live-Webinare zu Internetrecht",
+                    "Muster-Verträge & Checklisten"
+                  ],
+                  price: "ab 20€/Monat",
+                  bonus: "Gratis Rechtscheck",
+                  logo: "⚖️",
+                  url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default"
                 },
                 {
                   name: "XTB",
-                  rating: providerData.banking[1].rating,
-                  features: providerData.banking[1].features,
-                  price: providerData.banking[1].price,
-                  bonus: providerData.banking[1].bonus,
-                  logo: providerData.banking[1].logo,
-                  url: providerData.banking[1].url
+                  rating: 4.5,
+                  features: [
+                    "Gratis Aktie für neue Investoren",
+                    "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+                    "Über 8000 Aktien & ETFs",
+                    "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
+                    "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
+                    "eWallet mit virtueller Mastercard",
+                    "Smarte ETF-Sparpläne",
+                    "0% Kommission bis 100.000€ Umsatz",
+                    "Kostenlose Ein- & Auszahlungen",
+                    "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
+                    "Platz 1 CFD-Broker 2024/25"
+                  ],
+                  price: "0€ Kommission",
+                  bonus: "Demo-Konto",
+                  logo: "📊",
+                  url: "https://link-pso.xtb.com/pso/lMDhc"
                 },
                 {
                   name: "Credimaxx",
-                  rating: providerData.banking[2].rating,
-                  features: providerData.banking[2].features,
-                  price: providerData.banking[2].price,
-                  bonus: providerData.banking[2].bonus,
-                  logo: providerData.banking[2].logo,
-                  url: providerData.banking[2].url
+                  rating: 4.9,
+                  features: [
+                    "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+                    "Sofortvermittlung durch erfahrene Kreditprofis",
+                    "Digitaler Abschluss mit WebID oder VideoIdent",
+                    "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+                    "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
+                    "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
+                    "Vermittlung in bis zu 1 Minute",
+                    "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+                    "Anschlussfinanzierungen und Immobilienkredite verfügbar",
+                    "25 Jahre Erfahrung in der Kreditvermittlung"
+                  ],
+                  price: "ab 10,99% eff. Zins p.a.",
+                  bonus: "Schnelle Auszahlung",
+                  logo: "💳",
+                  url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
                 },
                 {
                   name: "HanseMerkur",
@@ -616,7 +640,7 @@ export default function Home() {
                     "Bis zu 250€ Willkommensbonus",
                     "Kostenlose Kontoführung",
                     "Schnelle Kontoeröffnung",
-                    "Geprüfter Vergleich",
+                    "TÜV-geprüfter Vergleich",
                     "24/7 Kundensupport",
                     "Mobile Banking App",
                     "Kreditkartenoptionen verfügbar",
@@ -631,16 +655,16 @@ export default function Home() {
                   name: "Vodafone",
                   rating: 4.6,
                   features: [
-                    "Highspeed Kabel-Internet bis 1.000 MBit/s",
-                    "Günstige Mobilfunktarife mit 5G",
-                    "Angebote für Selbstständige und Geschäftskunden",
-                    "Kombi-Vorteile für DSL & Mobilfunk",
-                    "WLAN-Router inklusive (tarifabhängig)",
+                    "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
+                    "Günstige Mobilfunktarife mit 5G-Unterstützung",
+                    "Spezielle Angebote für Selbstständige und Geschäftskunden",
+                    "Kombi-Vorteile für DSL und Mobilfunk",
+                    "Kostenloser WLAN-Router bei Vertragsabschluss",
                     "Flexibles Streaming mit GigaTV",
-                    "24/7 Kundenhotline",
-                    "Bis zu 100€ Startguthaben",
-                    "Schnelle Installation",
-                    "Ausgezeichneter Kundenservice"
+                    "24/7 Kundenhotline für schnellen Support",
+                    "Bis zu 100€ Startguthaben für Neukunden",
+                    "Schnelle Installation und Einrichtung",
+                    "Testsieger für Kundenservice (connect 2025)"
                   ],
                   price: "ab 9,99€/Monat",
                   bonus: "Bis zu 100€ Startguthaben",
@@ -651,15 +675,16 @@ export default function Home() {
                   name: "1&1",
                   rating: 4.7,
                   features: [
-                    "Highspeed DSL bis 250 MBit/s",
-                    "Schneller HomeServer (tarifabhängig)",
-                    "Angebote für Selbstständige/Firmen",
+                    "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
+                    "Testsieger für Internetgeschwindigkeit (connect 2025)",
+                    "Kostenloser HomeServer für optimales WLAN",
+                    "Spezielle Angebote für Selbstständige und Firmen",
                     "Kombi-Vorteile mit Mobilfunktarifen",
-                    "30 Tage Testphase",
-                    "Bis zu 50€ Startguthaben",
-                    "24h Austausch-Service",
-                    "Umzugsservice",
-                    "Attraktive Smartphone-Bundles"
+                    "30 Tage Testphase für alle Tarife",
+                    "Bis zu 50€ Startguthaben für junge Kunden",
+                    "24h Austausch-Service bei Defekten",
+                    "Umfassender Umzugsservice",
+                    "Attraktive Bundle-Angebote mit Smartphones"
                   ],
                   price: "ab 9,99€/Monat",
                   bonus: "Bis zu 50€ Startguthaben",
@@ -670,16 +695,16 @@ export default function Home() {
                   name: "Verivox",
                   rating: 4.9,
                   features: [
-                    "Vergleich für Strom, Gas, DSL & Versicherungen",
-                    "Über 800 Anbieter im Check",
-                    "Angebote für Privat & Unternehmen",
-                    "Hohe Kundenzufriedenheit",
+                    "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
+                    "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
+                    "Spezielle Angebote für Selbstständige und Unternehmen",
+                    "TÜV-geprüftes Vergleichsportal mit 4.9/5 Bewertung",
                     "Bis zu 200€ Prämie für Freundschaftswerbung",
-                    "Kostenloser Wechselservice",
-                    "Transparente Tarifübersicht",
-                    "Schneller Online-Abschluss",
-                    "Über 25 Jahre Erfahrung",
-                    "Bis zu 1.000€ jährliche Ersparnis möglich"
+                    "Kostenloser Wechselservice für Tarife",
+                    "Transparente Tarifübersicht in der Verivox-App",
+                    "Schneller Online-Abschluss für Versicherungen",
+                    "Über 25 Jahre Erfahrung im Vergleichsmarkt",
+                    "Bis zu 1.000€ jährliche Einsparungen möglich"
                   ],
                   price: "100% kostenlos",
                   bonus: "Bis zu 200€ Prämie",
@@ -688,12 +713,23 @@ export default function Home() {
                 },
                 {
                   name: "freenet",
-                  rating: providerData.banking[3].rating,
-                  features: providerData.banking[3].features,
-                  price: providerData.banking[3].price,
-                  bonus: providerData.banking[3].bonus,
-                  logo: providerData.banking[3].logo,
-                  url: providerData.banking[3].url
+                  rating: 4.7,
+                  features: [
+                    "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+                    "Kostenloser Wechselservice für Mobilfunkverträge",
+                    "5G-Unterstützung in allen Tarifen",
+                    "Kombi-Vorteile mit DSL- und Festnetzanschluss",
+                    "Bis zu 100€ Startguthaben für Neukunden",
+                    "Kostenlose Hotline für Kunden",
+                    "Schnelle Vertragsabwicklung online",
+                    "Testsieger für Kundenservice (connect 2025)",
+                    "Zusätzliche Rabatte für junge Kunden unter 28",
+                    "Umweltfreundliche Tarife mit CO₂-Kompensation"
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 100€ Startguthaben",
+                  logo: "📱",
+                  url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref="
                 }
               ].map((provider) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
@@ -707,7 +743,7 @@ export default function Home() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                          className={`h-3 w-3 sm:h-4 sm:w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
                           aria-hidden="true"
                         />
                       ))}
@@ -739,15 +775,15 @@ export default function Home() {
                       rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                       aria-label={`Zum Anbieter ${provider.name}`}
                     >
-                      <Button className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-200 hover:bg-green-700 hover:shadow-md mt-auto">
+                      <Button className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 hover:bg-green-700 hover:scale-105 hover:shadow-lg mt-auto">
                         Jetzt abschließen*
                         {provider.name === "Vodafone" && (
                           <Image
                             src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
                             alt=""
-                            width={0}
-                            height={0}
-                            className="border-0"
+                            width={1}
+                            height={1}
+                            style={{ display: "none" }}
                           />
                         )}
                       </Button>
@@ -769,73 +805,139 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* Kundenbewertungen */}
         <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über Unser-Vergleichsportal.de</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über unser-vergleichsportal.de</h2>
             <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {[
-                { name: "Anna, 30", img: "/images/kundenbewertungen/anna.jpg", text: "Dank Unser-Vergleichsportal.de habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell.", stars: 5 },
-                { name: "Markus, 42", img: "/images/kundenbewertungen/markus.jpg", text: "Das Portal hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!", stars: 4 },
-                { name: "Helga, 60", img: "/images/kundenbewertungen/helga.jpg", text: "Ich war skeptisch, aber ich habe eine sichere Banklösung gefunden. Der Prozess war klar, und ich habe 50€ Bonus erhalten!", stars: 5 },
-                { name: "Lukas, 29", img: "/images/kundenbewertungen/lukas.jpg", text: "Hier habe ich die beste Trading-Plattform für mich gefunden. Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!", stars: 5 }
-              ].map(({ name, img, text, stars }) => (
-                <Card key={name} className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-                  <CardHeader className="pb-4 flex-shrink-0">
-                    <div className="flex items-center space-x-4">
-                      <Image
-                        src={img}
-                        alt={`Kundenbewertung von ${name}`}
-                        width={80}
-                        height={80}
-                        loading="lazy"
-                        className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
-                      />
-                      <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">{name}</CardTitle>
-                        <div className="flex items-center mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`h-4 w-4 ${i < stars ? "text-yellow-400 fill-current" : "text-gray-300"}`} aria-hidden="true" />
-                          ))}
-                        </div>
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+                <CardHeader className="pb-4 flex-shrink-0">
+                  <div className="flex items-center space-x-4">
+                    <Image
+                      src="/images/kundenbewertungen/anna.jpg"
+                      alt="Kundenbewertung von Anna, 30"
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
+                    />
+                    <div className="flex-grow min-w-0">
+                      <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
+                      <div className="flex items-center mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                        ))}
                       </div>
                     </div>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      “{text}”
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                </CardHeader>
+                <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                    "Dank unseres Vergleichs habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+                <CardHeader className="pb-4 flex-shrink-0">
+                  <div className="flex items-center space-x-4">
+                    <Image
+                      src="/images/kundenbewertungen/markus.jpg"
+                      alt="Kundenbewertung von Markus, 42"
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
+                    />
+                    <div className="flex-grow min-w-0">
+                      <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
+                      <div className="flex items-center mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className={`h-4 w-4 sm:h-5 sm:w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} aria-hidden="true" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                    "Der Vergleich hat uns die perfekte Tierversicherung für unseren Hund gezeigt. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+                <CardHeader className="pb-4 flex-shrink-0">
+                  <div className="flex items-center space-x-4">
+                    <Image
+                      src="/images/kundenbewertungen/helga.jpg"
+                      alt="Kundenbewertung von Helga, 60"
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
+                    />
+                    <div className="flex-grow min-w-0">
+                      <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
+                      <div className="flex items-center mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                    "Ich war skeptisch, aber der Bankvergleich war klar und transparent – sogar 50€ Bonus gab es obendrauf!"
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+                <CardHeader className="pb-4 flex-shrink-0">
+                  <div className="flex items-center space-x-4">
+                    <Image
+                      src="/images/kundenbewertungen/lukas.jpg"
+                      alt="Kundenbewertung von Lukas, 29"
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
+                    />
+                    <div className="flex-grow min-w-0">
+                      <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
+                      <div className="flex items-center mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                    "Durch den Vergleich habe ich die beste Trading-Plattform gefunden und spare jetzt Gebühren."
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
-            {/* Structured Data (WebSite/Org/FAQ) bleibt unverändert bis zur Erläuterung (#8) */}
+            {/* Schema.org Markup für SEO */}
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "WebSite",
-                  "name": "Unser-Vergleichsportal.de",
+                  "name": "unser-vergleichsportal.de",
                   "url": "https://unser-vergleichsportal.de",
                   "potentialAction": {
                     "@type": "SearchAction",
                     "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
                     "query-input": "required name=search_term_string"
-                  }
-                })
-              }}
-            />
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "Organization",
-                  "name": "Unser-Vergleichsportal.de",
-                  "url": "https://unser-vergleichsportal.de",
-                  "logo": "https://unser-vergleichsportal.de/logo.png",
+                  },
                   "aggregateRating": {
                     "@type": "AggregateRating",
                     "ratingValue": "4.8",
@@ -844,37 +946,10 @@ export default function Home() {
                 })
               }}
             />
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  "mainEntity": [
-                    {
-                      "@type": "Question",
-                      "name": "Wie funktioniert der Vergleich?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Wir vergleichen täglich über 500 Tarife und Anbieter. Du erhältst kostenlose, unabhängige Empfehlungen – passend zu deinem Bedarf."
-                      }
-                    },
-                    {
-                      "@type": "Question",
-                      "name": "Ist der Vergleich wirklich kostenlos?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Ja, der Vergleich ist 100% kostenlos und unverbindlich. Wir erhalten ggf. Provisionen von Partnern – ohne Einfluss auf Preise oder Bewertungen."
-                      }
-                    }
-                  ]
-                })
-              }}
-            />
           </div>
         </section>
 
-        {/* Schlanker CTA-Block unten */}
+        {/* Schlanker CTA-Block unten ohne Buttons */}
         <section className="py-12 sm:py-16 bg-green-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
@@ -892,20 +967,20 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei Unser-Vergleichsportal.de?</h3>
-                <p className="text-gray-700">Unser Team vergleicht täglich über 500 Produkte von führenden Anbietern. Du erhältst kostenlose, unabhängige Empfehlungen – passend zu deinem Bedarf.</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich?</h3>
+                <p className="text-gray-700">Wir prüfen täglich zahlreiche Tarife und Anbieter und stellen übersichtlich die besten Optionen für Ihre Bedürfnisse zusammen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h3>
-                <p className="text-gray-700">Ja, alle Vergleiche sind 100% kostenlos und unverbindlich. Wir können Provisionen von Partnern erhalten – das beeinflusst nicht deinen Preis.</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich kostenlos?</h3>
+                <p className="text-gray-700">Ja, der Vergleich ist 100% kostenlos und unverbindlich. Bei Abschluss erhalten wir ggf. eine Provision – ohne Einfluss auf Ihren Preis.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien gibt es?</h3>
-                <p className="text-gray-700">Versicherungen, Banking, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten, Mietwagen u. v. m.</p>
+                <p className="text-gray-700">Versicherungen, Banking, Tierversicherungen, Trading, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich Ergebnisse?</h3>
-                <p className="text-gray-700">Meist sofort. Bei komplexeren Fällen folgen passende Empfehlungen innerhalb weniger Minuten.</p>
+                <p className="text-gray-700">In der Regel sofort. Bei komplexen Anfragen erhalten Sie innerhalb weniger Minuten passende Empfehlungen.</p>
               </div>
             </div>
           </div>
@@ -923,56 +998,85 @@ export default function Home() {
               <div>
                 <h2 className="font-semibold mb-3">Finanzprodukte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/banking" className="hover:text-white transition-all duration-300 hover:scale-105">Banking</Link></li>
-                  <li><Link href="/tierversicherungen" className="hover:text-white transition-all duration-300 hover:scale-105">Haustierversicherung</Link></li>
-                  <li><Link href="/trading" className="hover:text-white transition-all duration-300 hover:scale-105">Trading</Link></li>
-                  <li><Link href="/versicherungen" className="hover:text-white transition-all duration-300 hover:scale-105">Versicherungen</Link></li>
+                  <li><Link href="/banking" className="hover:text-white transition">Banking</Link></li>
+                  <li><Link href="/tierversicherungen" className="hover:text-white transition">Haustierversicherung</Link></li>
+                  <li><Link href="/trading" className="hover:text-white transition">Trading</Link></li>
+                  <li><Link href="/versicherungen" className="hover:text-white transition">Versicherungen</Link></li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Weitere Produkte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">DSL</a></li>
-                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Gas</a></li>
-                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Handytarif</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Kreditkarte</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Mietwagen</a></li>
-                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Ökostrom</a></li>
-                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Reise</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all duration-300 hover:scale-105">Strom</a></li>
+                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">DSL</a></li>
+                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Gas</a></li>
+                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Handytarif</a></li>
+                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Kreditkarte</a></li>
+                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Mietwagen</a></li>
+                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Ökostrom</a></li>
+                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Reise</a></li>
+                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Strom</a></li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Unternehmen</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/karriere" className="hover:text-white transition-all duration-300 hover:scale-105">Karriere</Link></li>
-                  <li><Link href="/kontakt" className="hover:text-white transition-all duration-300 hover:scale-105">Kontakt</Link></li>
-                  <li><Link href="/partnerprogramme" className="hover:text-white transition-all duration-300 hover:scale-105">Partnerprogramm</Link></li>
-                  <li><Link href="/ueber-uns" className="hover:text-white transition-all duration-300 hover:scale-105">Über uns</Link></li>
+                  <li><Link href="/karriere" className="hover:text-white transition">Karriere</Link></li>
+                  <li><Link href="/kontakt" className="hover:text-white transition">Kontakt</Link></li>
+                  <li><Link href="/partnerprogramme" className="hover:text-white transition">Partnerprogramm</Link></li>
+                  <li><Link href="/ueber-uns" className="hover:text-white transition">Über uns</Link></li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Rechtliches</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/agb" className="hover:text-white transition-all duration-300 hover:scale-105">AGB</Link></li>
-                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition-all duration-300 hover:scale-105">Cookie-Richtlinie</Link></li>
-                  <li><Link href="/datenschutz" className="hover:text-white transition-all duration-300 hover:scale-105">Datenschutz</Link></li>
-                  <li><Link href="/impressum" className="hover:text-white transition-all duration-300 hover:scale-105">Impressum</Link></li>
+                  <li><Link href="/agb" className="hover:text-white transition">AGB</Link></li>
+                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition">Cookie-Richtlinie</Link></li>
+                  <li><Link href="/datenschutz" className="hover:text-white transition">Datenschutz</Link></li>
+                  <li><Link href="/impressum" className="hover:text-white transition">Impressum</Link></li>
                 </ul>
               </div>
             </div>
             <div className="border-t border-gray-800 mt-8 pt-6 text-center">
               <p className="text-sm text-gray-400 mb-4">
-                © 2025 Unser-Vergleichsportal.de. Alle Rechte vorbehalten. | Anbieter- & Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+                © 2025 unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
               </p>
               <Link href="/" aria-label="Zurück zur Startseite">
-                <Button className={btnPrimary}>
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition hover:bg-green-700 hover:scale-105 hover:shadow-lg">
                   Zurück zur Startseite
                 </Button>
               </Link>
             </div>
           </div>
         </footer>
+
+        {/* Organization Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "unser-vergleichsportal.de",
+              "url": "https://unser-vergleichsportal.de",
+              "logo": "https://unser-vergleichsportal.de/logo.png",
+              "description": "Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Kostenlos vergleichen & sparen.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "DE"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "German"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "100000"
+              }
+            })
+          }}
+        />
       </div>
     </>
   )
