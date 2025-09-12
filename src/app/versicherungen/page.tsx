@@ -468,59 +468,12 @@ export default function Versicherungen() {
         )}
       </header>
 
-      <section className="bg-white py-4 border-b" id="versicherungen">
-        <div className="container mx-auto px-4">
-          <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
-            {[
-              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-            ].map(({ key, label, url, isInternal }) => (
-              <li key={key}>
-                {isInternal ? (
-                  <Link
-                    href={url}
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => {}}
-                    aria-label={`Zu ${label} navigieren`}
-                  >
-                    {label}
-                  </Link>
-                ) : (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => {}}
-                    aria-label={`${label} vergleichen (externer Link)`}
-                  >
-                    {label}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-6">Versicherungen Vergleich 09/2025</h1>
             <p className="text-base mb-6">
-              Finden Sie die richtige Versicherung.
-              Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und
-              HanseMerkur bieten Ihnen erstklassigen Schutz und attraktive Boni.
+              Finden Sie die richtige Versicherung für sich und Ihre Familie.
             </p>
             <Button
               size="lg"
@@ -537,8 +490,11 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mt-2 text-2xl font-bold">
-              Sie möchten nicht nur sparen sondern Vermögen bilden?
+              Sie möchten nicht nur sparen, sondern Vermögen bilden?
             </h2>
+            <p className="mt-2 text-base">
+              Nutzen Sie Ihre Ersparnisse, um langfristig Vermögen aufzubauen.
+            </p>
             <div className="mt-3 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
@@ -554,10 +510,12 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Tipps zur Auswahl */}
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Versicherung</h2>
+          <p className="text-center text-base mb-6">
+            Entdecken Sie die besten Tipps, um die passende Versicherung für Ihre Bedürfnisse zu finden.
+          </p>
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
@@ -568,6 +526,9 @@ export default function Versicherungen() {
                   Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Reise-, E-Bike- oder
                   Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
                 </p>
+                <Button className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white" onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}>
+                  Tarife vergleichen
+                </Button>
               </CardContent>
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
@@ -579,6 +540,9 @@ export default function Versicherungen() {
                   Unsere Anbieter wie hepster, TravelSecure, Tarifcheck und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf
                   verifizierte Kundenmeinungen.
                 </p>
+                <Button className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white" onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}>
+                  Bewertungen prüfen
+                </Button>
               </CardContent>
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
@@ -589,16 +553,21 @@ export default function Versicherungen() {
                 <p className="text-sm text-gray-600">
                   Mit eRecht24 sichern Sie Ihre Versicherungsverträge DSGVO-konform ab. Nutzen Sie Rechtstext-Generatoren für maximale Sicherheit.
                 </p>
+                <Button className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white" onClick={() => window.open("https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default", "_blank")}>
+                  Rechtliche Details prüfen
+                </Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Anbieterübersicht */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger Versicherungen</h2>
+          <p className="text-center text-base mb-6">
+            Entdecken Sie die besten Versicherungen, die sich durch Qualität und Kundenzufriedenheit auszeichnen.
+          </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -645,7 +614,6 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Tierversicherung CTA-Box */}
       <section className="py-6 bg-white">
         <div className="container mx-auto px-4">
           <div className="bg-green-50 border border-green-200 rounded-xl p-5">
@@ -672,10 +640,12 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* E-Bike-Versicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h1>
+          <p className="text-center text-base mb-6">
+            Schützen Sie Ihr E-Bike vor Diebstahl und Schäden mit maßgeschneiderten Tarifen.
+          </p>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte.
@@ -712,10 +682,12 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Reiseversicherung Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h1>
+          <p className="text-center text-base mb-6">
+            Sichern Sie Ihre Reise mit umfassendem Schutz vor unvorhergesehenen Ereignissen.
+          </p>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob
@@ -752,10 +724,12 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Wohngebäudeversicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h1>
+          <p className="text-center text-base mb-6">
+            Schützen Sie Ihr Haus vor Schäden durch Naturereignisse und mehr.
+          </p>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Wohngebäudeversicherung</strong> ist für Hausbesitzer unverzichtbar, um Ihr Eigentum vor Schäden durch Feuer, Sturm, Hagel,
@@ -781,7 +755,7 @@ export default function Versicherungen() {
             <p className="mb-6">
               Mit Tarifcheck Wohngebäudeversicherung vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres
               Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie
-              jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
+              jetzt Ihren Vergleich und sichern Sie Ihr Zuhaome optimal ab!
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" target="_blank">
@@ -794,15 +768,17 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Krankenzusatzversicherung Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h1>
+          <p className="text-center text-base mb-6">
+            Ergänzen Sie Ihre Krankenversicherung mit zusätzlichen Leistungen.
+          </p>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Krankenzusatzversicherung</strong> ergänzt Ihre gesetzliche Krankenversicherung und bietet zusätzlichen Schutz für Leistungen, die
               nicht oder nur teilweise abgedeckt sind. Dazu gehören Behandlungen wie <strong>Chefarztbehandlung</strong>, <strong>Einzelzimmer im Krankenhaus</strong> oder
-              <strong> alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong>
+              <strong>alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong>
               interessant, die Zuschüsse für Sehhilfen bietet.
             </p>
             <h3 className="text-xl font-semibold mb-4">Warum eine Krankenzusatzversicherung sinnvoll ist</h3>
@@ -814,7 +790,7 @@ export default function Versicherungen() {
             </ul>
             <p className="mb-6">
               Anbieter wie HanseMerkur Zusatzkrankenversicherung bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer
-              <strong> Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
+              <strong>Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
             </p>
             <div className="text-center">
               <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" target="_blank">
@@ -827,14 +803,16 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Zahnzusatzversicherung Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h1>
+          <p className="text-center text-base mb-6">
+            Sichern Sie sich finanziellen Schutz für Zahnbehandlungen und Vorsorge.
+          </p>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <p className="mb-4">
               Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder
-              <strong> professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was
+              <strong>professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was
               eine <strong>Zahnzusatzversicherung für Implantate</strong> oder <strong>Zahnprophylaxe</strong> besonders attraktiv macht.
             </p>
             <h3 className="text-xl font-semibold mb-4">Vorteile einer Zahnzusatzversicherung</h3>
@@ -867,7 +845,6 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
