@@ -554,7 +554,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Tierversicherung Vergleich 2025: Beste Hunde- und Katzenversicherung</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Tierversicherung Vergleich September 2025: Beste Hunde- und Katzenversicherung</h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie die passende Haustierversicherung mit unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten-Versicherung für umfassenden Schutz Ihres Haustiers.
             </p>
@@ -576,7 +576,7 @@ export default function Tierversicherungen() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Tierversicherungen 2025</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Tierversicherungen September 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
