@@ -1,80 +1,53 @@
 "use client"
 
+import Head from "next/head"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Check, Menu, X } from "lucide-react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
 
-// Metadata für SEO (ersetzt Head)
-export const metadata = {
-  title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal",
-  description:
-    "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen.",
-  keywords: [
-    "Bitcoin handeln",
-    "Krypto-Trading",
-    "DeFi Trading",
-    "Trading Plattform",
-    "Social Trading",
-    "CFD Broker Vergleich",
-    "beste Broker 2025",
-    "XTB",
-    "eToro",
-    "TradingView",
-    "WEEX",
-    "Vantage",
-    "Bybit",
-    "Moneta Markets",
-  ],
-  robots: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
-  openGraph: {
-    type: "website",
-    title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich",
-    description: "Die besten Plattformen für DeFi & Krypto im Vergleich. Gebühren, Sicherheit & Funktionen auf einen Blick.",
-    url: "https://unser-vergleichsportal.de/trading",
-    siteName: "Unser-Vergleichsportal.de",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich",
-    description: "Vergleiche die Top-Plattformen für Bitcoin & DeFi. Jetzt Testsieger checken.",
-  },
-  other: {
-    "format-detection": "telephone=no",
-  },
-}
-
-// SmartFinanzLogo Component
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+// ---------- Logo (Brand vereinheitlicht auf Unser-Vergleichsportal.de)
+const SmartFinanzLogo = ({ className = "" }: { className?: string }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
-      <div className={`flex flex-col items-start ${className}`}>
-        <div className="flex items-center space-x-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
-            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-          </svg>
-          <span className="font-bold">martFinanz</span>
-        </div>
-        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
+      <div className={`flex items-center gap-2 ${className}`}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        >
+          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
+          <text
+            x="16"
+            y="22"
+            textAnchor="middle"
+            fontFamily="Arial Black, sans-serif"
+            fontSize="16"
+            fill="white"
+            fontWeight="900"
+          >
+            U
+          </text>
+        </svg>
+        <span className="font-bold">Unser-Vergleichsportal.de</span>
       </div>
     </Link>
   )
 }
 
-// Header Component
-const Header: React.FC = () => {
+// ---------- Header / Navigation
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("trading")
 
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+    const el = document.getElementById(sectionId)
+    if (el) el.scrollIntoView({ behavior: "smooth" })
   }
 
   useEffect(() => {
@@ -88,9 +61,7 @@ const Header: React.FC = () => {
     <>
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
-            <SmartFinanzLogo className="text-xl" />
-          </div>
+          <SmartFinanzLogo className="text-xl" />
           <button
             className="sm:hidden flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -108,11 +79,11 @@ const Header: React.FC = () => {
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                    { key: "banking", label: "Banking", url: "/banking", isInternal: true },
+                    { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
+                    { key: "trading", label: "Trading", url: "/trading", isInternal: true },
+                    { key: "versicherungen", label: "Versicherungen", url: "/versicherungen", isInternal: true },
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -129,16 +100,17 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
+
               <div>
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                      { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq" },
+                      { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj" },
+                      { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN" },
+                      { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh" },
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -158,11 +130,11 @@ const Header: React.FC = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                      { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R" },
+                      { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh" },
+                      { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E" },
+                      { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh" },
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -182,15 +154,16 @@ const Header: React.FC = () => {
                   </ul>
                 </div>
               </div>
+
               <div>
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
-                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
-                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
-                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                    { key: "karriere", label: "Karriere", url: "/karriere" },
+                    { key: "kontakt", label: "Kontakt", url: "/kontakt" },
+                    { key: "partnerprogramm", label: "Partnerprogramm", url: "/partnerprogramme" },
+                    { key: "ueber-uns", label: "Über uns", url: "/ueber-uns" },
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -207,15 +180,16 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
+
               <div>
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
-                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
-                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
-                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                    { key: "agb", label: "AGB", url: "/agb" },
+                    { key: "cookie-richtlinie", label: "Cookie-Richtlinie", url: "/cookie-richtlinie" },
+                    { key: "datenschutz", label: "Datenschutz", url: "/datenschutz" },
+                    { key: "impressum", label: "Impressum", url: "/impressum" },
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -232,6 +206,7 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="text-center mt-4">
                 <Button
                   className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
@@ -245,22 +220,23 @@ const Header: React.FC = () => {
         )}
       </header>
 
+      {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="trading">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
             {[
-              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: "banking", label: "Banking", url: "/banking", isInternal: true },
+              { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
+              { key: "trading", label: "Trading", url: "/trading", isInternal: true },
+              { key: "versicherungen", label: "Versicherung", url: "/versicherungen", isInternal: true },
+              { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
+              { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
+              { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
+              { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
+              { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
+              { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
+              { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
+              { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
             ].map(({ key, label, url, isInternal }) => (
               <li key={key}>
                 {isInternal ? (
@@ -293,7 +269,21 @@ const Header: React.FC = () => {
   )
 }
 
-const providerData = {
+// ---------- Datentypen & Daten
+type Provider = {
+  name: string
+  rating: number
+  features: string[]
+  price: string
+  bonus: string
+  logo: string
+  url: string
+  metaTitle?: string
+  metaDescription?: string
+  isTopRecommendation?: boolean
+}
+
+const providerData: { trading: Provider[] } = {
   trading: [
     {
       name: "TradingView",
@@ -464,40 +454,69 @@ const providerData = {
   ],
 }
 
-// Einheitliches Button-Layout (ohne Icons)
+// ---------- Buttons
 const btnBase =
   "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
 const btnPrimary = `${btnBase} bg-green-600 hover:bg-green-700 text-white`
 const btnSecondary = `${btnBase} bg-white text-green-600 hover:bg-gray-100`
 
+// ---------- Page Component
 export default function DeFi() {
   // Top-Empfehlungen zuerst
   const sortedProviders = [...providerData.trading].sort((a, b) => {
-    if (a.isTopRecommendation && !b.isTopRecommendation) return -1
-    if (!a.isTopRecommendation && b.isTopRecommendation) return 1
-    return 0
+    const aTop = a.isTopRecommendation ? 1 : 0
+    const bTop = b.isTopRecommendation ? 1 : 0
+    return bTop - aTop
   })
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Schema Markup for SEO */}
+      <Head>
+        <title>DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal.de</title>
+        <meta
+          name="description"
+          content="Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen."
+        />
+        <meta
+          name="keywords"
+          content="Bitcoin handeln, Krypto-Trading, DeFi Trading, Trading Plattform, Social Trading, CFD Broker Vergleich, beste Broker 2025, XTB, eToro, TradingView, WEEX, Vantage, Bybit, Moneta Markets"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/trading" />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich" />
+        <meta
+          property="og:description"
+          content="Die besten Plattformen für DeFi & Krypto im Vergleich. Gebühren, Sicherheit & Funktionen auf einen Blick."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/trading" />
+        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich" />
+        <meta
+          name="twitter:description"
+          content="Vergleiche die Top-Plattformen für Bitcoin & DeFi. Jetzt Testsieger checken."
+        />
+        <meta name="format-detection" content="telephone=no" />
+      </Head>
+
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal.de",
+            name:
+              "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal.de",
             description:
               "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Entdecken Sie eToro, TradingView, XTB, WEEX, Vantage und mehr für sicheres Trading mit niedrigen Gebühren.",
             url: "https://unser-vergleichsportal.de/trading",
-            keywords: [
-              "Bitcoin handeln",
-              "Krypto-Trading",
-              "DeFi Trading",
-              "Social Trading",
-              "Trading-Plattform",
-            ],
+            keywords:
+              "Bitcoin handeln, Krypto-Trading, DeFi Trading, Social Trading, Trading-Plattform",
             mainEntity: {
               "@type": "ItemList",
               itemListElement: sortedProviders.map((provider, index) => ({
@@ -517,7 +536,7 @@ export default function DeFi() {
                     ratingValue: provider.rating,
                     reviewCount: "100",
                   },
-                  keywords: ["Bitcoin handeln", "Krypto-Trading", "Social Trading", "DeFi", "Trading-Plattform"],
+                  keywords: "Bitcoin handeln, Krypto-Trading, Social Trading, DeFi, Trading-Plattform",
                 },
               })),
             },
@@ -532,15 +551,15 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Neo Broker September 2025 | Kostenlos Krypto, Bitcoin und Co. kaufen - Testsieger
+              Beste Neo Broker September 2025 | Kostenlos Krypto, Bitcoin und Co. kaufen – Testsieger
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Entdecken Sie die besten Aktiendepots, Online-Broker & Trading-Plattformen für Aktien, Forex, ETF, Rohstoffe, Futures, DeFi, Bitcoin
-              handeln und Krypto-Trading. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere
-              Testsieger wie eToro, TradingView, XTB, WEEX und Vantage bieten 0% Kommission, professionelle Tools und regulierte
-              Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise!
+              Entdecken Sie die besten Aktiendepots, Online-Broker & Trading-Plattformen für Aktien, Forex, ETF, Rohstoffe,
+              Futures, DeFi, Bitcoin handeln und Krypto-Trading. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und
+              attraktive Boni. Unsere Testsieger wie eToro, TradingView, XTB, WEEX und Vantage bieten 0% Kommission,
+              professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
-            <Link href="#anbieter">
+            <Link href="#anbieter" aria-label="Jetzt vergleichen">
               <Button className={btnSecondary}>Jetzt vergleichen</Button>
             </Link>
           </div>
@@ -556,22 +575,21 @@ export default function DeFi() {
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Vergleichen Sie Gebühren</CardTitle>
+                <CardTitle className="text-lg font-bold">Gebühren vergleichen</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro, XTB und Vantage. Prüfen Sie auch Spreads und Einzahlungsgebühren.
+                  Achten Sie auf 0% Kommission (z. B. XTB/Vantage) und prüfen Sie Spreads sowie Ein-/Auszahlungsgebühren.
                 </p>
               </CardContent>
             </Card>
             <Card className="bg-white border-2 hover:border-green-200">
               <CardHeader>
-                <CardTitle className="text-lg font-bold">Sicherheit und Regulierung</CardTitle>
+                <CardTitle className="text-lg font-bold">Sicherheit & Regulierung</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  eToro, XTB, Vantage (ASIC/FSCA) – Regulierung, Einlagensicherung und transparente
-                  Richtlinien sind wichtig.
+                  BaFin/ASIC/FSCA-Regulierung, Einlagensicherung und klare Richtlinien sind entscheidend.
                 </p>
               </CardContent>
             </Card>
@@ -580,9 +598,7 @@ export default function DeFi() {
                 <CardTitle className="text-lg font-bold">Demo-Konten nutzen</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600">
-                  Testen Sie Plattformen mit kostenlosen Demo-Konten, um Strategien risikofrei auszuprobieren.
-                </p>
+                <p className="text-sm text-gray-600">Strategien zunächst risikofrei testen – Lernkurve ↑, Fehlerkosten ↓.</p>
               </CardContent>
             </Card>
           </div>
@@ -595,6 +611,7 @@ export default function DeFi() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
             Testsieger Aktiendepots & Online-Broker-Vergleich September 2025
           </h2>
+
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
               <Card
@@ -614,11 +631,13 @@ export default function DeFi() {
                         className={`h-4 w-4 ${
                           i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
                         }`}
+                        aria-hidden="true"
                       />
                     ))}
                     <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
                   </div>
                 </CardHeader>
+
                 <CardContent className="flex flex-col flex-1">
                   <div className="text-center border-b pb-2 mb-4">
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
@@ -626,21 +645,30 @@ export default function DeFi() {
                       {provider.bonus}
                     </Badge>
                   </div>
+
                   <ul className="space-y-1 flex-1 overflow-auto">
                     {provider.features.map((feature, i) => (
                       <li key={i} className="flex items-center text-sm">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        <Check className="mr-2 h-4 w-4 text-green-600" aria-hidden="true" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={provider.url}
-                    target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                    rel={provider.url.startsWith("http") ? "noopener nofollow sponsored" : undefined}
-                  >
-                    <Button className={`w-full mt-auto ${btnPrimary}`}>Zum Anbieter*</Button>
-                  </Link>
+
+                  {provider.url.startsWith("http") ? (
+                    <a
+                      href={provider.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow sponsored"
+                      aria-label={`Zum Anbieter ${provider.name}`}
+                    >
+                      <Button className={`w-full mt-4 ${btnPrimary}`}>Zum Anbieter*</Button>
+                    </a>
+                  ) : (
+                    <Link href={provider.url} aria-label={`Zum Anbieter ${provider.name}`}>
+                      <Button className={`w-full mt-4 ${btnPrimary}`}>Zum Anbieter*</Button>
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -681,235 +709,67 @@ export default function DeFi() {
           <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
             DeFi & Krypto-Trading 2025: Ihr Weg zu Bitcoin, Memecoins & Bridging
           </h1>
+
           <div className="max-w-4xl mx-auto">
             <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Was ist DeFi? Der dezentrale Finanzmarkt erklärt
             </h2>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              DeFi (Decentralized Finance) revolutioniert den Finanzmarkt durch Blockchain-Technologie. Anstelle zentraler Banken ermöglichen Smart Contracts auf Plattformen wie Ethereum oder Polygon direkte Transaktionen wie Kredite, Staking oder Swaps. Im Jahr 2025 hat der DeFi-Markt ein Total Value Locked (TVL) von über $150 Mrd. erreicht. DeFi bietet:
+              DeFi (Decentralized Finance) revolutioniert den Finanzmarkt durch Blockchain-Technologie. Anstelle zentraler
+              Banken ermöglichen Smart Contracts auf Plattformen wie Ethereum oder Polygon direkte Transaktionen wie
+              Kredite, Staking oder Swaps.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <Check className="mr-2 h-4 w-4 text-green-600" aria-hidden="true" />
                 Dezentrales Trading ohne Zwischenhändler
               </li>
               <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
+                <Check className="mr-2 h-4 w-4 text-green-600" aria-hidden="true" />
                 Staking für passive Einkünfte
               </li>
               <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Liquidity Pools für hohe Renditen
+                <Check className="mr-2 h-4 w-4 text-green-600" aria-hidden="true" />
+                Liquidity Pools für potenziell hohe Renditen
               </li>
             </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Starten Sie mit TradingView für Top Screener und Social Trading oder erkunden Sie dezentrale Plattformen für DeFi.
-            </p>
 
             <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Krypto-Trading mit TradingView: Tools für Anfänger und Profis
             </h2>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              TradingView ist die führende Plattform für technische Analysen und Social Trading mit über 100 Millionen Nutzern. Ob Bitcoin, Ethereum oder Memecoins – mit Supercharts, Top Screener und Community-Ideen finden Anfänger und Profis die besten Handelsmöglichkeiten. Vorteile:
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Kostenloses Konto ohne Kreditkarte
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Echtzeit-Daten für Krypto, Aktien, Forex, Futures
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Integration mit Brokern wie OKX und FOREX.com
-              </li>
-            </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Tipp: Nutzen Sie TradingView’s Demo-Konto, um Strategien risikofrei zu testen.
+              TradingView ist führend für technische Analyse & Social Trading. Mit Supercharts, Screenern und Community-Ideen
+              finden Sie Handelschancen über Krypto, Aktien, Forex & Futures.
             </p>
 
             <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Bitcoin-Trading: Sicher handeln mit XTB
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 09/2025). Mit XTB können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                0% Kommission bis 100.000€ Umsatz
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Sichere Aufbewahrung mit Cold Storage
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Bis zu 2,3% Zinsen auf Guthaben
-              </li>
-            </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Tipp: Nutzen Sie XTB’s Demo-Konto, um Bitcoin-Trading risikofrei zu testen.
+              Mit XTB können Sie Bitcoin-CFDs handeln, ohne Coins physisch zu halten – inkl. Demo-Konto und 0% Kommission bis
+              100.000 € Umsatz.
             </p>
 
             <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Bridging in DeFi: Kryptowährungen zwischen Blockchains bewegen
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Bridging ermöglicht den Transfer von Kryptowährungen wie Bitcoin oder Ethereum zwischen Blockchains (z. B. Ethereum zu Polygon). Dies ist essenziell für DeFi, da viele Protokolle auf spezifischen Chains laufen.
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Warum Bridging?</strong> Zugang zu niedrigeren Gasgebühren oder spezifischen DeFi-Protokollen.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Wie funktioniert’s?</strong> Nutzen Sie Bridges wie Polygon Bridge, verbinden Sie Ihre Wallet (z. B. MetaMask) und transferieren Sie Tokens.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Risiken:</strong> Nutzen Sie vertrauenswürdige Bridges und prüfen Sie Smart-Contract-Audits, um Hacks zu vermeiden.
-              </li>
-            </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Spartipp: Kombinieren Sie Bridging mit Plattformen für sicheres Trading nach dem Transfer.
+              Bridges verschieben Tokens zwischen Chains (z. B. Ethereum ↔ Polygon). Nur etablierte Lösungen nutzen und
+              Smart-Contract-Audits prüfen.
             </p>
 
             <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Memecoin-Trading: Die Rolle von Telegram-Bots
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Memecoins wie Dogecoin oder Shiba Inu sind im Jahr 2025 ein Trend, besonders durch Telegram-Bots wie Banana Gun oder Maestro. Diese Bots ermöglichen schnelles Trading direkt über Telegram, ideal für volatile Memecoin-Märkte.
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Vorteile:</strong> Automatisiertes Sniper-Trading, Echtzeit-Preisalarme, Wallet-Integration.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Beliebte Bots:</strong> Banana Gun (Solana), Maestro (Ethereum).
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Risiken:</strong> Bots können teuer sein (ab $50/Monat) und erfordern technisches Wissen. Nutzen Sie verifizierte Bots.
-              </li>
-            </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Tipp: Kombinieren Sie Telegram-Bots mit TradingView für präzise Marktanalysen und Memecoin-Trading.
-            </p>
-
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Sicher Kryptowährungen kaufen und aufbewahren mit TradingView
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Sicherheit ist beim Krypto-Trading entscheidend. Mit TradingView analysieren Sie Märkte und traden sicher über verifizierte Broker:
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Analyse:</strong> Nutzen Sie Supercharts und Top Screener für präzise Marktanalysen.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Broker-Integration:</strong> Handeln Sie sicher über regulierte Broker wie OKX oder FOREX.com.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Community:</strong> Profitieren Sie von den Handelsideen der TradingView-Community.
-              </li>
-            </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Sicherheits-Tipp: Verwenden Sie Hardware-Wallets wie Ledger für langfristige Krypto-Aufbewahrung und aktivieren Sie 2FA.
-            </p>
-
-            <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              So bauen Sie Vermögen mit Bitcoin-Trading auf – steuerfrei nach einem Jahr
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Bitcoin bietet eine einzigartige Möglichkeit, Vermögen aufzubauen, insbesondere durch die steuerliche Behandlung in Deutschland. Gemäß § 23 Abs. 1 Nr. 2 EStG sind Gewinne aus dem Verkauf von Kryptowährungen wie Bitcoin steuerfrei, wenn Sie diese länger als ein Jahr halten. Dies macht Bitcoin zu einer attraktiven Option für langfristige Investoren, die Kapital aufbauen möchten, ohne Kapitalertragssteuer zahlen zu müssen.
-            </p>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Warum Bitcoin für Vermögensaufbau?</h3>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Hohe Wertsteigerung:</strong> Bitcoin hat in der Vergangenheit starke Kurssteigerungen erlebt. Seit 2020 hat Bitcoin eine durchschnittliche jährliche Rendite von über 50% erzielt (Stand 09/2025).
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Steuerfreiheit nach einem Jahr:</strong> Wenn Sie Bitcoin kaufen und mindestens 12 Monate halten, sind Gewinne steuerfrei, unabhängig von der Höhe. Dies gilt für Privatpersonen, die Bitcoin als privates Verägensgut halten.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Dezentrale Natur:</strong> Bitcoin ist unabhängig von zentralen Banken, was es zu einer Absicherung gegen Inflation macht.
-              </li>
-            </ul>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Wie funktioniert steuerfreies Bitcoin-Trading?</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Um von der Steuerfreiheit zu profitieren, kaufen Sie Bitcoin auf einer regulierten Plattform wie XTB und halten Sie die Coins für mindestens ein Jahr. Nach Ablauf dieser Frist können Sie die Bitcoin verkaufen, und die Gewinne sind von der Kapitalertragssteuer befreit. Wichtig: Die Haltefrist beginnt mit dem Kaufdatum und endet mit dem Verkauf. Beispiel:
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Kauf:</strong> Sie investieren 5.000 € in Bitcoin am 01.09.2025 über XTB.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Holding:</strong> Sie halten die Bitcoin bis mindestens 02.09.2026.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Verkauf:</strong> Nach einem Kursanstieg verkaufen Sie die Bitcoin für 10.000 €. Der Gewinn von 5.000 € ist steuerfrei.
-              </li>
-            </ul>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Warum XTB für Bitcoin-Trading?</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              XTB ist eine regulierte Plattform (BaFin), die Bitcoin-CFDs mit 0% Kommission bis 100.000 € Umsatz anbietet. Zusätzlich bietet XTB:
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Kostenloses Demo-Konto zum Testen von Strategien
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Bis zu 2,3% Zinsen auf Ihr Guthaben
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Benutzerfreundliche Plattform für Anfänger und Profis
-              </li>
-            </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Tipp: Starten Sie mit XTB, um Bitcoin sicher zu kaufen und von der steuerfreien Haltefrist zu profitieren.
-            </p>
-            <h3 className="text-base sm:text-lg font-semibold mb-2">Wichtige Hinweise zur Steuerfreiheit</h3>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Private Nutzung:</strong> Die Steuerfreiheit gilt nur für private Anleger, nicht für gewerbliche Trader.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Haltefrist:</strong> Die Bitcoin müssen mindestens 12 Monate ununterbrochen gehalten werden.
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Risiken:</strong> Bitcoin ist volatil. Kursverluste sind möglich, und die Steuerfreiheit schützt nicht vor Verlusten.
-              </li>
-            </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Fazit: Bitcoin-Trading mit einer Haltefrist von über einem Jahr bietet eine einzigartige Chance, Vermögen steuerfrei aufzubauen. Mit XTB können Sie sicher und einfach in Bitcoin investieren.
+              Bots wie Banana Gun/Maestro erlauben schnelle Orders & Alarme. Kosten und Sicherheit beachten.
             </p>
 
             {/* Versicherungen-CTA */}
             <div className="mt-5 bg-green-50 border border-green-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <p className="text-sm sm:text-base text-green-900">
-                Bewahren Sie Bitcoin in <strong>Eigenverwahrung</strong> auf? Denken Sie an Absicherung (z. B. Hausrat-, Cyber-
-                oder Rechtsschutz – je nach Tarif).
+                Bewahren Sie Krypto in <strong>Eigenverwahrung</strong> auf? Denken Sie an Absicherung (z. B. Hausrat-,
+                Cyber- oder Rechtsschutz – je nach Tarif).
               </p>
               <Link href="/versicherungen" aria-label="Versicherungen für Krypto-Anleger" title="Versicherungen für Krypto-Anleger">
                 <Button className={btnPrimary}>Zu den Versicherungen</Button>
@@ -926,70 +786,23 @@ export default function DeFi() {
             Häufig gestellte Fragen zu Trading-Plattformen
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Was ist die beste Trading-Plattform für Anfänger?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Einsteiger profitieren von Social-Trading, Lernmaterialien und einem Demo-Konto, um Strategien risikofrei
-                  zu testen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Welche Gebühren fallen beim Trading an?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Kommissionen, Spreads und ggf. Ein-/Auszahlungsgebühren. Entscheidend ist die Gesamtkostenquote pro
-                  Strategie.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Wie sicher ist Krypto-Trading?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Sicherheit steigt mit Regulierung, 2FA, Cold-Storage-Optionen und transparenter Risikokommunikation der
-                  Anbieter.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Was ist der Unterschied zwischen CFD- und Krypto-Trading?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  CFDs handeln Preisbewegungen ohne Besitz des Basiswerts; Spot-Krypto bedeutet Kauf/Verkauf echter Coins an
-                  Börsen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Was sind Telegram-Bots im Memecoin-Trading?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Automatisierte Orders, Preisalarme und Wallet-Integration – mit Blick auf Kosten und Sicherheit auswählen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Wie funktioniert Bridging in DeFi?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Bridges verschieben Tokens zwischen Chains. Nur geprüfte Lösungen nutzen und zuerst klein testen.
-                </p>
-              </CardContent>
-            </Card>
+            {[
+              { q: "Was ist die beste Trading-Plattform für Anfänger?", a: "Einsteiger profitieren von Social-Trading, Lernmaterialien und einem Demo-Konto, um Strategien risikofrei zu testen." },
+              { q: "Welche Gebühren fallen beim Trading an?", a: "Kommissionen, Spreads sowie ggf. Ein-/Auszahlungsgebühren. Entscheidend ist die Gesamtkostenquote pro Strategie." },
+              { q: "Wie sicher ist Krypto-Trading?", a: "Regulierung, 2FA, Cold-Storage-Optionen und transparente Risikohinweise der Anbieter erhöhen die Sicherheit." },
+              { q: "CFD vs. Spot-Krypto?", a: "CFDs handeln Preisbewegungen ohne Besitz des Basiswerts; Spot-Krypto bedeutet Kauf/Verkauf echter Coins an Börsen." },
+              { q: "Was sind Telegram-Bots im Memecoin-Trading?", a: "Automatisierte Orders, Preisalarme und Wallet-Integration – immer Kosten/Sicherheit prüfen." },
+              { q: "Wie funktioniert Bridging in DeFi?", a: "Bridges verschieben Tokens zwischen Chains. Nur geprüfte Lösungen nutzen und zuerst klein testen." },
+            ].map((item, idx) => (
+              <Card key={idx} className="bg-white border-2 hover:border-green-200">
+                <CardHeader>
+                  <CardTitle className="text-lg font-bold">{item.q}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600">{item.a}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -1002,33 +815,26 @@ export default function DeFi() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Die Wahl der passenden Plattform hängt von Zielen, Budget und Erfahrung ab. Unser Leitfaden hilft bei der
+              Die Wahl der passenden Plattform hängt von Zielen, Budget und Erfahrung ab. Dieser Leitfaden hilft bei der
               Vorauswahl.
             </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">1. Trading-Ziele definieren</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Kurzfristiges Krypto/CFD-Trading vs. langfristiges Investieren (Aktien/ETFs) erfordert unterschiedliche Tools.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">2. Gebühren & Kosten prüfen</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Kommissionen, Spreads, Einzahlungen. Entscheidend ist die Summe pro Strategie.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">3. Sicherheit & Regulierung</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Regulierung, Einlagensicherung, transparente AGB, verlässlicher Support.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">4. Demo nutzen</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Erst simuliert handeln – Lernkurve steigt, Fehlerkosten sinken.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">5. Lernressourcen</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Akademien, Community-Ideen und Tutorials beschleunigen den Skill-Aufbau.
-            </p>
+            {[
+              { t: "1. Trading-Ziele definieren", d: "Kurzfristiges Krypto/CFD-Trading vs. langfristiges Investieren (Aktien/ETFs) erfordert unterschiedliche Tools." },
+              { t: "2. Gebühren & Kosten prüfen", d: "Kommissionen, Spreads, Ein-/Auszahlungen – auf die Summe pro Strategie achten." },
+              { t: "3. Sicherheit & Regulierung", d: "Regulierung, Einlagensicherung, transparente AGB, verlässlicher Support." },
+              { t: "4. Demo nutzen", d: "Erst simuliert handeln – Lernkurve steigt, Fehlerkosten sinken." },
+              { t: "5. Lernressourcen", d: "Akademien, Community-Ideen und Tutorials beschleunigen den Skill-Aufbau." },
+            ].map((row, i) => (
+              <div key={i} className="mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{row.t}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{row.d}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
@@ -1037,235 +843,127 @@ export default function DeFi() {
                 <SmartFinanzLogo className="text-xl" />
               </div>
             </div>
+
             <div>
               <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
               <ul className="space-y-2 text-base text-gray-400">
-                <li>
-                  <Link
-                    href="/banking"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Banking"
-                  >
-                    Banking
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/tierversicherungen"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Haustierversicherung"
-                  >
-                    Haustierversicherung
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/trading"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Trading"
-                  >
-                    Trading
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/versicherungen"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Versicherungen"
-                  >
-                    Versicherungen
-                  </Link>
-                </li>
+                {[
+                  { href: "/banking", label: "Banking" },
+                  { href: "/tierversicherungen", label: "Haustierversicherung" },
+                  { href: "/trading", label: "Trading" },
+                  { href: "/versicherungen", label: "Versicherungen" },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label={l.label}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
+
             <div>
               <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
-                  <li>
-                    <a
-                      href="https://www.c24n.de/ducwCtq"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="DSL Vergleich (externer Link)"
-                    >
-                      DSL
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/Uxudvkj"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Gasvergleich (externer Link)"
-                    >
-                      Gas
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/5R17qbN"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Handytarif vergleichen (externer Link)"
-                    >
-                      Handytarif
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/RYXPGyh"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Kreditkarten vergleichen (externer Link)"
-                    >
-                      Kreditkarte
-                    </a>
-                  </li>
+                  {[
+                    { href: "https://www.c24n.de/ducwCtq", label: "DSL" },
+                    { href: "https://www.c24n.de/Uxudvkj", label: "Gas" },
+                    { href: "https://www.c24n.de/5R17qbN", label: "Handytarif" },
+                    { href: "https://www.c24n.de/RYXPGyh", label: "Kreditkarte" },
+                  ].map((a) => (
+                    <li key={a.href}>
+                      <a
+                        href={a.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                        aria-label={`${a.label} Vergleich (externer Link)`}
+                      >
+                        {a.label}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
                 <ul className="space-y-2 text-base text-gray-400">
-                  <li>
-                    <a
-                      href="https://www.c24n.de/FZ9nd0R"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Mietwagen vergleichen (externer Link)"
-                    >
-                      Mietwagen
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/zxy0WKh"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Ökostrom vergleichen (externer Link)"
-                    >
-                      Ökostrom
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/EieKR0E"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Reise vergleichen (externer Link)"
-                    >
-                      Reise
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/RYXPGyh"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Stromvergleich (externer Link)"
-                    >
-                      Strom
-                    </a>
-                  </li>
+                  {[
+                    { href: "https://www.c24n.de/FZ9nd0R", label: "Mietwagen" },
+                    { href: "https://www.c24n.de/zxy0WKh", label: "Ökostrom" },
+                    { href: "https://www.c24n.de/EieKR0E", label: "Reise" },
+                    { href: "https://www.c24n.de/RYXPGyh", label: "Strom" },
+                  ].map((a) => (
+                    <li key={a.href}>
+                      <a
+                        href={a.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                        aria-label={`${a.label} vergleichen (externer Link)`}
+                      >
+                        {a.label}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
+
             <div>
               <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
               <ul className="space-y-2 text-base text-gray-400">
-                <li>
-                  <Link
-                    href="/karriere"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Karriere"
-                  >
-                    Karriere
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/kontakt"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Kontakt"
-                  >
-                    Kontakt
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/partnerprogramme"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Partnerprogramm"
-                  >
-                    Partnerprogramm
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/ueber-uns"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Über uns"
-                  >
-                    Über uns
-                  </Link>
-                </li>
+                {[
+                  { href: "/karriere", label: "Karriere" },
+                  { href: "/kontakt", label: "Kontakt" },
+                  { href: "/partnerprogramme", label: "Partnerprogramm" },
+                  { href: "/ueber-uns", label: "Über uns" },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label={l.label}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
+
             <div>
               <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
               <ul className="space-y-2 text-base text-gray-400">
-                <li>
-                  <Link
-                    href="/agb"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="AGB"
-                  >
-                    AGB
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cookie-richtlinie"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Cookie-Richtlinie"
-                  >
-                    Cookie-Richtlinie
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/datenschutz"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Datenschutz"
-                  >
-                    Datenschutz
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/impressum"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Impressum"
-                  >
-                    Impressum
-                  </Link>
-                </li>
+                {[
+                  { href: "/agb", label: "AGB" },
+                  { href: "/cookie-richtlinie", label: "Cookie-Richtlinie" },
+                  { href: "/datenschutz", label: "Datenschutz" },
+                  { href: "/impressum", label: "Impressum" },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label={l.label}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
+
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-base text-gray-400 mb-4">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              © 2025 Unser-Vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking,
+              DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
-              <Button
-                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-              >
+              <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 Zurück zur Startseite
               </Button>
             </Link>
