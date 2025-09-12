@@ -538,23 +538,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Suchbereich */}
-        <section className="py-8 sm:py-12 bg-white" id="search-section">
-          <div className="container mx-auto px-4">
-            <div className="max-w-xl sm:max-w-2xl mx-auto">
-              <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">Finden Sie das passende Angebot</h2>
-              <div className="relative">
-                <Search className="absolute left-3 top-3 h-4 w-4 sm:h-5 w-5 text-gray-400" aria-hidden="true" />
-                <Input
-                  placeholder="Suchen Sie nach Versicherungen, Konten, DSL, Strom oder Anbietern..."
-                  className="pl-10 py-2 sm:py-3 text-sm sm:text-lg border-2 border-gray-200 focus:border-green-500 w-full"
-                  onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
-                  aria-label="Suche nach Finanzprodukten"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
