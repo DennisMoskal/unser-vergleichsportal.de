@@ -455,13 +455,23 @@ export default function Versicherungen() {
                   ))}
                 </ul>
               </div>
-              <div className="text-center mt-4">
-                <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Startseite
-                </Button>
+              <div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Vermögen bilden</h2>
+                <div className="text-center mt-4">
+                  <Button
+                    asChild
+                    className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Link
+                      href="/trading"
+                      aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                      title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                    >
+                      Jetzt Depots vergleichen <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </nav>
           </div>
@@ -537,7 +547,7 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mt-2 text-2xl font-bold">
-              Sie möchten nicht nur sparen sondern Vermögen bilden?
+              Sie möchten Vermögen bilden?
             </h2>
             <div className="mt-3 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
