@@ -544,7 +544,7 @@ export default function Home() {
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger September 2025 | Finanzvergleich aktuell</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger September 2025 | Anbieter- & Finanzvergleich aktuell</h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
