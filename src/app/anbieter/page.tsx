@@ -15,7 +15,7 @@ export default function AnbieterPage() {
         <title>Vergleichen Sie Finanzprodukte sicher mit SmartFinanz</title>
         <meta
           name="description"
-          content="Entdecken Sie die besten Angebote für Versicherungen, Kredite, Banking und mehr mit den geprüften Partnern von SmartFinanz. Sicher, kostenlos und transparent."
+          content="Entdecken Sie die besten Angebote für Versicherungen, Kredite, Banking und mehr mit den geprüften Partnern von unser-vergleichsportal.de. Sicher, kostenlos und transparent."
         />
         <meta
           name="keywords"
@@ -27,7 +27,7 @@ export default function AnbieterPage() {
         <meta property="og:title" content="Vergleichen Sie Finanzprodukte sicher mit SmartFinanz" />
         <meta
           property="og:description"
-          content="Entdecken Sie die besten Angebote für Versicherungen, Kredite, Banking und mehr mit den geprüften Partnern von SmartFinanz."
+          content="Entdecken Sie die besten Angebote für Versicherungen, Kredite, Banking und mehr mit den geprüften Partnern von unser-vergleichsportal.de."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/anbieter" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
