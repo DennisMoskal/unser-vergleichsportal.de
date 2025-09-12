@@ -1074,28 +1074,99 @@ export default function Home() {
         </section>
 
         {/* Statistik-Bereich */}
-        <section className="py-12 sm:py-16 bg-green-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
-              <div>
-                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">500+</h2>
-                <p className="text-green-100 text-sm sm:text-base">Anbieter verglichen</p>
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">100.000+</h2>
-                <p className="text-green-100 text-sm sm:text-base">Zufriedene Kunden</p>
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">€2.5M</h2>
-                <p className="text-green-100 text-sm sm:text-base">Gespart insgesamt</p>
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">4.8★</h2>
-                <p className="text-green-100 text-sm sm:text-base">Durchschnittsbewertung</p>
-              </div>
-            </div>
-          </div>
-        </section>
+       {/* CTA-Zeile + 12 Buttons (statt des unteren Statistik-Blocks) */}
+<section className="py-12 sm:py-16 bg-green-600 text-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl sm:text-3xl font-extrabold text-center tracking-tight">
+      Jetzt vergleichen <span className="mx-3 opacity-75">|</span> einfach sparen
+    </h2>
+
+    {/* Einreihige Button-Leiste – horizontal scrollbar auf kleineren Screens */}
+    <div className="mt-8">
+      <div className="flex gap-3 sm:gap-4 items-center overflow-x-auto no-scrollbar py-2 px-1 whitespace-nowrap">
+        {/* Interne Ziele */}
+        <Link href="/banking" aria-label="Banking vergleichen">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Banking
+          </span>
+        </Link>
+        <Link href="/tierversicherungen" aria-label="Haustierversicherung vergleichen">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Haustierversicherung
+          </span>
+        </Link>
+        <Link href="/trading" aria-label="Trading vergleichen">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Trading
+          </span>
+        </Link>
+        <Link href="/versicherungen" aria-label="Versicherungen vergleichen">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Versicherungen
+          </span>
+        </Link>
+
+        {/* Externe Ziele */}
+        <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" aria-label="DSL vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            DSL
+          </span>
+        </a>
+        <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" aria-label="Gas vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Gas
+          </span>
+        </a>
+        <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" aria-label="Handytarif vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Handytarif
+          </span>
+        </a>
+        <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" aria-label="Kreditkarte vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Kreditkarte
+          </span>
+        </a>
+        <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" aria-label="Mietwagen vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Mietwagen
+          </span>
+        </a>
+        <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" aria-label="Ökostrom vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Ökostrom
+          </span>
+        </a>
+        <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" aria-label="Reise vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Reise
+          </span>
+        </a>
+        <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" aria-label="Strom vergleichen (externer Link)">
+          <span className="inline-flex items-center justify-center rounded-xl bg-white text-green-700 font-medium px-4 sm:px-5 py-2 shadow-sm transition
+                           hover:scale-[1.03] hover:shadow-md hover:bg-green-50">
+            Strom
+          </span>
+        </a>
+      </div>
+
+      {/* optional: kleines Hint darunter */}
+      <p className="mt-4 text-center text-green-100 text-sm">Schnell, sicher &amp; kostenlos – mit nur wenigen Klicks zum besten Angebot.</p>
+    </div>
+  </div>
+</section>
+
 
         {/* FAQ Section für bessere SEO */}
         <section className="py-12 sm:py-16 bg-white">
