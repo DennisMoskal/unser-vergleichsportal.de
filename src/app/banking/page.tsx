@@ -565,7 +565,7 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich September 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
