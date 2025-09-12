@@ -380,9 +380,7 @@ export default function Versicherungen() {
                 rel="sponsored"
                 className="inline-block"
               >
-                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base px-6 py-3 transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100">
-                  Versicherungen vergleichen
-                </Button>
+                
               </a>
               <a
                 href="https://www.huk.de/versicherungen/kfz-versicherung.html"
@@ -390,9 +388,7 @@ export default function Versicherungen() {
                 rel="sponsored"
                 className="inline-block"
               >
-                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base px-6 py-3 transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100">
-                  Kfz-Versicherung vergleichen
-                </Button>
+               
               </a>
             </div>
           </div>
