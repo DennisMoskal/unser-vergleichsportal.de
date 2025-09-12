@@ -365,13 +365,35 @@ export default function Banking() {
 
       <Header />
 
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank 2025 | Girokonto, Kredit & Baufinanzierung Testsieger</h1>
-            <p className="text-base mb-6">
+            <p className="text-base sm:text-lg mb-8">
               Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+              <a
+                href="https://www.check24.de/kredit/"
+                target="_blank"
+                rel="sponsored"
+                className="inline-block"
+              >
+                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base px-6 py-3 transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100">
+                  Kredit vergleichen
+                </Button>
+              </a>
+              <a
+                href="https://www.tarifcheck.de/girokonto/"
+                target="_blank"
+                rel="sponsored"
+                className="inline-block"
+              >
+                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base px-6 py-3 transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100">
+                  Girokonto vergleichen
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -832,6 +854,17 @@ export default function Banking() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt vergleichen | einfach sparen</h2>
+            <p className="text-base sm:text-lg">
+              Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
+            </p>
           </div>
         </div>
       </section>
