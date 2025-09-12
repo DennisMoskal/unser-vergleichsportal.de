@@ -1,21 +1,58 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Head from "next/head"
 
-// SmartFinanzLogo-Komponente
+// Metadata for SEO (replacing Head)
+export const metadata = {
+  title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal",
+  description:
+    "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen.",
+  keywords: [
+    "Bitcoin handeln",
+    "Krypto-Trading",
+    "DeFi Trading",
+    "Trading Plattform",
+    "Social Trading",
+    "CFD Broker Vergleich",
+    "beste Broker 2025",
+    "XTB",
+    "eToro",
+    "TradingView",
+    "WEEX",
+    "Vantage",
+    "Bybit",
+    "Moneta Markets",
+  ],
+  robots: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+  openGraph: {
+    type: "website",
+    title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich",
+    description: "Die besten Plattformen für DeFi & Krypto im Vergleich. Gebühren, Sicherheit & Funktionen auf einen Blick.",
+    url: "https://unser-vergleichsportal.de/trading",
+    siteName: "Unser-Vergleichsportal.de",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich",
+    description: "Vergleiche die Top-Plattformen für Bitcoin & DeFi. Jetzt Testsieger checken.",
+  },
+  other: {
+    "format-detection": "telephone=no",
+  },
+}
+
+// SmartFinanzLogo Component (Client Component)
+"use client"
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
       <div className={`flex flex-col items-start ${className}`}>
         <div className="flex items-center space-x-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
             <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
           </svg>
           <span className="font-bold">martFinanz</span>
@@ -26,7 +63,8 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-// Reusable Header Component
+// Header Component (Client Component)
+"use client"
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("trading")
@@ -207,7 +245,6 @@ const Header: React.FC = () => {
         )}
       </header>
 
-      {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="trading">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
@@ -271,7 +308,7 @@ const providerData = {
         "Erweiterte Indikatoren und Strategien",
         "Mobile App für Trading unterwegs",
         "Krypto-Trading mit Echtzeit-Daten",
-        "Kostenloses Demo-Konto für Einsteiger"
+        "Kostenloses Demo-Konto für Einsteiger",
       ],
       price: "0€ Kontoeröffnung",
       bonus: "Kostenloser Start",
@@ -280,7 +317,7 @@ const providerData = {
       metaTitle: "TradingView: Beste Plattform für Krypto- und Aktien-Trading 2025",
       metaDescription:
         "TradingView bietet Supercharts, Top Screener und Social Trading für über 100 Mio. Nutzer. Starten Sie kostenlos mit Aktien, Krypto, Forex und Futures!",
-      isTopRecommendation: true
+      isTopRecommendation: true,
     },
     {
       name: "eToro",
@@ -295,7 +332,7 @@ const providerData = {
         "eToro-Akademie mit kostenlosen Kursen",
         "Über 35 Mio. Nutzer weltweit",
         "Bitcoin handeln mit niedrigen Gebühren",
-        "Krypto-Trading sicher mit Cold Storage"
+        "Krypto-Trading sicher mit Cold Storage",
       ],
       price: "1% Spread bei Krypto",
       bonus: "Kostenloses Demo-Konto",
@@ -304,7 +341,7 @@ const providerData = {
       metaTitle: "eToro Trading: Top Plattform für Bitcoin handeln und Social Trading 2025",
       metaDescription:
         "eToro bietet Social Trading, Bitcoin handeln mit niedrigen Gebühren, über 70 Kryptowährungen und 3.000+ Aktien/ETFs. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
+      isTopRecommendation: true,
     },
     {
       name: "XTB",
@@ -320,7 +357,7 @@ const providerData = {
         "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
         "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
+        "Platz 1 CFD-Broker 2024/25",
       ],
       price: "0€ Kommission",
       bonus: "Kostenlose Kontoeröffnung",
@@ -329,7 +366,7 @@ const providerData = {
       metaTitle: "XTB Trading: Testsieger CFD-Broker 2025",
       metaDescription:
         "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!",
-      isTopRecommendation: true
+      isTopRecommendation: true,
     },
     {
       name: "WEEX",
@@ -343,7 +380,7 @@ const providerData = {
         "Verfügbar in über 130 Ländern weltweit",
         "Regulierte Plattform mit globalen Lizenzen",
         "5% Coupon bei Einzahlung für neue Nutzer",
-        "24/7 Kundensupport und benutzerfreundliche Oberfläche"
+        "24/7 Kundensupport und benutzerfreundliche Oberfläche",
       ],
       price: "0,1% Taker Fee",
       bonus: "5% Einzahlungs-Coupon",
@@ -352,7 +389,7 @@ const providerData = {
       metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
       metaDescription:
         "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!",
-      isTopRecommendation: true
+      isTopRecommendation: true,
     },
     {
       name: "Bybit",
@@ -365,7 +402,7 @@ const providerData = {
         "Kostenlose Einzahlungen via SEPA oder Kreditkarte",
         "24/7 mehrsprachiger Kundensupport",
         "Bybit Learn für Krypto-Wissen und Strategien",
-        "Reguliert und sicher für globale Nutzer"
+        "Reguliert und sicher für globale Nutzer",
       ],
       price: "0,1% Taker Fee",
       bonus: "Willkommensbonus bis zu 5.000 USDT",
@@ -374,7 +411,7 @@ const providerData = {
       metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage 2025",
       metaDescription:
         "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!",
-      isTopRecommendation: true
+      isTopRecommendation: true,
     },
     {
       name: "Moneta Markets",
@@ -389,7 +426,7 @@ const providerData = {
         "Reguliert durch SLIBC und FSCA",
         "Segregierte Konten bei AA-Rated Bank",
         "Kostenloses Demo-Konto für risikofreies Trading",
-        "Erweiterte Tools: Premium Economic Calendar, AI Market Buzz"
+        "Erweiterte Tools: Premium Economic Calendar, AI Market Buzz",
       ],
       price: "0.0 Pips Spread",
       bonus: "50% Cashback Bonus",
@@ -398,7 +435,7 @@ const providerData = {
       metaTitle: "Moneta Markets: Top Online Trading Plattform 2025",
       metaDescription:
         "Moneta Markets bietet über 1000 Instrumente, Spreads ab 0.0 Pips, bis zu 1000:1 Leverage und 50% Cashback Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
+      isTopRecommendation: true,
     },
     {
       name: "Vantage",
@@ -413,7 +450,7 @@ const providerData = {
         "MetaTrader 4, MetaTrader 5 und Vantage App",
         "Kostenloses Demo-Konto für risikofreies Testen",
         "Einzahlungsbonus bis zu 50% für neue Trader",
-        "Partnerschaft mit Scuderia Ferrari HP"
+        "Partnerschaft mit Scuderia Ferrari HP",
       ],
       price: "0.0 Pips Spread",
       bonus: "50% Einzahlungsbonus",
@@ -422,9 +459,9 @@ const providerData = {
       metaTitle: "Vantage Trading: Top CFD-Broker für Forex & Krypto 2025",
       metaDescription:
         "Vantage bietet über 1.000 CFDs, Spreads ab 0.0 Pips, bis zu 500:1 Leverage und einen 50% Einzahlungsbonus. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
-    }
-  ]
+      isTopRecommendation: true,
+    },
+  ],
 }
 
 // Einheitliches Button-Layout (ohne Icons)
@@ -434,8 +471,6 @@ const btnPrimary = `${btnBase} bg-green-600 hover:bg-green-700 text-white`
 const btnSecondary = `${btnBase} bg-white text-green-600 hover:bg-gray-100`
 
 export default function DeFi() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   // Top-Empfehlungen zuerst
   const sortedProviders = [...providerData.trading].sort((a, b) => {
     if (a.isTopRecommendation && !b.isTopRecommendation) return -1
@@ -445,37 +480,6 @@ export default function DeFi() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Head>
-        <title>DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal</title>
-        <meta
-          name="description"
-          content="Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen."
-        />
-        <meta
-          name="keywords"
-          content="Bitcoin handeln, Krypto-Trading, DeFi Trading, Trading Plattform, Social Trading, CFD Broker Vergleich, beste Broker 2025, XTB, eToro, TradingView, WEEX, Vantage, Bybit, Moneta Markets"
-        />
-        <link rel="canonical" href="https://unser-vergleichsportal.de/trading" />
-        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich" />
-        <meta
-          property="og:description"
-          content="Die besten Plattformen für DeFi & Krypto im Vergleich. Gebühren, Sicherheit & Funktionen auf einen Blick."
-        />
-        <meta property="og:url" content="https://unser-vergleichsportal.de/trading" />
-        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich" />
-        <meta
-          name="twitter:description"
-          content="Vergleiche die Top-Plattformen für Bitcoin & DeFi. Jetzt Testsieger checken."
-        />
-        <meta name="format-detection" content="telephone=no" />
-      </Head>
-
       {/* Schema Markup for SEO */}
       <script
         type="application/ld+json"
@@ -492,7 +496,7 @@ export default function DeFi() {
               "Krypto-Trading",
               "DeFi Trading",
               "Social Trading",
-              "Trading-Plattform"
+              "Trading-Plattform",
             ],
             mainEntity: {
               "@type": "ItemList",
@@ -506,18 +510,18 @@ export default function DeFi() {
                   offers: {
                     "@type": "Offer",
                     price: provider.price,
-                    url: provider.url
+                    url: provider.url,
                   },
                   aggregateRating: {
                     "@type": "AggregateRating",
                     ratingValue: provider.rating,
-                    reviewCount: "100"
+                    reviewCount: "100",
                   },
-                  keywords: ["Bitcoin handeln", "Krypto-Trading", "Social Trading", "DeFi", "Trading-Plattform"]
-                }
-              }))
-            }
-          })
+                  keywords: ["Bitcoin handeln", "Krypto-Trading", "Social Trading", "DeFi", "Trading-Plattform"],
+                },
+              })),
+            },
+          }),
         }}
       />
 
@@ -528,7 +532,7 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Neo Broker 09/2025 | Kostenlos ETF kaufen - Testsieger
+              Beste Neo Broker September 2025 | Kostenlos Krypto, Bitcoin und Co. kaufen - Testsieger
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker & Trading-Plattformen für Aktien, Forex, ETF, Rohstoffe, Futures, DeFi, Bitcoin
@@ -589,7 +593,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Testsieger Aktiendepots & Online-Broker-Vergleich 2025
+            Testsieger Aktiendepots & Online-Broker-Vergleich September 2025
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -1037,36 +1041,36 @@ export default function DeFi() {
               <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/banking" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/banking"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Banking"
                   >
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/tierversicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/tierversicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Haustierversicherung"
                   >
                     Haustierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/trading" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/trading"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Trading"
                   >
                     Trading
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/versicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/versicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Versicherungen"
                   >
                     Versicherungen
@@ -1079,44 +1083,44 @@ export default function DeFi() {
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/ducwCtq" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/ducwCtq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="DSL Vergleich (externer Link)"
                     >
                       DSL
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/Uxudvkj" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/Uxudvkj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Gasvergleich (externer Link)"
                     >
                       Gas
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/5R17qbN" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/5R17qbN"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Handytarif vergleichen (externer Link)"
                     >
                       Handytarif
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Kreditkarten vergleichen (externer Link)"
                     >
                       Kreditkarte
@@ -1125,44 +1129,44 @@ export default function DeFi() {
                 </ul>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/FZ9nd0R" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/FZ9nd0R"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Mietwagen vergleichen (externer Link)"
                     >
                       Mietwagen
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/zxy0WKh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/zxy0WKh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Ökostrom vergleichen (externer Link)"
                     >
                       Ökostrom
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/EieKR0E" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/EieKR0E"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Reise vergleichen (externer Link)"
                     >
                       Reise
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Stromvergleich (externer Link)"
                     >
                       Strom
@@ -1175,36 +1179,36 @@ export default function DeFi() {
               <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/karriere" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/karriere"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Karriere"
                   >
                     Karriere
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/kontakt" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/kontakt"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Kontakt"
                   >
                     Kontakt
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/partnerprogramme" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/partnerprogramme"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Partnerprogramm"
                   >
                     Partnerprogramm
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/ueber-uns" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/ueber-uns"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Über uns"
                   >
                     Über uns
@@ -1216,36 +1220,36 @@ export default function DeFi() {
               <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/agb" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/agb"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="AGB"
                   >
                     AGB
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/cookie-richtlinie" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/cookie-richtlinie"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Cookie-Richtlinie"
                   >
                     Cookie-Richtlinie
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/datenschutz" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/datenschutz"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Datenschutz"
                   >
                     Datenschutz
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/impressum" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/impressum"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Impressum"
                   >
                     Impressum
@@ -1259,7 +1263,7 @@ export default function DeFi() {
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
-              <Button 
+              <Button
                 className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
                 Zurück zur Startseite
