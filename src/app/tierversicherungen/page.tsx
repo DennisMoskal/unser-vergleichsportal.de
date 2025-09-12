@@ -331,106 +331,233 @@ export default function Tierversicherungen() {
         </script>
       </Head>
 
-      {/* Header */}
+     // Reusable Header Component
+const Header: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState("versicherungen")
+
+  const scrollToSection = (sectionId: string) => {
+    setActiveCategory(sectionId)
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1)
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+      scrollToSection(hash)
+    }
+  }, [])
+
+  return (
+    <>
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex flex-col items-start">
-            <SmartFinanzLogo className="text-2xl text-gray-900" />
+          <div className="flex items-center">
+            <SmartFinanzLogo className="text-xl" />
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Versicherungen
-            </Link>
-            <Link href="/banking" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Banking
-            </Link>
-            <Link href="/tierversicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Tierversicherung
-            </Link>
-            <Link href="/trading" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Trading
-            </Link>
-            <Link href="/#kundenbewertungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Kundenbewertungen
-            </Link>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
-              Vergleich starten
-            </Button>
-            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu">
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+          <button
+            className="sm:hidden flex items-center justify-center"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Menü öffnen/schließen"
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menü */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-4 py-4 space-y-4">
-              <Link
-                href="/versicherungen"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  handleNavigation("/versicherungen")
-                }}
-              >
-                Versicherungen
-              </Link>
-              <Link
-                href="/banking"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  handleNavigation("/banking")
-                }}
-              >
-                Banking
-              </Link>
-              <Link
-                href="/tierversicherungen"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  handleNavigation("/tierversicherungen")
-                }}
-              >
-                Tierversicherung
-              </Link>
-              <Link
-                href="/trading"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  handleNavigation("/trading")
-                }}
-              >
-                Trading
-              </Link>
-              <Link
-                href="/#kundenbewertungen"
-                className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  handleNavigation("/#kundenbewertungen")
-                }}
-              >
-                Kundenbewertungen
-              </Link>
-              <Button
-                className="w-full bg-green-600 hover:bg-green-700"
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")
-                }}
-              >
-                Vergleich starten
-              </Button>
+          <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
+            <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
+              <div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
+                <ul className="flex flex-col gap-2 text-base">
+                  {[
+                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
+                <div className="grid grid-cols-2 gap-2">
+                  <ul className="flex flex-col gap-2 text-base">
+                    {[
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="flex flex-col gap-2 text-base">
+                    {[
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
+                <ul className="flex flex-col gap-2 text-base">
+                  {[
+                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
+                <ul className="flex flex-col gap-2 text-base">
+                  {[
+                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="text-center mt-4">
+                <Button
+                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Startseite
+                </Button>
+              </div>
             </nav>
           </div>
         )}
       </header>
+
+      {/* Kategorie-Navigation */}
+      <section className="bg-white py-4 border-b" id="versicherungen">
+        <div className="container mx-auto px-4">
+          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
+
+            {[
+              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
+              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+            ].map(({ key, label, url, isInternal }) => (
+              <li key={key}>
+                {isInternal ? (
+                  <Link
+                    href={url}
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`Zu ${label} navigieren`}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`${label} vergleichen (externer Link)`}
+                  >
+                    {label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* Einführungsabschnitt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
