@@ -525,7 +525,7 @@ export default function Home() {
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4">Finanzvergleich 2025: Günstige Versicherungen, Banking & mehr</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4">Finanzvergleich September 2025: Günstige Versicherungen, Banking & mehr</h1>
             <Button 
               size="lg" 
               className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
@@ -541,7 +541,7 @@ export default function Home() {
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-              Testsieger 2025: Top-Anbieter für Finanzprodukte
+              Testsieger September 2025: Top-Anbieter für Finanzprodukte
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
