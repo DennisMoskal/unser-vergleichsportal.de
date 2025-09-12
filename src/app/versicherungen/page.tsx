@@ -169,7 +169,7 @@ const providerData = [
     price: "ab 20€/Monat",
     bonus: "Gratis Rechtscheck",
     logo: "⚖️",
-    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subId=&target=default",
+    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
     badge: "Top Rechtsberatung"
   },
   {
@@ -457,648 +457,631 @@ export default function Versicherungen() {
               </div>
             </nav>
           </div>
-        </header>
+        )}
+      </header>
 
-        <section className="bg-white py-4 border-b" id="versicherungen">
-          <div className="container mx-auto px-4">
-            <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
-              {[
-                { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-                { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-                { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-                { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-                { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-              ].map(({ key, label, url, isInternal }) => (
-                <li key={key}>
-                  {isInternal ? (
-                    <Link
-                      href={url}
-                      className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                      onClick={() => {}}
-                      aria-label={`Zu ${label} navigieren`}
-                    >
-                      {label}
-                    </Link>
-                  ) : (
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                      onClick={() => {}}
-                      aria-label={`${label} vergleichen (externer Link)`}
-                    >
-                      {label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="py-16 bg-green-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-6">Versicherungen Vergleich 09/2025</h1>
-              <p className="text-base mb-6">
-                Finden Sie die richtige Versicherung.
-                Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und
-                HanseMerkur bieten Ihnen erstklassigen Schutz und attraktive Boni.
-              </p>
-              <Button
-                size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 font-medium"
-                onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
-              >
-                Jetzt Versicherungen vergleichen
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mt-3 flex justify-center">
-                <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+      <section className="bg-white py-4 border-b" id="versicherungen">
+        <div className="container mx-auto px-4">
+          <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
+            {[
+              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
+              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+            ].map(({ key, label, url, isInternal }) => (
+              <li key={key} className="flex-1 min-w-[calc(50%-0.5rem)] sm:min-w-[calc(16.666%-0.75rem)]">
+                {isInternal ? (
                   <Link
-                    href="/trading"
-                    aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
-                    title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                    href={url}
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 text-center"
+                    onClick={() => {}}
+                    aria-label={`Zu ${label} navigieren`}
                   >
-                    Jetzt Depots vergleichen <ArrowRight className="ml-2 h-5 w-5" />
+                    {label}
                   </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+                ) : (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 text-center"
+                    onClick={() => {}}
+                    aria-label={`${label} vergleichen (externer Link)`}
+                  >
+                    {label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-        {/* Tipps zur Auswahl */}
-        <section className="py-8 sm:py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Versicherung</h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              <Card className="bg-white border-2 hover:border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg font-bold">Vergleichen Sie Tarife</CardTitle>
+      <section className="py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Versicherungen Vergleich 09/2025</h1>
+            <p className="text-base mb-6">
+              Finden Sie die richtige Versicherung.
+              Vergleichen Sie über 300 Tarife kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger wie hepster, TravelSecure, Tarifcheck und
+              HanseMerkur bieten Ihnen erstklassigen Schutz und attraktive Boni.
+            </p>
+            <Button
+              size="lg"
+              className="bg-white text-green-600 hover:bg-gray-100 font-medium"
+              onClick={() => window.open("https://www.tarifcheck.com/xLfTPmG", "_blank")}
+            >
+              Jetzt Versicherungen vergleichen
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Tipps zur Auswahl */}
+      <section className="py-8 sm:py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Versicherung</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Vergleichen Sie Tarife</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Reise-, E-Bike- oder
+                  Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Achten Sie auf Bewertungen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Unsere Anbieter wie hepster, TravelSecure, Tarifcheck und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf
+                  verifizierte Kundenmeinungen.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white border-2 hover:border-green-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold">Prüfen Sie rechtliche Aspekte</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600">
+                  Mit eRecht24 sichern Sie Ihre Versicherungsverträge DSGVO-konform ab. Nutzen Sie Rechtstext-Generatoren für maximale Sicherheit.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Anbieterübersicht */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger Versicherungen</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {providerData.map((provider) => (
+              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
+                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">{provider.badge}</Badge>
+                <CardHeader className="text-center pb-2">
+                  <div className="text-3xl mb-2">{provider.logo}</div>
+                  <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
+                  <div className="flex items-center justify-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      />
+                    ))}
+                    <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
+                  </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">
-                    Nutzen Sie unseren kostenlosen Vergleich, um die besten Angebote für Wohngebäude-, Kfz-, Hausrat-, Haftpflicht-, Reise-, E-Bike- oder
-                    Zahnzusatzversicherungen zu finden. Über 300 Tarife stehen Ihnen zur Verfügung.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white border-2 hover:border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg font-bold">Achten Sie auf Bewertungen</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">
-                    Unsere Anbieter wie hepster, TravelSecure, Tarifcheck und CHECK24 haben Top-Bewertungen (z. B. eKomi 4,5/5). Vertrauen Sie auf
-                    verifizierte Kundenmeinungen.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white border-2 hover:border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg font-bold">Prüfen Sie rechtliche Aspekte</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">
-                    Mit eRecht24 sichern Sie Ihre Versicherungsverträge DSGVO-konform ab. Nutzen Sie Rechtstext-Generatoren für maximale Sicherheit.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Anbieterübersicht */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Unsere Testsieger Versicherungen</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {providerData.map((provider) => (
-                <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">{provider.badge}</Badge>
-                  <CardHeader className="text-center pb-2">
-                    <div className="text-3xl mb-2">{provider.logo}</div>
-                    <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
-                    <div className="flex items-center justify-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
-                        />
-                      ))}
-                      <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-col flex-1">
-                    <div className="text-center border-b pb-2 mb-4">
-                      <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                      <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
-                    </div>
-                    <ul className="space-y-1 flex-1 overflow-auto">
-                      {provider.features.map((feature, i) => (
-                        <li key={i} className="flex items-center text-sm">
-                          <Check className="mr-2 h-4 w-4 text-green-600" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
-                        Zum Anbieter*
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
-              <p>*Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Tierversicherung CTA-Box */}
-        <section className="py-6 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-green-800">
-                    Sie möchten zusätzlich Ihre Haustiere absichern – Tierarzt- &amp; OP-Kosten im Griff
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-700">
-                    Von Basis bis OP-Schutz: Vergleichen Sie Tarife für Hunde &amp; Katzen – schnell, transparent und 100% online.
-                  </p>
-                </div>
-                <Link
-                  href="/tierversicherungen"
-                  aria-label="Tierversicherung vergleichen – Schutz für Hund & Katze"
-                  title="Tierversicherung vergleichen – Schutz für Hund & Katze"
-                >
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Zu den Tierversicherungen
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* E-Bike-Versicherung Section */}
-        <section className="py-12 sm:py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h1>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <p className="mb-4">
-                Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte.
-                Besonders für teure E-Bikes ist eine Absicherung essenziell, um hohe Reparatur- oder Ersatzkosten zu vermeiden. Mit Anbietern wie hepster
-                erhalten Sie flexible Tarife ohne Selbstbeteiligung und Altersbeschränkung, die sich an Ihren Bedarf anpassen.
-              </p>
-              <h3 className="text-xl font-semibold mb-4">Warum eine E-Bike-Versicherung sinnvoll ist</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Diebstahl, auch bei unterwegs abgestellten E-Bikes.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Abdeckung von Reparaturkosten bei Unfällen oder Vandalismus.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Keine Selbstbeteiligung für geringere Eigenkosten.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Laufzeiten im Monats- oder Jahresabo.</span></li>
-              </ul>
-              <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
-              <p className="mb-4">Um die passende <strong>E-Bike-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass der Wert Ihres E-Bikes vollständig abgedeckt ist.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Diebstahl, Unfallschäden und Batterie-Defekte eingeschlossen sind.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Flexibilität</strong>: Wählen Sie Tarife mit kurzen Laufzeiten für saisonale Nutzung.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie hepster sind Trusted Shops zertifiziert und punkten mit Top-Bewertungen.</span></li>
-              </ul>
-              <p className="mb-6">
-                Mit der hepster E-Bike-Versicherung sichern Sie Ihr E-Bike einfach online ab. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie die
-                Versicherungsleistungen an und profitieren Sie von 100% digitaler Verwaltung. Starten Sie jetzt und schützen Sie Ihr E-Bike optimal!
-              </p>
-              <div className="text-center">
-                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt hepster E-Bike-Versicherung abschließen*
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Reiseversicherung Section */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h1>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <p className="mb-4">
-                Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob
-                Urlaub, Geschäftsreise oder Work & Travel – mit TravelSecure finden Sie maßgeschneiderte Tarife für Einzelpersonen, Familien, Gruppen oder
-                junge Reisende. TravelSecure ist mehrfacher Testsieger bei Stiftung Warentest (01/2025, Note 1,4).
-              </p>
-              <h3 className="text-xl font-semibold mb-4">Warum eine Reiseversicherung sinnvoll ist</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Stornokosten bei Reiseabbruch oder -rücktritt.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Absicherung von Krankheitskosten im Ausland, inkl. Rücktransport.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Spezialtarife für Work & Travel, Au-Pair, Studenten oder Gruppen.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Jahresreiseversicherung für Vielreisende ohne Selbstbeteiligung.</span></li>
-              </ul>
-              <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
-              <p className="mb-4">Um die passende <strong>Reiseversicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Reiserücktritt, Reiseabbruch, Auslandskrankenversicherung oder Gepäckschutz enthalten sind.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Reisedauer</strong>: Wählen Sie Tarife für Kurzreisen (bis 56 Tage) oder Langzeitreisen (bis 365 Tage).</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Selbstbeteiligung</strong>: Entscheiden Sie sich für Tarife ohne Selbstbehalt für maximale Kostensicherheit.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: TravelSecure punktet mit eKomi 4,3/5 und Focus Money „Beste Kundenhotline 2024“.</span></li>
-              </ul>
-              <p className="mb-6">
-                Mit der TravelSecure Reiseversicherung sichern Sie Ihre Reisen einfach online ab. Ob Jahresreiseversicherung Reisekarte4you oder Spezialtarife
-                für Gruppen und junge Reisende – TravelSecure bietet flexible Lösungen für jeden Reiseanlass. Starten Sie jetzt und reisen Sie sorgenfrei!
-              </p>
-              <div className="text-center">
-                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt TravelSecure Reiseversicherung abschließen*
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Wohngebäudeversicherung Section */}
-        <section className="py-12 sm:py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h1>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <p className="mb-4">
-                Eine <strong>Wohngebäudeversicherung</strong> ist für Hausbesitzer unverzichtbar, um Ihr Eigentum vor Schäden durch Feuer, Sturm, Hagel,
-                Überschwemmung oder Vandalismus zu schützen. Sie deckt Reparatur-, Instandsetzungs- oder Wiederaufbaukosten für Ihr Haus und fest
-                installierte Elemente wie Heizungsanlagen oder Einbauküchen ab. Mit einem <strong>Vergleich Wohngebäudeversicherung</strong> auf Plattformen wie
-                Tarifcheck finden Sie maßgeschneiderte Tarife, die Ihren Bedürfnissen entsprechen und bis zu 500€ jährlich sparen können.
-              </p>
-              <h3 className="text-xl font-semibold mb-4">Warum eine Wohngebäudeversicherung sinnvoll ist</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Elementarschäden wie Überschwemmungen oder Sturm.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Absicherung von Reparaturkosten bei Leitungswasser- oder Feuerschäden.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Bausteine für individuelle Bedürfnisse, z. B. Photovoltaik oder Vandalismus.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Kostenloser und unverbindlicher Vergleich für optimale Tarife.</span></li>
-              </ul>
-              <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
-              <p className="mb-4">Um die richtige <strong>Gebäudeversicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass die Versicherung den Wiederaufbauwert Ihres Hauses abdeckt.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Risiken</strong>: Wählen Sie Bausteine, die relevante Gefahren wie Elementarschäden oder Vandalismus abdecken.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Gleitender Neuwert</strong>: Nutzen Sie die gleitende Neuwertversicherung, um den Wert Ihres Hauses aktuell zu halten.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie Tarifcheck punkten mit Top-Bewertungen (z. B. Handelsblatt 09/2024).</span></li>
-              </ul>
-              <p className="mb-6">
-                Mit Tarifcheck Wohngebäudeversicherung vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres
-                Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie
-                jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
-              </p>
-              <div className="text-center">
-                <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt Wohngebäudeversicherung vergleichen*
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Krankenzusatzversicherung Section */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h1>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <p className="mb-4">
-                Eine <strong>Krankenzusatzversicherung</strong> ergänzt Ihre gesetzliche Krankenversicherung und bietet zusätzlichen Schutz für Leistungen, die
-                nicht oder nur teilweise abgedeckt sind. Dazu gehören Behandlungen wie <strong>Chefarztbehandlung</strong>, <strong>Einzelzimmer im Krankenhaus</strong> oder
-                <strong> alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong>
-                interessant, die Zuschüsse für Sehhilfen bietet.
-              </p>
-              <h3 className="text-xl font-semibold mb-4">Warum eine Krankenzusatzversicherung sinnvoll ist</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Kostenerstattung für Heilpraktikerbehandlungen und alternative Medizin.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zuschüsse für Sehhilfen, Hörgeräte oder Lasik-Operationen.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zugang zu exklusiven Krankenhausleistungen wie Chefarztbehandlung.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Tarife ohne lange Wartezeiten.</span></li>
-              </ul>
-              <p className="mb-6">
-                Anbieter wie HanseMerkur Zusatzkrankenversicherung bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer
-                <strong> Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
-              </p>
-              <div className="text-center">
-                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt HanseMerkur Krankenzusatzversicherung vergleichen*
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Zahnzusatzversicherung Section */}
-        <section className="py-12 sm:py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h1>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <p className="mb-4">
-                Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder
-                <strong> professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was
-                eine <strong>Zahnzusatzversicherung für Implantate</strong> oder <strong>Zahnprophylaxe</strong> besonders attraktiv macht.
-              </p>
-              <h3 className="text-xl font-semibold mb-4">Vorteile einer Zahnzusatzversicherung</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Bis zu 100% Kostenerstattung für Zahnersatz und Implantate.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zuschüsse für professionelle Zahnreinigung und Vorsorge.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Keine oder kurze Wartezeiten für sofortigen Schutz.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Transparente Tarife mit einfacher Online-Verwaltung.</span></li>
-              </ul>
-              <h3 className="text-xl font-semibold mb-4">Wie wähle ich die richtige Zahnzusatzversicherung?</h3>
-              <p className="mb-4">Achten Sie auf folgende Punkte:</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Implantate, Inlays oder Prophylaxe abgedeckt sind.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Wartezeiten</strong>: Wählen Sie Tarife ohne Wartezeit für schnellen Schutz.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kostenerstattung</strong>: Tarife mit hohen Erstattungssätzen sparen Ihnen langfristig Geld.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie HanseMerkur punkten mit Top-Bewertungen (z. B. Stiftung Warentest 07/2025).</span></li>
-              </ul>
-              <p className="mb-6">
-                Die HanseMerkur Zahnzusatzversicherung bietet umfassenden Schutz ohne Wartezeit und bis zu 100% Kostenerstattung für Zahnersatz. Vergleichen Sie
-                jetzt und sichern Sie sich den besten Tarif!
-              </p>
-              <div className="text-center">
-                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
-                    Jetzt HanseMerkur Zahnzusatzversicherung vergleichen*
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-8 sm:py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
-              <div className="col-span-2 md:col-span-1">
-                <div className="flex flex-col items-start mb-4">
-                  <SmartFinanzLogo className="text-xl" />
-                </div>
-              </div>
-              <div>
-                <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
-                <ul className="space-y-2 text-base text-gray-400">
-                  <li>
-                    <Link 
-                      href="/banking" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Banking"
-                    >
-                      Banking
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/tierversicherungen" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Haustierversicherung"
-                    >
-                      Haustierversicherung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/trading" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Trading"
-                    >
-                      Trading
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/versicherungen" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Versicherungen"
-                    >
-                      Versicherungen
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
-                <div className="grid grid-cols-2 gap-4">
-                  <ul className="space-y-2 text-base text-gray-400">
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/ducwCtq" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="DSL Vergleich (externer Link)"
-                      >
-                        DSL
-                      </a>
-                    </li>
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/Uxudvkj" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Gasvergleich (externer Link)"
-                      >
-                        Gas
-                      </a>
-                    </li>
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/5R17qbN" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Handytarif vergleichen (externer Link)"
-                      >
-                        Handytarif
-                      </a>
-                    </li>
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/RYXPGyh" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Kreditkarten vergleichen (externer Link)"
-                      >
-                        Kreditkarte
-                      </a>
-                    </li>
+                <CardContent className="flex flex-col flex-1">
+                  <div className="text-center border-b pb-2 mb-4">
+                    <p className="text-xl font-bold text-green-600">{provider.price}</p>
+                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">{provider.bonus}</Badge>
+                  </div>
+                  <ul className="space-y-1 flex-1 overflow-auto">
+                    {provider.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
-                  <ul className="space-y-2 text-base text-gray-400">
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/FZ9nd0R" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Mietwagen vergleichen (externer Link)"
-                      >
-                        Mietwagen
-                      </a>
-                    </li>
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/zxy0WKh" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Ökostrom vergleichen (externer Link)"
-                      >
-                        Ökostrom
-                      </a>
-                    </li>
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/EieKR0E" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Reise vergleichen (externer Link)"
-                      >
-                        Reise
-                      </a>
-                    </li>
-                    <li>
-                      <a 
-                        href="https://www.c24n.de/RYXPGyh" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                        aria-label="Stromvergleich (externer Link)"
-                      >
-                        Strom
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                  <Link href={provider.url} target={provider.url.startsWith('http') ? '_blank' : '_self'} rel={provider.url.startsWith('http') ? 'noopener noreferrer sponsored' : undefined}>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">
+                      Zum Anbieter*
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
+            <p>*Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tierversicherung CTA-Box */}
+      <section className="py-6 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="bg-green-50 border border-green-200 rounded-xl p-5">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
-                <ul className="space-y-2 text-base text-gray-400">
-                  <li>
-                    <Link 
-                      href="/karriere" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Karriere"
-                    >
-                      Karriere
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/kontakt" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Kontakt"
-                    >
-                      Kontakt
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/partnerprogramme" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Partnerprogramm"
-                    >
-                      Partnerprogramm
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/ueber-uns" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Über uns"
-                    >
-                      Über uns
-                    </Link>
-                  </li>
-                </ul>
+                <h3 className="text-base sm:text-lg font-semibold text-green-800">
+                  Sie möchten zusätzlich Ihre Haustiere absichern – Tierarzt- &amp; OP-Kosten im Griff
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700">
+                  Von Basis bis OP-Schutz: Vergleichen Sie Tarife für Hunde &amp; Katzen – schnell, transparent und 100% online.
+                </p>
               </div>
-              <div>
-                <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
-                <ul className="space-y-2 text-base text-gray-400">
-                  <li>
-                    <Link 
-                      href="/agb" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="AGB"
-                    >
-                      AGB
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/cookie-richtlinie" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Cookie-Richtlinie"
-                    >
-                      Cookie-Richtlinie
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/datenschutz" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Datenschutz"
-                    >
-                      Datenschutz
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      href="/impressum" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Impressum"
-                    >
-                      Impressum
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-              <p className="text-base text-gray-400 mb-4">
-                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-              </p>
-              <Link href="/" aria-label="Zurück zur Startseite">
-                <Button 
-                  className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                >
-                  Zurück zur Startseite
+              <Link
+                href="/tierversicherungen"
+                aria-label="Tierversicherung vergleichen – Schutz für Hund & Katze"
+                title="Tierversicherung vergleichen – Schutz für Hund & Katze"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Zu den Tierversicherungen
                 </Button>
               </Link>
             </div>
           </div>
-        </footer>
-      </div>
-    )
+        </div>
+      </section>
+
+      {/* E-Bike-Versicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">E-Bike-Versicherung: Optimaler Schutz für Ihr E-Bike</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>E-Bike-Versicherung</strong> schützt Ihr Elektrofahrrad vor Diebstahl, Schäden durch Unfälle, Vandalismus oder technische Defekte.
+              Besonders für teure E-Bikes ist eine Absicherung essenziell, um hohe Reparatur- oder Ersatzkosten zu vermeiden. Mit Anbietern wie hepster
+              erhalten Sie flexible Tarife ohne Selbstbeteiligung und Altersbeschränkung, die sich an Ihren Bedarf anpassen.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine E-Bike-Versicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Diebstahl, auch bei unterwegs abgestellten E-Bikes.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Abdeckung von Reparaturkosten bei Unfällen oder Vandalismus.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Keine Selbstbeteiligung für geringere Eigenkosten.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Laufzeiten im Monats- oder Jahresabo.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">Um die passende <strong>E-Bike-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass der Wert Ihres E-Bikes vollständig abgedeckt ist.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Diebstahl, Unfallschäden und Batterie-Defekte eingeschlossen sind.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Flexibilität</strong>: Wählen Sie Tarife mit kurzen Laufzeiten für saisonale Nutzung.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie hepster sind Trusted Shops zertifiziert und punkten mit Top-Bewertungen.</span></li>
+            </ul>
+            <p className="mb-6">
+              Mit der hepster E-Bike-Versicherung sichern Sie Ihr E-Bike einfach online ab. Wählen Sie zwischen Monats- oder Jahresabo, passen Sie die
+              Versicherungsleistungen an und profitieren Sie von 100% digitaler Verwaltung. Starten Sie jetzt und schützen Sie Ihr E-Bike optimal!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt hepster E-Bike-Versicherung abschließen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reiseversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Reiseversicherung: Sorgenfrei unterwegs mit TravelSecure</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Reiseversicherung</strong> schützt Sie vor finanziellen Risiken wie Stornokosten, Krankheiten im Ausland oder Gepäckverlust. Ob
+              Urlaub, Geschäftsreise oder Work & Travel – mit TravelSecure finden Sie maßgeschneiderte Tarife für Einzelpersonen, Familien, Gruppen oder
+              junge Reisende. TravelSecure ist mehrfacher Testsieger bei Stiftung Warentest (01/2025, Note 1,4).
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Reiseversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Stornokosten bei Reiseabbruch oder -rücktritt.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Absicherung von Krankheitskosten im Ausland, inkl. Rücktransport.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Spezialtarife für Work & Travel, Au-Pair, Studenten oder Gruppen.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Jahresreiseversicherung für Vielreisende ohne Selbstbeteiligung.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">Um die passende <strong>Reiseversicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Reiserücktritt, Reiseabbruch, Auslandskrankenversicherung oder Gepäckschutz enthalten sind.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Reisedauer</strong>: Wählen Sie Tarife für Kurzreisen (bis 56 Tage) oder Langzeitreisen (bis 365 Tage).</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Selbstbeteiligung</strong>: Entscheiden Sie sich für Tarife ohne Selbstbehalt für maximale Kostensicherheit.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: TravelSecure punktet mit eKomi 4,3/5 und Focus Money „Beste Kundenhotline 2024“.</span></li>
+            </ul>
+            <p className="mb-6">
+              Mit der TravelSecure Reiseversicherung sichern Sie Ihre Reisen einfach online ab. Ob Jahresreiseversicherung Reisekarte4you oder Spezialtarife
+              für Gruppen und junge Reisende – TravelSecure bietet flexible Lösungen für jeden Reiseanlass. Starten Sie jetzt und reisen Sie sorgenfrei!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt TravelSecure Reiseversicherung abschließen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Wohngebäudeversicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Wohngebäudeversicherung: Optimaler Schutz für Ihr Zuhause</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Wohngebäudeversicherung</strong> ist für Hausbesitzer unverzichtbar, um Ihr Eigentum vor Schäden durch Feuer, Sturm, Hagel,
+              Überschwemmung oder Vandalismus zu schützen. Sie deckt Reparatur-, Instandsetzungs- oder Wiederaufbaukosten für Ihr Haus und fest
+              installierte Elemente wie Heizungsanlagen oder Einbauküchen ab. Mit einem <strong>Vergleich Wohngebäudeversicherung</strong> auf Plattformen wie
+              Tarifcheck finden Sie maßgeschneiderte Tarife, die Ihren Bedürfnissen entsprechen und bis zu 500€ jährlich sparen können.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Wohngebäudeversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Schutz vor Elementarschäden wie Überschwemmungen oder Sturm.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Absicherung von Reparaturkosten bei Leitungswasser- oder Feuerschäden.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Bausteine für individuelle Bedürfnisse, z. B. Photovoltaik oder Vandalismus.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Kostenloser und unverbindlicher Vergleich für optimale Tarife.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Worauf Sie bei der Auswahl achten sollten</h3>
+            <p className="mb-4">Um die richtige <strong>Gebäudeversicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Versicherungssumme</strong>: Stellen Sie sicher, dass die Versicherung den Wiederaufbauwert Ihres Hauses abdeckt.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Risiken</strong>: Wählen Sie Bausteine, die relevante Gefahren wie Elementarschäden oder Vandalismus abdecken.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Gleitender Neuwert</strong>: Nutzen Sie die gleitende Neuwertversicherung, um den Wert Ihres Hauses aktuell zu halten.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie Tarifcheck punkten mit Top-Bewertungen (z. B. Handelsblatt 09/2024).</span></li>
+            </ul>
+            <p className="mb-6">
+              Mit Tarifcheck Wohngebäudeversicherung vergleichen Sie über 200 Tarife kostenlos und unverbindlich. Geben Sie einfach die Eckdaten Ihres
+              Hauses ein, wählen Sie gewünschte Bausteine wie Elementarschutz oder Feuerschutz, und finden Sie in Sekunden den besten Tarif. Starten Sie
+              jetzt Ihren Vergleich und sichern Sie Ihr Zuhause optimal ab!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.tarifcheck.com/xLfTPmG" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt Wohngebäudeversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Krankenzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Krankenzusatzversicherung: Mehr Schutz für Ihre Gesundheit</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Krankenzusatzversicherung</strong> ergänzt Ihre gesetzliche Krankenversicherung und bietet zusätzlichen Schutz für Leistungen, die
+              nicht oder nur teilweise abgedeckt sind. Dazu gehören Behandlungen wie <strong>Chefarztbehandlung</strong>, <strong>Einzelzimmer im Krankenhaus</strong> oder
+              <strong> alternative Heilmethoden</strong> wie Homöopathie und Osteopathie. Besonders für Brillenträger ist eine <strong>Krankenversicherung für Brillen</strong>
+              interessant, die Zuschüsse für Sehhilfen bietet.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Warum eine Krankenzusatzversicherung sinnvoll ist</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Kostenerstattung für Heilpraktikerbehandlungen und alternative Medizin.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zuschüsse für Sehhilfen, Hörgeräte oder Lasik-Operationen.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zugang zu exklusiven Krankenhausleistungen wie Chefarztbehandlung.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Tarife ohne lange Wartezeiten.</span></li>
+            </ul>
+            <p className="mb-6">
+              Anbieter wie HanseMerkur Zusatzkrankenversicherung bieten Tarife, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Mit einer
+              <strong> Krankenzusatzversicherung ohne Wartezeit</strong> können Sie sofort von den Leistungen profitieren.
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=375685&mid=11705&awinaffid=2524533&linkid=3289919&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt HanseMerkur Krankenzusatzversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Zahnzusatzversicherung Section */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Zahnzusatzversicherung: Perfekter Schutz für Ihre Zähne</h1>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <p className="mb-4">
+              Eine <strong>Zahnzusatzversicherung</strong> ist ideal, um hohe Kosten für Zahnbehandlungen wie <strong>Zahnersatz</strong>, <strong>Implantate</strong> oder
+              <strong> professionelle Zahnreinigung</strong> abzufedern. Die gesetzliche Krankenversicherung übernimmt oft nur einen geringen Anteil dieser Kosten, was
+              eine <strong>Zahnzusatzversicherung für Implantate</strong> oder <strong>Zahnprophylaxe</strong> besonders attraktiv macht.
+            </p>
+            <h3 className="text-xl font-semibold mb-4">Vorteile einer Zahnzusatzversicherung</h3>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Bis zu 100% Kostenerstattung für Zahnersatz und Implantate.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Zuschüsse für professionelle Zahnreinigung und Vorsorge.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Keine oder kurze Wartezeiten für sofortigen Schutz.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Transparente Tarife mit einfacher Online-Verwaltung.</span></li>
+            </ul>
+            <h3 className="text-xl font-semibold mb-4">Wie wähle ich die richtige Zahnzusatzversicherung?</h3>
+            <p className="mb-4">Achten Sie auf folgende Punkte:</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob Implantate, Inlays oder Prophylaxe abgedeckt sind.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Wartezeiten</strong>: Wählen Sie Tarife ohne Wartezeit für schnellen Schutz.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kostenerstattung</strong>: Tarife mit hohen Erstattungssätzen sparen Ihnen langfristig Geld.</span></li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Anbieter wie HanseMerkur punkten mit Top-Bewertungen (z. B. Stiftung Warentest 07/2025).</span></li>
+            </ul>
+            <p className="mb-6">
+              Die HanseMerkur Zahnzusatzversicherung bietet umfassenden Schutz ohne Wartezeit und bis zu 100% Kostenerstattung für Zahnersatz. Vergleichen Sie
+              jetzt und sichern Sie sich den besten Tarif!
+            </p>
+            <div className="text-center">
+              <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" target="_blank">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">
+                  Jetzt HanseMerkur Zahnzusatzversicherung vergleichen*
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-start mb-4">
+                <SmartFinanzLogo className="text-xl" />
+              </div>
+            </div>
+            <div>
+              <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+              <ul className="space-y-2 text-base text-gray-400">
+                <li>
+                  <Link 
+                    href="/banking" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Banking"
+                  >
+                    Banking
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/tierversicherungen" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Haustierversicherung"
+                  >
+                    Haustierversicherung
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/trading" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Trading"
+                  >
+                    Trading
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/versicherungen" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Versicherungen"
+                  >
+                    Versicherungen
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="space-y-2 text-base text-gray-400">
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/ducwCtq" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="DSL Vergleich (externer Link)"
+                    >
+                      DSL
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/Uxudvkj" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Gasvergleich (externer Link)"
+                    >
+                      Gas
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/5R17qbN" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Handytarif vergleichen (externer Link)"
+                    >
+                      Handytarif
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kreditkarten vergleichen (externer Link)"
+                    >
+                      Kreditkarte
+                    </a>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-base text-gray-400">
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/FZ9nd0R" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Mietwagen vergleichen (externer Link)"
+                    >
+                      Mietwagen
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/zxy0WKh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Ökostrom vergleichen (externer Link)"
+                    >
+                      Ökostrom
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/EieKR0E" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Reise vergleichen (externer Link)"
+                    >
+                      Reise
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Stromvergleich (externer Link)"
+                    >
+                      Strom
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+              <ul className="space-y-2 text-base text-gray-400">
+                <li>
+                  <Link 
+                    href="/karriere" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Karriere"
+                  >
+                    Karriere
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/kontakt" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Kontakt"
+                  >
+                    Kontakt
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/partnerprogramme" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Partnerprogramm"
+                  >
+                    Partnerprogramm
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/ueber-uns" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Über uns"
+                  >
+                    Über uns
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+              <ul className="space-y-2 text-base text-gray-400">
+                <li>
+                  <Link 
+                    href="/agb" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="AGB"
+                  >
+                    AGB
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/cookie-richtlinie" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Cookie-Richtlinie"
+                  >
+                    Cookie-Richtlinie
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/datenschutz" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Datenschutz"
+                  >
+                    Datenschutz
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/impressum" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    aria-label="Impressum"
+                  >
+                    Impressum
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-base text-gray-400 mb-4">
+              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+            </p>
+            <Link href="/" aria-label="Zurück zur Startseite">
+              <Button 
+                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              >
+                Zurück zur Startseite
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
 }
