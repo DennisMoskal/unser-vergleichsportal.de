@@ -23,7 +23,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
+        <h3 className="text-sm mt-1">unser-vergleichsportal.de - einfach sparen!</h3>
       </div>
     </Link>
   )
@@ -214,7 +214,6 @@ const Header: React.FC = () => {
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
-
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
@@ -257,46 +256,45 @@ const Header: React.FC = () => {
         </div>
       </section>
 
-{/* Grüner Value-/Trust-Bereich ohne Überschrift */}
-<section className="py-12 sm:py-16 bg-green-600 text-white">
-  <div className="container mx-auto px-4">
-    <div className="max-w-5xl mx-auto">
-      <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <li className="flex items-start">
-          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-          <span className="ml-3 text-base sm:text-lg">
-            Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
-          </span>
-        </li>
-        <li className="flex items-start">
-          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-          <span className="ml-3 text-base sm:text-lg">
-            Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
-          </span>
-        </li>
-        <li className="flex items-start">
-          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-          <span className="ml-3 text-base sm:text-lg">
-            Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
-          </span>
-        </li>
-        <li className="flex items-start">
-          <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-          <span className="ml-3 text-base sm:text-lg">
-            <strong className="font-semibold">4,8★</strong>Kundenstimmen
-          </span>
-        </li>
-        <li className="flex items-start">
-          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-          <span className="ml-3 text-base sm:text-lg">
-            Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
-          </span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
+      {/* Grüner Value-/Trust-Bereich ohne Überschrift */}
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <li className="flex items-start">
+                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <h3 className="ml-3 text-base sm:text-lg">
+                  Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
+                </h3>
+              </li>
+              <li className="flex items-start">
+                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <h3 className="ml-3 text-base sm:text-lg">
+                  Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
+                </h3>
+              </li>
+              <li className="flex items-start">
+                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <h3 className="ml-3 text-base sm:text-lg">
+                  Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+                </h3>
+              </li>
+              <li className="flex items-start">
+                <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <h3 className="ml-3 text-base sm:text-lg">
+                  <strong className="font-semibold">4,8★</strong> Kundenstimmen
+                </h3>
+              </li>
+              <li className="flex items-start">
+                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <h3 className="ml-3 text-base sm:text-lg">
+                  Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
+                </h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
@@ -486,9 +484,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
-        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
-        <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Reisen, Kreditkarten, Mietwagen, SmartFinanz, Testsieger 2025" />
+        <title>SmartFinanz - Bester Finanzvergleich 2025 für Versicherungen, Banking & mehr</title>
+        <meta name="description" content="Vergleichen Sie kostenlos über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom & mehr. Sparen Sie bis zu 1.000€ mit unseren Testsiegern 2025!" />
+        <meta name="keywords" content="Finanzvergleich, Testsieger 2025, günstige Versicherungen, kostenloser Vergleich, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Kreditkarten, SmartFinanz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
@@ -498,15 +496,15 @@ export default function Home() {
         <link rel="canonical" href="https://smartfinanz.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, bis zu 1.000€ sparen!" />
+        <meta property="og:title" content="SmartFinanz - Bester Finanzvergleich 2025 für Versicherungen, Banking & mehr" />
+        <meta property="og:description" content="Kostenloser Vergleich von über 500 Finanzprodukten: Versicherungen, Banking, DSL, Mobilfunk, Strom & mehr. Bis zu 1.000€ sparen mit Testsiegern 2025!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://smartfinanz.de" />
         <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
-        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, bis zu 1.000€ sparen!" />
+        <meta name="twitter:title" content="SmartFinanz - Bester Finanzvergleich 2025 für Versicherungen, Banking & mehr" />
+        <meta name="twitter:description" content="Kostenloser Vergleich von über 500 Finanzprodukten: Versicherungen, Banking, DSL, Mobilfunk, Strom & mehr. Bis zu 1.000€ sparen mit Testsiegern 2025!" />
         <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta name="twitter:site" content="@smartfinanz" />
         <link rel="preload" href="/logo.png" as="image" />
@@ -527,7 +525,7 @@ export default function Home() {
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de | einfach sparen! </h1>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de - einfach sparen!</h1>
             <Button 
               size="lg" 
               className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
@@ -539,13 +537,12 @@ export default function Home() {
           </div>
         </section>
 
-       
-
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger September 2025 | Anbieter- & Finanzvergleich aktuell</h2>
-
+            <h1 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+              Unsere Testsieger September 2025<br />Anbieter- & Finanzvergleich aktuell
+            </h1>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
@@ -768,7 +765,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
                     <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
-                      <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
+                      <h3 className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</h3>
                       <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
                         {provider.bonus}
                       </Badge>
@@ -779,7 +776,7 @@ export default function Home() {
                           {provider.features.map((feature, i) => (
                             <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
                               <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                              <span className="break-words overflow-wrap-anywhere">{feature}</span>
+                              <h3 className="break-words overflow-wrap-anywhere">{feature}</h3>
                             </li>
                           ))}
                         </ul>
@@ -811,14 +808,14 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
-              <p>
+              <h3>
                 CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
                 72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
                 Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
-              </p>
-              <p className="mt-4">
+              </h3>
+              <h3 className="mt-4">
                 *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
-              </p>
+              </h3>
             </div>
           </div>
         </section>
@@ -850,10 +847,9 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
-                  </p>
-                  
+                  </h3>
                 </CardContent>
               </Card>
 
@@ -879,10 +875,9 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
-                  </p>
-                 
+                  </h3>
                 </CardContent>
               </Card>
 
@@ -901,17 +896,16 @@ export default function Home() {
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
                       <div className="flex items-center mt-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                          <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
                         ))}
                       </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
-                  </p>
-                 
+                  </h3>
                 </CardContent>
               </Card>
 
@@ -930,17 +924,16 @@ export default function Home() {
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
                       <div className="flex items-center mt-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                          <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
                         ))}
                       </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
-                  </p>
-                 
+                  </h3>
                 </CardContent>
               </Card>
             </div>
@@ -1027,19 +1020,17 @@ export default function Home() {
           </div>
         </section>
 
-       {/* Schlanker CTA-Block unten ohne Buttons */}
-<section className="py-12 sm:py-16 bg-green-600 text-white">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-      Jetzt vergleichen <span className="mx-3 opacity-75">|</span> einfach sparen
-    </h2>
-    <p className="mt-4 text-green-100 text-sm sm:text-base">
-      Schnell, sicher &amp; kostenlos – mit nur wenigen Klicks zum besten Angebot.
-    </p>
-  </div>
-</section>
-
-
+        {/* Schlanker CTA-Block unten ohne Buttons */}
+        <section className="py-12 sm:py-16 bg-green-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Jetzt vergleichen - einfach sparen
+            </h2>
+            <h3 className="mt-4 text-green-100 text-sm sm:text-base">
+              Schnell, sicher &amp; kostenlos – mit nur wenigen Klicks zum besten Angebot.
+            </h3>
+          </div>
+        </section>
 
         {/* FAQ Section für bessere SEO */}
         <section className="py-12 sm:py-16 bg-white">
@@ -1065,230 +1056,231 @@ export default function Home() {
             </div>
           </div>
         </section>
-<footer className="bg-gray-900 text-white py-8 sm:py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
-            <div className="col-span-2 md:col-span-1">
-              <div className="flex flex-col items-start mb-4">
-                <SmartFinanzLogo className="text-xl" />
+
+        <footer className="bg-gray-900 text-white py-8 sm:py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+              <div className="col-span-2 md:col-span-1">
+                <div className="flex flex-col items-start mb-4">
+                  <SmartFinanzLogo className="text-xl" />
+                </div>
               </div>
-            </div>
-            <div>
-              <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
-              <ul className="space-y-2 text-base text-gray-400">
-                <li>
-                  <Link 
-                    href="/banking" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Banking"
-                  >
-                    Banking
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/tierversicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Haustierversicherung"
-                  >
-                    Haustierversicherung
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/trading" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Trading"
-                  >
-                    Trading
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/versicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Versicherungen"
-                  >
-                    Versicherungen
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div>
+                <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/ducwCtq" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <Link 
+                      href="/banking" 
                       className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="DSL Vergleich (externer Link)"
+                      aria-label="Banking"
                     >
-                      DSL
-                    </a>
+                      Banking
+                    </Link>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/Uxudvkj" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <Link 
+                      href="/tierversicherungen" 
                       className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Gasvergleich (externer Link)"
+                      aria-label="Haustierversicherung"
                     >
-                      Gas
-                    </a>
+                      Haustierversicherung
+                    </Link>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/5R17qbN" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <Link 
+                      href="/trading" 
                       className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Handytarif vergleichen (externer Link)"
+                      aria-label="Trading"
                     >
-                      Handytarif
-                    </a>
+                      Trading
+                    </Link>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <Link 
+                      href="/versicherungen" 
                       className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Kreditkarten vergleichen (externer Link)"
+                      aria-label="Versicherungen"
                     >
-                      Kreditkarte
-                    </a>
-                  </li>
-                </ul>
-                <ul className="space-y-2 text-base text-gray-400">
-                  <li>
-                    <a 
-                      href="https://www.c24n.de/FZ9nd0R" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Mietwagen vergleichen (externer Link)"
-                    >
-                      Mietwagen
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.c24n.de/zxy0WKh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Ökostrom vergleichen (externer Link)"
-                    >
-                      Ökostrom
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.c24n.de/EieKR0E" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Reise vergleichen (externer Link)"
-                    >
-                      Reise
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                      aria-label="Stromvergleich (externer Link)"
-                    >
-                      Strom
-                    </a>
+                      Versicherungen
+                    </Link>
                   </li>
                 </ul>
               </div>
-            </div>
-            <div>
-              <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
-              <ul className="space-y-2 text-base text-gray-400">
-                <li>
-                  <Link 
-                    href="/karriere" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Karriere"
-                  >
-                    Karriere
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/kontakt" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Kontakt"
-                  >
-                    Kontakt
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/partnerprogramme" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Partnerprogramm"
-                  >
-                    Partnerprogramm
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/ueber-uns" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Über uns"
-                  >
-                    Über uns
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
-              <ul className="space-y-2 text-base text-gray-400">
-                <li>
-                  <Link 
-                    href="/agb" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="AGB"
-                  >
-                    AGB
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/cookie-richtlinie" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Cookie-Richtlinie"
-                  >
-                    Cookie-Richtlinie
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/datenschutz" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Datenschutz"
-                  >
-                    Datenschutz
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/impressum" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                    aria-label="Impressum"
-                  >
-                    Impressum
+              <div>
+                <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+                <div className="grid grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-base text-gray-400">
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/ducwCtq" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="DSL Vergleich (externer Link)"
+                      >
+                        DSL
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/Uxudvkj" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Gasvergleich (externer Link)"
+                      >
+                        Gas
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/5R17qbN" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Handytarif vergleichen (externer Link)"
+                      >
+                        Handytarif
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/RYXPGyh" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Kreditkarten vergleichen (externer Link)"
+                      >
+                        Kreditkarte
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-base text-gray-400">
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/FZ9nd0R" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Mietwagen vergleichen (externer Link)"
+                      >
+                        Mietwagen
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/zxy0WKh" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Ökostrom vergleichen (externer Link)"
+                      >
+                        Ökostrom
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/EieKR0E" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Reise vergleichen (externer Link)"
+                      >
+                        Reise
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://www.c24n.de/RYXPGyh" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                        aria-label="Stromvergleich (externer Link)"
+                      >
+                        Strom
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+                <ul className="space-y-2 text-base text-gray-400">
+                  <li>
+                    <Link 
+                      href="/karriere" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Karriere"
+                    >
+                      Karriere
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/kontakt" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kontakt"
+                    >
+                      Kontakt
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/partnerprogramme" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Partnerprogramm"
+                    >
+                      Partnerprogramm
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/ueber-uns" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Über uns"
+                    >
+                      Über uns
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+                <ul className="space-y-2 text-base text-gray-400">
+                  <li>
+                    <Link 
+                      href="/agb" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="AGB"
+                    >
+                      AGB
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/cookie-richtlinie" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Cookie-Richtlinie"
+                    >
+                      Cookie-Richtlinie
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/datenschutz" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Datenschutz"
+                    >
+                      Datenschutz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/impressum" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Impressum"
+                    >
+                      Impressum
                   </Link>
                 </li>
               </ul>
