@@ -207,16 +207,17 @@ const Header: React.FC = () => {
         )}
       </header>
 
-      {/* Kategorie-Navigation */}
+     {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
-          <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
+          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
+
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
               { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
               { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
               { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
