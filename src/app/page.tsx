@@ -4,16 +4,18 @@ import Head from "next/head"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, Star, Menu, X } from "lucide-react"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Input } from "@/components/ui/input"
+import { Search, Check, Star, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-// SmartFinanzLogo-Komponente (Logo bleibt vorerst)
+// SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
-      <div className={`flex flex-col items-start ${className || ""}`}>
+      <div className={`flex flex-col items-start ${className}`}>
         <div className="flex items-center space-x-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
             <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
@@ -21,7 +23,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <span className="text-sm mt-1">unser-vergleichsportal.de</span>
+        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
       </div>
     </Link>
   )
@@ -35,7 +37,9 @@ const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
-    if (element) element.scrollIntoView({ behavior: "smooth" })
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   useEffect(() => {
@@ -73,11 +77,11 @@ const Header: React.FC = () => {
                     { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
                     { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
                     { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
-                  ].map(({ key, label, url }) => (
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -90,23 +94,22 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div>
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq' },
-                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj' },
-                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN' },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh' },
-                    ].map(({ key, label, url }) => (
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -120,17 +123,17 @@ const Header: React.FC = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R' },
-                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh' },
-                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E' },
-                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh' },
-                    ].map(({ key, label, url }) => (
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -144,20 +147,19 @@ const Header: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
               <div>
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'karriere', label: 'Karriere', url: '/karriere' },
-                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt' },
-                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme' },
-                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns' },
-                  ].map(({ key, label, url }) => (
+                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -170,20 +172,19 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div>
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'agb', label: 'AGB', url: '/agb' },
-                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie' },
-                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz' },
-                    { key: 'impressum', label: 'Impressum', url: '/impressum' },
-                  ].map(({ key, label, url }) => (
+                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -196,10 +197,9 @@ const Header: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className="text-center mt-4">
                 <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg"
+                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -209,6 +209,94 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
+
+      {/* Kategorie-Navigation */}
+      <section className="bg-white py-4 border-b" id="versicherungen">
+        <div className="container mx-auto px-4">
+          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
+
+            {[
+              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
+              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+            ].map(({ key, label, url, isInternal }) => (
+              <li key={key}>
+                {isInternal ? (
+                  <Link
+                    href={url}
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`Zu ${label} navigieren`}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`${label} vergleichen (externer Link)`}
+                  >
+                    {label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+{/* Grüner Value-/Trust-Bereich ohne Überschrift */}
+<section className="py-12 sm:py-16 bg-green-600 text-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-5xl mx-auto">
+      <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            <strong className="font-semibold">4,8★</strong>Kundenstimmen
+          </span>
+        </li>
+        <li className="flex items-start">
+          <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <span className="ml-3 text-base sm:text-lg">
+            Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
     </>
   )
 }
@@ -398,124 +486,52 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>unser-vergleichsportal.de – Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
-        <meta name="description" content="Vergleichen Sie Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas, Reisen & mehr. Kostenlos, sicher & schnell – jetzt sparen." />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr | Testsieger 2025</title>
+        <meta name="description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. ✓ Kostenlos ✓ Bis zu 1.000€ sparen" />
+        <meta name="keywords" content="Finanzvergleich, Versicherungen, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Reisen, Kreditkarten, Mietwagen, SmartFinanz, Testsieger 2025" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
+        <meta name="author" content="SmartFinanz" />
+        <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
+        <link rel="canonical" href="https://smartfinanz.de" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="unser-vergleichsportal.de – Finanzvergleich & Anbieterübersicht" />
-        <meta property="og:description" content="Über 500 Anbieter im Vergleich. Ø 850 € sparen pro Jahr. Schnell, sicher & kostenlos." />
+        <meta property="og:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
+        <meta property="og:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, bis zu 1.000€ sparen!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
-        <meta property="og:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
-        <meta property="og:site_name" content="unser-vergleichsportal.de" />
+        <meta property="og:url" content="https://smartfinanz.de" />
+        <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
+        <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="unser-vergleichsportal.de – Testsieger & aktuelle Vergleiche" />
-        <meta name="twitter:description" content="Versicherungen, Banking, DSL, Strom, Gas u.v.m. vergleichen & sparen." />
-        <meta name="twitter:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
+        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich für Versicherungen, Banking, DSL & mehr" />
+        <meta name="twitter:description" content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom, Gas & Reisen. Kostenlos, bis zu 1.000€ sparen!" />
+        <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
+        <meta name="twitter:site" content="@smartfinanz" />
+        <link rel="preload" href="/logo.png" as="image" />
+        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
+        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
+        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
+        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
+        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
+        <link rel="dns-prefetch" href="https://www.check24.de" />
+        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
+        <link rel="dns-prefetch" href="https://www.awin1.com" />
+        <link rel="dns-prefetch" href="https://www.freenet.de" />
+        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
       </Head>
-
       <div className="min-h-screen bg-white">
         <Header />
-
-        {/* KOMBINIERTER GRÜNER BLOCK – Kategorien + Trust-Points (OBERHALB der Hauptüberschrift) */}
-        <section className="py-6 sm:py-10 bg-green-600 text-white">
-          <div className="container mx-auto px-4">
-            {/* Kategorien */}
-            <div className="max-w-6xl mx-auto">
-              <ul className="flex flex-wrap justify-center gap-2 sm:gap-3 text-sm sm:text-base">
-                {[
-                  { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-                  { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-                  { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-                  { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-                  { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                  { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                  { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                  { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                  { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                  { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                  { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                  { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                ].map(({ key, label, url, isInternal }) => (
-                  <li key={key}>
-                    {isInternal ? (
-                      <Link
-                        href={url}
-                        className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:shadow-lg transition-all duration-300 text-white"
-                        onClick={() => setActiveCategory(key)}
-                        aria-label={`Zu ${label} navigieren`}
-                      >
-                        {label}
-                      </Link>
-                    ) : (
-                      <a
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:shadow-lg transition-all duration-300 text-white"
-                        onClick={() => setActiveCategory(key)}
-                        aria-label={`${label} vergleichen (externer Link)`}
-                      >
-                        {label}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Trennlinie */}
-            <div className="mt-6 sm:mt-8 border-t border-white/20" />
-
-            {/* Trust-Points */}
-            <div className="max-w-5xl mx-auto mt-6 sm:mt-8">
-              <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Star className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    <strong className="font-semibold">4,8★</strong> Kundenstimmen
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 mt-0.5 flex-shrink-0 text-white" aria-hidden="true" />
-                  <span className="ml-3 text-base sm:text-lg">
-                    Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
 
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de | einfach sparen!</h2>
-            <Button
-              size="lg"
-              className="bg-green-600 text-white font-medium transition-all duration-300 hover:bg-green-700 hover:scale-105 hover:shadow-lg"
-              onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de | einfach sparen! </h2>
+            <Button 
+              size="lg" 
+              className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
+              onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} 
               aria-label="Beste Finanzprodukte ansehen"
             >
               Jetzt vergleichen
@@ -523,12 +539,12 @@ export default function Home() {
           </div>
         </section>
 
+       
+
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-              Unsere Testsieger September 2025 | Anbieter- & Finanzvergleich aktuell
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Unsere Testsieger September 2025 | Anbieter- & Finanzvergleich aktuell</h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -731,9 +747,9 @@ export default function Home() {
                   logo: "📱",
                   url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref="
                 }
-              ].map((provider) => (
+              ].map((provider, index) => (
                 <Card key={provider.name} className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden">
-                  <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 z-10">
+                  <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
                   </Badge>
                   <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
@@ -743,7 +759,7 @@ export default function Home() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-3 w-3 sm:h-4 sm:w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                          className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
                           aria-hidden="true"
                         />
                       ))}
@@ -758,32 +774,34 @@ export default function Home() {
                       </Badge>
                     </div>
                     <div className="flex-grow overflow-hidden">
-                      <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{ scrollbarWidth: 'thin' }}>
+                      <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{scrollbarWidth: 'thin'}}>
                         <ul className="space-y-1.5">
                           {provider.features.map((feature, i) => (
                             <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
                               <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                              <span className="break-words">{feature}</span>
+                              <span className="break-words overflow-wrap-anywhere">{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
-                    <a
-                      href={provider.url}
-                      target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                      rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    <a 
+                      href={provider.url} 
+                      target={provider.url.startsWith('http') ? '_blank' : '_self'} 
+                      rel={provider.url.startsWith('http') ? 'noopener noreferrer' : undefined} 
                       aria-label={`Zum Anbieter ${provider.name}`}
                     >
-                      <Button className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 hover:bg-green-700 hover:scale-105 hover:shadow-lg mt-auto">
+                      <Button 
+                        className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
+                      >
                         Jetzt abschließen*
                         {provider.name === "Vodafone" && (
                           <Image
                             src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
                             alt=""
-                            width={1}
-                            height={1}
-                            style={{ display: "none" }}
+                            width={0}
+                            height={0}
+                            className="border-0"
                           />
                         )}
                       </Button>
@@ -792,11 +810,10 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-
             <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
               <p>
-                CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
-                72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
+                CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
+                72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
                 Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
               </p>
               <p className="mt-4">
@@ -809,9 +826,9 @@ export default function Home() {
         {/* Kundenbewertungen */}
         <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über unser-vergleichsportal.de</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h2>
             <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
                     <Image
@@ -834,12 +851,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                    "Dank unseres Vergleichs habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                    "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                   </p>
+                  
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
                     <Image
@@ -862,12 +880,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                    "Der Vergleich hat uns die perfekte Tierversicherung für unseren Hund gezeigt. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
+                    "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
                   </p>
+                 
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
                     <Image
@@ -890,12 +909,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                    "Ich war skeptisch, aber der Bankvergleich war klar und transparent – sogar 50€ Bonus gab es obendrauf!"
+                    "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                   </p>
+                 
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+              <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
                   <div className="flex items-center space-x-4">
                     <Image
@@ -918,69 +938,129 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                    "Durch den Vergleich habe ich die beste Trading-Plattform gefunden und spare jetzt Gebühren."
+                    "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                   </p>
+                 
                 </CardContent>
               </Card>
             </div>
-
+            
             {/* Schema.org Markup für SEO */}
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "WebSite",
-                  "name": "unser-vergleichsportal.de",
-                  "url": "https://unser-vergleichsportal.de",
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "SmartFinanz",
+                "url": "https://smartfinanz.de",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://smartfinanz.de/suche?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "100000"
+                },
+                "review": [
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Anna" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                    "reviewBody": "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                   },
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "100000"
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Markus" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "4" },
+                    "reviewBody": "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
+                  },
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Helga" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                    "reviewBody": "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                  },
+                  {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Lukas" },
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                    "reviewBody": "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
                   }
-                })
-              }}
-            />
+                ],
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Wie funktioniert der Vergleich bei SmartFinanz?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Ist der Vergleich wirklich kostenlos?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Welche Kategorien bietet SmartFinanz an?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Wie schnell erhalte ich meine Empfehlungen?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten."
+                    }
+                  }
+                ]
+              })
+            }} />
           </div>
         </section>
 
-        {/* Schlanker CTA-Block unten ohne Buttons */}
-        <section className="py-12 sm:py-16 bg-green-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Jetzt vergleichen <span className="mx-3 opacity-75">|</span> einfach sparen
-            </h2>
-            <p className="mt-4 text-green-100 text-sm sm:text-base">
-              Schnell, sicher &amp; kostenlos – mit nur wenigen Klicks zum besten Angebot.
-            </p>
-          </div>
-        </section>
+       {/* Schlanker CTA-Block unten ohne Buttons */}
+<section className="py-12 sm:py-16 bg-green-600 text-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+      Jetzt vergleichen <span className="mx-3 opacity-75">|</span> einfach sparen
+    </h2>
+    <p className="mt-4 text-green-100 text-sm sm:text-base">
+      Schnell, sicher &amp; kostenlos – mit nur wenigen Klicks zum besten Angebot.
+    </p>
+  </div>
+</section>
 
-        {/* FAQ Section */}
+
+
+        {/* FAQ Section für bessere SEO */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich?</h3>
-                <p className="text-gray-700">Wir prüfen täglich zahlreiche Tarife und Anbieter und stellen übersichtlich die besten Optionen für Ihre Bedürfnisse zusammen.</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h3>
+                <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich kostenlos?</h3>
-                <p className="text-gray-700">Ja, der Vergleich ist 100% kostenlos und unverbindlich. Bei Abschluss erhalten wir ggf. eine Provision – ohne Einfluss auf Ihren Preis.</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h3>
+                <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien gibt es?</h3>
-                <p className="text-gray-700">Versicherungen, Banking, Tierversicherungen, Trading, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h3>
+                <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich Ergebnisse?</h3>
-                <p className="text-gray-700">In der Regel sofort. Bei komplexen Anfragen erhalten Sie innerhalb weniger Minuten passende Empfehlungen.</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h3>
+                <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
               </div>
             </div>
           </div>
@@ -998,50 +1078,228 @@ export default function Home() {
               <div>
                 <h2 className="font-semibold mb-3">Finanzprodukte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/banking" className="hover:text-white transition">Banking</Link></li>
-                  <li><Link href="/tierversicherungen" className="hover:text-white transition">Haustierversicherung</Link></li>
-                  <li><Link href="/trading" className="hover:text-white transition">Trading</Link></li>
-                  <li><Link href="/versicherungen" className="hover:text-white transition">Versicherungen</Link></li>
+                  <li>
+                    <Link 
+                      href="/banking" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Banking"
+                    >
+                      Banking
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/tierversicherungen" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Haustierversicherung"
+                    >
+                      Haustierversicherung
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/trading" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Trading"
+                    >
+                      Trading
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/versicherungen" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Versicherungen"
+                    >
+                      Versicherungen
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Weitere Produkte</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">DSL</a></li>
-                  <li><a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Gas</a></li>
-                  <li><a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Handytarif</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Kreditkarte</a></li>
-                  <li><a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Mietwagen</a></li>
-                  <li><a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Ökostrom</a></li>
-                  <li><a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Reise</a></li>
-                  <li><a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Strom</a></li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/ducwCtq" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="DSL Vergleich (externer Link)"
+                    >
+                      DSL
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/Uxudvkj" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Gasvergleich (externer Link)"
+                    >
+                      Gas
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/5R17qbN" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Handytarif vergleichen (externer Link)"
+                    >
+                      Handytarif
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c44n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kreditkarten vergleichen (externer Link)"
+                    >
+                      Kreditkarte
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/FZ9nd0R" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Mietwagen vergleichen (externer Link)"
+                    >
+                      Mietwagen
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/zxy0WKh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Ökostrom vergleichen (externer Link)"
+                    >
+                      Ökostrom
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/EieKR0E" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Reise vergleichen (externer Link)"
+                    >
+                      Reise
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.c24n.de/RYXPGyh" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Stromvergleich (externer Link)"
+                    >
+                      Strom
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Unternehmen</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/karriere" className="hover:text-white transition">Karriere</Link></li>
-                  <li><Link href="/kontakt" className="hover:text-white transition">Kontakt</Link></li>
-                  <li><Link href="/partnerprogramme" className="hover:text-white transition">Partnerprogramm</Link></li>
-                  <li><Link href="/ueber-uns" className="hover:text-white transition">Über uns</Link></li>
+                  <li>
+                    <Link 
+                      href="/karriere" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Karriere"
+                    >
+                      Karriere
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/kontakt" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Kontakt"
+                    >
+                      Kontakt
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/partnerprogramme" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Partnerprogramm"
+                    >
+                      Partnerprogramm
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/ueber-uns" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Über uns"
+                    >
+                      Über uns
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-semibold mb-3">Rechtliches</h2>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/agb" className="hover:text-white transition">AGB</Link></li>
-                  <li><Link href="/cookie-richtlinie" className="hover:text-white transition">Cookie-Richtlinie</Link></li>
-                  <li><Link href="/datenschutz" className="hover:text-white transition">Datenschutz</Link></li>
-                  <li><Link href="/impressum" className="hover:text-white transition">Impressum</Link></li>
+                  <li>
+                    <Link 
+                      href="/agb" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="AGB"
+                    >
+                      AGB
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/cookie-richtlinie" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Cookie-Richtlinie"
+                    >
+                      Cookie-Richtlinie
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/datenschutz" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Datenschutz"
+                    >
+                      Datenschutz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/impressum" 
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                      aria-label="Impressum"
+                    >
+                      Impressum
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="border-t border-gray-800 mt-8 pt-6 text-center">
               <p className="text-sm text-gray-400 mb-4">
-                © 2025 unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+                © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
               </p>
               <Link href="/" aria-label="Zurück zur Startseite">
-                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition hover:bg-green-700 hover:scale-105 hover:shadow-lg">
+                <Button 
+                  className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                >
                   Zurück zur Startseite
                 </Button>
               </Link>
@@ -1049,34 +1307,38 @@ export default function Home() {
           </div>
         </footer>
 
-        {/* Organization Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "unser-vergleichsportal.de",
-              "url": "https://unser-vergleichsportal.de",
-              "logo": "https://unser-vergleichsportal.de/logo.png",
-              "description": "Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Kostenlos vergleichen & sparen.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "DE"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "availableLanguage": "German"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "100000"
-              }
-            })
-          }}
-        />
+        {/* Structured Data für lokale SEO */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SmartFinanz",
+            "url": "https://smartfinanz.de",
+            "logo": "https://smartfinanz.de/logo.png",
+            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "DE"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+49-123-456789",
+              "contactType": "customer service",
+              "availableLanguage": "German"
+            },
+            "sameAs": [
+              "https://www.facebook.com/smartfinanz",
+              "https://www.twitter.com/smartfinanz",
+              "https://www.linkedin.com/company/smartfinanz",
+              "https://www.instagram.com/smartfinanz"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "100000"
+            }
+          })
+        }} />
       </div>
     </>
   )
