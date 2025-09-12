@@ -876,7 +876,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                   <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                    "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!"
+                    "SmartFinanz hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind!"
                   </h3>
                 </CardContent>
               </Card>
