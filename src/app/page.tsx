@@ -261,7 +261,7 @@ const Header: React.FC = () => {
   <div className="container mx-auto px-4">
     <div className="max-w-5xl mx-auto">
       <h2 className="text-2xl sm:text-3xl font-extrabold text-center leading-tight">
-        unser-vergleichsportal.de – <span className="whitespace-nowrap">für bessere Entscheidungen</span>
+        unser-vergleichsportal.de – <span className="whitespace-nowrap">| einfach sparen! </span>
       </h2>
 
       <ul className="mt-6 sm:mt-8 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
