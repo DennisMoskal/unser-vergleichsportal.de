@@ -6,17 +6,23 @@ import { Badge } from "@/components/ui/badge"
 import { FileText, Shield, Scale, TrendingUp, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import Head from "next/head"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={`flex items-center space-x-1 ${className}`}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-        <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
-        <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-      </svg>
-      <span className="font-bold">martFinanz</span>
-    </div>
+    <Link href="/" aria-label="Zurück zur Startseite">
+      <div className={`flex flex-col items-start ${className}`}>
+        <div className="flex items-center space-x-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
+          </svg>
+          <span className="font-bold">martFinanz</span>
+        </div>
+        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
+      </div>
+    </Link>
   )
 }
 
@@ -25,12 +31,61 @@ export default function AgbPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Head>
+        <title>AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal 2025</title>
+        <meta
+          name="description"
+          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking."
+        />
+        <meta
+          name="keywords"
+          content="AGB Vergleichsportal, Allgemeine Geschäftsbedingungen Finanzprodukte, SmartFinanz AGB, Nutzungsbedingungen Vergleichsportal"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/agb" />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal 2025" />
+        <meta
+          property="og:description"
+          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/agb" />
+        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal 2025" />
+        <meta
+          name="twitter:description"
+          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte."
+        />
+        <meta name="format-detection" content="telephone=no" />
+      </Head>
+
+      {/* Schema Markup for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal 2025",
+            description:
+              "Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking.",
+            url: "https://unser-vergleichsportal.de/agb",
+            keywords: [
+              "AGB Vergleichsportal",
+              "Allgemeine Geschäftsbedingungen Finanzprodukte",
+              "SmartFinanz AGB",
+              "Nutzungsbedingungen Vergleichsportal"
+            ]
+          })
+        }}
+      />
+
       {/* Header */}
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-start">
             <SmartFinanzLogo className="text-2xl text-gray-900" />
-            <span className="text-sm text-gray-600 mt-1">Unser-Vergleichsportal.de</span>
           </div>
           <nav className="hidden md:flex space-x-6">
             <Link href="/versicherungen" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
@@ -50,13 +105,16 @@ export default function AgbPage() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:block bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+            <Button
+              className="hidden md:block bg-green-600 hover:bg-green-700"
+              onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+            >
               Vergleich starten
             </Button>
             <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Menu öffnen/schließen"
+              aria-label="Menü öffnen/schließen"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -67,6 +125,7 @@ export default function AgbPage() {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-4 py-4 space-y-4">
+              <div className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</div>
               <Link
                 href="/versicherungen"
                 className="block w-full text-left text-gray-600 hover:text-green-600 transition-colors"
@@ -102,7 +161,10 @@ export default function AgbPage() {
               >
                 Kundenbewertungen
               </Link>
-              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}>
+              <Button
+                className="w-full bg-green-600 hover:bg-green-700"
+                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+              >
                 Vergleich starten
               </Button>
             </nav>
@@ -113,14 +175,18 @@ export default function AgbPage() {
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Allgemeine Geschäftsbedingungen (AGB)</h2>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">
+            AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal
+          </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
-            Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen der SmartFinanz, die für die Nutzung unserer Vergleichsdienste gelten. Bitte lesen Sie diese sorgfältig durch.
+            Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking.
           </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">1. Geltungsbereich und Begriffsbestimmungen</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Geltungsbereich und Begriffsbestimmungen
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -136,7 +202,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">2. Vertragsabschluss</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Vertragsabschluss für Vergleichsdienste
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -147,7 +215,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">3. Leistungsbeschreibung</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Leistungsbeschreibung der Vergleichsplattform
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -158,7 +228,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">4. Pflichten des Kunden</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Pflichten des Kunden
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -169,7 +241,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">5. Entgelt</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Entgelt und Kosten
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -180,7 +254,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">6. Haftung</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Haftung des Anbieters
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -194,7 +270,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">7. Datenschutz</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Datenschutzbestimmungen
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -205,7 +283,9 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">8. Kündigung</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Kündigung des Nutzungsvertrags
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -216,21 +296,25 @@ export default function AgbPage() {
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">9. Streitbeilegung</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Streitbeilegung
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">https://ec.europa.eu/consumers/odr</a> erreichbar ist. Der Anbieter ist nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
               <p>
-                Für Beschwerden oder Anliegen wenden Sie sich bitte an: SmartFinanz, Westpreußenstraße 26, 53119 Bonn, E-Mail: <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">dennismoskal@yahoo.com</a>.
+                Für Beschwerden oder Anliegen wenden Sie sich bitte an: SmartFinanz, Westpreußenstraße 26, 53119 Bonn, E-Mail: <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>.
               </p>
             </CardContent>
           </Card>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-3xl font-bold text-center">10. Schlussbestimmungen</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center">
+                Schlussbestimmungen
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
@@ -247,7 +331,9 @@ export default function AgbPage() {
       {/* Call to Action */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Fragen zu unseren AGB?</h3>
+          <p className="text-2xl sm:text-3xl font-bold mb-6">
+            <strong>Fragen zu unseren AGB?</strong>
+          </p>
           <p className="text-lg sm:text-xl mb-8 text-green-100">
             Kontaktieren Sie uns für weitere Informationen oder Unterstützung zu unseren Allgemeinen Geschäftsbedingungen.
           </p>
@@ -259,7 +345,7 @@ export default function AgbPage() {
         </div>
       </section>
 
-     <footer className="bg-gray-900 text-white py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
             <div className="col-span-2 md:col-span-1">
@@ -268,39 +354,39 @@ export default function AgbPage() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+              <div className="font-semibold mb-3 text-xl">Finanzprodukte</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/banking" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/banking"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Banking"
                   >
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/tierversicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/tierversicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Haustierversicherung"
                   >
                     Haustierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/trading" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/trading"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Trading"
                   >
                     Trading
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/versicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/versicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Versicherungen"
                   >
                     Versicherungen
@@ -309,48 +395,48 @@ export default function AgbPage() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+              <div className="font-semibold mb-3 text-xl">Weitere Produkte</div>
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/ducwCtq" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/ducwCtq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="DSL Vergleich (externer Link)"
                     >
                       DSL
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/Uxudvkj" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/Uxudvkj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Gasvergleich (externer Link)"
                     >
                       Gas
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/5R17qbN" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/5R17qbN"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Handytarif vergleichen (externer Link)"
                     >
                       Handytarif
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Kreditkarten vergleichen (externer Link)"
                     >
                       Kreditkarte
@@ -359,44 +445,44 @@ export default function AgbPage() {
                 </ul>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/FZ9nd0R" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/FZ9nd0R"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Mietwagen vergleichen (externer Link)"
                     >
                       Mietwagen
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/zxy0WKh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/zxy0WKh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Ökostrom vergleichen (externer Link)"
                     >
                       Ökostrom
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/EieKR0E" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/EieKR0E"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Reise vergleichen (externer Link)"
                     >
                       Reise
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Stromvergleich (externer Link)"
                     >
                       Strom
@@ -406,39 +492,39 @@ export default function AgbPage() {
               </div>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+              <div className="font-semibold mb-3 text-xl">Unternehmen</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/karriere" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/karriere"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Karriere"
                   >
                     Karriere
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/kontakt" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/kontakt"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Kontakt"
                   >
                     Kontakt
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/partnerprogramme" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/partnerprogramme"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Partnerprogramm"
                   >
                     Partnerprogramm
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/ueber-uns" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/ueber-uns"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Über uns"
                   >
                     Über uns
@@ -447,39 +533,39 @@ export default function AgbPage() {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+              <div className="font-semibold mb-3 text-xl">Rechtliches</div>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/agb" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/agb"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="AGB"
                   >
                     AGB
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/cookie-richtlinie" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/cookie-richtlinie"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Cookie-Richtlinie"
                   >
                     Cookie-Richtlinie
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/datenschutz" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/datenschutz"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Datenschutz"
                   >
                     Datenschutz
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/impressum" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/impressum"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Impressum"
                   >
                     Impressum
@@ -493,7 +579,7 @@ export default function AgbPage() {
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
-              <Button 
+              <Button
                 className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
                 Zurück zur Startseite
