@@ -210,7 +210,7 @@ const Header: React.FC = () => {
       {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="trading">
         <div className="container mx-auto px-4">
-          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
+          <ul className="flex flex-wrap gap-2 sm:gap-4 text-base">
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
@@ -589,7 +589,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Aktiendepots & Online-Broker-Vergleich September 2025
+            Testsieger Aktiendepots & Online-Broker-Vergleich 2025
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
