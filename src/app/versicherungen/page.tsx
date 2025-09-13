@@ -591,7 +591,7 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            So finden Sie die beste Versicherung 2025
+            Ihr Weg zur Besten Versicherung 2025
           </h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
