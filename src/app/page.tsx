@@ -282,7 +282,7 @@ const Header: React.FC = () => {
               <li className="flex items-start">
                 <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <p className="ml-3 text-base sm:text-lg">
-                  <strong className="font-semibold">4,8★</strong> Kundenstimmen
+                  <strong className="font-semibold">4,8★</strong>verivizierte Kundenstimmen
                 </p>
               </li>
               <li className="flex items-start">
