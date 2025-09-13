@@ -850,7 +850,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Günstige Kfz-Versicherung mit 300€ Ersparnis</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                      "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
                     </p>
                   </CardContent>
                 </Card>
@@ -879,7 +879,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "SmartFinanz hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind!"
+                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind!"
                     </p>
                   </CardContent>
                 </Card>
@@ -908,7 +908,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Sicheres Banking mit Bonus</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                      "Ich war skeptisch, aber der Vergleich hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
                     </p>
                   </CardContent>
                 </Card>
@@ -937,7 +937,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Kostengünstige Trading-Plattform finden</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
+                      "Mit den Trading Top Empfehlungen habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren super, und ich spare jetzt Gebühren!"
                     </p>
                   </CardContent>
                 </Card>
