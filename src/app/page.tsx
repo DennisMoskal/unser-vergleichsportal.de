@@ -524,29 +524,25 @@ export default function Home() {
           <Header />
 
          {/* Hauptüberschrift */}
+{/* Hauptüberschrift */}
 <section className="py-8 sm:py-12 bg-white">
   <div className="container mx-auto px-4 text-center">
     <h1 className="text-2xl sm:text-3xl font-bold">
       Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten
     </h1>
 
-    {/* Brand-Label + Slogan (SEO: Organization-Microdata) */}
-    <div
-      className="mt-2 mb-4 flex justify-center"
+    {/* Brand-Zeile (sichtbar normal, nur semantisch markiert) */}
+    <p
+      className="mt-2 mb-4"
       itemScope
       itemType="https://schema.org/Organization"
-      aria-label="Brand und Slogan"
     >
-      <div className="inline-flex items-center gap-2">
-        <span className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-3 py-1 text-sm font-semibold text-green-700">
-          <span itemProp="name">unser-vergleichsportal.de</span>
-        </span>
-        <span className="text-sm sm:text-base text-gray-700" itemProp="slogan">
-          | einfach sparen!
-        </span>
-        <meta itemProp="url" content="https://unser-vergleichsportal.de" />
-      </div>
-    </div>
+      <span itemProp="name">unser-vergleichsportal.de</span>
+      <span aria-hidden="true"> | </span>
+      <span itemProp="slogan">einfach sparen!</span>
+      <meta itemProp="url" content="https://unser-vergleichsportal.de" />
+      <meta itemProp="legalName" content="Unser-Vergleichsportal.de" />
+    </p>
 
     <Button
       size="lg"
@@ -563,7 +559,6 @@ export default function Home() {
     </Button>
   </div>
 </section>
-
 
           {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
