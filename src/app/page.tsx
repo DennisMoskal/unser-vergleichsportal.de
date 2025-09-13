@@ -495,7 +495,8 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <link rel="canonical" href="https://smartfinanz.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+        <link rel="alternate icon" href="/images/favicon.ico" />
         <meta property="og:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
         <meta property="og:description" content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!" />
         <meta property="og:type" content="website" />
@@ -523,42 +524,23 @@ export default function Home() {
         <div className="min-h-screen bg-white">
           <Header />
 
-         {/* Hauptüberschrift */}
-{/* Hauptüberschrift */}
-<section className="py-8 sm:py-12 bg-white">
-  <div className="container mx-auto px-4 text-center">
-    <h1 className="text-2xl sm:text-3xl font-bold">
-      Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten
-    </h1>
-
-    {/* Brand-Zeile (sichtbar normal, nur semantisch markiert) */}
-    <p
-      className="mt-2 mb-4"
-      itemScope
-      itemType="https://schema.org/Organization"
-    >
-      <span itemProp="name">unser-vergleichsportal.de</span>
-      <span aria-hidden="true"> | </span>
-      <span itemProp="slogan">einfach sparen!</span>
-      <meta itemProp="url" content="https://unser-vergleichsportal.de" />
-      <meta itemProp="legalName" content="Unser-Vergleichsportal.de" />
-    </p>
-
-    <Button
-      size="lg"
-      className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-      onClick={() =>
-        window.open(
-          "https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit",
-          "_blank"
-        )
-      }
-      aria-label="Beste Finanzprodukte ansehen"
-    >
-      Jetzt vergleichen
-    </Button>
-  </div>
-</section>
+          {/* Hauptüberschrift */}
+          <section className="py-8 sm:py-12 bg-white">
+            <div className="container mx-auto px-4 text-center">
+              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
+              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
+                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen!
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
+                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} 
+                aria-label="Beste Finanzprodukte ansehen"
+              >
+                Jetzt vergleichen
+              </Button>
+            </div>
+          </section>
 
           {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
