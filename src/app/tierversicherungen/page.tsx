@@ -668,7 +668,7 @@ export default function Tierversicherungen() {
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Hunde- und Katzenversicherung: Schutz für Ihren Vierbeiner</h2>
 
             <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Günstige Hundehaftpflichtversicherung finden</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Günstige Hundehaftpflichtversicherung finden</h3>
               <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
                 <h4 className="text-lg font-semibold mb-4">Kosten einer Hundehaftpflichtversicherung</h4>
                 <p className="mb-4">
@@ -695,7 +695,7 @@ export default function Tierversicherungen() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung für Hunde und Katzen</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierkrankenversicherung für Hunde und Katzen</h3>
               <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
                 <h4 className="text-lg font-semibold mb-4">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
                 <div className="grid gap-4 md:grid-cols-3 mb-6">
@@ -716,7 +716,7 @@ export default function Tierversicherungen() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung für chirurgische Eingriffe</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Hunde-OP-Versicherung für chirurgische Eingriffe</h3>
               <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
                 <p className="mb-4">
                   Eine Hunde-OP-Versicherung schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
