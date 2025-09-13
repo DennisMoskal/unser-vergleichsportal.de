@@ -524,9 +524,12 @@ export default function Home() {
           <Header />
 
           {/* Hauptüberschrift */}
-          <section className="py-8 sm:py-12 bg-white">
+          section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
+              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
+                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen!
+              </p>
               <Button 
                 size="lg" 
                 className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
