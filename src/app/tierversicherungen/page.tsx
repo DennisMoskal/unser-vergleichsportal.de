@@ -670,46 +670,36 @@ export default function Tierversicherungen() {
 
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Günstige Hundehaftpflichtversicherung finden</h3>
-            <div className="grid gap-6 md:grid-cols-2">
-              <Card className="border-2 hover:border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg">Kosten einer Hundehaftpflichtversicherung</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Die Kosten für eine Hundehaftpflichtversicherung variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten günstige Hundeversicherungen mit hoher Deckung.
-                  </p>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="font-semibold text-green-800 mb-2">💡 Spartipp:</div>
-                    <p className="text-sm text-green-700">Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich. Nutzen Sie Testsieger wie Tarifcheck oder CHECK24 für die beste Hundehaftpflichtversicherung.</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-2 hover:border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg">Vorteile der besten Hundehaftpflicht</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 50 Mio. € Deckungssumme</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Schutz bei grober Fahrlässigkeit</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate oft kostenfrei mitversichert</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Weltweiter Schutz für Reisen</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24/7 Schadenmeldung online</li>
-                  </ul>
-                  <Link href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Jetzt Hundehaftpflicht vergleichen*</Button>
-                  </Link>
-                </CardContent>
-              </Card>
+            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+              <h4 className="text-lg font-semibold mb-4">Kosten einer Hundehaftpflichtversicherung</h4>
+              <p className="mb-4">
+                Die Kosten für eine Hundehaftpflichtversicherung variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten günstige Hundeversicherungen mit hoher Deckung.
+              </p>
+              <div className="bg-green-50 p-4 rounded-lg mb-6">
+                <div className="font-semibold text-green-800 mb-2">💡 Spartipp:</div>
+                <p className="text-sm text-green-700">Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich.</p>
+                <div className="text-center mt-4">
+                  <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Hundehaftpflicht vergleichen*</Button>
+                  </a>
+                </div>
+              </div>
+              <h4 className="text-lg font-semibold mb-4">Vorteile der besten Hundehaftpflicht</h4>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 50 Mio. € Deckungssumme</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Schutz bei grober Fahrlässigkeit</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate oft kostenfrei mitversichert</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Weltweiter Schutz für Reisen</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24/7 Schadenmeldung online</li>
+              </ul>
             </div>
           </div>
 
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung für Hunde und Katzen</h3>
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <div className="font-semibold mb-4">Tierkrankenversicherung Test 2025: Wichtige Informationen</div>
-              <div className="grid gap-4 md:grid-cols-3">
+            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+              <h4 className="text-lg font-semibold mb-4">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
+              <div className="grid gap-4 md:grid-cols-3 mb-6">
                 <div>
                   <div className="font-medium text-green-600 mb-2">Grundschutz</div>
                   <p className="text-sm text-gray-600">Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.</p>
@@ -723,59 +713,59 @@ export default function Tierversicherungen() {
                   <p className="text-sm text-gray-600">Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.</p>
                 </div>
               </div>
-            </div>
-            <div className="grid gap-6 md:grid-cols-3">
-              <Card className="border-2 hover:border-green-200 relative">
-                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
-                <CardHeader>
-                  <CardTitle className="text-lg">Uelzener Tierkrankenversicherung</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Umfassender Schutz für Hunde, Katzen und Pferde</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Kranken- und OP-Versicherung mit Gesundheitspauschale</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Testsieger in Leistungs- und Fairness-Tests 2024</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auslandsschutz für bis zu 12 Monate weltweit</li>
-                  </ul>
-                  <Link href="https://tidd.ly/3UN80GC" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
-                  </Link>
-                </CardContent>
-              </Card>
-              <Card className="border-2 hover:border-green-200 relative">
-                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
-                <CardHeader>
-                  <CardTitle className="text-lg">BavariaDirekt Tierkrankenversicherung</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Günstige Hundehaftpflicht ab 23,13€/Jahr</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate kostenfrei mitversichert</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24h-Notfall-Hotline für schnellen Service</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auszeichnung als 'Fairer Versicherer'</li>
-                  </ul>
-                  <Link href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
-                  </Link>
-                </CardContent>
-              </Card>
-              <Card className="border-2 hover:border-green-200 relative">
-                <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hunde Krankenversicherung</Badge>
-                <CardHeader>
-                  <CardTitle className="text-lg">Figo Hunde-OP-Versicherung</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 90% Erstattung ohne Jahreslimit</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Freie Tierarzt- und Klinikwahl</li>
-                    <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden</li>
-                  </ul>
-                  <Link href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
-                  </Link>
-                </CardContent>
-              </Card>
+              <div className="grid gap-6 md:grid-cols-3">
+                <Card className="border-2 hover:border-green-200 relative">
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Uelzener Tierkrankenversicherung</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Umfassender Schutz für Hunde, Katzen und Pferde</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Kranken- und OP-Versicherung mit Gesundheitspauschale</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Testsieger in Leistungs- und Fairness-Tests 2024</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auslandsschutz für bis zu 12 Monate weltweit</li>
+                    </ul>
+                    <Link href="https://tidd.ly/3UN80GC" target="_blank" rel="noopener noreferrer sponsored">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+                <Card className="border-2 hover:border-green-200 relative">
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+                  <CardHeader>
+                    <CardTitle className="text-lg">BavariaDirekt Tierkrankenversicherung</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Günstige Hundehaftpflicht ab 23,13€/Jahr</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate kostenfrei mitversichert</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24h-Notfall-Hotline für schnellen Service</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Auszeichnung als 'Fairer Versicherer'</li>
+                    </ul>
+                    <Link href="https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=" target="_blank" rel="noopener noreferrer sponsored">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+                <Card className="border-2 hover:border-green-200 relative">
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Hunde Krankenversicherung</Badge>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Figo Hunde-OP-Versicherung</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 90% Erstattung ohne Jahreslimit</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Freie Tierarzt- und Klinikwahl</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden</li>
+                    </ul>
+                    <Link href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-4">Zum Anbieter*</Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
 
@@ -783,29 +773,28 @@ export default function Tierversicherungen() {
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hunde-OP-Versicherung für chirurgische Eingriffe</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <p className="mb-4">
-                Eine <strong>Hunde-OP-Versicherung</strong> schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
+                Eine Hunde-OP-Versicherung schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
               </p>
-              <div className="text-lg font-semibold mb-4">Warum eine Hunde-OP-Versicherung sinnvoll ist</div>
+              <h4 className="text-lg font-semibold mb-4">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
               <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Freie Tierarzt- und Klinikwahl weltweit.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Unbegrenzt kostenlose Videosprechstunden mit Tierärzten.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span>Flexible Beitragsgestaltung für alle Rassen und Altersgruppen.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Freie Tierarzt- und Klinikwahl weltweit</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden mit Tierärzten</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Flexible Beitragsgestaltung für alle Rassen und Altersgruppen</li>
               </ul>
-              <div className="text-lg font-semibold mb-4">Tipps zur Auswahl der besten Hunde-OP-Versicherung</div>
-              <p className="mb-4">Um die beste & günstigste <strong>Hunde-OP-Versicherung</strong> zu finden, beachten Sie folgende Punkte:</p>
+              <h4 className="text-lg font-semibold mb-4">Tipps zur Auswahl der besten Hunde-OP-Versicherung</h4>
               <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Flexibilität</strong>: Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse.</span></li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><span><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</span></li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Flexibilität</strong>: Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen</li>
               </ul>
               <p className="mb-6">
                 Mit der Hunde-OP-Versicherung schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
               </p>
               <div className="text-center">
-                <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt die Top Hunde-OP-Versicherung online abschließen!*</Button>
+                <a href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt die Top Hunde-OP-Versicherung abschließen*</Button>
                 </a>
               </div>
             </div>
@@ -818,9 +807,9 @@ export default function Tierversicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen: Schritt-für-Schritt-Anleitung</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { step: "1", title: "Vergleichen", text: "Nutzen Sie Portale wie Tarifcheck oder CHECK24 für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung." },
+              { step: "1", title: "Vergleichen", text: "Nutzen Sie Portale für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung." },
               { step: "2", title: "Berechnen", text: "Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten." },
-              { step: "3", title: "Prüfen", text: "Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei Anbietern wie Uelzener oder BavariaDirekt." },
+              { step: "3", title: "Prüfen", text: "Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei verschiedenen Anbietern." },
               { step: "4", title: "Abschließen", text: "Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail." }
             ].map((item) => (
               <Card key={item.step} className="text-center">
@@ -846,7 +835,7 @@ export default function Tierversicherungen() {
               </div>
               <div>
                 <div className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</div>
-                <p className="text-sm text-gray-600 mb-4">Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter wie Uelzener und Figo bieten bis zu 100% Erstattung.</p>
+                <p className="text-sm text-gray-600 mb-4">Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter bieten bis zu 100% Erstattung.</p>
               </div>
               <div>
                 <div className="font-semibold mb-2 text-green-600">Kann ich meine Tierversicherung online kündigen?</div>
@@ -854,8 +843,13 @@ export default function Tierversicherungen() {
               </div>
               <div>
                 <div className="font-semibold mb-2 text-green-600">Welche Zahlungsmethoden gibt es für Tierversicherungen?</div>
-                <p className="text-sm text-gray-600 mb-4">SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei Anbietern wie BavariaDirekt gegen Aufpreis möglich.</p>
+                <p className="text-sm text-gray-600 mb-4">SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei einigen Anbietern gegen Aufpreis möglich.</p>
               </div>
+            </div>
+            <div className="text-center mt-6">
+              <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung vergleichen*</Button>
+              </a>
             </div>
           </div>
         </div>
@@ -864,13 +858,11 @@ export default function Tierversicherungen() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h2>
-
           <div className="mb-8 text-center">
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
             </p>
           </div>
-
           <div className="grid gap-8 lg:grid-cols-2">
             <Card className="border-2 border-green-200">
               <CardHeader>
@@ -890,13 +882,12 @@ export default function Tierversicherungen() {
                   </div>
                   <div className="bg-green-50 p-3 rounded">
                     <p className="text-sm text-green-700">
-                      <strong>Tipp:</strong> Nutzen Sie Testsieger wie Tarifcheck für einen kostenlosen Vergleich.
+                      <strong>Tipp:</strong> Nutzen Sie Testsieger für einen kostenlosen Vergleich.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
             <Card className="border-2 border-green-200">
               <CardHeader>
                 <CardTitle className="text-lg text-green-600">Tierkrankenversicherung wechseln</CardTitle>
@@ -922,7 +913,6 @@ export default function Tierversicherungen() {
               </CardContent>
             </Card>
           </div>
-
           <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
             <h3 className="text-lg font-bold mb-4 text-yellow-800">Checkliste für den Wechsel Ihrer Tierversicherung</h3>
             <div className="grid gap-4 md:grid-cols-2">
@@ -944,6 +934,34 @@ export default function Tierversicherungen() {
                   <li>• Telemedizin- oder Vorsorgeleistungen aktivieren</li>
                 </ul>
               </div>
+            </div>
+          </div>
+          <div className="text-center mt-6">
+            <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+              <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung wechseln*</Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">So können Sie das gesparte Geld anlegen</h2>
+          <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Einige Beispiele</h3>
+            <p className="mb-4">
+              Mit den Einsparungen aus einem Tierversicherungswechsel können Sie Ihr Geld sinnvoll anlegen, um langfristig Vermögen aufzubauen oder die Gesundheit Ihres Haustiers weiter zu fördern. Hier sind einige Möglichkeiten:
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Investieren Sie in einen ETF-Sparplan für langfristiges Wachstum</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Legen Sie das Geld in hochwertiges Hundefutter oder Vorsorgeprodukte an</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Finanzieren Sie Trainingskurse für Ihren Hund zur Gesundheitsförderung</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Sparen Sie für Notfälle in einem Tagesgeldkonto</li>
+            </ul>
+            <div className="text-center">
+              <a href="/anlegen" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt anlegen</Button>
+              </a>
             </div>
           </div>
         </div>
