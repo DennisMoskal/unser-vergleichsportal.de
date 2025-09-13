@@ -666,7 +666,7 @@ export default function Tierversicherungen() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Hunde- und Katzenversicherung: Schutz für Ihren Vierbeiner</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">">Hunde- und Katzenversicherung: Schutz für Ihren Vierbeiner</h2>
 
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Günstige Hundehaftpflichtversicherung finden</h3>
@@ -946,7 +946,7 @@ export default function Tierversicherungen() {
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">So können Sie das gesparte Geld anlegen</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">">So können Sie das gesparte Geld anlegen</h2>
           <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Einige Beispiele</h3>
             <p className="mb-4">
