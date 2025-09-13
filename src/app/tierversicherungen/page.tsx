@@ -8,147 +8,53 @@ import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import Head from "next/head"
 
-// Define types for navigation items and provider data
-interface NavItem {
-  key: string
-  label: string
-  url: string
-  isInternal: boolean
-}
-
-interface Provider {
-  name: string
-  rating: number
-  features: string[]
-  price: string
-  bonus: string
-  logo: string
-  url: string
-  metaTitle: string
-  metaDescription: string
-}
-
-// Navigation data
-const navItems: NavItem[] = [
-  { key: "banking", label: "Banking", url: "/banking", isInternal: true },
-  { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
-  { key: "trading", label: "Trading", url: "/trading", isInternal: true },
-  { key: "versicherungen", label: "Versicherung", url: "/versicherungen", isInternal: true },
-  { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-  { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-  { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-  { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-  { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-  { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-  { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-  { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-]
-
-const companyLinks: NavItem[] = [
-  { key: "karriere", label: "Karriere", url: "/karriere", isInternal: true },
-  { key: "kontakt", label: "Kontakt", url: "/kontakt", isInternal: true },
-  { key: "partnerprogramm", label: "Partnerprogramm", url: "/partnerprogramme", isInternal: true },
-  { key: "ueber-uns", label: "Über uns", url: "/ueber-uns", isInternal: true },
-]
-
-const legalLinks: NavItem[] = [
-  { key: "agb", label: "AGB", url: "/agb", isInternal: true },
-  { key: "cookie-richtlinie", label: "Cookie-Richtlinie", url: "/cookie-richtlinie", isInternal: true },
-  { key: "datenschutz", label: "Datenschutz", url: "/datenschutz", isInternal: true },
-  { key: "impressum", label: "Impressum", url: "/impressum", isInternal: true },
-]
-
-// SmartFinanzLogo Component
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => (
-  <Link href="/" aria-label="Zurück zur Startseite">
-    <div className={`flex flex-col items-start ${className}`}>
-      <div className="flex items-center space-x-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
-          <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-        </svg>
-        <span className="font-bold">martFinanz</span>
+// SmartFinanzLogo-Komponente
+const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <Link href="/" aria-label="Zurück zur Startseite">
+      <div className={`flex flex-col items-start ${className}`}>
+        <div className="flex items-center space-x-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
+          </svg>
+          <span className="font-bold">martFinanz</span>
+        </div>
+        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
       </div>
-      <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
-    </div>
-  </Link>
-)
-
-// Navigation Link Component
-const NavLink: React.FC<{
-  item: NavItem
-  activeCategory: string
-  setActiveCategory: (key: string) => void
-  setMobileMenuOpen?: (open: boolean) => void
-  className?: string
-}> = ({ item, activeCategory, setActiveCategory, setMobileMenuOpen, className = "" }) => {
-  const isActive = activeCategory === item.key
-  const commonClasses = `block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 ${isActive ? "bg-green-600 text-white" : ""} ${className}`
-
-  return item.isInternal ? (
-    <Link
-      href={item.url}
-      className={commonClasses}
-      onClick={() => {
-        setActiveCategory(item.key)
-        setMobileMenuOpen?.(false)
-      }}
-      aria-label={`Zu ${item.label} navigieren`}
-    >
-      {item.label}
     </Link>
-  ) : (
-    <a
-      href={item.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={commonClasses}
-      onClick={() => {
-        setActiveCategory(item.key)
-        setMobileMenuOpen?.(false)
-      }}
-      aria-label={`${item.label} vergleichen (externer Link)`}
-    >
-      {item.label}
-    </a>
   )
 }
 
-// Header Component
+// Reusable Header Component
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("tierversicherungen")
+  const [activeCategory, setActiveCategory] = useState("versicherungen")
 
-  const scrollToSection = useCallback((sectionId: string) => {
+  const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
-    element?.scrollIntoView({ behavior: "smooth" })
-  }, [])
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   useEffect(() => {
     const hash = window.location.hash.substring(1)
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
-  }, [scrollToSection])
+  }, [])
 
   return (
     <>
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <SmartFinanzLogo className="text-xl" />
-          <nav className="hidden sm:flex items-center gap-4" aria-label="Hauptmenü">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.key}
-                item={item}
-                activeCategory={activeCategory}
-                setActiveCategory={setActiveCategory}
-              />
-            ))}
-          </nav>
+          <div className="flex items-center">
+            <SmartFinanzLogo className="text-xl" />
+          </div>
           <button
-            className="sm:hidden"
+            className="sm:hidden flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menü öffnen/schließen"
           >
@@ -156,79 +62,134 @@ const Header: React.FC = () => {
           </button>
         </div>
 
+        {/* Mobile Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</div>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</span>
                 <ul className="flex flex-col gap-2 text-base">
-                  {navItems.slice(0, 4).map((item) => (
-                    <li key={item.key}>
-                      <NavLink
-                        item={item}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                      />
+                  {[
+                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</div>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</span>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
-                    {navItems.slice(4, 8).map((item) => (
-                      <li key={item.key}>
-                        <NavLink
-                          item={item}
-                          activeCategory={activeCategory}
-                          setActiveCategory={setActiveCategory}
-                          setMobileMenuOpen={setMobileMenuOpen}
-                        />
+                    {[
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
                       </li>
                     ))}
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
-                    {navItems.slice(8).map((item) => (
-                      <li key={item.key}>
-                        <NavLink
-                          item={item}
-                          activeCategory={activeCategory}
-                          setActiveCategory={setActiveCategory}
-                          setMobileMenuOpen={setMobileMenuOpen}
-                        />
+                    {[
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</div>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</span>
                 <ul className="flex flex-col gap-2 text-base">
-                  {companyLinks.map((item) => (
-                    <li key={item.key}>
-                      <NavLink
-                        item={item}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                      />
+                  {[
+                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</div>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</span>
                 <ul className="flex flex-col gap-2 text-base">
-                  {legalLinks.map((item) => (
-                    <li key={item.key}>
-                      <NavLink
-                        item={item}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                      />
+                  {[
+                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
