@@ -894,7 +894,7 @@ export default function Tierversicherungen() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">So können Sie das gesparte Geld anlegen</h2>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Einige Beispiele</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text">Einige Beispiele</h3>
               <p className="mb-4">
                 Mit den Einsparungen aus einem Tierversicherungswechsel können Sie Ihr Geld sinnvoll anlegen, um langfristig Vermögen aufzubauen oder die Gesundheit Ihres Haustiers weiter zu fördern. Hier sind einige Möglichkeiten:
               </p>
