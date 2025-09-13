@@ -23,7 +23,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <h3 className="text-sm mt-1">unser-vergleichsportal.de</h3>
+        <span className="text-sm mt-1">unser-vergleichsportal.de</span>
       </div>
     </Link>
   )
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</span>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -148,7 +148,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -173,7 +173,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -263,33 +263,33 @@ const Header: React.FC = () => {
             <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <li className="flex items-start">
                 <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <h3 className="ml-3 text-base sm:text-lg">
+                <p className="ml-3 text-base sm:text-lg">
                   Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
-                </h3>
+                </p>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <h3 className="ml-3 text-base sm:text-lg">
+                <p className="ml-3 text-base sm:text-lg">
                   Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
-                </h3>
+                </p>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <h3 className="ml-3 text-base sm:text-lg">
+                <p className="ml-3 text-base sm:text-lg">
                   Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
-                </h3>
+                </p>
               </li>
               <li className="flex items-start">
                 <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <h3 className="ml-3 text-base sm:text-lg">
+                <p className="ml-3 text-base sm:text-lg">
                   <strong className="font-semibold">4,8★</strong> Kundenstimmen
-                </h3>
+                </p>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <h3 className="ml-3 text-base sm:text-lg">
+                <p className="ml-3 text-base sm:text-lg">
                   Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
-                </h3>
+                </p>
               </li>
             </ul>
           </div>
@@ -484,9 +484,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>SmartFinanz - Bester Finanzvergleich 2025 für Versicherungen, Banking & mehr</title>
-        <meta name="description" content="Vergleichen Sie kostenlos über 500 Finanzprodukte: Versicherungen, Banking, DSL, Mobilfunk, Strom & mehr. Sparen Sie bis zu 1.000€ mit unseren Testsiegern 2025!" />
-        <meta name="keywords" content="Finanzvergleich, Testsieger 2025, günstige Versicherungen, kostenloser Vergleich, Banking, Tierversicherungen, Trading, DSL, Mobilfunk, Strom, Gas, Kreditkarten, SmartFinanz" />
+        <title>SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr</title>
+        <meta name="description" content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!" />
+        <meta name="keywords" content="Finanzvergleich 2025, günstige Versicherungen, kostenloses Banking, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
@@ -496,15 +496,15 @@ export default function Home() {
         <link rel="canonical" href="https://smartfinanz.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="SmartFinanz - Bester Finanzvergleich 2025 für Versicherungen, Banking & mehr" />
-        <meta property="og:description" content="Kostenloser Vergleich von über 500 Finanzprodukten: Versicherungen, Banking, DSL, Mobilfunk, Strom & mehr. Bis zu 1.000€ sparen mit Testsiegern 2025!" />
+        <meta property="og:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
+        <meta property="og:description" content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://smartfinanz.de" />
         <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz - Bester Finanzvergleich 2025 für Versicherungen, Banking & mehr" />
-        <meta name="twitter:description" content="Kostenloser Vergleich von über 500 Finanzprodukten: Versicherungen, Banking, DSL, Mobilfunk, Strom & mehr. Bis zu 1.000€ sparen mit Testsiegern 2025!" />
+        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
+        <meta name="twitter:description" content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!" />
         <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
         <meta name="twitter:site" content="@smartfinanz" />
         <link rel="preload" href="/logo.png" as="image" />
@@ -525,7 +525,7 @@ export default function Home() {
         {/* Hauptüberschrift */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <div className="text-2xl sm:text-3xl font-bold mb-4">unser-vergleichsportal.de | einfach sparen!</div>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4">Finanzvergleich September 2025: Günstige Versicherungen, Banking & mehr</h1>
             <Button 
               size="lg" 
               className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
@@ -540,9 +540,9 @@ export default function Home() {
         {/* Vergleichstabellen */}
         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
           <div className="container mx-auto">
-            <h1 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-              Die Testsieger September 2025<br />Anbieter- & Finanzvergleich aktuell
-            </h1>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+              Testsieger September 2025: Top-Anbieter für Finanzprodukte
+            </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
@@ -765,7 +765,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
                     <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
-                      <h3 className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</h3>
+                      <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
                       <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
                         {provider.bonus}
                       </Badge>
@@ -776,7 +776,7 @@ export default function Home() {
                           {provider.features.map((feature, i) => (
                             <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
                               <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                              <h3 className="break-words overflow-wrap-anywhere">{feature}</h3>
+                              <p className="break-words overflow-wrap-anywhere">{feature}</p>
                             </li>
                           ))}
                         </ul>
@@ -808,14 +808,14 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
-              <h3>
+              <p>
                 CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. 
                 72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter. 
                 Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
-              </h3>
-              <h3 className="mt-4">
+              </p>
+              <p className="mt-4">
                 *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
-              </h3>
+              </p>
             </div>
           </div>
         </section>
@@ -823,7 +823,7 @@ export default function Home() {
         {/* Kundenbewertungen */}
         <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Das sagen unsere Kunden über SmartFinanz</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Kundenbewertungen zu SmartFinanz</h2>
             <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
               <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                 <CardHeader className="pb-4 flex-shrink-0">
@@ -840,16 +840,17 @@ export default function Home() {
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
                       <div className="flex items-center mt-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                          <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
                         ))}
                       </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Günstige Kfz-Versicherung mit 300€ Ersparnis</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
-                  </h3>
+                  </p>
                 </CardContent>
               </Card>
 
@@ -868,16 +869,17 @@ export default function Home() {
                       <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
                       <div className="flex items-center mt-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`h-4 w-4 sm:h-5 sm:w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} aria-hidden="true" />
+                          <Star key={i} className={`h-4 w-4 sm:h-5 w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} aria-hidden="true" />
                         ))}
                       </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "SmartFinanz hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind!"
-                  </h3>
+                  </p>
                 </CardContent>
               </Card>
 
@@ -903,9 +905,10 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Sicheres Banking mit Bonus</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
-                  </h3>
+                  </p>
                 </CardContent>
               </Card>
 
@@ -931,9 +934,10 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                  <h3 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Kostengünstige Trading-Plattform finden</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                     "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!"
-                  </h3>
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -984,7 +988,7 @@ export default function Home() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "Wie funktioniert der Vergleich bei SmartFinanz?",
+                    "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
@@ -992,7 +996,7 @@ export default function Home() {
                   },
                   {
                     "@type": "Question",
-                    "name": "Ist der Vergleich wirklich kostenlos?",
+                    "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen."
@@ -1000,7 +1004,7 @@ export default function Home() {
                   },
                   {
                     "@type": "Question",
-                    "name": "Welche Kategorien bietet SmartFinanz an?",
+                    "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
@@ -1008,7 +1012,7 @@ export default function Home() {
                   },
                   {
                     "@type": "Question",
-                    "name": "Wie schnell erhalte ich meine Empfehlungen?",
+                    "name": "Wie schnell bekomme ich Empfehlungen bei SmartFinanz?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten."
@@ -1024,33 +1028,33 @@ export default function Home() {
         <section className="py-12 sm:py-16 bg-green-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Jetzt vergleichen - einfach sparen
+              Jetzt Finanzprodukte vergleichen und sparen
             </h2>
-            <h3 className="mt-4 text-green-100 text-sm sm:text-base">
-              Schnell, sicher &amp; kostenlos – mit nur wenigen Klicks zum besten Angebot.
-            </h3>
+            <p className="mt-4 text-green-100 text-sm sm:text-base">
+              Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
+            </p>
           </div>
         </section>
 
         {/* FAQ Section für bessere SEO */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufig gestellte Fragen</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufige Fragen zum Finanzvergleich</h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Vergleich bei SmartFinanz?</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Finanzvergleich bei SmartFinanz?</h3>
                 <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Vergleich wirklich kostenlos?</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Finanzvergleich bei SmartFinanz kostenlos?</h3>
                 <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Kategorien bietet SmartFinanz an?</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?</h3>
                 <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell erhalte ich meine Empfehlungen?</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich Empfehlungen bei SmartFinanz?</h3>
                 <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
               </div>
             </div>
@@ -1066,7 +1070,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Finanzprodukte</h2>
+                <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
                     <Link 
@@ -1107,7 +1111,7 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Weitere Produkte</h2>
+                <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
                 <div className="grid grid-cols-2 gap-4">
                   <ul className="space-y-2 text-base text-gray-400">
                     <li>
@@ -1204,7 +1208,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Unternehmen</h2>
+                <span className="font-semibold mb-3 text-xl">Unternehmen</span>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
                     <Link 
@@ -1245,7 +1249,7 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold mb-3 text-xl">Rechtliches</h2>
+                <span className="font-semibold mb-3 text-xl">Rechtliches</span>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
                     <Link 
@@ -1292,49 +1296,4 @@ export default function Home() {
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
               <Button 
-                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-              >
-                Zurück zur Startseite
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </footer>
-         
-
-        {/* Structured Data für lokale SEO */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "SmartFinanz",
-            "url": "https://smartfinanz.de",
-            "logo": "https://smartfinanz.de/logo.png",
-            "description": "Deutschlands führendes Vergleichsportal für Versicherungen, Banking, DSL, Strom, Gas und mehr. Über 500 geprüfte Anbieter, kostenloser Vergleich.",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "DE"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+49-123-456789",
-              "contactType": "customer service",
-              "availableLanguage": "German"
-            },
-            "sameAs": [
-              "https://www.facebook.com/smartfinanz",
-              "https://www.twitter.com/smartfinanz",
-              "https://www.linkedin.com/company/smartfinanz",
-              "https://www.instagram.com/smartfinanz"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "100000"
-            }
-          })
-        }} />
-      </div>
-    </>
-  )
-}
+                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105
