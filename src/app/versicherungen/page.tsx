@@ -475,18 +475,7 @@ export default function Versicherungen() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored" className="inline-block">
-                <Button
-                  className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100"
-                >
-                  Jetzt mit CHECK24 vergleichen
-                </Button>
-              </a>
-              <a href="https://www.huk.de/versicherungen/kfz-versicherung.html" target="_blank" rel="sponsored" className="inline-block">
-                <Button
-                  className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-gray-100"
-                >
-                  HUK-COBURG Tarife prüfen
-                </Button>
+               
               </a>
             </div>
           </div>
