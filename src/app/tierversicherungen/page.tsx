@@ -569,7 +569,7 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Tierversicherung</h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto text-center">
-            Entdecken Sie die besten Tarife für Hunde- und Katzenversicherungen und schützen Sie Ihr Haustier mit minimalem Aufwand.
+            Entdecken Sie die besten Tarife für Hunde- und Katzenversicherungen und schützen Sie Ihr Haustier.
           </p>
         </div>
       </section>
@@ -669,7 +669,7 @@ export default function Tierversicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Hunde- und Katzenversicherung: Schutz für Ihren Vierbeiner</h2>
 
           <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Günstige Hundehaftpflichtversicherung finden</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Günstige Hundehaftpflichtversicherung finden</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <h4 className="text-lg font-semibold mb-4">Kosten einer Hundehaftpflichtversicherung</h4>
               <p className="mb-4">
@@ -696,12 +696,12 @@ export default function Tierversicherungen() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung für Hunde und Katzen</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierkrankenversicherung für Hunde und Katzen</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <h4 className="text-lg font-semibold mb-4">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
               <div className="grid gap-4 md:grid-cols-3 mb-6">
                 <div>
-                  <div className="font-medium text-green-600 mb-2">Grundschutz</div>
+                  <div className="font-medium text-mb-2">Grundschutz</div>
                   <p className="text-sm text-gray-600">Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.</p>
                 </div>
                 <div>
