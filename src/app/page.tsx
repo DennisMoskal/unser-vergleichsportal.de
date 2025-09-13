@@ -523,23 +523,47 @@ export default function Home() {
         <div className="min-h-screen bg-white">
           <Header />
 
-          {/* Hauptüberschrift */}
-          section className="py-8 sm:py-12 bg-white">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
-              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen!
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700" 
-                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")} 
-                aria-label="Beste Finanzprodukte ansehen"
-              >
-                Jetzt vergleichen
-              </Button>
-            </div>
-          </section>
+         {/* Hauptüberschrift */}
+<section className="py-8 sm:py-12 bg-white">
+  <div className="container mx-auto px-4 text-center">
+    <h1 className="text-2xl sm:text-3xl font-bold">
+      Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten
+    </h1>
+
+    {/* Brand-Label + Slogan (SEO: Organization-Microdata) */}
+    <div
+      className="mt-2 mb-4 flex justify-center"
+      itemScope
+      itemType="https://schema.org/Organization"
+      aria-label="Brand und Slogan"
+    >
+      <div className="inline-flex items-center gap-2">
+        <span className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-3 py-1 text-sm font-semibold text-green-700">
+          <span itemProp="name">unser-vergleichsportal.de</span>
+        </span>
+        <span className="text-sm sm:text-base text-gray-700" itemProp="slogan">
+          | einfach sparen!
+        </span>
+        <meta itemProp="url" content="https://unser-vergleichsportal.de" />
+      </div>
+    </div>
+
+    <Button
+      size="lg"
+      className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+      onClick={() =>
+        window.open(
+          "https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit",
+          "_blank"
+        )
+      }
+      aria-label="Beste Finanzprodukte ansehen"
+    >
+      Jetzt vergleichen
+    </Button>
+  </div>
+</section>
+
 
           {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
