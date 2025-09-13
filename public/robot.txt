@@ -1,1 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /karriere
+Disallow: /partnerprogramme
+Disallow: /_next/
+Disallow: /*?*
+
 Sitemap: https://unser-vergleichsportal.de/sitemap.xml
