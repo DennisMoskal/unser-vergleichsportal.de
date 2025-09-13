@@ -1077,7 +1077,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind! Ich war so glücklich, am nächsten Tag habe ich mit dem Rauchen aufgehört"
+                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!"
                     </p>
                   </CardContent>
                 </Card>
