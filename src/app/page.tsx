@@ -486,7 +486,7 @@ export default function Home() {
       <Head>
         <title>SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr</title>
         <meta name="description" content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!" />
-        <meta name="keywords" content="Finanzvergleich 2025, günstige Versicherungen, kostenloses Banking, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz" />
+        <meta name="keywords" content="Finanzvergleich 2025, günstige Versicherungen, kostenloses Banking, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz, Tagesgeldkonto, Altersvorsorge, Kryptowährungen, Privathaftpflicht" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
@@ -825,6 +825,127 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Neue Inhalte für interne Unterseiten */}
+          <section className="py-12 sm:py-16 bg-white">
+            <div className="container mx-auto px-4">
+              {/* Banking Section */}
+              <div className="mb-12">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking-Anbieter</h2>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Die Wahl des richtigen Banking-Anbieters kann Ihre Finanzen optimieren. <Link href="/banking" className="text-green-600 hover:underline">Unser Vergleich</Link> zeigt Ihnen, wie Sie ein Girokonto, Tagesgeldkonto oder Depot finden, das zu Ihnen passt.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Darauf sollten Sie achten</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Ein gutes Girokonto sollte keine Kontoführungsgebühren haben und weltweite kostenlose Abhebungen ermöglichen. Achten Sie auf Boni wie Startguthaben und die Verfügbarkeit von Mobile Banking. <Link href="/banking" className="text-green-600 hover:underline">Vergleichen Sie jetzt</Link> und finden Sie Anbieter mit Top-Bewertungen.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Soviel kann ein Tagesgeldkonto bringen</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Tagesgeldkonten bieten attraktive Zinsen und Flexibilität. Mit durchschnittlich 2-3% p.a. können Sie Ihr Geld sicher anlegen. Nutzen Sie unseren <Link href="/banking" className="text-green-600 hover:underline">Tagesgeld-Vergleich</Link>, um die besten Konditionen zu finden.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Wichtige Kriterien für ein kostenloses Konto</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Kostenlose Konten bieten oft digitale Kontoführung, keine Gebühren für Überweisungen und eine kostenlose Kreditkarte. Prüfen Sie die Bedingungen für Mindestgeldeingänge und die Verfügbarkeit von Filialen. <Link href="/banking" className="text-green-600 hover:underline">Entdecken Sie passende Angebote</Link>.
+                </p>
+                <Link href="/banking">
+                  <Button 
+                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4"
+                    aria-label="Zum Banking-Vergleich"
+                  >
+                    Jetzt Konto wählen
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Trading Section */}
+              <div className="mb-12">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen?</h2>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Mit der richtigen Strategie können Sie Ihre finanzielle Zukunft sichern. <Link href="/trading" className="text-green-600 hover:underline">Trading-Plattformen</Link> bieten vielfältige Möglichkeiten für den Vermögensaufbau.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Das Rentenloch kurz erklärt</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Das Rentenloch beschreibt die Lücke zwischen der gesetzlichen Rente und dem benötigten Einkommen im Alter. Durchschnittlich fehlen 30-40% des letzten Nettoeinkommens. <Link href="/trading" className="text-green-600 hover:underline">Erfahren Sie, wie Trading hilft</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Möglichkeiten gibt es?</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Investieren Sie in Aktien, Immobilien, Depots oder Kryptowährungen. Jede Option hat Vor- und Nachteile: Aktien bieten hohe Renditen, Immobilien Stabilität, und Kryptowährungen Potenzial für schnelle Gewinne. <Link href="/trading" className="text-green-600 hover:underline">Vergleichen Sie jetzt</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Kryptowährungen wie Bitcoin sind volatil, bieten aber Chancen. Wählen Sie regulierte Plattformen und nutzen Sie Demo-Konten, um Risiken zu minimieren. <Link href="/trading" className="text-green-600 hover:underline">Entdecken Sie sichere Anbieter</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Vermögen aufbauen kann jeder</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Mit kleinen Beträgen und ETF-Sparplänen können auch Anfänger Vermögen aufbauen. Wichtig ist ein langfristiger Ansatz und Diversifikation. <Link href="/trading" className="text-green-600 hover:underline">Starten Sie noch heute</Link>.
+                </p>
+                <Link href="/trading">
+                  <Button 
+                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4"
+                    aria-label="Zum Trading-Vergleich"
+                  >
+                    Jetzt vorsorgen
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Versicherungen Section */}
+              <div className="mb-12">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Der richtige Versicherungsschutz ist essenziell, um finanzielle Risiken abzufedern. <Link href="/versicherungen" className="text-green-600 hover:underline">Vergleichen Sie jetzt</Link> und finden Sie die besten Tarife.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Privathaftpflicht</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Eine Privathaftpflichtversicherung schützt vor Schäden, die Sie anderen zufügen. Sie ist kostengünstig und unverzichtbar. <Link href="/versicherungen" className="text-green-600 hover:underline">Finden Sie günstige Tarife</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">KFZ-Versicherung</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Die KFZ-Versicherung ist für Autofahrer Pflicht. Mit einem Vergleich sparen Sie bis zu 300€ jährlich. <Link href="/versicherungen" className="text-green-600 hover:underline">Vergleichen Sie Anbieter</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Rechtschutz</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Eine Rechtschutzversicherung deckt Kosten bei rechtlichen Streitigkeiten, z. B. im Arbeits- oder Mietrecht. <Link href="/versicherungen" className="text-green-600 hover:underline">Sichern Sie sich ab</Link>.
+                </p>
+                <Link href="/versicherungen">
+                  <Button 
+                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4"
+                    aria-label="Zum Versicherungsvergleich"
+                  >
+                    Jetzt absichern
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Tierversicherungen Section */}
+              <div className="mb-12">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die richtige Absicherung für Ihr Haustier</h2>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Tierversicherungen schützen Ihr Haustier vor hohen Tierarztkosten. <Link href="/tierversicherungen" className="text-green-600 hover:underline">Finden Sie den besten Tarif</Link> für Ihren Hund oder Ihre Katze.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Warum eine Tierversicherung sinnvoll ist</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Tierarztbesuche können teuer werden, besonders bei Operationen. Eine Versicherung deckt bis zu 100% der Kosten. <Link href="/tierversicherungen" className="text-green-600 hover:underline">Vergleichen Sie jetzt</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Leistungen sind wichtig?</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Achten Sie auf freie Tierarztwahl, schnelle Kostenerstattung und Zusatzleistungen wie Physiotherapie. <Link href="/tierversicherungen" className="text-green-600 hover:underline">Entdecken Sie passende Angebote</Link>.
+                </p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">Kosten einer Tierversicherung</h3>
+                <p className="text-gray-700 mb-6" itemProp="description">
+                  Tarife starten bereits ab 8€ pro Monat. Mit unserem Vergleich finden Sie günstige Anbieter mit Top-Leistungen. <Link href="/tierversicherungen" className="text-green-600 hover:underline">Schützen Sie Ihr Haustier</Link>.
+                </p>
+                <Link href="/tierversicherungen">
+                  <Button 
+                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4"
+                    aria-label="Zum Tierversicherungsvergleich"
+                  >
+                    Jetzt Tier absichern
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Kundenbewertungen */}
           <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
             <div className="container mx-auto px-4">
@@ -1040,7 +1161,6 @@ export default function Home() {
               </p>
             </div>
           </section>
-
           {/* FAQ Section für bessere SEO */}
           <section className="py-12 sm:py-16 bg-white">
             <div className="container mx-auto px-4">
@@ -1065,7 +1185,9 @@ export default function Home() {
               </div>
             </div>
           </section>
-<footer className="bg-gray-900 text-white py-8 sm:py-12">
+<footer className="bg-gray-900 text-wh
+                price: "100% kostenlos",
+                bonus: "Bis zu 200€ Prämie",ite py-8 sm:py-12">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
@@ -1130,6 +1252,8 @@ export default function Home() {
               >
                 DSL
               </a>
+                price: "100% kostenlos",
+                bonus: "Bis zu 200€ Prämie",
             </li>
             <li>
               <a 
@@ -1137,7 +1261,9 @@ export default function Home() {
                 target="_blank" 
                 rel="noopener noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-                aria-label="Gasvergleich (externer Link)"
+                aria-label="Gasvergleich (externer L
+                price: "100% kostenlos",
+                bonus: "Bis zu 200€ Prämie",ink)"
               >
                 Gas
               </a>
