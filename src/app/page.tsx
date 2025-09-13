@@ -889,7 +889,7 @@ export default function Home() {
                         className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                       />
                       <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Markus, 42</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Aaron, 42</CardTitle>
                         <div className="flex items-center mt-1">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className={`h-4 w-4 sm:h-5 w-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} aria-hidden="true" />
@@ -901,7 +901,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind!"
+                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt fühlen wir uns sicher, dass Dana & Paco bestens versorgt sind! Ich war so glücklich, am nächsten Tag habe ich mit dem Rauchen aufgehört"
                     </p>
                   </CardContent>
                 </Card>
