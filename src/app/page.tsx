@@ -1256,7 +1256,7 @@ export default function Home() {
                   <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich Empfehlungen bei SmartFinanz?</h3>
                   <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
                 </div>
               </div>
