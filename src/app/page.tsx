@@ -500,7 +500,8 @@ export default function Home() {
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://smartfinanz.de" />
+        {/* ENTFERNT: <link rel="canonical" href="https://smartfinanz.de" /> */}
+        <link rel="canonical" href="https://unser-vergleichsportal.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
@@ -510,8 +511,8 @@ export default function Home() {
           content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://smartfinanz.de" />
-        <meta property="og:image" content="https://smartfinanz.de/og-image.jpg" />
+        <meta property="og:url" content="https://unser-vergleichsportal.de" />
+        <meta property="og:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
         <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
@@ -519,7 +520,7 @@ export default function Home() {
           name="twitter:description"
           content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
         />
-        <meta name="twitter:image" content="https://smartfinanz.de/og-image.jpg" />
+        <meta name="twitter:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
         <meta name="twitter:site" content="@smartfinanz" />
         <link rel="preload" href="/logo.png" as="image" />
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
@@ -532,6 +533,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+      </Head>
       </Head>
       <main>
         <div className="min-h-screen bg-white">
