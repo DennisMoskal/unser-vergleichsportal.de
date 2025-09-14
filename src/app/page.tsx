@@ -11,7 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // SmartFinanzLogo Component
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+const SmartFinanzLogo = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
       <div className={`flex flex-col items-start ${className}`}>
@@ -31,11 +31,11 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
 };
 
 // Header Component
-const Header: React.FC = () => {
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("versicherungen");
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     setActiveCategory(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
@@ -296,21 +296,11 @@ const Header: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </React.Fragment>
   );
 };
 
-export interface Provider {
-  name: string;
-  rating: number;
-  features: string[];
-  price: string;
-  bonus: string;
-  logo: string;
-  url: string;
-}
-
-const providerData: { [key: string]: Provider[] } = {
+const providerData = {
   versicherungen: [
     {
       name: "Tarifcheck.de",
@@ -483,7 +473,7 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen");
 
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr</title>
         <meta
@@ -500,7 +490,6 @@ export default function Home() {
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
-        {/* ENTFERNT: <link rel="canonical" href="https://smartfinanz.de" /> */}
         <link rel="canonical" href="https://unser-vergleichsportal.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
@@ -533,7 +522,6 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
-      </Head>
       </Head>
       <main>
         <div className="min-h-screen bg-white">
