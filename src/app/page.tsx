@@ -501,7 +501,7 @@ export default function Home() {
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
         {/* ENTFERNT: <link rel="canonical" href="https://smartfinanz.de" /> */}
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
+        
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
