@@ -167,7 +167,7 @@ export default function DatenschutzPage() {
                 <li>Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen</li>
               </ul>
               <p>
-                Kontaktieren Sie uns unter <a href="mailto:datenschutz@smartfinanz.de" className="text-green-600 hover:underline">datenschutz@smartfinanz.de</a>, um Ihre Rechte auszuüben.
+                Kontaktieren Sie uns unter <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">datenschutz@smartfinanz.de</a>, um Ihre Rechte auszuüben.
               </p>
             </CardContent>
           </Card>
