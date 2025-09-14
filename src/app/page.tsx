@@ -1,6 +1,5 @@
 "use client";
 
-import Head from "next/head";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,16 +8,81 @@ import { Search, Check, Star, Menu, X, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+// Metadata for App Router
+export const metadata: Metadata = {
+  title: "SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr",
+  description:
+    "Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!",
+  keywords:
+    "Finanzvergleich 2025, günstige Versicherungen, kostenloses Banking, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz",
+  robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+  authors: [{ name: "SmartFinanz" }],
+  alternates: {
+    canonical: "https://unser-vergleichsportal.de",
+  },
+  icons: {
+    icon: [
+      { url: "/images/favicon.svg", type: "image/svg+xml" },
+      { url: "/images/favicon.ico", type: "image/x-icon" },
+    ],
+  },
+  openGraph: {
+    title: "SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr",
+    description:
+      "Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!",
+    type: "website",
+    url: "https://unser-vergleichsportal.de",
+    siteName: "SmartFinanz",
+    images: [{ url: "https://unser-vergleichsportal.de/og-image.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr",
+    description:
+      "Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!",
+    images: ["https://unser-vergleichsportal.de/og-image.jpg"],
+    site: "@smartfinanz",
+  },
+  other: {
+    "google-site-verification": "do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E",
+    "revisit-after": "7 days",
+    "impact-site-verification": "f34232c9-40b1-4773-b281-9b596b88cd82",
+  },
+};
 
 // SmartFinanzLogo Component
-const SmartFinanzLogo = ({ className }) => {
+const SmartFinanzLogo = ({ className }: { className: string }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
       <div className={`flex flex-col items-start ${className}`}>
         <div className="flex items-center space-x-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
-            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="15"
+              fill="#16a34a"
+              stroke="#15803d"
+              strokeWidth="1"
+            />
+            <text
+              x="16"
+              y="22"
+              textAnchor="middle"
+              fontFamily="Arial Black, sans-serif"
+              fontSize="20"
+              fill="white"
+              fontWeight="900"
+            >
               S
             </text>
           </svg>
@@ -35,7 +99,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("versicherungen");
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
@@ -45,13 +109,16 @@ const Header = () => {
 
   useEffect(() => {
     const hash = window.location.hash.substring(1);
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+    if (
+      hash &&
+      ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)
+    ) {
       scrollToSection(hash);
     }
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
@@ -62,7 +129,11 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menü öffnen/schließen"
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -71,13 +142,35 @@ const Header = () => {
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</span>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">
+                  Finanzprodukte
+                </span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: "banking", label: "Banking", url: "/banking", isInternal: true },
-                    { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
-                    { key: "trading", label: "Trading", url: "/trading", isInternal: true },
-                    { key: "versicherungen", label: "Versicherungen", url: "/versicherungen", isInternal: true },
+                    {
+                      key: "banking",
+                      label: "Banking",
+                      url: "/banking",
+                      isInternal: true,
+                    },
+                    {
+                      key: "haustierversicherung",
+                      label: "Haustierversicherung",
+                      url: "/tierversicherungen",
+                      isInternal: true,
+                    },
+                    {
+                      key: "trading",
+                      label: "Trading",
+                      url: "/trading",
+                      isInternal: true,
+                    },
+                    {
+                      key: "versicherungen",
+                      label: "Versicherungen",
+                      url: "/versicherungen",
+                      isInternal: true,
+                    },
                   ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
@@ -96,14 +189,36 @@ const Header = () => {
                 </ul>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</span>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">
+                  Weitere Produkte
+                </span>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-                      { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-                      { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-                      { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
+                      {
+                        key: "dsl",
+                        label: "DSL",
+                        url: "https://www.c24n.de/ducwCtq",
+                        isInternal: false,
+                      },
+                      {
+                        key: "gas",
+                        label: "Gas",
+                        url: "https://www.c24n.de/Uxudvkj",
+                        isInternal: false,
+                      },
+                      {
+                        key: "handytarif",
+                        label: "Handytarif",
+                        url: "https://www.c24n.de/5R17qbN",
+                        isInternal: false,
+                      },
+                      {
+                        key: "kreditkarte",
+                        label: "Kreditkarte",
+                        url: "https://www.c24n.de/RYXPGyh",
+                        isInternal: false,
+                      },
                     ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
@@ -124,10 +239,30 @@ const Header = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-                      { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-                      { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-                      { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
+                      {
+                        key: "mietwagen",
+                        label: "Mietwagen",
+                        url: "https://www.c24n.de/FZ9nd0R",
+                        isInternal: false,
+                      },
+                      {
+                        key: "oekostrom",
+                        label: "Ökostrom",
+                        url: "https://www.c24n.de/zxy0WKh",
+                        isInternal: false,
+                      },
+                      {
+                        key: "reise",
+                        label: "Reise",
+                        url: "https://www.c24n.de/EieKR0E",
+                        isInternal: false,
+                      },
+                      {
+                        key: "strom",
+                        label: "Strom",
+                        url: "https://www.c24n.de/RYXPGyh",
+                        isInternal: false,
+                      },
                     ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
@@ -149,13 +284,35 @@ const Header = () => {
                 </div>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</span>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">
+                  Unternehmen
+                </span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: "karriere", label: "Karriere", url: "/karriere", isInternal: true },
-                    { key: "kontakt", label: "Kontakt", url: "/kontakt", isInternal: true },
-                    { key: "partnerprogramm", label: "Partnerprogramm", url: "/partnerprogramme", isInternal: true },
-                    { key: "ueber-uns", label: "Über uns", url: "/ueber-uns", isInternal: true },
+                    {
+                      key: "karriere",
+                      label: "Karriere",
+                      url: "/karriere",
+                      isInternal: true,
+                    },
+                    {
+                      key: "kontakt",
+                      label: "Kontakt",
+                      url: "/kontakt",
+                      isInternal: true,
+                    },
+                    {
+                      key: "partnerprogramm",
+                      label: "Partnerprogramm",
+                      url: "/partnerprogramme",
+                      isInternal: true,
+                    },
+                    {
+                      key: "ueber-uns",
+                      label: "Über uns",
+                      url: "/ueber-uns",
+                      isInternal: true,
+                    },
                   ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
@@ -174,13 +331,30 @@ const Header = () => {
                 </ul>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</span>
+                <span className="font-semibold text-2xl mb-3 text-left ml-2">
+                  Rechtliches
+                </span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: "agb", label: "AGB", url: "/agb", isInternal: true },
-                    { key: "cookie-richtlinie", label: "Cookie-Richtlinie", url: "/cookie-richtlinie", isInternal: true },
-                    { key: "datenschutz", label: "Datenschutz", url: "/datenschutz", isInternal: true },
-                    { key: "impressum", label: "Impressum", url: "/impressum", isInternal: true },
+                    {
+                      key: "cookie-richtlinie",
+                      label: "Cookie-Richtlinie",
+                      url: "/cookie-richtlinie",
+                      isInternal: true,
+                    },
+                    {
+                      key: "datenschutz",
+                      label: "Datenschutz",
+                      url: "/datenschutz",
+                      isInternal: true,
+                    },
+                    {
+                      key: "impressum",
+                      label: "Impressum",
+                      url: "/impressum",
+                      isInternal: true,
+                    },
                   ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
@@ -216,18 +390,78 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
             {[
-              { key: "banking", label: "Banking", url: "/banking", isInternal: true },
-              { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
-              { key: "trading", label: "Trading", url: "/trading", isInternal: true },
-              { key: "versicherungen", label: "Versicherung", url: "/versicherungen", isInternal: true },
-              { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-              { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-              { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-              { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-              { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-              { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-              { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-              { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
+              {
+                key: "banking",
+                label: "Banking",
+                url: "/banking",
+                isInternal: true,
+              },
+              {
+                key: "haustierversicherung",
+                label: "Haustierversicherung",
+                url: "/tierversicherungen",
+                isInternal: true,
+              },
+              {
+                key: "trading",
+                label: "Trading",
+                url: "/trading",
+                isInternal: true,
+              },
+              {
+                key: "versicherungen",
+                label: "Versicherung",
+                url: "/versicherungen",
+                isInternal: true,
+              },
+              {
+                key: "dsl",
+                label: "DSL",
+                url: "https://www.c24n.de/ducwCtq",
+                isInternal: false,
+              },
+              {
+                key: "gas",
+                label: "Gas",
+                url: "https://www.c24n.de/Uxudvkj",
+                isInternal: false,
+              },
+              {
+                key: "handytarif",
+                label: "Handytarif",
+                url: "https://www.c24n.de/5R17qbN",
+                isInternal: false,
+              },
+              {
+                key: "kreditkarte",
+                label: "Kreditkarte",
+                url: "https://www.c24n.de/RYXPGyh",
+                isInternal: false,
+              },
+              {
+                key: "mietwagen",
+                label: "Mietwagen",
+                url: "https://www.c24n.de/FZ9nd0R",
+                isInternal: false,
+              },
+              {
+                key: "oekostrom",
+                label: "Ökostrom",
+                url: "https://www.c24n.de/zxy0WKh",
+                isInternal: false,
+              },
+              {
+                key: "reise",
+                label: "Reise",
+                url: "https://www.c24n.de/EieKR0E",
+                isInternal: false,
+              },
+              {
+                key: "strom",
+                label: "Strom",
+                url: "https://www.c24n.de/RYXPGyh",
+                isInternal: false,
+              },
             ].map(({ key, label, url, isInternal }) => (
               <li key={key}>
                 {isInternal ? (
@@ -263,40 +497,60 @@ const Header = () => {
           <div className="max-w-5xl mx-auto">
             <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <Check
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
                 <p className="ml-3 text-base sm:text-lg">
-                  Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
+                  Über <strong className="font-semibold">100.000</strong> zufriedene
+                  Nutzer
                 </p>
               </li>
               <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <Check
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
                 <p className="ml-3 text-base sm:text-lg">
-                  Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
+                  Mehr als <strong className="font-semibold">500 Anbieter</strong> im
+                  direkten Vergleich
                 </p>
               </li>
               <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <Check
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
                 <p className="ml-3 text-base sm:text-lg">
-                  Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+                  Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong>{" "}
+                  bei Top-Tarifen
                 </p>
               </li>
               <li className="flex items-start">
-                <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <Star
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
                 <p className="ml-3 text-base sm:text-lg">
-                  <strong className="font-semibold">4,8★</strong> verivizierte Kundenstimmen
+                  <strong className="font-semibold">4,8★</strong> verivizierte
+                  Kundenstimmen
                 </p>
               </li>
               <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <Check
+                  className="h-5 w-5 mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
                 <p className="ml-3 text-base sm:text-lg">
-                  Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
+                  Schnell, sicher &amp;{" "}
+                  <strong className="font-semibold">kostenlos</strong>
                 </p>
               </li>
             </ul>
           </div>
         </div>
       </section>
-    </React.Fragment>
+    </>
   );
 };
 
@@ -473,56 +727,7 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen");
 
   return (
-    <React.Fragment>
-      <Head>
-        <title>SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr</title>
-        <meta
-          name="description"
-          content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
-        />
-        <meta
-          name="keywords"
-          content="Finanzvergleich 2025, günstige Versicherungen, kostenloses Banking, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz"
-        />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
-        <meta name="author" content="SmartFinanz" />
-        <meta name="revisit-after" content="7 days" />
-        <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-        <link rel="alternate icon" href="/images/favicon.ico" />
-        <meta property="og:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
-        <meta
-          property="og:description"
-          content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
-        <meta property="og:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
-        <meta property="og:site_name" content="SmartFinanz" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
-        <meta
-          name="twitter:description"
-          content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
-        />
-        <meta name="twitter:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
-        <meta name="twitter:site" content="@smartfinanz" />
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
-        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
-        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-        <link rel="dns-prefetch" href="https://www.check24.de" />
-        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-        <link rel="dns-prefetch" href="https://www.awin1.com" />
-        <link rel="dns-prefetch" href="https://www.freenet.de" />
-        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
-      </Head>
+    <>
       <main>
         <div className="min-h-screen bg-white">
           <Header />
@@ -530,14 +735,27 @@ export default function Home() {
           {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
-              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen!
+              <h1 className="text-2xl sm:text-3xl font-bold mb-4">
+                Transparenter Finanzvergleich September 2025 | Ohne versteckte
+                Kosten
+              </h1>
+              <p
+                className="text-lg font-semibold mb-4"
+                itemScope
+                itemType="http://schema.org/Brand"
+              >
+                <span itemProp="name">unser-vergleichsportal.de</span> | einfach
+                sparen!
               </p>
               <Button
                 size="lg"
                 className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit",
+                    "_blank"
+                  )
+                }
                 aria-label="Beste Finanzprodukte ansehen"
               >
                 Jetzt vergleichen
@@ -546,7 +764,10 @@ export default function Home() {
           </section>
 
           {/* Vergleichstabellen */}
-          <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
+          <section
+            className="py-12 sm:py-16 px-4 bg-gray-50"
+            id="comparison-section"
+          >
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
                 Testsieger September 2025: Top-Anbieter für Finanzprodukte
@@ -761,33 +982,59 @@ export default function Home() {
                       Top Empfehlung
                     </Badge>
                     <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
-                      <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
-                      <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
+                      <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">
+                        {provider.logo}
+                      </div>
+                      <CardTitle className="text-lg sm:text-xl font-bold break-words">
+                        {provider.name}
+                      </CardTitle>
                       <div className="flex items-center justify-center">
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                            className={`h-3 w-3 sm:h-4 w-4 ${
+                              i < Math.floor(provider.rating)
+                                ? "text-yellow-400 fill-current"
+                                : "text-gray-300"
+                            }`}
                             aria-hidden="true"
                           />
                         ))}
-                        <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
+                        <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">
+                          {provider.rating}
+                        </span>
                       </div>
                     </CardHeader>
                     <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
                       <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
-                        <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
-                        <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
+                        <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">
+                          {provider.price}
+                        </p>
+                        <Badge
+                          variant="outline"
+                          className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words"
+                        >
                           {provider.bonus}
                         </Badge>
                       </div>
                       <div className="flex-grow overflow-hidden">
-                        <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{ scrollbarWidth: "thin" }}>
+                        <div
+                          className="max-h-48 overflow-y-auto mb-4 pr-2"
+                          style={{ scrollbarWidth: "thin" }}
+                        >
                           <ul className="space-y-1.5">
                             {provider.features.map((feature, i) => (
-                              <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
-                                <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                                <p className="break-words overflow-wrap-anywhere">{feature}</p>
+                              <li
+                                key={i}
+                                className="flex items-start text-xs sm:text-sm leading-tight"
+                              >
+                                <Check
+                                  className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5"
+                                  aria-hidden="true"
+                                />
+                                <p className="break-words overflow-wrap-anywhere">
+                                  {feature}
+                                </p>
                               </li>
                             ))}
                           </ul>
@@ -796,7 +1043,11 @@ export default function Home() {
                       <a
                         href={provider.url}
                         target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                        rel={provider.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                        rel={
+                          provider.url.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         aria-label={`Zum Anbieter ${provider.name}`}
                       >
                         <Button
@@ -820,12 +1071,16 @@ export default function Home() {
               </div>
               <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
                 <p>
-                  CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
-                  72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
-                  Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+                  CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung
+                  mit dem hohen Risiko einher, schnell Geld zu verlieren. 72% der
+                  Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem
+                  Anbieter. Sie sollten überlegen, ob Sie verstehen, wie CFDs
+                  funktionieren, und ob Sie es sich leisten können, das hohe Risiko
+                  einzugehen, Ihr Geld zu verlieren.
                 </p>
                 <p className="mt-4">
-                  *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
+                  *Wir erhalten eine Provision für Käufe über diese Links. Diese
+                  Provision hat keinen Einfluss auf den Kundenpreis.
                 </p>
               </div>
             </div>
@@ -836,34 +1091,65 @@ export default function Home() {
             <div className="container mx-auto px-4">
               {/* Banking Section */}
               <div className="mb-12" id="banking-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking Anbieter</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                  So finden Sie den richtigen Banking Anbieter
+                </h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Die Wahl der richtigen Bank entscheidet über Gebühren, Servicequalität und langfristige Zufriedenheit. Ein durchdachter Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
+                  Die Wahl der richtigen Bank entscheidet über Gebühren,
+                  Servicequalität und langfristige Zufriedenheit. Ein durchdachter
+                  Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
                   <Link href="/banking" className="text-green-600 hover:underline">
                     Banking-Vergleichsseite
                   </Link>{" "}
                   hilft Ihnen, das optimale Konto zu finden.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Darauf sollten Sie achten
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  Moderne Banken bieten kostenlose Kontoführung, attraktive
+                  Neukundenboni und innovative Banking-Apps. Achten Sie auf
+                  monatliche Gebühren, Dispozinskonditionen und die Qualität des
+                  Mobile Bankings. Top-Anbieter wie{" "}
+                  <a
+                    href="https://www.check24.de/girokonto/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-600 hover:underline"
+                  >
                     CHECK24
                   </a>{" "}
                   bieten bis zu 250€ Bonus.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  So viel kann ein Tagesgeldkonto bringen
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
-                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
+                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder
+                  attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich
+                  bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                  <Link
+                    href="/banking#tagesgeld"
+                    className="text-green-600 hover:underline"
+                  >
                     Tagesgeldkonten
                   </Link>{" "}
                   für maximale Erträge.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein kostenloses Konto</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Wichtige Kriterien für ein kostenloses Konto
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
-                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine
+                  kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung.
+                  Achten Sie auf versteckte Kosten bei Überweisungen oder
+                  Kontoauszügen.{" "}
+                  <a
+                    href="https://www.tarifcheck.de/girokonto/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-600 hover:underline"
+                  >
                     Tarifcheck.de
                   </a>{" "}
                   bietet kostenlose Vergleiche.
@@ -877,42 +1163,80 @@ export default function Home() {
 
               {/* Trading Section */}
               <div className="mb-12" id="trading-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen?</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                  Selber die Altersvorsorge in die Hand nehmen?
+                </h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen machen den Einstieg einfach. Entdecken Sie passende Optionen auf unserer{" "}
-                  <Link href="/trading" className="text-green-600 hover:underline">
+                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne
+                  Trading-Plattformen machen den Einstieg einfach. Entdecken Sie
+                  passende Optionen auf unserer{" "}
+                  <Link
+                    href="/trading"
+                    className="text-green-600 hover:underline"
+                  >
                     Trading-Seite
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Das Rentenloch verstehen</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Das Rentenloch verstehen
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente deckt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
-                  <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
+                  Die gesetzliche Rente deckt nur etwa 48% des letzten
+                  Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private
+                  Vorsorge essenziell, um die Lücke von über 50% zu schließen.
+                  Informieren Sie sich über{" "}
+                  <Link
+                    href="/trading#rentenloch"
+                    className="text-green-600 hover:underline"
+                  >
                     Altersvorsorge-Optionen
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Welche Möglichkeiten gibt es?
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
-                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor
+                  bieten vielfältige Chancen. Diversifikation reduziert Risiken und
+                  stabilisiert Erträge. Plattformen wie{" "}
+                  <a
+                    href="https://link-pso.xtb.com/pso/lMDhc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-600 hover:underline"
+                  >
                     XTB
                   </a>{" "}
                   bieten 0% Kommission bis 100.000€ Umsatz.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Sind Bitcoin und andere Kryptowährungen sicher?
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Erfahren Sie mehr über{" "}
-                  <Link href="/trading#krypto" className="text-green-600 hover:underline">
+                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken.
+                  Regulierte Plattformen mit sicherer Verwahrung minimieren
+                  Gefahren. Erfahren Sie mehr über{" "}
+                  <Link
+                    href="/trading#krypto"
+                    className="text-green-600 hover:underline"
+                  >
                     sicheres Krypto-Trading
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen kann jeder</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Vermögen aufbauen kann jeder
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Mit nur 25€ monatlich können Sie in ETFs investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für langfristigen Vermögensaufbau. Starten Sie mit{" "}
-                  <Link href="/trading#etfs" className="text-green-600 hover:underline">
+                  Mit nur 25€ monatlich können Sie in ETFs investieren. Der
+                  Cost-Average-Effekt nutzt Kursschwankungen für langfristigen
+                  Vermögensaufbau. Starten Sie mit{" "}
+                  <Link
+                    href="/trading#etfs"
+                    className="text-green-600 hover:underline"
+                  >
                     ETF-Sparplänen
                   </Link>
                   .
@@ -926,17 +1250,27 @@ export default function Home() {
 
               {/* Versicherungen Section */}
               <div className="mb-12" id="versicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                  Diese Versicherungen sollten Sie mindestens haben
+                </h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
-                  <Link href="/versicherungen" className="text-green-600 hover:underline">
+                  Der richtige Versicherungsschutz schützt vor finanziellen
+                  Risiken. Erfahren Sie auf unserer{" "}
+                  <Link
+                    href="/versicherungen"
+                    className="text-green-600 hover:underline"
+                  >
                     Versicherungsseite
                   </Link>
                   , welche Policen unverzichtbar sind.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Privathaftpflichtversicherung
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
+                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen
+                  Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine
+                  gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
                   <a
                     href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
                     target="_blank"
@@ -949,15 +1283,25 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
                 <p className="mb-4 text-gray-700">
-                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
-                  <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
+                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine
+                  Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen
+                  Sie mit unserem{" "}
+                  <Link
+                    href="/versicherungen#kfz"
+                    className="text-green-600 hover:underline"
+                  >
                     KFZ-Vergleich
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Rechtschutzversicherung</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Rechtschutzversicherung
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung deckt Anwalts- und Gerichtskosten in privaten, beruflichen und Verkehrsstreitigkeiten. Besonders wichtig für Mieter und Selbstständige.
+                  Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung
+                  deckt Anwalts- und Gerichtskosten in privaten, beruflichen und
+                  Verkehrsstreitigkeiten. Besonders wichtig für Mieter und
+                  Selbstständige.
                 </p>
                 <Link href="/versicherungen">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -968,34 +1312,62 @@ export default function Home() {
 
               {/* Tierversicherungen Section */}
               <div className="mb-12" id="tierversicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                  Warum eine Tierversicherung wichtig ist
+                </h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
-                  <Link href="/tierversicherungen" className="text-green-600 hover:underline">
+                  Tiere sind Familienmitglieder – ihre Gesundheit sollte
+                  abgesichert sein. Hohe Tierarztkosten können Sie finanziell
+                  belasten. Entdecken Sie passende Tarife auf unserer{" "}
+                  <Link
+                    href="/tierversicherungen"
+                    className="text-green-600 hover:underline"
+                  >
                     Tierversicherungsseite
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Operationen und Notfallbehandlungen
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute
+                  Versicherungen wie{" "}
+                  <a
+                    href="https://www.hansemerkur.de/tierkrankenversicherung"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-600 hover:underline"
+                  >
                     HanseMerkur
                   </a>{" "}
                   decken bis zu 100% der Kosten ab.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Vorsorge und Routineuntersuchungen
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
-                  <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
+                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von
+                  modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
+                  <Link
+                    href="/tierversicherungen#vorsorge"
+                    className="text-green-600 hover:underline"
+                  >
                     Tierversicherungen
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Alternative Behandlungsmethoden
+                </h3>
                 <p className="mb-4 text-gray-700">
-                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
-                  <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
+                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden
+                  wichtig. Premium-Tarife erstatten 80-100% dieser Kosten.
+                  Informieren Sie sich über{" "}
+                  <Link
+                    href="/tierversicherungen#alternativ"
+                    className="text-green-600 hover:underline"
+                  >
                     alternative Behandlungen
                   </Link>
                   .
@@ -1010,9 +1382,14 @@ export default function Home() {
           </section>
 
           {/* Kundenbewertungen */}
-          <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
+          <section
+            className="py-12 sm:py-16 bg-gray-50"
+            id="kundenbewertungen"
+          >
             <div className="container mx-auto px-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Kundenbewertungen zu SmartFinanz</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+                Kundenbewertungen zu SmartFinanz
+              </h2>
               <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                   <CardHeader className="pb-4 flex-shrink-0">
@@ -1026,19 +1403,29 @@ export default function Home() {
                         className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                       />
                       <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">
+                          Anna, 30
+                        </CardTitle>
                         <div className="flex items-center mt-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                            <Star
+                              key={i}
+                              className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current"
+                              aria-hidden="true"
+                            />
                           ))}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Günstige Kfz-Versicherung mit 300€ Ersparnis</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                      Günstige Kfz-Versicherung mit 300€ Ersparnis
+                    </h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                      "Ich habe eine günstige Kfz-Versicherung gefunden und 300€
+                      im Jahr gespart! Der Vergleich war super einfach und
+                      schnell."
                     </p>
                   </CardContent>
                 </Card>
@@ -1055,19 +1442,33 @@ export default function Home() {
                         className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                       />
                       <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Aaron, 42</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">
+                          Aaron, 42
+                        </CardTitle>
                         <div className="flex items-center mt-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`h-4 w-4 sm:h-5 w-5 ${i < 4 ? "text-yellow-400 fill-current" : "text-gray-300"}`} aria-hidden="true" />
+                            <Star
+                              key={i}
+                              className={`h-4 w-4 sm:h-5 w-5 ${
+                                i < 4
+                                  ? "text-yellow-400 fill-current"
+                                  : "text-gray-300"
+                              }`}
+                              aria-hidden="true"
+                            />
                           ))}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                      Beste Tierversicherung für Hunde
+                    </h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!"
+                      "Unser-vergleichsportal.de hat uns die perfekte
+                      Tierversicherung für unsere Hunde empfohlen. Jetzt sind wir
+                      beruhigt, dass Dana & Paco bestens versorgt sind!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1084,19 +1485,29 @@ export default function Home() {
                         className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                       />
                       <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">
+                          Helga, 60
+                        </CardTitle>
                         <div className="flex items-center mt-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                            <Star
+                              key={i}
+                              className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current"
+                              aria-hidden="true"
+                            />
                           ))}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Sicheres Banking mit Bonus</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                      Sicheres Banking mit Bonus
+                    </h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich war skeptisch, aber der Vergleich hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                      "Ich war skeptisch, aber der Vergleich hat mir eine sichere
+                      Banklösung gezeigt. Der Prozess war klar, und ich habe 50€
+                      Bonus erhalten!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1113,19 +1524,29 @@ export default function Home() {
                         className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
                       />
                       <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">
+                          Lukas, 29
+                        </CardTitle>
                         <div className="flex items-center mt-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
+                            <Star
+                              key={i}
+                              className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current"
+                              aria-hidden="true"
+                            />
                           ))}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Kostengünstige Trading-Plattform finden</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                      Kostengünstige Trading-Plattform finden
+                    </h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Mit den Trading Top Empfehlungen habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren super, und ich spare jetzt Gebühren!"
+                      "Mit den Trading Top Empfehlungen habe ich die beste
+                      Trading-Plattform gefunden. Die Empfehlungen waren super, und
+                      ich spare jetzt Gebühren!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1142,7 +1563,8 @@ export default function Home() {
                     url: "https://smartfinanz.de",
                     potentialAction: {
                       "@type": "SearchAction",
-                      target: "https://smartfinanz.de/suche?q={search_term_string}",
+                      target:
+                        "https://smartfinanz.de/suche?q={search_term_string}",
                       "query-input": "required name=search_term_string",
                     },
                     aggregateRating: {
@@ -1169,13 +1591,15 @@ export default function Home() {
                         "@type": "Review",
                         author: { "@type": "Person", name: "Helga" },
                         reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody: "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!",
+                        reviewBody:
+                          "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!",
                       },
                       {
                         "@type": "Review",
                         author: { "@type": "Person", name: "Lukas" },
                         reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody: "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!",
+                        reviewBody:
+                          "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!",
                       },
                     ],
                     mainEntity: [
@@ -1215,14 +1639,6 @@ export default function Home() {
                   }),
                 }}
               />
-            </div>
-          </section>
-
-          {/* Schlanker CTA-Block unten ohne Buttons */}
-          <section className="py-12 sm:py-16 bg-green-600 text-white">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Jetzt Finanzprodukte vergleichen und sparen</h2>
-              <p className="mt-4 text-green-100 text-sm sm:text-base">Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.</p>
             </div>
           </section>
 
