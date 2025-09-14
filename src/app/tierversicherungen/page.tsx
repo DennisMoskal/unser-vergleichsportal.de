@@ -518,7 +518,7 @@ export default function Tierversicherungen() {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
         <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://www.smartfinanz.de/tierversicherungen" />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=no" />
