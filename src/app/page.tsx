@@ -316,7 +316,7 @@ const providerData: { [key: string]: Provider[] } = {
       name: "Tarifcheck.de",
       rating: 4.5,
       features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
+        "Bis zu 1.000€ jährlich sparen möglich",
         "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
@@ -324,7 +324,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
         "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich",
+        "Über 20 Jahre Erfahrung als Vergleichsportal",
       ],
       price: "100% kostenlos",
       bonus: "Bis zu 120€ Neukundenbonus",
@@ -484,7 +484,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+     <Head>
         <title>SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr</title>
         <meta
           name="description"
@@ -533,7 +533,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
-    
+      </Head>
       </Head>
       <main>
         <div className="min-h-screen bg-white">
@@ -1256,7 +1256,7 @@ export default function Home() {
                   <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich Empfehlungen bei SmartFinanz?</h3>
                   <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
                 </div>
               </div>
