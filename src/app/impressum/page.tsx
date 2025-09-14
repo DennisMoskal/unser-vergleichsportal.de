@@ -124,7 +124,7 @@ export default function ImpressumPage() {
             </CardHeader>
             <CardContent className="text-left text-gray-600 space-y-4">
               <p>
-                <strong>SmartFinanz GmbH</strong><br />
+                <strong>SmartFinanz unser-vergleichsportal.de</strong><br />
                 Westpreußenstraße 26<br />
                 53119 Bonn<br />
                 Deutschland
