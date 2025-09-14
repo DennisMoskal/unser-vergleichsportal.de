@@ -316,7 +316,7 @@ const providerData: { [key: string]: Provider[] } = {
       name: "Tarifcheck.de",
       rating: 4.5,
       features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
+        "Bis zu 1.000€ jährlich sparen möglich",
         "100% kostenloser und unverbindlicher Vergleich",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
@@ -324,7 +324,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Über 3.194 Kundenbewertungen",
         "Deutschlands drittgrößtes Vergleichsportal",
         "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich",
+        "Über 20 Jahre Erfahrung als Vergleichsportal",
       ],
       price: "100% kostenlos",
       bonus: "Bis zu 120€ Neukundenbonus",
