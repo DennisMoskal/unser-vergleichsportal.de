@@ -636,7 +636,7 @@ export default function Home() {
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
               <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen!
+                <span itemProp="name">unser-vergleichsportal.de</span> | google bestätigung!
               </p>
               <Button
                 size="lg"
