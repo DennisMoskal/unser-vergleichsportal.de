@@ -78,7 +78,7 @@ const Header: React.FC = () => {
                     { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
                     { key: "trading", label: "Trading", url: "/trading", isInternal: true },
                     { key: "versicherungen", label: "Versicherungen", url: "/versicherungen", isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
                       { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
                       { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
                       { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
                       { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
                       { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
                       { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
                     { key: "kontakt", label: "Kontakt", url: "/kontakt", isInternal: true },
                     { key: "partnerprogramm", label: "Partnerprogramm", url: "/partnerprogramme", isInternal: true },
                     { key: "ueber-uns", label: "Über uns", url: "/ueber-uns", isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -181,7 +181,7 @@ const Header: React.FC = () => {
                     { key: "cookie-richtlinie", label: "Cookie-Richtlinie", url: "/cookie-richtlinie", isInternal: true },
                     { key: "datenschutz", label: "Datenschutz", url: "/datenschutz", isInternal: true },
                     { key: "impressum", label: "Impressum", url: "/impressum", isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -533,6 +533,98 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+
+        {/* ---- Schema.org: Organization ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "SmartFinanz – unser-vergleichsportal.de",
+              "url": "https://unser-vergleichsportal.de",
+              "logo": "https://unser-vergleichsportal.de/logo.png",
+              "brand": {
+                "@type": "Brand",
+                "name": "unser-vergleichsportal.de"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/in/unservergleichsportalde",
+                "https://www.facebook.com/profile.php?id=61580338356626"
+              ],
+              "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "availableLanguage": ["de"],
+                "url": "https://unser-vergleichsportal.de/kontakt"
+              }]
+            }),
+          }}
+        />
+
+        {/* ---- Schema.org: WebSite + SearchAction ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "SmartFinanz",
+              "url": "https://unser-vergleichsportal.de",
+              "inLanguage": "de",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
+
+        {/* ---- Schema.org: FAQPage (spiegelt deinen FAQ-Abschnitt) ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
+                  }
+                }
+              ]
+            }),
+          }}
+        />
     
       </Head>
       <main>
