@@ -485,7 +485,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr</title>
+        <title>Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</title>
         <meta
           name="description"
           content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
@@ -500,12 +500,11 @@ export default function Home() {
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
-        {/* ENTFERNT: <link rel="canonical" href="https://smartfinanz.de" /> */}
         <link rel="canonical" href="https://unser-vergleichsportal.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
-        <meta property="og:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
+        <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
         <meta
           property="og:description"
           content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
@@ -515,7 +514,7 @@ export default function Home() {
         <meta property="og:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
         <meta property="og:site_name" content="SmartFinanz" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SmartFinanz - Finanzvergleich 2025: Versicherungen, Banking & mehr" />
+        <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
         <meta
           name="twitter:description"
           content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
@@ -1234,6 +1233,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </div>
+
 
               {/* Schema.org Markup für SEO */}
               <script
