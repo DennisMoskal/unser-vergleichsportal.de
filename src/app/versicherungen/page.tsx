@@ -778,7 +778,7 @@ export default function Versicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
             Testsieger Versicherungsvergleich September 2025
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
               <Card
                 key={provider.name}
@@ -872,7 +872,7 @@ export default function Versicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.huk.de/versicherungen/kfz-versicherung.html" target="_blank" rel="sponsored">
-                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Kfz-Versicherung vergleichen
                 </Button>
               </a>
@@ -903,7 +903,7 @@ export default function Versicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="sponsored">
-                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Haftpflichtversicherung vergleichen
                 </Button>
               </a>
@@ -934,7 +934,7 @@ export default function Versicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
-                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Hausratversicherung vergleichen
                 </Button>
               </a>
@@ -962,7 +962,7 @@ export default function Versicherungen() {
             </ul>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
-                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Risikolebensversicherung vergleichen
                 </Button>
               </a>
@@ -993,7 +993,7 @@ export default function Versicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
-                <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   Jetzt Rechtsschutzversicherung vergleichen
                 </Button>
               </a>
@@ -1008,71 +1008,52 @@ export default function Versicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
             Häufige Fragen zu Versicherungen
           </h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Wie wechsle ich meine Versicherung?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Prüfen Sie die Kündigungsfrist (meist 1–3 Monate). Nutzen Sie unseren Vergleich, um einen besseren Tarif zu finden, und lassen Sie den neuen Anbieter die Kündigung übernehmen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Was kostet eine Versicherung?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Kosten variieren: Haftpflicht ab 30€/Jahr, Kfz ab 150€/Jahr, Hausrat ab 50€/Jahr. Regelmäßiger Vergleich spart Geld.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Sind Online-Abschlüsse sicher?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Ja, mit 256-Bit-SSL-Verschlüsselung und VideoIdent sind Online-Abschlüsse sicher und bequem.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Welche Versicherung für junge Familien?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Risikolebensversicherung (z. B. CosmosDirekt) und Haftpflicht sind ideal, um Familie und Haushalt abzusichern.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Was deckt eine Hausratversicherung?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Schutz bei Einbruch, Feuer, Wasserschäden und optional Fahrraddiebstahl. Neuwertentschädigung inklusive.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Warum Rechtsschutzversicherung?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Deckt Anwalts- und Gerichtskosten bei Miet-, Arbeits- oder Verkehrsstreitigkeiten. ARAG bietet bis zu 1 Mio. € Schutz.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Antworten zu Ihren Versicherungsfragen
+            </h3>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Wie wechsle ich meine Versicherung?</strong> Prüfen Sie die Kündigungsfrist (meist 1–3 Monate). Nutzen Sie unseren Vergleich, um einen besseren Tarif zu finden, und lassen Sie den neuen Anbieter die Kündigung übernehmen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Was kostet eine Versicherung?</strong> Kosten variieren: Haftpflicht ab 30€/Jahr, Kfz ab 150€/Jahr, Hausrat ab 50€/Jahr. Regelmäßiger Vergleich spart Geld.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Sind Online-Abschlüsse sicher?</strong> Ja, mit 256-Bit-SSL-Verschlüsselung und VideoIdent sind Online-Abschlüsse sicher und bequem.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Welche Versicherung für junge Familien?</strong> Risikolebensversicherung (z. B. CosmosDirekt) und Haftpflicht sind ideal, um Familie und Haushalt abzusichern.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Was deckt eine Hausratversicherung?</strong> Schutz bei Einbruch, Feuer, Wasserschäden und optional Fahrraddiebstahl. Neuwertentschädigung inklusive.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Warum Rechtsschutzversicherung?</strong> Deckt Anwalts- und Gerichtskosten bei Miet-, Arbeits- oder Verkehrsstreitigkeiten. ARAG bietet bis zu 1 Mio. € Schutz.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Prüfen Sie Deckungssummen:</strong> Achten Sie auf ausreichende Deckung (z. B. 50 Mio. € bei Haftpflicht oder 1 Mio. € bei Rechtsschutz) für umfassenden Schutz.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Nutzen Sie saisonale Rabatte:</strong> Viele Anbieter wie HUK-COBURG oder Allianz bieten zeitlich begrenzte Rabatte, z. B. bis zu 20% bei Kombi-Tarifen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Vertrauen Sie auf sichere Plattformen:</strong> Verwenden Sie TÜV-geprüfte Portale wie Verivox oder CHECK24 für sichere und transparente Vergleiche.</span>
+              </li>
+            </ul>
           </div>
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
-              <Button className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 Jetzt Versicherungen vergleichen
               </Button>
             </a>
@@ -1085,9 +1066,16 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Schnell und einfach zum besten Versicherungsangebot</h2>
-            <p className="text-sm sm:text-base text-green-100">
+            <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie mit wenigen Klicks die besten Tarife für Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie Zeit und Geld mit unserem kostenlosen Vergleich.
             </p>
+            <div className="mt-6">
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
+                  Jetzt bei CHECK24 vergleichen
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
