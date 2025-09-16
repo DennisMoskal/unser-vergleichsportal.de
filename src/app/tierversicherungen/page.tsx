@@ -553,12 +553,12 @@ export default function Tierversicherungen() {
         <section className="py-12 sm:py-16 bg-green-600 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Tierversicherung Vergleich September 2025: Beste Hunde- und Katzenversicherung</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Haustierversicherung Vergleich September 2025: Beste Hunde- und Katzenversicherung</h1>
               <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-                Finden Sie die passende Haustierversicherung mit unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten-Versicherung für umfassenden Schutz Ihres Haustiers.
+                Finden Sie die richtige Tierversicherung mit unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten-Versicherung für umfassenden Schutz Ihres Haustiers.
               </p>
               <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
-                Jetzt Tierversicherungen vergleichen
+                Jetzt Haustierversicherungen vergleichen
               </Button>
             </div>
           </div>
@@ -566,7 +566,7 @@ export default function Tierversicherungen() {
 
         <section className="py-8 sm:py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Tierversicherung</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Haustierversicherung</h2>
             <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto text-center">
               Entdecken Sie die besten Tarife für Hunde- und Katzenversicherungen und schützen Sie Ihr Haustier mit minimalem Aufwand.
             </p>
@@ -575,7 +575,7 @@ export default function Tierversicherungen() {
 
         <section className="py-12 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Tierversicherungen September 2025</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Haustierversicherungen September 2025</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {providerData.map((provider) => (
                 <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
