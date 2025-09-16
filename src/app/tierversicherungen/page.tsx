@@ -745,71 +745,72 @@ export default function Tierversicherungen() {
                 </div>
               </div>
             </div>
+
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierversicherung online abschließen: Schritt-für-Schritt-Anleitung</h3>
+              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">1. Vergleichen</div>
+                  <p className="text-sm sm:text-base text-gray-600">Nutzen Sie Portale für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung.</p>
+                </div>
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">2. Berechnen</div>
+                  <p className="text-sm sm:text-base text-gray-600">Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten.</p>
+                </div>
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">3. Prüfen</div>
+                  <p className="text-sm sm:text-base text-gray-600">Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei verschiedenen Anbietern.</p>
+                </div>
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">4. Abschließen</div>
+                  <p className="text-sm sm:text-base text-gray-600">Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail.</p>
+                </div>
+                <div className="text-center mt-6">
+                  <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung vergleichen*</Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Häufige Fragen zu Hunde- und Katzenversicherungen</h3>
+              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">Ist eine Hundehaftpflichtversicherung Pflicht?</div>
+                  <p className="text-sm sm:text-base text-gray-600">In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die Hundehaftpflichtversicherung Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.</p>
+                </div>
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">Was deckt eine Tierkrankenversicherung?</div>
+                  <p className="text-sm sm:text-base text-gray-600">Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter bieten bis zu 100% Erstattung.</p>
+                </div>
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">Kann ich meine Tierversicherung online kündigen?</div>
+                  <p className="text-sm sm:text-base text-gray-600">Ja, die meisten Hundeversicherungen und Katzenversicherungen können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).</p>
+                </div>
+                <div className="mb-6">
+                  <div className="font-semibold text-green-600 mb-2">Welche Zahlungsmethoden gibt es für Tierversicherungen?</div>
+                  <p className="text-sm sm:text-base text-gray-600">SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei einigen Anbietern gegen Aufpreis möglich.</p>
+                </div>
+                <div className="text-center mt-6">
+                  <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung vergleichen*</Button>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung online abschließen: Schritt-für-Schritt-Anleitung</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {[
-                { step: "1", title: "Vergleichen", text: "Nutzen Sie Portale für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung." },
-                { step: "2", title: "Berechnen", text: "Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten." },
-                { step: "3", title: "Prüfen", text: "Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei verschiedenen Anbietern." },
-                { step: "4", title: "Abschließen", text: "Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail." }
-              ].map((item) => (
-                <Card key={item.step} className="text-center">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-green-600">{item.step}</span>
-                    </div>
-                    <CardTitle className="text-lg">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-600">{item.text}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="mt-12 bg-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-6 text-center">Häufige Fragen zu Hunde- und Katzenversicherungen</h3>
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <div className="font-semibold mb-2 text-green-600">Ist eine Hundehaftpflichtversicherung Pflicht?</div>
-                  <p className="text-sm text-gray-600 mb-4">In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die Hundehaftpflichtversicherung Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.</p>
-                </div>
-                <div>
-                  <div className="font-semibold mb-2 text-green-600">Was deckt eine Tierkrankenversicherung?</div>
-                  <p className="text-sm text-gray-600 mb-4">Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter bieten bis zu 100% Erstattung.</p>
-                </div>
-                <div>
-                  <div className="font-semibold mb-2 text-green-600">Kann ich meine Tierversicherung online kündigen?</div>
-                  <p className="text-sm text-gray-600 mb-4">Ja, die meisten Hundeversicherungen und Katzenversicherungen können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).</p>
-                </div>
-                <div>
-                  <div className="font-semibold mb-2 text-green-600">Welche Zahlungsmethoden gibt es für Tierversicherungen?</div>
-                  <p className="text-sm text-gray-600 mb-4">SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei einigen Anbietern gegen Aufpreis möglich.</p>
-                </div>
-              </div>
-              <div className="text-center mt-6">
-                <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung vergleichen*</Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h2>
-            <div className="mb-8 text-center">
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
-              </p>
-            </div>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+              <div className="mb-8 text-center">
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
+                </p>
+              </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hundehaftpflichtversicherung wechseln</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Beste Wechselzeit:</strong> Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</li>
@@ -822,29 +823,6 @@ export default function Tierversicherungen() {
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Sparpotential:</strong> 100-300€ jährlich bei Anbietern wie Uelzener oder Figo.</li>
                 <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Achtung:</strong> Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!</li>
               </ul>
-            </div>
-            <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
-              <h3 className="text-lg font-bold mb-4 text-yellow-800">Checkliste für den Wechsel Ihrer Tierversicherung</h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <div className="font-semibold mb-2">Vor dem Wechsel prüfen:</div>
-                  <ul className="text-sm space-y-1">
-                    <li>• Kündigungsfrist der alten Versicherung</li>
-                    <li>• Vergleichbare Leistungen im neuen Tarif</li>
-                    <li>• Wartezeiten bei Tierkrankenversicherung</li>
-                    <li>• Laufende Behandlungen oder Schäden</li>
-                  </ul>
-                </div>
-                <div>
-                  <div className="font-semibold mb-2">Nach dem Wechsel:</div>
-                  <ul className="text-sm space-y-1">
-                    <li>• Kündigungsbestätigung prüfen</li>
-                    <li>• Neue Versicherungsunterlagen sicher aufbewahren</li>
-                    <li>• Zahlungsmethoden anpassen (z. B. SEPA-Lastschrift)</li>
-                    <li>• Telemedizin- oder Vorsorgeleistungen aktivieren</li>
-                  </ul>
-                </div>
-              </div>
             </div>
             <div className="text-center mt-6">
               <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
@@ -872,6 +850,34 @@ export default function Tierversicherungen() {
                 <a href="/anlegen" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt anlegen</Button>
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
+              <h3 className="text-lg font-bold mb-4 text-yellow-800">Checkliste für den Wechsel Ihrer Tierversicherung</h3>
+              <div className="grid gap-4 md:grid-cols-2">
+                <div>
+                  <div className="font-semibold mb-2">Vor dem Wechsel prüfen:</div>
+                  <ul className="text-sm space-y-1">
+                    <li>• Kündigungsfrist der alten Versicherung</li>
+                    <li>• Vergleichbare Leistungen im neuen Tarif</li>
+                    <li>• Wartezeiten bei Tierkrankenversicherung</li>
+                    <li>• Laufende Behandlungen oder Schäden</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-semibold mb-2">Nach dem Wechsel:</div>
+                  <ul className="text-sm space-y-1">
+                    <li>• Kündigungsbestätigung prüfen</li>
+                    <li>• Neue Versicherungsunterlagen sicher aufbewahren</li>
+                    <li>• Zahlungsmethoden anpassen (z. B. SEPA-Lastschrift)</li>
+                    <li>• Telemedizin- oder Vorsorgeleistungen aktivieren</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
