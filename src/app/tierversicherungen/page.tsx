@@ -698,18 +698,18 @@ export default function Tierversicherungen() {
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierkrankenversicherung für Hunde und Katzen</h3>
               <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
                 <h4 className="text-lg font-semibold mb-4 text-green-600">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
-                <div className="grid gap-4 md:grid-cols-3 mb-6">
+                <div className="space-y-6 mb-6">
                   <div>
-                    <div className="font-medium text-green-600 mb-2">Grundschutz</div>
-                    <p className="text-sm text-gray-600">Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.</p>
+                    <div className="font-semibold text-green-600 mb-2">Grundschutz</div>
+                    <p className="text-sm sm:text-base text-gray-600">Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.</p>
                   </div>
                   <div>
-                    <div className="font-medium text-green-600 mb-2">Erweiterte Deckung</div>
-                    <p className="text-sm text-gray-600">Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, Figo). Inklusive Vorsorge wie Impfungen und Zahnreinigung.</p>
+                    <div className="font-semibold text-green-600 mb-2">Erweiterte Deckung</div>
+                    <p className="text-sm sm:text-base text-gray-600">Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, Figo). Inklusive Vorsorge wie Impfungen und Zahnreinigung.</p>
                   </div>
                   <div>
-                    <div className="font-medium text-green-600 mb-2">Premium-Schutz</div>
-                    <p className="text-sm text-gray-600">Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.</p>
+                    <div className="font-semibold text-green-600 mb-2">Premium-Schutz</div>
+                    <p className="text-sm sm:text-base text-gray-600">Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.</p>
                   </div>
                 </div>
               </div>
@@ -729,13 +729,37 @@ export default function Tierversicherungen() {
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Flexible Beitragsgestaltung für alle Rassen und Altersgruppen</li>
                 </ul>
                 <h4 className="text-lg font-semibold mb-4 text-green-600">Tipps zur Auswahl der besten Hunde-OP-Versicherung</h4>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Flexibilität</strong>: Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kundenbewertungen</strong>: Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen</li>
-                </ul>
-                <p className="mb-6">
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-start">
+                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-600">Leistungsumfang</div>
+                      <p className="text-sm sm:text-base text-gray-600">Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-600">Kostenübernahme</div>
+                      <p className="text-sm sm:text-base text-gray-600">Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-600">Flexibilität</div>
+                      <p className="text-sm sm:text-base text-gray-600">Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-600">Kundenbewertungen</div>
+                      <p className="text-sm sm:text-base text-gray-600">Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="mb-6 text-sm sm:text-base">
                   Mit der Hunde-OP-Versicherung schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
                 </p>
                 <div className="text-center">
