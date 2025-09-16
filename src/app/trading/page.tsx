@@ -26,10 +26,10 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-// Reusable Header Component
+// Wiederverwendbare Header-Komponente
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("trading")
+  const [activeCategory, setActiveCategory] = useState("versicherungen")
 
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
@@ -62,12 +62,12 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menü */}
+        {/* Mobiles Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
+            <nav className="px-6 py-4 space-y-6" aria-label="Mobiles Menü">
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
@@ -78,21 +78,21 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        <Button className={btnPrimary}>{label}</Button>
+                        {label}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
@@ -106,14 +106,14 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
-                          <Button className={btnPrimary}>{label}</Button>
+                          {label}
                         </a>
                       </li>
                     ))}
@@ -130,14 +130,14 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
-                          <Button className={btnPrimary}>{label}</Button>
+                          {label}
                         </a>
                       </li>
                     ))}
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
@@ -156,21 +156,21 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        <Button className={btnPrimary}>{label}</Button>
+                        {label}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</div>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -181,14 +181,14 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        <Button className={btnPrimary}>{label}</Button>
+                        {label}
                       </Link>
                     </li>
                   ))}
@@ -196,7 +196,7 @@ const Header: React.FC = () => {
               </div>
               <div className="text-center mt-4">
                 <Button
-                  className={btnPrimary}
+                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -534,10 +534,10 @@ export default function DeFi() {
               Entdecken Sie die besten Aktiendepots, Online-Broker & Trading-Plattformen für Aktien, Forex, ETF, Rohstoffe, Futures, DeFi, Bitcoin
               handeln und Krypto-Trading. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere
               Testsieger wie eToro, TradingView, XTB, WEEX und Vantage bieten 0% Kommission, professionelle Tools und regulierte
-              Plattformen für sicheres Trading. Starten Sie jetzt Ihre Reise!
+              Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              <Button className={btnSecondary}>Jetzt vergleichen</Button>
+              
             </Link>
           </div>
         </div>
