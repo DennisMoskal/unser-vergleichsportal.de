@@ -394,7 +394,7 @@ export default function Banking() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Banking Vergleich 2025: Beste Girokonten und Kredite im Test</title>
+        <title>Banking Testsieger September 2025 | Girokonto & Kredite</title>
         <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 850€ jährlich mit unseren Testsiegern!" />
         <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
         <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
