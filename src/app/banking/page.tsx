@@ -252,7 +252,6 @@ const Header: React.FC = () => {
           </ul>
         </div>
       </section>
- 
     </>
   )
 }
@@ -419,16 +418,13 @@ export default function Banking() {
                 rel="sponsored"
                 className="inline-block"
               >
-                
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Kredit berechnen
+                </Button>
               </a>
-              <a
-                href="https://www.tarifcheck.de/girokonto/"
-                target="_blank"
-                rel="sponsored"
-                className="inline-block"
-              >
-               
-              </a>
+              <div style={{ width: "50%" }} id="tcpp-iframe-giro">
+                <script src="https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-giro/giro-iframe.js"></script>
+              </div>
             </div>
           </div>
         </div>
@@ -684,6 +680,7 @@ export default function Banking() {
           </div>
         </div>
       </section>
+
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
