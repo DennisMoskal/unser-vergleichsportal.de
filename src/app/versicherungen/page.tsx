@@ -721,7 +721,9 @@ export default function Versicherungen() {
               Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, Verivox und mehr. Finden Sie die besten Tarife für Kfz,
               Haftpflicht, Hausrat, Rechtsschutz und mehr mit transparenten Bewertungen und attraktiven Boni.
             </p>
-            
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored" className="inline-block">
+                
               </a>
             </div>
           </div>
