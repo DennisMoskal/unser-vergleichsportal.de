@@ -446,7 +446,7 @@ export default function DeFi() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal</title>
+        <title>Beste Broker September 2025 | Bitcoin & ETF Testsieger</title>
         <meta
           name="description"
           content="Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen."
@@ -459,7 +459,7 @@ export default function DeFi() {
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich" />
+        <meta property="og:title" content="Beste Broker September 2025 | Bitcoin & ETF Testsieger" />
         <meta
           property="og:description"
           content="Die besten Plattformen für DeFi & Krypto im Vergleich. Gebühren, Sicherheit & Funktionen auf einen Blick."
@@ -468,7 +468,7 @@ export default function DeFi() {
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich" />
+        <meta name="twitter:title" content="Beste Broker September 2025 | Bitcoin & ETF Testsieger" />
         <meta
           name="twitter:description"
           content="Vergleiche die Top-Plattformen für Bitcoin & DeFi. Jetzt Testsieger checken."
@@ -483,7 +483,7 @@ export default function DeFi() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "DeFi & Krypto-Trading 2025: Bitcoin handeln & Broker-Vergleich | Unser-Vergleichsportal.de",
+            name: "Beste Broker September 2025 | Bitcoin & ETF Testsieger",
             description:
               "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Entdecken Sie eToro, TradingView, XTB, WEEX, Vantage und mehr für sicheres Trading mit niedrigen Gebühren.",
             url: "https://unser-vergleichsportal.de/trading",
