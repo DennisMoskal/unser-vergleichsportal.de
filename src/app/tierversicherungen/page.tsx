@@ -816,7 +816,7 @@ export default function Tierversicherungen() {
                 </div>
                 <div className="text-center mt-6">
                   <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung vergleichen*</Button>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Hundeversicherung vergleichen*</Button>
                   </a>
                 </div>
               </div>
@@ -865,7 +865,7 @@ export default function Tierversicherungen() {
               </div>
               <div className="text-center mt-6">
                 <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung wechseln*</Button>
+                  
                 </a>
               </div>
             </div>
@@ -888,7 +888,7 @@ export default function Tierversicherungen() {
               </ul>
               <div className="text-center">
                 <a href="/anlegen" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt anlegen</Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Depots vergleichen</Button>
                 </a>
               </div>
             </div>
