@@ -828,30 +828,48 @@ export default function Tierversicherungen() {
 
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h2>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h3>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
               <div className="mb-8 text-center">
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto">
                   Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
                 </p>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hundehaftpflichtversicherung wechseln</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Beste Wechselzeit:</strong> Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Durchschnittliche Ersparnis:</strong> 50-200€ jährlich durch Wechsel zu Anbietern wie BavariaDirekt oder AXA.</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Tipp:</strong> Nutzen Sie Testsieger für einen kostenlosen Vergleich.</li>
-              </ul>
+              <div className="space-y-6 mb-6">
+                <div>
+                  <div className="font-semibold text-green-600 mb-2">Beste Wechselzeit</div>
+                  <p className="text-sm sm:text-base text-gray-600">Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</p>
+                </div>
+                <div>
+                  <div className="font-semibold text-green-600 mb-2">Durchschnittliche Ersparnis</div>
+                  <p className="text-sm sm:text-base text-gray-600">50-200€ jährlich durch Wechsel zu Anbietern wie BavariaDirekt oder AXA.</p>
+                </div>
+                <div>
+                  <div className="font-semibold text-green-600 mb-2">Tipp</div>
+                  <p className="text-sm sm:text-base text-gray-600">Nutzen Sie Testsieger für einen kostenlosen Vergleich.</p>
+                </div>
+              </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung wechseln</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kündigungsfristen:</strong> Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Sparpotential:</strong> 100-300€ jährlich bei Anbietern wie Uelzener oder Figo.</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Achtung:</strong> Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!</li>
-              </ul>
-            </div>
-            <div className="text-center mt-6">
-              <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung wechseln*</Button>
-              </a>
+              <div className="space-y-6 mb-6">
+                <div>
+                  <div className="font-semibold text-green-600 mb-2">Kündigungsfristen</div>
+                  <p className="text-sm sm:text-base text-gray-600">Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.</p>
+                </div>
+                <div>
+                  <div className="font-semibold text-green-600 mb-2">Sparpotential</div>
+                  <p className="text-sm sm:text-base text-gray-600">100-300€ jährlich bei Anbietern wie Uelzener oder Figo.</p>
+                </div>
+                <div>
+                  <div className="font-semibold text-green-600 mb-2">Achtung</div>
+                  <p className="text-sm sm:text-base text-gray-600">Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!</p>
+                </div>
+              </div>
+              <div className="text-center mt-6">
+                <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung wechseln*</Button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
