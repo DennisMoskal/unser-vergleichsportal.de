@@ -1,4 +1,4 @@
-"use client"
+use client"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -626,7 +626,7 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Versicherungsvergleich September 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat</title>
+        <title>Beste Versicherungen September 2025 | Testsieger-Vergleich</title>
         <meta
           name="description"
           content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
@@ -639,7 +639,7 @@ export default function Versicherungen() {
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
+        <meta property="og:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
         <meta
           property="og:description"
           content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
@@ -648,7 +648,7 @@ export default function Versicherungen() {
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
+        <meta name="twitter:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
         <meta
           name="twitter:description"
           content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern."
@@ -663,7 +663,7 @@ export default function Versicherungen() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat",
+            name: "Beste Versicherungen September 2025 | Testsieger-Vergleich",
             description:
               "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr.",
             url: "https://unser-vergleichsportal.de/versicherungen",
