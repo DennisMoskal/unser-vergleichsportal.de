@@ -623,7 +623,7 @@ export default function Tierversicherungen() {
                       ))}
                     </ul>
                     <Link href={provider.url} target={provider.url.startsWith("http") ? "_blank" : "_self"} rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto">Jetzt abschließen*</Button>
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt abschließen*</Button>
                     </Link>
                   </CardContent>
                 </Card>
@@ -652,7 +652,7 @@ export default function Tierversicherungen() {
                   aria-label="Zu allen Versicherungen für Sie & Ihr Eigentum"
                   title="Versicherungen vergleichen"
                 >
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                     Zu den Versicherungen
                   </Button>
                 </Link>
@@ -677,7 +677,7 @@ export default function Tierversicherungen() {
                   <p className="text-sm text-green-700">Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich.</p>
                   <div className="text-center mt-4">
                     <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                      <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Hundehaftpflicht vergleichen*</Button>
+                      <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Hundehaftpflicht vergleichen*</Button>
                     </a>
                   </div>
                 </div>
@@ -762,7 +762,7 @@ export default function Tierversicherungen() {
                 </p>
                 <div className="text-center">
                   <a href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt die Top Hunde-OP-Versicherung abschließen*</Button>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt die Top Hunde-OP-Versicherung abschließen*</Button>
                   </a>
                 </div>
               </div>
@@ -789,7 +789,7 @@ export default function Tierversicherungen() {
                 </div>
                 <div className="text-center mt-6">
                   <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung vergleichen*</Button>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung vergleichen*</Button>
                   </a>
                 </div>
               </div>
@@ -816,7 +816,7 @@ export default function Tierversicherungen() {
                 </div>
                 <div className="text-center mt-6">
                   <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung vergleichen*</Button>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung vergleichen*</Button>
                   </a>
                 </div>
               </div>
@@ -865,7 +865,7 @@ export default function Tierversicherungen() {
               </div>
               <div className="text-center mt-6">
                 <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt Tierversicherung wechseln*</Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung wechseln*</Button>
                 </a>
               </div>
             </div>
@@ -888,7 +888,7 @@ export default function Tierversicherungen() {
               </ul>
               <div className="text-center">
                 <a href="/anlegen" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium">Jetzt anlegen</Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt anlegen</Button>
                 </a>
               </div>
             </div>
