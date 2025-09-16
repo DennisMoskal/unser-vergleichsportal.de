@@ -8,7 +8,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
 
-// SmartFinanzLogo-Komponente (identisch mit Versicherungen.tsx)
+// SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
@@ -26,7 +26,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-// Header-Komponente (identisch mit Versicherungen.tsx)
+// Header-Komponente
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("tierversicherungen")
@@ -399,7 +399,7 @@ export default function Tierversicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Tierversicherungsvergleich September 2025: Beste Anbieter für Hunde & Katzen</title>
+        <title>Beste Tierversicherungen September 2025 | Testsieger-Vergleich</title>
         <meta
           name="description"
           content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
@@ -412,7 +412,7 @@ export default function Tierversicherungen() {
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen" />
+        <meta property="og:title" content="Beste Tierversicherungen September 2025 | Testsieger-Vergleich" />
         <meta
           property="og:description"
           content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
@@ -421,7 +421,7 @@ export default function Tierversicherungen() {
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen" />
+        <meta name="twitter:title" content="Beste Tierversicherungen September 2025 | Testsieger-Vergleich" />
         <meta
           name="twitter:description"
           content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern."
@@ -436,7 +436,7 @@ export default function Tierversicherungen() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen",
+            name: "Beste Tierversicherungen September 2025 | Testsieger-Vergleich",
             description:
               "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz.",
             url: "https://unser-vergleichsportal.de/tierversicherungen",
