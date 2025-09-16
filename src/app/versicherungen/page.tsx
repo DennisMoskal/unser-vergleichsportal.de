@@ -8,7 +8,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
 
-// SmartFinanzLogo-Komponente (identisch mit Versicherungen.tsx)
+// SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
@@ -26,10 +26,10 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-// Header-Komponente (identisch mit Versicherungen.tsx)
+// Reusable Header Component
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("tierversicherungen")
+  const [activeCategory, setActiveCategory] = useState("versicherungen")
 
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-                    { key: 'tierversicherungen', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
                     { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
                     { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
                   ].map(({ key, label, url, isInternal }) => (
@@ -208,14 +208,14 @@ const Header: React.FC = () => {
       </header>
 
       {/* Kategorie-Navigation */}
-      <section className="bg-white py-4 border-b" id="tierversicherungen">
+      <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
             {[
               { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-              { key: 'tierversicherungen', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
               { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-              { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
               { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
@@ -256,137 +256,364 @@ const Header: React.FC = () => {
   )
 }
 
-// Inline providerData für Tierversicherungen
 const providerData = [
   {
-    name: "Agila",
-    rating: 4.7,
+    name: "Tarifcheck.de",
+    rating: 4.5,
     features: [
-      "Umfassender Schutz für Hunde und Katzen",
-      "Bis zu 100% Kostenerstattung für Operationen",
-      "Testsieger bei Stiftung Warentest (08/2025)",
-      "Keine Wartezeit bei Unfällen",
-      "24/7 Online-Schadenmeldung",
-      "Flexible Tarife für junge und ältere Tiere",
-      "Kostenlose Erstberatung",
-      "Über 20 Jahre Erfahrung",
+      "Über 20 Jahre Erfahrung als Vergleichsportal",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Vergleich von über 300 Kfz-Versicherungstarifen",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 verifizierte Kundenbewertungen",
+      "Deutschlands drittgrößtes Vergleichsportal",
+      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen"
     ],
-    price: "ab 9,90€/Monat",
-    bonus: "10% Rabatt bei Online-Abschluss",
-    logo: "🐶",
-    url: "https://www.agila.de/",
-    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2025",
-    metaDescription: "Agila bietet umfassenden Schutz für Hunde und Katzen mit bis zu 100% Kostenerstattung. Jetzt Testsieger-Tarife vergleichen!",
-    isTopRecommendation: true,
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.de/girokonto/",
+    metaTitle: "Tarifcheck.de Versicherungsvergleich: Bis zu 1.000€ sparen 2025",
+    metaDescription: "Vergleichen Sie über 300 Kfz-Versicherungen mit Tarifcheck.de. Kostenlos, unverbindlich und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich!",
+    isTopRecommendation: true
   },
   {
-    name: "Petplan",
+    name: "CHECK24",
+    rating: 4.8,
+    features: [
+      "Vergleich von über 300 Versicherungen in wenigen Minuten",
+      "Testsieger in über 25 Kategorien (Handelsblatt 09/2024)",
+      "Kostenlose Beratung durch 300 Experten (08:00–22:00 Uhr)",
+      "Über 98% Kundenzufriedenheit (eKomi Gold Siegel)",
+      "Nirgendwo-Günstiger-Garantie für beste Konditionen",
+      "Transparente Provisionen bei Abschluss",
+      "Zusätzliche Vergleiche für Kredite, Strom und Gas",
+      "Bis zu 50% Ersparnis durch Vergleich möglich"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 100€ Cashback",
+    logo: "✅",
+    url: "https://www.check24.de/versicherungen/",
+    metaTitle: "CHECK24 Versicherungsvergleich: Testsieger 2025 mit bis zu 50% Ersparnis",
+    metaDescription: "Vergleichen Sie über 300 Versicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 50% mit unseren Testsiegern!",
+    isTopRecommendation: true
+  },
+  {
+    name: "InShared",
     rating: 4.6,
     features: [
-      "Tierversicherung für Hunde, Katzen und Pferde",
-      "Bis zu 5.000€ jährliche Deckung",
-      "Schnelle Schadenbearbeitung innerhalb 48h",
-      "eKomi-Bewertung: 4,6/5 Sterne",
-      "Flexible Selbstbeteiligung (0–20%)",
-      "Zusatzschutz für Zahnbehandlungen",
-      "Online-Tarifrechner für individuelle Angebote",
-      "Kundenservice 7 Tage die Woche",
+      "Günstige Autoversicherung mit Top-Preisen",
+      "Geld-zurück-Garantie bei weniger Schäden",
+      "24/7 Notfallservice für schnelle Hilfe",
+      "Einfacher und digitaler Vertragsabschluss",
+      "Transparente Beitragsberechnung online",
+      "Partnerschaften mit Roland Assistance und Carglass",
+      "Kfz-Versicherung vergleichen und sparen"
     ],
-    price: "ab 8,50€/Monat",
-    bonus: "Kostenlose Erstberatung",
-    logo: "🐾",
-    url: "https://www.petplan.de/",
-    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2025",
-    metaDescription: "Petplan bietet flexible Tierversicherungen für Hunde, Katzen und Pferde mit schneller Schadenbearbeitung. Jetzt vergleichen!",
-    isTopRecommendation: true,
+    price: "ab 9,90€/Monat",
+    bonus: "Geld-zurück-Garantie",
+    logo: "🚗",
+    url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref=",
+    metaTitle: "InShared Kfz-Versicherung: Günstige Tarife mit Geld-zurück-Garantie 2025",
+    metaDescription: "InShared bietet günstige Kfz-Versicherungen mit Geld-zurück-Garantie und 24/7 Notfallservice. Jetzt vergleichen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "AXA",
+    rating: 4.5,
+    features: [
+      "Individueller Schutz für Hausrat und Eigentum",
+      "Leistungsstarke Tarife nach Ihren Bedürfnissen",
+      "Inklusive Smart Home Basisabsicherung",
+      "Schnelle Schadenmeldung online oder telefonisch",
+      "Kundenservice rund um die Uhr verfügbar",
+      "Tarifrechner für maßgeschneiderte Angebote",
+      "Testsieger bei Stiftung Warentest (2024)"
+    ],
+    price: "ab 8,52€/Jahr",
+    bonus: "Kostenloser Tarifrechner",
+    logo: "🏠",
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref=",
+    metaTitle: "AXA Versicherungen: Top Hausratversicherung 2025",
+    metaDescription: "AXA bietet individuellen Schutz für Hausrat und Eigentum mit Testsieger-Tarifen. Jetzt Tarifrechner nutzen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "BavariaDirekt",
+    rating: 4.5,
+    features: [
+      "Günstige Kfz-Versicherung ab 9,70€/Monat",
+      "Bis zu 350€ Ersparnis beim Vergleich",
+      "91% Weiterempfehlungsrate von Kunden",
+      "24h Notfall-Hotline für schnelle Unterstützung",
+      "Schufa-neutrale Tarifberechnung",
+      "Einfacher Online-Abschluss in 3 Minuten",
+      "Ausgezeichnet als 'Fairer Versicherer' (Focus Money)"
+    ],
+    price: "ab 9,70€/Monat",
+    bonus: "Bis zu 350€ Ersparnis",
+    logo: "🚘",
+    url: "https://www.awin1.com/awclick.php?gid=355334&mid=13884&awinaffid=2524533&linkid=2322280&clickref=",
+    metaTitle: "BavariaDirekt Kfz-Versicherung: Bis zu 350€ sparen 2025",
+    metaDescription: "BavariaDirekt bietet günstige Kfz-Versicherungen mit hoher Kundenzufriedenheit. Jetzt vergleichen und bis zu 350€ sparen!",
+    isTopRecommendation: true
   },
   {
     name: "HanseMerkur",
-    rating: 4.5,
+    rating: 4.7,
     features: [
-      "Tierversicherung ohne Altersbegrenzung",
-      "Bis zu 100% Kostenerstattung für Behandlungen",
-      "Testsieger bei Focus Money (07/2025)",
-      "Einfacher Online-Abschluss",
-      "Schutz für Vorsorgeuntersuchungen",
-      "24/7 Notfall-Hotline",
-      "Kombi-Tarife mit Haftpflicht möglich",
-      "Über 150 Jahre Erfahrung",
+      "Zahnzusatzversicherung ohne Wartezeit",
+      "Bis zu 100% Kostenerstattung für Zahnersatz",
+      "SEHR GUT bei Stiftung Warentest (07/2025)",
+      "Tarife für Vorsorge und Implantate",
+      "Neue ServiceApp für einfache Verwaltung",
+      "150 Jahre Erfahrung und Kundennähe",
+      "Ausgezeichnet als fairster Tierversicherer"
     ],
-    price: "ab 7,90€/Monat",
-    bonus: "5% Rabatt bei Jahreszahlung",
-    logo: "🐱",
-    url: "https://www.hansemerkur.de/tierversicherung",
-    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
-    metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
-    isTopRecommendation: true,
-  },
-  {
-    name: "CHECK24 Tierversicherung",
-    rating: 4.8,
-    features: [
-      "Vergleich von über 50 Tierversicherungen",
-      "100% kostenloser und unverbindlicher Vergleich",
-      "Testsieger in der Kategorie Tierversicherung (09/2025)",
-      "eKomi Gold Siegel mit 4,8/5 Sternen",
-      "Bis zu 50% Ersparnis durch Vergleich",
-      "Kostenlose Beratung durch Experten",
-      "Schneller Online-Abschluss",
-      "Transparente Tarifübersicht",
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 50€ Cashback",
-    logo: "✅",
-    url: "https://www.check24.de/tierversicherung/",
-    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2025",
-    metaDescription: "Vergleichen Sie über 50 Tierversicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Jetzt sparen!",
-    isTopRecommendation: true,
-  },
-  {
-    name: "Allianz Tierversicherung",
-    rating: 4.6,
-    features: [
-      "Schutz für Hunde, Katzen und Pferde",
-      "Bis zu 6.000€ jährliche Deckung",
-      "eKomi-Bewertung: 4,6/5 Sterne",
-      "Schneller Schadensservice (24/7)",
-      "Flexible Tarife mit Zusatzoptionen",
-      "Persönliche Beratung in Filialen",
-      "Online-Abschluss mit VideoIdent",
-      "Über 100 Jahre Erfahrung",
-    ],
-    price: "ab 10,50€/Monat",
-    bonus: "Treuebonus für Bestandskunden",
-    logo: "🛡️",
-    url: "https://www.allianz.de/tierversicherung/",
-    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2025",
-    metaDescription: "Allianz bietet zuverlässigen Schutz für Haustiere mit flexiblen Tarifen. Jetzt vergleichen und Treuebonus sichern!",
-    isTopRecommendation: true,
+    price: "ab 5€/Monat",
+    bonus: "Kostenlose Erstberatung",
+    logo: "🦷",
+    url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=",
+    metaTitle: "HanseMerkur Zahnzusatzversicherung: Testsieger 2025",
+    metaDescription: "HanseMerkur bietet erstklassige Zahnzusatzversicherungen ohne Wartezeit. Jetzt Tarife vergleichen und profitieren!",
+    isTopRecommendation: true
   },
   {
     name: "hepster",
     rating: 4.6,
     features: [
-      "Flexible Tierversicherungen für Katzen und Hunde",
+      "Flexible E-Bike- und Fahrradversicherungen ohne Selbstbeteiligung",
       "100% digitale Buchung und Schadenmeldung",
-      "Monats- oder Jahresabo ohne Selbstbeteiligung",
-      "Trusted Shops zertifiziert (4,6/5 Sterne)",
-      "Schutz für Vorsorge und Operationen",
-      "Schnelle Auszahlung innerhalb 48h",
-      "Kombi mit Fahrrad- oder Reiseversicherung",
-      "14 Tage kostenlos widerrufbar",
+      "Monats- oder Jahresabo für maximale Flexibilität",
+      "Trusted Shops zertifiziert mit Top-Kundenbewertungen",
+      "Tierversicherungen für Katzen und Hunde",
+      "Reiseversicherungen mit kurzfristiger Buchung",
+      "Haftpflichtversicherung für Alltagsrisiken",
+      "Partnerschaften mit Helvetia und Europäische Reiseversicherung"
     ],
-    price: "ab 5,99€/Monat",
-    bonus: "Kostenloser Tarifrechner",
-    logo: "🐾",
-    url: "https://www.hepster.com/de/tierversicherung",
-    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
-    metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
-    isTopRecommendation: true,
+    price: "ab 3,99€/Monat",
+    bonus: "14 Tage kostenlos widerrufbar",
+    logo: "🚲",
+    url: "https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=",
+    metaTitle: "hepster Versicherungen: Flexible E-Bike- und Tierversicherungen 2025",
+    metaDescription: "hepster bietet flexible E-Bike- und Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
+    isTopRecommendation: true
   },
+  {
+    name: "eRecht24",
+    rating: 4.3,
+    features: [
+      "Rechtssicherheit für Webseiten und Versicherungsverträge",
+      "DSGVO-konforme Rechtstexte für Versicherungsanbieter",
+      "Automatische Rechtstext-Generatoren für Impressum und Datenschutz",
+      "Abmahnschutz für Affiliate- und Vergleichsportale",
+      "Kostenlose Erstberatung zu rechtlichen Fragen",
+      "NEU: KI-gestützte Lösungen für Versicherungs-Compliance",
+      "Live-Webinare zu Internetrecht und Verbraucherschutz",
+      "Muster-Verträge für Versicherungs- und Finanzprodukte",
+      "Zentraler Projekt Manager für rechtliche Dokumente",
+      "Über 200.000 Nutzer vertrauen eRecht24"
+    ],
+    price: "ab 20€/Monat",
+    bonus: "Gratis Rechtscheck",
+    logo: "⚖️",
+    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
+    metaTitle: "eRecht24: Rechtssicherheit für Versicherungsverträge 2025",
+    metaDescription: "eRecht24 bietet DSGVO-konforme Rechtstexte und Abmahnschutz für Versicherungsportale. Jetzt kostenlosen Rechtscheck nutzen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Tarifcheck Wohngebäudeversicherung",
+    rating: 4.6,
+    features: [
+      "Vergleich von über 200 Wohngebäudeversicherungen",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Schutz für Haus und Eigentum vor Feuer, Sturm und mehr",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Bis zu 500€ jährliche Ersparnis",
+      "Schneller Online-Abschluss in wenigen Minuten",
+      "Kostenlose Beratung für maßgeschneiderte Tarife"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 500€ Ersparnis",
+    logo: "🏡",
+    url: "https://www.tarifcheck.com/xLfTPmG",
+    metaTitle: "Tarifcheck Wohngebäudeversicherung: Bis zu 500€ sparen 2025",
+    metaDescription: "Vergleichen Sie über 200 Wohngebäudeversicherungen mit Tarifcheck. Kostenlos und mit Top-Bewertungen. Jetzt sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Verivox",
+    rating: 4.6,
+    features: [
+      "Vergleich von Kfz-, Hausrat- und Haftpflichtversicherungen",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "Kostenlose und Schufa-neutrale Kreditanfragen",
+      "Über 20 Jahre Erfahrung im Vergleichsmarkt",
+      "TÜV-geprüfte Plattform für Versicherungen und Finanzen",
+      "Bis zu 850€ Ersparnis bei Kfz-Versicherungen",
+      "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 300€ Rückerstattung",
+    logo: "⚖️",
+    url: "https://www.verivox.de/versicherungen/",
+    metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
+    metaDescription: "Verivox bietet TÜV-geprüfte Vergleiche für Kfz-, Hausrat- und Haftpflichtversicherungen. Jetzt bis zu 850€ sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "ROLAND Rechtsschutz",
+    rating: 4.8,
+    features: [
+      "Umfassender Schutz für Privat, Beruf und Verkehr",
+      "Mehrfacher Testsieger 'Fairster Leistungsregulierer' (Focus Money 2025)",
+      "60 Tage Widerrufsrecht für maximale Flexibilität",
+      "24/7 Schadenmeldung und telefonische Erstberatung",
+      "eKomi-Bewertung 4,9/5 für höchste Kundenzufriedenheit",
+      "Spezialtarife wie Manager- und Internet-Rechtsschutz",
+      "Kostenloser Datenleck-Check für Ihre Datensicherheit",
+      "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
+    ],
+    price: "ab 12,50€/Monat",
+    bonus: "Bis zu 70€ Empfehlungsbonus",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
+    metaTitle: "ROLAND Rechtsschutzversicherung: Testsieger 2025",
+    metaDescription: "ROLAND bietet umfassenden Rechtsschutz mit Top-Bewertungen und 60 Tagen Widerrufsrecht. Jetzt Tarife vergleichen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "TravelSecure",
+    rating: 4.7,
+    features: [
+      "Testsieger bei Stiftung Warentest (01/2025, Note 1,4)",
+      "Reiserücktritts- und Auslandskrankenversicherung für Einzelpersonen und Familien",
+      "Jahresreiseversicherung Reisekarte4you für Vielreisende",
+      "Spezialtarife für Work & Travel, Au-Pair und Studenten",
+      "Ski-Haftpflichtversicherung für Italien & Südtirol",
+      "Gruppenreiseversicherung ab 8 Personen ohne Altersbegrenzung",
+      "Beste Kundenhotline 2024 (Focus Money)",
+      "eKomi-Bewertung 4,3/5 für hohe Kundenzufriedenheit"
+    ],
+    price: "ab 6,90€/Jahr",
+    bonus: "Kostenlose Beratung",
+    logo: "✈️",
+    url: "https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=",
+    metaTitle: "TravelSecure Reiseversicherung: Testsieger 2025",
+    metaDescription: "TravelSecure bietet Testsieger-Reiseversicherungen für Familien und Vielreisende. Jetzt Tarife vergleichen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Die Bayerische",
+    rating: 4.8,
+    features: [
+      "Optimaler Hinterbliebenenschutz für Ihre Familie",
+      "Flexibler Vergleichsrechner für maßgeschneiderte Tarife",
+      "Bis zu 100% Absicherung des Familieneinkommens",
+      "Testsieger bei Stiftung Warentest (09/2025, Note 1,3)",
+      "Einfacher Online-Abschluss in wenigen Minuten",
+      "Kostenlose Beratung durch Experten",
+      "Anpassbare Versicherungssumme und Laufzeit",
+      "Über 160 Jahre Erfahrung und Vertrauen"
+    ],
+    price: "ab 5,90€/Monat",
+    bonus: "10% Rabatt bei Abschluss bis 31.12.2025",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=391372&mid=17046&awinaffid=2524533&linkid=2659747&clickref=",
+    metaTitle: "Die Bayerische Risikolebensversicherung: Testsieger 2025",
+    metaDescription: "Die Bayerische bietet Testsieger-Risikolebensversicherungen mit flexiblen Tarifen. Jetzt vergleichen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "HUK-COBURG",
+    rating: 4.7,
+    features: [
+      "Über 90 Jahre Erfahrung in der Versicherungsbranche",
+      "Kfz-Versicherung mit Top-Bewertungen (4,7/5 eKomi)",
+      "Günstige Tarife für Haftpflicht, Hausrat und Wohngebäude",
+      "Schneller Schadensservice mit 24/7-Hotline",
+      "Flexible Zusatzbausteine für individuelle Absicherung",
+      "Bis zu 20% Rabatt bei Kombination mehrerer Versicherungen",
+      "Nachhaltigkeitsinitiativen für umweltbewusste Kunden",
+      "Kostenloser Tarifcheck und Online-Abschluss"
+    ],
+    price: "Individuelle Tarife",
+    bonus: "Bis zu 20% Kombirabatt",
+    logo: "🚗",
+    url: "https://www.huk.de/versicherungen/",
+    metaTitle: "HUK-COBURG Versicherungen: Top Kfz-Versicherung und Kombirabatte 2025",
+    metaDescription: "HUK-COBURG bietet Top Kfz-Versicherungen, günstige Tarife und bis zu 20% Kombirabatt. Jetzt Tarife prüfen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Allianz",
+    rating: 4.6,
+    features: [
+      "Weltweit agierender Versicherer mit über 100 Jahren Erfahrung",
+      "Umfassender Schutz für Kfz, Hausrat, Haftpflicht und mehr",
+      "eKomi-Bewertung: 4,6/5 Sterne von über 5.000 Kunden",
+      "Schneller digitaler Abschluss mit VideoIdent",
+      "Attraktive Boni für langjährige Kunden",
+      "Persönliche Beratung in über 2.000 Filialen",
+      "Schadensservice mit 24/7-Verfügbarkeit",
+      "Flexible Tarifanpassung für individuelle Bedürfnisse"
+    ],
+    price: "Bonitätsabhängige Tarife",
+    bonus: "Treuebonus für Bestandskunden",
+    logo: "🛡️",
+    url: "https://www.allianz.de/versicherungen/",
+    metaTitle: "Allianz Versicherungen: Zuverlässiger Schutz für Kfz und Hausrat 2025",
+    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr mit 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
+    isTopRecommendation: true
+  },
+  {
+    name: "CosmosDirekt",
+    rating: 4.5,
+    features: [
+      "Spezialist für Risikolebens- und Berufsunfähigkeitsversicherung",
+      "100% digitale Abwicklung mit einfachem Online-Abschluss",
+      "Testsieger in der Kategorie Risikolebensversicherung 2024",
+      "eKomi-Bewertung: 4,5/5 Sterne von über 2.000 Kunden",
+      "Günstige Tarife für junge Familien und Berufseinsteiger",
+      "Flexible Laufzeiten und Beitragsanpassung",
+      "Schneller Schadensservice mit digitaler Schadenmeldung",
+      "Transparente Kostenstruktur ohne versteckte Gebühren"
+    ],
+    price: "Individuelle Tarife",
+    bonus: "Günstige Einstiegstarife",
+    logo: "💼",
+    url: "https://www.cosmosdirekt.de/versicherungen/",
+    metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
+    metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "ARAG",
+    rating: 4.6,
+    features: [
+      "Marktführer für Rechtsschutzversicherungen",
+      "Umfassender Schutz für Privat-, Berufs- und Verkehrsrecht",
+      "eKomi-Bewertung: 4,6/5 Sterne von über 3.000 Kunden",
+      "Kostenlose Erstberatung durch Anwälte",
+      "Schnelle Schadenbearbeitung mit Online-Portal",
+      "Flexible Bausteine für individuelle Absicherung",
+      "Kombi-Tarife mit Haftpflicht und Hausrat möglich",
+      "Bis zu 30% Ersparnis bei Online-Abschluss"
+    ],
+    price: "Individuelle Tarife",
+    bonus: "Bis zu 30% Online-Rabatt",
+    logo: "⚖️",
+    url: "https://www.arag.de/versicherungen/",
+    metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
+    metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat- und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
+    isTopRecommendation: true
+  }
 ]
 
-export default function Tierversicherungen() {
+export default function Versicherungen() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Top-Empfehlungen zuerst
@@ -399,32 +626,32 @@ export default function Tierversicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Tierversicherungsvergleich September 2025: Beste Anbieter für Hunde & Katzen</title>
+        <title>Versicherungsvergleich September 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat</title>
         <meta
           name="description"
-          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
         />
         <meta
           name="keywords"
-          content="Tierversicherung, Haustierversicherung, Hundeversicherung, Katzenversicherung, Testsieger 2025, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
+          content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, eRecht24, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
         />
-        <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen" />
+        <meta property="og:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
         <meta
           property="og:description"
-          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
         />
-        <meta property="og:url" content="https://unser-vergleichsportal.de/tierversicherungen" />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen" />
+        <meta name="twitter:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
         <meta
           name="twitter:description"
-          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern."
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern."
         />
         <meta name="format-detection" content="telephone=no" />
       </Head>
@@ -436,16 +663,16 @@ export default function Tierversicherungen() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen",
+            name: "Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat",
             description:
-              "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz.",
-            url: "https://unser-vergleichsportal.de/tierversicherungen",
+              "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr.",
+            url: "https://unser-vergleichsportal.de/versicherungen",
             keywords: [
-              "Tierversicherung",
-              "Haustierversicherung",
-              "Hundeversicherung",
-              "Katzenversicherung",
-              "Testsieger 2025",
+              "Versicherungsvergleich",
+              "Kfz-Versicherung",
+              "Haftpflichtversicherung",
+              "Hausratversicherung",
+              "Rechtsschutzversicherung"
             ],
             mainEntity: {
               "@type": "ItemList",
@@ -459,23 +686,24 @@ export default function Tierversicherungen() {
                   offers: {
                     "@type": "Offer",
                     price: provider.price,
-                    url: provider.url,
+                    url: provider.url
                   },
                   aggregateRating: {
                     "@type": "AggregateRating",
                     ratingValue: provider.rating,
-                    reviewCount: "100",
+                    reviewCount: "100"
                   },
                   keywords: [
-                    "Tierversicherung",
-                    "Haustierversicherung",
-                    "Hundeversicherung",
-                    "Katzenversicherung",
-                  ],
-                },
-              })),
-            },
-          }),
+                    "Versicherungsvergleich",
+                    "Kfz-Versicherung",
+                    "Haftpflichtversicherung",
+                    "Hausratversicherung",
+                    "Rechtsschutzversicherung"
+                  ]
+                }
+              }))
+            }
+          })
         }}
       />
 
@@ -486,18 +714,16 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Tierversicherungen September 2025 | Testsieger-Vergleich
+              Beste Versicherungen September 2025 | Testsieger-Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-              Vergleichen Sie die besten Tierversicherungen für Hunde und Katzen mit SmartFinanz. Sparen Sie bis zu 50%
-              mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz. Finden Sie flexible Tarife mit
-              umfassendem Schutz für Operationen, Behandlungen und Vorsorge.
+              Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
+              Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, Verivox und mehr. Finden Sie die besten Tarife für Kfz,
+              Haftpflicht, Hausrat, Rechtsschutz und mehr mit transparenten Bewertungen und attraktiven Boni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-              <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored" className="inline-block">
-                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Jetzt bei CHECK24 vergleichen
-                </Button>
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored" className="inline-block">
+                
               </a>
             </div>
           </div>
@@ -508,36 +734,36 @@ export default function Tierversicherungen() {
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
-            So finden Sie die passende Tierversicherung
+            So finden Sie die passende Versicherung
           </h2>
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Tipps für einen erfolgreichen Tierversicherungsvergleich
+              Tipps für einen erfolgreichen Versicherungsvergleich
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Vergleichen Sie Angebote:</strong> Nutzen Sie unseren kostenlosen Vergleich, um über 50 Tierversicherungen von Top-Anbietern wie CHECK24, Agila und Petplan zu prüfen.</span>
+                <span><strong>Vergleichen Sie Angebote:</strong> Nutzen Sie unseren kostenlosen Vergleich, um über 300 Angebote von Top-Anbietern wie CHECK24, Tarifcheck und Verivox zu prüfen.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Achten Sie auf Bewertungen:</strong> Vertrauen Sie auf verifizierte Kundenbewertungen (z. B. eKomi 4,8/5 für CHECK24) für Ihre Entscheidung.</span>
+                <span><strong>Achten Sie auf Bewertungen:</strong> Vertrauen Sie auf verifizierte Kundenbewertungen (z. B. eKomi 4,8/5 für Allianz, ARAG und ROLAND Rechtsschutz) für Ihre Entscheidung.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Prüfen Sie Leistungen:</strong> Achten Sie auf Deckung für Operationen, Vorsorge und flexible Selbstbeteiligung bei Anbietern wie HanseMerkur und hepster.</span>
+                <span><strong>Prüfen Sie Leistungen:</strong> Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte bei HUK-COBURG, CosmosDirekt und Die Bayerische.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Überprüfen Sie Vertragsbedingungen:</strong> Lesen Sie das Kleingedruckte, um Altersbegrenzungen oder Ausschlüsse zu vermeiden.</span>
+                <span><strong>Überprüfen Sie Vertragsbedingungen:</strong> Lesen Sie das Kleingedruckte, um versteckte Kosten oder Ausschlüsse zu vermeiden, z. B. bei Selbstbeteiligungen oder Kündigungsfristen.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Jährlicher Vergleich lohnt sich:</strong> Tarife ändern sich regelmäßig. Ein jährlicher Vergleich spart bis zu 200€.</span>
+                <span><strong>Jährlicher Vergleich lohnt sich:</strong> Versicherungstarife ändern sich regelmäßig. Ein jährlicher Vergleich spart bis zu 500€, besonders bei Kfz- und Hausratversicherungen.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Nutzen Sie digitale Tools:</strong> Apps von Anbietern wie hepster ermöglichen schnelle Schadenmeldungen und Tarifanpassungen.</span>
+                <span><strong>Nutzen Sie digitale Tools:</strong> Apps und Online-Portale von Anbietern wie HanseMerkur oder hepster ermöglichen schnelle Schadenmeldungen und einfache Tarifanpassungen.</span>
               </li>
             </ul>
           </div>
@@ -548,7 +774,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Testsieger Tierversicherungsvergleich September 2025
+            Testsieger Versicherungsvergleich September 2025
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -612,105 +838,168 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Ihr Weg zur besten Tierversicherung 2025
+            Ihr Weg zur Besten Versicherung 2025
           </h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Hundeversicherung für umfassenden Schutz
+              Günstige Kfz-Versicherung mit maximalem Schutz
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Hundeversicherung deckt Tierarztkosten für Unfälle, Operationen und Behandlungen. Ideal für
-              Hundebesitzer, die hohe Kosten vermeiden möchten.
+              Eine gute Kfz-Versicherung bietet umfassenden Schutz ohne versteckte Kosten. Achten Sie auf Rabatte (z. B. für Werkstattbindung) und flexible Zusatzbausteine wie Schutzbrief oder Insassenunfallversicherung.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Bis zu 100% Kostenerstattung für Operationen
+                Günstige Prämien bei guter Schadenquote
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz bei Unfällen und Krankheiten
+                Kostenloser Schutzbrief bei Unfällen
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Flexible Selbstbeteiligung (0–20%)
+                Schneller Schadensservice (24/7)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Zusatzbausteine (z. B. Mallorca-Police)
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Spartipp:</strong> Online-Abschlüsse bei Anbietern wie Agila sparen bis zu 10%. Nutzen Sie
-              Tarifrechner für maßgeschneiderte Angebote.
+              <strong>Spartipp:</strong> Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.agila.de/" target="_blank" rel="sponsored">
+              <a href="https://www.huk.de/versicherungen/kfz-versicherung.html" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Hundeversicherung vergleichen
+                  Jetzt Kfz-Versicherung vergleichen
                 </Button>
               </a>
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Katzenversicherung für Vorsorge und Behandlungen
+              Privathaftpflichtversicherung für jeden Haushalt
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Katzenversicherung schützt vor hohen Tierarztkosten, z. B. für chronische Krankheiten oder
-              Vorsorgeuntersuchungen.
+              Eine Privathaftpflichtversicherung schützt Sie vor finanziellen Risiken bei Schäden, die Sie anderen zufügen. Sie ist essenziell für jeden Haushalt.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz für Vorsorgeuntersuchungen
+                Deckt Schäden bis zu 50 Mio. €
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Bis zu 5.000€ jährliche Deckung
+                Schutz bei Schlüsselverlust oder Mietsachschäden
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schnelle Schadenbearbeitung
+                Familienabsicherung inklusive
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Wichtiger Hinweis:</strong> Prüfen Sie, ob Vorsorgeleistungen enthalten sind, um langfristig zu
-              sparen.
+              <strong>Wichtiger Hinweis:</strong> Vergleichen Sie jährlich, da Tarife sich ändern. Kombination mit Hausrat spart bis zu 20%.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.petplan.de/" target="_blank" rel="sponsored">
+              <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Katzenversicherung vergleichen
+                  Jetzt Haftpflichtversicherung vergleichen
                 </Button>
               </a>
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Pferdeversicherung für spezielle Bedürfnisse
+              Günstige Hausratversicherung für Mieter und Eigentümer
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Pferdeversicherungen decken Operationen, Behandlungen und Haftpflichtschäden für Pferdebesitzer.
+              Eine Hausratversicherung schützt Ihr Hab und Gut bei Einbruch, Feuer oder Wasserschäden. Ideal für Mieter und Eigentümer.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz für Operationen und Therapien
+                Neuwertentschädigung bei Totalschaden
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Haftpflichtschutz bis zu 10 Mio. €
+                Schutz bei Elementarschäden (z. B. Sturm, Hagel)
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Flexible Tarife für Freizeit- und Sportpferde
+                Fahrraddiebstahl optional einschließbar
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Hausratversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Risikolebensversicherung für junge Familien
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Risikolebensversicherung schützt Ihre Liebsten finanziell im Todesfall. Besonders wichtig für Familien mit Kindern oder Hypotheken.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Versicherungssummen (50.000€–1 Mio. €)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Günstige Beiträge für Nichtraucher
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schneller Abschluss ohne Gesundheitsprüfung (bei kleinen Summen)
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.allianz.de/tierversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Pferdeversicherung vergleichen
+                  Jetzt Risikolebensversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Rechtsschutzversicherung für Miet- und Verkehrsstreitigkeiten
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Deckt Kosten bis zu 1 Mio. € pro Fall
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kostenlose Erstberatung durch Anwälte
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz bei Mietstreitigkeiten oder Nachbarschaftsstreit
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Rechtsschutzversicherung vergleichen
                 </Button>
               </a>
             </div>
           </div>
         </div>
       </section>
+
       {/* FAQ */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
