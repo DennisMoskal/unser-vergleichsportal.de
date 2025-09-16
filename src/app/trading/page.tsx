@@ -78,14 +78,14 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        {label}
+                        <Button className={btnPrimary}>{label}</Button>
                       </Link>
                     </li>
                   ))}
@@ -106,14 +106,14 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
-                          {label}
+                          <Button className={btnPrimary}>{label}</Button>
                         </a>
                       </li>
                     ))}
@@ -130,14 +130,14 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
-                          {label}
+                          <Button className={btnPrimary}>{label}</Button>
                         </a>
                       </li>
                     ))}
@@ -156,14 +156,14 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        {label}
+                        <Button className={btnPrimary}>{label}</Button>
                       </Link>
                     </li>
                   ))}
@@ -181,14 +181,14 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        {label}
+                        <Button className={btnPrimary}>{label}</Button>
                       </Link>
                     </li>
                   ))}
@@ -196,7 +196,7 @@ const Header: React.FC = () => {
               </div>
               <div className="text-center mt-4">
                 <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  className={btnPrimary}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -229,22 +229,22 @@ const Header: React.FC = () => {
                 {isInternal ? (
                   <Link
                     href={url}
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="inline-block"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`Zu ${label} navigieren`}
                   >
-                    {label}
+                    <Button className={btnPrimary}>{label}</Button>
                   </Link>
                 ) : (
                   <a
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="inline-block"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
-                    {label}
+                    <Button className={btnPrimary}>{label}</Button>
                   </a>
                 )}
               </li>
