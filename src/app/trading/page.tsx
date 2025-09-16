@@ -948,6 +948,48 @@ export default function DeFi() {
               Fazit: Bitcoin-Trading mit einer Haltefrist von über einem Jahr bietet eine einzigartige Chance, Vermögen steuerfrei aufzubauen. Mit XTB können Sie sicher und einfach in Bitcoin investieren.
             </p>
 
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Ultimativer Leitfaden zur Wahl der besten Trading-Plattform
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Die Wahl der passenden Plattform hängt von Zielen, Budget und Erfahrung ab. Unser Leitfaden hilft bei der Vorauswahl.
+            </p>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Trading-Ziele definieren</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kurzfristiges Krypto/CFD-Trading vs. langfristiges Investieren (Aktien/ETFs) erfordert unterschiedliche Tools.
+              </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Gebühren und Kosten prüfen</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kommissionen, Spreads, Einzahlungen. Entscheidend ist die Summe pro Strategie.
+              </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Sicherheit und Regulierung</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Regulierung, Einlagensicherung, transparente AGB, verlässlicher Support.
+              </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Demo-Konten nutzen</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Erst simuliert handeln – Lernkurve steigt, Fehlerkosten sinken.
+              </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Lernressourcen einbeziehen</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Akademien, Community-Ideen und Tutorials beschleunigen den Skill-Aufbau.
+              </li>
+            </ul>
+
             {/* Versicherungen-CTA */}
             <div className="mt-5 bg-green-50 border border-green-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <p className="text-sm sm:text-base text-green-900">
@@ -1089,41 +1131,6 @@ export default function DeFi() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vergleichs-Leitfaden */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Ultimativer Leitfaden zur Wahl der besten Trading-Plattform
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Die Wahl der passenden Plattform hängt von Zielen, Budget und Erfahrung ab. Unser Leitfaden hilft bei der
-              Vorauswahl.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Trading-Ziele definieren</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Kurzfristiges Krypto/CFD-Trading vs. langfristiges Investieren (Aktien/ETFs) erfordert unterschiedliche Tools.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Gebühren und Kosten prüfen</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Kommissionen, Spreads, Einzahlungen. Entscheidend ist die Summe pro Strategie.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Sicherheit und Regulierung</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Regulierung, Einlagensicherung, transparente AGB, verlässlicher Support.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Demo-Konten nutzen</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Erst simuliert handeln – Lernkurve steigt, Fehlerkosten sinken.
-            </p>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Lernressourcen einbeziehen</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Akademien, Community-Ideen und Tutorials beschleunigen den Skill-Aufbau.
-            </p>
           </div>
         </div>
       </section>
