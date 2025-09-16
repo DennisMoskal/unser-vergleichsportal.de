@@ -640,7 +640,9 @@ export default function Home() {
               <Button
                 size="lg"
                 className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                onClick={() => window.open("https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=kredit", "_blank")}
+                onClick={() => window.open("
+<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=">Verivox - die Tarifexperten</a>
+", "_blank")}
                 aria-label="Beste Finanzprodukte ansehen"
               >
                 Jetzt vergleichen
