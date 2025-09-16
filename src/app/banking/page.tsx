@@ -7,6 +7,7 @@ import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Script from "next/script"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -252,6 +253,7 @@ const Header: React.FC = () => {
           </ul>
         </div>
       </section>
+ 
     </>
   )
 }
@@ -422,9 +424,12 @@ export default function Banking() {
                   Jetzt Kredit berechnen
                 </Button>
               </a>
-              <div style={{ width: "50%" }} id="tcpp-iframe-giro">
-                <script src="https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-giro/giro-iframe.js"></script>
-              </div>
+              {/* Replaced Girokonto button with iframe div at 50% width */}
+              <div style={{ width: "50%" }} id="tcpp-iframe-giro"></div>
+              <Script
+                src="https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-giro/giro-iframe.js"
+                strategy="afterInteractive"
+              />
             </div>
           </div>
         </div>
@@ -680,7 +685,6 @@ export default function Banking() {
           </div>
         </div>
       </section>
-
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
