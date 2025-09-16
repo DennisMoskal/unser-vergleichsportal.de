@@ -4,175 +4,89 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Check, Menu, X } from "lucide-react"
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
-import { providerData } from "@/data/providers"
 
-// Define types for navigation items and provider data
-interface NavItem {
-  key: string
-  label: string
-  url: string
-  isInternal: boolean
-}
-
-interface Provider {
-  name: string
-  rating: number
-  features: string[]
-  price: string
-  bonus: string
-  logo: string
-  url: string
-  metaTitle: string
-  metaDescription: string
-  reviewCount?: number
-}
-
-// Navigation data
-const navItems: NavItem[] = [
-  { key: "banking", label: "Banking", url: "/banking", isInternal: true },
-  { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
-  { key: "trading", label: "Trading", url: "/trading", isInternal: true },
-  { key: "versicherungen", label: "Versicherung", url: "/versicherungen", isInternal: true },
-  { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-  { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-  { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-  { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-  { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-  { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-  { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-  { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-]
-
-const companyLinks: NavItem[] = [
-  { key: "karriere", label: "Karriere", url: "/karriere", isInternal: true },
-  { key: "kontakt", label: "Kontakt", url: "/kontakt", isInternal: true },
-  { key: "partnerprogramm", label: "Partnerprogramm", url: "/partnerprogramme", isInternal: true },
-  { key: "ueber-uns", label: "Über uns", url: "/ueber-uns", isInternal: true },
-]
-
-const legalLinks: NavItem[] = [
-  { key: "agb", label: "AGB", url: "/agb", isInternal: true },
-  { key: "cookie-richtlinie", label: "Cookie-Richtlinie", url: "/cookie-richtlinie", isInternal: true },
-  { key: "datenschutz", label: "Datenschutz", url: "/datenschutz", isInternal: true },
-  { key: "impressum", label: "Impressum", url: "/impressum", isInternal: true },
-]
-
-// SmartFinanzLogo Component
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => (
-  <Link href="/" aria-label="Zurück zur Startseite">
-    <div className={`flex flex-col items-start ${className}`}>
-      <div className="flex items-center space-x-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-          <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
-          <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-        </svg>
-        <span className="font-bold">martFinanz</span>
+// SmartFinanzLogo-Komponente (identisch mit Versicherungen.tsx)
+const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <Link href="/" aria-label="Zurück zur Startseite">
+      <div className={`flex flex-col items-start ${className}`}>
+        <div className="flex items-center space-x-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
+          </svg>
+          <span className="font-bold">martFinanz</span>
+        </div>
+        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
       </div>
-      <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
-    </div>
-  </Link>
-)
-
-// Navigation Link Component
-const NavLink: React.FC<{
-  item: NavItem
-  activeCategory: string
-  setActiveCategory: (key: string) => void
-  setMobileMenuOpen?: (open: boolean) => void
-  className?: string
-}> = ({ item, activeCategory, setActiveCategory, setMobileMenuOpen, className = "" }) => {
-  const isActive = activeCategory === item.key
-  const commonClasses = `block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 ${isActive ? "bg-green-600 text-white" : ""} ${className}`
-
-  return item.isInternal ? (
-    <Link
-      href={item.url}
-      className={commonClasses}
-      onClick={() => {
-        setActiveCategory(item.key)
-        setMobileMenuOpen?.(false)
-      }}
-      aria-label={`Zu ${item.label} navigieren`}
-    >
-      {item.label}
     </Link>
-  ) : (
-    <a
-      href={item.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={commonClasses}
-      onClick={() => {
-        setActiveCategory(item.key)
-        setMobileMenuOpen?.(false)
-      }}
-      aria-label={`${item.label} vergleichen (externer Link)`}
-    >
-      {item.label}
-    </a>
   )
 }
 
-// Header Component
+// Header-Komponente (identisch mit Versicherungen.tsx)
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("tierversicherungen")
 
-  const scrollToSection = useCallback((sectionId: string) => {
+  const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
-    element?.scrollIntoView({ behavior: "smooth" })
-  }, [])
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   useEffect(() => {
     const hash = window.location.hash.substring(1)
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
-  }, [scrollToSection])
+  }, [])
 
   return (
     <>
       <header className="bg-white shadow-sm relative border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <SmartFinanzLogo className="text-xl" />
-          <nav className="hidden sm:flex items-center gap-4" aria-label="Hauptmenü">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.key}
-                item={item}
-                activeCategory={activeCategory}
-                setActiveCategory={setActiveCategory}
-              />
-            ))}
-          </nav>
+          <div className="flex items-center">
+            <SmartFinanzLogo className="text-xl" />
+          </div>
           <button
             className="sm:hidden flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menü öffnen/schließen"
-            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
+        {/* Mobile Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
             <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
               <div>
                 <div className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</div>
                 <ul className="flex flex-col gap-2 text-base">
-                  {navItems.slice(0, 4).map((item) => (
-                    <li key={item.key}>
-                      <NavLink
-                        item={item}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                      />
+                  {[
+                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+                    { key: 'tierversicherungen', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -181,26 +95,50 @@ const Header: React.FC = () => {
                 <div className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</div>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
-                    {navItems.slice(4, 8).map((item) => (
-                      <li key={item.key}>
-                        <NavLink
-                          item={item}
-                          activeCategory={activeCategory}
-                          setActiveCategory={setActiveCategory}
-                          setMobileMenuOpen={setMobileMenuOpen}
-                        />
+                    {[
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
                       </li>
                     ))}
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
-                    {navItems.slice(8).map((item) => (
-                      <li key={item.key}>
-                        <NavLink
-                          item={item}
-                          activeCategory={activeCategory}
-                          setActiveCategory={setActiveCategory}
-                          setMobileMenuOpen={setMobileMenuOpen}
-                        />
+                    {[
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
+                      <li key={key}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          onClick={() => {
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
+                          }}
+                          aria-label={`${label} vergleichen (externer Link)`}
+                        >
+                          {label}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -209,14 +147,24 @@ const Header: React.FC = () => {
               <div>
                 <div className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</div>
                 <ul className="flex flex-col gap-2 text-base">
-                  {companyLinks.map((item) => (
-                    <li key={item.key}>
-                      <NavLink
-                        item={item}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                      />
+                  {[
+                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -224,14 +172,24 @@ const Header: React.FC = () => {
               <div>
                 <div className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</div>
                 <ul className="flex flex-col gap-2 text-base">
-                  {legalLinks.map((item) => (
-                    <li key={item.key}>
-                      <NavLink
-                        item={item}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                      />
+                  {[
+                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
+                    <li key={key}>
+                      <Link
+                        href={url}
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        onClick={() => {
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
+                        }}
+                        aria-label={`Zu ${label} navigieren`}
+                      >
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -248,461 +206,586 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
+
+      {/* Kategorie-Navigation */}
+      <section className="bg-white py-4 border-b" id="tierversicherungen">
+        <div className="container mx-auto px-4">
+          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
+            {[
+              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+              { key: 'tierversicherungen', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
+              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+            ].map(({ key, label, url, isInternal }) => (
+              <li key={key}>
+                {isInternal ? (
+                  <Link
+                    href={url}
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`Zu ${label} navigieren`}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setActiveCategory(key)}
+                    aria-label={`${label} vergleichen (externer Link)`}
+                  >
+                    {label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   )
 }
 
-// Main Component
+// Inline providerData für Tierversicherungen
+const providerData = [
+  {
+    name: "Agila",
+    rating: 4.7,
+    features: [
+      "Umfassender Schutz für Hunde und Katzen",
+      "Bis zu 100% Kostenerstattung für Operationen",
+      "Testsieger bei Stiftung Warentest (08/2025)",
+      "Keine Wartezeit bei Unfällen",
+      "24/7 Online-Schadenmeldung",
+      "Flexible Tarife für junge und ältere Tiere",
+      "Kostenlose Erstberatung",
+      "Über 20 Jahre Erfahrung",
+    ],
+    price: "ab 9,90€/Monat",
+    bonus: "10% Rabatt bei Online-Abschluss",
+    logo: "🐶",
+    url: "https://www.agila.de/",
+    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2025",
+    metaDescription: "Agila bietet umfassenden Schutz für Hunde und Katzen mit bis zu 100% Kostenerstattung. Jetzt Testsieger-Tarife vergleichen!",
+    isTopRecommendation: true,
+  },
+  {
+    name: "Petplan",
+    rating: 4.6,
+    features: [
+      "Tierversicherung für Hunde, Katzen und Pferde",
+      "Bis zu 5.000€ jährliche Deckung",
+      "Schnelle Schadenbearbeitung innerhalb 48h",
+      "eKomi-Bewertung: 4,6/5 Sterne",
+      "Flexible Selbstbeteiligung (0–20%)",
+      "Zusatzschutz für Zahnbehandlungen",
+      "Online-Tarifrechner für individuelle Angebote",
+      "Kundenservice 7 Tage die Woche",
+    ],
+    price: "ab 8,50€/Monat",
+    bonus: "Kostenlose Erstberatung",
+    logo: "🐾",
+    url: "https://www.petplan.de/",
+    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2025",
+    metaDescription: "Petplan bietet flexible Tierversicherungen für Hunde, Katzen und Pferde mit schneller Schadenbearbeitung. Jetzt vergleichen!",
+    isTopRecommendation: true,
+  },
+  {
+    name: "HanseMerkur",
+    rating: 4.5,
+    features: [
+      "Tierversicherung ohne Altersbegrenzung",
+      "Bis zu 100% Kostenerstattung für Behandlungen",
+      "Testsieger bei Focus Money (07/2025)",
+      "Einfacher Online-Abschluss",
+      "Schutz für Vorsorgeuntersuchungen",
+      "24/7 Notfall-Hotline",
+      "Kombi-Tarife mit Haftpflicht möglich",
+      "Über 150 Jahre Erfahrung",
+    ],
+    price: "ab 7,90€/Monat",
+    bonus: "5% Rabatt bei Jahreszahlung",
+    logo: "🐱",
+    url: "https://www.hansemerkur.de/tierversicherung",
+    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
+    metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
+    isTopRecommendation: true,
+  },
+  {
+    name: "CHECK24 Tierversicherung",
+    rating: 4.8,
+    features: [
+      "Vergleich von über 50 Tierversicherungen",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Testsieger in der Kategorie Tierversicherung (09/2025)",
+      "eKomi Gold Siegel mit 4,8/5 Sternen",
+      "Bis zu 50% Ersparnis durch Vergleich",
+      "Kostenlose Beratung durch Experten",
+      "Schneller Online-Abschluss",
+      "Transparente Tarifübersicht",
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 50€ Cashback",
+    logo: "✅",
+    url: "https://www.check24.de/tierversicherung/",
+    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2025",
+    metaDescription: "Vergleichen Sie über 50 Tierversicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Jetzt sparen!",
+    isTopRecommendation: true,
+  },
+  {
+    name: "Allianz Tierversicherung",
+    rating: 4.6,
+    features: [
+      "Schutz für Hunde, Katzen und Pferde",
+      "Bis zu 6.000€ jährliche Deckung",
+      "eKomi-Bewertung: 4,6/5 Sterne",
+      "Schneller Schadensservice (24/7)",
+      "Flexible Tarife mit Zusatzoptionen",
+      "Persönliche Beratung in Filialen",
+      "Online-Abschluss mit VideoIdent",
+      "Über 100 Jahre Erfahrung",
+    ],
+    price: "ab 10,50€/Monat",
+    bonus: "Treuebonus für Bestandskunden",
+    logo: "🛡️",
+    url: "https://www.allianz.de/tierversicherung/",
+    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2025",
+    metaDescription: "Allianz bietet zuverlässigen Schutz für Haustiere mit flexiblen Tarifen. Jetzt vergleichen und Treuebonus sichern!",
+    isTopRecommendation: true,
+  },
+  {
+    name: "hepster",
+    rating: 4.6,
+    features: [
+      "Flexible Tierversicherungen für Katzen und Hunde",
+      "100% digitale Buchung und Schadenmeldung",
+      "Monats- oder Jahresabo ohne Selbstbeteiligung",
+      "Trusted Shops zertifiziert (4,6/5 Sterne)",
+      "Schutz für Vorsorge und Operationen",
+      "Schnelle Auszahlung innerhalb 48h",
+      "Kombi mit Fahrrad- oder Reiseversicherung",
+      "14 Tage kostenlos widerrufbar",
+    ],
+    price: "ab 5,99€/Monat",
+    bonus: "Kostenloser Tarifrechner",
+    logo: "🐾",
+    url: "https://www.hepster.com/de/tierversicherung",
+    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
+    metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
+    isTopRecommendation: true,
+  },
+]
+
 export default function Tierversicherungen() {
-  useEffect(() => {
-    console.log("Tierversicherungen component mounted")
-  }, [])
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  // Top-Empfehlungen zuerst
+  const sortedProviders = [...providerData].sort((a, b) => {
+    if (a.isTopRecommendation && !b.isTopRecommendation) return -1
+    if (!a.isTopRecommendation && b.isTopRecommendation) return 1
+    return 0
+  })
 
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Beste Tierversicherung Vergleich 2025 | SmartFinanz</title>
+        <title>Tierversicherungsvergleich September 2025: Beste Anbieter für Hunde & Katzen</title>
         <meta
           name="description"
-          content="Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung bei SmartFinanz. Sparen Sie bis zu 850€ mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo!"
+          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
         />
         <meta
           name="keywords"
-          content="Hundeversicherung, Katzenversicherung, Tierkrankenversicherung, Hundehaftpflichtversicherung, Hunde-OP-Versicherung, Tierversicherung Vergleich, Tarifcheck, CHECK24, Uelzener, Figo"
+          content="Tierversicherung, Haustierversicherung, Hundeversicherung, Katzenversicherung, Testsieger 2025, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="SmartFinanz" />
-        <meta charSet="UTF-8" />
         <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen" />
+        <meta
+          property="og:description"
+          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/tierversicherungen" />
+        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen" />
+        <meta
+          name="twitter:description"
+          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern."
+        />
         <meta name="format-detection" content="telephone=no" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Tierversicherung Vergleich bei SmartFinanz",
-              "description": "Vergleichen Sie Hundeversicherung, Katzenversicherung und Tierkrankenversicherung. Sparen Sie mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo bis zu 850€ jährlich.",
-              "publisher": {
-                "@type": "Organization",
-                "name": "SmartFinanz",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "/favicon.svg"
-                }
-              },
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.smartfinanz.de/tierversicherungen?search={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }
-          `}
-        </script>
-        {providerData.map((provider) => (
-          <script key={provider.name} type="application/ld+json">
-            {`
-              {
-                "@context": "https://schema.org",
-                "@type": "Product",
-                "name": "${provider.name}",
-                "description": "${provider.metaDescription}",
-                "url": "${provider.url}",
-                "image": "${provider.logo}",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": ${provider.rating},
-                  "reviewCount": ${provider.reviewCount || "N/A"}
-                }
-              }
-            `}
-          </script>
-        ))}
       </Head>
+
+      {/* Schema Markup for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Tierversicherungsvergleich 2025: Beste Anbieter für Hunde & Katzen",
+            description:
+              "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz.",
+            url: "https://unser-vergleichsportal.de/tierversicherungen",
+            keywords: [
+              "Tierversicherung",
+              "Haustierversicherung",
+              "Hundeversicherung",
+              "Katzenversicherung",
+              "Testsieger 2025",
+            ],
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: sortedProviders.map((provider, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "Product",
+                  name: provider.name,
+                  description: provider.metaDescription,
+                  offers: {
+                    "@type": "Offer",
+                    price: provider.price,
+                    url: provider.url,
+                  },
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: provider.rating,
+                    reviewCount: "100",
+                  },
+                  keywords: [
+                    "Tierversicherung",
+                    "Haustierversicherung",
+                    "Hundeversicherung",
+                    "Katzenversicherung",
+                  ],
+                },
+              })),
+            },
+          }),
+        }}
+      />
 
       <Header />
 
-      <main>
-        <section className="py-12 sm:py-16 bg-green-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Haustierversicherung Vergleich September 2025: Beste Hunde- und Katzenversicherung</h1>
-              <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
-                Finden Sie die richtige Tierversicherung mit unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten-Versicherung für umfassenden Schutz Ihres Haustiers.
-              </p>
-              <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+      {/* Hero */}
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              Beste Tierversicherungen September 2025 | Testsieger-Vergleich
+            </h1>
+            <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
+              Vergleichen Sie die besten Tierversicherungen für Hunde und Katzen mit SmartFinanz. Sparen Sie bis zu 50%
+              mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz. Finden Sie flexible Tarife mit
+              umfassendem Schutz für Operationen, Behandlungen und Vorsorge.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+              <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored" className="inline-block">
                 <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Jetzt bei Tarifcheck vergleichen
+                  Jetzt bei CHECK24 vergleichen
                 </Button>
               </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-8 sm:py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Haustierversicherung</h2>
-            <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto text-center">
-              Sichern Sie die Gesundheit Ihres Tieres und vermeiden Sie hohe Tierarztkosten. Finden Sie den passenden Rundum-Schutz für Hund oder Katze.
-            </p>
+      {/* Tipps */}
+      <section className="py-8 sm:py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
+            So finden Sie die passende Tierversicherung
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Tipps für einen erfolgreichen Tierversicherungsvergleich
+            </h3>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Vergleichen Sie Angebote:</strong> Nutzen Sie unseren kostenlosen Vergleich, um über 50 Tierversicherungen von Top-Anbietern wie CHECK24, Agila und Petplan zu prüfen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Achten Sie auf Bewertungen:</strong> Vertrauen Sie auf verifizierte Kundenbewertungen (z. B. eKomi 4,8/5 für CHECK24) für Ihre Entscheidung.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Prüfen Sie Leistungen:</strong> Achten Sie auf Deckung für Operationen, Vorsorge und flexible Selbstbeteiligung bei Anbietern wie HanseMerkur und hepster.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Überprüfen Sie Vertragsbedingungen:</strong> Lesen Sie das Kleingedruckte, um Altersbegrenzungen oder Ausschlüsse zu vermeiden.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Jährlicher Vergleich lohnt sich:</strong> Tarife ändern sich regelmäßig. Ein jährlicher Vergleich spart bis zu 200€.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Nutzen Sie digitale Tools:</strong> Apps von Anbietern wie hepster ermöglichen schnelle Schadenmeldungen und Tarifanpassungen.</span>
+              </li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Testsieger Haustierversicherungen September 2025</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {providerData.map((provider) => (
-                <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                  {(provider.name === "Tarifcheck Tierversicherung" ||
-                    provider.name === "CHECK24 Tierversicherung" ||
-                    provider.name === "Uelzener Tierversicherung" ||
-                    provider.name === "BavariaDirekt" ||
-                    provider.name === "HanseMerkur Tierversicherung" ||
-                    provider.name === "AXA") && (
-                    <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">
-                      {provider.name === "Tarifcheck Tierversicherung"
-                        ? "Top Empfehlung"
-                        : provider.name === "CHECK24 Tierversicherung"
-                        ? "Top Empfehlung"
-                        : provider.name === "Uelzener Tierversicherung"
-                        ? "Top Empfehlung"
-                        : provider.name === "BavariaDirekt"
-                        ? "Top Empfehlung"
-                        : provider.name === "HanseMerkur Tierversicherung"
-                        ? "Top Kostenübernahme"
-                        : "Top Hundehalterhaftpflicht"}
+      {/* Anbieterübersicht */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            Testsieger Tierversicherungsvergleich September 2025
+          </h2>
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {sortedProviders.map((provider) => (
+              <Card
+                key={provider.name}
+                className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative"
+              >
+                {provider.isTopRecommendation && (
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+                )}
+                <CardHeader className="text-center pb-2">
+                  <div className="text-3xl mb-2">{provider.logo}</div>
+                  <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
+                  <div className="flex items-center justify-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 ${
+                          i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
+                        }`}
+                      />
+                    ))}
+                    <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex flex-col flex-1">
+                  <div className="text-center border-b pb-2 mb-4">
+                    <p className="text-xl font-bold text-green-600">{provider.price}</p>
+                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">
+                      {provider.bonus}
                     </Badge>
-                  )}
-                  <CardHeader className="text-center pb-2">
-                    <div className="text-3xl mb-2">{provider.logo}</div>
-                    <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
-                    <div className="flex items-center justify-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`} />
-                      ))}
-                      <span className="ml-2 text-sm font-medium text-gray-600">{provider.rating}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-col flex-1">
-                    <div className="text-center border-b pb-2 mb-4">
-                      <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                      <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">
-                        {provider.bonus}
-                      </Badge>
-                    </div>
-                    <ul className="space-y-1 flex-1 overflow-auto">
-                      {provider.features.map((feature, i) => (
-                        <li key={i} className="flex items-center text-sm">
-                          <Check className="mr-2 h-4 w-4 text-green-600" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={provider.url} target={provider.url.startsWith("http") ? "_blank" : "_self"} rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white mt-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt abschließen*</Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="mt-6 text-center text-xs sm:text-sm text-gray-600 p-4">
-              <p>*Wir erhalten eine Provision für Käufe über diesen Button.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-6 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                  <div className="text-base sm:text-lg font-semibold text-green-800">
-                    Sie möchten sich selbst oder Ihr Eigentum versichern?
                   </div>
-                  <p className="text-sm sm:text-base text-gray-700">
-                    Entdecken Sie Vergleiche für Hausrat, Haftpflicht, Kfz, Wohngebäude, Reise & Gesundheit – transparent und 100% online.
-                  </p>
-                </div>
-                <Link
-                  href="/versicherungen"
-                  aria-label="Zu allen Versicherungen für Sie & Ihr Eigentum"
-                  title="Versicherungen vergleichen"
-                >
-                  <Button className="bg-green-600 hover:bg-green-700 text-white transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                    Zu den Versicherungen
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Hunde- und Katzenversicherung: Schutz für Ihren Vierbeiner</h2>
-
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Günstige Hundehaftpflichtversicherung finden</h3>
-              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <h4 className="text-lg font-semibold mb-4 text-green-600">Kosten einer Hundehaftpflichtversicherung</h4>
-                <p className="mb-4">
-                  Die Kosten für eine Hundehaftpflichtversicherung variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten günstige Hundeversicherungen mit hoher Deckung.
-                </p>
-                <div className="bg-green-50 p-4 rounded-lg mb-6">
-                  <div className="font-semibold text-green-800 mb-2">💡 Spartipp:</div>
-                  <p className="text-sm text-green-700">Mit einem Tierversicherung Vergleich sparen Sie bis zu 300€ jährlich.</p>
-                  <div className="text-center mt-4">
-                    <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                      <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Hundehaftpflicht vergleichen*</Button>
-                    </a>
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold mb-4 text-green-600">Vorteile der besten Hundehaftpflicht</h4>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 50 Mio. € Deckungssumme</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Schutz bei grober Fahrlässigkeit</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Welpen bis 12 Monate oft kostenfrei mitversichert</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Weltweiter Schutz für Reisen</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />24/7 Schadenmeldung online</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierkrankenversicherung für Hunde und Katzen</h3>
-              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <h4 className="text-lg font-semibold mb-4 text-green-600">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
-                <div className="space-y-6 mb-6">
-                  <div>
-                    <div className="font-semibold text-green-600 mb-2">Grundschutz</div>
-                    <p className="text-sm sm:text-base text-gray-600">Katzenkrankenversicherung und Hunde OP Versicherung ab 7,42€/Monat (z. B. Figo). Deckt Tierarztkosten für Krankheiten und Unfälle.</p>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-green-600 mb-2">Erweiterte Deckung</div>
-                    <p className="text-sm sm:text-base text-gray-600">Bis zu 100% Kostenübernahme für Operationen und Behandlungen (z. B. Uelzener, Figo). Inklusive Vorsorge wie Impfungen und Zahnreinigung.</p>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-green-600 mb-2">Premium-Schutz</div>
-                    <p className="text-sm sm:text-base text-gray-600">Weltweiter Schutz, Telemedizin und keine Altersbeschränkung (z. B. Figo, Petprotect). Ideal für chronisch kranke Tiere.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Hunde-OP-Versicherung für chirurgische Eingriffe</h3>
-              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <p className="mb-4">
-                  Eine Hunde-OP-Versicherung schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
-                </p>
-                <h4 className="text-lg font-semibold mb-4 text-green-600">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Freie Tierarzt- und Klinikwahl weltweit</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden mit Tierärzten</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Flexible Beitragsgestaltung für alle Rassen und Altersgruppen</li>
-                </ul>
-                <h4 className="text-lg font-semibold mb-4 text-green-600">Tipps zur Auswahl der besten Hunde-OP-Versicherung</h4>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    <div>
-                      <div className="font-semibold text-gray-600">Leistungsumfang</div>
-                      <p className="text-sm sm:text-base text-gray-600">Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    <div>
-                      <div className="font-semibold text-gray-600">Kostenübernahme</div>
-                      <p className="text-sm sm:text-base text-gray-600">Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    <div>
-                      <div className="font-semibold text-gray-600">Flexibilität</div>
-                      <p className="text-sm sm:text-base text-gray-600">Tarife mit anpassbaren Beiträgen sind ideal für wechselnde Bedürfnisse.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Check className="mr-2 h-4 w-4 text-green-600 mt-1" />
-                    <div>
-                      <div className="font-semibold text-gray-600">Kundenbewertungen</div>
-                      <p className="text-sm sm:text-base text-gray-600">Figo punktet mit Trusted Shops Zertifizierung und 4,5/5 Sternen.</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="mb-6 text-sm sm:text-base">
-                  Mit der Hunde-OP-Versicherung schützen Sie Ihren Hund vor hohen Operationskosten. Wählen Sie zwischen flexiblen Tarifen, profitieren Sie von unbegrenzten Videosprechstunden und sichern Sie Ihren Vierbeiner optimal ab!
-                </p>
-                <div className="text-center">
-                  <a href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt die Top Hunde-OP-Versicherung abschließen*</Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierversicherung online abschließen: Schritt-für-Schritt-Anleitung</h3>
-              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">1. Vergleichen</div>
-                  <p className="text-sm sm:text-base text-gray-600">Nutzen Sie Portale für einen Tierversicherung Vergleich von über 250 Tarifen für Hundeversicherung und Katzenversicherung.</p>
-                </div>
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">2. Berechnen</div>
-                  <p className="text-sm sm:text-base text-gray-600">Geben Sie Daten wie Tierart, Rasse und Alter ein, um genaue Beiträge für Hundehaftpflichtversicherung oder Tierkrankenversicherung zu erhalten.</p>
-                </div>
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">3. Prüfen</div>
-                  <p className="text-sm sm:text-base text-gray-600">Vergleichen Sie Leistungen wie Tierarztkosten Versicherung, Selbstbeteiligung und Vorsorgebudgets bei verschiedenen Anbietern.</p>
-                </div>
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">4. Abschließen</div>
-                  <p className="text-sm sm:text-base text-gray-600">Schließen Sie Ihre günstige Tierversicherung online ab und erhalten Sie den Versicherungsschein sofort per E-Mail.</p>
-                </div>
-                <div className="text-center mt-6">
-                  <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung vergleichen*</Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Häufige Fragen zu Hunde- und Katzenversicherungen</h3>
-              <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">Ist eine Hundehaftpflichtversicherung Pflicht?</div>
-                  <p className="text-sm sm:text-base text-gray-600">In einigen Bundesländern (z. B. Berlin, Niedersachsen) ist die Hundehaftpflichtversicherung Pflicht. Sie schützt vor Schäden durch Ihren Hund bis zu 50 Mio. €.</p>
-                </div>
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">Was deckt eine Tierkrankenversicherung?</div>
-                  <p className="text-sm sm:text-base text-gray-600">Eine Tierkrankenversicherung deckt Tierarztkosten für Krankheiten, Operationen und Vorsorge. Anbieter bieten bis zu 100% Erstattung.</p>
-                </div>
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">Kann ich meine Tierversicherung online kündigen?</div>
-                  <p className="text-sm sm:text-base text-gray-600">Ja, die meisten Hundeversicherungen und Katzenversicherungen können online gekündigt werden. Beachten Sie die Kündigungsfrist (oft 1-3 Monate).</p>
-                </div>
-                <div className="mb-6">
-                  <div className="font-semibold text-green-600 mb-2">Welche Zahlungsmethoden gibt es für Tierversicherungen?</div>
-                  <p className="text-sm sm:text-base text-gray-600">SEPA-Lastschrift (oft mit Rabatt), Überweisung oder Kreditkarte. Ratenzahlung ist bei einigen Anbietern gegen Aufpreis möglich.</p>
-                </div>
-                <div className="text-center mt-6">
-                  <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Hundeversicherung vergleichen*</Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Tierversicherung wechseln und bis zu 300€ sparen</h3>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <div className="mb-8 text-center">
-                <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto">
-                  Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
-                </p>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hundehaftpflichtversicherung wechseln</h3>
-              <div className="space-y-6 mb-6">
-                <div>
-                  <div className="font-semibold text-green-600 mb-2">Beste Wechselzeit</div>
-                  <p className="text-sm sm:text-base text-gray-600">Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</p>
-                </div>
-                <div>
-                  <div className="font-semibold text-green-600 mb-2">Durchschnittliche Ersparnis</div>
-                  <p className="text-sm sm:text-base text-gray-600">50-200€ jährlich durch Wechsel zu Anbietern wie BavariaDirekt oder AXA.</p>
-                </div>
-                <div>
-                  <div className="font-semibold text-green-600 mb-2">Tipp</div>
-                  <p className="text-sm sm:text-base text-gray-600">Nutzen Sie Testsieger für einen kostenlosen Vergleich.</p>
-                </div>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung wechseln</h3>
-              <div className="space-y-6 mb-6">
-                <div>
-                  <div className="font-semibold text-green-600 mb-2">Kündigungsfristen</div>
-                  <p className="text-sm sm:text-base text-gray-600">Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.</p>
-                </div>
-                <div>
-                  <div className="font-semibold text-green-600 mb-2">Sparpotential</div>
-                  <p className="text-sm sm:text-base text-gray-600">100-300€ jährlich bei Anbietern wie Uelzener oder Figo.</p>
-                </div>
-                <div>
-                  <div className="font-semibold text-green-600 mb-2">Achtung</div>
-                  <p className="text-sm sm:text-base text-gray-600">Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!</p>
-                </div>
-              </div>
-              <div className="text-center mt-6">
-                <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung wechseln*</Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">So können Sie das gesparte Geld anlegen</h2>
-            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Einige Beispiele</h3>
-              <p className="mb-4">
-                Mit den Einsparungen aus einem Tierversicherungswechsel können Sie Ihr Geld sinnvoll anlegen, um langfristig Vermögen aufzubauen oder die Gesundheit Ihres Haustiers weiter zu fördern. Hier sind einige Möglichkeiten:
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Investieren Sie in einen ETF-Sparplan für langfristiges Wachstum</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Legen Sie das Geld in hochwertiges Hundefutter oder Vorsorgeprodukte an</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Finanzieren Sie Trainingskurse für Ihren Hund zur Gesundheitsförderung</li>
-                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Sparen Sie für Notfälle in einem Tagesgeldkonto</li>
-              </ul>
-              <div className="text-center">
-                <a href="/anlegen" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Depots vergleichen</Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
-              <h3 className="text-lg font-bold mb-4 text-yellow-800">Checkliste für den Wechsel Ihrer Tierversicherung</h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <div className="font-semibold mb-2">Vor dem Wechsel prüfen:</div>
-                  <ul className="text-sm space-y-1">
-                    <li>• Kündigungsfrist der alten Versicherung</li>
-                    <li>• Vergleichbare Leistungen im neuen Tarif</li>
-                    <li>• Wartezeiten bei Tierkrankenversicherung</li>
-                    <li>• Laufende Behandlungen oder Schäden</li>
+                  <ul className="space-y-1 flex-1 overflow-auto">
+                    {provider.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
-                </div>
-                <div>
-                  <div className="font-semibold mb-2">Nach dem Wechsel:</div>
-                  <ul className="text-sm space-y-1">
-                    <li>• Kündigungsbestätigung prüfen</li>
-                    <li>• Neue Versicherungsunterlagen sicher aufbewahren</li>
-                    <li>• Zahlungsmethoden anpassen (z. B. SEPA-Lastschrift)</li>
-                    <li>• Telemedizin- oder Vorsorgeleistungen aktivieren</li>
-                  </ul>
-                </div>
-              </div>
+                  <a
+                    href={provider.url}
+                    target={provider.url.startsWith("http") ? "_blank" : "_self"}
+                    rel={provider.url.startsWith("http") ? "sponsored" : undefined}
+                  >
+                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                      Jetzt abschließen*
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-8 text-center text-xs sm:text-sm text-gray-600 p-4">
+            <p>*Wir erhalten eine Provision für Käufe über diese Links.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Guide */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            Ihr Weg zur besten Tierversicherung 2025
+          </h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Hundeversicherung für umfassenden Schutz
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Hundeversicherung deckt Tierarztkosten für Unfälle, Operationen und Behandlungen. Ideal für
+              Hundebesitzer, die hohe Kosten vermeiden möchten.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Bis zu 100% Kostenerstattung für Operationen
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz bei Unfällen und Krankheiten
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Selbstbeteiligung (0–20%)
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse bei Anbietern wie Agila sparen bis zu 10%. Nutzen Sie
+              Tarifrechner für maßgeschneiderte Angebote.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.agila.de/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Hundeversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Katzenversicherung für Vorsorge und Behandlungen
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Katzenversicherung schützt vor hohen Tierarztkosten, z. B. für chronische Krankheiten oder
+              Vorsorgeuntersuchungen.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz für Vorsorgeuntersuchungen
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Bis zu 5.000€ jährliche Deckung
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schnelle Schadenbearbeitung
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Wichtiger Hinweis:</strong> Prüfen Sie, ob Vorsorgeleistungen enthalten sind, um langfristig zu
+              sparen.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.petplan.de/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Katzenversicherung vergleichen
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Pferdeversicherung für spezielle Bedürfnisse
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Pferdeversicherungen decken Operationen, Behandlungen und Haftpflichtschäden für Pferdebesitzer.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz für Operationen und Therapien
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Haftpflichtschutz bis zu 10 Mio. €
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Tarife für Freizeit- und Sportpferde
+              </li>
+            </ul>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.allianz.de/tierversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Jetzt Pferdeversicherung vergleichen
+                </Button>
+              </a>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
+      {/* FAQ */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            Häufige Fragen zu Tierversicherungen
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Antworten zu Ihren Tierversicherungsfragen
+            </h3>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Was deckt eine Tierversicherung?</strong> Sie deckt Tierarztkosten für Unfälle, Operationen, Behandlungen und teilweise Vorsorge, je nach Tarif.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Wie viel kostet eine Tierversicherung?</strong> Kosten variieren: Hunde ab 9,90€/Monat, Katzen ab 7,90€/Monat, Pferde ab 15€/Monat.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Gibt es Altersbegrenzungen?</strong> Einige Anbieter wie HanseMerkur haben keine Altersbegrenzung, andere schränken ältere Tiere ein.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Wie funktioniert die Schadenmeldung?</strong> Meist online oder per App, z. B. bei hepster, mit schneller Auszahlung innerhalb 48h.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Ist eine Tierversicherung sinnvoll?</strong> Ja, besonders für Rassen mit hohen Krankheitsrisiken oder teuren Behandlungen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Kann ich die Versicherung wechseln?</strong> Ja, prüfen Sie die Kündigungsfrist (meist 1–3 Monate) und lassen Sie den neuen Anbieter die Kündigung übernehmen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Welche Zusatzleistungen gibt es?</strong> Vorsorge, Zahnbehandlungen oder Haftpflichtschutz sind oft optional einschließbar.</span>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-8 text-center">
+            <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
+              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                Jetzt Tierversicherungen vergleichen
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              Schnell und einfach zur besten Tierversicherung
+            </h2>
+            <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
+              Finden Sie mit wenigen Klicks die besten Tarife für Ihre Haustiere. Sparen Sie Zeit und Geld mit unserem
+              kostenlosen Vergleich.
+            </p>
+            <div className="mt-6">
+              <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
+                  Jetzt bei CHECK24 vergleichen
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
@@ -711,41 +794,40 @@ export default function Tierversicherungen() {
                 <SmartFinanzLogo className="text-xl" />
               </div>
             </div>
-            
             <div>
               <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/banking" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/banking"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Banking"
                   >
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/tierversicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/tierversicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Haustierversicherung"
                   >
                     Haustierversicherung
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/trading" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/trading"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Trading"
                   >
                     Trading
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/versicherungen" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/versicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Versicherungen"
                   >
                     Versicherungen
@@ -753,50 +835,49 @@ export default function Tierversicherungen() {
                 </li>
               </ul>
             </div>
-            
             <div>
               <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
               <div className="grid grid-cols-2 gap-4">
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/ducwCtq" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/ducwCtq"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="DSL Vergleich (externer Link)"
                     >
                       DSL
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/Uxudvkj" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/Uxudvkj"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Gasvergleich (externer Link)"
                     >
                       Gas
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/5R17qbN" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/5R17qbN"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Handytarif vergleichen (externer Link)"
                     >
                       Handytarif
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Kreditkarten vergleichen (externer Link)"
                     >
                       Kreditkarte
@@ -805,44 +886,44 @@ export default function Tierversicherungen() {
                 </ul>
                 <ul className="space-y-2 text-base text-gray-400">
                   <li>
-                    <a 
-                      href="https://www.c24n.de/FZ9nd0R" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/FZ9nd0R"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Mietwagen vergleichen (externer Link)"
                     >
                       Mietwagen
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/zxy0WKh" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/zxy0WKh"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Ökostrom vergleichen (externer Link)"
                     >
                       Ökostrom
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/EieKR0E" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/EieKR0E"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Reise vergleichen (externer Link)"
                     >
                       Reise
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.c24n.de/RYXPGyh" 
-                      target="_blank" 
-                      rel="noopener noreferrer nofollow" 
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                       aria-label="Stromvergleich (externer Link)"
                     >
                       Strom
@@ -851,43 +932,42 @@ export default function Tierversicherungen() {
                 </ul>
               </div>
             </div>
-            
             <div>
               <span className="font-semibold mb-3 text-xl">Unternehmen</span>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/karriere" 
+                  <Link
+                    href="/karriere"
                     rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Karriere"
                   >
                     Karriere
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/kontakt" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/kontakt"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Kontakt"
                   >
                     Kontakt
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/partnerprogramme" 
+                  <Link
+                    href="/partnerprogramme"
                     rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Partnerprogramm"
                   >
                     Partnerprogramm
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/ueber-uns" 
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                  <Link
+                    href="/ueber-uns"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Über uns"
                   >
                     Über uns
@@ -895,45 +975,44 @@ export default function Tierversicherungen() {
                 </li>
               </ul>
             </div>
-            
             <div>
               <span className="font-semibold mb-3 text-xl">Rechtliches</span>
               <ul className="space-y-2 text-base text-gray-400">
                 <li>
-                  <Link 
-                    href="/agb" 
+                  <Link
+                    href="/agb"
                     rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="AGB"
                   >
                     AGB
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/cookie-richtlinie" 
+                  <Link
+                    href="/cookie-richtlinie"
                     rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Cookie-Richtlinie"
                   >
                     Cookie-Richtlinie
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/datenschutz" 
+                  <Link
+                    href="/datenschutz"
                     rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Datenschutz"
                   >
                     Datenschutz
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/impressum" 
+                  <Link
+                    href="/impressum"
                     rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
                     aria-label="Impressum"
                   >
                     Impressum
@@ -942,13 +1021,12 @@ export default function Tierversicherungen() {
               </ul>
             </div>
           </div>
-          
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-base text-gray-400 mb-4">
               © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
-              <Button 
+              <Button
                 className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
                 Startseite
