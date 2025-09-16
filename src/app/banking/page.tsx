@@ -347,6 +347,44 @@ const providerData = [
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
     url: "https://www.check24.de/kredit/"
+  },
+  {
+    name: "Verivox",
+    rating: 4.6,
+    features: [
+      "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "Kostenlose und Schufa-neutrale Kreditanfragen",
+      "Über 20 Jahre Erfahrung im Finanzvergleich",
+      "TÜV-geprüfte Plattform für Kredite und Finanzen",
+      "Kredite ab 0,68% effektiver Jahreszins",
+      "Persönliche Beratung unter 06221 79617216"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 300€ Rückerstattung",
+    logo: "⚖️",
+    url: "https://www.verivox.de/kredit/",
+    metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
+    metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
+  },
+  {
+    name: "Smava",
+    rating: 4.8,
+    features: [
+      "Kreditvergleich mit über 20 Banken für beste Konditionen",
+      "Günstiger geht nicht Garantie mit Top-Zinsen ab 0,68%",
+      "Schufa-neutrale und 100% kostenlose Kreditanfragen",
+      "Über 300.000 zufriedene Kunden seit 2007",
+      "TÜV-zertifizierte Plattform für Kreditvergleiche",
+      "Schnelle Auszahlung innerhalb von 48 Stunden",
+      "Digitale Antragsprozesse mit VideoIdent"
+    ],
+    price: "100% kostenlos",
+    bonus: "Schnelle Auszahlung",
+    logo: "💰",
+    url: "https://kreditvergleich.smava.de/coop/antrag?refId=dykN1hEao7j3",
+    metaTitle: "Smava Kreditvergleich: Günstige Kredite ab 0,68% 2025",
+    metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!"
   }
 ]
 
@@ -420,15 +458,15 @@ export default function Banking() {
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2">Vergleich von Finanzprodukten</h3>
             <ul className="list-disc list-inside text-base mb-6">
-              <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de und CHECK24 stehen Ihnen zur Verfügung.</li>
+              <li>Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Anbietern wie Tarifcheck.de, Verivox und Smava stehen Ihnen zur Verfügung.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Kundenbewertungen prüfen</h3>
             <ul className="list-disc list-inside text-base mb-6">
-              <li>Unsere Anbieter wie Credimaxx und auxmoney haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
+              <li>Unsere Anbieter wie Credimaxx, Smava und Verivox haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2">Konditionen analysieren</h3>
             <ul className="list-disc list-inside text-base mb-6">
-              <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von auxmoney und CHECK24 angeboten werden.</li>
+              <li>Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen, wie sie z. B. von Smava, Verivox und auxmoney angeboten werden.</li>
             </ul>
             <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto finden</h2>
             <h3 className="text-lg font-bold mb-2">Wichtige Kriterien für ein kostenloses Girokonto</h3>
@@ -536,7 +574,7 @@ export default function Banking() {
             <h3 className="text-lg font-bold mb-2">Umschuldung für Zinsersparnis</h3>
             <ul className="list-disc list-inside text-base mb-6">
               <li>Bestehende Kredite zusammenfassen</li>
-              <li>Bis zu 40% der Zinsen sparen</li>
+              <li>Bis to 40% der Zinsen sparen</li>
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -559,7 +597,7 @@ export default function Banking() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney") && (
+                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
                   </Badge>
