@@ -566,7 +566,7 @@ export default function Tierversicherungen() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">So finden Sie die passende Haustierversicherung</h2>
             <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto text-center">
-              Entdecken Sie die besten Tarife für Hunde- und Katzenversicherungen und schützen Sie Ihr Haustier mit minimalem Aufwand.
+              Sichern Sie die Gesundheit Ihres Tieres und vermeiden Sie hohe Tierarztkosten. Finden Sie den passenden Rundum-Schutz für Hund oder Katze.
             </p>
           </div>
         </section>
