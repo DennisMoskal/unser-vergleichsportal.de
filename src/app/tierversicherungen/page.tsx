@@ -670,7 +670,7 @@ export default function Tierversicherungen() {
             <div className="mb-12">
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Günstige Hundehaftpflichtversicherung finden</h3>
               <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <h4 className="text-lg font-semibold mb-4">Kosten einer Hundehaftpflichtversicherung</h4>
+                <h4 className="text-lg font-semibold mb-4 text-green-600">Kosten einer Hundehaftpflichtversicherung</h4>
                 <p className="mb-4">
                   Die Kosten für eine Hundehaftpflichtversicherung variieren je nach Hund, Rasse und Region. Im Durchschnitt liegen die Beiträge zwischen 23€ und 100€ jährlich. Anbieter wie BavariaDirekt (ab 23,13€/Jahr) und Uelzener (ab 3,76€/Monat) bieten günstige Hundeversicherungen mit hoher Deckung.
                 </p>
@@ -683,7 +683,7 @@ export default function Tierversicherungen() {
                     </a>
                   </div>
                 </div>
-                <h4 className="text-lg font-semibold mb-4">Vorteile der besten Hundehaftpflicht</h4>
+                <h4 className="text-lg font-semibold mb-4 text-green-600">Vorteile der besten Hundehaftpflicht</h4>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Bis zu 50 Mio. € Deckungssumme</li>
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Schutz bei grober Fahrlässigkeit</li>
@@ -697,7 +697,7 @@ export default function Tierversicherungen() {
             <div className="mb-12">
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tierkrankenversicherung für Hunde und Katzen</h3>
               <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-                <h4 className="text-lg font-semibold mb-4">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
+                <h4 className="text-lg font-semibold mb-4 text-green-600">Tierkrankenversicherung Test 2025: Wichtige Informationen</h4>
                 <div className="grid gap-4 md:grid-cols-3 mb-6">
                   <div>
                     <div className="font-medium text-green-600 mb-2">Grundschutz</div>
@@ -721,14 +721,14 @@ export default function Tierversicherungen() {
                 <p className="mb-4">
                   Eine Hunde-OP-Versicherung schützt Hundebesitzer vor hohen Kosten für chirurgische Eingriffe, die durch Unfälle oder Krankheiten notwendig werden. Operationen wie Kreuzbandrisse, Tumorentfernungen oder Knochenbrüche können schnell mehrere Tausend Euro kosten. Mit der Figo Hunde-OP-Versicherung sichern Sie Ihren Hund flexibel und digital ab – ohne Jahreslimit und mit bis zu 90% Kostenübernahme. Figo ist Trusted Shops zertifiziert und bietet Top-Kundenbewertungen (4,5/5, 09/2025).
                 </p>
-                <h4 className="text-lg font-semibold mb-4">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
+                <h4 className="text-lg font-semibold mb-4 text-green-600">Warum eine Hunde-OP-Versicherung sinnvoll ist</h4>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Abdeckung von Operationskosten bis zu 90% ohne Jahreslimit</li>
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Freie Tierarzt- und Klinikwahl weltweit</li>
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Unbegrenzt kostenlose Videosprechstunden mit Tierärzten</li>
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" />Flexible Beitragsgestaltung für alle Rassen und Altersgruppen</li>
                 </ul>
-                <h4 className="text-lg font-semibold mb-4">Tipps zur Auswahl der besten Hunde-OP-Versicherung</h4>
+                <h4 className="text-lg font-semibold mb-4 text-green-600">Tipps zur Auswahl der besten Hunde-OP-Versicherung</h4>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Leistungsumfang</strong>: Prüfen Sie, ob alle Operationstypen (z. B. Unfall, Krankheit, Gelenkerkrankungen) abgedeckt sind</li>
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kostenübernahme</strong>: Wählen Sie Tarife mit hoher Erstattung (bis 90%) ohne Jahreslimit</li>
@@ -809,55 +809,19 @@ export default function Tierversicherungen() {
                 Ein Wechsel der Hundeversicherung oder Katzenversicherung kann Ihnen erhebliche Einsparungen bringen, ohne auf Schutz zu verzichten. Nutzen Sie unseren Tierversicherung Vergleich, um die beste Tierversicherung 2025 zu finden.
               </p>
             </div>
-            <div className="grid gap-8 lg:grid-cols-2">
-              <Card className="border-2 border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg text-green-600">Hundehaftpflichtversicherung wechseln</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="font-semibold mb-2">Beste Wechselzeit</div>
-                      <p className="text-sm text-gray-600">Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</p>
-                    </div>
-                    <div>
-                      <div className="font-semibold mb-2">Durchschnittliche Ersparnis</div>
-                      <p className="text-sm text-gray-600">
-                        <strong className="text-green-600">50-200€ jährlich</strong> durch Wechsel zu Anbietern wie BavariaDirekt oder AXA.
-                      </p>
-                    </div>
-                    <div className="bg-green-50 p-3 rounded">
-                      <p className="text-sm text-green-700">
-                        <strong>Tipp:</strong> Nutzen Sie Testsieger für einen kostenlosen Vergleich.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-green-200">
-                <CardHeader>
-                  <CardTitle className="text-lg text-green-600">Tierkrankenversicherung wechseln</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="font-semibold mb-2">Kündigungsfristen</div>
-                      <p className="text-sm text-gray-600">Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.</p>
-                    </div>
-                    <div>
-                      <div className="font-semibold mb-2">Sparpotential</div>
-                      <p className="text-sm text-gray-600">
-                        <strong className="text-green-600">100-300€ jährlich</strong> bei Anbietern wie Uelzener oder Figo.
-                      </p>
-                    </div>
-                    <div className="bg-green-50 p-3 rounded">
-                      <p className="text-sm text-green-700">
-                        <strong>Achtung:</strong> Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Hundehaftpflichtversicherung wechseln</h3>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Beste Wechselzeit:</strong> Kündigung meist 3 Monate vor Vertragsende. Bei Beitragserhöhung: Sonderkündigungsrecht innerhalb 1 Monat.</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Durchschnittliche Ersparnis:</strong> 50-200€ jährlich durch Wechsel zu Anbietern wie BavariaDirekt oder AXA.</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Tipp:</strong> Nutzen Sie Testsieger für einen kostenlosen Vergleich.</li>
+              </ul>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Tierkrankenversicherung wechseln</h3>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Kündigungsfristen:</strong> Meist 3 Monate vor Ablauf. Sonderkündigungsrecht bei Beitragserhöhung oder nach Schadensfall.</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Sparpotential:</strong> 100-300€ jährlich bei Anbietern wie Uelzener oder Figo.</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /><strong>Achtung:</strong> Prüfen Sie Wartezeiten und laufende Behandlungen vor dem Wechsel!</li>
+              </ul>
             </div>
             <div className="mt-8 bg-yellow-50 p-6 rounded-lg border-2 border-yellow-200">
               <h3 className="text-lg font-bold mb-4 text-yellow-800">Checkliste für den Wechsel Ihrer Tierversicherung</h3>
@@ -894,7 +858,7 @@ export default function Tierversicherungen() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">So können Sie das gesparte Geld anlegen</h2>
             <div className="max-w-4xl mx-auto text-gray-600 text-sm sm:text-base">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text">Einige Beispiele</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-green-600">Einige Beispiele</h3>
               <p className="mb-4">
                 Mit den Einsparungen aus einem Tierversicherungswechsel können Sie Ihr Geld sinnvoll anlegen, um langfristig Vermögen aufzubauen oder die Gesundheit Ihres Haustiers weiter zu fördern. Hier sind einige Möglichkeiten:
               </p>
