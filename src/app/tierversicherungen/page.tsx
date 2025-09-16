@@ -26,6 +26,19 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
+// Provider Data Interface
+interface Provider {
+  name: string
+  rating: number
+  features: string[]
+  price: string
+  bonus: string
+  logo: string
+  url: string
+  metaTitle: string
+  metaDescription: string
+}
+
 // Wiederverwendbare Header-Komponente
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -205,6 +218,10 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
+      </header>
+    </>
+  )
+}
 
 // Provider Data
 const providerData: Provider[] = [
