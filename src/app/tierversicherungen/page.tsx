@@ -7,6 +7,7 @@ import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import { providerData } from "@/data/providers"
 
 // Define types for navigation items and provider data
 interface NavItem {
@@ -26,6 +27,7 @@ interface Provider {
   url: string
   metaTitle: string
   metaDescription: string
+  reviewCount?: number
 }
 
 // Navigation data
@@ -148,9 +150,10 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <button
-            className="sm:hidden"
+            className="sm:hidden flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menü öffnen/schließen"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -249,253 +252,6 @@ const Header: React.FC = () => {
   )
 }
 
-// Provider Data
-const providerData: Provider[] = [
-  {
-    name: "Tarifcheck Tierversicherung",
-    rating: 4.5,
-    features: [
-      "Vergleich von über 200 Tierversicherungstarifen",
-      "100% kostenloser und unverbindlicher Vergleich",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
-      "eKomi Silber Siegel mit 4,5/5 Sternen",
-      "Über 3.194 verifizierte Kundenbewertungen",
-      "Bis zu 850€ Ersparnis bei Tierversicherungen",
-      "Schufa-neutrale Tarifanfrage",
-      "Kostenlose Beratung durch Experten"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 120€ Neukundenbonus",
-    logo: "🏆",
-    url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Tarifcheck Tierversicherung: Kostenloser Vergleich für Haustiere",
-    metaDescription: "Vergleichen Sie über 200 Tierversicherungen mit Tarifcheck. Kostenlos, unverbindlich und mit bis zu 850€ Ersparnis. Jetzt starten!"
-  },
-  {
-    name: "CHECK24 Tierversicherung",
-    rating: 4.7,
-    features: [
-      "Marktführer mit über 90% Marktabdeckung",
-      "Vergleich von über 250 Tierversicherungstarifen",
-      "Über 25 Testsiege im Versicherungsvergleich (Handelsblatt 09/2024)",
-      "Nirgendwo-Günstiger-Garantie für beste Preise",
-      "Kostenlose Beratung durch 300 Experten (08:00–22:00 Uhr)",
-      "Über 98% Kundenzufriedenheit",
-      "Transparente Provisionen bei Vermittlung",
-      "Zusätzliche Vergleiche für Kfz und Hausrat"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 100€ Cashback",
-    logo: "✅",
-    url: "https://www.tarifcheck.com/WeOIgnW",
-    metaTitle: "CHECK24 Tierversicherung: Testsieger für Hunde und Katzen",
-    metaDescription: "CHECK24 bietet Testsieger-Vergleiche für über 250 Tierversicherungen. Kostenlos, mit bis zu 100€ Cashback. Jetzt die beste Versicherung finden!"
-  },
-  {
-    name: "Uelzener Tierversicherung",
-    rating: 4.7,
-    features: [
-      "Über 150 Jahre Erfahrung in Tierversicherungen",
-      "Umfassender Schutz für Hunde, Katzen und Pferde",
-      "Hundehaftpflicht mit bis zu 50 Mio. € Deckungssumme",
-      "Testsieger in Leistungs- und Fairness-Tests 2024",
-      "Treue- und Altersrabatte für Hunde über 6 Jahre",
-      "Auslandsschutz für bis zu 12 Monate weltweit",
-      "Flexible Tarife für individuelle Bedürfnisse",
-      "Kranken- und OP-Versicherung mit Gesundheitspauschale"
-    ],
-    price: "ab 3,76€/Monat",
-    bonus: "Treue-Rabatt für Bestandskunden",
-    logo: "🏇",
-    url: "https://tidd.ly/3UN80GC",
-    metaTitle: "Uelzener Tierversicherung: Günstige Hundehaftpflicht und Krankenversicherung",
-    metaDescription: "Uelzener bietet seit 150 Jahren Schutz für Hunde, Katzen und Pferde. Testsieger 2024 mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen!"
-  },
-  {
-    name: "BavariaDirekt",
-    rating: 4.5,
-    features: [
-      "Günstige Hundehaftpflicht ab 23,13€/Jahr",
-      "Bis zu 50 Mio. € Deckungssumme",
-      "Welpen bis 12 Monate kostenfrei mitversichert",
-      "10% Treue-Rabatt nach 5 Jahren",
-      "Schutz auch bei grober Fahrlässigkeit",
-      "24h-Notfall-Hotline für schnellen Service",
-      "91% Kundenzufriedenheit und hohe Weiterempfehlung",
-      "Auszeichnung als 'Fairer Versicherer' (Focus Money)"
-    ],
-    price: "ab 23,13€/Jahr",
-    bonus: "10% Treue-Rabatt",
-    logo: "🐶",
-    url: "https://www.awin1.com/awclick.php?gid=355337&mid=13884&awinaffid=2524533&linkid=3445052&clickref=",
-    metaTitle: "BavariaDirekt Hundehaftpflicht: Günstige Absicherung für Ihren Hund",
-    metaDescription: "BavariaDirekt bietet günstige Hundehaftpflicht ab 23,13€/Jahr mit bis zu 50 Mio. € Deckung. Jetzt Tarife vergleichen und Welpen kostenfrei mitversichern!"
-  },
-  {
-    name: "HanseMerkur Tierversicherung",
-    rating: 4.6,
-    features: [
-      "Testsieger Tierkrankenversicherung (AssCompact Trends 2/2025)",
-      "Hundehaftpflicht ab 3,36€/Monat für kleine Rassen",
-      "Bis zu 100% Kostenübernahme für Tierarztbehandlungen",
-      "Flexible Tarife: Smart, Easy, Best für OP-Versicherung",
-      "Optional Zahn-Baustein für erweiterten Schutz",
-      "Freie Tierarzt- und Klinikwahl weltweit",
-      "Ausgezeichnet als 'Fairster Tierversicherer' (Focus Money 2025)",
-      "Schnelle Schadenbearbeitung und Online-Abschluss"
-    ],
-    price: "ab 3,36€/Monat",
-    bonus: "Rundum-Schutz für Hunde und Katzen",
-    logo: "🐾",
-    url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
-    metaTitle: "HanseMerkur Tierversicherung: Testsieger für Hunde und Katzen",
-    metaDescription: "HanseMerkur bietet preisgekrönte Hundeversicherung und Katzenversicherung ab 3,36€/Monat. Bis zu 100% Tierarztkosten-Erstattung. Jetzt vergleichen!"
-  },
-  {
-    name: "AXA",
-    rating: 4.4,
-    features: [
-      "Hundehalter-Haftpflicht mit bis zu 50 Mio. € Deckung",
-      "Schutz für Schäden durch Ihren Hund weltweit",
-      "Einfacher Online-Abschluss mit Sofortschutz",
-      "24/7 Schadenmeldung über My AXA Portal",
-      "Flexible Tarife mit wählbarer Selbstbeteiligung",
-      "Persönliche Beratung deutschlandweit",
-      "Inklusive Schutz bei grober Fahrlässigkeit",
-      "Kombinierbar mit weiteren AXA Versicherungen"
-    ],
-    price: "ab 25€/Jahr",
-    bonus: "Exklusives Smartphone-Gewinnspiel",
-    logo: "🛡️",
-    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=3092888&clickref=",
-    metaTitle: "AXA Hundehaftpflicht: Zuverlässiger Schutz für Hundehalter",
-    metaDescription: "AXA bietet Hundehaftpflicht mit bis zu 50 Mio. € Deckung und weltweitem Schutz. Jetzt online abschließen und von Top-Beratung profitieren!"
-  },
-  {
-    name: "Petprotect",
-    rating: 4.65,
-    features: [
-      "Bis zu 100% Kostenübernahme für Tierarztbehandlungen",
-      "Stiftung Warentest prämiert für Hundekrankenversicherung",
-      "Kostenfreie Videosprechstunde mit FirstVet oder Pfotendoctor",
-      "Schneller Versicherungsbeginn ohne Gesundheitsprüfung",
-      "Weltweiter Auslandsschutz für Heilbehandlungen",
-      "Erstattung bis zum 4-fachen GOT-Satz",
-      "OP-Versicherung für Hunde und Katzen verfügbar",
-      "24/7 Kundenberatung per Telefon und E-Mail"
-    ],
-    price: "ab 15€/Monat",
-    bonus: "Kostenfreie Videosprechstunde",
-    logo: "🐾",
-    url: "https://www.petprotect.de",
-    metaTitle: "Petprotect Tierversicherung: Beste Hundekrankenversicherung in Deutschland",
-    metaDescription: "Schützen Sie Ihren Hund oder Ihre Katze mit Petprotect. Bis zu 100% Kostenübernahme mit kostenfreier Videosprechstunde. Jetzt vergleichen!"
-  },
-  {
-    name: "Santevet",
-    rating: 4.4,
-    features: [
-      "Spezialisiert auf Krankenversicherungen für Hunde und Katzen",
-      "Bis zu 90% Kostenübernahme für Behandlungen",
-      "Vorsorgebudget für Impfungen und Entwurmung",
-      "Einfache Schadenmeldung über Online-Portal",
-      "Keine Altersbeschränkung für Versicherungsabschluss",
-      "Schnelle Auszahlung von Erstattungen",
-      "Kostenlose Beratung für Tarifauswahl",
-      "Zusätzliche Haftpflichtoption für Hunde"
-    ],
-    price: "ab 20€/Monat",
-    bonus: "Vorsorgebudget inklusive",
-    logo: "🐶",
-    url: "https://www.santevet.de",
-    metaTitle: "Santevet Tierversicherung: Krankenversicherung für Hunde und Katzen",
-    metaDescription: "Santevet bietet bis zu 90% Kostenübernahme für Tierarztkosten und Vorsorgebudgets. Jetzt die beste Tierversicherung in Deutschland vergleichen!"
-  },
-  {
-    name: "Figo",
-    rating: 4.5,
-    features: [
-      "Ein Paket für den Rundumschutz: Konsultationen, Diagnostik, OPs, Medikamente und Spezialbehandlungen",
-      "Flexible Beitragsgestaltung",
-      "Bis zu 90 % Erstattung der Tierarztrechnung – ohne Jahreslimit",
-      "Jedes Alter und alle Rassen versicherbar – ein Tierleben lang",
-      "Vorsorge- und SOS-Budget",
-      "Hausbesuche und Alternativmedizin",
-      "Übernahme von Gelenkerkrankungen",
-      "Kostenerstattung immer bis zum Höchstsatz der GOT",
-      "Freie Tierarzt- & Klinikwahl",
-      "Unbegrenzt kostenlose Videosprechstunden",
-      "Kein Kündigungsrecht für die Versicherung im Schadenfall"
-    ],
-    price: "ab 18€/Monat",
-    bonus: "Kostenlose Telemedizin",
-    logo: "🐱",
-    url: "https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=2426488&clickref=",
-    metaTitle: "Figo Tierversicherung: Flexible Krankenversicherung für Hunde und Katzen",
-    metaDescription: "Figo bietet Rundumschutz mit bis zu 90% Erstattung ohne Jahreslimit, inklusive Telemedizin und Vorsorgebudget. Jetzt die beste Tierversicherung vergleichen!"
-  },
-  {
-    name: "Lassie",
-    rating: 4.3,
-    features: [
-      "Digitale Tierversicherung mit Fokus auf Prävention",
-      "Bis zu 80% Kostenübernahme für Behandlungen",
-      "Kostenlose Trainingskurse für Tiergesundheit",
-      "Schufa-neutrale Tarifanfrage",
-      "Schnelle Erstattung innerhalb von 7 Tagen",
-      "Inklusive Haftpflicht für Hunde optional",
-      "Umfassender Schutz für junge Tiere",
-      "Kundenfreundliche App für Tarifverwaltung"
-    ],
-    price: "ab 12€/Monat",
-    bonus: "Kostenlose Trainingskurse",
-    logo: "🦴",
-    url: "https://www.lassie.de",
-    metaTitle: "Lassie Tierversicherung: Digitale Absicherung für Hunde und Katzen",
-    metaDescription: "Lassie bietet digitale Tierversicherungen mit bis zu 80% Erstattung und Trainingskursen. Jetzt Tarife für Ihren Vierbeiner vergleichen!"
-  },
-  {
-    name: "Petplan",
-    rating: 4.4,
-    features: [
-      "Krankenversicherung für Hunde, Katzen und Kleintiere",
-      "Bis zu 90% Kostenübernahme für Behandlungen",
-      "Freie Tierarztwahl ohne Netzwerkbeschränkung",
-      "Schnelle Schadenbearbeitung innerhalb von Tagen",
-      "Optionale Absicherung für Vorsorgeleistungen",
-      "Weltweiter Schutz für Auslandsreisen",
-      "Tarife ohne Altersbeschränkung",
-      "Kundensupport per Telefon und Online-Chat"
-    ],
-    price: "ab 15€/Monat",
-    bonus: "Flexible Tarifoptionen",
-    logo: "🐾",
-    url: "https://www.petplan.de",
-    metaTitle: "Petplan Tierversicherung: Schutz für Hunde, Katzen und Kleintiere",
-    metaDescription: "Petplan bietet flexible Krankenversicherungen mit bis zu 90% Kostenübernahme. Jetzt die beste Tierversicherung in Deutschland finden!"
-  },
-  {
-    name: "Agila Haustierversicherung",
-    rating: 4.6,
-    features: [
-      "Testsieger für umfassenden Versicherungsschutz",
-      "Bis zu 100% Kostenübernahme für Behandlungen",
-      "Hundehaftpflicht mit bis zu 15 Mio. € Deckung",
-      "Krankenversicherung für Hunde und Katzen",
-      "Tarife ohne Altersbegrenzung bis 10 Jahre",
-      "20% Selbstbeteiligung im Basistarif",
-      "Zusätzliche Vorsorgeleistungen optional",
-      "Schnelle Auszahlung von Erstattungen"
-    ],
-    price: "ab 20€/Monat",
-    bonus: "Rundum-Sorglos-Paket",
-    logo: "🐕",
-    url: "https://www.agila.de",
-    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen",
-    metaDescription: "Agila bietet Testsieger-Tarife mit bis zu 100% Kostenübernahme und Hundehaftpflicht. Jetzt Tierversicherungen vergleichen!"
-  }
-]
-
 // Main Component
 export default function Tierversicherungen() {
   useEffect(() => {
@@ -545,6 +301,25 @@ export default function Tierversicherungen() {
             }
           `}
         </script>
+        {providerData.map((provider) => (
+          <script key={provider.name} type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "${provider.name}",
+                "description": "${provider.metaDescription}",
+                "url": "${provider.url}",
+                "image": "${provider.logo}",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": ${provider.rating},
+                  "reviewCount": ${provider.reviewCount || "N/A"}
+                }
+              }
+            `}
+          </script>
+        ))}
       </Head>
 
       <Header />
@@ -557,7 +332,11 @@ export default function Tierversicherungen() {
               <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
                 Finden Sie die richtige Tierversicherung mit unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten-Versicherung für umfassenden Schutz Ihres Haustiers.
               </p>
-              
+              <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
+                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
+                  Jetzt bei Tarifcheck vergleichen
+                </Button>
+              </a>
             </div>
           </div>
         </section>
@@ -865,7 +644,7 @@ export default function Tierversicherungen() {
               </div>
               <div className="text-center mt-6">
                 <a href="https://www.tarifcheck.com/5dM0KnS" target="_blank" rel="noopener noreferrer sponsored">
-                  
+                  <Button className="bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">Jetzt Tierversicherung wechseln*</Button>
                 </a>
               </div>
             </div>
