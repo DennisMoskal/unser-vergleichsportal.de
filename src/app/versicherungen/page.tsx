@@ -223,7 +223,7 @@ const Header: React.FC = () => {
               { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
               { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
               { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'Strom', url: 'https://www.c24/1fed5b4d-e468-4988-afcb-d6585aa94d9bn.de/RYXPGyh', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
             ].map(({ key, label, url, isInternal }) => (
               <li key={key}>
                 {isInternal ? (
@@ -258,6 +258,27 @@ const Header: React.FC = () => {
 
 const providerData = [
   {
+    name: "Tarifcheck.de",
+    rating: 4.5,
+    features: [
+      "Über 20 Jahre Erfahrung als Vergleichsportal",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Vergleich von über 300 Kfz-Versicherungstarifen",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 verifizierte Kundenbewertungen",
+      "Deutschlands drittgrößtes Vergleichsportal",
+      "Bis zu 1.000€ jährlich sparen bei Kfz-Versicherungen"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.de/girokonto/",
+    metaTitle: "Tarifcheck.de Versicherungsvergleich: Bis zu 1.000€ sparen 2025",
+    metaDescription: "Vergleichen Sie über 300 Kfz-Versicherungen mit Tarifcheck.de. Kostenlos, unverbindlich und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich!",
+    isTopRecommendation: true
+  },
+  {
     name: "CHECK24",
     rating: 4.8,
     features: [
@@ -276,6 +297,234 @@ const providerData = [
     url: "https://www.check24.de/versicherungen/",
     metaTitle: "CHECK24 Versicherungsvergleich: Testsieger 2025 mit bis zu 50% Ersparnis",
     metaDescription: "Vergleichen Sie über 300 Versicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 50% mit unseren Testsiegern!",
+    isTopRecommendation: true
+  },
+  {
+    name: "InShared",
+    rating: 4.6,
+    features: [
+      "Günstige Autoversicherung mit Top-Preisen",
+      "Geld-zurück-Garantie bei weniger Schäden",
+      "24/7 Notfallservice für schnelle Hilfe",
+      "Einfacher und digitaler Vertragsabschluss",
+      "Transparente Beitragsberechnung online",
+      "Partnerschaften mit Roland Assistance und Carglass",
+      "Kfz-Versicherung vergleichen und sparen"
+    ],
+    price: "ab 9,90€/Monat",
+    bonus: "Geld-zurück-Garantie",
+    logo: "🚗",
+    url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref=",
+    metaTitle: "InShared Kfz-Versicherung: Günstige Tarife mit Geld-zurück-Garantie 2025",
+    metaDescription: "InShared bietet günstige Kfz-Versicherungen mit Geld-zurück-Garantie und 24/7 Notfallservice. Jetzt vergleichen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "AXA",
+    rating: 4.5,
+    features: [
+      "Individueller Schutz für Hausrat und Eigentum",
+      "Leistungsstarke Tarife nach Ihren Bedürfnissen",
+      "Inklusive Smart Home Basisabsicherung",
+      "Schnelle Schadenmeldung online oder telefonisch",
+      "Kundenservice rund um die Uhr verfügbar",
+      "Tarifrechner für maßgeschneiderte Angebote",
+      "Testsieger bei Stiftung Warentest (2024)"
+    ],
+    price: "ab 8,52€/Jahr",
+    bonus: "Kostenloser Tarifrechner",
+    logo: "🏠",
+    url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref=",
+    metaTitle: "AXA Versicherungen: Top Hausratversicherung 2025",
+    metaDescription: "AXA bietet individuellen Schutz für Hausrat und Eigentum mit Testsieger-Tarifen. Jetzt Tarifrechner nutzen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "BavariaDirekt",
+    rating: 4.5,
+    features: [
+      "Günstige Kfz-Versicherung ab 9,70€/Monat",
+      "Bis zu 350€ Ersparnis beim Vergleich",
+      "91% Weiterempfehlungsrate von Kunden",
+      "24h Notfall-Hotline für schnelle Unterstützung",
+      "Schufa-neutrale Tarifberechnung",
+      "Einfacher Online-Abschluss in 3 Minuten",
+      "Ausgezeichnet als 'Fairer Versicherer' (Focus Money)"
+    ],
+    price: "ab 9,70€/Monat",
+    bonus: "Bis zu 350€ Ersparnis",
+    logo: "🚘",
+    url: "https://www.awin1.com/awclick.php?gid=355334&mid=13884&awinaffid=2524533&linkid=2322280&clickref=",
+    metaTitle: "BavariaDirekt Kfz-Versicherung: Bis zu 350€ sparen 2025",
+    metaDescription: "BavariaDirekt bietet günstige Kfz-Versicherungen mit hoher Kundenzufriedenheit. Jetzt vergleichen und bis zu 350€ sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "HanseMerkur",
+    rating: 4.7,
+    features: [
+      "Zahnzusatzversicherung ohne Wartezeit",
+      "Bis zu 100% Kostenerstattung für Zahnersatz",
+      "SEHR GUT bei Stiftung Warentest (07/2025)",
+      "Tarife für Vorsorge und Implantate",
+      "Neue ServiceApp für einfache Verwaltung",
+      "150 Jahre Erfahrung und Kundennähe",
+      "Ausgezeichnet als fairster Tierversicherer"
+    ],
+    price: "ab 5€/Monat",
+    bonus: "Kostenlose Erstberatung",
+    logo: "🦷",
+    url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=",
+    metaTitle: "HanseMerkur Zahnzusatzversicherung: Testsieger 2025",
+    metaDescription: "HanseMerkur bietet erstklassige Zahnzusatzversicherungen ohne Wartezeit. Jetzt Tarife vergleichen und profitieren!",
+    isTopRecommendation: true
+  },
+  {
+    name: "hepster",
+    rating: 4.6,
+    features: [
+      "Flexible E-Bike- und Fahrradversicherungen ohne Selbstbeteiligung",
+      "100% digitale Buchung und Schadenmeldung",
+      "Monats- oder Jahresabo für maximale Flexibilität",
+      "Trusted Shops zertifiziert mit Top-Kundenbewertungen",
+      "Tierversicherungen für Katzen und Hunde",
+      "Reiseversicherungen mit kurzfristiger Buchung",
+      "Haftpflichtversicherung für Alltagsrisiken",
+      "Partnerschaften mit Helvetia und Europäische Reiseversicherung"
+    ],
+    price: "ab 3,99€/Monat",
+    bonus: "14 Tage kostenlos widerrufbar",
+    logo: "🚲",
+    url: "https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=",
+    metaTitle: "hepster Versicherungen: Flexible E-Bike- und Tierversicherungen 2025",
+    metaDescription: "hepster bietet flexible E-Bike- und Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "eRecht24",
+    rating: 4.3,
+    features: [
+      "Rechtssicherheit für Webseiten und Versicherungsverträge",
+      "DSGVO-konforme Rechtstexte für Versicherungsanbieter",
+      "Automatische Rechtstext-Generatoren für Impressum und Datenschutz",
+      "Abmahnschutz für Affiliate- und Vergleichsportale",
+      "Kostenlose Erstberatung zu rechtlichen Fragen",
+      "NEU: KI-gestützte Lösungen für Versicherungs-Compliance",
+      "Live-Webinare zu Internetrecht und Verbraucherschutz",
+      "Muster-Verträge für Versicherungs- und Finanzprodukte",
+      "Zentraler Projekt Manager für rechtliche Dokumente",
+      "Über 200.000 Nutzer vertrauen eRecht24"
+    ],
+    price: "ab 20€/Monat",
+    bonus: "Gratis Rechtscheck",
+    logo: "⚖️",
+    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
+    metaTitle: "eRecht24: Rechtssicherheit für Versicherungsverträge 2025",
+    metaDescription: "eRecht24 bietet DSGVO-konforme Rechtstexte und Abmahnschutz für Versicherungsportale. Jetzt kostenlosen Rechtscheck nutzen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Tarifcheck Wohngebäudeversicherung",
+    rating: 4.6,
+    features: [
+      "Vergleich von über 200 Wohngebäudeversicherungen",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Schutz für Haus und Eigentum vor Feuer, Sturm und mehr",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Bis zu 500€ jährliche Ersparnis",
+      "Schneller Online-Abschluss in wenigen Minuten",
+      "Kostenlose Beratung für maßgeschneiderte Tarife"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 500€ Ersparnis",
+    logo: "🏡",
+    url: "https://www.tarifcheck.com/xLfTPmG",
+    metaTitle: "Tarifcheck Wohngebäudeversicherung: Bis zu 500€ sparen 2025",
+    metaDescription: "Vergleichen Sie über 200 Wohngebäudeversicherungen mit Tarifcheck. Kostenlos und mit Top-Bewertungen. Jetzt sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Verivox",
+    rating: 4.6,
+    features: [
+      "Vergleich von Kfz-, Hausrat- und Haftpflichtversicherungen",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "Kostenlose und Schufa-neutrale Kreditanfragen",
+      "Über 20 Jahre Erfahrung im Vergleichsmarkt",
+      "TÜV-geprüfte Plattform für Versicherungen und Finanzen",
+      "Bis zu 850€ Ersparnis bei Kfz-Versicherungen",
+      "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 300€ Rückerstattung",
+    logo: "⚖️",
+    url: "https://www.verivox.de/versicherungen/",
+    metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
+    metaDescription: "Verivox bietet TÜV-geprüfte Vergleiche für Kfz-, Hausrat- und Haftpflichtversicherungen. Jetzt bis zu 850€ sparen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "ROLAND Rechtsschutz",
+    rating: 4.8,
+    features: [
+      "Umfassender Schutz für Privat, Beruf und Verkehr",
+      "Mehrfacher Testsieger 'Fairster Leistungsregulierer' (Focus Money 2025)",
+      "60 Tage Widerrufsrecht für maximale Flexibilität",
+      "24/7 Schadenmeldung und telefonische Erstberatung",
+      "eKomi-Bewertung 4,9/5 für höchste Kundenzufriedenheit",
+      "Spezialtarife wie Manager- und Internet-Rechtsschutz",
+      "Kostenloser Datenleck-Check für Ihre Datensicherheit",
+      "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
+    ],
+    price: "ab 12,50€/Monat",
+    bonus: "Bis zu 70€ Empfehlungsbonus",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
+    metaTitle: "ROLAND Rechtsschutzversicherung: Testsieger 2025",
+    metaDescription: "ROLAND bietet umfassenden Rechtsschutz mit Top-Bewertungen und 60 Tagen Widerrufsrecht. Jetzt Tarife vergleichen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "TravelSecure",
+    rating: 4.7,
+    features: [
+      "Testsieger bei Stiftung Warentest (01/2025, Note 1,4)",
+      "Reiserücktritts- und Auslandskrankenversicherung für Einzelpersonen und Familien",
+      "Jahresreiseversicherung Reisekarte4you für Vielreisende",
+      "Spezialtarife für Work & Travel, Au-Pair und Studenten",
+      "Ski-Haftpflichtversicherung für Italien & Südtirol",
+      "Gruppenreiseversicherung ab 8 Personen ohne Altersbegrenzung",
+      "Beste Kundenhotline 2024 (Focus Money)",
+      "eKomi-Bewertung 4,3/5 für hohe Kundenzufriedenheit"
+    ],
+    price: "ab 6,90€/Jahr",
+    bonus: "Kostenlose Beratung",
+    logo: "✈️",
+    url: "https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=",
+    metaTitle: "TravelSecure Reiseversicherung: Testsieger 2025",
+    metaDescription: "TravelSecure bietet Testsieger-Reiseversicherungen für Familien und Vielreisende. Jetzt Tarife vergleichen!",
+    isTopRecommendation: true
+  },
+  {
+    name: "Die Bayerische",
+    rating: 4.8,
+    features: [
+      "Optimaler Hinterbliebenenschutz für Ihre Familie",
+      "Flexibler Vergleichsrechner für maßgeschneiderte Tarife",
+      "Bis zu 100% Absicherung des Familieneinkommens",
+      "Testsieger bei Stiftung Warentest (09/2025, Note 1,3)",
+      "Einfacher Online-Abschluss in wenigen Minuten",
+      "Kostenlose Beratung durch Experten",
+      "Anpassbare Versicherungssumme und Laufzeit",
+      "Über 160 Jahre Erfahrung und Vertrauen"
+    ],
+    price: "ab 5,90€/Monat",
+    bonus: "10% Rabatt bei Abschluss bis 31.12.2025",
+    logo: "🛡️",
+    url: "https://www.awin1.com/awclick.php?gid=391372&mid=17046&awinaffid=2524533&linkid=2659747&clickref=",
+    metaTitle: "Die Bayerische Risikolebensversicherung: Testsieger 2025",
+    metaDescription: "Die Bayerische bietet Testsieger-Risikolebensversicherungen mit flexiblen Tarifen. Jetzt vergleichen und sparen!",
     isTopRecommendation: true
   },
   {
@@ -380,11 +629,11 @@ export default function Versicherungen() {
         <title>Versicherungsvergleich September 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat</title>
         <meta
           name="description"
-          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG und Allianz."
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
         />
         <meta
           name="keywords"
-          content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG"
+          content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, eRecht24, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
         />
         <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
@@ -393,7 +642,7 @@ export default function Versicherungen() {
         <meta property="og:title" content="Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat" />
         <meta
           property="og:description"
-          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG und Allianz."
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -416,15 +665,14 @@ export default function Versicherungen() {
             "@type": "WebPage",
             name: "Versicherungsvergleich 2025: Beste Anbieter für Kfz, Haftpflicht & Hausrat",
             description:
-              "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG und Allianz.",
+              "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr.",
             url: "https://unser-vergleichsportal.de/versicherungen",
             keywords: [
               "Versicherungsvergleich",
               "Kfz-Versicherung",
               "Haftpflichtversicherung",
               "Hausratversicherung",
-              "Rechtsschutzversicherung",
-              "Testsieger 2025"
+              "Rechtsschutzversicherung"
             ],
             mainEntity: {
               "@type": "ItemList",
@@ -470,12 +718,14 @@ export default function Versicherungen() {
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
-              Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt und ARAG. Finden Sie die besten Tarife für Kfz,
-              Haftpflicht, Hausrat und Rechtsschutz mit transparenten Bewertungen und attraktiven Boni.
+              Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, Verivox und mehr. Finden Sie die besten Tarife für Kfz,
+              Haftpflicht, Hausrat, Rechtsschutz und mehr mit transparenten Bewertungen und attraktiven Boni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored" className="inline-block">
-               
+                <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
+                  Jetzt bei CHECK24 vergleichen
+                </Button>
               </a>
             </div>
           </div>
@@ -488,37 +738,36 @@ export default function Versicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             So finden Sie die passende Versicherung
           </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Vergleichen Sie Angebote</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Nutzen Sie unseren kostenlosen Vergleich, um über 300 Angebote von Top-Anbietern wie CHECK24 und HUK-COBURG zu prüfen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Achten Sie auf Bewertungen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Vertrauen Sie auf verifizierte Kundenbewertungen (z. B. eKomi 4,8/5 für Allianz und ARAG) für Ihre Entscheidung.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Prüfen Sie Leistungen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte bei HUK-COBURG und CosmosDirekt.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Tipps für einen erfolgreichen Versicherungsvergleich
+            </h3>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Vergleichen Sie Angebote:</strong> Nutzen Sie unseren kostenlosen Vergleich, um über 300 Angebote von Top-Anbietern wie CHECK24, Tarifcheck und Verivox zu prüfen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Achten Sie auf Bewertungen:</strong> Vertrauen Sie auf verifizierte Kundenbewertungen (z. B. eKomi 4,8/5 für Allianz, ARAG und ROLAND Rechtsschutz) für Ihre Entscheidung.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Prüfen Sie Leistungen:</strong> Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte bei HUK-COBURG, CosmosDirekt und Die Bayerische.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Überprüfen Sie Vertragsbedingungen:</strong> Lesen Sie das Kleingedruckte, um versteckte Kosten oder Ausschlüsse zu vermeiden, z. B. bei Selbstbeteiligungen oder Kündigungsfristen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Jährlicher Vergleich lohnt sich:</strong> Versicherungstarife ändern sich regelmäßig. Ein jährlicher Vergleich spart bis zu 500€, besonders bei Kfz- und Hausratversicherungen.</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
+                <span><strong>Nutzen Sie digitale Tools:</strong> Apps und Online-Portale von Anbietern wie HanseMerkur oder hepster ermöglichen schnelle Schadenmeldungen und einfache Tarifanpassungen.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
