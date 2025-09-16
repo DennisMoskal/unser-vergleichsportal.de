@@ -557,9 +557,7 @@ export default function Tierversicherungen() {
               <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
                 Finden Sie die richtige Tierversicherung mit unserem Vergleich. Sparen Sie bis zu 850€ jährlich mit Testsiegern wie Tarifcheck, CHECK24, Uelzener und Figo. Unsere Anbieter bieten Hundehaftpflichtversicherung und Tierarztkosten-Versicherung für umfassenden Schutz Ihres Haustiers.
               </p>
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-medium" onClick={() => window.open("https://www.tarifcheck.com/5dM0KnS", "_blank")}>
-                Jetzt Haustierversicherungen vergleichen
-              </Button>
+              
             </div>
           </div>
         </section>
