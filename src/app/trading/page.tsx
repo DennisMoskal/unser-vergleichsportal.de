@@ -785,18 +785,25 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Bridging ermöglicht den Transfer von Kryptowährungen wie Bitcoin oder Ethereum zwischen Blockchains (z. B. Ethereum zu Polygon). Dies ist essenziell für DeFi, da viele Protokolle auf spezifischen Chains laufen.
             </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Warum Bridging?</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Warum Bridging?</strong> Zugang zu niedrigeren Gasgebühren oder spezifischen DeFi-Protokollen.
+                Zugang zu niedrigeren Gasgebühren oder spezifischen DeFi-Protokollen.
               </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Wie funktioniert’s?</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Wie funktioniert’s?</strong> Nutzen Sie Bridges wie Polygon Bridge, verbinden Sie Ihre Wallet (z. B. MetaMask) und transferieren Sie Tokens.
+                Nutzen Sie Bridges wie Polygon Bridge, verbinden Sie Ihre Wallet (z. B. MetaMask) und transferieren Sie Tokens.
               </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Risiken</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Risiken:</strong> Nutzen Sie vertrauenswürdige Bridges und prüfen Sie Smart-Contract-Audits, um Hacks zu vermeiden.
+                Nutzen Sie vertrauenswürdige Bridges und prüfen Sie Smart-Contract-Audits, um Hacks zu vermeiden.
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
@@ -809,18 +816,25 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Memecoins wie Dogecoin oder Shiba Inu sind im Jahr 2025 ein Trend, besonders durch Telegram-Bots wie Banana Gun oder Maestro. Diese Bots ermöglichen schnelles Trading direkt über Telegram, ideal für volatile Memecoin-Märkte.
             </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Vorteile</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Vorteile:</strong> Automatisiertes Sniper-Trading, Echtzeit-Preisalarme, Wallet-Integration.
+                Automatisiertes Sniper-Trading, Echtzeit-Preisalarme, Wallet-Integration.
               </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Beliebte Bots</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Beliebte Bots:</strong> Banana Gun (Solana), Maestro (Ethereum).
+                Banana Gun (Solana), Maestro (Ethereum).
               </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Risiken</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Risiken:</strong> Bots können teuer sein (ab $50/Monat) und erfordern technisches Wissen. Nutzen Sie verifizierte Bots.
+                Bots können teuer sein (ab $50/Monat) und erfordern technisches Wissen. Nutzen Sie verifizierte Bots.
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
@@ -833,18 +847,25 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Sicherheit ist beim Krypto-Trading entscheidend. Mit TradingView analysieren Sie Märkte und traden sicher über verifizierte Broker:
             </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Analyse</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Analyse:</strong> Nutzen Sie Supercharts und Top Screener für präzise Marktanalysen.
+                Nutzen Sie Supercharts und Top Screener für präzise Marktanalysen.
               </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Broker-Integration</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Broker-Integration:</strong> Handeln Sie sicher über regulierte Broker wie OKX oder FOREX.com.
+                Handeln Sie sicher über regulierte Broker wie OKX oder FOREX.com.
               </li>
+            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Community</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Community:</strong> Profitieren Sie von den Handelsideen der TradingView-Community.
+                Profitieren Sie von den Handelsideen der TradingView-Community.
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
@@ -857,44 +878,41 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Bitcoin bietet eine einzigartige Möglichkeit, Vermögen aufzubauen, insbesondere durch die steuerliche Behandlung in Deutschland. Gemäß § 23 Abs. 1 Nr. 2 EStG sind Gewinne aus dem Verkauf von Kryptowährungen wie Bitcoin steuerfrei, wenn Sie diese länger als ein Jahr halten. Dies macht Bitcoin zu einer attraktiven Option für langfristige Investoren.
             </p>
-            <h4 className="text-base sm:text-lg font-semibold mb-2">Warum Bitcoin für Vermögensaufbau?</h4>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Warum Bitcoin für Vermögensaufbau?</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Hohe Wertsteigerung:</strong> Bitcoin hat in der Vergangenheit starke Kurssteigerungen erlebt. Seit 2020 hat Bitcoin eine durchschnittliche jährliche Rendite von über 50% erzielt (Stand 09/2025).
+                Hohe Wertsteigerung: Bitcoin hat in der Vergangenheit starke Kurssteigerungen erlebt. Seit 2020 hat Bitcoin eine durchschnittliche jährliche Rendite von über 50% erzielt (Stand 09/2025).
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Steuerfreiheit nach einem Jahr:</strong> Gewinne sind steuerfrei, wenn Sie Bitcoin mindestens 12 Monate halten.
+                Steuerfreiheit nach einem Jahr: Gewinne sind steuerfrei, wenn Sie Bitcoin mindestens 12 Monate halten.
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Dezentrale Natur:</strong> Bitcoin ist unabhängig von zentralen Banken, was es zu einer Absicherung gegen Inflation macht.
+                Dezentrale Natur: Bitcoin ist unabhängig von zentralen Banken, was es zu einer Absicherung gegen Inflation macht.
               </li>
             </ul>
-            <h4 className="text-base sm:text-lg font-semibold mb-2">Wie funktioniert steuerfreies Bitcoin-Trading?</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Wie funktioniert steuerfreies Bitcoin-Trading?</h4>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Kaufen Sie Bitcoin auf einer regulierten Plattform wie XTB und halten Sie die Coins für mindestens ein Jahr. Nach Ablauf dieser Frist sind die Gewinne steuerfrei. Beispiel:
             </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Kauf:</strong> Sie investieren 5.000 € in Bitcoin am 01.09.2025 über XTB.
+                Kauf: Sie investieren 5.000 € in Bitcoin am 01.09.2025 über XTB.
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Holding:</strong> Sie halten die Bitcoin bis mindestens 02.09.2026.
+                Holding: Sie halten die Bitcoin bis mindestens 02.09.2026.
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Verkauf:</strong> Nach einem Kursanstieg verkaufen Sie die Bitcoin für 10.000 €. Der Gewinn von 5.000 € ist steuerfrei.
+                Verkauf: Nach einem Kursanstieg verkaufen Sie die Bitcoin für 10.000 €. Der Gewinn von 5.000 € ist steuerfrei.
               </li>
             </ul>
-            <h4 className="text-base sm:text-lg font-semibold mb-2">Warum XTB für steuerfreies Bitcoin-Trading?</h4>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              XTB ist eine regulierte Plattform (BaFin), die Bitcoin-CFDs mit 0% Kommission bis 100.000 € Umsatz anbietet. Zusätzlich bietet XTB:
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Warum XTB für steuerfreies Bitcoin-Trading?</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Kostenloses Demo-Konto zum Testen von Strategien
@@ -908,22 +926,22 @@ export default function DeFi() {
                 Benutzerfreundliche Plattform für Anfänger und Profis
               </li>
             </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
               Tipp: Starten Sie mit XTB, um Bitcoin sicher zu kaufen und von der steuerfreien Haltefrist zu profitieren.
             </p>
-            <h4 className="text-base sm:text-lg font-semibold mb-2">Wichtige Hinweise zur Steuerfreiheit</h4>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Wichtige Hinweise zur Steuerfreiheit</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Private Nutzung:</strong> Die Steuerfreiheit gilt nur für private Anleger, nicht für gewerbliche Trader.
+                Private Nutzung: Die Steuerfreiheit gilt nur für private Anleger, nicht für gewerbliche Trader.
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Haltefrist:</strong> Die Bitcoin müssen mindestens 12 Monate ununterbrochen gehalten werden.
+                Haltefrist: Die Bitcoin müssen mindestens 12 Monate ununterbrochen gehalten werden.
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                <strong>Risiken:</strong> Bitcoin ist volatil. Kursverluste sind möglich, und die Steuerfreiheit schützt nicht vor Verlusten.
+                Risiken: Bitcoin ist volatil. Kursverluste sind möglich, und die Steuerfreiheit schützt nicht vor Verlusten.
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
@@ -1109,8 +1127,6 @@ export default function DeFi() {
           </div>
         </div>
       </section>
-
-
      <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
