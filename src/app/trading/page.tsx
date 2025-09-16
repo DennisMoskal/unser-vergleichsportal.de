@@ -546,41 +546,70 @@ export default function DeFi() {
       {/* Tipps */}
       <section className="py-8 sm:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             So finden Sie die passende Trading-Plattform
-          </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Gebühren vergleichen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro, XTB und Vantage. Prüfen Sie auch Spreads und Einzahlungsgebühren.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Sicherheit gewährleisten</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  eToro, XTB, Vantage (ASIC/FSCA) – Regulierung, Einlagensicherung und transparente
-                  Richtlinien sind entscheidend.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <CardTitle className="text-lg font-bold">Demo-Konten testen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Nutzen Sie kostenlose Demo-Konten, um Strategien risikofrei auszuprobieren.
-                </p>
-              </CardContent>
-            </Card>
+          </h1>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Gebühren vergleichen</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro, XTB und Vantage. Prüfen Sie auch Spreads und Einzahlungsgebühren.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Überprüfen Sie versteckte Kosten wie Übernachtgebühren (Swap-Gebühren).</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Vergleichen Sie Gebührenstrukturen für verschiedene Anlageklassen (z. B. Aktien vs. Krypto).</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Nutzen Sie Plattformen mit transparenten Kostenrechnern, z. B. XTB oder eToro.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Sicherheit gewährleisten</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                eToro, XTB, Vantage (ASIC/FSCA) – Regulierung, Einlagensicherung und transparente Richtlinien sind entscheidend.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Prüfen Sie, ob die Plattform 2-Faktor-Authentifizierung (2FA) anbietet.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Verwenden Sie Plattformen mit Cold-Storage-Optionen für Kryptowährungen.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Stellen Sie sicher, dass Kundengelder auf segregierten Konten gehalten werden.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Demo-Konten testen</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Nutzen Sie kostenlose Demo-Konten, um Strategien risikofrei auszuprobieren.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Testen Sie die Benutzeroberfläche und Tools, um die Bedienung zu erlernen.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Simulieren Sie reale Handelsszenarien mit virtuellem Kapital.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Nutzen Sie Demo-Konten, um Hebelwirkung und Risikomanagement zu üben.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -918,74 +947,130 @@ export default function DeFi() {
       {/* FAQ */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
             Häufige Fragen zu Trading-Plattformen
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Beste Trading-Plattform für Anfänger?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Einsteiger profitieren von Social-Trading, Lernmaterialien und einem Demo-Konto, um Strategien risikofrei
-                  zu testen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Welche Gebühren fallen beim Trading an?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Kommissionen, Spreads und ggf. Ein-/Auszahlungsgebühren. Entscheidend ist die Gesamtkostenquote pro
-                  Strategie.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Wie sicher ist Krypto-Trading?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Sicherheit steigt mit Regulierung, 2FA, Cold-Storage-Optionen und transparenter Risikokommunikation der
-                  Anbieter.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Unterschied zwischen CFD- und Krypto-Trading?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  CFDs handeln Preisbewegungen ohne Besitz des Basiswerts; Spot-Krypto bedeutet Kauf/Verkauf echter Coins an
-                  Börsen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Was sind Telegram-Bots im Memecoin-Trading?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Automatisierte Orders, Preisalarme und Wallet-Integration – mit Blick auf Kosten und Sicherheit auswählen.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-2 hover:border-green-200">
-              <CardHeader>
-                <h3 className="text-lg font-bold">Wie funktioniert Bridging in DeFi?</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Bridges verschieben Tokens zwischen Chains. Nur geprüfte Lösungen nutzen und zuerst klein testen.
-                </p>
-              </CardContent>
-            </Card>
+          </h1>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Beste Trading-Plattform für Anfänger?</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Einsteiger profitieren von Social-Trading, Lernmaterialien und einem Demo-Konto, um Strategien risikofrei zu testen.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Plattformen wie eToro bieten CopyTrading, um erfolgreiche Trader nachzuahmen.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>TradingView bietet Tutorials und Community-Ideen für schnelles Lernen.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>XTB’s Akademie bietet kostenlose Kurse für Einsteiger.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Welche Gebühren fallen beim Trading an?</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Kommissionen, Spreads und ggf. Ein-/Auszahlungsgebühren. Entscheidend ist die Gesamtkostenquote pro Strategie.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Beachten Sie variable Spreads, die je nach Marktvolatilität schwanken.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Einige Plattformen erheben Inaktivitätsgebühren bei ungenutzten Konten.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Vergleichen Sie Finanzierungskosten bei gehebeltem Trading.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Wie sicher ist Krypto-Trading?</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Sicherheit steigt mit Regulierung, 2FA, Cold-Storage-Optionen und transparenter Risikokommunikation der Anbieter.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Regulierte Plattformen wie eToro sind durch BaFin oder CySec überwacht.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Verwenden Sie starke Passwörter und aktivieren Sie 2FA für zusätzlichen Schutz.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Prüfen Sie, ob die Plattform regelmäßige Sicherheitsaudits durchführt.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Unterschied zwischen CFD- und Krypto-Trading?</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                CFDs handeln Preisbewegungen ohne Besitz des Basiswerts; Spot-Krypto bedeutet Kauf/Verkauf echter Coins an Börsen.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>CFDs ermöglichen Hebelwirkung, erhöhen aber auch das Verlustrisiko.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Spot-Krypto erfordert oft eine Wallet für die Aufbewahrung.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>CFDs haben oft niedrigere Gebühren, aber keine physische Auszahlung.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Was sind Telegram-Bots im Memecoin-Trading?</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Automatisierte Orders, Preisalarme und Wallet-Integration – mit Blick auf Kosten und Sicherheit auswählen.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Bots wie Banana Gun ermöglichen schnelles Trading in volatilen Märkten.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Prüfen Sie die Sicherheitsprotokolle des Bots, um Hacks zu vermeiden.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Testen Sie Bots mit kleinen Beträgen, bevor Sie größere Summen einsetzen.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Wie funktioniert Bridging in DeFi?</h2>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Bridges verschieben Tokens zwischen Chains. Nur geprüfte Lösungen nutzen und zuerst klein testen.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Beliebte Bridges sind Polygon Bridge und Arbitrum Bridge.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Beachten Sie Bridge-Gebühren, die je nach Blockchain variieren.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Verwenden Sie Wallets wie MetaMask für sichere Transfers.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -1024,6 +1109,7 @@ export default function DeFi() {
           </div>
         </div>
       </section>
+
 
      <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
