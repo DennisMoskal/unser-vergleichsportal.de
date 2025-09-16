@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X } from "lucide-react"
+import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -208,7 +208,7 @@ const Header: React.FC = () => {
       </header>
 
       {/* Kategorie-Navigation */}
-      <section className="bg-white py-4 border-b" id="trading">
+      <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
             {[
@@ -216,7 +216,7 @@ const Header: React.FC = () => {
               { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
               { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
               { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-              { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
               { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
@@ -229,22 +229,22 @@ const Header: React.FC = () => {
                 {isInternal ? (
                   <Link
                     href={url}
-                    className="inline-block"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`Zu ${label} navigieren`}
                   >
-                    <Button className={btnPrimary}>{label}</Button>
+                    {label}
                   </Link>
                 ) : (
                   <a
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
-                    <Button className={btnPrimary}>{label}</Button>
+                    {label}
                   </a>
                 )}
               </li>
