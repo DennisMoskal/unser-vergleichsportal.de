@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X } from "lucide-react"
+import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -48,8 +48,8 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="bg-white shadow-sm relative border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <header className="bg-white shadow-sm border-b py-4">
+        <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center">
             <SmartFinanzLogo className="text-xl" />
           </div>
@@ -60,6 +60,25 @@ const Header: React.FC = () => {
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
+          <nav className="hidden sm:flex flex-wrap justify-center gap-4">
+            {[
+              { key: 'home', label: 'Home', url: '#home', isInternal: true },
+              { key: 'about', label: 'About', url: '#about', isInternal: true },
+              { key: 'services', label: 'Services', url: '#services', isInternal: true },
+              { key: 'contact', label: 'Contact', url: '#contact', isInternal: true },
+            ].map(({ key, label, url, isInternal }) => (
+              <Link
+                key={key}
+                href={url}
+                className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors"
+                onClick={() => scrollToSection(key)}
+                aria-label={`Zu ${label} navigieren`}
+              >
+                {label}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            ))}
+          </nav>
         </div>
 
         {/* Mobile Menü */}
@@ -78,14 +97,15 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block"
+                        className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors w-full"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        <Button className={btnPrimary}>{label}</Button>
+                        {label}
+                        <ArrowRight className="h-4 w-4" />
                       </Link>
                     </li>
                   ))}
@@ -106,14 +126,15 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block"
+                          className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors w-full"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
-                          <Button className={btnPrimary}>{label}</Button>
+                          {label}
+                          <ArrowRight className="h-4 w-4" />
                         </a>
                       </li>
                     ))}
@@ -130,14 +151,15 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block"
+                          className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors w-full"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
-                          <Button className={btnPrimary}>{label}</Button>
+                          {label}
+                          <ArrowRight className="h-4 w-4" />
                         </a>
                       </li>
                     ))}
@@ -156,14 +178,15 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block"
+                        className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors w-full"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        <Button className={btnPrimary}>{label}</Button>
+                        {label}
+                        <ArrowRight className="h-4 w-4" />
                       </Link>
                     </li>
                   ))}
@@ -181,26 +204,30 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block"
+                        className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors w-full"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
-                        <Button className={btnPrimary}>{label}</Button>
+                        {label}
+                        <ArrowRight className="h-4 w-4" />
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="text-center mt-4">
-                <Button
-                  className={btnPrimary}
+                <Link
+                  href="/"
+                  className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors w-full"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Zur Startseite"
                 >
                   Startseite
-                </Button>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </nav>
           </div>
@@ -229,22 +256,24 @@ const Header: React.FC = () => {
                 {isInternal ? (
                   <Link
                     href={url}
-                    className="inline-block"
+                    className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`Zu ${label} navigieren`}
                   >
-                    <Button className={btnPrimary}>{label}</Button>
+                    {label}
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                 ) : (
                   <a
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block"
+                    className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
-                    <Button className={btnPrimary}>{label}</Button>
+                    {label}
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 )}
               </li>
@@ -255,6 +284,12 @@ const Header: React.FC = () => {
     </>
   )
 }
+
+// Einheitliches Button-Layout
+const btnBase =
+  "inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+const btnPrimary = `${btnBase} bg-green-600 hover:bg-green-700 text-white`
+const btnSecondary = `${btnBase} bg-white text-green-600 hover:bg-gray-100`
 
 const providerData = {
   trading: [
@@ -426,12 +461,6 @@ const providerData = {
     }
   ]
 }
-
-// Einheitliches Button-Layout (ohne Icons)
-const btnBase =
-  "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
-const btnPrimary = `${btnBase} bg-green-600 hover:bg-green-700 text-white`
-const btnSecondary = `${btnBase} bg-white text-green-600 hover:bg-gray-100`
 
 export default function DeFi() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -664,7 +693,10 @@ export default function DeFi() {
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
                     rel={provider.url.startsWith("http") ? "noopener nofollow sponsored" : undefined}
                   >
-                    <Button className={`w-full mt-auto ${btnPrimary}`}>Zum Anbieter*</Button>
+                    <Button className={`w-full mt-auto ${btnPrimary}`}>
+                      Zum Anbieter*
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -682,7 +714,10 @@ export default function DeFi() {
                 </p>
               </div>
               <Link href="/banking" aria-label="Zum Banking-Vergleich" title="Zum Banking-Vergleich">
-                <Button className={btnPrimary}>Jetzt Banken vergleichen</Button>
+                <Button className={btnPrimary}>
+                  Jetzt Banken vergleichen
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
               </Link>
             </div>
           </div>
@@ -997,7 +1032,10 @@ export default function DeFi() {
                 oder Rechtsschutz – je nach Tarif).
               </p>
               <Link href="/versicherungen" aria-label="Versicherungen für Krypto-Anleger" title="Versicherungen für Krypto-Anleger">
-                <Button className={btnPrimary}>Zu den Versicherungen</Button>
+                <Button className={btnPrimary}>
+                  Zu den Versicherungen
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
               </Link>
             </div>
           </div>
