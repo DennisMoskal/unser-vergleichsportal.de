@@ -980,7 +980,7 @@ export default function Home() {
                 </p>
                 <Link href="/banking">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt Konto wählen
+                    Banking-Produkte Entdecken
                   </Button>
                 </Link>
               </div>
@@ -989,7 +989,7 @@ export default function Home() {
               <div className="mb-12" id="trading-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen auf unserer{" "}
+                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
                   <Link href="/trading" className="text-green-600 hover:underline">
                     Trading-Seite um das richtige Depot zu eröffnen
                   </Link>
@@ -1001,7 +1001,7 @@ export default function Home() {
                   <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
                     Altersvorsorge-Optionen
                   </Link>
-                  .
+                  . 
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
                 <p className="mb-4 text-gray-700">
@@ -1009,11 +1009,11 @@ export default function Home() {
                   <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
                     XTB
                   </a>{" "}
-                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
+                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rostoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
                 <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Erfahren Sie mehr über{" "}
+                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement z.B durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
                   <Link href="/trading#krypto" className="text-green-600 hover:underline">
                     sicheres Krypto-Trading
                   </Link>
@@ -1021,7 +1021,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit nur 25€ monatlich können Sie für sich oder ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für langfristigen Vermögensaufbau. ETF-Sparpläne gibt es unter anderem als Krypto-, Robo-Advisor- und nachhaltige Varianten. Starten Sie mit{" "}
+                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
                   <Link href="/trading#etfs" className="text-green-600 hover:underline">
                     ETF-Sparplänen
                   </Link>
@@ -1029,7 +1029,7 @@ export default function Home() {
                 </p>
                 <Link href="/trading">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt vorsorgen
+                    Jetzt Vorsorge planen
                   </Button>
                 </Link>
               </div>
