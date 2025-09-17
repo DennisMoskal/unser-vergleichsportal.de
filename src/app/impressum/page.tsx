@@ -256,46 +256,17 @@ const Header: React.FC = () => {
 }
 
 export default function ImpressumPage() {
-  useEffect(() => {
-    document.title = "Impressum - SmartFinanz unser-vergleichsportal.de"
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Impressum von SmartFinanz unser-vergleichsportal.de - Alle rechtlichen Angaben gemäß TMG. Kontakt, Geschäftsführung und Haftungsausschluss."
-      )
-    }
-    
-    // Canonical Tag hinzufügen
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://unser-vergleichsportal.de/impressum'
-  }, [])
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* Hero-Bereich */}
-      <section className="bg-green-600 text-white py-12 sm:py-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Impressum SmartFinanz unser-vergleichsportal.de
-          </h1>
-          <p className="text-sm sm:text-base text-green-100 mb-6 max-w-2xl mx-auto">
-            Alle rechtlichen Angaben gemäß § 5 TMG und anderen gesetzlichen Vorgaben finden Sie hier transparent aufgelistet.
-          </p>
-        </div>
-      </section>
-
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 text-center">Rechtliche Informationen im Detail</h2>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Impressum</h1>
+          <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
+            Gemäß § 5 Telemediengesetz (TMG) und anderen gesetzlichen Vorgaben stellen wir Ihnen nachfolgend alle erforderlichen Angaben über unser Unternehmen transparent zur Verfügung.
+          </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
             <CardHeader>
