@@ -967,7 +967,7 @@ export default function Home() {
                   </Link>{" "}
                   für maximale Erträge.
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein kostenloses Konto</h3>
+                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
                 <p className="mb-4 text-gray-700">
                   Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
                   <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
@@ -984,17 +984,17 @@ export default function Home() {
 
               {/* Trading Section */}
               <div className="mb-12" id="trading-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen?</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen machen den Einstieg einfach. Entdecken Sie passende Optionen auf unserer{" "}
+                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen auf unserer{" "}
                   <Link href="/trading" className="text-green-600 hover:underline">
-                    Trading-Seite
+                    Trading-Seite um das richtige Depot zu eröffnen
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Das Rentenloch verstehen</h3>
+                <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
                 <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente deckt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
+                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
                   <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
                     Altersvorsorge-Optionen
                   </Link>
@@ -1002,11 +1002,11 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
                 <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
+                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
                   <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
                     XTB
                   </a>{" "}
-                  bieten 0% Kommission bis 100.000€ Umsatz.
+                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
                 <p className="mb-4 text-gray-700">
@@ -1016,9 +1016,9 @@ export default function Home() {
                   </Link>
                   .
                 </p>
-                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen kann jeder</h3>
+                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit nur 25€ monatlich können Sie in ETFs investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für langfristigen Vermögensaufbau. Starten Sie mit{" "}
+                  Mit nur 25€ monatlich können Sie für sich oder ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für langfristigen Vermögensaufbau. ETF-Sparpläne gibt es unter anderem als Krypto-, Robo-Advisor- und nachhaltige Varianten. Starten Sie mit{" "}
                   <Link href="/trading#etfs" className="text-green-600 hover:underline">
                     ETF-Sparplänen
                   </Link>
