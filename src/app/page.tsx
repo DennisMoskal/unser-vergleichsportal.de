@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
@@ -330,7 +330,7 @@ const Header: React.FC = () => {
                 price: "ab 20€/Monat",
                 bonus: "Gratis Rechtscheck",
                 logo: "⚖️",
-                url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
+                url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subids=&target=default",
               },
               {
                 name: "XTB",
