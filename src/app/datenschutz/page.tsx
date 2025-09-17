@@ -1,9 +1,9 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Cookie, Shield, Info, TrendingUp, Menu, X } from "lucide-react"
+import { Shield, Lock, EyeOff, TrendingUp, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -256,34 +256,34 @@ const Header: React.FC = () => {
   )
 }
 
-export default function CookieRichtliniePage() {
+export default function DatenschutzPage() {
   return (
     <>
       <Head>
-        <title>Cookie-Richtlinie unser-vergleichsportal.de</title>
+        <title>Datenschutz bei SmartFinanz unser-vergleichsportal.de</title>
         <meta
           name="description"
-          content="Diese Cookie-Richtlinie erläutert, wie SmartFinanz unser-vergleichsportal.de Cookies und ähnliche Technologien verwendet, um ein optimales Nutzererlebnis zu bieten."
+          content="Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen."
         />
         <meta
           name="keywords"
-          content="Cookie-Richtlinie, SmartFinanz unser-vergleichsportal.de, Cookies Vergleichsportal, Datenschutz Cookies"
+          content="Datenschutz, SmartFinanz unser-vergleichsportal.de, Datenschutzerklärung, Datenverarbeitung, Privatsphäre"
         />
-        <link rel="canonical" href="https://unser-vergleichsportal.de/cookie-richtlinie" />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/datenschutz" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cookie-Richtlinie SmartFinanz unser-vergleichsportal.de 2025" />
+        <meta property="og:title" content="Datenschutz bei SmartFinanz unser-vergleichsportal.de 2025" />
         <meta
           property="og:description"
-          content="Diese Cookie-Richtlinie erläutert, wie SmartFinanz unser-vergleichsportal.de Cookies und ähnliche Technologien verwendet, um ein optimales Nutzererlebnis zu bieten."
+          content="Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen."
         />
-        <meta property="og:url" content="https://unser-vergleichsportal.de/cookie-richtlinie" />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/datenschutz" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cookie-Richtlinie SmartFinanz unser-vergleichsportal.de | Privatsphäre schützen" />
+        <meta name="twitter:title" content="Datenschutz bei SmartFinanz unser-vergleichsportal.de | Ihre Privatsphäre" />
         <meta
           name="twitter:description"
-          content="Diese Cookie-Richtlinie erläutert, wie SmartFinanz unser-vergleichsportal.de Cookies und ähnliche Technologien verwendet, um ein optimales Nutzererlebnis zu bieten."
+          content="Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen."
         />
         <meta name="format-detection" content="telephone=no" />
       </Head>
@@ -296,15 +296,16 @@ export default function CookieRichtliniePage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                name: "Cookie-Richtlinie SmartFinanz unser-vergleichsportal.de 2025",
+                name: "Datenschutz bei SmartFinanz unser-vergleichsportal.de 2025",
                 description:
-                  "Diese Cookie-Richtlinie erläutert, wie SmartFinanz unser-vergleichsportal.de Cookies und ähnliche Technologien verwendet, um ein optimales Nutzererlebnis zu bieten.",
-                url: "https://unser-vergleichsportal.de/cookie-richtlinie",
+                  "Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.",
+                url: "https://unser-vergleichsportal.de/datenschutz",
                 keywords: [
-                  "Cookie-Richtlinie",
+                  "Datenschutz",
                   "SmartFinanz unser-vergleichsportal.de",
-                  "Cookies Vergleichsportal",
-                  "Datenschutz Cookies"
+                  "Datenschutzerklärung",
+                  "Datenverarbeitung",
+                  "Privatsphäre"
                 ]
               })
             }}
@@ -315,125 +316,53 @@ export default function CookieRichtliniePage() {
           {/* Hauptinhalt */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50">
             <div className="container mx-auto max-w-4xl">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Cookie-Richtlinie</h1>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Datenschutz</h2>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
-                Diese Cookie-Richtlinie erläutert, wie SmartFinanz unser-vergleichsportal.de Cookies und ähnliche Technologien auf unserer Website verwendet, um Ihnen ein optimales Nutzererlebnis zu bieten und unsere Dienste zu verbessern.
+                Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.
               </p>
 
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
+              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">1. Einführung und Begriffsbestimmungen</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl font-bold">1. Datenschutz auf einen Blick</CardTitle>
                 </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
+                <CardContent className="text-gray-600 space-y-4">
                   <p>
-                    Cookies sind kleine Textdateien, die auf Ihrem Gerät (Computer, Smartphone, Tablet) gespeichert werden, wenn Sie unsere Website besuchen. Sie dienen dazu, Ihre Präferenzen zu speichern, die Funktionalität der Website zu verbessern und Analysen durchzuführen. Ähnliche Technologien wie Pixel-Tags oder Local Storage können ebenfalls verwendet werden. Diese Cookie-Richtlinie gilt für die Website der SmartFinanz GmbH, Westpreußenstraße 26, 53119 Bonn, Deutschland, vertreten durch den Geschäftsführer Dennis Moskal.
-                  </p>
-                  <p>
-                    <strong>Kontakt:</strong><br />
-                    Telefon: <a href="tel:01722058855" className="text-green-600 hover:underline">0172 2058855</a><br />
-                    E-Mail: <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
-                <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">2. Arten und Zwecke von Cookies</CardTitle>
-                </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
-                  <p>
-                    Wir verwenden verschiedene Arten von Cookies, um unterschiedliche Funktionen zu erfüllen:
+                    Wir sind verantwortlich für die Verarbeitung Ihrer Daten und setzen alles daran, Ihre Privatsphäre zu wahren. Diese Datenschutzerklärung informiert Sie über die Erhebung, Verwendung und Speicherung Ihrer personenbezogenen Daten.
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>
-                      <strong>Essentielle Cookies:</strong> Diese Cookies sind notwendig, um die grundlegenden Funktionen der Website bereitzustellen, z. B. Navigation, Zugang zu geschützten Bereichen und Speicherung Ihrer Sitzung. Ohne diese Cookies funktioniert die Website nicht ordnungsgemäß.
-                    </li>
-                    <li>
-                      <strong>Funktionale Cookies:</strong> Diese Cookies verbessern die Benutzerfreundlichkeit, indem sie Ihre Präferenzen (z. B. Spracheinstellungen oder Formulareingaben) speichern.
-                    </li>
-                    <li>
-                      <strong>Analytische Cookies:</strong> Diese Cookies sammeln anonymisierte Daten über das Nutzerverhalten, um die Leistung und Benutzerfreundlichkeit der Website zu analysieren und zu optimieren (z. B. durch Google Analytics).
-                    </li>
-                    <li>
-                      <strong>Marketing-Cookies:</strong> Diese Cookies werden verwendet, um personalisierte Werbung anzuzeigen und die Wirksamkeit von Werbekampagnen zu messen. Sie werden nur mit Ihrer ausdrücklichen Zustimmung gesetzt.
-                    </li>
+                    <li>Verantwortlicher: SmartFinanz unser-vergleichsportal.de, Westpreußenstraße 26, 53119 Bonn</li>
+                    <li>Kontakt Datenschutzbeauftragter: info@unser-vergleichsportal.de</li>
+                    <li>Rechtsgrundlage: DSGVO und nationale Datenschutzgesetze</li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
+              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mt-8">
                 <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">3. Drittanbieter-Cookies</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl font-bold">2. Erhebung und Verwendung von Daten</CardTitle>
                 </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
+                <CardContent className="text-gray-600 space-y-4">
                   <p>
-                    Wir arbeiten mit Drittanbietern zusammen, die Cookies auf unserer Website setzen, um bestimmte Funktionen zu ermöglichen. Zu den gängigen Drittanbietern gehören:
+                    Wir erheben personenbezogene Daten nur, wenn Sie diese freiwillig angeben, z. B. bei der Nutzung unseres Vergleichs-Tools oder bei der Kontaktaufnahme.
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>
-                      <strong>Google Analytics:</strong> Wird verwendet, um Nutzungsstatistiken zu erstellen und die Website-Leistung zu analysieren. Daten werden anonymisiert verarbeitet. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Google Datenschutzerklärung</a>.
-                    </li>
-                    <li>
-                      <strong>Partnerprogramme:</strong> Einige unserer Partner setzen Cookies, um den Erfolg von Vermittlungen zu verfolgen (z. B. Affiliate-Cookies), wenn Sie über unsere Plattform Verträge abschließen.
-                    </li>
+                    <li><strong>Erfasste Daten:</strong> Name, E-Mail-Adresse, Telefonnummer, finanzielle Daten (bei Anfragen)</li>
+                    <li><strong>Zweck:</strong> Bereitstellung unserer Dienstleistungen, Kundensupport, Marketing (mit Einwilligung)</li>
+                    <li><strong>Speicherdauer:</strong> Daten werden nur so lange gespeichert, wie es für den Zweck notwendig ist oder gesetzlich vorgeschrieben.</li>
                   </ul>
-                  <p>
-                    Diese Drittanbieter unterliegen ihren eigenen Datenschutzrichtlinien. Wir empfehlen, diese zu lesen, um mehr über deren Datenverarbeitung zu erfahren.
-                  </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
+              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mt-8">
                 <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">4. Einwilligung und Verwaltung von Cookies</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl font-bold">3. Ihre Rechte</CardTitle>
                 </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
+                <CardContent className="text-gray-600 space-y-4">
                   <p>
-                    Beim ersten Besuch unserer Website zeigen wir Ihnen einen Cookie-Banner, der Sie über die Verwendung von Cookies informiert und Ihre Einwilligung einholt. Sie können Ihre Zustimmung zu nicht-essentiellen Cookies (analytische und Marketing-Cookies) verweigern oder jederzeit widerrufen, indem Sie die Cookie-Einstellungen auf unserer Website oder in Ihrem Browser anpassen. Essentielle Cookies werden immer gesetzt, da sie für die Funktionalität der Website erforderlich sind.
-                  </p>
-                  <p>
-                    Sie können Cookies auch über Ihre Browsereinstellungen verwalten:
+                    Sie haben folgende Rechte bezüglich Ihrer Daten:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Google Chrome: Einstellungen &gt; Datenschutz und Sicherheit &gt; Cookies und andere Websitedaten</li>
-                    <li>Mozilla Firefox: Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Cookies und Website-Daten</li>
-                    <li>Safari: Einstellungen &gt; Datenschutz &gt; Alle Cookies blockieren</li>
-                    <li>Microsoft Edge: Einstellungen &gt; Datenschutz, Suche und Dienste &gt; Cookies verwalten</li>
-                  </ul>
-                  <p>
-                    Bitte beachten Sie, dass das Deaktivieren von Cookies die Funktionalität unserer Website beeinträchtigen kann.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
-                <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">5. Speicherdauer von Cookies</CardTitle>
-                </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
-                  <p>
-                    Die Speicherdauer von Cookies variiert je nach Typ:
-                  </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Sitzungs-Cookies:</strong> Werden gelöscht, sobald Sie Ihren Browser schließen.</li>
-                    <li><strong>Permanente Cookies:</strong> Bleiben auf Ihrem Gerät gespeichert, bis sie ablaufen (z. B. nach 1 Jahr) oder Sie sie manuell löschen.</li>
-                  </ul>
-                  <p>
-                    Die genaue Speicherdauer einzelner Cookies wird im Cookie-Banner angezeigt, wenn Sie Ihre Einstellungen vornehmen.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
-                <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">6. Datenschutz und Ihre Rechte</CardTitle>
-                </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
-                  <p>
-                    Die Verarbeitung von Daten durch Cookies erfolgt im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und dem Telekommunikation-Telemedien-Datenschutz-Gesetz (TTDSG). Sie haben folgende Rechte bezüglich Ihrer Daten:
-                  </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li>Recht auf Auskunft über gespeicherte Daten</li>
+                    <li>Recht auf Auskunft über Ihre gespeicherten Daten</li>
                     <li>Recht auf Berichtigung oder Löschung Ihrer Daten</li>
                     <li>Recht auf Einschränkung der Verarbeitung</li>
                     <li>Recht auf Widerspruch gegen die Verarbeitung</li>
@@ -441,39 +370,38 @@ export default function CookieRichtliniePage() {
                     <li>Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen</li>
                   </ul>
                   <p>
-                    Weitere Informationen finden Sie in unserer <Link href="/datenschutz" className="text-green-600 hover:underline">Datenschutzerklärung</Link>.
+                    Kontaktieren Sie uns unter <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>, um Ihre Rechte auszuüben.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
+              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mt-8">
                 <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">7. Kontakt und Rückfragen</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl font-bold">4. Cookies und Tracking</CardTitle>
                 </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
+                <CardContent className="text-gray-600 space-y-4">
                   <p>
-                    Bei Fragen zur Cookie-Richtlinie oder zur Verarbeitung Ihrer Daten wenden Sie sich bitte an:<br />
-                    SmartFinanz GmbH<br />
-                    Westpreußenstraße 26<br />
-                    53119 Bonn<br />
-                    Deutschland<br />
-                    Telefon: <a href="tel:01722058855" className="text-green-600 hover:underline">0172 2058855</a><br />
-                    E-Mail: <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>
+                    Wir verwenden Cookies, um unsere Website zu verbessern und die Nutzererfahrung zu optimieren. Sie können die Verwendung von Cookies in Ihren Browsereinstellungen deaktivieren.
                   </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Typen von Cookies:</strong> Essentielle Cookies, Analytische Cookies (z. B. Google Analytics)</li>
+                    <li><strong>Einwilligung:</strong> Sie können der Nutzung zustimmen oder ablehnen (Cookie-Banner).</li>
+                  </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl mt-8">
+              <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mt-8">
                 <CardHeader>
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-center">8. Änderungen dieser Cookie-Richtlinie</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl font-bold">5. Datensicherheit</CardTitle>
                 </CardHeader>
-                <CardContent className="text-left text-gray-600 space-y-4">
+                <CardContent className="text-gray-600 space-y-4">
                   <p>
-                    Wir behalten uns vor, diese Cookie-Richtlinie bei Bedarf anzupassen, z. B. bei Änderungen der gesetzlichen Vorgaben oder der Funktionalität unserer Website. Änderungen werden auf dieser Seite veröffentlicht, und wir informieren Sie über wesentliche Änderungen im Cookie-Banner.
+                    Wir sichern Ihre Daten durch moderne Verschlüsselungstechnologien (z. B. SSL/TLS) und regelmäßige Sicherheitsüberprüfungen.
                   </p>
-                  <p>
-                    Stand der Cookie-Richtlinie: August 2025
-                  </p>
+                  <div className="flex items-center justify-center space-x-4">
+                    <Lock className="h-6 w-6 text-green-600" />
+                    <EyeOff className="h-6 w-6 text-green-600" />
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -482,9 +410,9 @@ export default function CookieRichtliniePage() {
           {/* Call to Action */}
           <section className="py-12 sm:py-16 bg-green-600 text-white">
             <div className="container mx-auto max-w-4xl text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Cookie-Richtlinie</h1>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Datenschutz</h2>
               <p className="text-lg sm:text-xl mb-8 text-green-100">
-                Diese Cookie-Richtlinie erläutert, wie SmartFinanz unser-vergleichsportal.de Cookies und ähnliche Technologien auf unserer Website verwendet, um Ihnen ein optimales Nutzererlebnis zu bieten und unsere Dienste zu verbessern.
+                Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.
               </p>
               <Link href="/kontakt" aria-label="Kontakt aufnehmen">
                 <Button className="bg-white text-green-600 hover:bg-gray-100">
