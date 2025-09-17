@@ -349,7 +349,7 @@ const providerData: { [key: string]: Provider[] } = {
       price: "ab 20€/Monat",
       bonus: "Gratis Rechtscheck",
       logo: "⚖️",
-      url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subids=&target=default",
+      url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
     },
   ],
   banking: [
@@ -641,42 +641,6 @@ export default function Home() {
               <p className="text-base sm:text-lg mb-4">Finden Sie in 60 Sekunden das beste Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
               <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – ohne Rechercheaufwand.</p>
               <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzern.</p>
-
-              {/* Badges Section */}
-              <div className="flex flex-wrap justify-center gap-2 mt-4 mb-6">
-                <Image
-                  src="https://www.unser-vergleichsportal.de/public/images/SSLTest.svg"
-                  alt="SSL Test"
-                  width={80}
-                  height={80}
-                  className="w-auto h-16 sm:h-20 object-contain"
-                />
-                <Image
-                  src="https://www.unser-vergleichsportal.de/public/images/DSGVO.svg"
-                  alt="DSGVO"
-                  width={80}
-                  height={80}
-                  className="w-auto h-16 sm:h-20 object-contain"
-                />
-                <Image
-                  src="https://www.unser-vergleichsportal.de/public/images/SSL.svg"
-                  alt="SSL"
-                  width={80}
-                  height={80}
-                  className="w-auto h-16 sm:h-20 object-contain"
-                />
-                <Image
-                  src="https://www.unser-vergleichsportal.de/public/images/Quality.svg"
-                  alt="Quality"
-                  width={80}
-                  height={80}
-                  className="w-auto h-16 sm:h-20 object-contain"
-                />
-              </div>
-
-              <div id="wcb" className="carbonbadge"></div>
-              <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-
               <a
                 rel="sponsored"
                 href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
