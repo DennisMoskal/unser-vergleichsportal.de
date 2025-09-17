@@ -275,7 +275,7 @@ export default function AgbPage() {
         <meta property="og:title" content="AGB SmartFinanz unser-vergleichsportal.de: Allgemeine Geschäftsbedingungen Vergleichsportal 2025" />
         <meta
           property="og:description"
-          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz unser-vwergleichsportal.de für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking."
+          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz unser-vergleichsportal.de für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/agb" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -470,15 +470,15 @@ export default function AgbPage() {
 
           {/* Call to Action */}
           <section className="py-12 sm:py-16 bg-green-600 text-white">
-            <div className="container mx-auto max-w-3xl text-center">
-              <p className="text-2xl sm:text-3xl font-bold mb-6">
-                <strong>Fragen zu unseren AGB?</strong>
-              </p>
-              <p className="text-lg sm:text-xl mb-8 text-green-100">
-                Kontaktieren Sie uns für weitere Informationen oder Unterstützung zu unseren Allgemeinen Geschäftsbedingungen.
+            <div className="container mx-auto max-w-4xl text-center">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+                AGB Allgemeine Geschäftsbedingungen SmartFinanz unser-vergleichsportal.de | einfach sparen!
+              </h1>
+              <p className="text-lg sm:text-xl text-green-100 mb-8">
+                Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz unser-vergleichsportal.de für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking.
               </p>
               <Link href="/kontakt" aria-label="Kontakt aufnehmen">
-                <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 transition-all duration-300 ease-in-out hover:scale-105">
+                <Button className="bg-white text-green-600 hover:bg-gray-100">
                   Kontakt aufnehmen
                 </Button>
               </Link>
