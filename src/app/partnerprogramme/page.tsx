@@ -273,7 +273,7 @@ export default function PartnerprogrammePage() {
 
     const linkCanonical = document.createElement('link')
     linkCanonical.rel = "canonical"
-    linkCanonical.href = "https://smartfinanz.de/partnerprogramme"
+    linkCanonical.href = "https://unser-vergleichsportal.de/partnerprogramme"
     document.head.appendChild(linkCanonical)
 
     // Cleanup on unmount
