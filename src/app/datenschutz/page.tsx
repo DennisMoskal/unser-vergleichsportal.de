@@ -170,7 +170,7 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
+                <h1 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h1>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
                     { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
@@ -260,7 +260,7 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Datenschutz bei SmartFinanz</title>
+        <title>Datenschutz bei unser-vergleichsportal.de | einfach sparen!</title>
       </Head>
       <Header />
 
@@ -269,7 +269,7 @@ export default function DatenschutzPage() {
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Datenschutz</h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
-            Bei SmartFinanz nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.
+            Bei unser-vergleichsportal.de | einfach sparen! nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.
           </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg">
@@ -321,7 +321,7 @@ export default function DatenschutzPage() {
                 <li>Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen</li>
               </ul>
               <p>
-                Kontaktieren Sie uns unter <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">datenschutz@smartfinanz.de</a>, um Ihre Rechte auszuüben.
+                Kontaktieren Sie uns unter <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline">info@unser-vergleichsportal.de</a>, um Ihre Rechte auszuüben.
               </p>
             </CardContent>
           </Card>
