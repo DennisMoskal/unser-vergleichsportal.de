@@ -1012,4 +1012,143 @@ export default function Banking() {
                 href="https://www.c24n.de/zxy0WKh" 
                 target="_blank" 
                 rel="noopener noreferrer nofollow" 
-                className
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                aria-label="Ökostrom vergleichen (externer Link)"
+              >
+                Ökostrom
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/EieKR0E" 
+                target="_blank" 
+                rel="noopener noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                aria-label="Reise vergleichen (externer Link)"
+              >
+                Reise
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/RYXPGyh" 
+                target="_blank" 
+                rel="noopener noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+                aria-label="Stromvergleich (externer Link)"
+              >
+                Strom
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div>
+        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-base text-gray-400">
+          <li>
+            <Link 
+              href="/karriere" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Karriere"
+            >
+              Karriere
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/kontakt" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/partnerprogramme" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Partnerprogramm"
+            >
+              Partnerprogramm
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/ueber-uns" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Über uns"
+            >
+              Über uns
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <span className="font-semibold mb-3 text-xl">Rechtliches</span>
+        <ul className="space-y-2 text-base text-gray-400">
+          <li>
+            <Link 
+              href="/agb" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="AGB"
+            >
+              AGB
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/cookie-richtlinie" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Cookie-Richtlinie"
+            >
+              Cookie-Richtlinie
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/datenschutz" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Datenschutz"
+            >
+              Datenschutz
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/impressum" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Impressum"
+            >
+              Impressum
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+      <p className="text-base text-gray-400 mb-4">
+        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+      </p>
+      <Link href="/" aria-label="Zurück zur Startseite">
+        <Button 
+          className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+        >
+          Startseite
+        </Button>
+      </Link>
+    </div>
+  </div>
+</footer>
+    </div>
+  )
+}
