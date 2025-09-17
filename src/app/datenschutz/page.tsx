@@ -260,7 +260,7 @@ export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Datenschutz bei unser-vergleichsportal.de | einfach sparen!</title>
+        <title>Datenschutz bei SmartFinanz unser-vergleichsportal.de</title>
       </Head>
       <Header />
 
@@ -269,7 +269,7 @@ export default function DatenschutzPage() {
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">Datenschutz</h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
-            Bei unser-vergleichsportal.de | einfach sparen! nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.
+            Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.
           </p>
 
           <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg">
@@ -278,11 +278,11 @@ export default function DatenschutzPage() {
             </CardHeader>
             <CardContent className="text-gray-600 space-y-4">
               <p>
-                Wir, die SmartFinanz GmbH, sind verantwortlich für die Verarbeitung Ihrer Daten und setzen alles daran, Ihre Privatsphäre zu wahren. Diese Datenschutzerklärung informiert Sie über die Erhebung, Verwendung und Speicherung Ihrer personenbezogenen Daten.
+                Wir sind verantwortlich für die Verarbeitung Ihrer Daten und setzen alles daran, Ihre Privatsphäre zu wahren. Diese Datenschutzerklärung informiert Sie über die Erhebung, Verwendung und Speicherung Ihrer personenbezogenen Daten.
               </p>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Verantwortlicher: SmartFinanz GmbH, Musterstraße 1, 10115 Berlin</li>
-                <li>Kontakt Datenschutzbeauftragter: datenschutz@smartfinanz.de</li>
+                <li>Verantwortlicher: SmartFinanz unser-vergleichsportal.de, Westpreußenstraße 26, 53119 Bonn</li>
+                <li>Kontakt Datenschutzbeauftragter: info@unser-vergleichsportal.de</li>
                 <li>Rechtsgrundlage: DSGVO und nationale Datenschutzgesetze</li>
               </ul>
             </CardContent>
