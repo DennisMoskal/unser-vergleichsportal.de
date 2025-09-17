@@ -640,7 +640,7 @@ export default function Home() {
               <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
               <p className="text-base sm:text-lg mb-4">Finden Sie in 60 Sekunden das beste Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
               <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – ohne Rechercheaufwand.</p>
-              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – vertraut von 100.000+ Nutzern.</p>
+              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzern.</p>
               <a
                 rel="sponsored"
                 href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
