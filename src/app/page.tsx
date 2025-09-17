@@ -277,7 +277,7 @@ const Header: React.FC = () => {
               <li className="flex items-start">
                 <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <p className="ml-3 text-base sm:text-lg">
-                  Ø <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+                  Im Durchschnitt <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
                 </p>
               </li>
               <li className="flex items-start">
@@ -635,12 +635,12 @@ export default function Home() {
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
               <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen!
+                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
               </p>
               <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
               <p className="text-base sm:text-lg mb-4">Finden Sie in 60 Sekunden das beste Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
               <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – ohne Rechercheaufwand.</p>
-              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzern.</p>
+              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzer.</p>
               <a
                 rel="sponsored"
                 href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
@@ -913,7 +913,7 @@ export default function Home() {
                         <Button
                           className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
                         >
-                          Jetzt abschließen*
+                          Zum Anbieter und sparen*
                           {provider.name === "Vodafone" && (
                             <Image
                               src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
@@ -936,7 +936,7 @@ export default function Home() {
                   Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
                 </p>
                 <p className="mt-4">
-                  *Wir erhalten eine Provision für Käufe über diese Links. Diese Provision hat keinen Einfluss auf den Kundenpreis.
+                  *Wir erhalten eine Provision für Käufe über diese Links.
                 </p>
               </div>
             </div>
