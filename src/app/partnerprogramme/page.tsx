@@ -291,7 +291,7 @@ export default function PartnerprogrammePage() {
       {/* Hauptinhalt */}
       <section className="py-12 sm:py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Werden Sie Partner von SmartFinanz unser-vergleichsportal.de | einfach sparen!</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Werden Sie Partner von SmartFinanz unser-vergleichsportal.de</h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-8">
             Schließen Sie sich unserem Netzwerk an und präsentieren Sie Ihre Finanzprodukte einem breiten Publikum. SmartFinanz ist Ihr vertrauenswürdiger Partner, um Ihre Marke zu stärken und neue Kunden zu erreichen. Wir freuen uns auf Ihre Bewerbung, um gemeinsam transparente und hochwertige Vergleichslösungen anzubieten.
           </p>
@@ -332,7 +332,7 @@ export default function PartnerprogrammePage() {
               </CardHeader>
               <CardContent className="text-center text-gray-600">
                 <p>
-                  Erreichen Sie täglich ein Vielzahl von Kunden, die aktiv nach Finanzprodukten suchen, und steigern Sie die Sichtbarkeit Ihrer Marke auf unserer Plattform.
+                  Erreichen Sie täglich eine Vielzahl von Kunden, die aktiv nach Finanzprodukten suchen, und steigern Sie die Sichtbarkeit Ihrer Marke auf unserer Plattform.
                 </p>
               </CardContent>
             </Card>
@@ -368,13 +368,13 @@ export default function PartnerprogrammePage() {
 
       {/* Call to Action */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Starten Sie Ihre Partnerschaft mit SmartFinanz Unser-Vergleichsportal.de</h3>
-          <p className="text-lg sm:text-xl mb-8 text-green-100">
-            Werden Sie Teil unseres Netzwerks und nutzen Sie die Chance, Ihre Finanzprodukte einem breiten Publikum zu präsentieren. Kontaktieren Sie uns noch heute, um mehr über die Möglichkeiten einer Partnerschaft zu erfahren.
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Werden Sie Partner von SmartFinanz unser-vergleichsportal.de</h1>
+          <p className="text-lg sm:text-xl text-green-100 mb-8">
+            Schließen Sie sich unserem Netzwerk an und präsentieren Sie Ihre Finanzprodukte einem breiten Publikum. SmartFinanz ist Ihr vertrauenswürdiger Partner, um Ihre Marke zu stärken und neue Kunden zu erreichen. Wir freuen uns auf Ihre Bewerbung, um gemeinsam transparente und hochwertige Vergleichslösungen anzubieten.
           </p>
           <Link href="/kontakt">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button className="bg-white text-green-600 hover:bg-gray-100">
               Jetzt bewerben
             </Button>
           </Link>
