@@ -267,15 +267,15 @@ export default function AgbPage() {
         />
         <meta
           name="keywords"
-          content="AGB Vergleichsportal, Allgemeine Geschäftsbedingungen Finanzprodukte, SmartFinanz AGB, Nutzungsbedingungen Vergleichsportal"
+          content="AGB Vergleichsportal, Allgemeine Geschäftsbedingungen Finanzprodukte, SmartFinanz unser-vergleichsportal.de AGB, Nutzungsbedingungen Vergleichsportal"
         />
         <link rel="canonical" href="https://unser-vergleichsportal.de/agb" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal 2025" />
+        <meta property="og:title" content="AGB SmartFinanz unser-vergleichsportal.de: Allgemeine Geschäftsbedingungen Vergleichsportal 2025" />
         <meta
           property="og:description"
-          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking."
+          content="Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz unser-vwergleichsportal.de für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/agb" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -316,10 +316,10 @@ export default function AgbPage() {
           <section className="py-12 sm:py-16 px-4 bg-gray-50">
             <div className="container mx-auto max-w-4xl">
               <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 text-center">
-                AGB SmartFinanz: Allgemeine Geschäftsbedingungen Vergleichsportal
+                AGB Allgemeine Geschäftsbedingungen SmartFinanz unser-vergleichsportal.de | einfach sparen!
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 text-center">
-                Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking.
+                Nachfolgend finden Sie die Allgemeinen Geschäftsbedingungen (AGB) von SmartFinanz unser-vergleichsportal.de für die Nutzung unseres Vergleichsportals für Finanzprodukte wie Versicherungen, Kredite und Banking.
               </p>
 
               <Card className="bg-white border-2 hover:border-green-200 transition-shadow hover:shadow-lg mx-auto max-w-2xl">
@@ -330,7 +330,7 @@ export default function AgbPage() {
                 </CardHeader>
                 <CardContent className="text-left text-gray-600 space-y-4">
                   <p>
-                    Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen der SmartFinanz, Westpreußenstraße 26, 53119 Bonn, Deutschland (nachfolgend „Anbieter“), vertreten durch den Geschäftsführer Dennis Moskal. Der Anbieter betreibt eine Online-Plattform für den Vergleich von Finanzprodukten wie Versicherungen, Girokonten, Kredite, Tierversicherungen und Krypto-Trading (nachfolgend „Plattform“). Kunde ist jede natürliche oder juristische Person, die die Plattform nutzt (nachfolgend „Kunde“). Abweichende oder ergänzende Bedingungen des Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt diesen ausdrücklich schriftlich zu.
+                    Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen von SmartFinanz unser-vergleichsportal.de, Westpreußenstraße 26, 53119 Bonn, Deutschland (nachfolgend „Anbieter“), vertreten durch den Geschäftsführer Dennis Moskal. Der Anbieter betreibt eine Online-Plattform für den Vergleich von Finanzprodukten wie Versicherungen, Girokonten, Kredite, Tierversicherungen und Krypto-Trading (nachfolgend „Plattform“). Kunde ist jede natürliche oder juristische Person, die die Plattform nutzt (nachfolgend „Kunde“). Abweichende oder ergänzende Bedingungen des Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt diesen ausdrücklich schriftlich zu.
                   </p>
                   <p>
                     <strong>Kontakt:</strong><br />
