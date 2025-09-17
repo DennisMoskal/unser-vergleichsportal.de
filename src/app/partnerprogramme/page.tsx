@@ -644,7 +644,7 @@ export default function PartnerprogrammePage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "SmartFinanz",
-            "url": "https://smartfinanz.de/partnerprogramme",
+            "url": "https://unser-vergleichsportal.de/partnerprogramme",
             "logo": "https://smartfinanz.de/logo.png",
             "description": "Werden Sie Partner von SmartFinanz unser-vergleichsportal.de und präsentieren Sie Ihre Finanzprodukte einem breiten Publikum. Erfahren Sie mehr über unsere Partnerschaftsmöglichkeiten.",
             "foundingDate": "2015",
