@@ -419,7 +419,7 @@ export default function Banking() {
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Kredit vergleichen
+                  Kredit Angebot berechnen
                 </Button>
               </a>
               <a
@@ -429,7 +429,7 @@ export default function Banking() {
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Girokonto vergleichen
+                  Girokonto-Anbieter vergleichen
                 </Button>
               </a>
             </div>
@@ -732,7 +732,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Online Banking beginnen
+                  Online-Banking beginnen
                 </Button>
               </a>
             </div>
@@ -764,7 +764,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Kredit Umschuldung berechnen
+                  Umschuldung berechnen
                 </Button>
               </a>
             </div>
@@ -788,7 +788,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Zur Trading Rubrik
+                  Zum Depot-Vergleich
                 </Button>
               </a>
             </div>
