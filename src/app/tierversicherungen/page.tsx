@@ -399,35 +399,162 @@ export default function Tierversicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Beste Tierversicherungen September 2025 | Testsieger-Vergleich</title>
-        <meta
-          name="description"
-          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
-        />
-        <meta
-          name="keywords"
-          content="Tierversicherung, Haustierversicherung, Hundeversicherung, Katzenversicherung, Testsieger 2025, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
-        />
-        <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
-        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Tierversicherungen September 2025 | Testsieger-Vergleich" />
-        <meta
-          property="og:description"
-          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz."
-        />
-        <meta property="og:url" content="https://unser-vergleichsportal.de/tierversicherungen" />
-        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Beste Tierversicherungen September 2025 | Testsieger-Vergleich" />
-        <meta
-          name="twitter:description"
-          content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern."
-        />
-        <meta name="format-detection" content="telephone=no" />
-      </Head>
+  {/* --- Meta Basics --- */}
+  <title>Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde</title>
+  <meta
+    name="description"
+    content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Pferde. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
+  />
+  <meta
+    name="keywords"
+    content="Tierversicherung 2025, Hundeversicherung, Katzenversicherung, Pferdeversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
+  />
+  <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charSet="UTF-8" />
+
+  {/* --- Open Graph --- */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde" />
+  <meta
+    property="og:description"
+    content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Pferde."
+  />
+  <meta property="og:url" content="https://unser-vergleichsportal.de/tierversicherungen" />
+  <meta
+    property="og:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Unser-Vergleichsportal – Beste Tierversicherungen" />
+  <meta property="og:site_name" content="SmartFinanz" />
+
+  {/* --- Twitter --- */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde" />
+  <meta
+    name="twitter:description"
+    content="Testsieger im Tierversicherungs-Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen!"
+  />
+  <meta
+    name="twitter:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta name="twitter:site" content="@unservergleich" />
+
+  {/* ---- Schema.org: Organization ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SmartFinanz – unser-vergleichsportal.de",
+        "url": "https://unser-vergleichsportal.de",
+        "logo": "https://unser-vergleichsportal.de/logo.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "unser-vergleichsportal.de"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/unservergleichsportalde",
+          "https://x.com/unservergleich",
+          "https://medium.com/@unser-vergleichsportal.de",
+          "https://www.facebook.com/profile.php?id=61580338356626"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "availableLanguage": ["de"],
+          "url": "https://unser-vergleichsportal.de/kontakt"
+        }]
+      }),
+    }}
+  />
+
+  {/* ---- Schema.org: WebPage + ItemList ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde",
+        "url": "https://unser-vergleichsportal.de/tierversicherungen",
+        "description":
+          "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Pferde. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
+        "inLanguage": "de",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Product",
+                "name": "Agila Tierversicherung",
+                "description": "Umfassender Schutz für Hunde & Katzen. Bis zu 100% Kostenerstattung für Operationen.",
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Product",
+                "name": "Petplan Tierversicherung",
+                "description": "Versicherung für Hunde, Katzen & Pferde. Schnelle Schadenbearbeitung & flexible Tarife.",
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Product",
+                "name": "HanseMerkur Tierversicherung",
+                "description": "Tierversicherung ohne Altersbegrenzung. Vorsorgeuntersuchungen & Notfall-Hotline.",
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Product",
+                "name": "CHECK24 Tierversicherung",
+                "description": "Vergleich von über 50 Anbietern. Bis zu 50% sparen & Cashback erhalten.",
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Product",
+                "name": "Allianz Tierversicherung",
+                "description": "Schutz für Hunde, Katzen & Pferde. Bis zu 6.000€ jährliche Deckung.",
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Product",
+                "name": "hepster Tierversicherung",
+                "description": "Flexible, digitale Tierversicherungen mit schneller Schadenbearbeitung.",
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
+              }
+            }
+          ]
+        }
+      }),
+    }}
+  />
+</Head>
 
       {/* Schema Markup for SEO */}
       <script
