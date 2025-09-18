@@ -392,16 +392,155 @@ export default function Banking() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Head>
-        <title>Banking Testsieger September 2025 | Girokonto & Kredite</title>
-        <meta name="description" content="Vergleichen Sie mit SmartFinanz über 300 Girokonten und Kredite. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 850€ jährlich mit unseren Testsiegern!" />
-        <meta name="keywords" content="Girokonto Vergleich, Kredit Vergleich, SmartFinanz, kostenloses Girokonto, Testsieger 2025, Kreditkarte, Tagesgeld, Baufinanzierung" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charSet="UTF-8" />
-      </Head>
+    <Head>
+  {/* --- Meta Basics --- */}
+  <title>Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
+  <meta
+    name="description"
+    content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
+  />
+  <meta
+    name="keywords"
+    content="Banking Vergleich 2025, Girokonto kostenlos, Kredit Vergleich, Tagesgeldzinsen 2025, Kreditkarten ohne Jahresgebühr, Baufinanzierung, SmartFinanz"
+  />
+  <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charSet="UTF-8" />
 
+  {/* --- Open Graph --- */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+  <meta
+    property="og:description"
+    content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
+  />
+  <meta property="og:url" content="https://unser-vergleichsportal.de/banking" />
+  <meta
+    property="og:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Unser-Vergleichsportal – Banking & Kredite vergleichen" />
+  <meta property="og:site_name" content="SmartFinanz" />
+
+  {/* --- Twitter --- */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+  <meta
+    name="twitter:description"
+    content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
+  />
+  <meta
+    name="twitter:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta name="twitter:site" content="@unservergleich" />
+
+  {/* ---- Schema.org: Organization ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SmartFinanz – unser-vergleichsportal.de",
+        "url": "https://unser-vergleichsportal.de",
+        "logo": "https://unser-vergleichsportal.de/logo.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "unser-vergleichsportal.de"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/unservergleichsportalde",
+          "https://x.com/unservergleich",
+          "https://medium.com/@unser-vergleichsportal.de",
+          "https://www.facebook.com/profile.php?id=61580338356626"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "availableLanguage": ["de"],
+          "url": "https://unser-vergleichsportal.de/kontakt"
+        }]
+      }),
+    }}
+  />
+
+  {/* ---- Schema.org: WebPage + ItemList ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
+        "url": "https://unser-vergleichsportal.de/banking",
+        "description":
+          "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
+        "inLanguage": "de",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Product",
+                "name": "Girokonto",
+                "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://unser-vergleichsportal.de/banking"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Product",
+                "name": "Kredit",
+                "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://unser-vergleichsportal.de/banking"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Product",
+                "name": "Tagesgeld",
+                "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://unser-vergleichsportal.de/banking"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Product",
+                "name": "Kreditkarte",
+                "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://unser-vergleichsportal.de/banking"
+                }
+              }
+            }
+          ]
+        }
+      }),
+    }}
+  />
+</Head> 
       <Header />
 
       <section className="py-12 sm:py-16 bg-green-600 text-white">
