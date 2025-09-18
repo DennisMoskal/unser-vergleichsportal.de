@@ -774,9 +774,7 @@ export default function Tierversicherungen() {
             </p>
             <div className="mt-6">
               <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Jetzt bei CHECK24 vergleichen
-                </Button>
+                
               </a>
             </div>
           </div>
