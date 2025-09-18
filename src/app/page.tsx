@@ -993,7 +993,7 @@ export default function Home() {
                   <Link href="/trading" className="text-green-600 hover:underline">
                     Trading-Seite um das richtige Depot zu eröffnen
                   </Link>
-                  .
+                  . In wenigen Minuten können Sie per App mit Aktien handeln, Ihre finanzielle Zukunft planen oder in Bitcoin und andere Kryptowährungen investieren.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
                 <p className="mb-4 text-gray-700">
@@ -1013,11 +1013,11 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
                 <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement z.B durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
+                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
                   <Link href="/trading#krypto" className="text-green-600 hover:underline">
                     sicheres Krypto-Trading
                   </Link>
-                  .
+                  . In Unserer Trading Rubrik finde Sie Informationen und Tips um sicher und gut vorbereitet mit dem Handel zu beginnen.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
                 <p className="mb-4 text-gray-700">
@@ -1029,7 +1029,7 @@ export default function Home() {
                 </p>
                 <Link href="/trading">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt Vorsorge planen
+                    Vorsorge planen
                   </Button>
                 </Link>
               </div>
@@ -1071,7 +1071,7 @@ export default function Home() {
                 </p>
                 <Link href="/versicherungen">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt absichern
+                    Besten Tarif finden
                   </Button>
                 </Link>
               </div>
@@ -1112,7 +1112,7 @@ export default function Home() {
                 </p>
                 <Link href="/tierversicherungen">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt Tier versichern
+                    Tierarztkosten absichern
                   </Button>
                 </Link>
               </div>
