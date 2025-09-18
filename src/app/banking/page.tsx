@@ -448,10 +448,7 @@ export default function Banking() {
         "name": "SmartFinanz – unser-vergleichsportal.de",
         "url": "https://unser-vergleichsportal.de",
         "logo": "https://unser-vergleichsportal.de/logo.png",
-        "brand": {
-          "@type": "Brand",
-          "name": "unser-vergleichsportal.de"
-        },
+        "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
         "sameAs": [
           "https://www.linkedin.com/in/unservergleichsportalde",
           "https://x.com/unservergleich",
@@ -490,10 +487,7 @@ export default function Banking() {
                 "@type": "Product",
                 "name": "Girokonto",
                 "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://unser-vergleichsportal.de/banking"
-                }
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
               }
             },
             {
@@ -503,10 +497,7 @@ export default function Banking() {
                 "@type": "Product",
                 "name": "Kredit",
                 "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://unser-vergleichsportal.de/banking"
-                }
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
               }
             },
             {
@@ -516,10 +507,7 @@ export default function Banking() {
                 "@type": "Product",
                 "name": "Tagesgeld",
                 "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://unser-vergleichsportal.de/banking"
-                }
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
               }
             },
             {
@@ -529,10 +517,7 @@ export default function Banking() {
                 "@type": "Product",
                 "name": "Kreditkarte",
                 "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://unser-vergleichsportal.de/banking"
-                }
+                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
               }
             }
           ]
@@ -540,7 +525,52 @@ export default function Banking() {
       }),
     }}
   />
-</Head> 
+
+  {/* ---- Schema.org: FAQPage ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Welches Girokonto ist wirklich kostenlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ein wirklich kostenloses Girokonto erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Viele Banken bieten zudem Prämien für Neukunden an."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie finde ich den günstigsten Kredit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Der günstigste Kredit hängt von der Laufzeit, der Bonität und dem Verwendungszweck ab. Ein Vergleich der effektiven Jahreszinsen hilft, mehrere Hundert Euro zu sparen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sind Tagesgeldkonten sicher?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, Tagesgeldkonten in der EU sind durch die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und Bank abgesichert."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Lohnt sich eine Kreditkarte ohne Jahresgebühr?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, kostenlose Kreditkarten sind ideal für den Alltag und Reisen. Viele Anbieter bieten zusätzliche Vorteile wie Cashback oder Versicherungen."
+            }
+          }
+        ]
+      })
+    }}
+  />
+</Head>
       <Header />
 
       <section className="py-12 sm:py-16 bg-green-600 text-white">
