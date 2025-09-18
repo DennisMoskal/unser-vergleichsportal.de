@@ -398,7 +398,7 @@ export default function Tierversicherungen() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Head>
+     <Head>
   {/* --- Meta Basics --- */}
   <title>Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde</title>
   <meta
@@ -454,10 +454,7 @@ export default function Tierversicherungen() {
         "name": "SmartFinanz – unser-vergleichsportal.de",
         "url": "https://unser-vergleichsportal.de",
         "logo": "https://unser-vergleichsportal.de/logo.png",
-        "brand": {
-          "@type": "Brand",
-          "name": "unser-vergleichsportal.de"
-        },
+        "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
         "sameAs": [
           "https://www.linkedin.com/in/unservergleichsportalde",
           "https://x.com/unservergleich",
@@ -492,119 +489,68 @@ export default function Tierversicherungen() {
             {
               "@type": "ListItem",
               "position": 1,
-              "item": {
-                "@type": "Product",
-                "name": "Agila Tierversicherung",
-                "description": "Umfassender Schutz für Hunde & Katzen. Bis zu 100% Kostenerstattung für Operationen.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
-              }
+              "item": { "@type": "Product", "name": "Agila Tierversicherung", "description": "Umfassender Schutz für Hunde & Katzen. Bis zu 100% Kostenerstattung für Operationen.", "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" } }
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "item": {
-                "@type": "Product",
-                "name": "Petplan Tierversicherung",
-                "description": "Versicherung für Hunde, Katzen & Pferde. Schnelle Schadenbearbeitung & flexible Tarife.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
-              }
+              "item": { "@type": "Product", "name": "Petplan Tierversicherung", "description": "Versicherung für Hunde, Katzen & Pferde. Schnelle Schadenbearbeitung & flexible Tarife.", "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" } }
             },
             {
               "@type": "ListItem",
               "position": 3,
-              "item": {
-                "@type": "Product",
-                "name": "HanseMerkur Tierversicherung",
-                "description": "Tierversicherung ohne Altersbegrenzung. Vorsorgeuntersuchungen & Notfall-Hotline.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Product",
-                "name": "CHECK24 Tierversicherung",
-                "description": "Vergleich von über 50 Anbietern. Bis zu 50% sparen & Cashback erhalten.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 5,
-              "item": {
-                "@type": "Product",
-                "name": "Allianz Tierversicherung",
-                "description": "Schutz für Hunde, Katzen & Pferde. Bis zu 6.000€ jährliche Deckung.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 6,
-              "item": {
-                "@type": "Product",
-                "name": "hepster Tierversicherung",
-                "description": "Flexible, digitale Tierversicherungen mit schneller Schadenbearbeitung.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" }
-              }
+              "item": { "@type": "Product", "name": "HanseMerkur Tierversicherung", "description": "Tierversicherung ohne Altersbegrenzung. Vorsorgeuntersuchungen & Notfall-Hotline.", "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" } }
             }
           ]
         }
       }),
     }}
   />
-</Head>
 
-      {/* Schema Markup for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Beste Tierversicherungen September 2025 | Testsieger-Vergleich",
-            description:
-              "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde und Katzen. Sparen Sie bis zu 50% mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz.",
-            url: "https://unser-vergleichsportal.de/tierversicherungen",
-            keywords: [
-              "Tierversicherung",
-              "Haustierversicherung",
-              "Hundeversicherung",
-              "Katzenversicherung",
-              "Testsieger 2025",
-            ],
-            mainEntity: {
-              "@type": "ItemList",
-              itemListElement: sortedProviders.map((provider, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "Product",
-                  name: provider.name,
-                  description: provider.metaDescription,
-                  offers: {
-                    "@type": "Offer",
-                    price: provider.price,
-                    url: provider.url,
-                  },
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: provider.rating,
-                    reviewCount: "100",
-                  },
-                  keywords: [
-                    "Tierversicherung",
-                    "Haustierversicherung",
-                    "Hundeversicherung",
-                    "Katzenversicherung",
-                  ],
-                },
-              })),
-            },
-          }),
-        }}
-      />
+  {/* ---- Schema.org: FAQPage ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Welche Tierversicherungen gibt es?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es gibt Hundeversicherungen, Katzenversicherungen, Pferdeversicherungen sowie OP-Versicherungen. Sie decken u.a. Operationen, Tierarztkosten oder Haftpflichtschäden ab."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ab wann lohnt sich eine Tierversicherung?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eine Tierversicherung lohnt sich besonders bei jungen Tieren, da die Beiträge günstiger sind und hohe Tierarztkosten später abgesichert sind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Übernimmt die Versicherung auch Routineuntersuchungen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Das hängt vom Tarif ab. Einige Anbieter übernehmen Vorsorgeuntersuchungen, Impfungen oder Zahnbehandlungen. Ein Vergleich lohnt sich."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie hoch ist die Erstattung bei einer OP-Versicherung?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Viele Tierversicherungen erstatten zwischen 80% und 100% der Operationskosten. Die Deckungssumme und Leistungen variieren je nach Anbieter."
+            }
+          }
+        ]
+      })
+    }}
+  />
 
       <Header />
 
