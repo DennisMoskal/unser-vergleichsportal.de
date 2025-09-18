@@ -1,432 +1,3 @@
-"use client"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Head from "next/head"
-
-// SmartFinanzLogo-Komponente
-const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
-  return (
-    <Link href="/" aria-label="Zurück zur Startseite">
-      <div className={`flex flex-col items-start ${className}`}>
-        <div className="flex items-center space-x-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
-            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
-          </svg>
-          <span className="font-bold">martFinanz</span>
-        </div>
-        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
-      </div>
-    </Link>
-  )
-}
-
-// Wiederverwendbare Header-Komponente
-const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("versicherungen")
-
-  const scrollToSection = (sectionId: string) => {
-    setActiveCategory(sectionId)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
-  useEffect(() => {
-    const hash = window.location.hash.substring(1)
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
-      scrollToSection(hash)
-    }
-  }, [])
-
-  return (
-    <>
-      <header className="bg-white shadow-sm relative border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
-            <SmartFinanzLogo className="text-xl" />
-          </div>
-          <button
-            className="sm:hidden flex items-center justify-center"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Menü öffnen/schließen"
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobiles Menü */}
-        {mobileMenuOpen && (
-          <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-6 py-4 space-y-6" aria-label="Mobiles Menü">
-              <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
-                <ul className="flex flex-col gap-2 text-base">
-                  {[
-                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
-                    <li key={key}>
-                      <Link
-                        href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
-                        aria-label={`Zu ${label} navigieren`}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
-                <div className="grid grid-cols-2 gap-2">
-                  <ul className="flex flex-col gap-2 text-base">
-                    {[
-                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
-                      <li key={key}>
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                          onClick={() => {
-                            setMobileMenuOpen(false)
-                            setActiveCategory(key)
-                          }}
-                          aria-label={`${label} vergleichen (externer Link)`}
-                        >
-                          {label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="flex flex-col gap-2 text-base">
-                    {[
-                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
-                      <li key={key}>
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                          onClick={() => {
-                            setMobileMenuOpen(false)
-                            setActiveCategory(key)
-                          }}
-                          aria-label={`${label} vergleichen (externer Link)`}
-                        >
-                          {label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
-                <ul className="flex flex-col gap-2 text-base">
-                  {[
-                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
-                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
-                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
-                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
-                    <li key={key}>
-                      <Link
-                        href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
-                        aria-label={`Zu ${label} navigieren`}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
-                <ul className="flex flex-col gap-2 text-base">
-                  {[
-                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
-                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
-                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
-                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
-                    <li key={key}>
-                      <Link
-                        href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
-                        aria-label={`Zu ${label} navigieren`}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="text-center mt-4">
-                <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Startseite
-                </Button>
-              </div>
-            </nav>
-          </div>
-        )}
-      </header>
-
-      {/* Kategorie-Navigation */}
-      <section className="bg-white py-4 border-b" id="versicherungen">
-        <div className="container mx-auto px-4">
-          <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
-            {[
-              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
-              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
-              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
-              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
-              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-            ].map(({ key, label, url, isInternal }) => (
-              <li key={key}>
-                {isInternal ? (
-                  <Link
-                    href={url}
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => setActiveCategory(key)}
-                    aria-label={`Zu ${label} navigieren`}
-                  >
-                    {label}
-                  </Link>
-                ) : (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    onClick={() => setActiveCategory(key)}
-                    aria-label={`${label} vergleichen (externer Link)`}
-                  >
-                    {label}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-    </>
-  )
-}
-
-const providerData = {
-  trading: [
-    {
-      name: "TradingView",
-      rating: 4.8,
-      features: [
-        "Über 100 Millionen Nutzer weltweit",
-        "Kostenloses Konto ohne Kreditkarte",
-        "Supercharts für technische Analysen",
-        "Top Screener für Aktien, Krypto, Forex, Futures",
-        "Social Trading mit Community-Ideen",
-        "Integration mit verifizierten Brokern wie OKX, AMP Futures, FOREX.com",
-        "Erweiterte Indikatoren und Strategien",
-        "Mobile App für Trading unterwegs",
-        "Krypto-Trading mit Echtzeit-Daten",
-        "Kostenloses Demo-Konto für Einsteiger"
-      ],
-      price: "0€ Kontoeröffnung",
-      bonus: "Kostenloser Start",
-      logo: "📈",
-      url: "https://de.tradingview.com/?aff_id=156504",
-      metaTitle: "TradingView: Beste Plattform für Krypto- und Aktien-Trading 2025",
-      metaDescription:
-        "TradingView bietet Supercharts, Top Screener und Social Trading für über 100 Mio. Nutzer. Starten Sie kostenlos mit Aktien, Krypto, Forex und Futures!",
-      isTopRecommendation: true
-    },
-    {
-      name: "eToro",
-      rating: 4.3,
-      features: [
-        "Social Trading mit CopyTrader™ für automatische Trades",
-        "Über 70 Kryptowährungen und 3.000+ Aktien/ETFs",
-        "Bis zu 4,3% Zinsen auf USD-Guthaben",
-        "Einlagen bis 100.000€ pro Bank geschützt",
-        "Reguliert durch BaFin und CySec",
-        "Kostenlose Euro-Einzahlungen ohne Umrechnungsgebühren",
-        "eToro-Akademie mit kostenlosen Kursen",
-        "Über 35 Mio. Nutzer weltweit",
-        "Bitcoin handeln mit niedrigen Gebühren",
-        "Krypto-Trading sicher mit Cold Storage"
-      ],
-      price: "1% Spread bei Krypto",
-      bonus: "Kostenloses Demo-Konto",
-      logo: "🌐",
-      url: "https://med.etoro.com/B19298_A126856_TClick.aspx",
-      metaTitle: "eToro Trading: Top Plattform für Bitcoin handeln und Social Trading 2025",
-      metaDescription:
-        "eToro bietet Social Trading, Bitcoin handeln mit niedrigen Gebühren, über 70 Kryptowährungen und 3.000+ Aktien/ETFs. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
-    },
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25"
-      ],
-      price: "0€ Kommission",
-      bonus: "Kostenlose Kontoeröffnung",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc",
-      metaTitle: "XTB Trading: Testsieger CFD-Broker 2025",
-      metaDescription:
-        "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!",
-      isTopRecommendation: true
-    },
-    {
-      name: "WEEX",
-      rating: 4.6,
-      features: [
-        "Über 1.700 Handelspaare für Kryptowährungen",
-        "Bis zu 400x Leverage für Futures-Trading",
-        "1.000 BTC Schutzfonds für maximale Sicherheit",
-        "Durchschnittliches tägliches Handelsvolumen von 8,71 Mrd. USD",
-        "Bis zu 450.000 Transaktionen pro Sekunde",
-        "Verfügbar in über 130 Ländern weltweit",
-        "Regulierte Plattform mit globalen Lizenzen",
-        "5% Coupon bei Einzahlung für neue Nutzer",
-        "24/7 Kundensupport und benutzerfreundliche Oberfläche"
-      ],
-      price: "0,1% Taker Fee",
-      bonus: "5% Einzahlungs-Coupon",
-      logo: "🔒",
-      url: "https://weex.com/register?vipCode=0pika",
-      metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
-      metaDescription:
-        "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!",
-      isTopRecommendation: true
-    },
-    {
-      name: "Bybit",
-      rating: 4.4,
-      features: [
-        "Über 100 Kryptowährungen für Spot- und Derivate-Trading",
-        "Bis zu 100x Leverage für fortgeschrittene Trader",
-        "Niedrige Gebühren mit 0,1% Taker Fee",
-        "Intuitive Plattform mit fortschrittlichen Trading-Tools",
-        "Kostenlose Einzahlungen via SEPA oder Kreditkarte",
-        "24/7 mehrsprachiger Kundensupport",
-        "Bybit Learn für Krypto-Wissen und Strategien",
-        "Reguliert und sicher für globale Nutzer"
-      ],
-      price: "0,1% Taker Fee",
-      bonus: "Willkommensbonus bis zu 5.000 USDT",
-      logo: "⚡",
-      url: "https://www.bybit.eu/invite?ref=RME6DV2",
-      metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage 2025",
-      metaDescription:
-        "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!",
-      isTopRecommendation: true
-    },
-    {
-      name: "Moneta Markets",
-      rating: 4.5,
-      features: [
-        "Über 1000 Instrumente: Forex, CFDs, ETFs",
-        "PRIME ECN Spreads ab 0.0 Pips",
-        "Bis zu 1000:1 Leverage auf Gold",
-        "50% Cashback Bonus bei Einzahlung ab $500",
-        "Metatrader 4, Metatrader 5 & AppTrader",
-        "Ultra-schnelle Ausführung unter 15ms",
-        "Reguliert durch SLIBC und FSCA",
-        "Segregierte Konten bei AA-Rated Bank",
-        "Kostenloses Demo-Konto für risikofreies Trading",
-        "Erweiterte Tools: Premium Economic Calendar, AI Market Buzz"
-      ],
-      price: "0.0 Pips Spread",
-      bonus: "50% Cashback Bonus",
-      logo: "💸",
-      url: "https://www.monetamarkets.com/?affid=Nzc0MjU0OA==",
-      metaTitle: "Moneta Markets: Top Online Trading Plattform 2025",
-      metaDescription:
-        "Moneta Markets bietet über 1000 Instrumente, Spreads ab 0.0 Pips, bis zu 1000:1 Leverage und 50% Cashback Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
-    },
-    {
-      name: "Vantage",
-      rating: 4.6,
-      features: [
-        "Über 1.000 CFDs: Forex, Indizes, Rohstoffe, Aktien, ETFs",
-        "Spreads ab 0.0 Pips für kosteneffizientes Trading",
-        "Bis zu 500:1 Leverage für flexible Strategien",
-        "Reguliert durch ASIC, FSCA, VFSC und Mauritius FSC",
-        "Segregierte Konten bei Top-Banken für maximale Sicherheit",
-        "24/7 Kundensupport in mehreren Sprachen",
-        "MetaTrader 4, MetaTrader 5 und Vantage App",
-        "Kostenloses Demo-Konto für risikofreies Testen",
-        "Einzahlungsbonus bis zu 50% für neue Trader",
-        "Partnerschaft mit Scuderia Ferrari HP"
-      ],
-      price: "0.0 Pips Spread",
-      bonus: "50% Einzahlungsbonus",
-      logo: "🏎️",
-      url: "https://go.vantagefx.com/visit/?bta=65953&brand=vantagefx",
-      metaTitle: "Vantage Trading: Top CFD-Broker für Forex & Krypto 2025",
-      metaDescription:
-        "Vantage bietet über 1.000 CFDs, Spreads ab 0.0 Pips, bis zu 500:1 Leverage und einen 50% Einzahlungsbonus. Jetzt mit kostenlosem Demo-Konto starten!",
-      isTopRecommendation: true
-    }
-  ]
-}
-
 // Einheitliches Button-Layout (ohne Icons)
 const btnBase =
   "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
@@ -449,77 +20,176 @@ export default function DeFi() {
         <title>Beste Broker September 2025 | Bitcoin & ETF Testsieger</title>
         <meta
           name="description"
-          content="Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Testsieger wie eToro, TradingView, XTB, WEEX & Vantage im Vergleich: Gebühren, Sicherheit, Funktionen."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im September 2025"
         />
         <meta
           name="keywords"
-          content="Bitcoin handeln, Krypto-Trading, DeFi Trading, Trading Plattform, Social Trading, CFD Broker Vergleich, beste Broker 2025, XTB, eToro, TradingView, WEEX, Vantage, Bybit, Moneta Markets"
+          content="Broker Vergleich 2025, Trading Plattform Vergleich, Aktiendepot, ETF-Trading, Bitcoin & Krypto Trading, CFD Broker, Forex Broker, geringe Gebühren, regulierte Broker, Testsieger Broker"
         />
         <link rel="canonical" href="https://unser-vergleichsportal.de/trading" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Beste Broker September 2025 | Bitcoin & ETF Testsieger" />
         <meta
           property="og:description"
-          content="Die besten Plattformen für DeFi & Krypto im Vergleich. Gebühren, Sicherheit & Funktionen auf einen Blick."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im September 2025."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/trading" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+        <meta
+          property="og:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta property="og:image:alt" content="Beste Broker 2025 – unser-vergleichsportal.de" />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Beste Broker September 2025 | Bitcoin & ETF Testsieger" />
         <meta
           name="twitter:description"
-          content="Vergleiche die Top-Plattformen für Bitcoin & DeFi. Jetzt Testsieger checken."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im September 2025."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
         />
         <meta name="format-detection" content="telephone=no" />
-      </Head>
 
-      {/* Schema Markup for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Beste Broker September 2025 | Bitcoin & ETF Testsieger",
-            description:
-              "Vergleichen Sie die besten Trading-Plattformen für DeFi, Bitcoin handeln und Krypto-Trading. Entdecken Sie eToro, TradingView, XTB, WEEX, Vantage und mehr für sicheres Trading mit niedrigen Gebühren.",
-            url: "https://unser-vergleichsportal.de/trading",
-            keywords: [
-              "Bitcoin handeln",
-              "Krypto-Trading",
-              "DeFi Trading",
-              "Social Trading",
-              "Trading-Plattform"
-            ],
-            mainEntity: {
-              "@type": "ItemList",
-              itemListElement: sortedProviders.map((provider, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "Product",
-                  name: provider.name,
-                  description: provider.metaDescription,
-                  offers: {
-                    "@type": "Offer",
-                    price: provider.price,
-                    url: provider.url
+        {/* Schema Markup for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Beste Broker September 2025 | Bitcoin & ETF Testsieger",
+              description:
+                "Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im September 2025.",
+              url: "https://unser-vergleichsportal.de/trading",
+              publisher: {
+                "@type": "Organization",
+                "name": "Unser Vergleichsportal",
+                "url": "https://unser-vergleichsportal.de",
+                "logo": "https://unser-vergleichsportal.de/images/logo.png"
+              },
+              mainEntity: {
+                "@type": "ItemList",
+                name: "Broker Vergleich 2025",
+                itemListOrder: "http://schema.org/ItemListOrderAscending",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    item: {
+                      "@type": "Product",
+                      name: "TradingView",
+                      description:
+                        "Plattform mit Supercharts, Social Trading und Integration mit führenden Brokern.",
+                      image: "https://unser-vergleichsportal.de/images/broker/tradingview.png",
+                      brand: "TradingView",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://unser-vergleichsportal.de/tradingview",
+                        price: "0",
+                        priceCurrency: "EUR"
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.8",
+                        reviewCount: "312"
+                      }
+                    }
                   },
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: provider.rating,
-                    reviewCount: "100"
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    item: {
+                      "@type": "Product",
+                      name: "eToro",
+                      description:
+                        "Social Trading Broker für Aktien, ETFs und Kryptowährungen mit CopyTrader.",
+                      image: "https://unser-vergleichsportal.de/images/broker/etoro.png",
+                      brand: "eToro",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://unser-vergleichsportal.de/etoro",
+                        price: "0",
+                        priceCurrency: "EUR"
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.3",
+                        reviewCount: "289"
+                      }
+                    }
                   },
-                  keywords: ["Bitcoin handeln", "Krypto-Trading", "Social Trading", "DeFi", "Trading-Plattform"]
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    item: {
+                      "@type": "Product",
+                      name: "XTB",
+                      description:
+                        "Regulierter Broker mit 0 % Kommission auf Aktien & ETFs und breitem CFD-Angebot.",
+                      image: "https://unser-vergleichsportal.de/images/broker/xtb.png",
+                      brand: "XTB",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://unser-vergleichsportal.de/xtb",
+                        price: "0",
+                        priceCurrency: "EUR"
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.5",
+                        reviewCount: "204"
+                      }
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
+
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Welcher Broker ist 2025 Testsieger?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Zu den Testsiegern im September 2025 zählen TradingView, eToro und XTB – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Kann ich bei TradingView, eToro und XTB auch Kryptowährungen handeln?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Ja, alle drei Broker ermöglichen den Handel mit Bitcoin und weiteren Kryptowährungen – ideal für Einsteiger und Profis."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Sind TradingView, eToro und XTB reguliert?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Ja, alle drei Anbieter sind durch internationale Aufsichtsbehörden reguliert und bieten hohe Sicherheitsstandards für Anleger."
+                  }
                 }
-              }))
-            }
-          })
-        }}
-      />
+              ]
+            })
+          }}
+        />
 
       <Header />
 
