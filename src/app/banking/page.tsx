@@ -496,7 +496,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Girokonten vergleichen
+                  Alle Girokonten vergleichen
                 </Button>
               </a>
             </div>
@@ -560,7 +560,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Kreditkarten vergleichen
+                  Jetzt Kreditkarten vergleichen
                 </Button>
               </a>
             </div>
