@@ -584,7 +584,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kredit berechnen
+                  Persöhnliches Kreditangebot berechnen
                 </Button>
               </a>
             </div>
@@ -677,7 +677,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Baufinanzierung berechnen
+                  Baufinanzierungen vergleichen
                 </Button>
               </a>
             </div>
@@ -729,7 +729,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Online Banking starten
+                  Online Banking beginnen
                 </Button>
               </a>
             </div>
@@ -772,11 +772,83 @@ export default function Banking() {
             </ul>
             <h3 className="text-lg font-bold mb-2 text-green-600">Kostenlose Depotführung</h3>
             <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Online-Broker bieten <strong>kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Online-Broker bieten <strong> kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise für Depots</h3>
             <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>      </section>
+
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Vergleich von Finanzprodukten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Unternehmen stehen Ihnen zur Verfügung.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Kundenbewertungen prüfen</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Unsere Anbieter haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auch auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Konditionen analysieren</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen.</li>
+            </ul>
+            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto finden</h2>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Kriterien für ein kostenloses Girokonto</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Girokonten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die empfohlenen kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Eigenschaften der Testsieger-Girokonten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bedingungslos kostenlose Kontoführung</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose EC- und Kreditkarte</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Bargeldabheben deutschlandweit</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App mit allen Funktionen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% p.a.</li>
+            </ul>
+            <div className="mt-8 mb-12 text-center">
+              <a 
+                href="https://www.tarifcheck.de/girokonto/" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  Girokonten vergleichen
+                </Button>
+              </a>
+            </div>
+            <h2 className="text-3xl font-bold mb-6">Tagesgeldkonto für sichere Geldanlage</h2>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen 2025</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die verglichenen Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Top-Tagesgeldkonten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 4,00% Zinsen für Neukunden</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 100.000€ Einlagensicherung pro Bank</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Täglich verfügbar, keine Kündigung nötig</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise zu Tagesgeld</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsbindung oft nur 3–12 Monate</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Danach meist niedrigere Bestandskundenzinsen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßiger Vergleich lohnt sich</li>
+            </ul>
+            <div className="mt-8 mb-12 text-center">
+              <a 
+                href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                href="https://www.tarifcheck.com/NMXe4cX" 
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
@@ -785,7 +857,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Depot eröffnen
+                  Zur Trading Rubrik
                 </Button>
               </a>
             </div>
@@ -843,12 +915,12 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
-                href="https://www.c24n.de/RYXPGyh" 
+                href="https://www.tarifcheck.com/NMXe4cX" 
                 target="_blank" 
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kreditkarten vergleichen
+                  Alle Kreditkarten im Vergleich
                 </Button>
               </a>
             </div>
@@ -1137,13 +1209,13 @@ export default function Banking() {
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
       <p className="text-base text-gray-400 mb-4">
-        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
           className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
-          Startseite
+          Zurück zur Startseite
         </Button>
       </Link>
     </div>
