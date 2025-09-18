@@ -766,7 +766,7 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Schnell und einfach zur besten Tierversicherung
+              Schnell und einfach zur passenden Tierversicherung
             </h2>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie mit wenigen Klicks die besten Tarife für Ihre Haustiere. Sparen Sie Zeit und Geld mit unserem
