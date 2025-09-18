@@ -218,7 +218,7 @@ const Header: React.FC = () => {
               { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
               { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: true },
               { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
               { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
               { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
@@ -619,6 +619,7 @@ export default function DeFi() {
             })
           }}
         />
+      </Head>
 
       <Header />
 
@@ -633,7 +634,7 @@ export default function DeFi() {
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs, Rohstoffe, Futures, DeFi und Kryptowährungen wie Bitcoin. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger – darunter eToro, TradingView, XTB, WEEX und Vantage – bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              
+              <Button className={btnPrimary}>Zu den Anbietern</Button>
             </Link>
           </div>
         </div>
@@ -766,6 +767,7 @@ export default function DeFi() {
               </Card>
             ))}
           </div>
+
 
           {/* CTA: Banking */}
           <div className="mt-10 bg-gray-50 border border-gray-200 rounded-xl p-5">
