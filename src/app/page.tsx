@@ -485,147 +485,164 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</title>
-        <meta
-          name="description"
-          content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
-        />
-        <meta
-          name="keywords"
-          content="Finanzvergleich 2025, günstige Versicherungen, kostenloses Banking, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz"
-        />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
-        <meta name="author" content="SmartFinanz" />
-        <meta name="revisit-after" content="7 days" />
-        <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-        <link rel="alternate icon" href="/images/favicon.ico" />
-        <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-        <meta
-          property="og:description"
-          content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
-        <meta property="og:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
-        <meta property="og:site_name" content="SmartFinanz" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-        <meta
-          name="twitter:description"
-          content="Kostenloser Finanzvergleich 2025: Über 500 Anbieter für Versicherungen, Banking, Tierversicherungen, DSL & mehr. Bis zu 1.000€ sparen!"
-        />
-        <meta name="twitter:image" content="https://unser-vergleichsportal.de/og-image.jpg" />
-        <meta name="twitter:site" content="@smartfinanz" />
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
-        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
-        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-        <link rel="dns-prefetch" href="https://www.check24.de" />
-        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-        <link rel="dns-prefetch" href="https://www.awin1.com" />
-        <link rel="dns-prefetch" href="https://www.freenet.de" />
-        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+  {/* --- Meta Basics --- */}
+  <title>Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</title>
+  <meta
+    name="description"
+    content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
+  />
+  <meta
+    name="keywords"
+    content="Finanzvergleich 2025, Versicherungsvergleich, Banking Vergleich, Depot eröffnen, ETF Sparplan, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz"
+  />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
+  <meta name="author" content="SmartFinanz" />
+  <meta name="revisit-after" content="7 days" />
+  <meta charSet="UTF-8" />
+  <link rel="canonical" href="https://unser-vergleichsportal.de" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="alternate icon" href="/images/favicon.ico" />
 
-        {/* ---- Schema.org: Organization ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "SmartFinanz – unser-vergleichsportal.de",
-              "url": "https://unser-vergleichsportal.de",
-              "logo": "https://unser-vergleichsportal.de/logo.png",
-              "brand": {
-                "@type": "Brand",
-                "name": "unser-vergleichsportal.de"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/in/unservergleichsportalde",
-                "https://www.facebook.com/profile.php?id=61580338356626"
-              ],
-              "contactPoint": [{
-                "@type": "ContactPoint",
-                "contactType": "customer support",
-                "availableLanguage": ["de"],
-                "url": "https://unser-vergleichsportal.de/kontakt"
-              }]
-            }),
-          }}
-        />
+  {/* --- Open Graph --- */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+  <meta
+    property="og:description"
+    content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
+  />
+  <meta property="og:url" content="https://unser-vergleichsportal.de" />
+  <meta
+    property="og:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Unser-Vergleichsportal – Transparenter Finanzvergleich" />
+  <meta property="og:site_name" content="SmartFinanz" />
 
-        {/* ---- Schema.org: WebSite + SearchAction ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "SmartFinanz",
-              "url": "https://unser-vergleichsportal.de",
-              "inLanguage": "de",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }),
-          }}
-        />
+  {/* --- Twitter --- */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+  <meta
+    name="twitter:description"
+    content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
+  />
+  <meta
+    name="twitter:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta name="twitter:site" content="@unservergleich" />
 
-        {/* ---- Schema.org: FAQPage (spiegelt deinen FAQ-Abschnitt) ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
-                  }
-                }
-              ]
-            }),
-          }}
-        />
-    
-      </Head>
+  {/* --- Preloads & Prefetch --- */}
+  <link rel="preload" href="/logo.png" as="image" />
+  <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
+  <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
+  <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
+  <link rel="dns-prefetch" href="https://www.credimaxx.de" />
+  <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
+  <link rel="dns-prefetch" href="https://www.check24.de" />
+  <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
+  <link rel="dns-prefetch" href="https://www.awin1.com" />
+  <link rel="dns-prefetch" href="https://www.freenet.de" />
+  <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+
+  {/* ---- Schema.org: Organization ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SmartFinanz – unser-vergleichsportal.de",
+        "url": "https://unser-vergleichsportal.de",
+        "logo": "https://unser-vergleichsportal.de/logo.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "unser-vergleichsportal.de"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/unservergleichsportalde",
+          "https://x.com/unservergleich",
+          "https://medium.com/@unser-vergleichsportal.de",
+          "https://www.facebook.com/profile.php?id=61580338356626"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "availableLanguage": ["de"],
+          "url": "https://unser-vergleichsportal.de/kontakt"
+        }]
+      }),
+    }}
+  />
+
+  {/* ---- Schema.org: WebSite + SearchAction ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SmartFinanz",
+        "url": "https://unser-vergleichsportal.de",
+        "inLanguage": "de",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }),
+    }}
+  />
+
+  {/* ---- Schema.org: FAQPage ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
+            }
+          }
+        ]
+      }),
+    }}
+  />
+</Head>
       <main>
         <div className="min-h-screen bg-white">
           <Header />
