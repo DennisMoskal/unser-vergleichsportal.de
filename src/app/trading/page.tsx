@@ -634,7 +634,7 @@ export default function DeFi() {
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs, Rohstoffe, Futures, DeFi und Kryptowährungen wie Bitcoin. Vergleichen Sie niedrige Gebühren, hohe Sicherheit und attraktive Boni. Unsere Testsieger – darunter eToro, TradingView, XTB, WEEX und Vantage – bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              <Button className={btnPrimary}>Zu den Anbietern</Button>
+              <Button className={btnPrimary}>Unsere Testsieger 09/2025</Button>
             </Link>
           </div>
         </div>
@@ -761,7 +761,7 @@ export default function DeFi() {
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
                     rel={provider.url.startsWith("http") ? "noopener nofollow sponsored" : undefined}
                   >
-                    <Button className={`w-full mt-auto ${btnPrimary}`}>Zum Anbieter*</Button>
+                    <Button className={`w-full mt-auto ${btnPrimary}`}>Zum Anbieter und sparen*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -780,7 +780,7 @@ export default function DeFi() {
                 </p>
               </div>
               <Link href="/banking" aria-label="Zum Banking-Vergleich" title="Zum Banking-Vergleich">
-                <Button className={btnPrimary}>Jetzt Banken vergleichen</Button>
+                <Button className={btnPrimary}>Banking-Produkte entdecken</Button>
               </Link>
             </div>
           </div>
@@ -1480,7 +1480,7 @@ export default function DeFi() {
         <Button 
           className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
-          Startseite
+          Zur Startseite
         </Button>
       </Link>
     </div>
