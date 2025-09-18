@@ -521,7 +521,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Tagesgeldkonto eröffnen
+                  Tagesgeldkonto eröffnen
                 </Button>
               </a>
             </div>
@@ -552,7 +552,7 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
-                href="https://www.c24n.de/RYXPGyh" 
+                href="https://www.tarifcheck.com/NMXe4cX" 
                 target="_blank" 
                 rel="sponsored"
               >
@@ -635,7 +635,7 @@ export default function Banking() {
                     rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
                   >
                     <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
-                      Jetzt abschließen*
+                      Zum Anbieter und sparen*
                     </Button>
                   </a>
                 </CardContent>
