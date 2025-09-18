@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                       { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
                       { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
                       { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
                       { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
                       { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
                       { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -152,7 +152,7 @@ const Header: React.FC = () => {
                     { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
                     { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
                     { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
                     { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
                     { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
                     { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -551,6 +551,7 @@ export default function Tierversicherungen() {
       })
     }}
   />
+     </Head>
 
       <Header />
 
