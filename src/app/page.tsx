@@ -650,7 +650,7 @@ export default function Home() {
                   size="lg"
                   className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 >
-                  Günstigsten Tarif berechnen
+                  Günstigen Tarif berechnen
                 </Button>
               </a>
             </div>
