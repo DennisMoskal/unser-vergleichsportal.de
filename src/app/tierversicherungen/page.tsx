@@ -593,7 +593,7 @@ export default function Tierversicherungen() {
                     rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
                     <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt abschließen*
+                      Zum Anbieter und sparen*
                     </Button>
                   </a>
                 </CardContent>
@@ -617,8 +617,8 @@ export default function Tierversicherungen() {
               Hundeversicherung für umfassenden Schutz
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Hundeversicherung deckt Tierarztkosten für Unfälle, Operationen und Behandlungen. Ideal für
-              Hundebesitzer, die hohe Kosten vermeiden möchten.
+              Eine Tierversicherung zum Beispiel für Hunde deckt Tierarztkosten für Unfälle, Operationen und Behandlungen. Ideal für
+              Hundebesitzer, die hohe Kosten vermeiden möchten. Ebenfalls zu empfehlen ist der Abschluss einer Hundehaftpflichtversicherung um Sachschäden abzudecken.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
@@ -627,7 +627,7 @@ export default function Tierversicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz bei Unfällen und Krankheiten
+                Schutz bei Unfällen, Sachschäden und Krankheiten
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -641,7 +641,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.agila.de/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Hundeversicherung vergleichen
+                  Jetzt Tierversicherung berechnen
                 </Button>
               </a>
             </div>
@@ -674,7 +674,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.petplan.de/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Katzenversicherung vergleichen
+                  Schutz vor Tierarzt- und OP-Kosten
                 </Button>
               </a>
             </div>
@@ -702,7 +702,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.allianz.de/tierversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Pferdeversicherung vergleichen
+                  Pferdeversicherung abschließen
                 </Button>
               </a>
             </div>
@@ -754,7 +754,7 @@ export default function Tierversicherungen() {
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
               <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                Jetzt Tierversicherungen vergleichen
+                Alle Tierversicherungen vergleichen
               </Button>
             </a>
           </div>
