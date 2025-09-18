@@ -650,7 +650,7 @@ export default function Home() {
                   size="lg"
                   className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 >
-                  Zum Vergleichsrechner
+                  Günstigsten Tarif berechnen
                 </Button>
               </a>
             </div>
@@ -1029,7 +1029,7 @@ export default function Home() {
                 </p>
                 <Link href="/trading">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Vorsorge planen
+                    Jetzt Vorsorge planen
                   </Button>
                 </Link>
               </div>
@@ -1071,7 +1071,7 @@ export default function Home() {
                 </p>
                 <Link href="/versicherungen">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Besten Tarif finden
+                    Den Besten Tarif finden
                   </Button>
                 </Link>
               </div>
@@ -1609,7 +1609,7 @@ export default function Home() {
         <Button 
           className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
-          Startseite
+          Zur Startseite
         </Button>
       </Link>
     </div>
