@@ -626,86 +626,140 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Beste Versicherungen September 2025 | Testsieger-Vergleich</title>
-        <meta
-          name="description"
-          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
-        />
-        <meta
-          name="keywords"
-          content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, eRecht24, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
-        />
-        <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
-        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
-        <meta
-          property="og:description"
-          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
-        />
-        <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
-        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
-        <meta
-          name="twitter:description"
-          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern."
-        />
-        <meta name="format-detection" content="telephone=no" />
-      </Head>
+  <title>Beste Versicherungen September 2025 | Testsieger-Vergleich</title>
+  <meta
+    name="description"
+    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
+  />
+  <meta
+    name="keywords"
+    content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, eRecht24, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
+  />
+  <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charSet="UTF-8" />
+  <meta name="author" content="SmartFinanz" />
+  <meta name="format-detection" content="telephone=no" />
 
-      {/* Schema Markup for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Beste Versicherungen September 2025 | Testsieger-Vergleich",
-            description:
-              "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr.",
-            url: "https://unser-vergleichsportal.de/versicherungen",
-            keywords: [
-              "Versicherungsvergleich",
-              "Kfz-Versicherung",
-              "Haftpflichtversicherung",
-              "Hausratversicherung",
-              "Rechtsschutzversicherung"
-            ],
-            mainEntity: {
-              "@type": "ItemList",
-              itemListElement: sortedProviders.map((provider, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "Product",
-                  name: provider.name,
-                  description: provider.metaDescription,
-                  offers: {
-                    "@type": "Offer",
-                    price: provider.price,
-                    url: provider.url
-                  },
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: provider.rating,
-                    reviewCount: "100"
-                  },
-                  keywords: [
-                    "Versicherungsvergleich",
-                    "Kfz-Versicherung",
-                    "Haftpflichtversicherung",
-                    "Hausratversicherung",
-                    "Rechtsschutzversicherung"
-                  ]
-                }
-              }))
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
+  <meta
+    property="og:description"
+    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
+  />
+  <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
+  <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+  <meta
+    property="og:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Unser-Vergleichsportal – Versicherungen einfach vergleichen & sparen" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
+  <meta
+    name="twitter:description"
+    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
+  />
+  <meta
+    name="twitter:image"
+    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+  />
+  <meta name="twitter:site" content="@unservergleich" />
+
+  {/* Schema Markup for SEO */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Beste Versicherungen September 2025 | Testsieger-Vergleich",
+        description:
+          "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr.",
+        url: "https://unser-vergleichsportal.de/versicherungen",
+        keywords: [
+          "Versicherungsvergleich",
+          "Kfz-Versicherung",
+          "Haftpflichtversicherung",
+          "Hausratversicherung",
+          "Rechtsschutzversicherung"
+        ],
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: sortedProviders.map((provider, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Product",
+              name: provider.name,
+              description: provider.metaDescription,
+              offers: {
+                "@type": "Offer",
+                price: provider.price,
+                url: provider.url
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: provider.rating,
+                reviewCount: "100"
+              },
+              keywords: [
+                "Versicherungsvergleich",
+                "Kfz-Versicherung",
+                "Haftpflichtversicherung",
+                "Hausratversicherung",
+                "Rechtsschutzversicherung"
+              ]
             }
-          })
-        }}
-      />
+          }))
+        }
+      })
+    }}
+  />
+
+  {/* FAQ Schema Markup */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            "name": "Welche Versicherungen sind in Deutschland Pflicht?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zu den Pflichtversicherungen in Deutschland zählen u.a. die Kfz-Haftpflichtversicherung, die Krankenversicherung sowie bestimmte Berufshaftpflichtversicherungen. Alle weiteren Versicherungen sind freiwillig, können aber sinnvoll sein."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wann lohnt sich eine Vollkaskoversicherung?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eine Vollkaskoversicherung lohnt sich besonders bei neuen oder hochwertigen Fahrzeugen. Sie deckt zusätzlich zu den Teilkasko-Leistungen auch selbstverschuldete Unfälle und Vandalismus ab."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie kann ich meine Versicherung wechseln?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ein Wechsel ist in der Regel zum Ende der Vertragslaufzeit möglich. Viele Anbieter bieten Kündigungshilfen. Im Vergleichsrechner finden Sie bessere Tarife und können direkt wechseln."
+            }
+          }
+        ]
+      })
+    }}
+  />
+</Head>
 
       <Header />
 
@@ -821,7 +875,7 @@ export default function Versicherungen() {
                     rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
                     <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Jetzt abschließen*
+                      Zum Anbieter und sparen*
                     </Button>
                   </a>
                 </CardContent>
@@ -1326,7 +1380,7 @@ export default function Versicherungen() {
         <Button 
           className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
-          Startseite
+          Zur Startseite
         </Button>
       </Link>
     </div>
