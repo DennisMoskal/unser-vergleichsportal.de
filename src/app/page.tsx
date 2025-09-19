@@ -1178,7 +1178,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Günstige Kfz-Versicherung mit 300€ Ersparnis</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell."
+                      "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1207,7 +1207,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Unser-vergleichsportal.de hat uns die perfekte Tierversicherung für unsere Hunde empfohlen. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!"
+                      "Unser-vergleichsportal hat uns die günstigste Tierversicherung für unsere Hunde rausgesucht. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1236,7 +1236,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Sicheres Banking mit Bonus</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich war skeptisch, aber der Vergleich hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!"
+                      "Ich war skeptisch, aber der Vergleich hat mir super schnell ein passendes Konto empfohlen. Alles war sehr einfach, und ich habe 50€ Bonus erhalten!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1265,7 +1265,7 @@ export default function Home() {
                   <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Kostengünstige Trading-Plattform finden</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Mit den Trading Top Empfehlungen habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren super, und ich spare jetzt Gebühren!"
+                      "Als Anfänger im Krypto-Handel habe Ich mir die Trading Tips angeschaut. Durch die Infos und Blogbeiträge habe Ich viel gelernt und freue mich jetzt über gestiegenen Bitcoin Kurs!"
                     </p>
                   </CardContent>
                 </Card>
@@ -1297,26 +1297,26 @@ export default function Home() {
                         author: { "@type": "Person", name: "Anna" },
                         reviewRating: { "@type": "Rating", ratingValue: "5" },
                         reviewBody:
-                          "Dank SmartFinanz habe ich eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell.",
+                          "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell!",
                       },
                       {
                         "@type": "Review",
-                        author: { "@type": "Person", name: "Aaron" },
+                        author: { "@type": "Person", name: "Stefan" },
                         reviewRating: { "@type": "Rating", ratingValue: "4" },
                         reviewBody:
-                          "SmartFinanz hat uns die perfekte Tierversicherung für unseren Hund empfohlen. Jetzt fühlen wir uns sicher, dass Max bestens versorgt ist!",
+                          "Unser-vergleichsportal hat uns die günstigste Tierversicherung für unsere Hunde rausgesucht. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!",
                       },
                       {
                         "@type": "Review",
                         author: { "@type": "Person", name: "Helga" },
                         reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody: "Ich war skeptisch, aber SmartFinanz hat mir eine sichere Banklösung gezeigt. Der Prozess war klar, und ich habe 50€ Bonus erhalten!",
+                        reviewBody: "Ich war skeptisch, aber der Vergleich hat mir super schnell ein passendes Konto empfohlen. Alles war sehr einfach, und ich habe 50€ Bonus erhalten!",
                       },
                       {
                         "@type": "Review",
                         author: { "@type": "Person", name: "Lukas" },
                         reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody: "Mit SmartFinanz habe ich die beste Trading-Plattform gefunden. Die Empfehlungen waren punktgenau, und ich spare jetzt Gebühren!",
+                        reviewBody: "Als Anfänger im Krypto-Handel habe Ich mir die Trading Tips angeschaut. Durch die Infos und Blogbeiträge habe Ich viel gelernt und freue mich jetzt über gestiegenen Bitcoin Kurs!",
                       },
                     ],
                     mainEntity: [
