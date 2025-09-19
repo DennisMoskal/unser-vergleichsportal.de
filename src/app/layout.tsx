@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SmartFinanz",
+  title: "Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten"
   description: "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
   icons: {
     icon: "/favicon.svg",
