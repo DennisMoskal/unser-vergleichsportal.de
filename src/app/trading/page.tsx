@@ -944,15 +944,17 @@ export default function DeFi() {
             </p>
 
             {/* Maestro Bot – bleibt in diesem Abschnitt, zentriert & sekundärer Button */}
-            <div className="mt-4 mb-6 text-center">
-              <Link
-                href="https://t.me/maestro_main_bot?start=ref_01z8ia"
-                target="_blank"
-                rel="noopener nofollow sponsored"
-              >
-                <Button className={btnSecondary}>Zum Maestro Bot</Button>
-              </Link>
-            </div>
+            <div className="mt-4 flex justify-center">
+  <Link
+    href="https://t.me/maestro_main_bot?start=ref_01z8ia"
+    target="_blank"
+    rel="noopener nofollow sponsored"
+    aria-label="Zum Maestro Bot"
+    title="Zum Maestro Bot"
+  >
+    <Button className={btnPrimary}>Zum Maestro Bot</Button>
+  </Link>
+</div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Memecoin-Trading mit Telegram-Bots
