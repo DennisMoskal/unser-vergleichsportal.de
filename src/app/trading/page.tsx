@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
+import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
                     { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
                     { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
                     { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -96,11 +96,11 @@ const Header: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq' },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj' },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN' },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh' },
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -120,11 +120,11 @@ const Header: React.FC = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R' },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh' },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E' },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh' },
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -148,11 +148,11 @@ const Header: React.FC = () => {
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
-                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
-                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
-                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                    { key: 'karriere', label: 'Karriere', url: '/karriere' },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt' },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme' },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns' },
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -173,11 +173,11 @@ const Header: React.FC = () => {
                 <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
-                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
-                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
-                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                    { key: 'agb', label: 'AGB', url: '/agb' },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie' },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz' },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum' },
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -196,7 +196,7 @@ const Header: React.FC = () => {
               </div>
               <div className="text-center mt-4">
                 <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  className={btnPrimary}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -451,11 +451,12 @@ const providerData = {
   ]
 }
 
-// Einheitliches Button-Layout (ohne Icons)
+// Einheitliches Button-Layout (übernommen & vereinheitlicht)
 const btnBase =
-  "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
-const btnPrimary = `${btnBase} bg-green-600 hover:bg-green-700 text-white`
-const btnSecondary = `${btnBase} bg-white text-green-600 hover:bg-gray-100`
+  "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold transition-all duration-300 ease-in-out shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+
+const btnPrimary = `${btnBase} bg-green-600 text-white hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`
+const btnSecondary = `${btnBase} bg-white text-green-700 border border-green-200 hover:bg-gray-100 hover:scale-105`
 
 export default function DeFi() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -792,7 +793,6 @@ export default function DeFi() {
             ))}
           </div>
 
-
           {/* CTA: Banking */}
           <div className="mt-10 bg-gray-50 border border-gray-200 rounded-xl p-5">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -897,9 +897,20 @@ export default function DeFi() {
                 Hebel bis zu 500:1 für flexible Handelsstrategien
               </li>
             </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
+            <p className="text-sm sm:text-base text-gray-600">
               Tipp: Nutzen Sie BlackBull’s Demo-Konto, um Bitcoin-Trading risikofrei zu testen.
             </p>
+
+            {/* Krypto Handel beginnen – direkt unter dem Tipp eingefügt */}
+            <div className="mt-4 mb-6 text-center">
+              <Link
+                href="https://go.blackbull.com/visit/?bta=42835&nci=6944"
+                target="_blank"
+                rel="noopener nofollow sponsored"
+              >
+                <Button className={btnPrimary}>Krypto Handel beginnen</Button>
+              </Link>
+            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Bridging in DeFi: Kryptowährungen zwischen Blockchains transferieren
@@ -931,16 +942,15 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               Spartipp: Kombinieren Sie Bridging mit Plattformen für sicheres Trading nach dem Transfer.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Link href="https://go.blackbull.com/visit/?bta=42835&nci=6944" target="_blank" rel="noopener nofollow sponsored">
-                <Button className={btnPrimary}>
-                  Krypto Handel beginnen
-                </Button>
-              </Link>
-              <Link href="https://t.me/maestro_main_bot?start=ref_01z8ia" target="_blank" rel="noopener nofollow sponsored">
-                <Button className={btnSecondary}>
-                  Zum Maestro Bot
-                </Button>
+
+            {/* Maestro Bot – bleibt in diesem Abschnitt, zentriert & sekundärer Button */}
+            <div className="mt-6 mb-6 flex justify-center">
+              <Link
+                href="https://t.me/maestro_main_bot?start=ref_01z8ia"
+                target="_blank"
+                rel="noopener nofollow sponsored"
+              >
+                <Button className={btnSecondary}>Zum Maestro Bot</Button>
               </Link>
             </div>
 
@@ -1002,6 +1012,9 @@ export default function DeFi() {
                 Profitieren Sie von den Handelsideen der TradingView-Community.
               </li>
             </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              Sicherheits-Tipp: Verwenden Sie Hardware-Wallets wie Ledger für langfristige Krypto-Aufbewahrung und aktivieren Sie 2FA.
+            </p>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               Sicherheits-Tipp: Verwenden Sie Hardware-Wallets wie Ledger für langfristige Krypto-Aufbewahrung und aktivieren Sie 2FA.
             </p>
