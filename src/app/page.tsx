@@ -506,8 +506,7 @@ export default function Home() {
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="alternate icon" href="/images/favicon.ico" />
 
-{/* --- Open Graph --- */}
-<meta property="og:locale" content="de_DE" />
+ {/* --- Open Graph --- */}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
 <meta
@@ -530,16 +529,6 @@ export default function Home() {
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Unser-Vergleichsportal – Transparenter Finanzvergleich" />
 
-{/* Fallback-Bild für Bots */}
-<link
-  rel="image_src"
-  href="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-/>
-<meta
-  name="thumbnail"
-  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-/>
-
 <meta property="og:site_name" content="SmartFinanz" />
 <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
 <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
@@ -561,67 +550,68 @@ export default function Home() {
 />
 <meta name="twitter:site" content="@unservergleich" />
 
-{/* --- Preloads & Prefetch --- */}
-<link rel="preload" href="/logo.png" as="image" />
-<link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-<link rel="dns-prefetch" href="https://partner.e-recht24.de" />
-<link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-<link rel="dns-prefetch" href="https://www.credimaxx.de" />
-<link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-<link rel="dns-prefetch" href="https://www.check24.de" />
-<link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-<link rel="dns-prefetch" href="https://www.awin1.com" />
-<link rel="dns-prefetch" href="https://www.freenet.de" />
-<meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
 
-{/* ---- Schema.org: Organization ---- */}
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SmartFinanz – unser-vergleichsportal.de",
-      "url": "https://unser-vergleichsportal.de",
-      "logo": "https://unser-vergleichsportal.de/logo.png",
-      "brand": {
-        "@type": "Brand",
-        "name": "unser-vergleichsportal.de"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/unservergleichsportalde",
-        "https://x.com/unservergleich",
-        "https://medium.com/@unser-vergleichsportal.de",
-        "https://www.facebook.com/profile.php?id=61580338356626"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "availableLanguage": ["de"],
-        "url": "https://unser-vergleichsportal.de/kontakt"
-      }]
-    }),
-  }}
-/>
+  {/* --- Preloads & Prefetch --- */}
+  <link rel="preload" href="/logo.png" as="image" />
+  <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
+  <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
+  <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
+  <link rel="dns-prefetch" href="https://www.credimaxx.de" />
+  <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
+  <link rel="dns-prefetch" href="https://www.check24.de" />
+  <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
+  <link rel="dns-prefetch" href="https://www.awin1.com" />
+  <link rel="dns-prefetch" href="https://www.freenet.de" />
+  <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
 
-{/* ---- Schema.org: WebSite + SearchAction ---- */}
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "SmartFinanz",
-      "url": "https://unser-vergleichsportal.de",
-      "inLanguage": "de",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }),
-  }}
-/>
+  {/* ---- Schema.org: Organization ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SmartFinanz – unser-vergleichsportal.de",
+        "url": "https://unser-vergleichsportal.de",
+        "logo": "https://unser-vergleichsportal.de/logo.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "unser-vergleichsportal.de"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/unservergleichsportalde",
+          "https://x.com/unservergleich",
+          "https://medium.com/@unser-vergleichsportal.de",
+          "https://www.facebook.com/profile.php?id=61580338356626"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "availableLanguage": ["de"],
+          "url": "https://unser-vergleichsportal.de/kontakt"
+        }]
+      }),
+    }}
+  />
+
+  {/* ---- Schema.org: WebSite + SearchAction ---- */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SmartFinanz",
+        "url": "https://unser-vergleichsportal.de",
+        "inLanguage": "de",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }),
+    }}
+  />
 
   {/* ---- Schema.org: FAQPage ---- */}
   <script
