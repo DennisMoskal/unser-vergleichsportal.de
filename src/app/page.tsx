@@ -506,7 +506,9 @@ export default function Home() {
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="alternate icon" href="/images/favicon.ico" />
 
- {/* --- Open Graph - LinkedIn optimiert --- */}
+ {/* Ersetzen Sie Ihre Open Graph Sektion (ca. Zeile 95-125) komplett mit diesem Code: */}
+
+{/* --- Open Graph - LinkedIn optimiert --- */}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
 <meta
@@ -516,32 +518,38 @@ export default function Home() {
 <meta property="og:url" content="https://unser-vergleichsportal.de" />
 <meta property="og:site_name" content="SmartFinanz" />
 
-{/* NEUE Bild-Tags - LinkedIn kompatibel */}
-<meta property="og:image" content="https://unser-vergleichsportal.de/images/og-linkedin.jpg" />
-<meta property="og:image:secure_url" content="https://unser-vergleichsportal.de/images/og-linkedin.jpg" />
+{/* Bild für Social Sharing - LinkedIn optimiert mit angepasster Größe */}
+<meta
+  property="og:image"
+  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
+<meta
+  property="og:image:secure_url"
+  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="627" />
 <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
 
-<meta property="og:site_name" content="SmartFinanz" />
+{/* Zusätzliche LinkedIn-spezifische Meta Tags */}
+<meta property="og:locale" content="de_DE" />
+<meta property="article:author" content="SmartFinanz" />
 <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
 <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
 
-{/* --- Twitter --- */}
+{/* --- Twitter Cards - ebenfalls optimiert --- */}
 <meta name="twitter:card" content="summary_large_image" />
-<meta
-  name="twitter:title"
-  content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten"
-/>
-<meta
-  name="twitter:description"
-  content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
-/>
+<meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+<meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
 <meta
   name="twitter:image"
   content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
+<meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
+<meta name="twitter:site" content="@unservergleich" />
+<meta name="twitter:creator" content="@unservergleich" />
 />
 <meta name="twitter:site" content="@unservergleich" />
 
