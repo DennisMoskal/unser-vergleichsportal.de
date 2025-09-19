@@ -1279,11 +1279,11 @@ export default function Home() {
                   __html: JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-                    name: "SmartFinanz",
-                    url: "https://smartfinanz.de",
+                    name: "unser-vergleichsportal.de",
+                    url: "https://unser-vergleichsportal.de",
                     potentialAction: {
                       "@type": "SearchAction",
-                      target: "https://smartfinanz.de/suche?q={search_term_string}",
+                      target: "https://unser-vergleichsportal.de/suche?q={search_term_string}",
                       "query-input": "required name=search_term_string",
                     },
                     aggregateRating: {
