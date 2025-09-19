@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SmartFinanz",
-  description: "Vergleich und Anbieter für Finanzen",
+  description: "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
   icons: {
     icon: "/favicon.svg",
   },
