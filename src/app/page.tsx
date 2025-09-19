@@ -621,7 +621,7 @@ export default function Home() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
+                  "name": "Wie funktioniert der Finanzvergleich?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
@@ -629,7 +629,7 @@ export default function Home() {
                 },
                 {
                   "@type": "Question",
-                  "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
+                  "name": "Ist der Finanzvergleich auf unser-vergleichsportal.de kostenlos?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
@@ -645,7 +645,7 @@ export default function Home() {
                 },
                 {
                   "@type": "Question",
-                  "name": "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
+                  "name": "Wie schnell bekomme ich die Empfehlungen?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
