@@ -1,6 +1,3 @@
-"use client"
-
-import Head from "next/head";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -35,6 +32,18 @@ const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("versicherungen");
 
+  useEffect(() => {
+    // Client-seitiges Scrollen bei Hash-Navigation
+    const hash = window.location.hash.substring(1);
+    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      setActiveCategory(hash);
+    }
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId);
     const element = document.getElementById(sectionId);
@@ -42,13 +51,6 @@ const Header: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    const hash = window.location.hash.substring(1);
-    if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
-      scrollToSection(hash);
-    }
-  }, []);
 
   return (
     <>
@@ -300,6 +302,171 @@ const Header: React.FC = () => {
   );
 };
 
+// Metadata für statisches Rendering
+export async function generateMetadata() {
+  return {
+    title: "Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten",
+    description:
+      "Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!",
+    keywords:
+      "Finanzvergleich 2025, Versicherungsvergleich, Banking Vergleich, Depot eröffnen, ETF Sparplan, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz",
+    robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+    alternates: {
+      canonical: "https://unser-vergleichsportal.de",
+      sitemap: "https://unser-vergleichsportal.de/sitemap.xml",
+    },
+    icons: {
+      icon: "/images/favicon.svg",
+      shortcut: "/images/favicon.ico",
+    },
+    openGraph: {
+      type: "website",
+      title: "Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten",
+      description:
+        "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
+      url: "https://unser-vergleichsportal.de",
+      siteName: "SmartFinanz",
+      images: [
+        {
+          url: "https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg",
+          secureUrl: "https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg",
+          type: "image/jpeg",
+          width: 1200,
+          height: 627,
+          alt: "SmartFinanz - Transparenter Finanzvergleich September 2025",
+        },
+        // Fallback-Bild für Robustheit
+        {
+          url: "https://unser-vergleichsportal.de/images/og/fallback-og-1200x630.jpg",
+          width: 1200,
+          height: 627,
+          alt: "SmartFinanz Fallback",
+        },
+      ],
+      locale: "de_DE",
+      publishedTime: "2025-09-01T00:00:00+00:00",
+      modifiedTime: "2025-09-19T03:34:00+00:00",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten",
+      description:
+        "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
+      images: ["https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"],
+      site: "@unservergleich",
+      creator: "@unservergleich",
+    },
+    other: {
+      "google-site-verification": "do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E",
+      author: "SmartFinanz",
+      "revisit-after": "7 days",
+      "impact-site-verification": "f34232c9-40b1-4773-b281-9b596b88cd82",
+    },
+    // Schema.org Markups
+    metadataBase: new URL("https://unser-vergleichsportal.de"),
+    additionalMetaTags: [
+      {
+        name: "charset",
+        content: "UTF-8",
+      },
+    ],
+    preload: [
+      { href: "/logo.png", as: "image" },
+      { href: "https://www.tarifcheck.de", as: "dns-prefetch" },
+      { href: "https://partner.e-recht24.de", as: "dns-prefetch" },
+      { href: "https://link-pso.xtb.com", as: "dns-prefetch" },
+      { href: "https://www.credimaxx.de", as: "dns-prefetch" },
+      { href: "https://www.hansemerkur.de", as: "dns-prefetch" },
+      { href: "https://www.check24.de", as: "dns-prefetch" },
+      { href: "https://private.vodafone-affiliate.de", as: "dns-prefetch" },
+      { href: "https://www.awin1.com", as: "dns-prefetch" },
+      { href: "https://www.freenet.de", as: "dns-prefetch" },
+    ],
+    structuredData: [
+      // Schema.org: Organization
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "SmartFinanz – unser-vergleichsportal.de",
+        url: "https://unser-vergleichsportal.de",
+        logo: "https://unser-vergleichsportal.de/logo.png",
+        brand: {
+          "@type": "Brand",
+          name: "unser-vergleichsportal.de",
+        },
+        sameAs: [
+          "https://www.linkedin.com/in/unservergleichsportalde",
+          "https://x.com/unservergleich",
+          "https://medium.com/@unser-vergleichsportal.de",
+          "https://www.facebook.com/profile.php?id=61580338356626",
+        ],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            availableLanguage: ["de"],
+            url: "https://unser-vergleichsportal.de/kontakt",
+          },
+        ],
+      },
+      // Schema.org: WebSite + SearchAction
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "SmartFinanz",
+        url: "https://unser-vergleichsportal.de",
+        inLanguage: "de",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://unser-vergleichsportal.de/suche?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+      // Schema.org: FAQPage
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
+// Provider-Interface und Data
 export interface Provider {
   name: string;
   rating: number;
@@ -479,675 +646,504 @@ const providerData: { [key: string]: Provider[] } = {
   ],
 };
 
+// Haupt-Komponente
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen");
 
   return (
-    <>
-      <Head>
-        {/* --- Meta Basics --- */}
-        <title>Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</title>
-        <meta
-          name="description"
-          content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
-        />
-        <meta
-          name="keywords"
-          content="Finanzvergleich 2025, Versicherungsvergleich, Banking Vergleich, Depot eröffnen, ETF Sparplan, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz"
-        />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
-        <meta name="author" content="SmartFinanz" />
-        <meta name="revisit-after" content="7 days" />
-        <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-        <link rel="alternate icon" href="/images/favicon.ico" />
+    <main>
+      <div className="min-h-screen bg-white">
+        <Header />
 
-        {/* --- Open Graph - LinkedIn optimiert --- */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-        <meta
-          property="og:description"
-          content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
-        />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
-        <meta property="og:site_name" content="SmartFinanz" />
-
-        {/* Bild für Social Sharing - LinkedIn optimiert mit angepasster Größe */}
-        <meta
-          property="og:image"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta
-          property="og:image:secure_url"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="627" />
-        <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
-
-        {/* Zusätzliche LinkedIn-spezifische Meta Tags */}
-        <meta property="og:locale" content="de_DE" />
-        <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
-
-        {/* --- Twitter Cards - ebenfalls optimiert --- */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-        <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
-        <meta
-          name="twitter:image"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
-        <meta name="twitter:site" content="@unservergleich" />
-        <meta name="twitter:creator" content="@unservergleich" />
-
-        {/* --- Preloads & Prefetch --- */}
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
-        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
-        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-        <link rel="dns-prefetch" href="https://www.check24.de" />
-        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-        <link rel="dns-prefetch" href="https://www.awin1.com" />
-        <link rel="dns-prefetch" href="https://www.freenet.de" />
-        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
-
-        {/* ---- Schema.org: Organization ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "SmartFinanz – unser-vergleichsportal.de",
-              "url": "https://unser-vergleichsportal.de",
-              "logo": "https://unser-vergleichsportal.de/logo.png",
-              "brand": {
-                "@type": "Brand",
-                "name": "unser-vergleichsportal.de"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/in/unservergleichsportalde",
-                "https://x.com/unservergleich",
-                "https://medium.com/@unser-vergleichsportal.de",
-                "https://www.facebook.com/profile.php?id=61580338356626"
-              ],
-              "contactPoint": [{
-                "@type": "ContactPoint",
-                "contactType": "customer support",
-                "availableLanguage": ["de"],
-                "url": "https://unser-vergleichsportal.de/kontakt"
-              }]
-            }),
-          }}
-        />
-
-        {/* ---- Schema.org: WebSite + SearchAction ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "SmartFinanz",
-              "url": "https://unser-vergleichsportal.de",
-              "inLanguage": "de",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }),
-          }}
-        />
-
-        {/* ---- Schema.org: FAQPage ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
-                  }
-                }
-              ]
-            }),
-          }}
-        />
-      </Head>
-      <main>
-        <div className="min-h-screen bg-white">
-          <Header />
-
-          {/* Hauptüberschrift */}
-          <section className="py-8 sm:py-12 bg-white">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
-              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
-              </p>
-              <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
-              <p className="text-base sm:text-lg mb-4">Finden Sie in 60 Sekunden das beste Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
-              <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – ohne Rechercheaufwand.</p>
-              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzer.</p>
-              <a
-                rel="sponsored"
-                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
-                aria-label="Verivox - die Tarifexperten"
+        {/* Hauptüberschrift */}
+        <section className="py-8 sm:py-12 bg-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
+            <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
+              <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
+            </p>
+            <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
+            <p className="text-base sm:text-lg mb-4">Finden Sie in 60 Sekunden das beste Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
+            <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – ohne Rechercheaufwand.</p>
+            <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzer.</p>
+            <a
+              rel="sponsored"
+              href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
+              aria-label="Verivox - die Tarifexperten"
+            >
+              <Button
+                size="lg"
+                className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
-                <Button
-                  size="lg"
-                  className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                Besten Tarif berechnen
+              </Button>
+            </a>
+          </div>
+        </section>
+
+        {/* Vergleichstabellen */}
+        <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
+          <div className="container mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+              Testsieger September 2025: Top-Anbieter für Finanzprodukte
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  name: "Tarifcheck.de",
+                  rating: 4.5,
+                  features: [
+                    "Über 20 Jahre Erfahrung als Vergleichsportal",
+                    "100% kostenloser und unverbindlicher Vergleich",
+                    "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+                    "Mehrfach ausgezeichnet mit 'sehr gut'",
+                    "eKomi Silber Siegel mit 4,5/5 Sternen",
+                    "Über 3.194 Kundenbewertungen",
+                    "Deutschlands drittgrößtes Vergleichsportal",
+                    "Vertrauen von Millionen Verbrauchern",
+                    "Bis zu 1.000€ jährlich sparen möglich",
+                  ],
+                  price: "100% kostenlos",
+                  bonus: "Bis zu 120€ Neukundenbonus",
+                  logo: "🏆",
+                  url: "https://www.tarifcheck.de/girokonto/",
+                },
+                {
+                  name: "eRecht24",
+                  rating: 4.3,
+                  features: [
+                    "Rechtssicherheit für Webseiten",
+                    "DSGVO-konform mit Premium Tools",
+                    "Automatische Rechtstext-Generatoren",
+                    "Abmahnschutz inklusive",
+                    "Praxis-Tools für Social Media",
+                    "Kostenlose Erstberatung",
+                    "NEU: KI-gestützte Lösungen",
+                    "Zentraler Projekt Manager",
+                    "Live-Webinare zu Internetrecht",
+                    "Muster-Verträge & Checklisten",
+                  ],
+                  price: "ab 20€/Monat",
+                  bonus: "Gratis Rechtscheck",
+                  logo: "⚖️",
+                  url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subids=&target=default",
+                },
+                {
+                  name: "XTB",
+                  rating: 4.5,
+                  features: [
+                    "Gratis Aktie für neue Investoren",
+                    "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+                    "Über 8000 Aktien & ETFs",
+                    "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
+                    "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
+                    "eWallet mit virtueller Mastercard",
+                    "Smarte ETF-Sparpläne",
+                    "0% Kommission bis 100.000€ Umsatz",
+                    "Kostenlose Ein- & Auszahlungen",
+                    "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
+                    "Platz 1 CFD-Broker 2024/25",
+                  ],
+                  price: "0€ Kommission",
+                  bonus: "Demo-Konto",
+                  logo: "📊",
+                  url: "https://link-pso.xtb.com/pso/lMDhc",
+                },
+                {
+                  name: "Credimaxx",
+                  rating: 4.9,
+                  features: [
+                    "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+                    "Sofortvermittlung durch erfahrene Kreditprofis",
+                    "Digitaler Abschluss mit WebID oder VideoIdent",
+                    "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+                    "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
+                    "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
+                    "Vermittlung in bis zu 1 Minute",
+                    "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+                    "Anschlussfinanzierungen und Immobilienkredite verfügbar",
+                    "25 Jahre Erfahrung in der Kreditvermittlung",
+                  ],
+                  price: "ab 10,99% eff. Zins p.a.",
+                  bonus: "Schnelle Auszahlung",
+                  logo: "💳",
+                  url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
+                },
+                {
+                  name: "HanseMerkur",
+                  rating: 4.7,
+                  features: [
+                    "Umfassender Schutz für Hunde und Katzen",
+                    "Bis zu 100% Kostenerstattung",
+                    "Freie Tierarztwahl",
+                    "Keine Altersbeschränkung",
+                    "Schnelle Schadensbearbeitung",
+                    "Flexible Tarifoptionen",
+                    "Zusatzleistungen wie Physiotherapie",
+                    "Online-Vertragsmanagement",
+                    "24/7 Kundenhotline",
+                  ],
+                  price: "ab 10€/Monat",
+                  bonus: "Kostenloser Gesundheitscheck",
+                  logo: "🐾",
+                  url: "https://www.hansemerkur.de/tierkrankenversicherung",
+                },
+                {
+                  name: "CHECK24",
+                  rating: 4.8,
+                  features: [
+                    "Kostenloser Kontowechselservice",
+                    "Über 50 Banken im Vergleich",
+                    "Bis zu 250€ Willkommensbonus",
+                    "Kostenlose Kontoführung",
+                    "Schnelle Kontoeröffnung",
+                    "TÜV-geprüfter Vergleich",
+                    "24/7 Kundensupport",
+                    "Mobile Banking App",
+                    "Kreditkartenoptionen verfügbar",
+                    "Attraktive Zinsen auf Tagesgeld",
+                  ],
+                  price: "0€ Kontoführung",
+                  bonus: "Bis zu 250€ Bonus",
+                  logo: "🏦",
+                  url: "https://www.check24.de/girokonto/",
+                },
+                {
+                  name: "Vodafone",
+                  rating: 4.6,
+                  features: [
+                    "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
+                    "Günstige Mobilfunktarife mit 5G-Unterstützung",
+                    "Spezielle Angebote für Selbstständige und Geschäftskunden",
+                    "Kombi-Vorteile für DSL und Mobilfunk",
+                    "Kostenloser WLAN-Router bei Vertragsabschluss",
+                    "Flexibles Streaming mit GigaTV",
+                    "24/7 Kundenhotline für schnellen Support",
+                    "Bis zu 100€ Startguthaben für Neukunden",
+                    "Schnelle Installation und Einrichtung",
+                    "Testsieger für Kundenservice (connect 2025)",
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 100€ Startguthaben",
+                  logo: "📡",
+                  url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons=",
+                },
+                {
+                  name: "1&1",
+                  rating: 4.7,
+                  features: [
+                    "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
+                    "Testsieger für Internetgeschwindigkeit (connect 2025)",
+                    "Kostenloser HomeServer für optimales WLAN",
+                    "Spezielle Angebote für Selbstständige und Firmen",
+                    "Kombi-Vorteile mit Mobilfunktarifen",
+                    "30 Tage Testphase für alle Tarife",
+                    "Bis zu 50€ Startguthaben für junge Kunden",
+                    "24h Austausch-Service bei Defekten",
+                    "Umfassender Umzugsservice",
+                    "Attraktive Bundle-Angebote mit Smartphones",
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 50€ Startguthaben",
+                  logo: "🌐",
+                  url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=",
+                },
+                {
+                  name: "Verivox",
+                  rating: 4.9,
+                  features: [
+                    "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
+                    "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
+                    "Spezielle Angebote für Selbstständige und Unternehmen",
+                    "TÜV-geprüfter Vergleichsportal mit 4.9/5 Bewertung",
+                    "Bis zu 200€ Prämie für Freundschaftswerbung",
+                    "Kostenloser Wechselservice für Tarife",
+                    "Transparente Tarifübersicht in der Verivox-App",
+                    "Schneller Online-Abschluss für Versicherungen",
+                    "Über 25 Jahre Erfahrung im Vergleichsmarkt",
+                    "Bis zu 1.000€ jährliche Einsparungen möglich",
+                  ],
+                  price: "100% kostenlos",
+                  bonus: "Bis zu 200€ Prämie",
+                  logo: "🏠",
+                  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
+                },
+                {
+                  name: "freenet",
+                  rating: 4.7,
+                  features: [
+                    "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+                    "Kostenloser Wechselservice für Mobilfunkverträge",
+                    "5G-Unterstützung in allen Tarifen",
+                    "Kombi-Vorteile mit DSL- und Festnetzanschluss",
+                    "Bis zu 100€ Startguthaben für Neukunden",
+                    "Kostenlose Hotline für Kunden",
+                    "Schnelle Vertragsabwicklung online",
+                    "Testsieger für Kundenservice (connect 2025)",
+                    "Zusätzliche Rabatte für junge Kunden unter 28",
+                    "Umweltfreundliche Tarife mit CO₂-Kompensation",
+                  ],
+                  price: "ab 9,99€/Monat",
+                  bonus: "Bis zu 100€ Startguthaben",
+                  logo: "📱",
+                  url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
+                },
+              ].map((provider, index) => (
+                <Card
+                  key={provider.name}
+                  className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden"
                 >
-                  Besten Tarif berechnen
-                </Button>
-              </a>
-            </div>
-          </section>
-
-          {/* Vergleichstabellen */}
-          <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
-            <div className="container mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-                Testsieger September 2025: Top-Anbieter für Finanzprodukte
-              </h2>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    name: "Tarifcheck.de",
-                    rating: 4.5,
-                    features: [
-                      "Über 20 Jahre Erfahrung als Vergleichsportal",
-                      "100% kostenloser und unverbindlicher Vergleich",
-                      "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-                      "Mehrfach ausgezeichnet mit 'sehr gut'",
-                      "eKomi Silber Siegel mit 4,5/5 Sternen",
-                      "Über 3.194 Kundenbewertungen",
-                      "Deutschlands drittgrößtes Vergleichsportal",
-                      "Vertrauen von Millionen Verbrauchern",
-                      "Bis zu 1.000€ jährlich sparen möglich",
-                    ],
-                    price: "100% kostenlos",
-                    bonus: "Bis zu 120€ Neukundenbonus",
-                    logo: "🏆",
-                    url: "https://www.tarifcheck.de/girokonto/",
-                  },
-                  {
-                    name: "eRecht24",
-                    rating: 4.3,
-                    features: [
-                      "Rechtssicherheit für Webseiten",
-                      "DSGVO-konform mit Premium Tools",
-                      "Automatische Rechtstext-Generatoren",
-                      "Abmahnschutz inklusive",
-                      "Praxis-Tools für Social Media",
-                      "Kostenlose Erstberatung",
-                      "NEU: KI-gestützte Lösungen",
-                      "Zentraler Projekt Manager",
-                      "Live-Webinare zu Internetrecht",
-                      "Muster-Verträge & Checklisten",
-                    ],
-                    price: "ab 20€/Monat",
-                    bonus: "Gratis Rechtscheck",
-                    logo: "⚖️",
-                    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subids=&target=default",
-                  },
-                  {
-                    name: "XTB",
-                    rating: 4.5,
-                    features: [
-                      "Gratis Aktie für neue Investoren",
-                      "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-                      "Über 8000 Aktien & ETFs",
-                      "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-                      "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-                      "eWallet mit virtueller Mastercard",
-                      "Smarte ETF-Sparpläne",
-                      "0% Kommission bis 100.000€ Umsatz",
-                      "Kostenlose Ein- & Auszahlungen",
-                      "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-                      "Platz 1 CFD-Broker 2024/25",
-                    ],
-                    price: "0€ Kommission",
-                    bonus: "Demo-Konto",
-                    logo: "📊",
-                    url: "https://link-pso.xtb.com/pso/lMDhc",
-                  },
-                  {
-                    name: "Credimaxx",
-                    rating: 4.9,
-                    features: [
-                      "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-                      "Sofortvermittlung durch erfahrene Kreditprofis",
-                      "Digitaler Abschluss mit WebID oder VideoIdent",
-                      "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-                      "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-                      "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-                      "Vermittlung in bis zu 1 Minute",
-                      "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-                      "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-                      "25 Jahre Erfahrung in der Kreditvermittlung",
-                    ],
-                    price: "ab 10,99% eff. Zins p.a.",
-                    bonus: "Schnelle Auszahlung",
-                    logo: "💳",
-                    url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
-                  },
-                  {
-                    name: "HanseMerkur",
-                    rating: 4.7,
-                    features: [
-                      "Umfassender Schutz für Hunde und Katzen",
-                      "Bis zu 100% Kostenerstattung",
-                      "Freie Tierarztwahl",
-                      "Keine Altersbeschränkung",
-                      "Schnelle Schadensbearbeitung",
-                      "Flexible Tarifoptionen",
-                      "Zusatzleistungen wie Physiotherapie",
-                      "Online-Vertragsmanagement",
-                      "24/7 Kundenhotline",
-                    ],
-                    price: "ab 10€/Monat",
-                    bonus: "Kostenloser Gesundheitscheck",
-                    logo: "🐾",
-                    url: "https://www.hansemerkur.de/tierkrankenversicherung",
-                  },
-                  {
-                    name: "CHECK24",
-                    rating: 4.8,
-                    features: [
-                      "Kostenloser Kontowechselservice",
-                      "Über 50 Banken im Vergleich",
-                      "Bis zu 250€ Willkommensbonus",
-                      "Kostenlose Kontoführung",
-                      "Schnelle Kontoeröffnung",
-                      "TÜV-geprüfter Vergleich",
-                      "24/7 Kundensupport",
-                      "Mobile Banking App",
-                      "Kreditkartenoptionen verfügbar",
-                      "Attraktive Zinsen auf Tagesgeld",
-                    ],
-                    price: "0€ Kontoführung",
-                    bonus: "Bis zu 250€ Bonus",
-                    logo: "🏦",
-                    url: "https://www.check24.de/girokonto/",
-                  },
-                  {
-                    name: "Vodafone",
-                    rating: 4.6,
-                    features: [
-                      "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
-                      "Günstige Mobilfunktarife mit 5G-Unterstützung",
-                      "Spezielle Angebote für Selbstständige und Geschäftskunden",
-                      "Kombi-Vorteile für DSL und Mobilfunk",
-                      "Kostenloser WLAN-Router bei Vertragsabschluss",
-                      "Flexibles Streaming mit GigaTV",
-                      "24/7 Kundenhotline für schnellen Support",
-                      "Bis zu 100€ Startguthaben für Neukunden",
-                      "Schnelle Installation und Einrichtung",
-                      "Testsieger für Kundenservice (connect 2025)",
-                    ],
-                    price: "ab 9,99€/Monat",
-                    bonus: "Bis zu 100€ Startguthaben",
-                    logo: "📡",
-                    url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons=",
-                  },
-                  {
-                    name: "1&1",
-                    rating: 4.7,
-                    features: [
-                      "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
-                      "Testsieger für Internetgeschwindigkeit (connect 2025)",
-                      "Kostenloser HomeServer für optimales WLAN",
-                      "Spezielle Angebote für Selbstständige und Firmen",
-                      "Kombi-Vorteile mit Mobilfunktarifen",
-                      "30 Tage Testphase für alle Tarife",
-                      "Bis zu 50€ Startguthaben für junge Kunden",
-                      "24h Austausch-Service bei Defekten",
-                      "Umfassender Umzugsservice",
-                      "Attraktive Bundle-Angebote mit Smartphones",
-                    ],
-                    price: "ab 9,99€/Monat",
-                    bonus: "Bis zu 50€ Startguthaben",
-                    logo: "🌐",
-                    url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=",
-                  },
-                  {
-                    name: "Verivox",
-                    rating: 4.9,
-                    features: [
-                      "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
-                      "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
-                      "Spezielle Angebote für Selbstständige und Unternehmen",
-                      "TÜV-geprüfter Vergleichsportal mit 4.9/5 Bewertung",
-                      "Bis zu 200€ Prämie für Freundschaftswerbung",
-                      "Kostenloser Wechselservice für Tarife",
-                      "Transparente Tarifübersicht in der Verivox-App",
-                      "Schneller Online-Abschluss für Versicherungen",
-                      "Über 25 Jahre Erfahrung im Vergleichsmarkt",
-                      "Bis zu 1.000€ jährliche Einsparungen möglich",
-                    ],
-                    price: "100% kostenlos",
-                    bonus: "Bis zu 200€ Prämie",
-                    logo: "🏠",
-                    url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
-                  },
-                  {
-                    name: "freenet",
-                    rating: 4.7,
-                    features: [
-                      "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-                      "Kostenloser Wechselservice für Mobilfunkverträge",
-                      "5G-Unterstützung in allen Tarifen",
-                      "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-                      "Bis zu 100€ Startguthaben für Neukunden",
-                      "Kostenlose Hotline für Kunden",
-                      "Schnelle Vertragsabwicklung online",
-                      "Testsieger für Kundenservice (connect 2025)",
-                      "Zusätzliche Rabatte für junge Kunden unter 28",
-                      "Umweltfreundliche Tarife mit CO₂-Kompensation",
-                    ],
-                    price: "ab 9,99€/Monat",
-                    bonus: "Bis zu 100€ Startguthaben",
-                    logo: "📱",
-                    url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
-                  },
-                ].map((provider, index) => (
-                  <Card
-                    key={provider.name}
-                    className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden"
-                  >
-                    <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
-                      Top Empfehlung
-                    </Badge>
-                    <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
-                      <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
-                      <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
-                      <div className="flex items-center justify-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
-                            aria-hidden="true"
-                          />
-                        ))}
-                        <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
+                  <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
+                    Top Empfehlung
+                  </Badge>
+                  <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
+                    <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
+                    <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
+                    <div className="flex items-center justify-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                          aria-hidden="true"
+                        />
+                      ))}
+                      <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
+                    <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
+                      <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
+                      <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
+                        {provider.bonus}
+                      </Badge>
+                    </div>
+                    <div className="flex-grow overflow-hidden">
+                      <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{ scrollbarWidth: "thin" }}>
+                        <ul className="space-y-1.5">
+                          {provider.features.map((feature, i) => (
+                            <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
+                              <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                              <p className="break-words overflow-wrap-anywhere">{feature}</p>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
-                      <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
-                        <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
-                        <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
-                          {provider.bonus}
-                        </Badge>
-                      </div>
-                      <div className="flex-grow overflow-hidden">
-                        <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{ scrollbarWidth: "thin" }}>
-                          <ul className="space-y-1.5">
-                            {provider.features.map((feature, i) => (
-                              <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
-                                <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                                <p className="break-words overflow-wrap-anywhere">{feature}</p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                      <a
-                        href={provider.url}
-                        target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                        rel={provider.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                        aria-label={`Zum Anbieter ${provider.name}`}
+                    </div>
+                    <a
+                      href={provider.url}
+                      target={provider.url.startsWith("http") ? "_blank" : "_self"}
+                      rel={provider.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                      aria-label={`Zum Anbieter ${provider.name}`}
+                    >
+                      <Button
+                        className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
                       >
-                        <Button
-                          className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
-                        >
-                          Zum Anbieter und sparen*
-                          {provider.name === "Vodafone" && (
-                            <Image
-                              src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
-                              alt=""
-                              width={0}
-                              height={0}
-                              className="border-0"
-                            />
-                          )}
-                        </Button>
-                      </a>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
-                <p>
-                  CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
-                  72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
-                  Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
-                </p>
-                <p className="mt-4">
-                  *Wir erhalten eine Provision für Käufe über diese Links.
-                </p>
-              </div>
+                        Zum Anbieter und sparen*
+                        {provider.name === "Vodafone" && (
+                          <Image
+                            src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
+                            alt=""
+                            width={0}
+                            height={0}
+                            className="border-0"
+                          />
+                        )}
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-          </section>
-{/* New Content Sections for Subpages */}
-          <section className="py-12 sm:py-16 bg-white" id="content-sections">
-            <div className="container mx-auto px-4">
-              {/* Banking Section */}
-              <div className="mb-12" id="banking-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking Anbieter</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Die Wahl der richtigen Bank entscheidet über Gebühren, Servicequalität und langfristige Zufriedenheit. Ein durchdachter Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
-                  <Link href="/banking" className="text-green-600 hover:underline">
-                    Banking-Vergleichsseite
-                  </Link>{" "}
-                  hilft Ihnen, das optimale Konto zu finden.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
-                <p className="mb-4 text-gray-700">
-                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
-                    CHECK24
-                  </a>{" "}
-                  bieten bis zu 250€ Bonus.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
-                <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
-                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
-                    Tagesgeldkonten
-                  </Link>{" "}
-                  für maximale Erträge.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
-                <p className="mb-4 text-gray-700">
-                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
-                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
-                    Tarifcheck.de
-                  </a>{" "}
-                  bietet kostenlose Vergleiche.
-                </p>
-                <Link href="/banking">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Banking-Produkte Entdecken
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Trading Section */}
-              <div className="mb-12" id="trading-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
-                  <Link href="/trading" className="text-green-600 hover:underline">
-                    Trading-Seite um das richtige Depot zu eröffnen
-                  </Link>
-                  . In wenigen Minuten können Sie per App mit Aktien handeln, Ihre finanzielle Zukunft planen oder in Bitcoin und andere Kryptowährungen investieren.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
-                <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
-                  <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
-                    Altersvorsorge-Optionen
-                  </Link>
-                  . 
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
-                <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
-                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
-                    XTB
-                  </a>{" "}
-                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rostoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
-                <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
-                  <Link href="/trading#krypto" className="text-green-600 hover:underline">
-                    sicheres Krypto-Trading
-                  </Link>
-                  . In Unserer Trading Rubrik finde Sie Informationen und Tips um sicher und gut vorbereitet mit dem Handel zu beginnen.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
-                <p className="mb-4 text-gray-700">
-                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
-                  <Link href="/trading#etfs" className="text-green-600 hover:underline">
-                    ETF-Sparplänen
-                  </Link>
-                  .
-                </p>
-                <Link href="/trading">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt Vorsorge planen
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Versicherungen Section */}
-              <div className="mb-12" id="versicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
-                  <Link href="/versicherungen" className="text-green-600 hover:underline">
-                    Versicherungsseite
-                  </Link>
-                  , welche Policen unverzichtbar sind.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
-                  <a
-                    href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green-600 hover:underline"
-                  >
-                    Verivox
-                  </a>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
-                  <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
-                    KFZ-Vergleich
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Rechtschutzversicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung deckt Anwalts- und Gerichtskosten in privaten, beruflichen und Verkehrsstreitigkeiten. Besonders wichtig für Mieter und Selbstständige.
-                </p>
-                <Link href="/versicherungen">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Den Besten Tarif finden
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Tierversicherungen Section */}
-              <div className="mb-12" id="tierversicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
-                  <Link href="/tierversicherungen" className="text-green-600 hover:underline">
-                    Tierversicherungsseite
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
-                <p className="mb-4 text-gray-700">
-                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
-                    HanseMerkur
-                  </a>{" "}
-                  decken bis zu 100% der Kosten ab.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
-                <p className="mb-4 text-gray-700">
-                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
-                  <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
-                    Tierversicherungen
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
-                <p className="mb-4 text-gray-700">
-                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
-                  <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
-                    alternative Behandlungen
-                  </Link>
-                  .
-                </p>
-                <Link href="/tierversicherungen">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Tierarztkosten absichern
-                  </Button>
-                </Link>
-              </div>
+            <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
+              <p>
+                CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
+                72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
+                Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
+              </p>
+              <p className="mt-4">
+                *Wir erhalten eine Provision für Käufe über diese Links.
+              </p>
             </div>
-          </section>
+          </div>
+        </section>
+
+        {/* New Content Sections for Subpages */}
+        <section className="py-12 sm:py-16 bg-white" id="content-sections">
+          <div className="container mx-auto px-4">
+            {/* Banking Section */}
+            <div className="mb-12" id="banking-content">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking Anbieter</h2>
+              <p className="mb-4 text-gray-700" itemProp="description">
+                Die Wahl der richtigen Bank entscheidet über Gebühren, Servicequalität und langfristige Zufriedenheit. Ein durchdachter Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
+                <Link href="/banking" className="text-green-600 hover:underline">
+                  Banking-Vergleichsseite
+                </Link>{" "}
+                hilft Ihnen, das optimale Konto zu finden.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
+              <p className="mb-4 text-gray-700">
+                Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
+                <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  CHECK24
+                </a>{" "}
+                bieten bis zu 250€ Bonus.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
+              <p className="mb-4 text-gray-700">
+                Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
+                  Tagesgeldkonten
+                </Link>{" "}
+                für maximale Erträge.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
+              <p className="mb-4 text-gray-700">
+                Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
+                <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  Tarifcheck.de
+                </a>{" "}
+                bietet kostenlose Vergleiche.
+              </p>
+              <Link href="/banking">
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                  Banking-Produkte Entdecken
+                </Button>
+              </Link>
+            </div>
+
+            {/* Trading Section */}
+            <div className="mb-12" id="trading-content">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
+              <p className="mb-4 text-gray-700" itemProp="description">
+                Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
+                <Link href="/trading" className="text-green-600 hover:underline">
+                  Trading-Seite um das richtige Depot zu eröffnen
+                </Link>
+                . In wenigen Minuten können Sie per App mit Aktien handeln, Ihre finanzielle Zukunft planen oder in Bitcoin und andere Kryptowährungen investieren.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
+              <p className="mb-4 text-gray-700">
+                Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
+                <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
+                  Altersvorsorge-Optionen
+                </Link>
+                . 
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
+              <p className="mb-4 text-gray-700">
+                Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
+                <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  XTB
+                </a>{" "}
+                bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rostoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine Verzinsung des Guthabens.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
+              <p className="mb-4 text-gray-700">
+                Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
+                <Link href="/trading#krypto" className="text-green-600 hover:underline">
+                  sicheres Krypto-Trading
+                </Link>
+                . In Unserer Trading Rubrik finden Sie Informationen und Tipps um sicher und gut vorbereitet mit dem Handel zu beginnen.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
+              <p className="mb-4 text-gray-700">
+                Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
+                <Link href="/trading#etfs" className="text-green-600 hover:underline">
+                  ETF-Sparplänen
+                </Link>
+                .
+              </p>
+              <Link href="/trading">
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                  Jetzt Vorsorge planen
+                </Button>
+              </Link>
+            </div>
+
+            {/* Versicherungen Section */}
+            <div className="mb-12" id="versicherungen-content">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
+              <p className="mb-4 text-gray-700" itemProp="description">
+                Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
+                <Link href="/versicherungen" className="text-green-600 hover:underline">
+                  Versicherungsseite
+                </Link>
+                , welche Policen unverzichtbar sind.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
+              <p className="mb-4 text-gray-700">
+                Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
+                <a
+                  href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 hover:underline"
+                >
+                  Verivox
+                </a>
+                .
+              </p>
+              <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
+              <p className="mb-4 text-gray-700">
+                Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
+                <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
+                  KFZ-Vergleich
+                </Link>
+                .
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Rechtschutzversicherung</h3>
+              <p className="mb-4 text-gray-700">
+                Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung deckt Anwalts- und Gerichtskosten in privaten, beruflichen und Verkehrsstreitigkeiten. Besonders wichtig für Mieter und Selbstständige.
+              </p>
+              <Link href="/versicherungen">
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                  Den Besten Tarif finden
+                </Button>
+              </Link>
+            </div>
+
+            {/* Tierversicherungen Section */}
+            <div className="mb-12" id="tierversicherungen-content">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
+              <p className="mb-4 text-gray-700" itemProp="description">
+                Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
+                <Link href="/tierversicherungen" className="text-green-600 hover:underline">
+                  Tierversicherungsseite
+                </Link>
+                .
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
+              <p className="mb-4 text-gray-700">
+                Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
+                <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  HanseMerkur
+                </a>{" "}
+                decken bis zu 100% der Kosten ab.
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
+              <p className="mb-4 text-gray-700">
+                Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
+                <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
+                  Tierversicherungen
+                </Link>
+                .
+              </p>
+              <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
+              <p className="mb-4 text-gray-700">
+                Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
+                <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
+                  alternative Behandlungen
+                </Link>
+                .
+              </p>
+              <Link href="/tierversicherungen">
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                  Tierarztkosten absichern
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
 
           {/* Kundenbewertungen */}
           <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
