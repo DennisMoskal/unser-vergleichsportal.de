@@ -55,7 +55,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
-        <meta charSet="UTF-8" />  {/* Korrigiert: charset → charSet */}
+        <meta charSet="UTF-8" />
 
         {/* --- Open Graph - LinkedIn optimiert --- */}
         <meta property="og:type" content="website" />
@@ -111,6 +111,20 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
+
+        {/* ---- Google Analytics Tag (gtag.js) ---- */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RG2RPFD2J9"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RG2RPFD2J9');
+          `}
+        </Script>
 
         {/* ---- Schema.org: Organization ---- */}
         <script
