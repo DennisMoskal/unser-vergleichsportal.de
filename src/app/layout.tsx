@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  // Dynamischer Canonical Tag über metadata
+  metadataBase: new URL('https://unser-vergleichsportal.de'),
+  alternates: {
+    canonical: './', // Relativ - zeigt immer auf aktuelle Seite
+  },
 };
 
 export default function RootLayout({
@@ -51,7 +56,7 @@ export default function RootLayout({
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://smartfinanz.de" />
+        {/* Canonical Tag wird jetzt automatisch durch metadata.alternates.canonical gesetzt */}
         <Script
           crossOrigin="anonymous"
           src="//unpkg.com/same-runtime/dist/index.global.js"
