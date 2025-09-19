@@ -507,34 +507,44 @@ export default function Home() {
   <link rel="alternate icon" href="/images/favicon.ico" />
 
   {/* --- Open Graph --- */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-  <meta
-    property="og:description"
-    content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
-  />
-  <meta property="og:url" content="https://unser-vergleichsportal.de" />
-  <meta
-    property="og:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Unser-Vergleichsportal – Transparenter Finanzvergleich" />
-  <meta property="og:site_name" content="SmartFinanz" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+<meta
+  property="og:description"
+  content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
+/>
+<meta property="og:url" content="https://unser-vergleichsportal.de" />
 
-  {/* --- Twitter --- */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-  <meta
-    name="twitter:description"
-    content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
-  />
-  <meta
-    name="twitter:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta name="twitter:site" content="@unservergleich" />
+{/* Bild für Social Sharing */}
+<meta
+  property="og:image"
+  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
+<meta
+  property="og:image:secure_url"
+  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Unser-Vergleichsportal – Transparenter Finanzvergleich" />
+
+<meta property="og:site_name" content="SmartFinanz" />
+
+{/* --- Twitter --- */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:title"
+  content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten"
+/>
+<meta
+  name="twitter:description"
+  content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
+/>
+<meta
+  name="twitter:image"
+  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
+<meta name="twitter:site" content="@unservergleich" />
 
   {/* --- Preloads & Prefetch --- */}
   <link rel="preload" href="/logo.png" as="image" />
