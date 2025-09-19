@@ -550,7 +550,7 @@ export default function Home() {
 <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
 <meta name="twitter:site" content="@unservergleich" />
 <meta name="twitter:creator" content="@unservergleich" />
-/>
+
 <meta name="twitter:site" content="@unservergleich" />
 
 
