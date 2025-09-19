@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",  // Komma hinzugefügt!
+  title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
   description: "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
   icons: {
     icon: "/favicon.svg",
@@ -55,7 +55,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
-        <meta charset="UTF-8" />  {/* Korrigiert: JSX-Syntax */}
+        <meta charSet="UTF-8" />  {/* Korrigiert: charset → charSet */}
 
         {/* --- Open Graph - LinkedIn optimiert --- */}
         <meta property="og:type" content="website" />
