@@ -944,7 +944,7 @@ export default function DeFi() {
             </p>
 
             {/* Maestro Bot – bleibt in diesem Abschnitt, zentriert & sekundärer Button */}
-            <div className="mt-6 mb-6 flex justify-center">
+            <div className="mt-4 mb-6 text-center">
               <Link
                 href="https://t.me/maestro_main_bot?start=ref_01z8ia"
                 target="_blank"
