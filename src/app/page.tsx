@@ -506,7 +506,7 @@ export default function Home() {
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="alternate icon" href="/images/favicon.ico" />
 
- {/* --- Open Graph --- */}
+ {/* --- Open Graph - LinkedIn optimiert --- */}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
 <meta
@@ -514,20 +514,15 @@ export default function Home() {
   content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
 />
 <meta property="og:url" content="https://unser-vergleichsportal.de" />
+<meta property="og:site_name" content="SmartFinanz" />
 
-{/* Bild für Social Sharing */}
-<meta
-  property="og:image"
-  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-/>
-<meta
-  property="og:image:secure_url"
-  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-/>
+{/* NEUE Bild-Tags - LinkedIn kompatibel */}
+<meta property="og:image" content="https://unser-vergleichsportal.de/images/og-linkedin.jpg" />
+<meta property="og:image:secure_url" content="https://unser-vergleichsportal.de/images/og-linkedin.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Unser-Vergleichsportal – Transparenter Finanzvergleich" />
+<meta property="og:image:height" content="627" />
+<meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
 
 <meta property="og:site_name" content="SmartFinanz" />
 <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
