@@ -506,7 +506,7 @@ export default function Home() {
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="alternate icon" href="/images/favicon.ico" />
 
-  {/* --- Open Graph --- */}
+ {/* --- Open Graph --- */}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
 <meta
@@ -524,11 +524,15 @@ export default function Home() {
   property="og:image:secure_url"
   content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
 />
+<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Unser-Vergleichsportal – Transparenter Finanzvergleich" />
 
 <meta property="og:site_name" content="SmartFinanz" />
+<meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
+<meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
 
 {/* --- Twitter --- */}
 <meta name="twitter:card" content="summary_large_image" />
@@ -545,6 +549,7 @@ export default function Home() {
   content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
 />
 <meta name="twitter:site" content="@unservergleich" />
+
 
   {/* --- Preloads & Prefetch --- */}
   <link rel="preload" href="/logo.png" as="image" />
