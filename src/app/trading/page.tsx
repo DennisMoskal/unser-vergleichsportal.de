@@ -952,7 +952,7 @@ export default function DeFi() {
     aria-label="Zum Maestro Bot"
     title="Zum Maestro Bot"
   >
-    <Button className={btnPrimary}>Zum Maestro Bot</Button>
+    <Button className={btnPrimary}>Bridgen mit Maestro</Button>
   </Link>
 </div>
 
