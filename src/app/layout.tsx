@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  // Dynamischer Canonical Tag über metadata
   metadataBase: new URL('https://unser-vergleichsportal.de'),
   alternates: {
-    canonical: "https://unser-vergleichsportal.de/", // Nur diese Zeile geändert
-    sitemap: "https://unser-vergleichsportal.de/sitemap.xml",
+    canonical: 'https://unser-vergleichsportal.de/', // Festgelegt auf absolute URL
   },
 };
 
@@ -35,21 +35,29 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
+        {/* Bing-Verifizierung für Yahoo/Bing */}
         <meta name="msvalidate.01" content="5201AAEF61BC57DF0BFD9257B6E8B51A" />
+        {/* Impact Site Verification Tag */}
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+        {/* Google Verification Tag */}
         <meta
           name="google-site-verification"
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
         <meta name="verification" content="f97e97c1e8f6cf5274f5d6d0cc18505c" />
+        {/* Favicon für ältere Browser und Suchmaschinen */}
         <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Apple Touch Icon für iOS-Geräte */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Sitemap für Suchmaschinen */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        {/* Zusätzliche SEO-Meta-Tags */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
 
+        {/* --- Open Graph - LinkedIn optimiert --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
         <meta
@@ -58,6 +66,8 @@ export default function RootLayout({
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de" />
         <meta property="og:site_name" content="SmartFinanz" />
+
+        {/* Bild für Social Sharing - LinkedIn optimiert mit angepasster Größe */}
         <meta
           property="og:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
@@ -70,12 +80,15 @@ export default function RootLayout({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
+
+        {/* Zusätzliche LinkedIn-spezifische Meta Tags */}
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
         <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
         <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
         <meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
 
+        {/* --- Twitter Cards - ebenfalls optimiert --- */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
@@ -87,6 +100,7 @@ export default function RootLayout({
         <meta name="twitter:site" content="@unservergleich" />
         <meta name="twitter:creator" content="@unservergleich" />
 
+        {/* --- Preloads & Prefetch --- */}
         <link rel="preload" href="/logo.png" as="image" />
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
         <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
@@ -98,6 +112,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.awin1.com" />
         <link rel="dns-prefetch" href="https://www.freenet.de" />
 
+        {/* ---- Google Analytics Tag (gtag.js) ---- */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-RG2RPFD2J9"
@@ -111,6 +126,7 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* ---- Schema.org: Organization ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -140,6 +156,7 @@ export default function RootLayout({
           }}
         />
 
+        {/* ---- Schema.org: WebSite + SearchAction ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -158,6 +175,7 @@ export default function RootLayout({
           }}
         />
 
+        {/* ---- Schema.org: FAQPage ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
