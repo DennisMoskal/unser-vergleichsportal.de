@@ -877,7 +877,7 @@ export default function DeFi() {
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Tipp: Nutzen Sie TradingView’s Demo-Konto, um Strategien risikofrei zu testen.
+              Tipp: Nutzen Sie TradingView’s Demo-Konto, um Strategien risikofrei zu testen
             </p>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Sicher Bitcoin handeln mit BlackBull
