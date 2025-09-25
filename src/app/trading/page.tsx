@@ -662,7 +662,7 @@ export default function DeFi() {
               bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              <Button className={btnPrimary}>Unsere Testsieger 09/2025</Button>
+              <Button className={btnPrimary}>UNSERE TESTSIEGER 09/2025</Button>
             </Link>
           </div>
         </div>
@@ -787,7 +787,7 @@ export default function DeFi() {
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
                     rel={provider.url.startsWith("http") ? "noopener nofollow sponsored" : undefined}
                   >
-                    <Button className={`w-full mt-auto ${btnPrimary}`}>Zum Anbieter und sparen*</Button>
+                    <Button className={`w-full mt-auto ${btnPrimary}`}>ZUM ANBIETER UND SPAREN*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -954,7 +954,7 @@ export default function DeFi() {
                 aria-label="Zum PlatinumLabs für Bridging"
                 title="Zum PlatinumLabs für Bridging"
               >
-                <Button className={btnPrimary}>Top Bridge Tools</Button>
+                <Button className={btnPrimary}>TOP BRIDGE TOOLS</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -1132,7 +1132,7 @@ export default function DeFi() {
                 aria-label="Versicherungen für Krypto-Anleger"
                 title="Versicherungen für Krypto-Anleger"
               >
-                <Button className={btnPrimary}>Zu den Versicherungen</Button>
+                <Button className={btnPrimary}>ZU DEN VERSICHERUNGEN</Button>
               </Link>
             </div>
           </div>
@@ -1253,7 +1253,7 @@ export default function DeFi() {
                   aria-label="Zu den Telegram Bots"
                   title="Zu den Telegram Bots"
                 >
-                  <Button className={btnPrimary}>Zu den schnellsten Bots</Button>
+                  <Button className={btnPrimary}>ZU DEN SCHNELLSTEN BOTS</Button>
                 </Link>
               </div>
             </div>
@@ -1528,7 +1528,7 @@ export default function DeFi() {
         <Button 
           className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
-          Zur Startseite
+          ZUR STARTSEITE
         </Button>
       </Link>
     </div>
