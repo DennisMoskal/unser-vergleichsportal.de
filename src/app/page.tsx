@@ -680,7 +680,7 @@ export default function Home() {
                   size="lg"
                   className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 >
-                  Besten Tarif berechnen
+                  BESTEN TARIF BERECHNEN
                 </Button>
               </a>
             </div>
@@ -943,7 +943,7 @@ export default function Home() {
                         <Button
                           className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
                         >
-                          Zum Anbieter und sparen*
+                          ZUM ANBIETER UND SPAREN*
                           {provider.name === "Vodafone" && (
                             <Image
                               src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
@@ -1010,7 +1010,7 @@ export default function Home() {
                 </p>
                 <Link href="/banking">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Banking-Produkte Entdecken
+                    BANKING-PRODUKTE ENTDECKEN
                   </Button>
                 </Link>
               </div>
@@ -1059,7 +1059,7 @@ export default function Home() {
                 </p>
                 <Link href="/trading">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Jetzt Vorsorge planen
+                    JETZT VORSORGE PLANEN
                   </Button>
                 </Link>
               </div>
@@ -1101,7 +1101,7 @@ export default function Home() {
                 </p>
                 <Link href="/versicherungen">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Den Besten Tarif finden
+                    DEN BESTEN TARIF FINDEN
                   </Button>
                 </Link>
               </div>
@@ -1142,7 +1142,7 @@ export default function Home() {
                 </p>
                 <Link href="/tierversicherungen">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    Tierarztkosten absichern
+                    TIERARZTKOSTEN ABSICHERN
                   </Button>
                 </Link>
               </div>
