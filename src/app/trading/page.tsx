@@ -449,7 +449,7 @@ const providerData = {
         "Telegram-Integration für schnelles Trading",
         "24/7 Support für DeFi- und Krypto-Trader",
         "Anpassbare Tools für Risikomanagement",
-        "Schnelle und einfache one klick Einrichtung"
+        "Schnelle und einfache one-klick Einrichtung"
       ],
       price: "Free to Start",
       bonus: "Free Demo Access",
