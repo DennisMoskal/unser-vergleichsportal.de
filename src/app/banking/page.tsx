@@ -610,7 +610,7 @@ export default function Banking() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mt-2 text-2xl font-bold">Vermögensaufbau und Vorsorge durch intelligente Geldanlage</h2>
-            <div className="mt-3 flex justify-center">
+            <div className="mt-4 mb-6 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
@@ -842,7 +842,7 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
                 href="https://www.check24.de/baufinanzierung/" 
                 target="_blank" 
@@ -894,7 +894,7 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei den meisten Direktbanken ist Online Banking komplett kostenlos. Auch viele Filialbanken bieten Online Services ohne Extragebühren an.</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
                 href="https://www.tarifcheck.de/girokonto/" 
                 target="_blank" 
@@ -950,7 +950,7 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
                 href="/trading" 
                 target="_blank" 
