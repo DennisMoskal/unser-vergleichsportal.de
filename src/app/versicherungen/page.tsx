@@ -875,7 +875,7 @@ export default function Versicherungen() {
                     rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
                     <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Zum Anbieter und sparen*
+                      ZUM ANBIETER UND SPAREN*
                     </Button>
                   </a>
                 </CardContent>
@@ -923,9 +923,9 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.huk.de/versicherungen/kfz-versicherung.html" target="_blank" rel="sponsored">
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored>
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kfz-Versicherung vergleichen
+                  JETZT KFZ-VERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -956,7 +956,7 @@ export default function Versicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Haftpflichtversicherung vergleichen
+                  HAFTPFLICHTVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -987,7 +987,7 @@ export default function Versicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Hausratversicherung vergleichen
+                  HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -1015,7 +1015,7 @@ export default function Versicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Risikolebensversicherung vergleichen
+                  RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -1046,7 +1046,7 @@ export default function Versicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Rechtsschutzversicherung vergleichen
+                  RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -1106,7 +1106,7 @@ export default function Versicherungen() {
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
               <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                Jetzt Versicherungen vergleichen
+                ALLE VERSICHERUNGEN IM ÜBERBLICK
               </Button>
             </a>
           </div>
@@ -1124,7 +1124,7 @@ export default function Versicherungen() {
             <div className="mt-6">
               <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Jetzt bei CHECK24 vergleichen
+                  KOSTENLOS VERGLEICHEN UND WECHSELN
                 </Button>
               </a>
             </div>
