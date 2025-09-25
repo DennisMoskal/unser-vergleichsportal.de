@@ -667,7 +667,7 @@ export default function Tierversicherungen() {
                     rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
                     <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                      Zum Anbieter und sparen*
+                      ZUM ANBIETER UND SPAREN*
                     </Button>
                   </a>
                 </CardContent>
@@ -715,7 +715,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.agila.de/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Tierversicherung berechnen
+                  JETZT TIERVERSICHERUNG BERECHENEN
                 </Button>
               </a>
             </div>
@@ -748,7 +748,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.petplan.de/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Schutz vor Tierarzt- und OP-Kosten
+                  SCHUTZ VOR TIERARZT- UND OP-KOSTEN
                 </Button>
               </a>
             </div>
@@ -776,7 +776,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.allianz.de/tierversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Pferdeversicherung abschließen
+                  PFERDEVERSICHERUNG ABSCHLIESEN
                 </Button>
               </a>
             </div>
@@ -828,7 +828,7 @@ export default function Tierversicherungen() {
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
               <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                Alle Tierversicherungen vergleichen
+                ALLE TIERVERSICHERUNGEN VERGLEICHEN
               </Button>
             </a>
           </div>
