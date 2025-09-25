@@ -804,7 +804,7 @@ export default function DeFi() {
                 </p>
               </div>
               <Link href="/banking" aria-label="Zum Banking-Vergleich" title="Zum Banking-Vergleich">
-                <Button className={btnPrimary}>Banking-Produkte entdecken</Button>
+                <Button className={btnPrimary}>BANKING-PRODUKTE ENTDECKEN</Button>
               </Link>
             </div>
           </div>
@@ -910,7 +910,7 @@ export default function DeFi() {
                 target="_blank"
                 rel="noopener nofollow sponsored"
               >
-                <Button className={btnPrimary}>CRYPTO TRADING STARTEN</Button>
+                <Button className={btnPrimary}>CRYPTO-TRADING STARTEN</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -954,7 +954,7 @@ export default function DeFi() {
                 aria-label="Zum PlatinumLabs für Bridging"
                 title="Zum PlatinumLabs für Bridging"
               >
-                <Button className={btnPrimary}>Schnellste Crypto Bridges</Button>
+                <Button className={btnPrimary}>ZU DEN SCHNELLSTEN CRYPTO-BRIDGES</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
