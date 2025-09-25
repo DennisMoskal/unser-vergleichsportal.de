@@ -957,33 +957,9 @@ export default function DeFi() {
                 <Button className={btnPrimary}>Bridgen mit PlatinumLabs</Button>
               </Link>
             </div>
-            {/* New CTA Button after Bridging */}
-            <div className="mt-6 flex justify-center">
-              <Link
-                href="https://platinumlabs.vercel.app/"
-                target="_blank"
-                rel="noopener nofollow sponsored"
-                aria-label="Entdecken Sie PlatinumLabs"
-                title="Entdecken Sie PlatinumLabs"
-              >
-                <Button className={btnPrimary}>Entdecken Sie PlatinumLabs</Button>
-              </Link>
-            </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Sicher Kryptowährungen kaufen mit TradingView
             </h3>
-            {/* New CTA Button before Sicher Kryptowährungen */}
-            <div className="mb-6 flex justify-center">
-              <Link
-                href="https://platinumlabs.vercel.app/"
-                target="_blank"
-                rel="noopener nofollow sponsored"
-                aria-label="Entdecken Sie PlatinumLabs"
-                title="Entdecken Sie PlatinumLabs"
-              >
-                <Button className={btnPrimary}>Entdecken Sie PlatinumLabs</Button>
-              </Link>
-            </div>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
               Sicherheit ist beim Krypto-Trading entscheidend. Mit TradingView analysieren Sie Märkte und traden sicher
               über verifizierte Broker:
