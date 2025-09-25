@@ -846,7 +846,7 @@ export default function Home() {
                       "Bis zu 50€ Startguthaben für junge Kunden",
                       "24h Austausch-Service bei Defekten",
                       "Umfassender Umzugsservice",
-                      "Attraktive Bundle-Angebote mit Smartphones",
+                      "Attraktive Bundle-Angebote mit Smartphones.",
                     ],
                     price: "ab 9,99€/Monat",
                     bonus: "Bis zu 50€ Startguthaben",
