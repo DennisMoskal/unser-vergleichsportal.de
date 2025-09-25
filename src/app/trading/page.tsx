@@ -512,10 +512,10 @@ export default function DeFi() {
           name="twitter:description"
           content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im September 2025."
         />
-        <meta"mt-4 mb-6 sm:mb-8 flex
-          name="twitter:image"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
+       <meta
+  name="twitter:image"
+  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+/>
         <meta name="format-detection" content="telephone=no" />
         {/* Schema Markup for SEO */}
         <script
