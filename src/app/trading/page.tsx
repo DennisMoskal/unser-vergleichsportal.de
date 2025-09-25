@@ -954,7 +954,7 @@ export default function DeFi() {
                 aria-label="Zum PlatinumLabs für Bridging"
                 title="Zum PlatinumLabs für Bridging"
               >
-                <Button className={btnPrimary}>TOP BRIDGE TOOLS</Button>
+                <Button className={btnPrimary}>Schnellste Crypto Bridges</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -1253,7 +1253,7 @@ export default function DeFi() {
                   aria-label="Zu den Telegram Bots"
                   title="Zu den Telegram Bots"
                 >
-                  <Button className={btnPrimary}>ZU DEN SCHNELLSTEN BOTS</Button>
+                  <Button className={btnPrimary}>TOP TELEGRAM SNIPER UND BRIDGE BOTS</Button>
                 </Link>
               </div>
             </div>
@@ -1528,7 +1528,7 @@ export default function DeFi() {
         <Button 
           className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
-          ZUR STARTSEITE
+          Zur Startseite
         </Button>
       </Link>
     </div>
