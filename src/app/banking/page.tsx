@@ -610,7 +610,7 @@ export default function Banking() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mt-2 text-2xl font-bold">Vermögensaufbau und Vorsorge durch intelligente Geldanlage</h2>
-            <div className="mt-4 mb-6 flex justify-center">
+            <div className="mt-4 mb-2 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
