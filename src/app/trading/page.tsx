@@ -691,7 +691,7 @@ export default function DeFi() {
                 </li>
                 <li className="flex items-center">
                   <Check className="mr-2 h-4 w-4 text-green-600" />
-                  <span>Nutzen Sie Plattformen mit transparenten Kostenrechnern, z. B. XTB oder eToro.</span>
+                  <span>Nutzen Sie Plattformen mit transparenten Kostenrechnern, z. B. XTB oder eToro</span>
                 </li>
               </ul>
             </div>
