@@ -598,7 +598,7 @@ export default function Banking() {
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  GIROKONTO-ANBIETER VERGLEICHEN
+                  KONTO-ANBIETER VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -617,7 +617,7 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  JETZT VORSORGE PLANEN <ArrowRight className="ml-2 h-5 w-5" />
+                  INVESTMENT-ANBIETER UND DEPOTŚ VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
@@ -665,7 +665,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  ALLE GIROKONTEN VERGLEICHEN
+                  GIROKONTEN VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -901,7 +901,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  ONLINE-BANKING BEGINNEN
+                  JETZT ONLINE-BANKING BEGINNEN
                 </Button>
               </a>
             </div>
