@@ -923,7 +923,7 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored>
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   JETZT KFZ-VERSICHERUNG VERGLEICHEN
                 </Button>
