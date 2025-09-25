@@ -749,7 +749,7 @@ export default function Banking() {
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
                 href="https://www.check24.de/kredit/" 
                 target="_blank" 
