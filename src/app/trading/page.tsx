@@ -904,7 +904,7 @@ export default function DeFi() {
               Tipp: Nutzen Sie BlackBull’s Demo-Konto, um Bitcoin-Trading risikofrei zu testen.
             </p>
             {/* Krypto Handel beginnen – direkt unter dem Tipp eingefügt */}
-            <div className="mt-4 mb-6 text-center">
+            <div className="mt-6 mb-6 text-center">
               <Link
                 href="https://go.blackbull.com/visit/?bta=42835&nci=6944"
                 target="_blank"
