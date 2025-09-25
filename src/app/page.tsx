@@ -426,7 +426,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Schnelle Vertragsabwicklung online",
         "Testsieger für Kundenservice (connect 2025)",
         "Zusätzliche Rabatte für junge Kunden unter 28",
-        "Umweltfreundliche Tarife mit CO₂-Kompensation",
+        "Umweltfreundliche Tarife mit CO₂-Kompensation.",
       ],
       price: "ab 9,99€/Monat",
       bonus: "Bis zu 100€ Startguthaben",
