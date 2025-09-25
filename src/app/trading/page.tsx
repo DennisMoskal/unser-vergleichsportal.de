@@ -512,7 +512,7 @@ export default function DeFi() {
           name="twitter:description"
           content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im September 2025."
         />
-        <meta
+        <meta"mt-4 mb-6 sm:mb-8 flex
           name="twitter:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
         />
@@ -910,7 +910,7 @@ export default function DeFi() {
                 target="_blank"
                 rel="noopener nofollow sponsored"
               >
-                <Button className={btnPrimary}>Krypto Handel beginnen</Button>
+                <Button className={btnPrimary}>CRYPTO TRADING STARTEN</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -954,7 +954,7 @@ export default function DeFi() {
                 aria-label="Zum PlatinumLabs für Bridging"
                 title="Zum PlatinumLabs für Bridging"
               >
-                <Button className={btnPrimary}>Bridgen mit PlatinumLabs</Button>
+                <Button className={btnPrimary}>Top Bridge Tools</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -1253,7 +1253,7 @@ export default function DeFi() {
                   aria-label="Zu den Telegram Bots"
                   title="Zu den Telegram Bots"
                 >
-                  <Button className={btnPrimary}>Zu den Telegram Bots</Button>
+                  <Button className={btnPrimary}>Zu den schnellsten Bots</Button>
                 </Link>
               </div>
             </div>
