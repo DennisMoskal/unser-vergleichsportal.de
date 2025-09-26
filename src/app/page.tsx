@@ -283,7 +283,7 @@ const Header: React.FC = () => {
               <li className="flex items-start">
                 <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <p className="ml-3 text-base sm:text-lg">
-                  <strong className="font-semibold">4,8★</strong> verivizierte Kundenstimmen
+                  <strong className="font-semibold">4,8★</strong> Zufriedene Kundenstimmen
                 </p>
               </li>
               <li className="flex items-start">
@@ -669,7 +669,7 @@ export default function Home() {
               </p>
               <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
               <p className="text-base sm:text-lg mb-4">Finden Sie in 3 Minuten das passende Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
-              <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – ohne Rechercheaufwand.</p>
+              <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – schnell und zuverlässig.</p>
               <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzer.</p>
               <a
                 rel="sponsored"
