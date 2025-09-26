@@ -458,6 +458,29 @@ const providerData = {
       metaTitle: "PlatinumLabs: Top Crypto Trading Tools & AI Bots 2025",
       metaDescription: "PlatinumLabs offers AI-powered trading bots, CryptoPulse Pro analytics, and multi-chain support for Ethereum, Solana, and more. Start with free demo access now!",
       isTopRecommendation: true
+    },
+    {
+      name: "Investivox",
+      rating: 4.5,
+      features: [
+        "Nachhaltige ETFs und Aktien mit ESG-Fokus",
+        "0% Kommission auf ausgewählte Produkte",
+        "Reguliert durch BaFin für maximale Sicherheit",
+        "Benutzerfreundliche App für Trading unterwegs",
+        "Kostenloses Demo-Konto für risikofreies Testen",
+        "Diversifizierte Portfolios für langfristige Anlagen",
+        "100€ Bonus für neue Nutzer",
+        "Zugang zu über 5.000 globalen Märkten",
+        "Lernressourcen für nachhaltiges Investieren",
+        "24/7 Kundensupport in mehreren Sprachen"
+      ],
+      price: "0€ Kommission",
+      bonus: "100€ Willkommensbonus",
+      logo: "🌱",
+      url: "https://www.awin1.com/awclick.php?gid=347729&mid=15658&awinaffid=2524533&linkid=2258019&clickref=",
+      metaTitle: "Investivox: Nachhaltige Investments in ETFs & Aktien 2025",
+      metaDescription: "Investivox bietet nachhaltige ETFs und Aktien mit 0% Kommission, BaFin-Regulierung und einem 100€ Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
+      isTopRecommendation: true
     }
   ]
 }
@@ -487,7 +510,7 @@ export default function DeFi() {
         />
         <meta
           name="keywords"
-          content="Broker Vergleich 2025, Trading Plattform Vergleich, Aktiendepot, ETF-Trading, Bitcoin & Krypto Trading, CFD Broker, Forex Broker, geringe Gebühren, regulierte Broker, Testsieger Broker"
+          content="Broker Vergleich 2025, Trading Plattform Vergleich, Aktiendepot, ETF-Trading, Bitcoin & Krypto Trading, CFD Broker, Forex Broker, geringe Gebühren, regulierte Broker, Testsieger Broker, nachhaltige Investments"
         />
         <link rel="canonical" href="https://unser-vergleichsportal.de/trading" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
@@ -512,10 +535,10 @@ export default function DeFi() {
           name="twitter:description"
           content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im September 2025."
         />
-       <meta
-  name="twitter:image"
-  content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-/>
+        <meta
+          name="twitter:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
         <meta name="format-detection" content="telephone=no" />
         {/* Schema Markup for SEO */}
         <script
@@ -604,6 +627,28 @@ export default function DeFi() {
                         reviewCount: "204"
                       }
                     }
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 4,
+                    item: {
+                      "@type": "Product",
+                      name: "Investivox",
+                      description: "Nachhaltige Investments in ETFs und Aktien mit ESG-Fokus und 0% Kommission.",
+                      image: "https://unser-vergleichsportal.de/images/broker/investivox.png",
+                      brand: "Investivox",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://unser-vergleichsportal.de/investivox",
+                        price: "0",
+                        priceCurrency: "EUR"
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.5",
+                        reviewCount: "150"
+                      }
+                    }
                   }
                 ]
               }
@@ -623,23 +668,23 @@ export default function DeFi() {
                   name: "Welcher Broker ist 2025 Testsieger?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Zu den Testsiegern im September 2025 zählen TradingView, eToro und XTB – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
+                    text: "Zu den Testsiegern im September 2025 zählen TradingView, eToro, XTB und Investivox – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
                   }
                 },
                 {
                   "@type": "Question",
-                  name: "Kann ich bei TradingView, eToro und XTB auch Kryptowährungen handeln?",
+                  name: "Kann ich bei TradingView, eToro, XTB und Investivox auch Kryptowährungen handeln?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Ja, alle drei Broker ermöglichen den Handel mit Bitcoin und weiteren Kryptowährungen – ideal für Einsteiger und Profis."
+                    text: "Ja, alle vier Broker ermöglichen den Handel mit Bitcoin und weiteren Kryptowährungen – ideal für Einsteiger und Profis."
                   }
                 },
                 {
                   "@type": "Question",
-                  name: "Sind TradingView, eToro und XTB reguliert?",
+                  name: "Sind TradingView, eToro, XTB und Investivox reguliert?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Ja, alle drei Anbieter sind durch internationale Aufsichtsbehörden reguliert und bieten hohe Sicherheitsstandards für Anleger."
+                    text: "Ja, alle vier Anbieter sind durch internationale Aufsichtsbehörden reguliert und bieten hohe Sicherheitsstandards für Anleger."
                   }
                 }
               ]
@@ -658,7 +703,7 @@ export default function DeFi() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs,
               Rohstoffe, Futures, DeFi und Kryptowährungen wie Bitcoin. Vergleichen Sie niedrige Gebühren, hohe
-              Sicherheit und attraktive Boni. Unsere Testsieger – darunter eToro, TradingView, XTB, WEEX und Vantage –
+              Sicherheit und attraktive Boni. Unsere Testsieger – darunter eToro, TradingView, XTB, WEEX, Vantage und Investivox –
               bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
@@ -677,7 +722,7 @@ export default function DeFi() {
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Gebühren vergleichen</h2>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
-                Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro, XTB und Vantage. Prüfen Sie
+                Achten Sie auf niedrige Gebühren wie 0% Kommission bei TradingView, eToro, XTB, Vantage und Investivox. Prüfen Sie
                 auch Spreads und Einzahlungsgebühren.
               </p>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
@@ -698,7 +743,7 @@ export default function DeFi() {
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Sicherheit gewährleisten</h2>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
-                eToro, XTB, Vantage (ASIC/FSCA) – Regulierung, Einlagensicherung und transparente Richtlinien sind
+                eToro, XTB, Vantage, Investivox (BaFin) – Regulierung, Einlagensicherung und transparente Richtlinien sind
                 entscheidend.
               </p>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
@@ -735,6 +780,87 @@ export default function DeFi() {
                   <span>Nutzen Sie Demo-Konten, um Hebelwirkung und Risikomanagement zu üben.</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Neue Sektion: Investieren in nachhaltige Kapitalanlagen */}
+      <section className="py-8 sm:py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
+            Investieren in nachhaltige Kapitalanlagen
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Was sind nachhaltige Kapitalanlagen?</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Nachhaltige Kapitalanlagen, auch als ESG-Investments bekannt, fokussieren sich auf Unternehmen, die Umwelt-, Sozial- und Governance-Kriterien (ESG) erfüllen. Diese Anlagen ermöglichen es Ihnen, in nachhaltige ETFs und Aktien zu investieren, die positive Auswirkungen auf die Umwelt und Gesellschaft haben, ohne auf Rendite zu verzichten.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Investitionen in erneuerbare Energien, soziale Projekte und ethische Unternehmen.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Langfristige Wertsteigerung durch nachhaltige Geschäftsmodelle.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Transparente ESG-Bewertungen für fundierte Entscheidungen.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Warum in nachhaltige Anlagen investieren?</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Nachhaltige Investments gewinnen an Popularität, da sie sowohl finanzielle Rendite als auch positive gesellschaftliche Wirkung bieten. Im Jahr 2025 haben ESG-ETFs ein durchschnittliches jährliches Wachstum von über 20% erzielt (Stand 09/2025).
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Reduzierung des CO2-Fußabdrucks durch Investitionen in grüne Technologien.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Hohe Nachfrage nach nachhaltigen Produkten steigert die Wertentwicklung.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Regulierte Plattformen wie Investivox bieten sichere und einfache Zugänge.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Wie funktioniert nachhaltiges Investieren?</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                Wählen Sie eine Plattform wie Investivox, die nachhaltige ETFs und Aktien anbietet. Eröffnen Sie ein Konto, nutzen Sie Analysetools, um ESG-konforme Anlagen auszuwählen, und bauen Sie ein diversifiziertes Portfolio auf.
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Nutzen Sie Demo-Konten, um nachhaltige Strategien zu testen.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Wählen Sie ETFs mit Fokus auf erneuerbare Energien oder soziale Gerechtigkeit.</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  <span>Profitieren Sie von niedrigen Gebühren und Boni für neue Nutzer.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <Link
+                href="https://www.awin1.com/awclick.php?gid=347729&mid=15658&awinaffid=2524533&linkid=2258019&clickref="
+                target="_blank"
+                rel="sponsored"
+                aria-label="Zu nachhaltigen Investments mit Investivox"
+                title="Zu nachhaltigen Investments mit Investivox"
+              >
+                <Button className={btnPrimary}>NACHHALTIG INVESTIEREN MIT INVESTIVOX</Button>
+              </Link>
             </div>
           </div>
         </div>
