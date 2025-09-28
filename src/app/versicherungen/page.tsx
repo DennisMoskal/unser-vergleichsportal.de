@@ -145,62 +145,14 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</div>
-                <ul className="flex flex-col gap-2 text-base">
-                  {[
-                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
-                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
-                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
-                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
-                    <li key={key}>
-                      <Link
-                        href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
-                        aria-label={`Zu ${label} navigieren`}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <div className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</div>
-                <ul className="flex flex-col gap-2 text-base">
-                  {[
-                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
-                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
-                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
-                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
-                    <li key={key}>
-                      <Link
-                        href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                        onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
-                        }}
-                        aria-label={`Zu ${label} navigieren`}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="text-center mt-4">
-                <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Startseite
-                </Button>
+                <div className="text-center mt-4">
+                  <Button
+                    className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Startseite
+                  </Button>
+                </div>
               </div>
             </nav>
           </div>
@@ -401,29 +353,6 @@ const providerData = [
     isTopRecommendation: true
   },
   {
-    name: "eRecht24",
-    rating: 4.3,
-    features: [
-      "Rechtssicherheit für Webseiten und Versicherungsverträge",
-      "DSGVO-konforme Rechtstexte für Versicherungsanbieter",
-      "Automatische Rechtstext-Generatoren für Impressum und Datenschutz",
-      "Abmahnschutz für Affiliate- und Vergleichsportale",
-      "Kostenlose Erstberatung zu rechtlichen Fragen",
-      "NEU: KI-gestützte Lösungen für Versicherungs-Compliance",
-      "Live-Webinare zu Internetrecht und Verbraucherschutz",
-      "Muster-Verträge für Versicherungs- und Finanzprodukte",
-      "Zentraler Projekt Manager für rechtliche Dokumente",
-      "Über 200.000 Nutzer vertrauen eRecht24"
-    ],
-    price: "ab 20€/Monat",
-    bonus: "Gratis Rechtscheck",
-    logo: "⚖️",
-    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
-    metaTitle: "eRecht24: Rechtssicherheit für Versicherungsverträge 2025",
-    metaDescription: "eRecht24 bietet DSGVO-konforme Rechtstexte und Abmahnschutz für Versicherungsportale. Jetzt kostenlosen Rechtscheck nutzen!",
-    isTopRecommendation: true
-  },
-  {
     name: "Tarifcheck Wohngebäudeversicherung",
     rating: 4.6,
     features: [
@@ -528,27 +457,6 @@ const providerData = [
     isTopRecommendation: true
   },
   {
-    name: "HUK-COBURG",
-    rating: 4.7,
-    features: [
-      "Über 90 Jahre Erfahrung in der Versicherungsbranche",
-      "Kfz-Versicherung mit Top-Bewertungen (4,7/5 eKomi)",
-      "Günstige Tarife für Haftpflicht, Hausrat und Wohngebäude",
-      "Schneller Schadensservice mit 24/7-Hotline",
-      "Flexible Zusatzbausteine für individuelle Absicherung",
-      "Bis zu 20% Rabatt bei Kombination mehrerer Versicherungen",
-      "Nachhaltigkeitsinitiativen für umweltbewusste Kunden",
-      "Kostenloser Tarifcheck und Online-Abschluss"
-    ],
-    price: "Individuelle Tarife",
-    bonus: "Bis zu 20% Kombirabatt",
-    logo: "🚗",
-    url: "https://www.huk.de/versicherungen/",
-    metaTitle: "HUK-COBURG Versicherungen: Top Kfz-Versicherung und Kombirabatte 2025",
-    metaDescription: "HUK-COBURG bietet Top Kfz-Versicherungen, günstige Tarife und bis zu 20% Kombirabatt. Jetzt Tarife prüfen und sparen!",
-    isTopRecommendation: true
-  },
-  {
     name: "Allianz",
     rating: 4.6,
     features: [
@@ -629,11 +537,11 @@ export default function Versicherungen() {
   <title>Beste Versicherungen September 2025 | Testsieger-Vergleich</title>
   <meta
     name="description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
+    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
   />
   <meta
     name="keywords"
-    content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, eRecht24, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
+    content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
   />
   <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
@@ -647,7 +555,7 @@ export default function Versicherungen() {
   <meta property="og:title" content="Beste Versicherungen September 2025 | Testsieger-Vergleich" />
   <meta
     property="og:description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr."
+    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
   />
   <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
   <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -681,7 +589,7 @@ export default function Versicherungen() {
         "@type": "WebPage",
         name: "Beste Versicherungen September 2025 | Testsieger-Vergleich",
         description:
-          "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG und mehr.",
+          "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
         url: "https://unser-vergleichsportal.de/versicherungen",
         keywords: [
           "Versicherungsvergleich",
@@ -772,7 +680,7 @@ export default function Versicherungen() {
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
-              Testsiegern wie CHECK24, HUK-COBURG, Allianz, CosmosDirekt, ARAG, Tarifcheck, Verivox und mehr. Finden Sie die besten Tarife für Kfz,
+              Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, Verivox und mehr. Finden Sie die besten Tarife für Kfz,
               Haftpflicht, Hausrat, Rechtsschutz und mehr mit transparenten Bewertungen und attraktiven Boni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
@@ -805,7 +713,7 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Prüfen Sie Leistungen:</strong> Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte bei HUK-COBURG, CosmosDirekt und Die Bayerische.</span>
+                <span><strong>Prüfen Sie Leistungen:</strong> Achten Sie auf flexible Tarife, schnellen Schadensservice und Kombirabatte bei CosmosDirekt und Die Bayerische.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
@@ -1095,10 +1003,6 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Nutzen Sie saisonale Rabatte:</strong> Viele Anbieter wie HUK-COBURG oder Allianz bieten zeitlich begrenzte Rabatte, z. B. bis zu 20% bei Kombi-Tarifen.</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
                 <span><strong>Vertrauen Sie auf sichere Plattformen:</strong> Verwenden Sie TÜV-geprüfte Portale wie Verivox oder CHECK24 für sichere und transparente Vergleiche.</span>
               </li>
             </ul>
@@ -1279,50 +1183,6 @@ export default function Versicherungen() {
             </li>
           </ul>
         </div>
-      </div>
-      
-      <div>
-        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
-        <ul className="space-y-2 text-base text-gray-400">
-          <li>
-            <Link 
-              href="/karriere" 
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-              aria-label="Karriere"
-            >
-              Karriere
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/kontakt" 
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-              aria-label="Kontakt"
-            >
-              Kontakt
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/partnerprogramme" 
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-              aria-label="Partnerprogramm"
-            >
-              Partnerprogramm
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/ueber-uns" 
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-              aria-label="Über uns"
-            >
-              Über uns
-            </Link>
-          </li>
-        </ul>
       </div>
       
       <div>
