@@ -347,28 +347,25 @@ const providerData = [
     logo: "✅",
     url: "https://www.tarifcheck.com/k0zzIEJ"
   },
-  {
-    name: "Verivox",
-    rating: 4.6,
-    features: [
-      "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
-      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
-      "Kostenlose und Schufa-neutrale Kreditanfragen",
-      "Über 20 Jahre Erfahrung im Finanzvergleich",
-      "TÜV-geprüfte Plattform für Kredite und Finanzen",
-      "Kredite ab 0,68% effektiver Jahreszins",
-      "Persönliche Beratung unter 06221 79617216"
-    ],
-    price: "100% kostenlos",
-    bonus: "Bis zu 300€ Rückerstattung",
-    logo: "⚖️",
-    url: "
-<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=">Verivox - die Tarifexperten</a>
-"
-<a rel="sponsored" href="",
-    metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
-    metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
-  },
+{
+  name: "Verivox",
+  rating: 4.6,
+  features: [
+    "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
+    "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+    "Kostenlose und Schufa-neutrale Kreditanfragen",
+    "Über 20 Jahre Erfahrung im Finanzvergleich",
+    "TÜV-geprüfte Plattform für Kredite und Finanzen",
+    "Kredite ab 0,68% effektiver Jahreszins",
+    "Persönliche Beratung unter 06221 79617216"
+  ],
+  price: "100% kostenlos",
+  bonus: "Bis zu 300€ Rückerstattung",
+  logo: "⚖️",
+  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
+  metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
+  metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
+},
   {
     name: "Smava",
     rating: 4.8,
