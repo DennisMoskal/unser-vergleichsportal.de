@@ -280,7 +280,7 @@ const providerData = [
     isTopRecommendation: true,
   },
   {
-    name: "Petplan",
+    name: "Figo",
     rating: 4.6,
     features: [
       "Tierversicherung für Hunde, Katzen und Pferde",
@@ -295,7 +295,7 @@ const providerData = [
     price: "ab 8,50€/Monat",
     bonus: "Kostenlose Erstberatung",
     logo: "🐾",
-    url: "https://www.petplan.de/",
+    url: "https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075009&clickref=",
     metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2025",
     metaDescription: "Petplan bietet flexible Tierversicherungen für Hunde, Katzen und Pferde mit schneller Schadenbearbeitung. Jetzt vergleichen!",
     isTopRecommendation: true,
@@ -379,9 +379,7 @@ const providerData = [
     price: "ab 5,99€/Monat",
     bonus: "Kostenloser Tarifrechner",
     logo: "🐾",
-    url: "
-<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458098&mid=17549&awinaffid=2524533&linkid=3870250&clickref=">Jetzt die hepster Hundekrankenversicherung online abschließen!</a>
-",
+    url: "https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=",
     metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
     metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
@@ -402,14 +400,14 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
      <Head>
   {/* --- Meta Basics --- */}
-  <title>Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde</title>
+  <title>Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen</title>
   <meta
     name="description"
-    content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Pferde. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
+    content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
   />
   <meta
     name="keywords"
-    content="Tierversicherung 2025, Hundeversicherung, Katzenversicherung, Pferdeversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
+    content="Tierversicherung 2025, Hundeversicherung, Katzenversicherung, Welpenversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
   />
   <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -418,10 +416,10 @@ export default function Tierversicherungen() {
 
   {/* --- Open Graph --- */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde" />
+  <meta property="og:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen" />
   <meta
     property="og:description"
-    content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Pferde."
+    content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Welpen."
   />
   <meta property="og:url" content="https://unser-vergleichsportal.de/tierversicherungen" />
   <meta
@@ -435,7 +433,7 @@ export default function Tierversicherungen() {
 
   {/* --- Twitter --- */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde" />
+  <meta name="twitter:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen" />
   <meta
     name="twitter:description"
     content="Testsieger im Tierversicherungs-Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen!"
@@ -480,10 +478,10 @@ export default function Tierversicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Beste Tierversicherungen September 2025 | Hunde, Katzen & Pferde",
+        "name": "Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen",
         "url": "https://unser-vergleichsportal.de/tierversicherungen",
         "description":
-          "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Pferde. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
+          "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
         "inLanguage": "de",
         "mainEntity": {
           "@type": "ItemList",
@@ -496,7 +494,7 @@ export default function Tierversicherungen() {
             {
               "@type": "ListItem",
               "position": 2,
-              "item": { "@type": "Product", "name": "Petplan Tierversicherung", "description": "Versicherung für Hunde, Katzen & Pferde. Schnelle Schadenbearbeitung & flexible Tarife.", "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" } }
+              "item": { "@type": "Product", "name": "Petplan Tierversicherung", "description": "Versicherung für Hunde, Katzen & Welpen. Schnelle Schadenbearbeitung & flexible Tarife.", "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/tierversicherungen" } }
             },
             {
               "@type": "ListItem",
@@ -522,7 +520,7 @@ export default function Tierversicherungen() {
             "name": "Welche Tierversicherungen gibt es?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Es gibt Hundeversicherungen, Katzenversicherungen, Pferdeversicherungen sowie OP-Versicherungen. Sie decken u.a. Operationen, Tierarztkosten oder Haftpflichtschäden ab."
+              "text": "Es gibt Hundeversicherungen, Katzenversicherungen, Welpenversicherungen sowie OP-Versicherungen. Sie decken u.a. Operationen, Tierarztkosten oder Haftpflichtschäden ab."
             }
           },
           {
@@ -715,9 +713,9 @@ export default function Tierversicherungen() {
               Tarifrechner für maßgeschneiderte Angebote.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.agila.de/" target="_blank" rel="sponsored">
+              <a href="https://www.awin1.com/awclick.php?gid=458098&mid=17549&awinaffid=2524533&linkid=3870250&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT TIERVERSICHERUNG BERECHENEN
+                  Jetzt die hepster Hundekrankenversicherung online abschließen!
                 </Button>
               </a>
             </div>
@@ -748,37 +746,37 @@ export default function Tierversicherungen() {
               sparen.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.petplan.de/" target="_blank" rel="sponsored">
+              <a href="https://www.awin1.com/awclick.php?gid=458100&mid=17549&awinaffid=2524533&linkid=3870249&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  SCHUTZ VOR TIERARZT- UND OP-KOSTEN
+                  Jetzt die hepster Katzen-OP-Versicherung online abschließen!
                 </Button>
               </a>
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Pferdeversicherung für spezielle Bedürfnisse
+              Welpenversicherung für spezielle Bedürfnisse
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Pferdeversicherungen decken Operationen, Behandlungen und Haftpflichtschäden für Pferdebesitzer.
+              Welpenversicherungen decken Tierarztkosten für Unfälle, Operationen und Vorsorgeuntersuchungen, speziell für junge Hunde.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz für Operationen und Therapien
+                Schutz für Operationen und Vorsorge
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Haftpflichtschutz bis zu 10 Mio. €
+                Bis zu 100% Kostenerstattung
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Flexible Tarife für Freizeit- und Sportpferde
+                Flexible Tarife für junge Hunde
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.allianz.de/tierversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075003&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  PFERDEVERSICHERUNG ABSCHLIESEN
+                  WELPENVERSICHERUNG ABSCHLIESEN
                 </Button>
               </a>
             </div>
@@ -803,7 +801,7 @@ export default function Tierversicherungen() {
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
-                <span><strong>Wie viel kostet eine Tierversicherung?</strong> Kosten variieren: Hunde ab 9,90€/Monat, Katzen ab 7,90€/Monat, Pferde ab 15€/Monat.</span>
+                <span><strong>Wie viel kostet eine Tierversicherung?</strong> Kosten variieren: Hunde ab 9,90€/Monat, Katzen ab 7,90€/Monat, Welpen ab 8,50€/Monat.</span>
               </li>
               <li className="flex items-start">
                 <Check className="mr-2 h-5 w-5 text-green-600 mt-1" />
