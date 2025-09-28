@@ -362,7 +362,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
-    url: "
+    url: ""
 <a rel="sponsored" href="",
     metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
     metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
