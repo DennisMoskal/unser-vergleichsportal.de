@@ -337,7 +337,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 50€ Cashback",
     logo: "✅",
-    url: "https://www.check24.de/tierversicherung/",
+    url: "https://www.tarifcheck.com/5dM0KnS",
     metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2025",
     metaDescription: "Vergleichen Sie über 50 Tierversicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Jetzt sparen!",
     isTopRecommendation: true,
