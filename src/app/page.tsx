@@ -109,7 +109,7 @@ const Header: React.FC = () => {
                         <a
                           href={url}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener sponsored noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false);
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
                         <a
                           href={url}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener sponsored noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false);
@@ -243,7 +243,7 @@ const Header: React.FC = () => {
                   <a
                     href={url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener sponsored noreferrer"
                     className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
@@ -465,28 +465,29 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* --- Meta Basics --- */}
+        {/* --- Meta Basics (bereinigt) --- */}
         <title>Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</title>
         <meta
           name="description"
           content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
         />
-        <meta
-          name="keywords"
-          content="Finanzvergleich 2025, Versicherungsvergleich, Banking Vergleich, Depot eröffnen, ETF Sparplan, Tierversicherung Hund, Trading Plattform, DSL Vergleich, SmartFinanz"
-        />
+        {/* Entfernt: meta keywords (obsolet), revisit-after (ohne Wirkung) */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        {/* Accessibility: Zoom wieder erlaubt */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
         <meta name="author" content="SmartFinanz" />
-        <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
         <link rel="canonical" href="https://unser-vergleichsportal.de" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
 
-        {/* --- Open Graph - LinkedIn optimiert --- */}
+        {/* Hreflang (Basis) */}
+        <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="de-DE" />
+        <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
+
+        {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
         <meta
@@ -495,8 +496,6 @@ export default function Home() {
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de" />
         <meta property="og:site_name" content="SmartFinanz" />
-
-        {/* Bild für Social Sharing - LinkedIn optimiert mit angepasster Größe */}
         <meta
           property="og:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
@@ -509,15 +508,13 @@ export default function Home() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
-
-        {/* Zusätzliche LinkedIn-spezifische Meta Tags */}
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
         <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
         <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
         <meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
 
-        {/* --- Twitter Cards - ebenfalls optimiert --- */}
+        {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
@@ -529,16 +526,16 @@ export default function Home() {
         <meta name="twitter:site" content="@unservergleich" />
         <meta name="twitter:creator" content="@unservergleich" />
 
-        {/* --- Preloads & Prefetch --- */}
+        {/* --- Preloads & Resource Hints (bereinigt) --- */}
         <link rel="preload" href="/logo.png" as="image" />
+        {/* bevorzugt preconnect für Domains mit früher Verbindung */}
+        <link rel="preconnect" href="https://www.awin1.com" crossOrigin="" />
+        <link rel="preconnect" href="https://link-pso.xtb.com" crossOrigin="" />
+        <link rel="preconnect" href="https://private.vodafone-affiliate.de" crossOrigin="" />
+        {/* unnötige dns-prefetch reduziert */}
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
-        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
-        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
-        <link rel="dns-prefetch" href="https://www.check24.de" />
-        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
-        <link rel="dns-prefetch" href="https://www.awin1.com" />
-        <link rel="dns-prefetch" href="https://www.freenet.de" />
+        <link rel="dns-prefetch" href="https://www.c24n.de" />
+
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
 
         {/* ---- Schema.org: Organization ---- */}
@@ -590,7 +587,7 @@ export default function Home() {
           }}
         />
 
-        {/* ---- Schema.org: FAQPage ---- */}
+        {/* ---- Schema.org: FAQPage (einmalig, im Head belassen) ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -630,6 +627,20 @@ export default function Home() {
                     "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
                   }
                 }
+              ]
+            }),
+          }}
+        />
+
+        {/* ---- Schema.org: BreadcrumbList (Home) ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://unser-vergleichsportal.de/" }
               ]
             }),
           }}
@@ -896,7 +907,7 @@ export default function Home() {
                       <a
                         href={provider.url}
                         target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                        rel={provider.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                        rel={provider.url.startsWith("http") ? "noopener sponsored noreferrer" : undefined}
                         aria-label={`Zum Anbieter ${provider.name}`}
                       >
                         <Button
@@ -946,7 +957,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
                 <p className="mb-4 text-gray-700">
                   Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     CHECK24
                   </a>{" "}
                   bieten bis zu 250€ Bonus.
@@ -962,7 +973,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
                 <p className="mb-4 text-gray-700">
                   Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
-                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     Tarifcheck.de
                   </a>{" "}
                   bietet kostenlose Vergleiche.
@@ -995,7 +1006,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
                 <p className="mb-4 text-gray-700">
                   Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
-                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     XTB
                   </a>{" "}
                   bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rostoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
@@ -1039,7 +1050,7 @@ export default function Home() {
                   <a
                     href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener sponsored noreferrer"
                     className="text-green-600 hover:underline"
                   >
                     Verivox
@@ -1078,7 +1089,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
                 <p className="mb-4 text-gray-700">
                   Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     HanseMerkur
                   </a>{" "}
                   decken bis zu 100% der Kosten ab.
@@ -1230,91 +1241,7 @@ export default function Home() {
                 </Card>
               </div>
 
-
-              {/* Schema.org Markup für SEO */}
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "WebSite",
-                    name: "unser-vergleichsportal.de",
-                    url: "https://unser-vergleichsportal.de",
-                    potentialAction: {
-                      "@type": "SearchAction",
-                      target: "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-                      "query-input": "required name=search_term_string",
-                    },
-                    aggregateRating: {
-                      "@type": "AggregateRating",
-                      ratingValue: "4.8",
-                      reviewCount: "100000",
-                    },
-                    review: [
-                      {
-                        "@type": "Review",
-                        author: { "@type": "Person", name: "Anna" },
-                        reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody:
-                          "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell!",
-                      },
-                      {
-                        "@type": "Review",
-                        author: { "@type": "Person", name: "Stefan" },
-                        reviewRating: { "@type": "Rating", ratingValue: "4" },
-                        reviewBody:
-                          "Unser-vergleichsportal hat uns die günstigste Tierversicherung für unsere Hunde rausgesucht. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!",
-                      },
-                      {
-                        "@type": "Review",
-                        author: { "@type": "Person", name: "Helga" },
-                        reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody: "Ich war skeptisch, aber der Vergleich hat mir super schnell ein passendes Konto empfohlen. Alles war sehr einfach, und ich habe 50€ Bonus erhalten!",
-                      },
-                      {
-                        "@type": "Review",
-                        author: { "@type": "Person", name: "Lukas" },
-                        reviewRating: { "@type": "Rating", ratingValue: "5" },
-                        reviewBody: "Als Anfänger im Krypto-Handel habe Ich mir die Trading Tips angeschaut. Durch die Infos und Blogbeiträge habe Ich viel gelernt und freue mich jetzt über den gestiegenen Bitcoin Kurs!",
-                      },
-                    ],
-                    mainEntity: [
-                      {
-                        "@type": "Question",
-                        name: "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.",
-                        },
-                      },
-                      {
-                        "@type": "Question",
-                        name: "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.",
-                        },
-                      },
-                      {
-                        "@type": "Question",
-                        name: "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: "Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.",
-                        },
-                      },
-                      {
-                        "@type": "Question",
-                        name: "Wie schnell bekomme ich Empfehlungen bei SmartFinanz?",
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.",
-                        },
-                      },
-                    ],
-                  }),
-                }}
-              />
+              {/* Entfernt: Zweites JSON-LD-Bündel (WebSite + AggregateRating + Review + FAQ) hier im Body, um Duplikate/Overuse zu vermeiden */}
             </div>
           </section>
 
@@ -1409,7 +1336,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/ducwCtq" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="DSL Vergleich (externer Link)"
               >
@@ -1420,7 +1347,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/Uxudvkj" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Gasvergleich (externer Link)"
               >
@@ -1431,7 +1358,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/5R17qbN" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Handytarif vergleichen (externer Link)"
               >
@@ -1442,7 +1369,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/RYXPGyh" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Kreditkarten vergleichen (externer Link)"
               >
@@ -1455,7 +1382,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/FZ9nd0R" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Mietwagen vergleichen (externer Link)"
               >
@@ -1466,7 +1393,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/zxy0WKh" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Ökostrom vergleichen (externer Link)"
               >
@@ -1477,7 +1404,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/EieKR0E" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Reise vergleichen (externer Link)"
               >
@@ -1488,7 +1415,7 @@ export default function Home() {
               <a 
                 href="https://www.c24n.de/RYXPGyh" 
                 target="_blank" 
-                rel="noopener noreferrer nofollow" 
+                rel="noopener sponsored noreferrer nofollow" 
                 className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
                 aria-label="Stromvergleich (externer Link)"
               >
@@ -1608,4 +1535,4 @@ export default function Home() {
       </main>
     </>
   )
-}        
+}
