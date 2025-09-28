@@ -582,7 +582,7 @@ export default function Banking() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a
-                href="https://www.check24.de/kredit/"
+                href="https://www.tarifcheck.com/k0zzIEJ"
                 target="_blank"
                 rel="sponsored"
                 className="inline-block"
@@ -592,7 +592,7 @@ export default function Banking() {
                 </Button>
               </a>
               <a
-                href="https://www.tarifcheck.de/girokonto/"
+                href="https://www.tarifcheck.com/W1pi1Fx"
                 target="_blank"
                 rel="sponsored"
                 className="inline-block"
@@ -660,7 +660,7 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
-                href="https://www.tarifcheck.de/girokonto/" 
+                href="https://www.tarifcheck.com/W1pi1Fx" 
                 target="_blank" 
                 rel="sponsored"
               >
@@ -751,7 +751,7 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-10 text-center">
               <a 
-                href="https://www.check24.de/kredit/" 
+                href="https://www.tarifcheck.com/k0zzIEJ" 
                 target="_blank" 
                 rel="sponsored"
               >
@@ -844,7 +844,7 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-10 text-center">
               <a 
-                href="https://www.check24.de/baufinanzierung/" 
+                href="https://www.tarifcheck.com/gH6DahL" 
                 target="_blank" 
                 rel="sponsored"
               >
@@ -896,7 +896,7 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-10 text-center">
               <a 
-                href="https://www.tarifcheck.de/girokonto/" 
+                href="https://www.tarifcheck.com/W1pi1Fx" 
                 target="_blank" 
                 rel="sponsored"
               >
@@ -928,7 +928,7 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
-                href="https://www.check24.de/kredit/" 
+                href="https://www.tarifcheck.com/k0zzIEJ" 
                 target="_blank" 
                 rel="sponsored"
               >
