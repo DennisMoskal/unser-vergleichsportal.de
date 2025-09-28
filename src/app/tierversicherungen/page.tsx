@@ -715,7 +715,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.awin1.com/awclick.php?gid=458098&mid=17549&awinaffid=2524533&linkid=3870250&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt die hepster Hundekrankenversicherung online abschließen!
+                  JETZT HUNDEKRANKENVERSICHERUNG ABSCHLIEẞEN!
                 </Button>
               </a>
             </div>
@@ -748,7 +748,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.awin1.com/awclick.php?gid=458100&mid=17549&awinaffid=2524533&linkid=3870249&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt die hepster Katzen-OP-Versicherung online abschließen!
+                  KATZEN-OP-VERSICHERUNG ABSCHLIEẞEN!
                 </Button>
               </a>
             </div>
@@ -776,7 +776,7 @@ export default function Tierversicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075003&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  WELPENVERSICHERUNG ABSCHLIESEN
+                  EINE WELPENVERSICHERUNG ABSCHLIEẞEN!
                 </Button>
               </a>
             </div>
@@ -828,7 +828,7 @@ export default function Tierversicherungen() {
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
               <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                ALLE TIERVERSICHERUNGEN VERGLEICHEN
+                ALLE TIERVERSICHERUNGEN VERGLEICHEN!
               </Button>
             </a>
           </div>
