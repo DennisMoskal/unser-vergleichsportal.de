@@ -273,7 +273,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
-    url: "https://www.tarifcheck.de/girokonto/",
+    url: "https://www.tarifcheck.com/wmPi92g",
     metaTitle: "Tarifcheck.de Versicherungsvergleich: Bis zu 1.000€ sparen 2025",
     metaDescription: "Vergleichen Sie über 300 Kfz-Versicherungen mit Tarifcheck.de. Kostenlos, unverbindlich und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich!",
     isTopRecommendation: true
@@ -294,7 +294,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
-    url: "https://www.check24.de/versicherungen/",
+    url: "https://www.tarifcheck.com/djwVRAd",
     metaTitle: "CHECK24 Versicherungsvergleich: Testsieger 2025 mit bis zu 50% Ersparnis",
     metaDescription: "Vergleichen Sie über 300 Versicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 50% mit unseren Testsiegern!",
     isTopRecommendation: true
@@ -459,7 +459,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
-    url: "https://www.verivox.de/versicherungen/",
+    url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
     metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
     metaDescription: "Verivox bietet TÜV-geprüfte Vergleiche für Kfz-, Hausrat- und Haftpflichtversicherungen. Jetzt bis zu 850€ sparen!",
     isTopRecommendation: true
