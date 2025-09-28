@@ -274,7 +274,7 @@ const providerData = [
     price: "ab 9,90€/Monat",
     bonus: "10% Rabatt bei Online-Abschluss",
     logo: "🐶",
-    url: "https://www.agila.de/",
+    url: "https://www.tarifcheck.com/5dM0KnS",
     metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2025",
     metaDescription: "Agila bietet umfassenden Schutz für Hunde und Katzen mit bis zu 100% Kostenerstattung. Jetzt Testsieger-Tarife vergleichen!",
     isTopRecommendation: true,
@@ -316,9 +316,7 @@ const providerData = [
     price: "ab 7,90€/Monat",
     bonus: "5% Rabatt bei Jahreszahlung",
     logo: "🐱",
-    url: "
-<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=">Tierversicherung</a>
-",
+    url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
     metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
     metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
@@ -360,7 +358,7 @@ const providerData = [
     price: "ab 10,50€/Monat",
     bonus: "Treuebonus für Bestandskunden",
     logo: "🛡️",
-    url: "https://www.allianz.de/tierversicherung/",
+    url: "https://www.tarifcheck.com/5dM0KnS",
     metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2025",
     metaDescription: "Allianz bietet zuverlässigen Schutz für Haustiere mit flexiblen Tarifen. Jetzt vergleichen und Treuebonus sichern!",
     isTopRecommendation: true,
