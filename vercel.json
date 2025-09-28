@@ -1,0 +1,33 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host", 
+          "value": "www.unser-vergleichsportal.de"
+        }
+      ],
+      "destination": "https://unser-vergleichsportal.de/:path*",
+      "permanent": true,
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.unser-vergleichsportal.de"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}
