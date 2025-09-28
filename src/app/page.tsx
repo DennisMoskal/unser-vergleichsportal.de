@@ -962,7 +962,7 @@ export default function Home() {
               <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
                 <p>
                   CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
-                  72% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
+                  71% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
                   Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
                 </p>
                 <p className="mt-4">
