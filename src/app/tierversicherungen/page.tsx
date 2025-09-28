@@ -316,7 +316,9 @@ const providerData = [
     price: "ab 7,90€/Monat",
     bonus: "5% Rabatt bei Jahreszahlung",
     logo: "🐱",
-    url: "https://www.hansemerkur.de/tierversicherung",
+    url: "
+<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=">Tierversicherung</a>
+",
     metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
     metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
