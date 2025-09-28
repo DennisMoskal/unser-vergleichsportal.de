@@ -1,19 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/robots.txt",
       "has": [
         {
-          "type": "host", 
+          "type": "host",
           "value": "www.unser-vergleichsportal.de"
         }
       ],
-      "destination": "https://unser-vergleichsportal.de/:path*",
-      "permanent": true,
-      "statusCode": 301
-    }
-  ],
-  "headers": [
+      "destination": "https://unser-vergleichsportal.de/robots-www.txt"
+    },
     {
       "source": "/:path*",
       "has": [
@@ -22,12 +18,8 @@
           "value": "www.unser-vergleichsportal.de"
         }
       ],
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow"
-        }
-      ]
+      "destination": "https://unser-vergleichsportal.de/:path*",
+      "permanent": true
     }
   ]
 }
