@@ -711,7 +711,7 @@ export default function Home() {
                     price: "100% kostenlos",
                     bonus: "Bis zu 120€ Neukundenbonus",
                     logo: "🏆",
-                    url: "https://www.tarifcheck.de/girokonto/",
+                    url: "https://www.tarifcheck.com/wmPi92g",
                   },
                   {
                     name: "eRecht24",
@@ -791,7 +791,7 @@ export default function Home() {
                     price: "ab 10€/Monat",
                     bonus: "Kostenloser Gesundheitscheck",
                     logo: "🐾",
-                    url: "https://www.hansemerkur.de/tierkrankenversicherung",
+                    url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
                   },
                   {
                     name: "CHECK24",
@@ -811,7 +811,7 @@ export default function Home() {
                     price: "0€ Kontoführung",
                     bonus: "Bis zu 250€ Bonus",
                     logo: "🏦",
-                    url: "https://www.check24.de/girokonto/",
+                    url: "https://www.c24n.de/ducwCtq",
                   },
                   {
                     name: "Vodafone",
