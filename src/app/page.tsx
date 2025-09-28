@@ -1,4 +1,4 @@
-  "use client"
+"use client"
 
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
@@ -331,26 +331,6 @@ const providerData: { [key: string]: Provider[] } = {
       logo: "🏆",
       url: "https://www.tarifcheck.de/girokonto/",
     },
-    {
-      name: "eRecht24",
-      rating: 4.3,
-      features: [
-        "Rechtssicherheit für Webseiten",
-        "DSGVO-konform mit Premium Tools",
-        "Automatische Rechtstext-Generatoren",
-        "Abmahnschutz inklusive",
-        "Praxis-Tools für Social Media",
-        "Kostenlose Erstberatung",
-        "NEU: KI-gestützte Lösungen",
-        "Zentraler Projekt Manager",
-        "Online Vertragsmanagement",
-        "Muster-Verträge & Checklisten",
-      ],
-      price: "ab 20€/Monat",
-      bonus: "Gratis Rechtscheck",
-      logo: "⚖️",
-      url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subid=&target=default",
-    },
   ],
   banking: [
     {
@@ -552,7 +532,6 @@ export default function Home() {
         {/* --- Preloads & Prefetch --- */}
         <link rel="preload" href="/logo.png" as="image" />
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
         <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
         <link rel="dns-prefetch" href="https://www.credimaxx.de" />
         <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
@@ -712,26 +691,6 @@ export default function Home() {
                     bonus: "Bis zu 120€ Neukundenbonus",
                     logo: "🏆",
                     url: "https://www.tarifcheck.com/wmPi92g",
-                  },
-                  {
-                    name: "eRecht24",
-                    rating: 4.3,
-                    features: [
-                      "Rechtssicherheit für Webseiten",
-                      "DSGVO-konform mit Premium Tools",
-                      "Automatische Rechtstext-Generatoren",
-                      "Abmahnschutz inklusive",
-                      "Praxis-Tools für Social Media",
-                      "Kostenlose Erstberatung",
-                      "NEU: KI-gestützte Lösungen",
-                      "Zentraler Projekt Manager",
-                      "Live-Webinare zu Internetrecht",
-                      "Muster-Verträge & Checklisten",
-                    ],
-                    price: "ab 20€/Monat",
-                    bonus: "Gratis Rechtscheck",
-                    logo: "⚖️",
-                    url: "https://partner.e-recht24.de/go.cgi?pid=912&wmid=3&cpid=1&prid=1&subids=&target=default",
                   },
                   {
                     name: "XTB",
