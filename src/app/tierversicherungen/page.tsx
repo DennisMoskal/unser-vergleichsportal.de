@@ -379,7 +379,9 @@ const providerData = [
     price: "ab 5,99€/Monat",
     bonus: "Kostenloser Tarifrechner",
     logo: "🐾",
-    url: "https://www.hepster.com/de/tierversicherung",
+    url: "
+<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=458098&mid=17549&awinaffid=2524533&linkid=3870250&clickref=">Jetzt die hepster Hundekrankenversicherung online abschließen!</a>
+",
     metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
     metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
