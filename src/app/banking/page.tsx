@@ -273,7 +273,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
-    url: "https://www.tarifcheck.de/girokonto/"
+    url: "https://www.tarifcheck.com/W1pi1Fx"
   },
   {
     name: "DKB",
@@ -345,7 +345,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
-    url: "https://www.check24.de/kredit/"
+    url: "https://www.tarifcheck.com/k0zzIEJ"
   },
   {
     name: "Verivox",
@@ -362,7 +362,9 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
-    url: "https://www.verivox.de/kredit/",
+    url: "
+<a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=">Verivox - die Tarifexperten</a>
+",
     metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
     metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
   },
