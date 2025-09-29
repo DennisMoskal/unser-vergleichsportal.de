@@ -850,7 +850,7 @@ export default function Versicherungen() {
             
             {/* Haftpflichtrechner mit optimierter Überschrift */}
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center mt-8">
-              Haftpflichtversicherung Vergleich 2025 - Jetzt in 2 Minuten Tarife vergleichen & bis zu 300€ sparen
+              KFZ-Haftpflichtversicherung Vergleich 2025 - Jetzt in 2 Minuten Tarife vergleichen & bis zu 300€ sparen
             </h2>
             <div className="my-4">
               <HaftpflichtRechner />
