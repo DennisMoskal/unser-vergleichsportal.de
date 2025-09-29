@@ -7,6 +7,7 @@ import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Script from "next/script"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -830,12 +831,14 @@ export default function Versicherungen() {
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.
             </p>
+            
+            {/* Haftpflicht Rechner anstelle des Kfz-Versicherung Buttons */}
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT KFZ-VERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
+              <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto' }} id="tcpp-iframe-kfz" data-style="custom_green"></div>
+              <Script 
+                src="https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-kfz/kfz-iframe.js" 
+                strategy="afterInteractive"
+              />
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -951,12 +954,14 @@ export default function Versicherungen() {
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
+            
+            {/* Rechtsschutz Rechner anstelle des Rechtsschutzversicherung Buttons */}
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
+              <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto' }} id="tcpp-iframe-rs"></div>
+              <Script 
+                src="https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-rs/rs-iframe.js" 
+                strategy="afterInteractive"
+              />
             </div>
           </div>
         </div>
@@ -1186,6 +1191,50 @@ export default function Versicherungen() {
       </div>
       
       <div>
+        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-base text-gray-400">
+          <li>
+            <Link 
+              href="/karriere" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Karriere"
+            >
+              Karriere
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/kontakt" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/partnerprogramme" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Partnerprogramm"
+            >
+              Partnerprogramm
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/ueber-uns" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Über uns"
+            >
+              Über uns
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
         <span className="font-semibold mb-3 text-xl">Rechtliches</span>
         <ul className="space-y-2 text-base text-gray-400">
           <li>
@@ -1234,7 +1283,7 @@ export default function Versicherungen() {
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
       <p className="text-base text-gray-400 mb-4">
-        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
