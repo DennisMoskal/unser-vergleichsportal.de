@@ -772,7 +772,7 @@ export default function Banking() {
               </a>
             </div>
             <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
-            <div className="flex flex-col lg:flex-row gap-6">
+            <div className="flex flex-col lg:flex-row gap-6 items-start">
               <div className="flex-1">
                 <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
                 <ul className="list-none text-base mb-6">
@@ -790,7 +790,7 @@ export default function Banking() {
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
                 </ul>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 mt-0">
                 <Script
                   src="https://frame.finanzcheck.de/main.js"
                   strategy="afterInteractive"
@@ -838,9 +838,9 @@ export default function Banking() {
                           "entryPoint": "first",
                           "version": "v2"
                         });
-                        console.log("teal_embed_iframe initialized successfully");
+                        console.log("teal_embed_iframe initialized successfully for general credit calculator");
                       } catch (error) {
-                        console.error("Error initializing teal_embed_iframe:", error);
+                        console.error("Error initializing teal_embed_iframe for general credit calculator:", error);
                       }
                     `}
                   </Script>
@@ -1014,15 +1014,45 @@ export default function Banking() {
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
             </ul>
             <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/k0zzIEJ" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  UMSCHULDUNG BERECHNEN
-                </Button>
-              </a>
+              <div className="w-full min-h-[600px] bg-white" id="teal-embed-iframe-refinancing"></div>
+              {scriptsLoaded.main && scriptsLoaded.embedTeal && (
+                <Script id="teal-embed-script-refinancing" strategy="afterInteractive">
+                  {`
+                    try {
+                      teal_embed_iframe({
+                        "advertisementId": "WqzbMCwyzPe8",
+                        "elementId": "teal-embed-iframe-refinancing",
+                        "data": {
+                          "amount": 50000,
+                          "term": 96,
+                          "purpose": "REFINANCING",
+                          "formConfig": "ddf",
+                          "palette": {
+                            "primary": {
+                              "light": "#E8EEF5",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "#fff"
+                            },
+                            "secondary": {
+                              "light": "#FCE9CD",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "rgba(0, 0, 0, 0.87)"
+                            }
+                          }
+                        },
+                        "entryPoint": "first",
+                        "version": "v2",
+                        "imodEntryPoint": "banklist"
+                      });
+                      console.log("teal_embed_iframe initialized successfully for refinancing calculator");
+                    } catch (error) {
+                      console.error("Error initializing teal_embed_iframe for refinancing calculator:", error);
+                    }
+                  `}
+                </Script>
+              )}
             </div>
             <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
             <h3 className="text-lg font-bold mb-2 text-green-600">Vorteile eines Depots</h3>
