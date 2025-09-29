@@ -898,6 +898,31 @@ export default function Versicherungen() {
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+               Günstige Hausratversicherung für Mieter und Eigentümer
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Hausratversicherung schützt Ihr Hab und Gut bei Einbruch, Feuer oder Wasserschäden. Ideal für Mieter und Eigentümer.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Neuwertentschädigung bei Totalschaden
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz bei Elementarschäden (z. B. Sturm, Hagel)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Fahrraddiebstahl optional einschließbar
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
@@ -954,14 +979,12 @@ export default function Versicherungen() {
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
-            
-            {/* Rechtsschutz Rechner anstelle des Rechtsschutzversicherung Buttons */}
             <div className="mt-6 mb-8 text-center">
-              <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto' }} id="tcpp-iframe-rs"></div>
-              <Script 
-                src="https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-rs/rs-iframe.js" 
-                strategy="afterInteractive"
-              />
+              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1039,7 +1062,7 @@ export default function Versicherungen() {
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
