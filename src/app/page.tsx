@@ -1006,24 +1006,24 @@ export default function Home() {
                   hilft Ihnen, das optimale Konto zu finden.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
-               <p className="mb-4 text-gray-700">
-  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-    CHECK24
-  </a>{" "}
-  bieten bis zu 250€ Bonus.
-</p>
+                <p className="mb-4 text-gray-700">
+                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
+                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    CHECK24
+                  </a>{" "}
+                  bieten bis zu 250€ Bonus.
+                </p>
                 <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
                 <p className="mb-4 text-gray-700">
-  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
-  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
-    Tagesgeldkonten
-  </Link>{" "}
-  für maximale Erträge.
-</p>
+                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
+                    Tagesgeldkonten
+                  </Link>{" "}
+                  für maximale Erträge.
+                </p>
                 <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
                 <p className="mb-4 text-gray-700">
-                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "
+                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
                   <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     Tarifcheck.de
                   </a>{" "}
@@ -1040,7 +1040,7 @@ export default function Home() {
               <div className="mb-12" id="trading-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "
+                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
                   <Link href="/trading" className="text-green-600 hover:underline">
                     Trading-Seite um das richtige Depot zu eröffnen
                   </Link>
@@ -1048,23 +1048,23 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
                 <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "
+                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
                   <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
                     Altersvorsorge-Optionen
                   </Link>
-                  . 
+                  .
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
                 <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "
+                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
                   <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     XTB
-                  </a>{" "
-                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rostoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
+                  </a>{" "}
+                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rohstoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine Verzinsung des Guthabens.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
                 <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "
+                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
                   <Link href="/trading#krypto" className="text-green-600 hover:underline">
                     sicheres Krypto-Trading
                   </Link>
@@ -1072,7 +1072,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "
+                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
                   <Link href="/trading#etfs" className="text-green-600 hover:underline">
                     ETF-Sparplänen
                   </Link>
@@ -1089,7 +1089,7 @@ export default function Home() {
               <div className="mb-12" id="versicherungen-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "
+                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
                   <Link href="/versicherungen" className="text-green-600 hover:underline">
                     Versicherungsseite
                   </Link>
@@ -1097,7 +1097,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
                 <p className="mb-4 text-gray-700">
-                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "
+                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
                   <a
                     href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
                     target="_blank"
@@ -1110,7 +1110,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
                 <p className="mb-4 text-gray-700">
-                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "
+                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
                   <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
                     KFZ-Vergleich
                   </Link>
@@ -1131,7 +1131,7 @@ export default function Home() {
               <div className="mb-12" id="tierversicherungen-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "
+                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
                   <Link href="/tierversicherungen" className="text-green-600 hover:underline">
                     Tierversicherungsseite
                   </Link>
@@ -1139,15 +1139,15 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
                 <p className="mb-4 text-gray-700">
-                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "
+                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
                   <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     HanseMerkur
-                  </a>{" "
+                  </a>{" "}
                   decken bis zu 100% der Kosten ab.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
                 <p className="mb-4 text-gray-700">
-                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "
+                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
                   <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
                     Tierversicherungen
                   </Link>
@@ -1155,7 +1155,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
                 <p className="mb-4 text-gray-700">
-                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "
+                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
                   <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
                     alternative Behandlungen
                   </Link>
