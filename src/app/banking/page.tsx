@@ -410,23 +410,6 @@ const providerData = [
 
 export default function Banking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
-
-  const handleScriptLoad = (scriptName: string) => {
-    setScriptsLoaded((prev) => ({ ...prev, [scriptName]: true }))
-    console.log(`${scriptName} script loaded successfully`)
-  }
-
-  const handleScriptError = (scriptName: string) => {
-    console.error(`${scriptName} script failed to load`)
-  }
-
-  // Debugging: Log when both scripts are loaded
-  useEffect(() => {
-    if (scriptsLoaded.main && scriptsLoaded.embedTeal) {
-      console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
-    }
-  }, [scriptsLoaded])
 
   return (
     <div className="min-h-screen bg-white">
@@ -686,7 +669,7 @@ export default function Banking() {
             </ul>
             <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Girokonten</h3>
             <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die empfohlenen kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die empfohlenen kostenlose Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
             </ul>
             <h3 className="text-lg font-bold mb-2 text-green-600">Eigenschaften der Testsieger-Girokonten</h3>
             <ul className="list-none text-base mb-6">
@@ -802,27 +785,22 @@ export default function Banking() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full mt-0">
+                  {/* Erster Rechner - Synchron geladen wie im Original */}
                   <Script
                     src="https://frame.finanzcheck.de/main.js"
-                    strategy="lazyOnload"
-                    onLoad={() => handleScriptLoad("main")}
-                    onError={() => handleScriptError("main")}
+                    strategy="beforeInteractive"
                   />
                   <Script
                     src="https://widget.finanzcheck.de/embedTeal.js"
-                    strategy="lazyOnload"
-                    onLoad={() => handleScriptLoad("embedTeal")}
-                    onError={() => handleScriptError("embedTeal")}
+                    strategy="beforeInteractive"
                   />
-                  <div
-                    id="teal-embed-iframe"
-                    className="w-full min-h-[60px] bg-white border rounded-lg shadow-sm"
-                    style={{ minHeight: "60px" }}
-                  ></div>
-                  {scriptsLoaded.main && scriptsLoaded.embedTeal && (
-                    <Script id="teal-embed-script" strategy="lazyOnload">
-                      {`
-                        try {
+                  <span id="teal-embed-iframe"></span>
+                  <Script
+                    id="teal-embed-script"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                      __html: `
+                        if (typeof teal_embed_iframe === 'function') {
                           teal_embed_iframe({
                             "advertisementId": "WqzbMCwyzPe8",
                             "elementId": "teal-embed-iframe",
@@ -849,13 +827,12 @@ export default function Banking() {
                             "entryPoint": "first",
                             "version": "v2"
                           });
-                          console.log("teal_embed_iframe initialized successfully for general credit calculator");
-                        } catch (error) {
-                          console.error("Error initializing teal_embed_iframe for general credit calculator:", error);
+                        } else {
+                          console.error('teal_embed_iframe function not available');
                         }
-                      `}
-                    </Script>
-                  )}
+                      `
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -1029,11 +1006,22 @@ export default function Banking() {
             {/* Zweiter Rechner mit optimierter Überschrift */}
             <div className="mt-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 text-center">Umschuldungsrechner für maximale Ersparnis</h2>
-              <div className="w-full min-h-[600px] bg-white border rounded-lg shadow-sm" id="teal-embed-iframe-refinancing"></div>
-              {scriptsLoaded.main && scriptsLoaded.embedTeal && (
-                <Script id="teal-embed-script-refinancing" strategy="lazyOnload">
-                  {`
-                    try {
+              {/* Zweiter Rechner - Synchron geladen wie im Original */}
+              <Script
+                src="https://frame.finanzcheck.de/main.js"
+                strategy="beforeInteractive"
+              />
+              <Script
+                src="https://widget.finanzcheck.de/embedTeal.js"
+                strategy="beforeInteractive"
+              />
+              <span id="teal-embed-iframe-refinancing"></span>
+              <Script
+                id="teal-embed-script-refinancing"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    if (typeof teal_embed_iframe === 'function') {
                       teal_embed_iframe({
                         "advertisementId": "WqzbMCwyzPe8",
                         "elementId": "teal-embed-iframe-refinancing",
@@ -1061,13 +1049,12 @@ export default function Banking() {
                         "version": "v2",
                         "imodEntryPoint": "banklist"
                       });
-                      console.log("teal_embed_iframe initialized successfully for refinancing calculator");
-                    } catch (error) {
-                      console.error("Error initializing teal_embed_iframe for refinancing calculator:", error);
+                    } else {
+                      console.error('teal_embed_iframe function not available for refinancing');
                     }
-                  `}
-                </Script>
-              )}
+                  `
+                }}
+              />
             </div>
             
             <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
