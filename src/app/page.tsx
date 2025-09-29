@@ -1015,12 +1015,12 @@ export default function Home() {
 </p>
                 <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "
-                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
-                    Tagesgeldkonten
-                  </Link>{" "}
-                  für maximale Erträge.
-                </p>
+  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
+    Tagesgeldkonten
+  </Link>{" "}
+  für maximale Erträge.
+</p>
                 <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
                 <p className="mb-4 text-gray-700">
                   Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "
