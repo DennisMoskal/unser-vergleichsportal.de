@@ -1006,13 +1006,13 @@ export default function Home() {
                   hilft Ihnen, das optimale Konto zu finden.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
-                <p className="mb-4 text-gray-700">
-                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    CHECK24
-                  </a>{" "}
-                  bieten bis zu 250€ Bonus.
-                </p>
+               <p className="mb-4 text-gray-700">
+  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
+  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+    CHECK24
+  </a>{" "}
+  bieten bis zu 250€ Bonus.
+</p>
                 <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
                 <p className="mb-4 text-gray-700">
                   Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "
