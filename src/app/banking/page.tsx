@@ -410,6 +410,23 @@ const providerData = [
 
 export default function Banking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
+
+  const handleScriptLoad = (scriptName: string) => {
+    setScriptsLoaded((prev) => ({ ...prev, [scriptName]: true }))
+    console.log(`${scriptName} script loaded successfully`)
+  }
+
+  const handleScriptError = (scriptName: string) => {
+    console.error(`${scriptName} script failed to load`)
+  }
+
+  // Debugging: Log when both scripts are loaded
+  useEffect(() => {
+    if (scriptsLoaded.main && scriptsLoaded.embedTeal) {
+      console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
+    }
+  }, [scriptsLoaded])
 
   return (
     <div className="min-h-screen bg-white">
@@ -777,42 +794,57 @@ export default function Banking() {
                 <Script
                   src="https://frame.finanzcheck.de/main.js"
                   strategy="afterInteractive"
+                  onLoad={() => handleScriptLoad("main")}
+                  onError={() => handleScriptError("main")}
                 />
                 <Script
                   src="https://widget.finanzcheck.de/embedTeal.js"
                   strategy="afterInteractive"
+                  onLoad={() => handleScriptLoad("embedTeal")}
+                  onError={() => handleScriptError("embedTeal")}
                 />
-                <span id="teal-embed-iframe"></span>
-                <Script id="teal-embed-script" strategy="afterInteractive">
-                  {`
-                    teal_embed_iframe({
-                      "advertisementId": "WqzbMCwyzPe8",
-                      "elementId": "teal-embed-iframe",
-                      "data": {
-                        "amount": 30000,
-                        "term": 84,
-                        "purpose": "OTHER",
-                        "formConfig": "ddf",
-                        "palette": {
-                          "primary": {
-                            "light": "#E8EEF5",
-                            "main": "#26a269",
-                            "dark": "#26a269",
-                            "contrastText": "#fff"
+                <div
+                  id="teal-embed-iframe"
+                  className="w-full min-h-[600px] bg-white"
+                  style={{ minHeight: "600px" }}
+                ></div>
+                {scriptsLoaded.main && scriptsLoaded.embedTeal && (
+                  <Script id="teal-embed-script" strategy="afterInteractive">
+                    {`
+                      try {
+                        teal_embed_iframe({
+                          "advertisementId": "WqzbMCwyzPe8",
+                          "elementId": "teal-embed-iframe",
+                          "data": {
+                            "amount": 30000,
+                            "term": 84,
+                            "purpose": "OTHER",
+                            "formConfig": "ddf",
+                            "palette": {
+                              "primary": {
+                                "light": "#E8EEF5",
+                                "main": "#26a269",
+                                "dark": "#26a269",
+                                "contrastText": "#fff"
+                              },
+                              "secondary": {
+                                "light": "#FCE9CD",
+                                "main": "#26a269",
+                                "dark": "#26a269",
+                                "contrastText": "rgba(0, 0, 0, 0.87)"
+                              }
+                            }
                           },
-                          "secondary": {
-                            "light": "#FCE9CD",
-                            "main": "#26a269",
-                            "dark": "#26a269",
-                            "contrastText": "rgba(0, 0, 0, 0.87)"
-                          }
-                        }
-                      },
-                      "entryPoint": "first",
-                      "version": "v2"
-                    })
-                  `}
-                </Script>
+                          "entryPoint": "first",
+                          "version": "v2"
+                        });
+                        console.log("teal_embed_iframe initialized successfully");
+                      } catch (error) {
+                        console.error("Error initializing teal_embed_iframe:", error);
+                      }
+                    `}
+                  </Script>
+                )}
               </div>
             </div>
           </div>
