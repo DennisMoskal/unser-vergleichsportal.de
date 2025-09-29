@@ -605,7 +605,7 @@ export default function Banking() {
                   }
                 }
               ]
-            }),
+            })
           }}
         />
       </Head>
@@ -644,21 +644,6 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* NEUE SEKTION FÜR DEN KREDIT-RECHNER (Positionierung korrigiert) */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center text-green-700">Günstigen Kredit online berechnen</h2>
-            {/* Erster Rechner: FINANZCHECK.de Kreditrechner */}
-            <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
-              <div id="kredit-rechner-ziel" />
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Ende der NEUEN SEKTION FÜR DEN KREDIT-RECHNER */}
-
       <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -667,10 +652,10 @@ export default function Banking() {
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
-                  aria-label="Zum Trading Vergleich wechseln"
+                  aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                  title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  <ArrowRight className="inline-block w-4 h-4 mr-2" />
-                  Zu den Trading Testsiegern
+                  INVESTMENT-ANBIETER UND DEPOTŚ VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
@@ -678,171 +663,12 @@ export default function Banking() {
         </div>
       </section>
 
-      {/* Hinzugefügte H2-Überschrift über dem zweiten Rechner */}
-      <section className="py-12 bg-white">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center text-green-700">Girokonto Vergleich: Jetzt kostenlos wechseln & Prämie sichern</h2>
-            {/* Zweiter Rechner: FINANZCHECK.de Girokonto-Vergleich */}
-            <div id="teal_embed_iframe" />
-          </div>
-        </div>
-      </section>
-      
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10 text-green-700">
-            Unsere Testsieger für Kredite & Girokonten im Überblick
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {providerData.map((provider) => (
-              <Card key={provider.name} className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader className="flex flex-col items-start p-6 bg-white border-b">
-                  <Badge className={`mb-2 text-white font-semibold ${provider.name === "Tarifcheck.de" ? 'bg-yellow-500' : 'bg-green-600'}`}>
-                    {provider.name === "Tarifcheck.de" ? "Testsieger & Top-Empfehlung" : "Top-Empfehlung"}
-                  </Badge>
-                  <CardTitle className="text-2xl font-extrabold text-gray-900 flex items-center">
-                    {provider.logo}
-                    <span className="ml-2">{provider.name}</span>
-                  </CardTitle>
-                  <div className="flex items-center mt-2 text-yellow-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-5 h-5 ${i < Math.floor(provider.rating) ? 'fill-yellow-500' : 'fill-gray-300'}`}
-                        aria-hidden="true"
-                      />
-                    ))}
-                    <span className="ml-2 text-sm font-semibold text-gray-600">{provider.rating} / 5</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-grow p-6 flex flex-col justify-between">
-                  <ul className="space-y-3 mb-6 text-gray-700">
-                    {provider.features.map((feature, index) => (
-                      <li key={index} className="flex items-start text-sm">
-                        <Check className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto">
-                    <div className="mb-4 flex justify-between items-center border-t pt-4">
-                      <p className="text-base font-medium">Preis / Kosten:</p>
-                      <span className="text-lg font-bold text-green-700">{provider.price}</span>
-                    </div>
-                    <div className="mb-6 flex justify-between items-center">
-                      <p className="text-base font-medium">Extra-Bonus:</p>
-                      <span className="text-lg font-bold text-red-600">{provider.bonus}</span>
-                    </div>
-                    <a href={provider.url} target="_blank" rel="sponsored noopener noreferrer" className="block">
-                      <Button className="w-full bg-green-600 text-white font-semibold text-base py-3 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                        Jetzt {provider.name} vergleichen
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center text-green-700">FAQ: Häufig gestellte Fragen zum Banking Vergleich</h2>
-            <div className="space-y-4">
-              <details className="border-b border-gray-200 py-3">
-                <summary className="text-lg font-semibold cursor-pointer text-gray-800 hover:text-green-600 transition-colors">
-                  Welches Girokonto ist wirklich kostenlos?
-                </summary>
-                <p className="mt-2 text-gray-600">
-                  Ein wirklich **kostenloses Girokonto** erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Achten Sie auf Bedingungen wie einen monatlichen Mindestgeldeingang. Viele Banken bieten zudem attraktive **Prämien für Neukunden** an. Nutzen Sie unseren Vergleich, um die besten Konditionen zu finden.
-                </p>
-              </details>
-              <details className="border-b border-gray-200 py-3">
-                <summary className="text-lg font-semibold cursor-pointer text-gray-800 hover:text-green-600 transition-colors">
-                  Wie finde ich den günstigsten Kredit?
-                </summary>
-                <p className="mt-2 text-gray-600">
-                  Der günstigste Kredit hängt von der **Laufzeit**, der **Bonität** und dem **Verwendungszweck** ab. Entscheidend ist der **effektive Jahreszins**, da er alle Kosten beinhaltet. Ein Schufa-neutraler Kreditvergleich wie der von FINANZCHECK oder Smava hilft Ihnen, die besten Angebote mehrerer Banken zu vergleichen und so mehrere Hundert Euro zu sparen.
-                </p>
-              </details>
-              <details className="border-b border-gray-200 py-3">
-                <summary className="text-lg font-semibold cursor-pointer text-gray-800 hover:text-green-600 transition-colors">
-                  Sind Tagesgeldkonten sicher?
-                </summary>
-                <p className="mt-2 text-gray-600">
-                  Ja, Tagesgeldkonten bei Banken in der Europäischen Union (EU) sind durch die gesetzliche **Einlagensicherung bis zu 100.000 €** pro Kunde und Bank abgesichert. Dies bietet ein hohes Maß an Sicherheit für Ihr Erspartes.
-                </p>
-              </details>
-              <details className="border-b border-gray-200 py-3">
-                <summary className="text-lg font-semibold cursor-pointer text-gray-800 hover:text-green-600 transition-colors">
-                  Lohnt sich eine Kreditkarte ohne Jahresgebühr?
-                </summary>
-                <p className="mt-2 text-gray-600">
-                  Absolut. **Kostenlose Kreditkarten** sind ideal für den Alltag und Reisen, da sie keine fixen Gebühren verursachen. Viele Top-Anbieter bieten trotzdem zusätzliche Vorteile wie kostenlose Abhebungen im Ausland, Cashback oder Reiseversicherungen. Ein Vergleich lohnt sich immer!
-                </p>
-              </details>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer-Komponente oder direkter Footer-Inhalt (hier weggelassen für Kürze) */}
-
-      {/* OPTIMIERTE SCRIPTS FÜR BESSERE LADEZEITEN:
-        strategy="lazyOnload" stellt sicher, dass die Skripte erst geladen werden,
-        wenn die Hauptinhalte der Seite geladen sind und die Seite interaktiv wird,
-        was die initiale Ladezeit verbessert.
-      */}
-      <Script
-        src="https://code.finanzcheck.de/kreditvergleich/rechner/js/embed.js"
-        strategy="lazyOnload"
-        onLoad={() => handleScriptLoad('main')}
-        onError={() => handleScriptError('main')}
-        async
-      />
-      <Script
-        id="embed_teal"
-        data-defer
-        src="https://www.finanzcheck.de/teal/js/embed_teal.js"
-        strategy="lazyOnload" // <-- KORRIGIERT: 'lazyOnLoad' zu 'lazyOnload' geändert
-        onLoad={() => handleScriptLoad('embedTeal')}
-        onError={() => handleScriptError('embedTeal')}
-      />
-      <Script
-        id="kredit-rechner-init"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof teal_embed_iframe !== 'undefined') {
-              teal_embed_iframe.init({
-                target: '#teal_embed_iframe',
-                type: 'girokonto'
-              });
-            }
-          `,
-        }}
-      />
-      <Script
-        id="girokonto-rechner-init"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof FinanzcheckRechner !== 'undefined') {
-              FinanzcheckRechner.init({
-                ziel: 'kredit-rechner-ziel',
-                ziel_form: 'antrag',
-                refId: 'Bz0EGclZjG5L',
-                betrag: 10000,
-                laufzeit: 84
-              });
-            }
-          `,
-        }}
-      />
-    </div>
-  )
-}
+          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Vergleich von Finanzprodukten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Unternehmen stehen Ihnen zur Verfügung.</li>
+            </ul>
+           
