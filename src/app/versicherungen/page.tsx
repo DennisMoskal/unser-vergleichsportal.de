@@ -521,6 +521,26 @@ const providerData = [
   }
 ]
 
+// HaftpflichtRechner Komponente
+const HaftpflichtRechner = () => {
+  useEffect(() => {
+    // Script für den Haftpflichtrechner laden
+    const script = document.createElement('script');
+    script.src = 'https://form.partner-versicherung.de/widgets/192394/tcpp-iframe-kfz/kfz-iframe.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Script entfernen beim Unmount
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto' }} id="tcpp-iframe-kfz" data-style="custom_green"></div>
+  );
+};
+
 export default function Versicherungen() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -827,16 +847,18 @@ export default function Versicherungen() {
                 Flexible Zusatzbausteine (z. B. Mallorca-Police)
               </li>
             </ul>
+            
+            {/* Haftpflichtrechner mit optimierter Überschrift */}
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center mt-8">
+              Haftpflichtversicherung Vergleich 2025 - Jetzt in 2 Minuten Tarife vergleichen & bis zu 300€ sparen
+            </h2>
+            <div className="my-4">
+              <HaftpflichtRechner />
+            </div>
+
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Durch den Wechsel der Kfz-Versicherung können Sie bis zu 500€ jährlich sparen. Nutzen Sie unseren Vergleich, um die besten Tarife zu finden.
             </p>
-            <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT KFZ-VERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
-            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Privathaftpflichtversicherung für jeden Haushalt
@@ -858,16 +880,6 @@ export default function Versicherungen() {
                 Familienabsicherung inklusive
               </li>
             </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Wichtiger Hinweis:</strong> Vergleichen Sie jährlich, da Tarife sich ändern. Kombination mit Hausrat spart bis zu 20%.
-            </p>
-            <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  HAFTPFLICHTVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
-            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Günstige Hausratversicherung für Mieter und Eigentümer
@@ -1036,7 +1048,7 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+    <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
@@ -1186,6 +1198,50 @@ export default function Versicherungen() {
       </div>
       
       <div>
+        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-base text-gray-400">
+          <li>
+            <Link 
+              href="/karriere" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Karriere"
+            >
+              Karriere
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/kontakt" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/partnerprogramme" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Partnerprogramm"
+            >
+              Partnerprogramm
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/ueber-uns" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
+              aria-label="Über uns"
+            >
+              Über uns
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
         <span className="font-semibold mb-3 text-xl">Rechtliches</span>
         <ul className="space-y-2 text-base text-gray-400">
           <li>
@@ -1234,7 +1290,7 @@ export default function Versicherungen() {
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
       <p className="text-base text-gray-400 mb-4">
-        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
