@@ -351,7 +351,7 @@ const providerData: { [key: string]: Provider[] } = {
       logo: "📱",
       url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
     },
-  ], // Hier war das fehlende schließende } hinzugefügt
+  ],
   tierversicherungen: [
     {
       name: "PetProtect",
@@ -405,7 +405,7 @@ const providerData: { [key: string]: Provider[] } = {
         "Smarte ETF-Sparpläne",
         "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR",
+        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25",
       ],
       price: "0€ Kommission",
@@ -1007,7 +1007,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
                 <p className="mb-4 text-gray-700">
-                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
+                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "
                   <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     CHECK24
                   </a>{" "}
@@ -1015,7 +1015,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "
                   <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
                     Tagesgeldkonten
                   </Link>{" "}
@@ -1023,7 +1023,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
                 <p className="mb-4 text-gray-700">
-                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
+                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "
                   <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     Tarifcheck.de
                   </a>{" "}
@@ -1040,7 +1040,7 @@ export default function Home() {
               <div className="mb-12" id="trading-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
+                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "
                   <Link href="/trading" className="text-green-600 hover:underline">
                     Trading-Seite um das richtige Depot zu eröffnen
                   </Link>
@@ -1048,7 +1048,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
                 <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
+                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "
                   <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
                     Altersvorsorge-Optionen
                   </Link>
@@ -1056,10 +1056,10 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
                 <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
+                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "
                   <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     XTB
-                  </a>{" "}
+                  </a>{" "
                   bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rostoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine verzinsung des Guthabens.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
@@ -1068,7 +1068,7 @@ export default function Home() {
                   <Link href="/trading#krypto" className="text-green-600 hover:underline">
                     sicheres Krypto-Trading
                   </Link>
-                  . In Unserer Trading Rubrik finde Sie Informationen und Tips um sicher und gut vorbereitet mit dem Handel zu beginnen.
+                  . In unserer Trading-Rubrik finden Sie Informationen und Tipps, um sicher und gut vorbereitet mit dem Handel zu beginnen.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
                 <p className="mb-4 text-gray-700">
@@ -1142,7 +1142,7 @@ export default function Home() {
                   Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "
                   <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     HanseMerkur
-                  </a>{" "}
+                  </a>{" "
                   decken bis zu 100% der Kosten ab.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
