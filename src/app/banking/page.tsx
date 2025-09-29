@@ -7,6 +7,7 @@ import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Script from "next/script"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -773,37 +774,45 @@ export default function Banking() {
                 </ul>
               </div>
               <div className="flex-1">
-                <script src="https://frame.finanzcheck.de/main.js"></script>
-                <script src="https://widget.finanzcheck.de/embedTeal.js"></script>
+                <Script
+                  src="https://frame.finanzcheck.de/main.js"
+                  strategy="afterInteractive"
+                />
+                <Script
+                  src="https://widget.finanzcheck.de/embedTeal.js"
+                  strategy="afterInteractive"
+                />
                 <span id="teal-embed-iframe"></span>
-                <script>
-                  {`teal_embed_iframe({
-                    "advertisementId": "WqzbMCwyzPe8",
-                    "elementId": "teal-embed-iframe",
-                    "data": {
-                      "amount": 30000,
-                      "term": 84,
-                      "purpose": "OTHER",
-                      "formConfig": "ddf",
-                      "palette": {
-                        "primary": {
-                          "light": "#E8EEF5",
-                          "main": "#26a269",
-                          "dark": "#26a269",
-                          "contrastText": "#fff"
-                        },
-                        "secondary": {
-                          "light": "#FCE9CD",
-                          "main": "#26a269",
-                          "dark": "#26a269",
-                          "contrastText": "rgba(0, 0, 0, 0.87)"
+                <Script id="teal-embed-script" strategy="afterInteractive">
+                  {`
+                    teal_embed_iframe({
+                      "advertisementId": "WqzbMCwyzPe8",
+                      "elementId": "teal-embed-iframe",
+                      "data": {
+                        "amount": 30000,
+                        "term": 84,
+                        "purpose": "OTHER",
+                        "formConfig": "ddf",
+                        "palette": {
+                          "primary": {
+                            "light": "#E8EEF5",
+                            "main": "#26a269",
+                            "dark": "#26a269",
+                            "contrastText": "#fff"
+                          },
+                          "secondary": {
+                            "light": "#FCE9CD",
+                            "main": "#26a269",
+                            "dark": "#26a269",
+                            "contrastText": "rgba(0, 0, 0, 0.87)"
+                          }
                         }
-                      }
-                    },
-                    "entryPoint": "first",
-                    "version": "v2"
-                  })`}
-                </script>
+                      },
+                      "entryPoint": "first",
+                      "version": "v2"
+                    })
+                  `}
+                </Script>
               </div>
             </div>
           </div>
