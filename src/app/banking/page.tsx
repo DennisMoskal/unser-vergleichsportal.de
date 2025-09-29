@@ -808,13 +808,13 @@ export default function Banking() {
         id="embed_teal"
         data-defer
         src="https://www.finanzcheck.de/teal/js/embed_teal.js"
-        strategy="lazyOnload"
+        strategy="lazyOnload" // <-- KORRIGIERT: 'lazyOnLoad' zu 'lazyOnload' geändert
         onLoad={() => handleScriptLoad('embedTeal')}
         onError={() => handleScriptError('embedTeal')}
       />
       <Script
         id="kredit-rechner-init"
-        strategy="lazyOnLoad"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             if (typeof teal_embed_iframe !== 'undefined') {
@@ -828,7 +828,7 @@ export default function Banking() {
       />
       <Script
         id="girokonto-rechner-init"
-        strategy="lazyOnLoad"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             if (typeof FinanzcheckRechner !== 'undefined') {
