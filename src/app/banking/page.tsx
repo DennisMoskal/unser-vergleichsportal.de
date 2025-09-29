@@ -808,7 +808,7 @@ export default function Banking() {
         id="embed_teal"
         data-defer
         src="https://www.finanzcheck.de/teal/js/embed_teal.js"
-        strategy="lazyOnLoad"
+        strategy="lazyOnload"
         onLoad={() => handleScriptLoad('embedTeal')}
         onError={() => handleScriptError('embedTeal')}
       />
