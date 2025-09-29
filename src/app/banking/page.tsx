@@ -413,8 +413,8 @@ export default function Banking() {
   const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
   const [secondScriptsLoaded, setSecondScriptsLoaded] = useState({ main: false, embedTeal: false })
 
-  const handleScriptLoad = (scriptName: string, setter: React.Dispatch<React.SetStateAction<any>>) => {
-    setter((prev: any) => ({ ...prev, [scriptName]: true }))
+  const handleScriptLoad = (scriptName: string, setter: React.Dispatch<React.SetStateAction<{main: boolean, embedTeal: boolean}>>) => {
+    setter((prev) => ({ ...prev, [scriptName]: true }))
     console.log(`${scriptName} script loaded successfully`)
   }
 
