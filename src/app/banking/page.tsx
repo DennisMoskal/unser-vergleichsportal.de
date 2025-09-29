@@ -328,7 +328,7 @@ const providerData = [
     price: "Bonitätsabhängige Zinsen",
     bonus: "Flexible Kreditkonditionen",
     logo: "💸",
-    url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&subid=&target=Startseite"
+    url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&sub id=&target=Startseite"
   },
   {
     name: "CHECK24",
@@ -655,540 +655,537 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  INVESTMENT-ANBIETER UND DEPOTŚ VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+             INVESTMENT-ANBIETER UND DEPOTS VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
+    </Link>
+  </Button>
+</div>
 
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2 text-green-600">Vergleich von Finanzprodukten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Unternehmen stehen Ihnen zur Verfügung.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Kundenbewertungen prüfen</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Unsere Anbieter haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auch auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Konditionen analysieren</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen.</li>
-            </ul>
-            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto finden</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Kriterien für ein kostenloses Girokonto</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Girokonten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die empfohlenen kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Eigenschaften der Testsieger-Girokonten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bedingungslos kostenlose Kontoführung</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose EC- und Kreditkarte</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Bargeldabheben deutschlandweit</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App mit allen Funktionen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% p.a.</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/W1pi1Fx" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  GIROKONTEN VERGLEICHEN
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Tagesgeldkonto für sichere Geldanlage</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen 2025</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die verglichenen Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Top-Tagesgeldkonten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 4,00% Zinsen für Neukunden</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 100.000€ Einlagensicherung pro Bank</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Täglich verfügbar, keine Kündigung nötig</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise zu Tagesgeld</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsbindung oft nur 3–12 Monate</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Danach meist niedrigere Bestandskundenzinsen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßiger Vergleich lohnt sich</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  TAGESGELD KONTO ERÖFFNEN
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Kostenlose Kreditkarte ohne Jahresgebühr finden</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/NMXe4cX" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT KREDITKARTEN VERGLEICHEN
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
-            <div className="flex flex-col lg:flex-row gap-6 items-start">
-              <div className="flex-1">
-                <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
-                <ul className="list-none text-base mb-6">
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
-                </ul>
-                <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
-                <ul className="list-none text-base mb-6">
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
-                </ul>
-                <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
-                <ul className="list-none text-base mb-6">
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
-                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
-                </ul>
-              </div>
-              <div className="flex-1 mt-0">
-                <Script
-                  src="https://frame.finanzcheck.de/main.js"
-                  strategy="afterInteractive"
-                  onLoad={() => handleScriptLoad("main")}
-                  onError={() => handleScriptError("main")}
-                />
-                <Script
-                  src="https://widget.finanzcheck.de/embedTeal.js"
-                  strategy="afterInteractive"
-                  onLoad={() => handleScriptLoad("embedTeal")}
-                  onError={() => handleScriptError("embedTeal")}
-                />
-                <div
-                  id="teal-embed-iframe"
-                  className="w-full min-h-[600px] bg-white"
-                  style={{ minHeight: "600px" }}
-                ></div>
-                {scriptsLoaded.main && scriptsLoaded.embedTeal && (
-                  <Script id="teal-embed-script" strategy="afterInteractive">
-                    {`
-                      try {
-                        teal_embed_iframe({
-                          "advertisementId": "WqzbMCwyzPe8",
-                          "elementId": "teal-embed-iframe",
-                          "data": {
-                            "amount": 30000,
-                            "term": 84,
-                            "purpose": "OTHER",
-                            "formConfig": "ddf",
-                            "palette": {
-                              "primary": {
-                                "light": "#E8EEF5",
-                                "main": "#26a269",
-                                "dark": "#26a269",
-                                "contrastText": "#fff"
-                              },
-                              "secondary": {
-                                "light": "#FCE9CD",
-                                "main": "#26a269",
-                                "dark": "#26a269",
-                                "contrastText": "rgba(0, 0, 0, 0.87)"
-                              }
-                            }
-                          },
-                          "entryPoint": "first",
-                          "version": "v2"
-                        });
-                        console.log("teal_embed_iframe initialized successfully for general credit calculator");
-                      } catch (error) {
-                        console.error("Error initializing teal_embed_iframe for general credit calculator:", error);
-                      }
-                    `}
-                  </Script>
-                )}
-              </div>
-            </div>
-          </div>
+<section className="py-12 sm:py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
+    <div className="max-w-4xl mx-auto text-left">
+      <h3 className="text-lg font-bold mb-2 text-green-600">Vergleich von Finanzprodukten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Unternehmen stehen Ihnen zur Verfügung.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Kundenbewertungen prüfen</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Unsere Anbieter haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auch auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Konditionen analysieren</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen.</li>
+      </ul>
+      <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto finden</h2>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Kriterien für ein kostenloses Girokonto</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Girokonten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die empfohlenen kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Eigenschaften der Testsieger-Girokonten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bedingungslos kostenlose Kontoführung</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose EC- und Kreditkarte</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Bargeldabheben deutschlandweit</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App mit allen Funktionen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% p.a.</li>
+      </ul>
+      <div className="mt-8 mb-12 text-center">
+        <a 
+          href="https://www.tarifcheck.com/W1pi1Fx" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            GIROKONTEN VERGLEICHEN
+          </Button>
+        </a>
+      </div>
+      <h2 className="text-3xl font-bold mb-6">Tagesgeldkonto für sichere Geldanlage</h2>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen 2025</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die verglichenen Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Top-Tagesgeldkonten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 4,00% Zinsen für Neukunden</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 100.000€ Einlagensicherung pro Bank</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Täglich verfügbar, keine Kündigung nötig</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise zu Tagesgeld</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsbindung oft nur 3–12 Monate</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Danach meist niedrigere Bestandskundenzinsen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßiger Vergleich lohnt sich</li>
+      </ul>
+      <div className="mt-8 mb-12 text-center">
+        <a 
+          href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            TAGESGELD KONTO ERÖFFNEN
+          </Button>
+        </a>
+      </div>
+      <h2 className="text-3xl font-bold mb-6">Kostenlose Kreditkarte ohne Jahresgebühr finden</h2>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
+      </ul>
+      <div className="mt-8 mb-12 text-center">
+        <a 
+          href="https://www.tarifcheck.com/NMXe4cX" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            JETZT KREDITKARTEN VERGLEICHEN
+          </Button>
+        </a>
+      </div>
+      <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
+      <div className="flex flex-col lg:flex-row gap-6 items-start">
+        <div className="flex-1">
+          <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
+          <ul className="list-none text-base mb-6">
+            <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
+            <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
+          </ul>
+          <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
+          <ul className="list-none text-base mb-6">
+            <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
+            <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
+          </ul>
+          <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
+          <ul className="list-none text-base mb-6">
+            <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
+            <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
+          </ul>
         </div>
-      </section>
-
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich September 2025</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providerData.map((provider) => (
-              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava" || provider.name === "FINANZCHECK.de") && (
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
-                    Top Empfehlung
-                  </Badge>
-                )}
-                <CardHeader className="text-center pb-2">
-                  <div className="text-3xl mb-2">{provider.logo}</div>
-                  <CardTitle className="text-xl font-bold">{provider.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-                      />
-                    ))}
-                    <span className="ml-2 text-base font-medium text-gray-600">{provider.rating}</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex flex-col flex-1">
-                  <div className="text-center border-b pb-2 mb-4">
-                    <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                    <Badge variant="outline" className="mt-1 border-green-200 text-base text-green-700">{provider.bonus}</Badge>
-                  </div>
-                  <ul className="space-y-1 flex-1 overflow-auto">
-                    {provider.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-base">
-                        <Check className="mr-2 h-4 w-4 text-green-600" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a 
-                    href={provider.url} 
-                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
-                    rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
-                  >
-                    <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
-                      ZUM ANBIETER UND SPAREN*
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="mt-8 text-center text-base text-gray-600 p-4">
-            <p>
-              *Wir erhalten eine Provision für Käufe über diese Links.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Baufinanzierung für Ihr Eigenheim</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Aspekte der Baufinanzierung</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Bauzinsen 2025</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Baufinanzierung</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
-            </ul>
-            <div className="mt-8 mb-10 text-center">
-              <a 
-                href="https://www.tarifcheck.com/gH6DahL" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  BAUFINANZIERUNGEN VERGLEICHEN
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking: Sicher und bequem</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2 text-green-600">Kontoeröffnung online</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig – alles bequem von zu Hause.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Mobile Banking App</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App installieren. Alle Bankgeschäfte jederzeit und überall per Smartphone erledigen.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Sicheres Login</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Login mit PIN oder Fingerabdruck. Alle Transaktionen durch TAN-Verfahren oder biometrische Freigabe geschützt.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Bankgeschäfte online verwalten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Überweisungen, Daueraufträge, Kontostände prüfen – alles 24/7 verfügbar ohne Öffnungszeiten.</li>
-            </ul>
-            <h2 className="text-3xl font-bold mb-6">Häufige Fragen zum Online Banking</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Wie sicher ist Online Banking?</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Welche TAN-Verfahren gibt es?</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Können alle Bankgeschäfte online erledigt werden?</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Was kostet Online Banking?</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei den meisten Direktbanken ist Online Banking komplett kostenlos. Auch viele Filialbanken bieten Online Services ohne Extragebühren an.</li>
-            </ul>
-            <div className="mt-8 mb-10 text-center">
-              <a 
-                href="https://www.tarifcheck.com/W1pi1Fx" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT ONLINE-BANKING BEGINNEN
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit umschulden und Depot eröffnen</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2 text-green-600">Kredit umschulden für Ersparnisse</h3>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Wann lohnt sich eine Umschuldung?</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Ersparnis durch Umschuldung</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Tipp für Umschuldung</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <div className="w-full min-h-[600px] bg-white" id="teal-embed-iframe-refinancing"></div>
-              {scriptsLoaded.main && scriptsLoaded.embedTeal && (
-                <Script id="teal-embed-script-refinancing" strategy="afterInteractive">
-                  {`
-                    try {
-                      teal_embed_iframe({
-                        "advertisementId": "WqzbMCwyzPe8",
-                        "elementId": "teal-embed-iframe-refinancing",
-                        "data": {
-                          "amount": 50000,
-                          "term": 96,
-                          "purpose": "REFINANCING",
-                          "formConfig": "ddf",
-                          "palette": {
-                            "primary": {
-                              "light": "#E8EEF5",
-                              "main": "#26a269",
-                              "dark": "#26a269",
-                              "contrastText": "#fff"
-                            },
-                            "secondary": {
-                              "light": "#FCE9CD",
-                              "main": "#26a269",
-                              "dark": "#26a269",
-                              "contrastText": "rgba(0, 0, 0, 0.87)"
-                            }
-                          }
+        <div className="flex-1 mt-0">
+          <Script
+            src="https://frame.finanzcheck.de/main.js"
+            strategy="afterInteractive"
+            onLoad={() => handleScriptLoad("main")}
+            onError={() => handleScriptError("main")}
+          />
+          <Script
+            src="https://widget.finanzcheck.de/embedTeal.js"
+            strategy="afterInteractive"
+            onLoad={() => handleScriptLoad("embedTeal")}
+            onError={() => handleScriptError("embedTeal")}
+          />
+          <div
+            id="teal-embed-iframe"
+            className="w-full min-h-[600px] bg-white"
+            style={{ minHeight: "600px" }}
+          ></div>
+          {scriptsLoaded.main && scriptsLoaded.embedTeal && (
+            <Script id="teal-embed-script" strategy="afterInteractive">
+              {`
+                try {
+                  teal_embed_iframe({
+                    "advertisementId": "WqzbMCwyzPe8",
+                    "elementId": "teal-embed-iframe",
+                    "data": {
+                      "amount": 30000,
+                      "term": 84,
+                      "purpose": "OTHER",
+                      "formConfig": "ddf",
+                      "palette": {
+                        "primary": {
+                          "light": "#E8EEF5",
+                          "main": "#26a269",
+                          "dark": "#26a269",
+                          "contrastText": "#fff"
                         },
-                        "entryPoint": "first",
-                        "version": "v2",
-                        "imodEntryPoint": "banklist"
-                      });
-                      console.log("teal_embed_iframe initialized successfully for refinancing calculator");
-                    } catch (error) {
-                      console.error("Error initializing teal_embed_iframe for refinancing calculator:", error);
+                        "secondary": {
+                          "light": "#FCE9CD",
+                          "main": "#26a269",
+                          "dark": "#26a269",
+                          "contrastText": "rgba(0, 0, 0, 0.87)"
+                        }
+                      }
+                    },
+                    "entryPoint": "first",
+                    "version": "v2"
+                  });
+                  console.log("teal_embed_iframe initialized successfully for general credit calculator");
+                } catch (error) {
+                  console.error("Error initializing teal_embed_iframe for general credit calculator:", error);
+                }
+              `}
+            </Script>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="py-12 sm:py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich September 2025</h2>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {providerData.map((provider) => (
+        <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
+          {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava" || provider.name === "FINANZCHECK.de") && (
+            <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
+              Top Empfehlung
+            </Badge>
+          )}
+          <CardHeader className="text-center pb-2">
+            <div className="text-3xl mb-2">{provider.logo}</div>
+            <CardTitle className="text-xl font-bold">{provider.name}</CardTitle>
+            <div className="flex items-center justify-center">
+              {[...Array(5)].map((_, i) => (
+                <Star 
+                  key={i} 
+                  className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                />
+              ))}
+              <span className="ml-2 text-base font-medium text-gray-600">{provider.rating}</span>
+            </div>
+          </CardHeader>
+          <CardContent className="flex flex-col flex-1">
+            <div className="text-center border-b pb-2 mb-4">
+              <p className="text-xl font-bold text-green-600">{provider.price}</p>
+              <Badge variant="outline" className="mt-1 border-green-200 text-base text-green-700">{provider.bonus}</Badge>
+            </div>
+            <ul className="space-y-1 flex-1 overflow-auto">
+              {provider.features.map((feature, i) => (
+                <li key={i} className="flex items-center text-base">
+                  <Check className="mr-2 h-4 w-4 text-green-600" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <a 
+              href={provider.url} 
+              target={provider.url.startsWith('http') ? '_blank' : '_self'}
+              rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
+            >
+              <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
+                ZUM ANBIETER UND SPAREN*
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+    <div className="mt-8 text-center text-base text-gray-600 p-4">
+      <p>
+        *Wir erhalten eine Provision für Käufe über diese Links.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section className="py-12 sm:py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Baufinanzierung für Ihr Eigenheim</h2>
+    <div className="max-w-4xl mx-auto text-left">
+      <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Aspekte der Baufinanzierung</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Bauzinsen 2025</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Baufinanzierung</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
+      </ul>
+      <div className="mt-8 mb-10 text-center">
+        <a 
+          href="https://www.tarifcheck.com/gH6DahL" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            BAUFINANZIERUNGEN VERGLEICHEN
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="py-12 sm:py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking: Sicher und bequem</h2>
+    <div className="max-w-4xl mx-auto text-left">
+      <h3 className="text-lg font-bold mb-2 text-green-600">Kontoeröffnung online</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig – alles bequem von zu Hause.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Mobile Banking App</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App installieren. Alle Bankgeschäfte jederzeit und überall per Smartphone erledigen.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Sicheres Login</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Login mit PIN oder Fingerabdruck. Alle Transaktionen durch TAN-Verfahren oder biometrische Freigabe geschützt.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Bankgeschäfte online verwalten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Überweisungen, Daueraufträge, Kontostände prüfen – alles 24/7 verfügbar ohne Öffnungszeiten.</li>
+      </ul>
+      <h2 className="text-3xl font-bold mb-6">Häufige Fragen zum Online Banking</h2>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Wie sicher ist Online Banking?</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Welche TAN-Verfahren gibt es?</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Können alle Bankgeschäfte online erledigt werden?</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Was kostet Online Banking?</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei den meisten Direktbanken ist Online Banking komplett kostenlos. Auch viele Filialbanken bieten Online Services ohne Extragebühren an.</li>
+      </ul>
+      <div className="mt-8 mb-10 text-center">
+        <a 
+          href="https://www.tarifcheck.com/W1pi1Fx" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            JETZT ONLINE-BANKING BEGINNEN
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="py-12 sm:py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit umschulden und Depot eröffnen</h2>
+    <div className="max-w-4xl mx-auto text-left">
+      <h3 className="text-lg font-bold mb-2 text-green-600">Kredit umschulden für Ersparnisse</h3>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Wann lohnt sich eine Umschuldung?</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Ersparnis durch Umschuldung</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Tipp für Umschuldung</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
+      </ul>
+      <div className="mt-8 mb-12 text-center">
+        <div className="w-full min-h-[600px] bg-white" id="teal-embed-iframe-refinancing"></div>
+        {scriptsLoaded.main && scriptsLoaded.embedTeal && (
+          <Script id="teal-embed-script-refinancing" strategy="afterInteractive">
+            {`
+              try {
+                teal_embed_iframe({
+                  "advertisementId": "WqzbMCwyzPe8",
+                  "elementId": "teal-embed-iframe-refinancing",
+                  "data": {
+                    "amount": 50000,
+                    "term": 96,
+                    "purpose": "REFINANCING",
+                    "formConfig": "ddf",
+                    "palette": {
+                      "primary": {
+                        "light": "#E8EEF5",
+                        "main": "#26a269",
+                        "dark": "#26a269",
+                        "contrastText": "#fff"
+                      },
+                      "secondary": {
+                        "light": "#FCE9CD",
+                        "main": "#26a269",
+                        "dark": "#26a269",
+                        "contrastText": "rgba(0, 0, 0, 0.87)"
+                      }
                     }
-                  `}
-                </Script>
-              )}
-            </div>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Vorteile eines Depots</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Kostenlose Depotführung</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Online-Broker bieten <strong>kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise für Depots</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
-            </ul>
-            <div className="mt-8 mb-10 text-center">
-              <a 
-                href="/trading" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT DEPOT`S VERGLEICHEN
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+                  },
+                  "entryPoint": "first",
+                  "version": "v2",
+                  "imodEntryPoint": "banklist"
+                });
+                console.log("teal_embed_iframe initialized successfully for refinancing calculator");
+              } catch (error) {
+                console.error("Error initializing teal_embed_iframe for refinancing calculator:", error);
+              }
+            `}
+          </Script>
+        )}
+      </div>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Vorteile eines Depots</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Kostenlose Depotführung</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Online-Broker bieten <strong>kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise für Depots</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
+      </ul>
+      <div className="mt-8 mb-10 text-center">
+        <a 
+          href="/trading" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            JETZT DEPOTS VERGLEICHEN
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kostenlose Kreditkarten im Vergleich 2025</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2 text-green-600">Beste kostenlose Kreditkarten finden</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/NMXe4cX" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  ALLE KREDITKARTEN IM VERGLEICH
-                </Button>
-              </a>
+<section className="py-12 sm:py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kostenlose Kreditkarten im Vergleich 2025</h2>
+    <div className="max-w-4xl mx-auto text-left">
+      <h3 className="text-lg font-bold mb-2 text-green-600">Beste kostenlose Kreditkarten finden</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
+      </ul>
+      <div className="mt-8 mb-12 text-center">
+        <a 
+          href="https://www.tarifcheck.com/NMXe4cX" 
+          target="_blank" 
+          rel="sponsored"
+        >
+          <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            ALLE KREDITKARTEN IM VERGLEICH
+          </Button>
+        </a>
+      </div>
+      <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
+        <CardHeader>
+          <CardTitle className="text-xl font-bold text-orange-800">Kreditkarten-Fallen vermeiden</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div>
+              <h3 className="text-lg font-bold mb-2 text-green-600">Versteckte Kosten vermeiden</h3>
+              <ul className="list-none text-base space-y-1">
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Fremdwährungsgebühren (oft 1–2%)</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bargeldgebühren auch im Inland</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Jahresgebühr ab dem 2. Jahr</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Hohe Sollzinsen bei Teilzahlung</li>
+              </ul>
             </div>
-            <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-xl font-bold text-orange-800">Kreditkarten-Fallen vermeiden</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid gap-6 lg:grid-cols-2">
-                  <div>
-                    <h3 className="text-lg font-bold mb-2 text-green-600">Versteckte Kosten vermeiden</h3>
-                    <ul className="list-none text-base space-y-1">
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Fremdwährungsgebühren (oft 1–2%)</li>
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bargeldgebühren auch im Inland</li>
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Jahresgebühr ab dem 2. Jahr</li>
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Hohe Sollzinsen bei Teilzahlung</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-2 text-green-600">Smarte Kreditkartennutzung</h3>
-                    <ul className="list-none text-base space-y-1">
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Immer per Lastschrift vollständig begleichen</li>
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditrahmen nicht als Kredit nutzen</li>
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei Auslandsreisen Geld sparen</li>
-                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bonusprogramme gezielt nutzen</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div>
+              <h3 className="text-lg font-bold mb-2 text-green-600">Smarte Kreditkartennutzung</h3>
+              <ul className="list-none text-base space-y-1">
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Immer per Lastschrift vollständig begleichen</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditrahmen nicht als Kredit nutzen</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei Auslandsreisen Geld sparen</li>
+                <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bonusprogramme gezielt nutzen</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
-      <section className="py-12 sm:py-16 bg-green-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt Finanzprodukte vergleichen und sparen</h2>
-            <p className="text-base sm:text-lg">
-              Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
-            </p>
-          </div>
-        </div>
-      </section>
+<section className="py-12 sm:py-16 bg-green-600 text-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt Finanzprodukte vergleichen und sparen</h2>
+      <p className="text-base sm:text-lg">
+        Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
+      </p>
+    </div>
+  </div>
+</section>
 
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Checkliste für Ihre Finanzplanung</h2>
-          <div className="max-w-4xl mx-auto text-left">
-            <h3 className="text-lg font-bold mb-2 text-green-600">Grundausstattung für Finanzen</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Girokonto für Alltag</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Tagesgeldkonto für Notreserve (3–6 Monatsgehälter)</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditkarte ohne Jahresgebühr für Reisen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% vereinbaren</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Vermögensaufbau und Absicherung</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> ETF-Sparplan für langfristigen Vermögensaufbau</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Depot mit kostenlosen ETF-Sparplänen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Alte Kredite auf bessere Konditionen prüfen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßig Konditionen vergleichen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+<section className="py-12 sm:py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Checkliste für Ihre Finanzplanung</h2>
+    <div className="max-w-4xl mx-auto text-left">
+      <h3 className="text-lg font-bold mb-2 text-green-600">Grundausstattung für Finanzen</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Girokonto für Alltag</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Tagesgeldkonto für Notreserve (3–6 Monatsgehälter)</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditkarte ohne Jahresgebühr für Reisen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% vereinbaren</li>
+      </ul>
+      <h3 className="text-lg font-bold mb-2 text-green-600">Vermögensaufbau und Absicherung</h3>
+      <ul className="list-none text-base mb-6">
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> ETF-Sparplan für langfristigen Vermögensaufbau</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Depot mit kostenlosen ETF-Sparplänen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Alte Kredite auf bessere Konditionen prüfen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßig Konditionen vergleichen</li>
+        <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren</li>
+      </ul>
+    </div>
+  </div>
+</section>     
 
 
      <footer className="bg-gray-900 text-white py-8 sm:py-12">
