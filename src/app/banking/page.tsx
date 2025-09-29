@@ -347,25 +347,25 @@ const providerData = [
     logo: "✅",
     url: "https://www.tarifcheck.com/k0zzIEJ"
   },
-{
-  name: "Verivox",
-  rating: 4.6,
-  features: [
-    "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
-    "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
-    "Kostenlose und Schufa-neutrale Kreditanfragen",
-    "Über 20 Jahre Erfahrung im Finanzvergleich",
-    "TÜV-geprüfte Plattform für Kredite und Finanzen",
-    "Kredite ab 0,68% effektiver Jahreszins",
-    "Persönliche Beratung unter 06221 79617216"
-  ],
-  price: "100% kostenlos",
-  bonus: "Bis zu 300€ Rückerstattung",
-  logo: "⚖️",
-  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
-  metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
-  metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
-},
+  {
+    name: "Verivox",
+    rating: 4.6,
+    features: [
+      "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "Kostenlose und Schufa-neutrale Kreditanfragen",
+      "Über 20 Jahre Erfahrung im Finanzvergleich",
+      "TÜV-geprüfte Plattform für Kredite und Finanzen",
+      "Kredite ab 0,68% effektiver Jahreszins",
+      "Persönliche Beratung unter 06221 79617216"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 300€ Rückerstattung",
+    logo: "⚖️",
+    url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
+    metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
+    metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
+  },
   {
     name: "Smava",
     rating: 4.8,
@@ -384,6 +384,26 @@ const providerData = [
     url: "https://kreditvergleich.smava.de/coop/antrag?refId=dykN1hEao7j3",
     metaTitle: "Smava Kreditvergleich: Günstige Kredite ab 0,68% 2025",
     metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!"
+  },
+  {
+    name: "FINANZCHECK.de",
+    rating: 4.8,
+    features: [
+      "Kreditvergleich mit über 20 Banken für beste Konditionen",
+      "Zinsen ab 0,69% effektivem Jahreszins",
+      "Schufa-neutrale Anfrage ohne Bonitätsbeeinträchtigung",
+      "TÜV-geprüfte Plattform mit 4,8/5 Sternen (eKomi)",
+      "Schnelle Auszahlung innerhalb von 24–48 Stunden",
+      "Kostenlose Beratung durch Experten (Mo–Fr 8–20 Uhr)",
+      "Über 500.000 zufriedene Kunden seit 2011",
+      "Flexible Laufzeiten von 12 bis 120 Monaten"
+    ],
+    price: "100% kostenlos",
+    bonus: "Schnelle Auszahlung",
+    logo: "💶",
+    url: "https://kreditvergleich.finanzcheck.de/coop/antrag?refId=Bz0EGclZjG5L",
+    metaTitle: "FINANZCHECK.de Kreditvergleich: Günstige Kredite ab 0,69% 2025",
+    metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!"
   }
 ]
 
@@ -392,185 +412,185 @@ export default function Banking() {
 
   return (
     <div className="min-h-screen bg-white">
-    <Head>
-  {/* --- Meta Basics --- */}
-  <title>Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
-  <meta
-    name="description"
-    content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
-  />
-  <meta
-    name="keywords"
-    content="Banking Vergleich 2025, Girokonto kostenlos, Kredit Vergleich, Tagesgeldzinsen 2025, Kreditkarten ohne Jahresgebühr, Baufinanzierung, SmartFinanz"
-  />
-  <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charSet="UTF-8" />
+      <Head>
+        {/* --- Meta Basics --- */}
+        <title>Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
+        <meta
+          name="description"
+          content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
+        />
+        <meta
+          name="keywords"
+          content="Banking Vergleich 2025, Girokonto kostenlos, Kredit Vergleich, Tagesgeldzinsen 2025, Kreditkarten ohne Jahresgebühr, Baufinanzierung, SmartFinanz"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
 
-  {/* --- Open Graph --- */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
-  <meta
-    property="og:description"
-    content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
-  />
-  <meta property="og:url" content="https://unser-vergleichsportal.de/banking" />
-  <meta
-    property="og:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Unser-Vergleichsportal – Banking & Kredite vergleichen" />
-  <meta property="og:site_name" content="SmartFinanz" />
+        {/* --- Open Graph --- */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+        <meta
+          property="og:description"
+          content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/banking" />
+        <meta
+          property="og:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Unser-Vergleichsportal – Banking & Kredite vergleichen" />
+        <meta property="og:site_name" content="SmartFinanz" />
 
-  {/* --- Twitter --- */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
-  <meta
-    name="twitter:description"
-    content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
-  />
-  <meta
-    name="twitter:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta name="twitter:site" content="@unservergleich" />
+        {/* --- Twitter --- */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+        <meta
+          name="twitter:description"
+          content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta name="twitter:site" content="@unservergleich" />
 
-  {/* ---- Schema.org: Organization ---- */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "SmartFinanz – unser-vergleichsportal.de",
-        "url": "https://unser-vergleichsportal.de",
-        "logo": "https://unser-vergleichsportal.de/logo.png",
-        "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
-        "sameAs": [
-          "https://www.linkedin.com/in/unservergleichsportalde",
-          "https://x.com/unservergleich",
-          "https://medium.com/@unser-vergleichsportal.de",
-          "https://www.facebook.com/profile.php?id=61580338356626"
-        ],
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "availableLanguage": ["de"],
-          "url": "https://unser-vergleichsportal.de/kontakt"
-        }]
-      }),
-    }}
-  />
+        {/* ---- Schema.org: Organization ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "SmartFinanz – unser-vergleichsportal.de",
+              "url": "https://unser-vergleichsportal.de",
+              "logo": "https://unser-vergleichsportal.de/logo.png",
+              "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
+              "sameAs": [
+                "https://www.linkedin.com/in/unservergleichsportalde",
+                "https://x.com/unservergleich",
+                "https://medium.com/@unser-vergleichsportal.de",
+                "https://www.facebook.com/profile.php?id=61580338356626"
+              ],
+              "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "availableLanguage": ["de"],
+                "url": "https://unser-vergleichsportal.de/kontakt"
+              }]
+            }),
+          }}
+        />
 
-  {/* ---- Schema.org: WebPage + ItemList ---- */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
-        "url": "https://unser-vergleichsportal.de/banking",
-        "description":
-          "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
-        "inLanguage": "de",
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "Product",
-                "name": "Girokonto",
-                "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+        {/* ---- Schema.org: WebPage + ItemList ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
+              "url": "https://unser-vergleichsportal.de/banking",
+              "description":
+                "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
+              "inLanguage": "de",
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Girokonto",
+                      "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Kredit",
+                      "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Tagesgeld",
+                      "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Kreditkarte",
+                      "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  }
+                ]
               }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "Product",
-                "name": "Kredit",
-                "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Product",
-                "name": "Tagesgeld",
-                "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Product",
-                "name": "Kreditkarte",
-                "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
-              }
-            }
-          ]
-        }
-      }),
-    }}
-  />
+            }),
+          }}
+        />
 
-  {/* ---- Schema.org: FAQPage ---- */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Welches Girokonto ist wirklich kostenlos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ein wirklich kostenloses Girokonto erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Viele Banken bieten zudem Prämien für Neukunden an."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie finde ich den günstigsten Kredit?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Der günstigste Kredit hängt von der Laufzeit, der Bonität und dem Verwendungszweck ab. Ein Vergleich der effektiven Jahreszinsen hilft, mehrere Hundert Euro zu sparen."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Sind Tagesgeldkonten sicher?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, Tagesgeldkonten in der EU sind durch die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und Bank abgesichert."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Lohnt sich eine Kreditkarte ohne Jahresgebühr?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, kostenlose Kreditkarten sind ideal für den Alltag und Reisen. Viele Anbieter bieten zusätzliche Vorteile wie Cashback oder Versicherungen."
-            }
-          }
-        ]
-      })
-    }}
-  />
-</Head>
+        {/* ---- Schema.org: FAQPage ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Welches Girokonto ist wirklich kostenlos?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ein wirklich kostenloses Girokonto erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Viele Banken bieten zudem Prämien für Neukunden an."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wie finde ich den günstigsten Kredit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Der günstigste Kredit hängt von der Laufzeit, der Bonität und dem Verwendungszweck ab. Ein Vergleich der effektiven Jahreszinsen hilft, mehrere Hundert Euro zu sparen."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Sind Tagesgeldkonten sicher?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, Tagesgeldkonten in der EU sind durch die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und Bank abgesichert."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Lohnt sich eine Kreditkarte ohne Jahresgebühr?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, kostenlose Kreditkarten sind ideal für den Alltag und Reisen. Viele Anbieter bieten zusätzliche Vorteile wie Cashback oder Versicherungen."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
       <Header />
 
       <section className="py-12 sm:py-16 bg-green-600 text-white">
@@ -734,31 +754,57 @@ export default function Banking() {
               </a>
             </div>
             <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
-            </ul>
-            <div className="mt-8 mb-10 text-center">
-              <a 
-                href="https://www.tarifcheck.com/k0zzIEJ" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  PERSÖHNLICHES KREDITANGEBOT BERECHNEN
-                </Button>
-              </a>
+            <div className="flex flex-col lg:flex-row gap-6">
+              <div className="flex-1">
+                <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
+                </ul>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
+                </ul>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
+                </ul>
+              </div>
+              <div className="flex-1">
+                <script src="https://frame.finanzcheck.de/main.js"></script>
+                <script src="https://widget.finanzcheck.de/embedTeal.js"></script>
+                <span id="teal-embed-iframe"></span>
+                <script>
+                  {`teal_embed_iframe({
+                    "advertisementId": "WqzbMCwyzPe8",
+                    "elementId": "teal-embed-iframe",
+                    "data": {
+                      "amount": 30000,
+                      "term": 84,
+                      "purpose": "OTHER",
+                      "formConfig": "ddf",
+                      "palette": {
+                        "primary": {
+                          "light": "#E8EEF5",
+                          "main": "#26a269",
+                          "dark": "#26a269",
+                          "contrastText": "#fff"
+                        },
+                        "secondary": {
+                          "light": "#FCE9CD",
+                          "main": "#26a269",
+                          "dark": "#26a269",
+                          "contrastText": "rgba(0, 0, 0, 0.87)"
+                        }
+                      }
+                    },
+                    "entryPoint": "first",
+                    "version": "v2"
+                  })`}
+                </script>
+              </div>
             </div>
           </div>
         </div>
@@ -770,7 +816,7 @@ export default function Banking() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava") && (
+                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava" || provider.name === "FINANZCHECK.de") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
                   </Badge>
