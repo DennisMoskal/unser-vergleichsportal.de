@@ -816,8 +816,8 @@ export default function Banking() {
                   />
                   <div
                     id="teal-embed-iframe"
-                    className="w-full min-h-[600px] bg-white border rounded-lg shadow-sm"
-                    style={{ minHeight: "600px" }}
+                    className="w-full min-h-[60px] bg-white border rounded-lg shadow-sm"
+                    style={{ minHeight: "60px" }}
                   ></div>
                   {scriptsLoaded.main && scriptsLoaded.embedTeal && (
                     <Script id="teal-embed-script" strategy="lazyOnload">
