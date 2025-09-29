@@ -411,9 +411,10 @@ const providerData = [
 export default function Banking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
+  const [secondScriptsLoaded, setSecondScriptsLoaded] = useState({ main: false, embedTeal: false })
 
-  const handleScriptLoad = (scriptName: string) => {
-    setScriptsLoaded((prev) => ({ ...prev, [scriptName]: true }))
+  const handleScriptLoad = (scriptName: string, setter: React.Dispatch<React.SetStateAction<any>>) => {
+    setter((prev: any) => ({ ...prev, [scriptName]: true }))
     console.log(`${scriptName} script loaded successfully`)
   }
 
@@ -427,6 +428,12 @@ export default function Banking() {
       console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
     }
   }, [scriptsLoaded])
+
+  useEffect(() => {
+    if (secondScriptsLoaded.main && secondScriptsLoaded.embedTeal) {
+      console.log("Both second FINANZCHECK scripts loaded, initializing second teal_embed_iframe")
+    }
+  }, [secondScriptsLoaded])
 
   return (
     <div className="min-h-screen bg-white">
@@ -735,45 +742,9 @@ export default function Banking() {
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Kostenlose Kreditkarte ohne Jahresgebühr finden</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/NMXe4cX" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  JETZT KREDITKARTEN VERGLEICHEN
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
-            <div className="flex flex-col lg:flex-row gap-6">
+            <div className="flex flex-col lg:flex-row items-start gap-8 mb-12">
               <div className="flex-1">
+                <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
                 <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
                 <ul className="list-none text-base mb-6">
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
@@ -790,17 +761,17 @@ export default function Banking() {
                   <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
                 </ul>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <Script
                   src="https://frame.finanzcheck.de/main.js"
                   strategy="afterInteractive"
-                  onLoad={() => handleScriptLoad("main")}
+                  onLoad={() => handleScriptLoad("main", setScriptsLoaded)}
                   onError={() => handleScriptError("main")}
                 />
                 <Script
                   src="https://widget.finanzcheck.de/embedTeal.js"
                   strategy="afterInteractive"
-                  onLoad={() => handleScriptLoad("embedTeal")}
+                  onLoad={() => handleScriptLoad("embedTeal", setScriptsLoaded)}
                   onError={() => handleScriptError("embedTeal")}
                 />
                 <div
@@ -1013,17 +984,67 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
             </ul>
+            
+            {/* Zweiter Rechner für Umschuldung */}
             <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/k0zzIEJ" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  UMSCHULDUNG BERECHNEN
-                </Button>
-              </a>
+              <h2 className="text-3xl font-bold mb-6">Umschuldung berechnen: So sparen Sie bis zu 40% Zinsen</h2>
+              <Script
+                src="https://frame.finanzcheck.de/main.js"
+                strategy="afterInteractive"
+                onLoad={() => handleScriptLoad("main", setSecondScriptsLoaded)}
+                onError={() => handleScriptError("main")}
+              />
+              <Script
+                src="https://widget.finanzcheck.de/embedTeal.js"
+                strategy="afterInteractive"
+                onLoad={() => handleScriptLoad("embedTeal", setSecondScriptsLoaded)}
+                onError={() => handleScriptError("embedTeal")}
+              />
+              <div
+                id="teal-embed-iframe2"
+                className="w-full min-h-[600px] bg-white mx-auto"
+                style={{ minHeight: "600px", maxWidth: "800px" }}
+              ></div>
+              {secondScriptsLoaded.main && secondScriptsLoaded.embedTeal && (
+                <Script id="teal-embed-script2" strategy="afterInteractive">
+                  {`
+                    try {
+                      teal_embed_iframe({
+                        "advertisementId": "WqzbMCwyzPe8",
+                        "elementId": "teal-embed-iframe2",
+                        "data": {
+                          "amount": 1000,
+                          "term": 96,
+                          "purpose": "REFINANCING",
+                          "formConfig": "ddf",
+                          "palette": {
+                            "primary": {
+                              "light": "#E8EEF5",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "#fff"
+                            },
+                            "secondary": {
+                              "light": "#FCE9CD",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "rgba(0, 0, 0, 0.87)"
+                            }
+                          }
+                        },
+                        "entryPoint": "first",
+                        "version": "v2",
+                        "imodEntryPoint": "banklist"
+                      });
+                      console.log("Second teal_embed_iframe initialized successfully");
+                    } catch (error) {
+                      console.error("Error initializing second teal_embed_iframe:", error);
+                    }
+                  `}
+                </Script>
+              )}
             </div>
+
             <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
             <h3 className="text-lg font-bold mb-2 text-green-600">Vorteile eines Depots</h3>
             <ul className="list-none text-base mb-6">
