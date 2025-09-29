@@ -1,13 +1,13 @@
-"use client"
+'use client';
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Head from "next/head"
-import Script from "next/script"
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Star, Check, Menu, X, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import Script from 'next/script';
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -24,28 +24,28 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
         <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
       </div>
     </Link>
-  )
-}
+  );
+};
 
 // Wiederverwendbare Header-Komponente
 const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("versicherungen")
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("versicherungen");
 
   const scrollToSection = (sectionId: string) => {
-    setActiveCategory(sectionId)
-    const element = document.getElementById(sectionId)
+    setActiveCategory(sectionId);
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   useEffect(() => {
-    const hash = window.location.hash.substring(1)
+    const hash = window.location.hash.substring(1);
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
-      scrollToSection(hash)
+      scrollToSection(hash);
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -81,8 +81,8 @@ const Header: React.FC = () => {
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
+                          setMobileMenuOpen(false);
+                          setActiveCategory(key);
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -109,8 +109,8 @@ const Header: React.FC = () => {
                           rel="noopener noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
-                            setMobileMenuOpen(false)
-                            setActiveCategory(key)
+                            setMobileMenuOpen(false);
+                            setActiveCategory(key);
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
@@ -133,8 +133,8 @@ const Header: React.FC = () => {
                           rel="noopener noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
-                            setMobileMenuOpen(false)
-                            setActiveCategory(key)
+                            setMobileMenuOpen(false);
+                            setActiveCategory(key);
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
@@ -159,8 +159,8 @@ const Header: React.FC = () => {
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
+                          setMobileMenuOpen(false);
+                          setActiveCategory(key);
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -184,8 +184,8 @@ const Header: React.FC = () => {
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
-                          setMobileMenuOpen(false)
-                          setActiveCategory(key)
+                          setMobileMenuOpen(false);
+                          setActiveCategory(key);
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -254,8 +254,8 @@ const Header: React.FC = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
 const providerData = [
   {
@@ -406,27 +406,27 @@ const providerData = [
     metaTitle: "FINANZCHECK.de Kreditvergleich: Günstige Kredite ab 0,69% 2025",
     metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!"
   }
-]
+];
 
 export default function Banking() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false });
 
   const handleScriptLoad = (scriptName: string) => {
-    setScriptsLoaded((prev) => ({ ...prev, [scriptName]: true }))
-    console.log(`${scriptName} script loaded successfully`)
-  }
+    setScriptsLoaded((prev) => ({ ...prev, [scriptName]: true }));
+    console.log(`${scriptName} script loaded successfully`);
+  };
 
   const handleScriptError = (scriptName: string) => {
-    console.error(`${scriptName} script failed to load`)
-  }
+    console.error(`${scriptName} script failed to load`);
+  };
 
   // Debugging: Log when both scripts are loaded
   useEffect(() => {
     if (scriptsLoaded.main && scriptsLoaded.embedTeal) {
-      console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
+      console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe");
     }
-  }, [scriptsLoaded])
+  }, [scriptsLoaded]);
 
   return (
     <div className="min-h-screen bg-white">
