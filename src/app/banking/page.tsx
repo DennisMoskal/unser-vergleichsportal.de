@@ -662,49 +662,11 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  INVESTMENT-ANBIETER UND DEPOTŚ VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
+                  INVESTMENT-ANBIETER UND DEPOTS VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
           </div>
-           <div className="mt-6 flex justify-center items-center space-x-6">
-                <Image
-                  src="/images/5.png"
-                  alt="Vertrauenssignal 5"
-                  width={80}
-                  height={40}
-                  className="opacity-100 hover:opacity-100 transition-opacity"
-                />
-                <Image
-                  src="/images/1.png"
-                  alt="Vertrauenssignal 1"
-                  width={80}
-                  height={40}
-                  className="opacity-100 hover:opacity-100 transition-opacity"
-                />
-                <Image
-                  src="/images/2.png"
-                  alt="Vertrauenssignal 2"
-                  width={80}
-                  height={40}
-                  className="opacity-100 hover:opacity-100 transition-opacity"
-                />
-                <Image
-                  src="/images/3.png"
-                  alt="Vertrauenssignal 3"
-                  width={80}
-                  height={40}
-                  className="opacity-100 hover:opacity-100 transition-opacity"
-                />
-                <Image
-                  src="/images/4.png"
-                  alt="Vertrauenssignal 4"
-                  width={80}
-                  height={40}
-                  className="opacity-100 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            </div>
         </div>
       </section>
 
