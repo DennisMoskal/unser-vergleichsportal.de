@@ -634,7 +634,7 @@ export default function Banking() {
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  KREDIT-ANGEBOT BERECHNEN
+                  ZUM KREDIT RECHNER
                 </Button>
               </a>
               <a
@@ -644,7 +644,7 @@ export default function Banking() {
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  KONTO-ANBIETER VERGLEICHEN
+                  ZUM KONTO VERGLEICH
                 </Button>
               </a>
             </div>
@@ -663,7 +663,7 @@ export default function Banking() {
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  INVESTMENT-ANBIETER UND DEPOTS VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
+                  INVESTMENT ANBIETER UND DEPOTS VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
@@ -727,7 +727,7 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen.</li>
             </ul>
-            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto finden</h2>
+            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto Tips zur Suche</h2>
             <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Kriterien für ein kostenloses Girokonto</h3>
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
@@ -755,7 +755,7 @@ export default function Banking() {
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Tagesgeldkonto für sichere Geldanlage</h2>
+            <h2 className="text-3xl font-bold mb-6">Informationen über das Tagesgeldkonto als sichere Kapitalanlage</h2>
             <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen 2025</h3>
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die verglichenen Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
