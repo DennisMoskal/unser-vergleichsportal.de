@@ -440,7 +440,7 @@ export default function Banking() {
     <div className="min-h-screen bg-white">
       <Head>
         {/* --- Meta Basics --- */}
-        <title>Beste Bank Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
+        <title>Beste Bank September 2025 | Girokonto, Kredite & Tagesgeld</title>
         <meta
           name="description"
           content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
@@ -456,7 +456,7 @@ export default function Banking() {
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Bank Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+        <meta property="og:title" content="Beste Bank September 2025 | Girokonto, Kredite & Tagesgeld" />
         <meta
           property="og:description"
           content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
@@ -473,7 +473,7 @@ export default function Banking() {
 
         {/* --- Twitter --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+        <meta name="twitter:title" content="Banking September 2025 | Girokonto, Kredite & Tagesgeld" />
         <meta
           name="twitter:description"
           content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
@@ -518,7 +518,7 @@ export default function Banking() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "Beste Bank Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
+              "name": "Beste Bank September 2025 | Girokonto, Kredite & Tagesgeld",
               "url": "https://unser-vergleichsportal.de/banking",
               "description":
                 "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
@@ -622,7 +622,7 @@ export default function Banking() {
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank Testsieger September 2025 | Girokonto & Kredite</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank September 2025 | Girokonto & Kredite</h1>
             <p className="text-base sm:text-lg mb-8">
               Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
