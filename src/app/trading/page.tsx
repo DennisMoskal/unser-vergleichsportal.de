@@ -1379,7 +1379,7 @@ export default function DeFi() {
                   aria-label="Zu den Telegram Bots"
                   title="Zu den Telegram Bots"
                 >
-                  <Button className={btnPrimary}>TOP TELEGRAM SNIPER UND BRIDGE BOTS</Button>
+                  <Button className={btnPrimary}>TELEGRAM SNIPER-BRIDGE BOTS</Button>
                 </Link>
               </div>
             </div>
