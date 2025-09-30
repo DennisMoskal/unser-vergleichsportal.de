@@ -82,7 +82,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false);
                           setActiveCategory(key);
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener sponsored noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false);
                             setActiveCategory(key);
@@ -134,7 +134,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener sponsored noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false);
                             setActiveCategory(key);
@@ -160,7 +160,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false);
                           setActiveCategory(key);
@@ -185,7 +185,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false);
                           setActiveCategory(key);
@@ -200,7 +200,7 @@ const Header: React.FC = () => {
               </div>
               <div className="text-center mt-4">
                 <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  className="w-auto bg-green-600 text-white font-medium text-sm sm:text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -233,7 +233,7 @@ const Header: React.FC = () => {
                 {isInternal ? (
                   <Link
                     href={url}
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`Zu ${label} navigieren`}
                   >
@@ -244,7 +244,7 @@ const Header: React.FC = () => {
                     href={url}
                     target="_blank"
                     rel="noopener sponsored noreferrer"
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
@@ -688,7 +688,7 @@ export default function Home() {
               >
                 <Button
                   size="lg"
-                  className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                 >
                   BESTEN TARIF BERECHNEN
                 </Button>
@@ -1337,7 +1337,7 @@ export default function Home() {
           </section>
 <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
-    <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
         <div className="flex flex-col items-start mb-4">
           <SmartFinanzLogo className="text-xl" />
@@ -1345,8 +1345,8 @@ export default function Home() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/banking" 
@@ -1387,9 +1387,9 @@ export default function Home() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
         <div className="grid grid-cols-2 gap-4">
-          <ul className="space-y-2 text-base text-gray-400">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
             <li>
               <a 
                 href="https://www.c24n.de/ducwCtq" 
@@ -1435,7 +1435,7 @@ export default function Home() {
               </a>
             </li>
           </ul>
-          <ul className="space-y-2 text-base text-gray-400">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
             <li>
               <a 
                 href="https://www.c24n.de/FZ9nd0R" 
@@ -1485,8 +1485,8 @@ export default function Home() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/karriere" 
@@ -1529,8 +1529,8 @@ export default function Home() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Rechtliches</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/agb" 
@@ -1576,12 +1576,12 @@ export default function Home() {
     </div>
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-      <p className="text-base text-gray-400 mb-4">
+      <p className="text-sm sm:text-base text-gray-400 mb-4">
         © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
-          className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
           Zur Startseite
         </Button>
