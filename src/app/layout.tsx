@@ -20,11 +20,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
-  // Dynamischer Canonical Tag über metadata
+  // WICHTIG: Canonical hier entfernen, da er individuell pro Seite gesetzt wird
   metadataBase: new URL('https://unser-vergleichsportal.de'),
-  alternates: {
-    canonical: 'https://unser-vergleichsportal.de/', // Festgelegt auf absolute URL
-  },
+  // alternates.canonical wurde entfernt - wird jetzt individuell pro Seite gesetzt
 };
 
 export default function RootLayout({
@@ -51,23 +49,22 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Sitemap für Suchmaschinen */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        {/* Zusätzliche SEO-Meta-Tags */}
+        {/* Standard robots meta tag - kann von einzelnen Seiten überschrieben werden */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
 
-        {/* --- Open Graph - LinkedIn optimiert --- */}
+        {/* --- Open Graph - Standardwerte, können pro Seite überschrieben werden --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+        <meta property="og:title" content="UNSER-VERGLEICHSPORTAL.DE | einfach sparen" />
         <meta
           property="og:description"
           content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
         />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
         <meta property="og:site_name" content="SmartFinanz" />
 
-        {/* Bild für Social Sharing - LinkedIn optimiert mit angepasster Größe */}
+        {/* Standard Open Graph Image */}
         <meta
           property="og:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
@@ -84,19 +81,9 @@ export default function RootLayout({
         {/* Zusätzliche LinkedIn-spezifische Meta Tags */}
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
 
-        {/* --- Twitter Cards - ebenfalls optimiert --- */}
+        {/* --- Twitter Cards - Standardwerte --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
-        <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
-        <meta
-          name="twitter:image"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta name="twitter:site" content="@unservergleich" />
         <meta name="twitter:creator" content="@unservergleich" />
 
@@ -171,51 +158,6 @@ export default function RootLayout({
                 "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
-            }),
-          }}
-        />
-
-        {/* ---- Schema.org: FAQPage ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Wie funktioniert der Finanzvergleich bei SmartFinanz?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Ist der Finanzvergleich bei SmartFinanz kostenlos?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
-                  }
-                }
-              ]
             }),
           }}
         />
