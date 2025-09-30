@@ -700,35 +700,35 @@ export default function Home() {
                   alt="Vertrauenssignal 5"
                   width={80}
                   height={40}
-                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  className="opacity-100 hover:opacity-100 transition-opacity"
                 />
                 <Image
                   src="/images/1.png"
                   alt="Vertrauenssignal 1"
                   width={80}
                   height={40}
-                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  className="opacity-100 hover:opacity-100 transition-opacity"
                 />
                 <Image
                   src="/images/2.png"
                   alt="Vertrauenssignal 2"
                   width={80}
                   height={40}
-                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  className="opacity-100 hover:opacity-100 transition-opacity"
                 />
                 <Image
                   src="/images/3.png"
                   alt="Vertrauenssignal 3"
                   width={80}
                   height={40}
-                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  className="opacity-100 hover:opacity-100 transition-opacity"
                 />
                 <Image
                   src="/images/4.png"
                   alt="Vertrauenssignal 4"
                   width={80}
                   height={40}
-                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  className="opacity-100 hover:opacity-100 transition-opacity"
                 />
               </div>
             </div>
