@@ -3,10 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X } from "lucide-react"
+import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Image from "next/image"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -349,7 +350,7 @@ const providerData = [
       "Schutz für Hunde, Katzen und Pferde",
       "Bis zu 6.000€ jährliche Deckung",
       "eKomi-Bewertung: 4,6/5 Sterne",
-      "Schneller Schadensservice (24/7)",
+      "Schneller Schadenservice (24/7)",
       "Flexible Tarife mit Zusatzoptionen",
       "Persönliche Beratung in Filialen",
       "Online-Abschluss mit VideoIdent",
@@ -569,7 +570,14 @@ export default function Tierversicherungen() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored" className="inline-block">
-                
+                <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg w-full sm:w-auto">
+                  TIERVERSICHERUNG VERGLEICHEN
+                </Button>
+              </a>
+              <a href="#tierversicherungen" className="inline-block">
+                <Button className="bg-transparent border-2 border-white text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-white hover:text-green-600 hover:scale-105 hover:shadow-lg w-full sm:w-auto">
+                  MEHR ERFAHREN
+                </Button>
               </a>
             </div>
           </div>
@@ -582,6 +590,46 @@ export default function Tierversicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             So finden Sie die passende Tierversicherung
           </h2>
+          
+          {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
+          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+            <Image
+              src="/images/5.png"
+              alt="Vertrauenssignal 5"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/1.png"
+              alt="Vertrauenssignal 1"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/2.png"
+              alt="Vertrauenssignal 2"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/3.png"
+              alt="Vertrauenssignal 3"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/4.png"
+              alt="Vertrauenssignal 4"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Tipps für einen erfolgreichen Tierversicherungsvergleich
@@ -629,11 +677,13 @@ export default function Tierversicherungen() {
                 className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative"
               >
                 {provider.isTopRecommendation && (
-                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs z-10">Top Empfehlung</Badge>
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs sm:text-sm transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
+                    Top Empfehlung
+                  </Badge>
                 )}
                 <CardHeader className="text-center pb-2">
                   <div className="text-3xl mb-2">{provider.logo}</div>
-                  <CardTitle className="text-lg font-bold">{provider.name}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl font-bold">{provider.name}</CardTitle>
                   <div className="flex items-center justify-center">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -848,7 +898,9 @@ export default function Tierversicherungen() {
             </p>
             <div className="mt-6">
               <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
-                
+                <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg w-full sm:w-auto">
+                  JETZT VERGLEICHEN
+                </Button>
               </a>
             </div>
           </div>
@@ -1093,7 +1145,7 @@ export default function Tierversicherungen() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-base text-gray-400 mb-4">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
               <Button
