@@ -669,42 +669,42 @@ export default function Banking() {
             </div>
             
             {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
-            <div className="mt-6 flex justify-center items-center space-x-6">
-              <Image
-                src="/images/5.png"
-                alt="Vertrauenssignal 5"
-                width={80}
-                height={40}
-                className="opacity-100 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/images/1.png"
-                alt="Vertrauenssignal 1"
-                width={80}
-                height={40}
-                className="opacity-100 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/images/2.png"
-                alt="Vertrauenssignal 2"
-                width={80}
-                height={40}
-                className="opacity-100 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/images/3.png"
-                alt="Vertrauenssignal 3"
-                width={80}
-                height={40}
-                className="opacity-100 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/images/4.png"
-                alt="Vertrauenssignal 4"
-                width={80}
-                height={40}
-                className="opacity-100 hover:opacity-100 transition-opacity"
-              />
+          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+            <Image
+              src="/images/5.png"
+              alt="Vertrauenssignal 5"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/1.png"
+              alt="Vertrauenssignal 1"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/2.png"
+              alt="Vertrauenssignal 2"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/3.png"
+              alt="Vertrauenssignal 3"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/4.png"
+              alt="Vertrauenssignal 4"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
             </div>
           </div>
         </div>
