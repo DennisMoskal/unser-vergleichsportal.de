@@ -6,6 +6,7 @@ import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Image from "next/image"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -707,7 +708,7 @@ export default function DeFi() {
               bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              <Button className={btnPrimary}>UNSERE TESTSIEGER 09/2025</Button>
+              <Button className={`${btnPrimary} text-sm sm:text-base`}>UNSERE TESTSIEGER 09/2025</Button>
             </Link>
           </div>
         </div>
@@ -718,6 +719,46 @@ export default function DeFi() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             So finden Sie die passende Trading-Plattform
           </h2>
+          
+          {/* Trust Signals hinzugefügt */}
+          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+            <Image
+              src="/images/5.png"
+              alt="Vertrauenssignal 5"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/1.png"
+              alt="Vertrauenssignal 1"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/2.png"
+              alt="Vertrauenssignal 2"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/3.png"
+              alt="Vertrauenssignal 3"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/4.png"
+              alt="Vertrauenssignal 4"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+          </div>
+
           <div className="max-w-4xl mx-auto space-y-6">
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Gebühren vergleichen</h2>
@@ -859,7 +900,7 @@ export default function DeFi() {
                 aria-label="Zu nachhaltigen Investments mit Investivox"
                 title="Zu nachhaltigen Investments mit Investivox"
               >
-                <Button className={btnPrimary}>NACHHALTIG INVESTIEREN MIT INVESTIVOX</Button>
+                <Button className={`${btnPrimary} text-sm sm:text-base`}>NACHHALTIG INVESTIEREN MIT INVESTIVOX</Button>
               </Link>
             </div>
           </div>
@@ -913,7 +954,7 @@ export default function DeFi() {
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
                     rel={provider.url.startsWith("http") ? "noopener nofollow sponsored" : undefined}
                   >
-                    <Button className={`w-full mt-auto ${btnPrimary}`}>ZUM ANBIETER UND SPAREN*</Button>
+                    <Button className={`w-full mt-auto ${btnPrimary} text-sm sm:text-base`}>ZUM ANBIETER UND SPAREN*</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -930,7 +971,7 @@ export default function DeFi() {
                 </p>
               </div>
               <Link href="/banking" aria-label="Zum Banking-Vergleich" title="Zum Banking-Vergleich">
-                <Button className={btnPrimary}>BANKING-PRODUKTE ENTDECKEN</Button>
+                <Button className={`${btnPrimary} text-sm sm:text-base`}>BANKING-PRODUKTE ENTDECKEN</Button>
               </Link>
             </div>
           </div>
@@ -1003,7 +1044,7 @@ export default function DeFi() {
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              Tipp: Nutzen Sie TradingView’s Demo-Konto, um Strategien risikofrei zu testen.
+              Tipp: Nutzen Sie TradingView's Demo-Konto, um Strategien risikofrei zu testen.
             </p>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Sicher Bitcoin handeln mit BlackBull
@@ -1027,7 +1068,7 @@ export default function DeFi() {
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600">
-              Tipp: Nutzen Sie BlackBull’s Demo-Konto, um Bitcoin-Trading risikofrei zu testen.
+              Tipp: Nutzen Sie BlackBull's Demo-Konto, um Bitcoin-Trading risikofrei zu testen.
             </p>
             {/* Krypto Handel beginnen – direkt unter dem Tipp eingefügt */}
             <div className="mt-6 mb-6 text-center">
@@ -1036,7 +1077,7 @@ export default function DeFi() {
                 target="_blank"
                 rel="noopener nofollow sponsored"
               >
-                <Button className={btnPrimary}>DAS CRYPTO-TRADING STARTEN</Button>
+                <Button className={`${btnPrimary} text-sm sm:text-base`}>DAS CRYPTO-TRADING STARTEN</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -1053,7 +1094,7 @@ export default function DeFi() {
                 Zugang zu niedrigeren Gasgebühren oder spezifischen DeFi-Protokollen.
               </li>
             </ul>
-            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Wie funktioniert’s?</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Wie funktioniert's?</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
@@ -1080,7 +1121,7 @@ export default function DeFi() {
                 aria-label="Zum PlatinumLabs für Bridging"
                 title="Zum PlatinumLabs für Bridging"
               >
-                <Button className={btnPrimary}>ZU DEN SCHNELLSTEN CRYPTO-BRIDGES</Button>
+                <Button className={`${btnPrimary} text-sm sm:text-base`}>ZU DEN SCHNELLSTEN CRYPTO-BRIDGES</Button>
               </Link>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -1258,7 +1299,7 @@ export default function DeFi() {
                 aria-label="Versicherungen für Krypto-Anleger"
                 title="Versicherungen für Krypto-Anleger"
               >
-                <Button className={btnPrimary}>ZU DEN VERSICHERUNGEN</Button>
+                <Button className={`${btnPrimary} text-sm sm:text-base`}>ZU DEN VERSICHERUNGEN</Button>
               </Link>
             </div>
           </div>
@@ -1379,7 +1420,7 @@ export default function DeFi() {
                   aria-label="Zu den Telegram Bots"
                   title="Zu den Telegram Bots"
                 >
-                  <Button className={btnPrimary}>TELEGRAM SNIPER-BRIDGE BOTS</Button>
+                  <Button className={`${btnPrimary} text-sm sm:text-base`}>TELEGRAM SNIPER-BRIDGE BOTS</Button>
                 </Link>
               </div>
             </div>
@@ -1408,7 +1449,7 @@ export default function DeFi() {
       </section>
      <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
-    <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
         <div className="flex flex-col items-start mb-4">
           <SmartFinanzLogo className="text-xl" />
@@ -1416,8 +1457,8 @@ export default function DeFi() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/banking" 
@@ -1458,9 +1499,9 @@ export default function DeFi() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
         <div className="grid grid-cols-2 gap-4">
-          <ul className="space-y-2 text-base text-gray-400">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
             <li>
               <a 
                 href="https://www.c24n.de/ducwCtq" 
@@ -1506,7 +1547,7 @@ export default function DeFi() {
               </a>
             </li>
           </ul>
-          <ul className="space-y-2 text-base text-gray-400">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
             <li>
               <a 
                 href="https://www.c24n.de/FZ9nd0R" 
@@ -1556,8 +1597,8 @@ export default function DeFi() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/karriere" 
@@ -1600,8 +1641,8 @@ export default function DeFi() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Rechtliches</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/agb" 
@@ -1647,12 +1688,12 @@ export default function DeFi() {
     </div>
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-      <p className="text-base text-gray-400 mb-4">
+      <p className="text-sm sm:text-base text-gray-400 mb-4">
         © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
-          className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
           Zur Startseite
         </Button>
