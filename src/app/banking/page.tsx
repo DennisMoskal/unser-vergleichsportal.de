@@ -7,6 +7,8 @@ import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Script from "next/script"
+import Image from "next/image"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -273,7 +275,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
-    url: "https://www.tarifcheck.de/girokonto/"
+    url: "https://www.tarifcheck.com/W1pi1Fx"
   },
   {
     name: "DKB",
@@ -345,7 +347,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
-    url: "https://www.check24.de/kredit/"
+    url: "https://www.tarifcheck.com/k0zzIEJ"
   },
   {
     name: "Verivox",
@@ -362,7 +364,7 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
-    url: "https://www.verivox.de/kredit/",
+    url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
     metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
     metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
   },
@@ -384,221 +386,265 @@ const providerData = [
     url: "https://kreditvergleich.smava.de/coop/antrag?refId=dykN1hEao7j3",
     metaTitle: "Smava Kreditvergleich: Günstige Kredite ab 0,68% 2025",
     metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!"
+  },
+  {
+    name: "FINANZCHECK.de",
+    rating: 4.8,
+    features: [
+      "Kreditvergleich mit über 20 Banken für beste Konditionen",
+      "Zinsen ab 0,69% effektivem Jahreszins",
+      "Schufa-neutrale Anfrage ohne Bonitätsbeeinträchtigung",
+      "TÜV-geprüfte Plattform mit 4,8/5 Sternen (eKomi)",
+      "Schnelle Auszahlung innerhalb von 24–48 Stunden",
+      "Kostenlose Beratung durch Experten (Mo–Fr 8–20 Uhr)",
+      "Über 500.000 zufriedene Kunden seit 2011",
+      "Flexible Laufzeiten von 12 bis 120 Monaten"
+    ],
+    price: "100% kostenlos",
+    bonus: "Schnelle Auszahlung",
+    logo: "💶",
+    url: "https://kreditvergleich.finanzcheck.de/coop/antrag?refId=Bz0EGclZjG5L",
+    metaTitle: "FINANZCHECK.de Kreditvergleich: Günstige Kredite ab 0,69% 2025",
+    metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!"
   }
 ]
 
 export default function Banking() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
+  const [secondScriptsLoaded, setSecondScriptsLoaded] = useState({ main: false, embedTeal: false })
+
+  const handleScriptLoad = (scriptName: string, setter: React.Dispatch<React.SetStateAction<{main: boolean, embedTeal: boolean}>>) => {
+    setter((prev) => ({ ...prev, [scriptName]: true }))
+    console.log(`${scriptName} script loaded successfully`)
+  }
+
+  const handleScriptError = (scriptName: string) => {
+    console.error(`${scriptName} script failed to load`)
+  }
+
+  // Debugging: Log when both scripts are loaded
+  useEffect(() => {
+    if (scriptsLoaded.main && scriptsLoaded.embedTeal) {
+      console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
+    }
+  }, [scriptsLoaded])
+
+  useEffect(() => {
+    if (secondScriptsLoaded.main && secondScriptsLoaded.embedTeal) {
+      console.log("Both second FINANZCHECK scripts loaded, initializing second teal_embed_iframe")
+    }
+  }, [secondScriptsLoaded])
 
   return (
     <div className="min-h-screen bg-white">
-    <Head>
-  {/* --- Meta Basics --- */}
-  <title>Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
-  <meta
-    name="description"
-    content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
-  />
-  <meta
-    name="keywords"
-    content="Banking Vergleich 2025, Girokonto kostenlos, Kredit Vergleich, Tagesgeldzinsen 2025, Kreditkarten ohne Jahresgebühr, Baufinanzierung, SmartFinanz"
-  />
-  <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charSet="UTF-8" />
+      <Head>
+        {/* --- Meta Basics --- */}
+        <title>Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
+        <meta
+          name="description"
+          content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
+        />
+        <meta
+          name="keywords"
+          content="Banking Vergleich 2025, Girokonto kostenlos, Kredit Vergleich, Tagesgeldzinsen 2025, Kreditkarten ohne Jahresgebühr, Baufinanzierung, SmartFinanz"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
 
-  {/* --- Open Graph --- */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
-  <meta
-    property="og:description"
-    content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
-  />
-  <meta property="og:url" content="https://unser-vergleichsportal.de/banking" />
-  <meta
-    property="og:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Unser-Vergleichsportal – Banking & Kredite vergleichen" />
-  <meta property="og:site_name" content="SmartFinanz" />
+        {/* --- Open Graph --- */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+        <meta
+          property="og:description"
+          content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/banking" />
+        <meta
+          property="og:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Unser-Vergleichsportal – Banking & Kredite vergleichen" />
+        <meta property="og:site_name" content="SmartFinanz" />
 
-  {/* --- Twitter --- */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
-  <meta
-    name="twitter:description"
-    content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
-  />
-  <meta
-    name="twitter:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta name="twitter:site" content="@unservergleich" />
+        {/* --- Twitter --- */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld" />
+        <meta
+          name="twitter:description"
+          content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta name="twitter:site" content="@unservergleich" />
 
-  {/* ---- Schema.org: Organization ---- */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "SmartFinanz – unser-vergleichsportal.de",
-        "url": "https://unser-vergleichsportal.de",
-        "logo": "https://unser-vergleichsportal.de/logo.png",
-        "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
-        "sameAs": [
-          "https://www.linkedin.com/in/unservergleichsportalde",
-          "https://x.com/unservergleich",
-          "https://medium.com/@unser-vergleichsportal.de",
-          "https://www.facebook.com/profile.php?id=61580338356626"
-        ],
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "availableLanguage": ["de"],
-          "url": "https://unser-vergleichsportal.de/kontakt"
-        }]
-      }),
-    }}
-  />
+        {/* ---- Schema.org: Organization ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "SmartFinanz – unser-vergleichsportal.de",
+              "url": "https://unser-vergleichsportal.de",
+              "logo": "https://unser-vergleichsportal.de/logo.png",
+              "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
+              "sameAs": [
+                "https://www.linkedin.com/in/unservergleichsportalde",
+                "https://x.com/unservergleich",
+                "https://medium.com/@unser-vergleichsportal.de",
+                "https://www.facebook.com/profile.php?id=61580338356626"
+              ],
+              "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "availableLanguage": ["de"],
+                "url": "https://unser-vergleichsportal.de/kontakt"
+              }]
+            }),
+          }}
+        />
 
-  {/* ---- Schema.org: WebPage + ItemList ---- */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
-        "url": "https://unser-vergleichsportal.de/banking",
-        "description":
-          "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
-        "inLanguage": "de",
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "Product",
-                "name": "Girokonto",
-                "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+        {/* ---- Schema.org: WebPage + ItemList ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
+              "url": "https://unser-vergleichsportal.de/banking",
+              "description":
+                "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
+              "inLanguage": "de",
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Girokonto",
+                      "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Kredit",
+                      "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Tagesgeld",
+                      "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Kreditkarte",
+                      "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  }
+                ]
               }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "Product",
-                "name": "Kredit",
-                "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Product",
-                "name": "Tagesgeld",
-                "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Product",
-                "name": "Kreditkarte",
-                "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
-                "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
-              }
-            }
-          ]
-        }
-      }),
-    }}
-  />
+            }),
+          }}
+        />
 
-  {/* ---- Schema.org: FAQPage ---- */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Welches Girokonto ist wirklich kostenlos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ein wirklich kostenloses Girokonto erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Viele Banken bieten zudem Prämien für Neukunden an."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie finde ich den günstigsten Kredit?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Der günstigste Kredit hängt von der Laufzeit, der Bonität und dem Verwendungszweck ab. Ein Vergleich der effektiven Jahreszinsen hilft, mehrere Hundert Euro zu sparen."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Sind Tagesgeldkonten sicher?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, Tagesgeldkonten in der EU sind durch die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und Bank abgesichert."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Lohnt sich eine Kreditkarte ohne Jahresgebühr?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, kostenlose Kreditkarten sind ideal für den Alltag und Reisen. Viele Anbieter bieten zusätzliche Vorteile wie Cashback oder Versicherungen."
-            }
-          }
-        ]
-      })
-    }}
-  />
-</Head>
+        {/* ---- Schema.org: FAQPage ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Welches Girokonto ist wirklich kostenlos?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ein wirklich kostenloses Girokonto erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Viele Banken bieten zudem Prämien für Neukunden an."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wie finde ich den günstigsten Kredit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Der günstigste Kredit hängt von der Laufzeit, der Bonität und dem Verwendungszweck ab. Ein Vergleich der effektiven Jahreszinsen hilft, mehrere Hundert Euro zu sparen."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Sind Tagesgeldkonten sicher?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, Tagesgeldkonten in der EU sind durch die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und Bank abgesichert."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Lohnt sich eine Kreditkarte ohne Jahresgebühr?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, kostenlose Kreditkarten sind ideal für den Alltag und Reisen. Viele Anbieter bieten zusätzliche Vorteile wie Cashback oder Versicherungen."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
       <Header />
 
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Banking Testsieger September 2025 | Girokonto & Kredite</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Banken Testsieger September 2025 | Girokonto & Kredite</h1>
             <p className="text-base sm:text-lg mb-8">
               Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a
-                href="https://www.check24.de/kredit/"
+                href="https://www.tarifcheck.com/k0zzIEJ"
                 target="_blank"
                 rel="sponsored"
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Kredit Angebot berechnen
+                  KREDIT-ANGEBOT BERECHNEN
                 </Button>
               </a>
               <a
-                href="https://www.tarifcheck.de/girokonto/"
+                href="https://www.tarifcheck.com/W1pi1Fx"
                 target="_blank"
                 rel="sponsored"
                 className="inline-block"
               >
                 <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  Girokonto-Anbieter vergleichen
+                  KONTO-ANBIETER VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -610,24 +656,64 @@ export default function Banking() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mt-2 text-2xl font-bold">Vermögensaufbau und Vorsorge durch intelligente Geldanlage</h2>
-            <div className="mt-3 flex justify-center">
+            <div className="mt-4 mb-2 flex justify-center">
               <Button asChild size="lg" className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 <Link
                   href="/trading"
                   aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                   title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
                 >
-                  Jetzt Vorsorge planen <ArrowRight className="ml-2 h-5 w-5" />
+                  INVESTMENT-ANBIETER UND DEPOTS VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
+            </div>
+            
+            {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
+            <div className="mt-6 flex justify-center items-center space-x-6">
+              <Image
+                src="/images/5.png"
+                alt="Vertrauenssignal 5"
+                width={80}
+                height={40}
+                className="opacity-100 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/images/1.png"
+                alt="Vertrauenssignal 1"
+                width={80}
+                height={40}
+                className="opacity-100 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/images/2.png"
+                alt="Vertrauenssignal 2"
+                width={80}
+                height={40}
+                className="opacity-100 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/images/3.png"
+                alt="Vertrauenssignal 3"
+                width={80}
+                height={40}
+                className="opacity-100 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/images/4.png"
+                alt="Vertrauenssignal 4"
+                width={80}
+                height={40}
+                className="opacity-100 hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
         </div>
       </section>
 
+      {/* Der Rest des Codes bleibt unverändert */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 sm:mb-12">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg font-bold mb-2 text-green-600">Vergleich von Finanzprodukten</h3>
             <ul className="list-none text-base mb-6">
@@ -660,12 +746,12 @@ export default function Banking() {
             </ul>
             <div className="mt-8 mb-12 text-center">
               <a 
-                href="https://www.tarifcheck.de/girokonto/" 
+                href="https://www.tarifcheck.com/W1pi1Fx" 
                 target="_blank" 
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Alle Girokonten vergleichen
+                  GIROKONTEN VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -693,72 +779,85 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Tagesgeldkonto eröffnen
+                  TAGESGELD KONTO ERÖFFNEN
                 </Button>
               </a>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Kostenlose Kreditkarte ohne Jahresgebühr finden</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.tarifcheck.com/NMXe4cX" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Jetzt Kreditkarten vergleichen
-                </Button>
-              </a>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
-            </ul>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
-            <ul className="list-none text-base mb-6">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
-            </ul>
-            <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.check24.de/kredit/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Persönliches Kreditangebot berechnen
-                </Button>
-              </a>
+            <div className="flex flex-col lg:flex-row items-start gap-8 mb-12">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
+                </ul>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
+                </ul>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
+                </ul>
+              </div>
+              <div className="flex-1 w-full">
+                <Script
+                  src="https://frame.finanzcheck.de/main.js"
+                  strategy="afterInteractive"
+                  onLoad={() => handleScriptLoad("main", setScriptsLoaded)}
+                  onError={() => handleScriptError("main")}
+                />
+                <Script
+                  src="https://widget.finanzcheck.de/embedTeal.js"
+                  strategy="afterInteractive"
+                  onLoad={() => handleScriptLoad("embedTeal", setScriptsLoaded)}
+                  onError={() => handleScriptError("embedTeal")}
+                />
+                <div
+                  id="teal-embed-iframe"
+                  className="w-full min-h-[600px] bg-white"
+                  style={{ minHeight: "600px" }}
+                ></div>
+                {scriptsLoaded.main && scriptsLoaded.embedTeal && (
+                  <Script id="teal-embed-script" strategy="afterInteractive">
+                    {`
+                      try {
+                        teal_embed_iframe({
+                          "advertisementId": "WqzbMCwyzPe8",
+                          "elementId": "teal-embed-iframe",
+                          "data": {
+                            "amount": 30000,
+                            "term": 84,
+                            "purpose": "OTHER",
+                            "formConfig": "ddf",
+                            "palette": {
+                              "primary": {
+                                "light": "#E8EEF5",
+                                "main": "#26a269",
+                                "dark": "#26a269",
+                                "contrastText": "#fff"
+                              },
+                              "secondary": {
+                                "light": "#FCE9CD",
+                                "main": "#26a269",
+                                "dark": "#26a269",
+                                "contrastText": "rgba(0, 0, 0, 0.87)"
+                              }
+                            }
+                          },
+                          "entryPoint": "first",
+                          "version": "v2"
+                        });
+                        console.log("teal_embed_iframe initialized successfully");
+                      } catch (error) {
+                        console.error("Error initializing teal_embed_iframe:", error);
+                      }
+                    `}
+                  </Script>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -766,11 +865,11 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger Girokonto-Vergleich September 2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Testsieger beste Banken Vergleich September 2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
-                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava") && (
+                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava" || provider.name === "FINANZCHECK.de") && (
                   <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-base transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
                     Top Empfehlung
                   </Badge>
@@ -807,7 +906,7 @@ export default function Banking() {
                     rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
                   >
                     <Button className="w-full bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
-                      Zum Anbieter und sparen*
+                      ZUM ANBIETER UND SPAREN*
                     </Button>
                   </a>
                 </CardContent>
@@ -842,14 +941,14 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
-                href="https://www.check24.de/baufinanzierung/" 
+                href="https://www.tarifcheck.com/gH6DahL" 
                 target="_blank" 
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Baufinanzierungen vergleichen
+                  JETZT BAUFINANZIERUNGEN VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -894,14 +993,14 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei den meisten Direktbanken ist Online Banking komplett kostenlos. Auch viele Filialbanken bieten Online Services ohne Extragebühren an.</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
-                href="https://www.tarifcheck.de/girokonto/" 
+                href="https://www.tarifcheck.com/W1pi1Fx" 
                 target="_blank" 
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Online-Banking beginnen
+                  JETZT ONLINE-BANKING BEGINNEN
                 </Button>
               </a>
             </div>
@@ -926,17 +1025,67 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
             </ul>
+            
+            {/* Zweiter Rechner für Umschuldung */}
             <div className="mt-8 mb-12 text-center">
-              <a 
-                href="https://www.check24.de/kredit/" 
-                target="_blank" 
-                rel="sponsored"
-              >
-                <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Umschuldung berechnen
-                </Button>
-              </a>
+              <h2 className="text-3xl font-bold mb-6">Umschuldung berechnen: So sparen Sie bis zu 40% Zinsen</h2>
+              <Script
+                src="https://frame.finanzcheck.de/main.js"
+                strategy="afterInteractive"
+                onLoad={() => handleScriptLoad("main", setSecondScriptsLoaded)}
+                onError={() => handleScriptError("main")}
+              />
+              <Script
+                src="https://widget.finanzcheck.de/embedTeal.js"
+                strategy="afterInteractive"
+                onLoad={() => handleScriptLoad("embedTeal", setSecondScriptsLoaded)}
+                onError={() => handleScriptError("embedTeal")}
+              />
+              <div
+                id="teal-embed-iframe2"
+                className="w-full min-h-[600px] bg-white mx-auto"
+                style={{ minHeight: "600px", maxWidth: "800px" }}
+              ></div>
+              {secondScriptsLoaded.main && secondScriptsLoaded.embedTeal && (
+                <Script id="teal-embed-script2" strategy="afterInteractive">
+                  {`
+                    try {
+                      teal_embed_iframe({
+                        "advertisementId": "WqzbMCwyzPe8",
+                        "elementId": "teal-embed-iframe2",
+                        "data": {
+                          "amount": 1000,
+                          "term": 96,
+                          "purpose": "REFINANCING",
+                          "formConfig": "ddf",
+                          "palette": {
+                            "primary": {
+                              "light": "#E8EEF5",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "#fff"
+                            },
+                            "secondary": {
+                              "light": "#FCE9CD",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "rgba(0, 0, 0, 0.87)"
+                            }
+                          }
+                        },
+                        "entryPoint": "first",
+                        "version": "v2",
+                        "imodEntryPoint": "banklist"
+                      });
+                      console.log("Second teal_embed_iframe initialized successfully");
+                    } catch (error) {
+                      console.error("Error initializing second teal_embed_iframe:", error);
+                    }
+                  `}
+                </Script>
+              )}
             </div>
+
             <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
             <h3 className="text-lg font-bold mb-2 text-green-600">Vorteile eines Depots</h3>
             <ul className="list-none text-base mb-6">
@@ -950,14 +1099,14 @@ export default function Banking() {
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
             </ul>
-            <div className="mt-8 mb-12 text-center">
+            <div className="mt-8 mb-10 text-center">
               <a 
                 href="/trading" 
                 target="_blank" 
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Zum Depot-Vergleich
+                  DAS BESTE DEPOT FINDEN
                 </Button>
               </a>
             </div>
@@ -1004,7 +1153,7 @@ export default function Banking() {
                 rel="sponsored"
               >
                 <Button className="bg-green-600 text-white font-medium transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  Alle Kreditkarten im Vergleich
+                  ALLE KREDITKARTEN IM VERGLEICH
                 </Button>
               </a>
             </div>
@@ -1072,7 +1221,9 @@ export default function Banking() {
           </div>
         </div>
       </section>
-<footer className="bg-gray-900 text-white py-8 sm:py-12">
+
+
+     <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
@@ -1326,5 +1477,7 @@ export default function Banking() {
     </div>
   </div>
 </footer>
+    </div>
+  )
+}
 
-     
