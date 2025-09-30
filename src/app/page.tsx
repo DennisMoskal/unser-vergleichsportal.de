@@ -696,6 +696,13 @@ export default function Home() {
               {/* Trust Signals hinzugefügt */}
               <div className="mt-6 flex justify-center items-center space-x-6">
                 <Image
+                  src="/images/5.png"
+                  alt="Vertrauenssignal 5"
+                  width={80}
+                  height={40}
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                />
+                <Image
                   src="/images/1.png"
                   alt="Vertrauenssignal 1"
                   width={80}
