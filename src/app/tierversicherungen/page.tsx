@@ -79,7 +79,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -131,7 +131,7 @@ const Header: React.FC = () => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
                             setMobileMenuOpen(false)
                             setActiveCategory(key)
@@ -157,7 +157,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -182,7 +182,7 @@ const Header: React.FC = () => {
                     <li key={key}>
                       <Link
                         href={url}
-                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                        className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
                           setMobileMenuOpen(false)
                           setActiveCategory(key)
@@ -197,7 +197,7 @@ const Header: React.FC = () => {
               </div>
               <div className="text-center mt-4">
                 <Button
-                  className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                  className="w-auto bg-green-600 text-white font-medium text-sm sm:text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Startseite
@@ -230,7 +230,7 @@ const Header: React.FC = () => {
                 {isInternal ? (
                   <Link
                     href={url}
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`Zu ${label} navigieren`}
                   >
@@ -241,7 +241,7 @@ const Header: React.FC = () => {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
                   >
@@ -688,7 +688,7 @@ export default function Tierversicherungen() {
                 <CardContent className="flex flex-col flex-1">
                   <div className="text-center border-b pb-2 mb-4">
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
-                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-sm">
+                    <Badge variant="outline" className="mt-1 border-green-200 text-green-700 text-xs sm:text-sm">
                       {provider.bonus}
                     </Badge>
                   </div>
@@ -705,7 +705,7 @@ export default function Tierversicherungen() {
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
                     rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
-                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                       ZUM ANBIETER UND SPAREN*
                     </Button>
                   </a>
@@ -753,7 +753,7 @@ export default function Tierversicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.awin1.com/awclick.php?gid=458098&mid=17549&awinaffid=2524533&linkid=3870250&clickref=" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   JETZT HUNDEKRANKENVERSICHERUNG ABSCHLIEẞEN!
                 </Button>
               </a>
@@ -786,7 +786,7 @@ export default function Tierversicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.awin1.com/awclick.php?gid=458100&mid=17549&awinaffid=2524533&linkid=3870249&clickref=" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   KATZEN-OP-VERSICHERUNG ABSCHLIEẞEN!
                 </Button>
               </a>
@@ -814,7 +814,7 @@ export default function Tierversicherungen() {
             </ul>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075003&clickref=" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   EINE WELPENVERSICHERUNG ABSCHLIEẞEN!
                 </Button>
               </a>
@@ -831,7 +831,7 @@ export default function Tierversicherungen() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Antworten zu Ihren Tierversicherungsfragen
+              Antworten zu Ihre Tierversicherungsfragen
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li className="flex items-start">
@@ -866,7 +866,7 @@ export default function Tierversicherungen() {
           </div>
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
-              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 ALLE TIERVERSICHERUNGEN VERGLEICHEN!
               </Button>
             </a>
@@ -893,15 +893,15 @@ export default function Tierversicherungen() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
             <div className="col-span-2 md:col-span-1">
               <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
               </div>
             </div>
             <div>
-              <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
-              <ul className="space-y-2 text-base text-gray-400">
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                 <li>
                   <Link
                     href="/banking"
@@ -941,9 +941,9 @@ export default function Tierversicherungen() {
               </ul>
             </div>
             <div>
-              <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
               <div className="grid grid-cols-2 gap-4">
-                <ul className="space-y-2 text-base text-gray-400">
+                <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                   <li>
                     <a
                       href="https://www.c24n.de/ducwCtq"
@@ -989,7 +989,7 @@ export default function Tierversicherungen() {
                     </a>
                   </li>
                 </ul>
-                <ul className="space-y-2 text-base text-gray-400">
+                <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                   <li>
                     <a
                       href="https://www.c24n.de/FZ9nd0R"
@@ -1038,8 +1038,8 @@ export default function Tierversicherungen() {
               </div>
             </div>
             <div>
-              <span className="font-semibold mb-3 text-xl">Unternehmen</span>
-              <ul className="space-y-2 text-base text-gray-400">
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                 <li>
                   <Link
                     href="/karriere"
@@ -1081,8 +1081,8 @@ export default function Tierversicherungen() {
               </ul>
             </div>
             <div>
-              <span className="font-semibold mb-3 text-xl">Rechtliches</span>
-              <ul className="space-y-2 text-base text-gray-400">
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                 <li>
                   <Link
                     href="/agb"
@@ -1127,12 +1127,12 @@ export default function Tierversicherungen() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-            <p className="text-base text-gray-400 mb-4">
+            <p className="text-sm sm:text-base text-gray-400 mb-4">
               © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
               <Button
-                className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
                 Zur Startseite
               </Button>
