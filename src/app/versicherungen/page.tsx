@@ -7,6 +7,7 @@ import { Star, Check, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
+import Image from "next/image"
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
@@ -386,7 +387,7 @@ const providerData = [
       "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
     ],
     price: "100% kostenlos",
-    bonus: "Bis zu 300€ Rückerstattung",
+    bonus: "Bis zu 300€ Rückerstatting",
     logo: "⚖️",
     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
     metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
@@ -703,11 +704,6 @@ export default function Versicherungen() {
               Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, Verivox und mehr. Finden Sie die besten Tarife für Kfz,
               Haftpflicht, Hausrat, Rechtsschutz und mehr mit transparenten Bewertungen und attraktiven Boni.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored" className="inline-block">
-                
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -718,6 +714,46 @@ export default function Versicherungen() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             So finden Sie die passende Versicherung
           </h2>
+
+          {/* Trust Signals hinzugefügt */}
+          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+            <Image
+              src="/images/5.png"
+              alt="Vertrauenssignal 5"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/1.png"
+              alt="Vertrauenssignal 1"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/2.png"
+              alt="Vertrauenssignal 2"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/3.png"
+              alt="Vertrauenssignal 3"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/4.png"
+              alt="Vertrauenssignal 4"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+          </div>
+
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Tipps für einen erfolgreichen Versicherungsvergleich
@@ -802,7 +838,7 @@ export default function Versicherungen() {
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
                     rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
-                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                       ZUM ANBIETER UND SPAREN*
                     </Button>
                   </a>
@@ -906,7 +942,7 @@ export default function Versicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
@@ -934,7 +970,7 @@ export default function Versicherungen() {
             </ul>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
@@ -965,7 +1001,7 @@ export default function Versicherungen() {
             </p>
             <div className="mt-6 mb-8 text-center">
               <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
@@ -1021,7 +1057,7 @@ export default function Versicherungen() {
           </div>
           <div className="mt-8 text-center">
             <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
-              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 ALLE VERSICHERUNGEN IM ÜBERBLICK
               </Button>
             </a>
@@ -1029,7 +1065,7 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA - Button entfernt */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -1037,20 +1073,14 @@ export default function Versicherungen() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie mit wenigen Klicks die besten Tarife für Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie Zeit und Geld mit unserem kostenlosen Vergleich.
             </p>
-            <div className="mt-6">
-              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
-                  KOSTENLOS VERGLEICHEN UND WECHSELN
-                </Button>
-              </a>
-            </div>
+            {/* Button wurde hier entfernt */}
           </div>
         </div>
       </section>
 
     <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
-    <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-5">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
         <div className="flex flex-col items-start mb-4">
           <SmartFinanzLogo className="text-xl" />
@@ -1058,8 +1088,8 @@ export default function Versicherungen() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Finanzprodukte</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/banking" 
@@ -1100,9 +1130,9 @@ export default function Versicherungen() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Weitere Produkte</span>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
         <div className="grid grid-cols-2 gap-4">
-          <ul className="space-y-2 text-base text-gray-400">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
             <li>
               <a 
                 href="https://www.c24n.de/ducwCtq" 
@@ -1148,7 +1178,7 @@ export default function Versicherungen() {
               </a>
             </li>
           </ul>
-          <ul className="space-y-2 text-base text-gray-400">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
             <li>
               <a 
                 href="https://www.c24n.de/FZ9nd0R" 
@@ -1198,8 +1228,8 @@ export default function Versicherungen() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Unternehmen</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/karriere" 
@@ -1242,8 +1272,8 @@ export default function Versicherungen() {
       </div>
       
       <div>
-        <span className="font-semibold mb-3 text-xl">Rechtliches</span>
-        <ul className="space-y-2 text-base text-gray-400">
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
           <li>
             <Link 
               href="/agb" 
@@ -1289,12 +1319,12 @@ export default function Versicherungen() {
     </div>
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-      <p className="text-base text-gray-400 mb-4">
+      <p className="text-sm sm:text-base text-gray-400 mb-4">
         © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
-          className="bg-green-600 text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
         >
           Zur Startseite
         </Button>
