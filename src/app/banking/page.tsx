@@ -440,7 +440,7 @@ export default function Banking() {
     <div className="min-h-screen bg-white">
       <Head>
         {/* --- Meta Basics --- */}
-        <title>Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
+        <title>Beste Bank Testsieger September 2025 | Girokonto, Kredite & Tagesgeld</title>
         <meta
           name="description"
           content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
@@ -518,7 +518,7 @@ export default function Banking() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "Banking Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
+              "name": "Beste Bank Testsieger September 2025 | Girokonto, Kredite & Tagesgeld",
               "url": "https://unser-vergleichsportal.de/banking",
               "description":
                 "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
