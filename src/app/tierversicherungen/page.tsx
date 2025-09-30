@@ -568,18 +568,7 @@ export default function Tierversicherungen() {
               mit Testsiegern wie Agila, Petplan, HanseMerkur, CHECK24 und Allianz. Finden Sie flexible Tarife mit
               umfassendem Schutz für Operationen, Behandlungen und Vorsorge.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-              <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored" className="inline-block">
-                <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg w-full sm:w-auto">
-                  TIERVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
-              <a href="#tierversicherungen" className="inline-block">
-                <Button className="bg-transparent border-2 border-white text-white font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-white hover:text-green-600 hover:scale-105 hover:shadow-lg w-full sm:w-auto">
-                  MEHR ERFAHREN
-                </Button>
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -896,13 +885,7 @@ export default function Tierversicherungen() {
               Finden Sie mit wenigen Klicks die besten Tarife für Ihre Haustiere. Sparen Sie Zeit und Geld mit unserem
               kostenlosen Vergleich.
             </p>
-            <div className="mt-6">
-              <a href="https://www.check24.de/tierversicherung/" target="_blank" rel="sponsored">
-                <Button className="bg-white text-green-600 font-medium text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg w-full sm:w-auto">
-                  JETZT VERGLEICHEN
-                </Button>
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>
