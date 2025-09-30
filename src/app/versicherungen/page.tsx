@@ -696,7 +696,7 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Versicherungen September 2025 | Testsieger-Vergleich
+              Beste Versicherung September 2025 | Testsieger-Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
