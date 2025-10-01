@@ -328,7 +328,7 @@ const providerData = [
     features: [
       "Vergleich von über 50 Tierversicherungen",
       "100% kostenloser und unverbindlicher Vergleich",
-      "Testsieger in der Kategorie Tierversicherung (09/2025)",
+      "Testsieger in der Kategorie Tierversicherung (10/2025)",
       "eKomi Gold Siegel mit 4,8/5 Sternen",
       "Bis zu 50% Ersparnis durch Vergleich",
       "Kostenlose Beratung durch Experten",
@@ -401,7 +401,7 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
      <Head>
   {/* --- Meta Basics --- */}
-  <title>Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen</title>
+  <title>Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen</title>
   <meta
     name="description"
     content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
@@ -417,7 +417,7 @@ export default function Tierversicherungen() {
 
   {/* --- Open Graph --- */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen" />
+  <meta property="og:title" content="Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen" />
   <meta
     property="og:description"
     content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Welpen."
@@ -434,10 +434,10 @@ export default function Tierversicherungen() {
 
   {/* --- Twitter --- */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen" />
+  <meta name="twitter:title" content="Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen" />
   <meta
     name="twitter:description"
-    content="Beste Tierversicherungen September 2025 | Hunde- und Katzenversicherung im Vergleich"
+    content="Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherung im Vergleich"
   />
   <meta
     name="twitter:image"
@@ -479,7 +479,7 @@ export default function Tierversicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Beste Tierversicherungen September 2025 | Hunde, Katzen & Welpen",
+        "name": "Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen",
         "url": "https://unser-vergleichsportal.de/tierversicherungen",
         "description":
           "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
@@ -561,7 +561,7 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Tierversicherungen September 2025 | Hunde- und Katzenversicherung im Vergleich
+              Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherung im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie die besten Tierversicherungen für Hunde und Katzen mit SmartFinanz. Sparen Sie bis zu 50%
@@ -657,7 +657,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Testsieger Tierversicherungsvergleich September 2025
+            Testsieger Tierversicherungsvergleich Oktober 2025
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
