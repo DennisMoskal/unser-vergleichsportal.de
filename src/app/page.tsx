@@ -530,9 +530,9 @@ export default function Home() {
         <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-09-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2025-09-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-09-19T00:27:16+00:00" />
+        <meta property="og:updated_time" content="2025-10-19T00:27:16+00:00" />
+        <meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
+        <meta property="article:modified_time" content="2025-10-19T00:27:16+00:00" />
 
         {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
