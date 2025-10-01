@@ -486,7 +486,7 @@ export default function Home() {
     <>
       <Head>
         {/* --- Meta Basics (bereinigt) --- */}
-        <title>Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</title>
+        <title>Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten</title>
         <meta
           name="description"
           content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
@@ -509,7 +509,7 @@ export default function Home() {
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+        <meta property="og:title" content="Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten" />
         <meta
           property="og:description"
           content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
@@ -536,7 +536,7 @@ export default function Home() {
 
         {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten" />
+        <meta name="twitter:title" content="Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
         <meta
           name="twitter:image"
@@ -673,7 +673,7 @@ export default function Home() {
           {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich September 2025 | Ohne versteckte Kosten</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten</h1>
               <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
                 <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
               </p>
@@ -738,7 +738,7 @@ export default function Home() {
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-                Testsieger September 2025: Top-Anbieter für Finanzprodukte
+                Testsieger Oktober 2025: Top-Anbieter für Finanzprodukte
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
