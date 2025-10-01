@@ -673,7 +673,7 @@ export default function Home() {
           {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</h1>
               <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
                 <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
               </p>
