@@ -657,7 +657,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Tierversicherungsvergleich 10/2025
+            Top-Empfehlungen: Alle Tierversicherungen im Vergleich 10/2025
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
