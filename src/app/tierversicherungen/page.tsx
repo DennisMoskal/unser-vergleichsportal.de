@@ -437,7 +437,7 @@ export default function Tierversicherungen() {
   <meta name="twitter:title" content="Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen" />
   <meta
     name="twitter:description"
-    content="Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherung im Vergleich"
+    content="Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherungen im Vergleich"
   />
   <meta
     name="twitter:image"
@@ -561,7 +561,7 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherung im Vergleich
+              Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherungen im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie die besten Tierversicherungen für Hunde und Katzen mit SmartFinanz. Sparen Sie bis zu 50%
