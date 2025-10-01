@@ -486,7 +486,7 @@ export default function Home() {
     <>
       <Head>
         {/* --- Meta Basics (bereinigt) --- */}
-        <title>Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten</title>
+        <title>Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</title>
         <meta
           name="description"
           content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
@@ -509,7 +509,7 @@ export default function Home() {
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten" />
+        <meta property="og:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
         <meta
           property="og:description"
           content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
@@ -536,7 +536,7 @@ export default function Home() {
 
         {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich Oktober 2025 | Ohne versteckte Kosten" />
+        <meta name="twitter:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
         <meta
           name="twitter:image"
