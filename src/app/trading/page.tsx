@@ -504,7 +504,7 @@ export default function DeFi() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Bester Neo-Broker Vergleich Oktober 2025 | Bitcoin & ETF Testsieger</title>
+        <title>Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich</title>
         <meta
           name="description"
           content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025"
@@ -517,7 +517,7 @@ export default function DeFi() {
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Broker Oktober 2025 | Bitcoin & ETF Testsieger" />
+        <meta property="og:title" content="Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich" />
         <meta
           property="og:description"
           content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025."
@@ -531,7 +531,7 @@ export default function DeFi() {
         <meta property="og:image:alt" content="Beste Broker 2025 – unser-vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Beste Broker Oktober 2025 | Bitcoin & ETF Testsieger" />
+        <meta name="twitter:title" content="Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich" />
         <meta
           name="twitter:description"
           content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025."
@@ -548,7 +548,7 @@ export default function DeFi() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Beste Broker Oktober 2025 | Bitcoin & ETF Testsieger",
+              name: "Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich",
               description:
                 "Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025.",
               url: "https://unser-vergleichsportal.de/trading",
@@ -699,7 +699,7 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Bester Neo-Broker Oktober 2025 | Trading-App Vergleich
+              Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs,
@@ -910,7 +910,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top Online-Broker für Krypto und Aktien 2025
+            Top-Empfehlungen: Trading-Apps für Aktien, ETFs & Krypto 10/2025
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
