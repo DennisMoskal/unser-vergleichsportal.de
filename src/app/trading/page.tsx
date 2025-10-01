@@ -699,7 +699,7 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Bester Neo-Broker Oktober 2025 | Bitcoin & ETF Testsieger
+              Bester Neo-Broker Oktober 2025 | Trading-App Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs,
