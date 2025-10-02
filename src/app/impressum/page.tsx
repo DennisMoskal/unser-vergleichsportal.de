@@ -427,7 +427,7 @@ export default function ImpressumPage() {
           {/* Call to Action */}
           <section className="py-12 sm:py-16 bg-green-600 text-white">
             <div className="container mx-auto max-w-4xl text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Impressum</h1>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Impressum</h2>
               <p className="text-lg sm:text-xl mb-8 text-green-100">
                 Gemäß § 5 Telemediengesetz (TMG) und anderen gesetzlichen Vorgaben stellen wir Ihnen nachfolgend alle erforderlichen Angaben über unser Unternehmen transparent zur Verfügung.
               </p>
