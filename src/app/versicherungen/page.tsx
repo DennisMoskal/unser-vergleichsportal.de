@@ -407,7 +407,7 @@ const providerData = [
       "Kostenloser Datenleck-Check für Ihre Datensicherheit",
       "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
     ],
-    price: "ab 12,50€/Monat",
+    price[id="12,50€/Monat",
     bonus: "Bis zu 70€ Empfehlungsbonus",
     logo: "🛡️",
     url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
@@ -494,7 +494,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
-    url: "https://www.cosmosdirekt.de/versicherungen/",
+    url: "https://www.financeads.net/tc.php?t=78841C35719149T",
     metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
     metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
@@ -515,7 +515,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Bis zu 30% Online-Rabatt",
     logo: "⚖️",
-    url: "https://www.arag.de/versicherungen/",
+    url: "https://www.financeads.net/tc.php?t=78841C35220815T",
     metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
     metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
     isTopRecommendation: true
@@ -882,6 +882,10 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Flexible Zusatzbausteine (z. B. Mallorca-Police)
               </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Rabatte für sichere Fahrer und E-Autos
+              </li>
             </ul>
             
             {/* Haftpflichtrechner mit optimierter Überschrift */}
@@ -915,6 +919,14 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Familienabsicherung inklusive
               </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Weltweiter Schutz für Reisen
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Optionaler Schutz für Drohnen oder E-Bikes
+              </li>
             </ul>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -936,12 +948,20 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Fahrraddiebstahl optional einschließbar
               </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schutz für Wertsachen und Elektronik
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Schnelle Schadenmeldung per App
+              </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+              <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -967,9 +987,17 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Schneller Abschluss ohne Gesundheitsprüfung (bei kleinen Summen)
               </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Nachversicherung bei Lebensereignissen (z.B. Geburt)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Kombinierbar mit Berufsunfähigkeitsversicherung
+              </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35735224T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -977,10 +1005,10 @@ export default function Versicherungen() {
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Rechtsschutzversicherung für Miet- und Verkehrsstreitigkeiten
+              Rechtsschutzversicherung für Miet-, Verkehrsstreitigkeiten und Selbstständige
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten.
+              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten. Für Selbstständige bietet sie zusätzlichen Schutz bei beruflichen Rechtsstreitigkeiten, wie z.B. Vertragsstreitigkeiten mit Kunden oder Lieferanten.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
@@ -995,14 +1023,61 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Schutz bei Mietstreitigkeiten oder Nachbarschaftsstreit
               </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Spezielle Bausteine für Selbstständige (z.B. Vertragsrecht)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Online-Rechtsberatung für schnelle Hilfe
+              </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35220816T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Berufsunfähigkeitsversicherung für langfristige Absicherung
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Berufsunfähigkeitsversicherung (BU) sichert Ihr Einkommen, wenn Sie aus gesundheitlichen Gründen Ihren Beruf nicht mehr ausüben können. Sie ist besonders wichtig für Selbstständige, Freiberufler und Berufe mit hohem körperlichen oder psychischen Risiko.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Monatliche Rentenzahlungen bei Berufsunfähigkeit
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Laufzeiten bis zum Rentenalter
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Absicherung auch bei psychischen Erkrankungen
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Keine Gesundheitsprüfung bei niedrigen Summen
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Nachversicherung bei Gehaltserhöhung möglich
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Abschluss in jungen Jahren senkt die Beiträge erheblich. Kombinieren Sie mit einer Risikolebensversicherung für umfassenden Schutz.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  BERUFSUNFÄHIGKEITSVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
