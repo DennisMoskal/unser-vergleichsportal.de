@@ -299,7 +299,7 @@ const providerData = [
       "Günstige Kfz-Versicherung ab 9,70€/Monat",
       "Bis zu 350€ Ersparnis beim Vergleich",
       "91% Weiterempfehlungsrate von Kunden",
-      "24h Notfall-Hotline für schnhelle Unterstützung",
+      "24h Notfall-Hotline für schnelle Unterstützung",
       "Schufa-neutrale Tarifberechnung",
       "Einfacher Online-Abschluss in 3 Minuten",
       "Ausgezeichnet als 'Fairer Versicherer' (Focus Money)"
@@ -387,7 +387,7 @@ const providerData = [
       "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
     ],
     price: "100% kostenlos",
-    bonus: "Bis zu 300€ Rückerstatting",
+    bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
     metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
@@ -475,7 +475,7 @@ const providerData = [
     logo: "🛡️",
     url: "https://www.allianz.de/versicherungen/",
     metaTitle: "Allianz Versicherungen: Zuverlässiger Schutz für Kfz und Hausrat 2025",
-    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr with 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
+    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr mit 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
     isTopRecommendation: true
   },
   {
@@ -494,7 +494,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
-    url: "https://www.financeads.net/tc.php?t=78841C35719149T",
+    url: "https://www.cosmosdirekt.de/versicherungen/",
     metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
     metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
@@ -515,7 +515,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Bis zu 30% Online-Rabatt",
     logo: "⚖️",
-    url: "https://www.financeads.net/tc.php?t=78841C35220815T",
+    url: "https://www.arag.de/versicherungen/",
     metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
     metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
     isTopRecommendation: true
@@ -555,140 +555,140 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-  <title>Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich</title>
-  <meta
-    name="description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
-  />
-  <meta
-    name="keywords"
-    content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
-  />
-  <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charSet="UTF-8" />
-  <meta name="author" content="SmartFinanz" />
-  <meta name="format-detection" content="telephone=no" />
+        <title>Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich</title>
+        <meta
+          name="description"
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
+        />
+        <meta
+          name="keywords"
+          content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <meta name="author" content="SmartFinanz" />
+        <meta name="format-detection" content="telephone=no" />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich" />
-  <meta
-    property="og:description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
-  />
-  <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
-  <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
-  <meta
-    property="og:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Unser-Vergleichsportal – Versicherungen einfach vergleichen & sparen" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich" />
+        <meta
+          property="og:description"
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
+        />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
+        <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
+        <meta
+          property="og:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Unser-Vergleichsportal – Versicherungen einfach vergleichen & sparen" />
 
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich" />
-  <meta
-    name="twitter:description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
-  />
-  <meta
-    name="twitter:image"
-    content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-  />
-  <meta name="twitter:site" content="@unservergleich" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich" />
+        <meta
+          name="twitter:description"
+          content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
+        />
+        <meta name="twitter:site" content="@unservergleich" />
 
-  {/* Schema Markup for SEO */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich",
-        description:
-          "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
-        url: "https://unser-vergleichsportal.de/versicherungen",
-        keywords: [
-          "Versicherungsvergleich",
-          "Kfz-Versicherung",
-          "Haftpflichtversicherung",
-          "Hausratversicherung",
-          "Rechtsschutzversicherung"
-        ],
-        mainEntity: {
-          "@type": "ItemList",
-          itemListElement: sortedProviders.map((provider, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            item: {
-              "@type": "Product",
-              name: provider.name,
-              description: provider.metaDescription,
-              offers: {
-                "@type": "Offer",
-                price: provider.price,
-                url: provider.url
-              },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: provider.rating,
-                reviewCount: "100"
-              },
+        {/* Schema Markup for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich",
+              description:
+                "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
+              url: "https://unser-vergleichsportal.de/versicherungen",
               keywords: [
                 "Versicherungsvergleich",
                 "Kfz-Versicherung",
                 "Haftpflichtversicherung",
                 "Hausratversicherung",
                 "Rechtsschutzversicherung"
-              ]
-            }
-          }))
-        }
-      })
-    }}
-  />
+              ],
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: sortedProviders.map((provider, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  item: {
+                    "@type": "Product",
+                    name: provider.name,
+                    description: provider.metaDescription,
+                    offers: {
+                      "@type": "Offer",
+                      price: provider.price,
+                      url: provider.url
+                    },
+                    aggregateRating: {
+                      "@type": "AggregateRating",
+                      ratingValue: provider.rating,
+                      reviewCount: "100"
+                    },
+                    keywords: [
+                      "Versicherungsvergleich",
+                      "Kfz-Versicherung",
+                      "Haftpflichtversicherung",
+                      "Hausratversicherung",
+                      "Rechtsschutzversicherung"
+                    ]
+                  }
+                }))
+              }
+            })
+          }}
+        />
 
-  {/* FAQ Schema Markup */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            "name": "Welche Versicherungen sind in Deutschland Pflicht?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Zu den Pflichtversicherungen in Deutschland zählen u.a. die Kfz-Haftpflichtversicherung, die Krankenversicherung sowie bestimmte Berufshaftpflichtversicherungen. Alle weiteren Versicherungen sind freiwillig, können aber sinnvoll sein."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wann lohnt sich eine Vollkaskoversicherung?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Eine Vollkaskoversicherung lohnt sich besonders bei neuen oder hochwertigen Fahrzeugen. Sie deckt zusätzlich zu den Teilkasko-Leistungen auch selbstverschuldete Unfälle und Vandalismus ab."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie kann ich meine Versicherung wechseln?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ein Wechsel ist in der Regel zum Ende der Vertragslaufzeit möglich. Viele Anbieter bieten Kündigungshilfen. Im Vergleichsrechner finden Sie bessere Tarife und können direkt wechseln."
-            }
-          }
-        ]
-      })
-    }}
-  />
-</Head>
+        {/* FAQ Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  "name": "Welche Versicherungen sind in Deutschland Pflicht?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Zu den Pflichtversicherungen in Deutschland zählen u.a. die Kfz-Haftpflichtversicherung, die Krankenversicherung sowie bestimmte Berufshaftpflichtversicherungen. Alle weiteren Versicherungen sind freiwillig, können aber sinnvoll sein."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wann lohnt sich eine Vollkaskoversicherung?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eine Vollkaskoversicherung lohnt sich besonders bei neuen oder hochwertigen Fahrzeugen. Sie deckt zusätzlich zu den Teilkasko-Leistungen auch selbstverschuldete Unfälle und Vandalismus ab."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wie kann ich meine Versicherung wechseln?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ein Wechsel ist in der Regel zum Ende der Vertragslaufzeit möglich. Viele Anbieter bieten Kündigungshilfen. Im Vergleichsrechner finden Sie bessere Tarife und können direkt wechseln."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
 
       <Header />
 
@@ -941,7 +941,7 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="sponsored">
+              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -969,7 +969,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35719093T" target="_blank" rel="sponsored">
+              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -1000,40 +1000,9 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35213767T" target="_blank" rel="sponsored">
+              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
-            </div>
-
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Berufsunfähigkeitsversicherung für Ihre finanzielle Sicherheit
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Berufsunfähigkeitsversicherung sichert Ihre Existenz und die Ihrer Familie, falls Sie durch Krankheit oder Unfall Ihren Beruf nicht mehr ausüben können. Schützen Sie das Wohl Ihrer Liebsten und bewahren Sie Ihre finanzielle Unabhängigkeit – besonders wichtig für junge Eltern, Selbstständige oder Hauptverdiener.
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Monatliche Rente bei Berufsunfähigkeit (bis zu 2.000€ oder mehr)
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Beitragsbefreiung im Leistungsfall
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Flexible Tarife für Berufseinsteiger und Familien
-              </li>
-            </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Spartipp:</strong> Je früher Sie abschließen, desto günstiger die Beiträge. Testsieger wie CosmosDirekt bieten Top-Schutz ab 9,16€/Monat.
-            </p>
-            <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  BERUFSUNFÄHIGKEITSVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -1096,7 +1065,7 @@ export default function Versicherungen() {
         </div>
       </section>
 
-      {/* CTA - Button entfernt */}
+      {/* CTA */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -1104,12 +1073,11 @@ export default function Versicherungen() {
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Finden Sie mit wenigen Klicks die besten Tarife für Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie Zeit und Geld mit unserem kostenlosen Vergleich.
             </p>
-            {/* Button wurde hier entfernt */}
           </div>
         </div>
       </section>
 
-    <footer className="bg-gray-900 text-white py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
