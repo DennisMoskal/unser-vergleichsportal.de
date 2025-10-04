@@ -494,7 +494,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
-    url: "https://www.financeads.net/tc.php?t=78841C35719149T",
+    url: "https://www.financeads.net/tc.php?t=78841C35719149T/",
     metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
     metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
@@ -515,7 +515,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Bis zu 30% Online-Rabatt",
     logo: "⚖️",
-    url: "https://www.financeads.net/tc.php?t=78841C35220815T",
+    url: "https://www.financeads.net/tc.php?t=78841C35220815T/",
     metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
     metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
     isTopRecommendation: true
