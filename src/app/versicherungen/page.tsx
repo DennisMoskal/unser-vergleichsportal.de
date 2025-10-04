@@ -475,7 +475,7 @@ const providerData = [
     logo: "🛡️",
     url: "https://www.allianz.de/versicherungen/",
     metaTitle: "Allianz Versicherungen: Zuverlässiger Schutz für Kfz und Hausrat 2025",
-    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr mit 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
+    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr with 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
     isTopRecommendation: true
   },
   {
@@ -509,13 +509,13 @@ const providerData = [
       "Kostenlose Erstberatung durch Anwälte",
       "Schnelle Schadenbearbeitung mit Online-Portal",
       "Flexible Bausteine für individuelle Absicherung",
-      "ARAG Recht und Heim Kombipaket zum Top Preis",
+      "Kombi-Tarife mit Haftpflicht und Hausrat möglich",
       "Bis zu 30% Ersparnis bei Online-Abschluss"
     ],
     price: "Individuelle Tarife",
     bonus: "Bis zu 30% Online-Rabatt",
     logo: "⚖️",
-    url: "https://www.financeads.net/tc.php?t=78841C35220816T",
+    url: "https://www.financeads.net/tc.php?t=78841C35220815T",
     metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
     metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
     isTopRecommendation: true
@@ -941,7 +941,7 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+              <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -969,7 +969,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35719093T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -1000,9 +1000,40 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35213767T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
+                </Button>
+              </a>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
+              Berufsunfähigkeitsversicherung für Ihre finanzielle Sicherheit
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Eine Berufsunfähigkeitsversicherung sichert Ihre Existenz und die Ihrer Familie, falls Sie durch Krankheit oder Unfall Ihren Beruf nicht mehr ausüben können. Schützen Sie das Wohl Ihrer Liebsten und bewahren Sie Ihre finanzielle Unabhängigkeit – besonders wichtig für junge Eltern, Selbstständige oder Hauptverdiener.
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Monatliche Rente bei Berufsunfähigkeit (bis zu 2.000€ oder mehr)
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Beitragsbefreiung im Leistungsfall
+              </li>
+              <li className="flex items-center">
+                <Check className="mr-2 h-4 w-4 text-green-600" />
+                Flexible Tarife für Berufseinsteiger und Familien
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Je früher Sie abschließen, desto günstiger die Beiträge. Testsieger wie CosmosDirekt bieten Top-Schutz ab 9,16€/Monat.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  BERUFSUNFÄHIGKEITSVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
@@ -1121,7 +1152,8 @@ export default function Versicherungen() {
             <Link 
               href="/versicherungen" 
               className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm" 
-              aria-label="Versicherungen"
+              aria-label="Versicherungen"																			https://www.financeads.net/tc.php?t=78841C35719044T
+																		
             >
               Versicherungen
             </Link>
