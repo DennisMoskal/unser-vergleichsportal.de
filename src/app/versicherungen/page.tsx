@@ -299,7 +299,7 @@ const providerData = [
       "Günstige Kfz-Versicherung ab 9,70€/Monat",
       "Bis zu 350€ Ersparnis beim Vergleich",
       "91% Weiterempfehlungsrate von Kunden",
-      "24h Notfall-Hotline für schnhelle Unterstützung",
+      "24h Notfall-Hotline für schnelle Unterstützung",
       "Schufa-neutrale Tarifberechnung",
       "Einfacher Online-Abschluss in 3 Minuten",
       "Ausgezeichnet als 'Fairer Versicherer' (Focus Money)"
@@ -387,7 +387,7 @@ const providerData = [
       "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
     ],
     price: "100% kostenlos",
-    bonus: "Bis zu 300€ Rückerstatting",
+    bonus: "Bis zu 300€ Rückerstattung",
     logo: "⚖️",
     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
     metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
@@ -407,7 +407,7 @@ const providerData = [
       "Kostenloser Datenleck-Check für Ihre Datensicherheit",
       "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
     ],
-    price[id="12,50€/Monat",
+    price: "12,50€/Monat",
     bonus: "Bis zu 70€ Empfehlungsbonus",
     logo: "🛡️",
     url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
