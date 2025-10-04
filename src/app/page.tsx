@@ -1310,303 +1310,301 @@ export default function Home() {
             </div>
           </section>
 
-          {/* FAQ Section für bessere SEO */}
-          <section className="py-12 sm:py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufige Fragen zum Finanzvergleich</h2>
-              <div className="max-w-4xl mx-auto space-y-6">
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Finanzvergleich bei SmartFinanz?</h3>
-                  <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Finanzvergleich bei SmartFinanz kostenlos?</h3>
-                  <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?</h3>
-                  <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?</h3>
-                  <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
-                </div>
-              </div>
-            </div>
-          </section>
+         Hier ist der korrigierte Abschnitt, der die FAQ-Section und den Footer umfasst. Der Hauptfehler lag im Footer, wo das <a>-Tag im LinkedIn-Link nicht korrekt geöffnet wurde. Ich habe das <a>-Tag korrekt eingefügt, um den Syntaxfehler zu beheben, und den restlichen Code unverändert gelassen, da die FAQ-Section keine Fehler enthält. Der korrigierte Code ist wie folgt:
+jsx
 
-          {/* Footer */}
-          <footer className="bg-gray-900 text-white py-8 sm:py-12">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
-                <div className="col-span-2 md:col-span-1">
-                  <div className="flex flex-col items-start mb-4">
-                    <SmartFinanzLogo className="text-xl" />
-                    
-                    {/* LinkedIn Social Media Link */}
-                    <div className="mt-6">
-                      <p className="text-sm text-gray-400 mb-3">Folgen Sie uns</p>
-                      
-                        href="https://www.linkedin.com/in/unservergleichsportalde"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg group"
-                        aria-label="Besuchen Sie uns auf LinkedIn"
-                      >
-                        <Linkedin className="w-5 h-5" />
-                        <span className="text-sm font-medium">LinkedIn</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl block">Finanzprodukte</span>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                    <li>
-                      <Link 
-                        href="/banking" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Banking"
-                      >
-                        Banking
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/tierversicherungen" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Haustierversicherung"
-                      >
-                        Haustierversicherung
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/trading" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Trading"
-                      >
-                        Trading
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/versicherungen" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Versicherungen"
-                      >
-                        Versicherungen
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl block">Weitere Produkte</span>
-                  <div className="grid grid-cols-2 gap-4">
-                    <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/ducwCtq" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="DSL Vergleich (externer Link)"
-                        >
-                          DSL
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/Uxudvkj" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Gasvergleich (externer Link)"
-                        >
-                          Gas
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/5R17qbN" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Handytarif vergleichen (externer Link)"
-                        >
-                          Handytarif
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/RYXPGyh" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Kreditkarten vergleichen (externer Link)"
-                        >
-                          Kreditkarte
-                        </a>
-                      </li>
-                    </ul>
-                    <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/FZ9nd0R" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Mietwagen vergleichen (externer Link)"
-                        >
-                          Mietwagen
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/zxy0WKh" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Ökostrom vergleichen (externer Link)"
-                        >
-                          Ökostrom
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/EieKR0E" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Reise vergleichen (externer Link)"
-                        >
-                          Reise
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="https://www.c24n.de/RYXPGyh" 
-                          target="_blank" 
-                          rel="noopener sponsored noreferrer nofollow" 
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                          aria-label="Stromvergleich (externer Link)"
-                        >
-                          Strom
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl block">Unternehmen</span>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                    <li>
-                      <Link 
-                        href="/karriere" 
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Karriere"
-                      >
-                        Karriere
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/kontakt" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Kontakt"
-                      >
-                        Kontakt
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/partnerprogramme" 
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Partnerprogramm"
-                      >
-                        Partnerprogramm
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/ueber-uns" 
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Über uns"
-                      >
-                        Über uns
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl block">Rechtliches</span>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                    <li>
-                      <Link 
-                        href="/agb" 
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="AGB"
-                      >
-                        AGB
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/cookie-richtlinie" 
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Cookie-Richtlinie"
-                      >
-                        Cookie-Richtlinie
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/datenschutz" 
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Datenschutz"
-                      >
-                        Datenschutz
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/impressum" 
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
-                        aria-label="Impressum"
-                      >
-                        Impressum
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-                <p className="text-sm sm:text-base text-gray-400 mb-4">
-                  © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-                </p>
-                <Link href="/" aria-label="Zurück zur Startseite">
-                  <Button 
-                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 px-6 py-2"
-                  >
-                    Zur Startseite
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </footer>
+{/* FAQ Section für bessere SEO */}
+<section className="py-12 sm:py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufige Fragen zum Finanzvergleich</h2>
+    <div className="max-w-4xl mx-auto space-y-6">
+      <div className="bg-gray-50 rounded-lg p-6">
+        <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Finanzvergleich bei SmartFinanz?</h3>
+        <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
+      </div>
+      <div className="bg-gray-50 rounded-lg p-6">
+        <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Finanzvergleich bei SmartFinanz kostenlos?</h3>
+        <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
+      </div>
+      <div className="bg-gray-50 rounded-lg p-6">
+        <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?</h3>
+        <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
+      </div>
+      <div className="bg-gray-50 rounded-lg p-6">
+        <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?</h3>
+        <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Footer */}
+<footer className="bg-gray-900 text-white py-8 sm:py-12">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
+      <div className="col-span-2 md:col-span-1">
+        <div className="flex flex-col items-start mb-4">
+          <SmartFinanzLogo className="text-xl" />
+          
+          {/* LinkedIn Social Media Link */}
+          <div className="mt-6">
+            <p className="text-sm text-gray-400 mb-3">Folgen Sie uns</p>
+            <a
+              href="https://www.linkedin.com/in/unservergleichsportalde"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg group"
+              aria-label="Besuchen Sie uns auf LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+              <span className="text-sm font-medium">LinkedIn</span>
+            </a>
+          </div>
         </div>
-      </main>
-    </>
-  );
-}
+      </div>
+      
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl block">Finanzprodukte</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link 
+              href="/banking" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Banking"
+            >
+              Banking
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/tierversicherungen" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Haustierversicherung"
+            >
+              Haustierversicherung
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/trading" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Trading"
+            >
+              Trading
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/versicherungen" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Versicherungen"
+            >
+              Versicherungen
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl block">Weitere Produkte</span>
+        <div className="grid grid-cols-2 gap-4">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+            <li>
+              <a 
+                href="https://www.c24n.de/ducwCtq" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="DSL Vergleich (externer Link)"
+              >
+                DSL
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/Uxudvkj" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Gasvergleich (externer Link)"
+              >
+                Gas
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/5R17qbN" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Handytarif vergleichen (externer Link)"
+              >
+                Handytarif
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/RYXPGyh" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Kreditkarten vergleichen (externer Link)"
+              >
+                Kreditkarte
+              </a>
+            </li>
+          </ul>
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+            <li>
+              <a 
+                href="https://www.c24n.de/FZ9nd0R" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Mietwagen vergleichen (externer Link)"
+              >
+                Mietwagen
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/zxy0WKh" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Ökostrom vergleichen (externer Link)"
+              >
+                Ökostrom
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/EieKR0E" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Reise vergleichen (externer Link)"
+              >
+                Reise
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.c24n.de/RYXPGyh" 
+                target="_blank" 
+                rel="noopener sponsored noreferrer nofollow" 
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+                aria-label="Stromvergleich (externer Link)"
+              >
+                Strom
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl block">Unternehmen</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link 
+              href="/karriere" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Karriere"
+            >
+              Karriere
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/kontakt" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/partnerprogramme" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Partnerprogramm"
+            >
+              Partnerprogramm
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/ueber-uns" 
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Über uns"
+            >
+              Über uns
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl block">Rechtliches</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link 
+              href="/agb" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="AGB"
+            >
+              AGB
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/cookie-richtlinie" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Cookie-Richtlinie"
+            >
+              Cookie-Richtlinie
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/datenschutz" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Datenschutz"
+            >
+              Datenschutz
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/impressum" 
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm inline-block" 
+              aria-label="Impressum"
+            >
+              Impressum
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+      <p className="text-sm sm:text-base text-gray-400 mb-4">
+        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+      </p>
+      <Link href="/" aria-label="Zurück zur Startseite">
+        <Button 
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 px-6 py-2"
+        >
+          Zur Startseite
+        </Button>
+      </Link>
+    </div>
+  </div>
+</footer>
