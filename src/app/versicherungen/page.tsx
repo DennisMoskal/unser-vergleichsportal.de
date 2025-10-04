@@ -75,7 +75,7 @@ const Header: React.FC = () => {
                     { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
                     { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
                     { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
-                  ].map(({ key, label, url, isInternal }) => (
+                  ].map(({ key, label, url }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -97,11 +97,11 @@ const Header: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
-                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
-                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq' },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj' },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN' },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh' },
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -121,11 +121,11 @@ const Header: React.FC = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
-                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
-                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
-                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
-                    ].map(({ key, label, url, isInternal }) => (
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R' },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh' },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E' },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh' },
+                    ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -147,14 +147,12 @@ const Header: React.FC = () => {
               </div>
               <div>
                 <div className="text-center mt-4">
-                  <Link href="/">
-                    <Button
-                      className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Startseite
-                    </Button>
-                  </Link>
+                  <Button
+                    className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Startseite
+                  </Button>
                 </div>
               </div>
             </nav>
@@ -405,7 +403,7 @@ const providerData = [
       "60 Tage Widerrufsrecht für maximale Flexibilität",
       "24/7 Schadenmeldung und telefonische Erstberatung",
       "eKomi-Bewertung 4,9/5 für höchste Kundenzufriedenheit",
-      "Spezialtariffe wie Manager- und Internet-Rechtsschutz",
+      "Spezialtarife wie Manager- und Internet-Rechtsschutz",
       "Kostenloser Datenleck-Check für Ihre Datensicherheit",
       "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
     ],
@@ -424,7 +422,7 @@ const providerData = [
       "Testsieger bei Stiftung Warentest (01/2025, Note 1,4)",
       "Reiserücktritts- und Auslandskrankenversicherung für Einzelpersonen und Familien",
       "Jahresreiseversicherung Reisekarte4you für Vielreisende",
-      "Spezialtariffe für Work & Travel, Au-Pair und Studenten",
+      "Spezialtarife für Work & Travel, Au-Pair und Studenten",
       "Ski-Haftpflichtversicherung für Italien & Südtirol",
       "Gruppenreiseversicherung ab 8 Personen ohne Altersbegrenzung",
       "Beste Kundenhotline 2024 (Focus Money)",
@@ -835,17 +833,16 @@ export default function Versicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4">
+                  <Button asChild className="w-full mt-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                     <a
                       href={provider.url}
                       target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                      rel={provider.url.startsWith("http") ? "sponsored" : undefined}
+                      rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}
+                      aria-label={`${provider.name} besuchen`}
                     >
-                      <Button className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                        ZUM ANBIETER UND SPAREN*
-                      </Button>
+                      ZUM ANBIETER UND SPAREN*
                     </a>
-                  </div>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -888,7 +885,7 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Telematik-Tarife für junge Fahrer mit bis zu 30% Ersparnis
+                Telematik-Tarife belohnen sicheres Fahren
               </li>
             </ul>
             
@@ -925,13 +922,20 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Weltweiter Schutz auch im Auslandsurlaub
+                Forderungsausfalldeckung (wenn der Schädiger nicht zahlen kann)
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Erweiterte Deckung für Mietsachschäden und Schäden am Arbeitsplatz
+                Weltweiter Schutz auf Reisen
               </li>
             </ul>
+            <div className="mt-6 mb-8 text-center">
+              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="noopener noreferrer sponsored" aria-label="Hausratversicherung vergleichen (externer Link)">
+                  HAUSRATVERSICHERUNG VERGLEICHEN
+                </a>
+              </Button>
+            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Günstige Hausratversicherung für Mieter und Eigentümer
@@ -954,23 +958,13 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Erweiterter Schutz für teure Einzelstücke wie Schmuck oder Kunst
+                Unterversicherungsschutz durch korrekte Wohnfläche
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Außenversicherung für Gartenmöbel und Fahrräder
+                Außenversicherung (z. B. Diebstahl aus dem Auto)
               </li>
             </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
-            </p>
-            <div className="mt-6 mb-8 text-center">
-              <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                  HAUSRATVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
-            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Risikolebensversicherung für junge Familien
@@ -993,27 +987,26 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Kombinierbar mit Berufsunfähigkeitsversicherung
+                Nachversicherungs-Garantie bei Lebensereignissen
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Dynamische Erhöhung der Versicherungssumme möglich
+                Optionale Verlängerung der Laufzeit ohne erneute Prüfung
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35735224T" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <a href="https://www.financeads.net/tc.php?t=78841C35735224T" target="_blank" rel="noopener noreferrer sponsored" aria-label="Risikolebensversicherung vergleichen (externer Link)">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Rechtsschutzversicherung für Miet- und Verkehrsstreitigkeiten
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten. 
-              <strong> FÜR SELBSTSTÄNDIGE:</strong> Spezielle Tarife für Selbstständige und Freiberufler bieten erweiterten Schutz bei beruflichen Rechtsstreitigkeiten und Vertragsverletzungen.
+              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
@@ -1028,62 +1021,62 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Schutz bei Mietstreitigkeiten oder Nachbarschaftsstreit
               </li>
+              {/* Zusatz-Mehrwert: Selbstständige */}
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Spezialtarife für Selbstständige mit erweitertem Berufsrechtsschutz
+                Speziell für Selbstständige: Berufs- & Vertragsrechtsschutz (z. B. Honorar- und Lieferstreitigkeiten)
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Familien- und Partnerschaftsrecht inklusive
+                Optionaler Steuer- & Sozial-Rechtsschutz (z. B. bei Betriebsprüfungen)
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
+              <strong>Tipp für Selbstständige:</strong> Achten Sie auf Bausteine wie Firmenrechtsschutz, Spezial-Strafrechtsschutz und erweiterte Deckungssummen, damit geschäftliche Risiken vollständig abgedeckt sind.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35220816T" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <a href="https://www.financeads.net/tc.php?t=78841C35220816T" target="_blank" rel="noopener noreferrer sponsored" aria-label="Rechtsschutzversicherung vergleichen (externer Link)">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
 
-            {/* Neuer Abschnitt für Berufsunfähigkeitsversicherung */}
+            {/* Neuer Abschnitt: Berufsunfähigkeitsversicherung */}
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Berufsunfähigkeitsversicherung für finanzielle Absicherung
+              Berufsunfähigkeitsversicherung (BU): Einkommensschutz für den Ernstfall
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Berufsunfähigkeitsversicherung schützt Ihr Einkommen, falls Sie Ihren Beruf aus gesundheitlichen Gründen nicht mehr ausüben können. 
-              Besonders wichtig für junge Berufstätige und Selbstständige ohne staatliche Absicherung.
+              Die BU sichert Ihr Einkommen ab, wenn Sie Ihren Beruf krankheits- oder unfallbedingt voraussichtlich dauerhaft nicht mehr ausüben können.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Monatliche Rente bei Berufsunfähigkeit
+                Absicherung der individuellen <em>zuletzt ausgeübten</em> Tätigkeit (passgenauer Schutz)
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz bereits ab 50% Berufsunfähigkeit
+                Verzicht auf abstrakte Verweisung bei hochwertigen Tarifen
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Beitragsdynamik für inflationsgeschützte Leistungen
+                Dynamik-Optionen zum Inflationsausgleich der BU-Rente
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Verzicht auf abstrakte Verweisung in Top-Tarifen
+                Nachversicherungs-Garantien (z. B. Heirat, Hauskauf, Kinder) ohne neue Gesundheitsprüfung
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Nachversicherungsgarantie bei Heirat oder Geburt
+                Start-/Azubi-Tarife mit günstigen Einstiegsbeiträgen für junge Berufseinsteiger
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="sponsored">
-                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="noopener noreferrer sponsored" aria-label="Berufsunfähigkeitsversicherung vergleichen (externer Link)">
                   BERUFSUNFÄHIGKEITSVERSICHERUNG VERGLEICHEN
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -1135,11 +1128,11 @@ export default function Versicherungen() {
             </ul>
           </div>
           <div className="mt-8 text-center">
-            <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
-              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+            <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Alle Versicherungen im Überblick (externer Link)">
                 ALLE VERSICHERUNGEN IM ÜBERBLICK
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -1401,13 +1394,11 @@ export default function Versicherungen() {
       <p className="text-sm sm:text-base text-gray-400 mb-4">
         © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
-      <Link href="/" aria-label="Zurück zur Startseite">
-        <Button 
-          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-        >
+      <Button asChild className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+        <Link href="/" aria-label="Zurück zur Startseite">
           Zur Startseite
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </div>
   </div>
 </footer>
