@@ -1,14 +1,14 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Star, Check, Menu, X, ArrowRight } from "lucide-react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Head from "next/head"
-import Script from "next/script"
-import Image from "next/image"
+import Head from "next/head";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Search, Check, Star, Menu, X, ArrowRight, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
