@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Search, Check, Star, Menu, X, ArrowRight } from "lucide-react";
+import { Search, Check, Star, Menu, X, ArrowRight, Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 // SmartFinanzLogo Component
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
