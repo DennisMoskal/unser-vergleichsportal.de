@@ -1,54 +1,52 @@
 "use client"
 
-import Head from "next/head";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Search, Check, Star, Menu, X, ArrowRight, Linkedin } from "lucide-react";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Star, Check, Menu, X, ArrowRight, Linkedin } from "lucide-react"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Head from "next/head"
+import Script from "next/script"
+import Image from "next/image"
 
-// SmartFinanzLogo Component
+// SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
       <div className={`flex flex-col items-start ${className}`}>
         <div className="flex items-center space-x-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1" />
-            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">
-              S
-            </text>
+            <circle cx="16" cy="16" r="15" fill="#16a34a" stroke="#15803d" strokeWidth="1"/>
+            <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">S</text>
           </svg>
           <span className="font-bold">martFinanz</span>
         </div>
-        <span className="text-sm mt-1">unser-vergleichsportal.de</span>
+        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-// Header Component
+// Wiederverwendbare Header-Komponente
 const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("versicherungen");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState("versicherungen")
 
   const scrollToSection = (sectionId: string) => {
-    setActiveCategory(sectionId);
-    const element = document.getElementById(sectionId);
+    setActiveCategory(sectionId)
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   useEffect(() => {
-    const hash = window.location.hash.substring(1);
+    const hash = window.location.hash.substring(1)
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
-      scrollToSection(hash);
+      scrollToSection(hash)
     }
-  }, []);
+  }, [])
 
   return (
     <>
@@ -66,26 +64,26 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menü */}
+        {/* Mobiles Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-            <nav className="px-6 py-4 space-y-6" aria-label="Mobile Menü">
+            <nav className="px-6 py-4 space-y-6" aria-label="Mobiles Menü">
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</span>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Finanzprodukte</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: "banking", label: "Banking", url: "/banking", isInternal: true },
-                    { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
-                    { key: "trading", label: "Trading", url: "/trading", isInternal: true },
-                    { key: "versicherungen", label: "Versicherungen", url: "/versicherungen", isInternal: true },
-                  ].map(({ key, label, url }) => (
+                    { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+                    { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+                    { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+                    { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
-                          setMobileMenuOpen(false);
-                          setActiveCategory(key);
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -96,24 +94,24 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</span>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</h2>
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-                      { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-                      { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-                      { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-                    ].map(({ key, label, url }) => (
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
                           href={url}
                           target="_blank"
-                          rel="noopener sponsored noreferrer"
+                          rel="noopener noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
-                            setMobileMenuOpen(false);
-                            setActiveCategory(key);
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
@@ -124,20 +122,20 @@ const Header: React.FC = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-                      { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-                      { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-                      { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-                    ].map(({ key, label, url }) => (
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
                           href={url}
                           target="_blank"
-                          rel="noopener sponsored noreferrer"
+                          rel="noopener noreferrer"
                           className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                           onClick={() => {
-                            setMobileMenuOpen(false);
-                            setActiveCategory(key);
+                            setMobileMenuOpen(false)
+                            setActiveCategory(key)
                           }}
                           aria-label={`${label} vergleichen (externer Link)`}
                         >
@@ -149,21 +147,21 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</span>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: "karriere", label: "Karriere", url: "/karriere", isInternal: true },
-                    { key: "kontakt", label: "Kontakt", url: "/kontakt", isInternal: true },
-                    { key: "partnerprogramm", label: "Partnerprogramm", url: "/partnerprogramme", isInternal: true },
-                    { key: "ueber-uns", label: "Über uns", url: "/ueber-uns", isInternal: true },
-                  ].map(({ key, label, url }) => (
+                    { key: 'karriere', label: 'Karriere', url: '/karriere', isInternal: true },
+                    { key: 'kontakt', label: 'Kontakt', url: '/kontakt', isInternal: true },
+                    { key: 'partnerprogramm', label: 'Partnerprogramm', url: '/partnerprogramme', isInternal: true },
+                    { key: 'ueber-uns', label: 'Über uns', url: '/ueber-uns', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
-                          setMobileMenuOpen(false);
-                          setActiveCategory(key);
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -174,21 +172,21 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</span>
+                <h2 className="font-semibold text-2xl mb-3 text-left ml-2">Rechtliches</h2>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
-                    { key: "agb", label: "AGB", url: "/agb", isInternal: true },
-                    { key: "cookie-richtlinie", label: "Cookie-Richtlinie", url: "/cookie-richtlinie", isInternal: true },
-                    { key: "datenschutz", label: "Datenschutz", url: "/datenschutz", isInternal: true },
-                    { key: "impressum", label: "Impressum", url: "/impressum", isInternal: true },
-                  ].map(({ key, label, url }) => (
+                    { key: 'agb', label: 'AGB', url: '/agb', isInternal: true },
+                    { key: 'cookie-richtlinie', label: 'Cookie-Richtlinie', url: '/cookie-richtlinie', isInternal: true },
+                    { key: 'datenschutz', label: 'Datenschutz', url: '/datenschutz', isInternal: true },
+                    { key: 'impressum', label: 'Impressum', url: '/impressum', isInternal: true },
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
                         className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                         onClick={() => {
-                          setMobileMenuOpen(false);
-                          setActiveCategory(key);
+                          setMobileMenuOpen(false)
+                          setActiveCategory(key)
                         }}
                         aria-label={`Zu ${label} navigieren`}
                       >
@@ -216,18 +214,18 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center gap-2 sm:gap-4 text-base">
             {[
-              { key: "banking", label: "Banking", url: "/banking", isInternal: true },
-              { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
-              { key: "trading", label: "Trading", url: "/trading", isInternal: true },
-              { key: "versicherungen", label: "Versicherung", url: "/versicherungen", isInternal: true },
-              { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-              { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-              { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-              { key: "kreditkarte", label: "Kreditkarte", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-              { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-              { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-              { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-              { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
+              { key: 'banking', label: 'Banking', url: '/banking', isInternal: true },
+              { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
+              { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
+              { key: 'versicherungen', label: 'Versicherung', url: '/versicherungen', isInternal: true },
+              { key: '1dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+              { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+              { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+              { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+              { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+              { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
             ].map(({ key, label, url, isInternal }) => (
               <li key={key}>
                 {isInternal ? (
@@ -243,7 +241,7 @@ const Header: React.FC = () => {
                   <a
                     href={url}
                     target="_blank"
-                    rel="noopener sponsored noreferrer"
+                    rel="noopener noreferrer"
                     className="block px-3 py-2 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
                     onClick={() => setActiveCategory(key)}
                     aria-label={`${label} vergleichen (externer Link)`}
@@ -256,307 +254,235 @@ const Header: React.FC = () => {
           </ul>
         </div>
       </section>
-
-      {/* Grüner Value-/Trust-Bereich ohne Überschrift */}
-      <section className="py-12 sm:py-16 bg-green-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <ul className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <p className="ml-3 text-base sm:text-lg">
-                  Über <strong className="font-semibold">100.000</strong> zufriedene Nutzer
-                </p>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <p className="ml-3 text-base sm:text-lg">
-                  Mehr als <strong className="font-semibold">500 Anbieter</strong> im direkten Vergleich
-                </p>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <p className="ml-3 text-base sm:text-lg">
-                  Im Durchschnitt <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
-                </p>
-              </li>
-              <li className="flex items-start">
-                <Star className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <p className="ml-3 text-base sm:text-lg">
-                  <strong className="font-semibold">4,8★</strong> Zufriedene Kundenstimmen
-                </p>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <p className="ml-3 text-base sm:text-lg">
-                  Schnell, sicher &amp; <strong className="font-semibold">kostenlos</strong>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </>
-  );
-};
-
-export interface Provider {
-  name: string;
-  rating: number;
-  features: string[];
-  price: string;
-  bonus: string;
-  logo: string;
-  url: string;
+  )
 }
 
-const providerData: { [key: string]: Provider[] } = {
-  versicherungen: [
-    {
-      name: "Tarifcheck.de",
-      rating: 4.5,
-      features: [
-        "Bis zu 1.000€ jährlich sparen möglich",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-      ],
-      price: "100% kostenlos",
-      bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/",
-    },
-    {
-      name: "freenet",
-      rating: 4.7,
-      features: [
-        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-        "Kostenloser Wechselservice für Mobilfunkverträge",
-        "5G-Unterstützung in allen Tarifen",
-        "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-        "Bis zu 100€ Startguthaben für Neukunden",
-        "Kostenlose Hotline für Kunden",
-        "Schnelle Vertragsabwicklung online",
-        "Testsieger für Kundenservice (connect 2025)",
-        "Zusätzliche Rabatte für junge Kunden unter 28",
-        "Umweltfreundliche Tarife mit CO₂-Kompensation",
-      ],
-      price: "ab 9,99€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "📱",
-      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
-    },
-  ],
-  tierversicherungen: [
-    {
-      name: "PetProtect",
-      rating: 4.9,
-      features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"],
-      price: "ab 8€/Monat",
-      bonus: "1. Monat gratis",
-      logo: "🐕",
-      url: "/anbieter/petprotect",
-    },
-    {
-      name: "FigoPet",
-      rating: 4.6,
-      features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"],
-      price: "ab 12€/Monat",
-      bonus: "Willkommensgeschenk",
-      logo: "🐱",
-      url: "/anbieter/figopet",
-    },
-  ],
-  banking: [
-    {
-      name: "Tarifcheck.de",
-      rating: 4.5,
-      features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich",
-      ],
-      price: "100% kostenlos",
-      bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/",
-    },
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25",
-      ],
-      price: "0€ Kommission",
-      bonus: "Demo-Konto",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc",
-    },
-    {
-      name: "Credimaxx",
-      rating: 4.9,
-      features: [
-        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-        "Sofortvermittlung durch erfahrene Kreditprofis",
-        "Digitaler Abschluss mit WebID oder VideoIdent",
-        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-        "Vermittlung in bis zu 1 Minute",
-        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-        "25 Jahre Erfahrung in der Kreditvermittlung",
-      ],
-      price: "ab 10,99% eff. Zins p.a.",
-      bonus: "Schnelle Auszahlung",
-      logo: "💳",
-      url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
-    },
-    {
-      name: "freenet",
-      rating: 4.7,
-      features: [
-        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-        "Kostenloser Wechselservice für Mobilfunkverträge",
-        "5G-Unterstützung in allen Tarifen",
-        "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-        "Bis zu 100€ Startguthaben für Neukunden",
-        "Kostenlose Hotline für Kunden",
-        "Schnelle Vertragsabwicklung online",
-        "Testsieger für Kundenservice (connect 2025)",
-        "Zusätzliche Rabatte für junge Kunden unter 28",
-        "Umweltfreundliche Tarife mit CO₂-Kompensation",
-      ],
-      price: "ab 9,99€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "📱",
-      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
-    },
-  ],
-  trading: [
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25",
-      ],
-      price: "0€ Kommission",
-      bonus: "Demo-Konto",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc",
-    },
-  ],
-};
+const providerData = [
+  {
+    name: "Tarifcheck.de",
+    rating: 4.5,
+    features: [
+      "Über 20 Jahre Erfahrung als Vergleichsportal",
+      "100% kostenloser und unverbindlicher Vergleich",
+      "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+      "eKomi Silber Siegel mit 4,5/5 Sternen",
+      "Über 3.194 verifizierte Kundenbewertungen",
+      "Deutschlands drittgrößtes Vergleichsportal",
+      "Bis zu 1.000€ jährlich sparen bei Girokonten und Krediten"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 120€ Neukundenbonus",
+    logo: "🏆",
+    url: "https://www.tarifcheck.com/W1pi1Fx"
+  },
+  {
+    name: "DKB",
+    rating: 4.7,
+    features: [
+      "Kostenloses Girokonto mit 100€ Prämie (ab 700€ Geldeingang oder unter 28 Jahre)",
+      "Visa Kreditkarte ohne Jahresgebühr, weltweit kostenlos bezahlen",
+      "Tagesgeldkonto mit attraktiven Zinsen bis 3,5% p.a.",
+      "Nachhaltige Bank: Finanziererin erneuerbarer Energien",
+      "Online-Broker mit ETF-Sparplänen ab 1,90€ pro Trade",
+      "Kinderkonto für finanzielle Bildung der Jüngsten",
+      "Baufinanzierung mit flexiblen Konditionen und LBS-Bausparen",
+      "DKB-App: Sicher und mobil Bankgeschäfte erledigen"
+    ],
+    price: "100% kostenlos",
+    bonus: "100€ Prämie + 30€ Kreditkarten-Bonus",
+    logo: "🏦",
+    url: "https://www.awin1.com/awclick.php?gid=441815&mid=11329&awinaffid=2524533&linkid=2273909&clickref="
+  },
+  {
+    name: "Credimaxx",
+    rating: 4.9,
+    features: [
+      "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+      "Sofortvermittlung durch erfahrene Kreditprofis",
+      "Digitaler Abschluss mit WebID oder VideoIdent",
+      "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+      "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
+      "Vermittlung in bis zu 1 Minute",
+      "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+      "25 Jahre Erfahrung in der Kreditvermittlung"
+    ],
+    price: "ab 10,99% eff. Zins p.a.",
+    bonus: "Schnelle Auszahlung",
+    logo: "💳",
+    url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
+  },
+  {
+    name: "auxmoney",
+    rating: 4.8,
+    features: [
+      "Kreditvermittlung auch für Selbstständige und Freiberufler",
+      "Kooperation mit SWK Bank für schnelle Abwicklung",
+      "eKomi Gold Siegel mit 4,8/5 Sternen",
+      "Über 10 Jahre Erfahrung im Kreditmarkt",
+      "Schufa-neutrale Kreditanfrage",
+      "Kostenlose Sondertilgungen für flexible Rückzahlung",
+      "Vergleich von über 20 Banken für beste Konditionen",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung"
+    ],
+    price: "Bonitätsabhängige Zinsen",
+    bonus: "Flexible Kreditkonditionen",
+    logo: "💸",
+    url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&subid=&target=Startseite"
+  },
+  {
+    name: "CHECK24",
+    rating: 4.7,
+    features: [
+      "Marktführer mit über 90% Marktabdeckung bei Girokonten und Krediten",
+      "Über 25 Testsiege im Finanzvergleich (Handelsblatt 09/2024)",
+      "Vergleich von über 300 Girokonten und Kreditangeboten",
+      "Nirgendwo-Günstiger-Garantie für beste Konditionen",
+      "Kostenlose Beratung durch 300 Finanzexperten (08:00–22:00 Uhr)",
+      "Über 98% Kundenzufriedenheit",
+      "Vermittlung von Krediten mit Provisionstransparenz",
+      "Zusätzliche Vergleiche für Versicherungen, Strom und Gas"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 100€ Cashback",
+    logo: "✅",
+    url: "https://www.tarifcheck.com/k0zzIEJ"
+  },
+  {
+    name: "Verivox",
+    rating: 4.6,
+    features: [
+      "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
+      "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+      "Kostenlose und Schufa-neutrale Kreditanfragen",
+      "Über 20 Jahre Erfahrung im Finanzvergleich",
+      "TÜV-geprüfte Plattform für Kredite und Finanzen",
+      "Kredite ab 0,68% effektiver Jahreszins",
+      "Persönliche Beratung unter 06221 79617216"
+    ],
+    price: "100% kostenlos",
+    bonus: "Bis zu 300€ Rückerstattung",
+    logo: "⚖️",
+    url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
+    metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
+    metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
+  },
+  {
+    name: "Smava",
+    rating: 4.8,
+    features: [
+      "Kreditvergleich mit über 20 Banken für beste Konditionen",
+      "Günstiger geht nicht Garantie mit Top-Zinsen ab 0,68%",
+      "Schufa-neutrale und 100% kostenlose Kreditanfragen",
+      "Über 300.000 zufriedene Kunden seit 2007",
+      "TÜV-zertifizierte Plattform für Kreditvergleiche",
+      "Schnelle Auszahlung innerhalb von 48 Stunden",
+      "Digitale Antragsprozesse mit VideoIdent"
+    ],
+    price: "100% kostenlos",
+    bonus: "Schnelle Auszahlung",
+    logo: "💰",
+    url: "https://kreditvergleich.smava.de/coop/antrag?refId=dykN1hEao7j3",
+    metaTitle: "Smava Kreditvergleich: Günstige Kredite ab 0,68% 2025",
+    metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!"
+  },
+  {
+    name: "FINANZCHECK.de",
+    rating: 4.8,
+    features: [
+      "Kreditvergleich mit über 20 Banken für beste Konditionen",
+      "Zinsen ab 0,69% effektivem Jahreszins",
+      "Schufa-neutrale Anfrage ohne Bonitätsbeeinträchtigung",
+      "TÜV-geprüfte Plattform mit 4,8/5 Sternen (eKomi)",
+      "Schnelle Auszahlung innerhalb von 24–48 Stunden",
+      "Kostenlose Beratung durch Experten (Mo–Fr 8–20 Uhr)",
+      "Über 500.000 zufriedene Kunden seit 2011",
+      "Flexible Laufzeiten von 12 bis 120 Monaten"
+    ],
+    price: "100% kostenlos",
+    bonus: "Schnelle Auszahlung",
+    logo: "💶",
+    url: "https://kreditvergleich.finanzcheck.de/coop/antrag?refId=Bz0EGclZjG5L",
+    metaTitle: "FINANZCHECK.de Kreditvergleich: Günstige Kredite ab 0,69% 2025",
+    metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!"
+  }
+]
 
-export default function Home() {
-  const [activeCategory, setActiveCategory] = useState("versicherungen");
+export default function Banking() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scriptsLoaded, setScriptsLoaded] = useState({ main: false, embedTeal: false })
+  const [secondScriptsLoaded, setSecondScriptsLoaded] = useState({ main: false, embedTeal: false })
+
+  const handleScriptLoad = (scriptName: string, setter: React.Dispatch<React.SetStateAction<{main: boolean, embedTeal: boolean}>>) => {
+    setter((prev) => ({ ...prev, [scriptName]: true }))
+    console.log(`${scriptName} script loaded successfully`)
+  }
+
+  const handleScriptError = (scriptName: string) => {
+    console.error(`${scriptName} script failed to load`)
+  }
+
+  // Debugging: Log when both scripts are loaded
+  useEffect(() => {
+    if (scriptsLoaded.main && scriptsLoaded.embedTeal) {
+      console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
+    }
+  }, [scriptsLoaded])
+
+  useEffect(() => {
+    if (secondScriptsLoaded.main && secondScriptsLoaded.embedTeal) {
+      console.log("Both second FINANZCHECK scripts loaded, initializing second teal_embed_iframe")
+    }
+  }, [secondScriptsLoaded])
 
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Head>
-        {/* --- Meta Basics (bereinigt) --- */}
-        <title>Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</title>
+        {/* --- Meta Basics --- */}
+        <title>Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich</title>
         <meta
           name="description"
-          content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
+          content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
         />
-        {/* Entfernt: meta keywords (obsolet), revisit-after (ohne Wirkung) */}
+        <meta
+          name="keywords"
+          content="Banking Vergleich 2025, Girokonto kostenlos, Kredit Vergleich, Tagesgeldzinsen 2025, Kreditkarten ohne Jahresgebühr, Baufinanzierung, SmartFinanz"
+        />
+        <link rel="canonical" href="https://unser-vergleichsportal.de/banking" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        {/* Accessibility: Zoom wieder erlaubt */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
-        <meta name="author" content="SmartFinanz" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-        <link rel="alternate icon" href="/images/favicon.ico" />
-
-        {/* Hreflang (Basis) */}
-        <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="de-DE" />
-        <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
+        <meta property="og:title" content="Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich" />
         <meta
           property="og:description"
-          content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
+          content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
         />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
-        <meta property="og:site_name" content="SmartFinanz" />
+        <meta property="og:url" content="https://unser-vergleichsportal.de/banking" />
         <meta
           property="og:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
         />
-        <meta
-          property="og:image:secure_url"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="627" />
-        <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
-        <meta property="og:locale" content="de_DE" />
-        <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-10-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-10-19T00:27:16+00:00" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Unser-Vergleichsportal – Banking & Kredite vergleichen" />
+        <meta property="og:site_name" content="SmartFinanz" />
 
-        {/* --- Twitter Cards --- */}
+        {/* --- Twitter --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
-        <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
+        <meta name="twitter:title" content="Beste Bank Oktober 2025 | Girokonto, Kredite & Tagesgeld Vergleich" />
+        <meta
+          name="twitter:description"
+          content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
+        />
         <meta
           name="twitter:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
         />
-        <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta name="twitter:site" content="@unservergleich" />
-        <meta name="twitter:creator" content="@unservergleich" />
-
-        {/* --- Preloads & Resource Hints (bereinigt) --- */}
-        <link rel="preload" href="/logo.png" as="image" />
-        {/* bevorzugt preconnect für Domains mit früher Verbindung */}
-        <link rel="preconnect" href="https://www.awin1.com" crossOrigin="" />
-        <link rel="preconnect" href="https://link-pso.xtb.com" crossOrigin="" />
-        <link rel="preconnect" href="https://private.vodafone-affiliate.de" crossOrigin="" />
-        {/* unnötige dns-prefetch reduziert */}
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://www.c24n.de" />
-
-        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
 
         {/* ---- Schema.org: Organization ---- */}
         <script
@@ -568,10 +494,7 @@ export default function Home() {
               "name": "SmartFinanz – unser-vergleichsportal.de",
               "url": "https://unser-vergleichsportal.de",
               "logo": "https://unser-vergleichsportal.de/logo.png",
-              "brand": {
-                "@type": "Brand",
-                "name": "unser-vergleichsportal.de"
-              },
+              "brand": { "@type": "Brand", "name": "unser-vergleichsportal.de" },
               "sameAs": [
                 "https://www.linkedin.com/in/unservergleichsportalde",
                 "https://x.com/unservergleich",
@@ -588,26 +511,68 @@ export default function Home() {
           }}
         />
 
-        {/* ---- Schema.org: WebSite + SearchAction ---- */}
+        {/* ---- Schema.org: WebPage + ItemList ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "SmartFinanz",
-              "url": "https://unser-vergleichsportal.de",
+              "@type": "WebPage",
+              "name": "Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich",
+              "url": "https://unser-vergleichsportal.de/banking",
+              "description":
+                "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
               "inLanguage": "de",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-                "query-input": "required name=search_term_string"
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Girokonto",
+                      "description": "Kostenloses Girokonto mit EC- und Kreditkarte, Bargeldabhebung & App-Banking.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Kredit",
+                      "description": "Ratenkredit ab 0,68% p.a., Sofortkredit & Umschuldung für Zinsersparnis.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Tagesgeld",
+                      "description": "Tagesgeldzinsen bis 4,0% mit 100% Einlagensicherung.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Kreditkarte",
+                      "description": "Kostenlose Kreditkarte ohne Jahresgebühr mit Reiseversicherung & Cashback.",
+                      "offers": { "@type": "Offer", "url": "https://unser-vergleichsportal.de/banking" }
+                    }
+                  }
+                ]
               }
             }),
           }}
         />
 
-        {/* ---- Schema.org: FAQPage (einmalig, im Head belassen) ---- */}
+        {/* ---- Schema.org: FAQPage ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -617,83 +582,93 @@ export default function Home() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Wie funktioniert der Finanzvergleich?",
+                  "name": "Welches Girokonto ist wirklich kostenlos?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                    "text": "Ein wirklich kostenloses Girokonto erhebt keine Kontoführungsgebühren und bietet kostenlose Bargeldabhebungen. Viele Banken bieten zudem Prämien für Neukunden an."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Ist der Finanzvergleich auf unser-vergleichsportal.de kostenlos?",
+                  "name": "Wie finde ich den günstigsten Kredit?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
+                    "text": "Der günstigste Kredit hängt von der Laufzeit, der Bonität und dem Verwendungszweck ab. Ein Vergleich der effektiven Jahreszinsen hilft, mehrere Hundert Euro zu sparen."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
+                  "name": "Sind Tagesgeldkonten sicher?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                    "text": "Ja, Tagesgeldkonten in der EU sind durch die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und Bank abgesichert."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Wie schnell bekomme ich die Empfehlungen?",
+                  "name": "Lohnt sich eine Kreditkarte ohne Jahresgebühr?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
+                    "text": "Ja, kostenlose Kreditkarten sind ideal für den Alltag und Reisen. Viele Anbieter bieten zusätzliche Vorteile wie Cashback oder Versicherungen."
                   }
                 }
               ]
-            }),
-          }}
-        />
-
-        {/* ---- Schema.org: BreadcrumbList (Home) ---- */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://unser-vergleichsportal.de/" }
-              ]
-            }),
+            })
           }}
         />
       </Head>
-      <main>
-        <div className="min-h-screen bg-white">
-          <Header />
+      <Header />
 
-          {/* Hauptüberschrift */}
-          <section className="py-8 sm:py-12 bg-white">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</h1>
-              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
-              </p>
-              <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
-              <p className="text-base sm:text-lg mb-4">Finden Sie in 3 Minuten das passende Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
-              <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – schnell und zuverlässig.</p>
-              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzer.</p>
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich</h1>
+            <p className="text-base sm:text-lg mb-8">
+              Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a
+                href="https://www.tarifcheck.com/k0zzIEJ"
+                target="_blank"
                 rel="sponsored"
-                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
-                aria-label="Verivox - die Tarifexperten"
+                className="inline-block"
               >
-                <Button
-                  size="lg"
-                  className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                >
-                  BESTEN TARIF BERECHNEN
+                <Button className="bg-white text-green-600 font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
+                  ZUM KREDIT RECHNER
                 </Button>
               </a>
-             {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
+              <a
+                href="https://www.tarifcheck.com/W1pi1Fx"
+                target="_blank"
+                rel="sponsored"
+                className="inline-block"
+              >
+                <Button className="bg-white text-green-600 font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:scale-105 hover:shadow-lg">
+                  ZUM KONTO VERGLEICH
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="mt-2 text-2xl font-bold">Vermögensaufbau und Vorsorge durch intelligente Geldanlage</h2>
+            <div className="mt-4 mb-2 flex justify-center">
+              <Button asChild size="lg" className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                <Link
+                  href="/trading"
+                  aria-label="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                  title="Mit Ersparnissen Vermögen aufbauen – jetzt Broker vergleichen"
+                >
+                  INVESTMENT ANBIETER UND DEPOTS VERGLEICHEN<ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+            
+            {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
           <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
             <Image
               src="/images/5.png"
@@ -730,878 +705,792 @@ export default function Home() {
               height={40}
               className="opacity-100 hover:opacity-100 transition-opacity"
             />
-              </div>
             </div>
-          </section>
-
-          {/* Vergleichstabellen */}
-          <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
-            <div className="container mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-                Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 10/2025
-              </h2>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    name: "Tarifcheck.de",
-                    rating: 4.5,
-                    features: [
-                      "Über 20 Jahre Erfahrung als Vergleichsportal",
-                      "100% kostenloser und unverbindlicher Vergleich",
-                      "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-                      "Mehrfach ausgezeichnet mit 'sehr gut'",
-                      "eKomi Silber Siegel mit 4,5/5 Sternen",
-                      "Über 3.194 Kundenbewertungen",
-                      "Deutschlands drittgrößtes Vergleichsportal",
-                      "Vertrauen von Millionen Verbrauchern",
-                      "Bis zu 1.000€ jährlich sparen möglich",
-                    ],
-                    price: "100% kostenlos",
-                    bonus: "Bis zu 120€ Neukundenbonus",
-                    logo: "🏆",
-                    url: "https://www.tarifcheck.com/wmPi92g",
-                  },
-                  {
-                    name: "XTB",
-                    rating: 4.5,
-                    features: [
-                      "Gratis Aktie für neue Investoren",
-                      "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-                      "Über 8000 Aktien & ETFs",
-                      "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-                      "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-                      "eWallet mit virtueller Mastercard",
-                      "Smarte ETF-Sparpläne",
-                      "0% Kommission bis 100.000€ Umsatz",
-                      "Kostenlose Ein- & Auszahlungen",
-                      "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-                      "Platz 1 CFD-Broker 2024/25",
-                    ],
-                    price: "0€ Kommission",
-                    bonus: "Demo-Konto",
-                    logo: "📊",
-                    url: "https://link-pso.xtb.com/pso/lMDhc",
-                  },
-                  {
-                    name: "Credimaxx",
-                    rating: 4.9,
-                    features: [
-                      "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-                      "Sofortvermittlung durch erfahrene Kreditprofis",
-                      "Digitaler Abschluss mit WebID oder VideoIdent",
-                      "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-                      "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-                      "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-                      "Vermittlung in bis zu 1 Minute",
-                      "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-                      "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-                      "25 Jahre Erfahrung in der Kreditvermittlung",
-                    ],
-                    price: "ab 10,99% eff. Zins p.a.",
-                    bonus: "Schnelle Auszahlung",
-                    logo: "💳",
-                    url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
-                  },
-                  {
-                    name: "HanseMerkur",
-                    rating: 4.7,
-                    features: [
-                      "Umfassender Schutz für Hunde und Katzen",
-                      "Bis zu 100% Kostenerstattung",
-                      "Freie Tierarztwahl",
-                      "Keine Altersbeschränkung",
-                      "Schnelle Schadensbearbeitung",
-                      "Flexible Tarifoptionen",
-                      "Zusatzleistungen wie Physiotherapie",
-                      "Online-Vertragsmanagement",
-                      "24/7 Kundenhotline",
-                    ],
-                    price: "ab 10€/Monat",
-                    bonus: "Kostenloser Gesundheitscheck",
-                    logo: "🐾",
-                    url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
-                  },
-                  {
-                    name: "CHECK24",
-                    rating: 4.8,
-                    features: [
-                      "Kostenloser Kontowechselservice",
-                      "Über 50 Banken im Vergleich",
-                      "Bis zu 250€ Willkommensbonus",
-                      "Kostenlose Kontoführung",
-                      "Schnelle Kontoeröffnung",
-                      "TÜV-geprüfter Vergleich",
-                      "24/7 Kundensupport",
-                      "Mobile Banking App",
-                      "Kreditkartenoptionen verfügbar",
-                      "Attraktive Zinsen auf Tagesgeld",
-                    ],
-                    price: "0€ Kontoführung",
-                    bonus: "Bis zu 250€ Bonus",
-                    logo: "🏦",
-                    url: "https://www.c24n.de/ducwCtq",
-                  },
-                  {
-                    name: "Vodafone",
-                    rating: 4.6,
-                    features: [
-                      "Highspeed Kabel-Internet mit bis zu 1.000 MBit/s",
-                      "Günstige Mobilfunktarife mit 5G-Unterstützung",
-                      "Spezielle Angebote für Selbstständige und Geschäftskunden",
-                      "Kombi-Vorteile für DSL und Mobilfunk",
-                      "Kostenloser WLAN-Router bei Vertragsabschluss",
-                      "Flexibles Streaming mit GigaTV",
-                      "24/7 Kundenhotline für schnellen Support",
-                      "Bis zu 100€ Startguthaben für Neukunden",
-                      "Schnelle Installation und Einrichtung",
-                      "Testsieger für Kundenservice (connect 2025)",
-                    ],
-                    price: "ab 9,99€/Monat",
-                    bonus: "Bis zu 100€ Startguthaben",
-                    logo: "📡",
-                    url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons=",
-                  },
-                  {
-                    name: "1&1",
-                    rating: 4.7,
-                    features: [
-                      "Highspeed DSL-Tarife mit bis zu 250 MBit/s",
-                      "Testsieger für Internetgeschwindigkeit (connect 2025)",
-                      "Kostenloser HomeServer für optimales WLAN",
-                      "Spezielle Angebote für Selbstständige und Firmen",
-                      "Kombi-Vorteile mit Mobilfunktarifen",
-                      "30 Tage Testphase für alle Tarife",
-                      "Bis zu 50€ Startguthaben für junge Kunden",
-                      "24h Austausch-Service bei Defekten",
-                      "Umfassender Umzugsservice",
-                      "Attraktive Bundle-Angebote mit Smartphones.",
-                    ],
-                    price: "ab 9,99€/Monat",
-                    bonus: "Bis zu 50€ Startguthaben",
-                    logo: "🌐",
-                    url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=",
-                  },
-                  {
-                    name: "Verivox",
-                    rating: 4.9,
-                    features: [
-                      "Vergleich von Wohngebäudeversicherungen für optimalen Schutz",
-                      "Über 800 Anbieter für Strom, Gas, DSL und Versicherungen",
-                      "Spezielle Angebote für Selbstständige und Unternehmen",
-                      "TÜV-geprüfter Vergleichsportal mit 4.9/5 Bewertung",
-                      "Bis zu 200€ Prämie für Freundschaftswerbung",
-                      "Kostenloser Wechselservice für Tarife",
-                      "Transparente Tarifübersicht in der Verivox-App",
-                      "Schneller Online-Abschluss für Versicherungen",
-                      "Über 25 Jahre Erfahrung im Vergleichsmarkt",
-                      "Bis zu 1.000€ jährliche Einsparungen möglich",
-                    ],
-                    price: "100% kostenlos",
-                    bonus: "Bis zu 200€ Prämie",
-                    logo: "🏠",
-                    url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
-                  },
-                  {
-                    name: "freenet",
-                    rating: 4.7,
-                    features: [
-                      "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-                      "Kostenloser Wechselservice für Mobilfunkverträge",
-                      "5G-Unterstützung in allen Tarifen",
-                      "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-                      "Bis zu 100€ Startguthaben für Neukunden",
-                      "Kostenlose Hotline für Kunden",
-                      "Schnelle Vertragsabwicklung online",
-                      "Testsieger für Kundenservice (connect 2025)",
-                      "Zusätzliche Rabatte für junge Kunden unter 28",
-                      "Umweltfreundliche Tarife mit CO₂-Kompensation",
-                    ],
-                    price: "ab 9,99€/Monat",
-                    bonus: "Bis zu 100€ Startguthaben",
-                    logo: "📱",
-                    url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
-                  },
-                ].map((provider, index) => (
-                  <Card
-                    key={provider.name}
-                    className="relative hover:shadow-xl transition-shadow bg-white border-2 hover:border-green-200 h-full flex flex-col overflow-hidden"
-                  >
-                    <Badge className="absolute top-0 right-0 bg-yellow-500 text-xs sm:text-sm px-3 py-1 transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
-                      Top Empfehlung
-                    </Badge>
-                    <CardHeader className="text-center pb-2 sm:pb-4 flex-shrink-0">
-                      <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{provider.logo}</div>
-                      <CardTitle className="text-lg sm:text-xl font-bold break-words">{provider.name}</CardTitle>
-                      <div className="flex items-center justify-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`h-3 w-3 sm:h-4 w-4 ${i < Math.floor(provider.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
-                            aria-hidden="true"
-                          />
-                        ))}
-                        <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-gray-600">{provider.rating}</span>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow p-4 sm:p-6">
-                      <div className="text-center border-b pb-3 sm:pb-4 mb-3 sm:mb-4 flex-shrink-0">
-                        <p className="text-xl sm:text-2xl font-bold text-green-600 break-words">{provider.price}</p>
-                        <Badge variant="outline" className="mt-1 sm:mt-2 border-green-200 text-green-700 text-xs sm:text-sm break-words">
-                          {provider.bonus}
-                        </Badge>
-                      </div>
-                      <div className="flex-grow overflow-hidden">
-                        <div className="max-h-48 overflow-y-auto mb-4 pr-2" style={{ scrollbarWidth: "thin" }}>
-                          <ul className="space-y-1.5">
-                            {provider.features.map((feature, i) => (
-                              <li key={i} className="flex items-start text-xs sm:text-sm leading-tight">
-                                <Check className="mr-2 h-3 w-3 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                                <p className="break-words overflow-wrap-anywhere">{feature}</p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                      <a
-                        href={provider.url}
-                        target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                        rel={provider.url.startsWith("http") ? "noopener sponsored noreferrer" : undefined}
-                        aria-label={`Zum Anbieter ${provider.name}`}
-                      >
-                        <Button
-                          className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto flex-shrink-0"
-                        >
-                          ZUM ANBIETER UND SPAREN*
-                          {provider.name === "Vodafone" && (
-                            <Image
-                              src="https://private.vodafone-affiliate.de/tb.php?t=126731V2369176269T"
-                              alt=""
-                              width={0}
-                              height={0}
-                              className="border-0"
-                            />
-                          )}
-                        </Button>
-                      </a>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              <div className="mt-6 text-center text-xs sm:text-sm text-gray-600">
-                <p>
-                  CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren.
-                  71% der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.
-                  Sie sollten überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.
-                </p>
-                <p className="mt-4">
-                  *Wir erhalten eine Provision für Käufe über diese Links.
-                </p>
-              </div>
-            </div>
-          </section>
-{/* New Content Sections for Subpages */}
-          <section className="py-12 sm:py-16 bg-white" id="content-sections">
-            <div className="container mx-auto px-4">
-              {/* Banking Section */}
-              <div className="mb-12" id="banking-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking Anbieter</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Die Wahl der richtigen Bank entscheidet über Gebühren, Servicequalität und langfristige Zufriedenheit. Ein durchdachter Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
-                  <Link href="/banking" className="text-green-600 hover:underline">
-                    Banking-Vergleichsseite
-                  </Link>{" "}
-                  hilft Ihnen, das optimale Konto zu finden.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
-                <p className="mb-4 text-gray-700">
-                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    CHECK24
-                  </a>{" "}
-                  bieten bis zu 250€ Bonus.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
-                <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
-                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
-                    Tagesgeldkonten
-                  </Link>{" "}
-                  für maximale Erträge.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
-                <p className="mb-4 text-gray-700">
-                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
-                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    Tarifcheck.de
-                  </a>{" "}
-                  bietet kostenlose Vergleiche.
-                </p>
-                <Link href="/banking">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    BANKING-PRODUKTE ENTDECKEN
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Trading Section */}
-              <div className="mb-12" id="trading-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
-                  <Link href="/trading" className="text-green-600 hover:underline">
-                    Trading-Seite um das richtige Depot zu eröffnen
-                  </Link>
-                  . In wenigen Minuten können Sie per App mit Aktien handeln, Ihre finanzielle Zukunft planen oder in Bitcoin und andere Kryptowährungen investieren.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
-                <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
-                  <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
-                    Altersvorsorge-Optionen
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
-                <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
-                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    XTB
-                  </a>{" "}
-                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rohstoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine Verzinsung des Guthabens.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
-                <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
-                  <Link href="/trading#krypto" className="text-green-600 hover:underline">
-                    sicheres Krypto-Trading
-                  </Link>
-                  . In unserer Trading-Rubrik finden Sie Informationen und Tipps, um sicher und gut vorbereitet mit dem Handel zu beginnen.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
-                <p className="mb-4 text-gray-700">
-                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
-                  <Link href="/trading#etfs" className="text-green-600 hover:underline">
-                    ETF-Sparplänen
-                  </Link>
-                  .
-                </p>
-                <Link href="/trading">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    JETZT VORSORGE PLANEN
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Versicherungen Section */}
-              <div className="mb-12" id="versicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
-                  <Link href="/versicherungen" className="text-green-600 hover:underline">
-                    Versicherungsseite
-                  </Link>
-                  , welche Policen unverzichtbar sind.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
-                  <a
-                    href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                    target="_blank"
-                    rel="noopener sponsored noreferrer"
-                    className="text-green-600 hover:underline"
-                  >
-                    Verivox
-                  </a>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
-                  <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
-                    KFZ-Vergleich
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Rechtschutzversicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung deckt Anwalts- und Gerichtskosten in privaten, beruflichen und Verkehrsstreitigkeiten. Besonders wichtig für Mieter und Selbstständige.
-                </p>
-                <Link href="/versicherungen">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    DEN BESTEN TARIF FINDEN
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Tierversicherungen Section */}
-              <div className="mb-12" id="tierversicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
-                  <Link href="/tierversicherungen" className="text-green-600 hover:underline">
-                    Tierversicherungsseite
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
-                <p className="mb-4 text-gray-700">
-                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    HanseMerkur
-                  </a>{" "}
-                  decken bis zu 100% der Kosten ab.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
-                <p className="mb-4 text-gray-700">
-                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
-                  <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
-                    Tierversicherungen
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
-                <p className="mb-4 text-gray-700">
-                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
-                  <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
-                    alternative Behandlungen
-                  </Link>
-                  .
-                </p>
-                <Link href="/tierversicherungen">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    ALLE TIERARZTKOSTEN ABSICHERN
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Kundenbewertungen */}
-          <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Kundenbewertungen zu SmartFinanz</h2>
-              <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-                  <CardHeader className="pb-4 flex-shrink-0">
-                    <div className="flex items-center space-x-4">
-                      <Image
-                        src="/images/kundenbewertungen/anna.jpg"
-                        alt="Kundenbewertung von Anna, 30"
-                        width={80}
-                        height={80}
-                        loading="lazy"
-                        className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
-                      />
-                      <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Anna, 30</CardTitle>
-                        <div className="flex items-center mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Günstige Kfz-Versicherung mit 300€ Ersparnis</h3>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich habe eine günstige Kfz-Versicherung gefunden und 300€ im Jahr gespart! Der Vergleich war super einfach und schnell!"
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-                  <CardHeader className="pb-4 flex-shrink-0">
-                    <div className="flex items-center space-x-4">
-                      <Image
-                        src="/images/kundenbewertungen/markus.jpg"
-                        alt="Kundenbewertung von Aaron, 42"
-                        width={80}
-                        height={80}
-                        loading="lazy"
-                        className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
-                      />
-                      <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Stefan, 42</CardTitle>
-                        <div className="flex items-center mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`h-4 w-4 sm:h-5 w-5 ${i < 4 ? "text-yellow-400 fill-current" : "text-gray-300"}`} aria-hidden="true" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Beste Tierversicherung für Hunde</h3>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Unser-vergleichsportal hat uns die günstigste Tierversicherung für unsere Hunde rausgesucht. Jetzt sind wir beruhigt, dass Dana & Paco bestens versorgt sind!"
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-                  <CardHeader className="pb-4 flex-shrink-0">
-                    <div className="flex items-center space-x-4">
-                      <Image
-                        src="/images/kundenbewertungen/helga.jpg"
-                        alt="Kundenbewertung von Helga, 60"
-                        width={80}
-                        height={80}
-                        loading="lazy"
-                        className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
-                      />
-                      <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Helga, 60</CardTitle>
-                        <div className="flex items-center mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Sicheres Banking mit Bonus</h3>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Ich war skeptisch, aber der Vergleich hat mir super schnell ein passendes Konto empfohlen. Alles war sehr einfach, und ich habe 50€ Bonus erhalten!"
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-                  <CardHeader className="pb-4 flex-shrink-0">
-                    <div className="flex items-center space-x-4">
-                      <Image
-                        src="/images/kundenbewertungen/lukas.jpg"
-                        alt="Kundenbewertung von Lukas, 29"
-                        width={80}
-                        height={80}
-                        loading="lazy"
-                        className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover flex-shrink-0 border-0"
-                      />
-                      <div className="flex-grow min-w-0">
-                        <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 truncate">Lukas, 29</CardTitle>
-                        <div className="flex items-center mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 sm:h-5 w-5 text-yellow-400 fill-current" aria-hidden="true" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">Kostengünstige Trading-Plattform finden</h3>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                      "Als Anfänger im Krypto-Handel habe Ich mir die Trading Tips angeschaut. Durch die Infos und Blogbeiträge habe Ich viel gelernt und freue mich jetzt über den gestiegenen Bitcoin Kurs!"
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Entfernt: Zweites JSON-LD-Bündel (WebSite + AggregateRating + Review + FAQ) hier im Body, um Duplikate/Overuse zu vermeiden */}
-            </div>
-          </section>
-
-          {/* Schlanker CTA-Block unten ohne Buttons */}
-          <section className="py-12 sm:py-16 bg-green-600 text-white">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Jetzt Finanzprodukte vergleichen und sparen</h2>
-              <p className="mt-4 text-green-100 text-sm sm:text-base">Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.</p>
-            </div>
-          </section>
-
-          {/* FAQ Section für bessere SEO */}
-          <section className="py-12 sm:py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Häufige Fragen zum Finanzvergleich</h2>
-              <div className="max-w-4xl mx-auto space-y-6">
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie funktioniert der Finanzvergleich bei SmartFinanz?</h3>
-                  <p className="text-gray-700">Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Ist der Finanzvergleich bei SmartFinanz kostenlos?</h3>
-                  <p className="text-gray-700">Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von unseren Partnern, aber dies beeinflusst niemals Ihre Kosten oder unsere Bewertungen.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?</h3>
-                  <p className="text-gray-700">Wir vergleichen Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL-Tarife, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900">Wie schnell bekomme ich die Empfehlungen bei SmartFinanz?</h3>
-                  <p className="text-gray-700">Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen von unseren Experten.</p>
-                </div>
-              </div>
-            </div>
-          </section>
- {/* Footer mit LinkedIn-Link */}
-          <footer className="bg-gray-900 text-white py-8 sm:py-12">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
-                <div className="col-span-2 md:col-span-1">
-                  <div className="flex flex-col items-start mb-4">
-                    <SmartFinanzLogo className="text-xl" />
-                    <a
-                      href="https://www.linkedin.com/in/unservergleichsportalde"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="mt-4 inline-flex items-center bg-green-600 text-white font-medium text-sm sm:text-base px-4 py-2 rounded-lg transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                      aria-label="Besuchen Sie unser LinkedIn-Profil"
-                    >
-                      <Linkedin className="h-5 w-5 mr-2" aria-hidden="true" />
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                    <li>
-                      <Link
-                        href="/banking"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Banking"
-                      >
-                        Banking
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/tierversicherungen"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Haustierversicherung"
-                      >
-                        Haustierversicherung
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/trading"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Trading"
-                      >
-                        Trading
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/versicherungen"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Versicherungen"
-                      >
-                        Versicherungen
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
-                  <div className="grid grid-cols-2 gap-4">
-                    <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                      <li>
-                        <a
-                          href="https://www.c24n.de/ducwCtq"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="DSL Vergleich (externer Link)"
-                        >
-                          DSL
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.c24n.de/Uxudvkj"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Gasvergleich (externer Link)"
-                        >
-                          Gas
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.c24n.de/5R17qbN"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Handytarif vergleichen (externer Link)"
-                        >
-                          Handytarif
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.c24n.de/RYXPGyh"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Kreditkarten vergleichen (externer Link)"
-                        >
-                          Kreditkarte
-                        </a>
-                      </li>
-                    </ul>
-                    <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                      <li>
-                        <a
-                          href="https://www.c24n.de/FZ9nd0R"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Mietwagen vergleichen (externer Link)"
-                        >
-                          Mietwagen
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.c24n.de/zxy0WKh"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Ökostrom vergleichen (externer Link)"
-                        >
-                          Ökostrom
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.c24n.de/EieKR0E"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Reise vergleichen (externer Link)"
-                        >
-                          Reise
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.c24n.de/RYXPGyh"
-                          target="_blank"
-                          rel="noopener sponsored noreferrer nofollow"
-                          className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Stromvergleich (externer Link)"
-                        >
-                          Strom
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                    <li>
-                      <Link
-                        href="/karriere"
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Karriere"
-                      >
-                        Karriere
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/kontakt"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Kontakt"
-                      >
-                        Kontakt
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/partnerprogramme"
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Partnerprogramm"
-                      >
-                        Partnerprogramm
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/ueber-uns"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Über uns"
-                      >
-                        Über uns
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                    <li>
-                      <Link
-                        href="/agb"
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="AGB"
-                      >
-                        AGB
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/cookie-richtlinie"
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Cookie-Richtlinie"
-                      >
-                        Cookie-Richtlinie
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/datenschutz"
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Datenschutz"
-                      >
-                        Datenschutz
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/impressum"
-                        rel="nofollow"
-                        className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                        aria-label="Impressum"
-                      >
-                        Impressum
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-                <p className="text-sm sm:text-base text-gray-400 mb-4">
-                  © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-                </p>
-                <Link href="/" aria-label="Zurück zur Startseite">
-                  <Button
-                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                  >
-                    Zur Startseite
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </footer>
+          </div>
         </div>
-      </main>
-    </>
+      </section>
+
+      {/* Der Rest des Codes bleibt unverändert */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">So finden Sie das beste Girokonto und den optimalen Kredit</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Vergleich von Finanzprodukten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nutzen Sie unseren kostenlosen Vergleich, um die besten Girokonten und Kredite zu finden. Über 300 Angebote von Top-Unternehmen stehen Ihnen zur Verfügung.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Kundenbewertungen prüfen</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Unsere Anbieter haben Top-Bewertungen (z. B. eKomi 4,9/5). Vertrauen Sie auch auf verifizierte Kundenmeinungen für Ihre Entscheidung.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Konditionen analysieren</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Achten Sie auf kostenlose Girokonten, Schufa-neutrale Kreditanfragen und flexible Rückzahlungsoptionen.</li>
+            </ul>
+            <h2 className="text-3xl font-bold mb-6">Kostenloses Girokonto Tips zur Suche</h2>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Kriterien für ein kostenloses Girokonto</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ein wirklich kostenloses Girokonto verzichtet auf Kontoführungsgebühren, Gebühren für die EC-Karte und bietet kostenlose Überweisungen. Achten Sie auf versteckte Kosten bei Bargeldabhebungen oder Auslandsüberweisungen.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Girokonten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die empfohlenen kostenlosen Girokonten sparen Ihnen bis zu 200€ jährlich im Vergleich zu Filialbanken. Zusätzlich locken viele Anbieter mit Neukunden-Boni von bis zu 120€.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Eigenschaften der Testsieger-Girokonten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bedingungslos kostenlose Kontoführung</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose EC- und Kreditkarte</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Bargeldabheben deutschlandweit</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App mit allen Funktionen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% p.a.</li>
+            </ul>
+            <div className="mt-8 mb-12 text-center">
+              <a 
+                href="https://www.tarifcheck.com/W1pi1Fx" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  GIROKONTEN VERGLEICHEN
+                </Button>
+              </a>
+            </div>
+            <h2 className="text-3xl font-bold mb-6">Informationen über das Tagesgeldkonto als sichere Kapitalanlage</h2>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen 2025</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die verglichenen Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Top-Tagesgeldkonten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 4,00% Zinsen für Neukunden</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 100.000€ Einlagensicherung pro Bank</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Täglich verfügbar, keine Kündigung nötig</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise zu Tagesgeld</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsbindung oft nur 3–12 Monate</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Danach meist niedrigere Bestandskundenzinsen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßiger Vergleich lohnt sich</li>
+            </ul>
+            <div className="mt-8 mb-12 text-center">
+              <a 
+                href="https://www.awin1.com/awclick.php?gid=450648&mid=11329&awinaffid=2524533&linkid=3268909&clickref=" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  TAGESGELD KONTO ERÖFFNEN
+                </Button>
+              </a>
+            </div>
+            <div className="flex flex-col lg:flex-row items-start gap-8 mb-12">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold mb-6">Günstigen Kredit online berechnen</h2>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Optimaler Ratenkredit für Ihre Wünsche</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Für Anschaffungen von 1.000€ bis 120.000€</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Zinsen ab 0,68% p.a. bei bester Bonität</li>
+                </ul>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Schneller Sofortkredit</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schnelle Auszahlung binnen 24h möglich</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Digitaler Abschluss mit VideoIdent-Verfahren</li>
+                </ul>
+                <h3 className="text-lg font-bold mb-2 text-green-600">Umschuldung für Zinsersparnis</h3>
+                <ul className="list-none text-base mb-6">
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bestehende Kredite zusammenfassen</li>
+                  <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bis zu 40% der Zinsen sparen</li>
+                </ul>
+              </div>
+              <div className="flex-1 w-full">
+                <Script
+                  src="https://frame.finanzcheck.de/main.js"
+                  strategy="afterInteractive"
+                  onLoad={() => handleScriptLoad("main", setScriptsLoaded)}
+                  onError={() => handleScriptError("main")}
+                />
+                <Script
+                  src="https://widget.finanzcheck.de/embedTeal.js"
+                  strategy="afterInteractive"
+                  onLoad={() => handleScriptLoad("embedTeal", setScriptsLoaded)}
+                  onError={() => handleScriptError("embedTeal")}
+                />
+                <div
+                  id="teal-embed-iframe"
+                  className="w-full min-h-[600px] bg-white"
+                  style={{ minHeight: "600px" }}
+                ></div>
+                {scriptsLoaded.main && scriptsLoaded.embedTeal && (
+                  <Script id="teal-embed-script" strategy="afterInteractive">
+                    {`
+                      try {
+                        teal_embed_iframe({
+                          "advertisementId": "WqzbMCwyzPe8",
+                          "elementId": "teal-embed-iframe",
+                          "data": {
+                            "amount": 30000,
+                            "term": 84,
+                            "purpose": "OTHER",
+                            "formConfig": "ddf",
+                            "palette": {
+                              "primary": {
+                                "light": "#E8EEF5",
+                                "main": "#26a269",
+                                "dark": "#26a269",
+                                "contrastText": "#fff"
+                              },
+                              "secondary": {
+                                "light": "#FCE9CD",
+                                "main": "#26a269",
+                                "dark": "#26a269",
+                                "contrastText": "rgba(0, 0, 0, 0.87)"
+                              }
+                            }
+                          },
+                          "entryPoint": "first",
+                          "version": "v2"
+                        });
+                        console.log("teal_embed_iframe initialized successfully");
+                      } catch (error) {
+                        console.error("Error initializing teal_embed_iframe:", error);
+                      }
+                    `}
+                  </Script>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Top-Empfehlungen: Alle Banken im Vergleich 10/2025</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {providerData.map((provider) => (
+              <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
+                {(provider.name === "Tarifcheck.de" || provider.name === "CHECK24" || provider.name === "DKB" || provider.name === "Credimaxx" || provider.name === "auxmoney" || provider.name === "Verivox" || provider.name === "Smava" || provider.name === "FINANZCHECK.de") && (
+                  <Badge className="absolute -top-2 -right-2 bg-yellow-500 text-xs sm:text-sm transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-yellow-500 hover:to-yellow-600 z-10">
+                    Top Empfehlung
+                  </Badge>
+                )}
+                <CardHeader className="text-center pb-2">
+                  <div className="text-3xl mb-2">{provider.logo}</div>
+                  <CardTitle className="text-xl font-bold">{provider.name}</CardTitle>
+                  <div className="flex items-center justify-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`h-4 w-4 ${i < Math.floor(provider.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                      />
+                    ))}
+                    <span className="ml-2 text-base font-medium text-gray-600">{provider.rating}</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex flex-col flex-1">
+                  <div className="text-center border-b pb-2 mb-4">
+                    <p className="text-xl font-bold text-green-600">{provider.price}</p>
+                    <Badge variant="outline" className="mt-1 border-green-200 text-xs sm:text-sm text-green-700">{provider.bonus}</Badge>
+                  </div>
+                  <ul className="space-y-1 flex-1 overflow-auto">
+                    {provider.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-base">
+                        <Check className="mr-2 h-4 w-4 text-green-600" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a 
+                    href={provider.url} 
+                    target={provider.url.startsWith('http') ? '_blank' : '_self'}
+                    rel={provider.url.startsWith('http') ? 'sponsored' : undefined}
+                  >
+                    <Button className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-auto">
+                      ZUM ANBIETER UND SPAREN*
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-8 text-center text-base text-gray-600 p-4">
+            <p>
+              *Wir erhalten eine Provision für Käufe über diese Links.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Baufinanzierung für Ihr Eigenheim</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Aspekte der Baufinanzierung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Eigenkapital:</strong> Mindestens 20% der Kaufsumme empfohlen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Zinsbindung:</strong> 10–15 Jahre für Planungssicherheit</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Tilgung:</strong> Initial 2–4% für zügige Rückzahlung</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Nebenkosten:</strong> 10–15% zusätzlich zur Kaufsumme</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Sondertilgungen:</strong> Jährlich 5–10% kostenfrei möglich</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Bauzinsen 2025</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die Zinsprognose für 2025 zeigt moderate Entwicklungen bei Bauzinsen. Nutzen Sie die aktuell noch günstigen Konditionen für Ihre Finanzierung.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Spartipp für Baufinanzierung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schon 0,1% Zinsunterschied sparen bei 300.000€ über 20 Jahre etwa 4.800€! Vergleichen Sie daher unbedingt mehrere Angebote.</li>
+            </ul>
+            <div className="mt-8 mb-10 text-center">
+              <a 
+                href="https://www.tarifcheck.com/gH6DahL" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  JETZT BAUFINANZIERUNGEN VERGLEICHEN
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Online Banking: Sicher und bequem</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Kontoeröffnung online</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Girokonto online in 5 Minuten beantragen. VideoIdent-Verfahren macht Postweg überflüssig – alles bequem von zu Hause.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Mobile Banking App</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Mobile Banking App installieren. Alle Bankgeschäfte jederzeit und überall per Smartphone erledigen.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Sicheres Login</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Login mit PIN oder Fingerabdruck. Alle Transaktionen durch TAN-Verfahren oder biometrische Freigabe geschützt.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Bankgeschäfte online verwalten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Überweisungen, Daueraufträge, Kontostände prüfen – alles 24/7 verfügbar ohne Öffnungszeiten.</li>
+            </ul>
+            <h2 className="text-3xl font-bold mb-6">Häufige Fragen zum Online Banking</h2>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wie sicher ist Online Banking?</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ja, moderne Online Banking Systeme verwenden 256-Bit-SSL-Verschlüsselung und Zwei-Faktor-Authentifizierung. Banken sind durch Einlagensicherung bis 100.000€ geschützt.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Welche TAN-Verfahren gibt es?</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> pushTAN per App, SMS-TAN oder chipTAN mit Lesegerät. Moderne Verfahren wie Fingerabdruck oder Face-ID ersetzen zunehmend klassische TANs.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Können alle Bankgeschäfte online erledigt werden?</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 95% aller Bankgeschäfte sind online möglich: Überweisungen, Daueraufträge, Kontoeröffnung, Kreditanträge. Nur wenige Services benötigen noch Filialbesuch.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Was kostet Online Banking?</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei den meisten Direktbanken ist Online Banking komplett kostenlos. Auch viele Filialbanken bieten Online Services ohne Extragebühren an.</li>
+            </ul>
+            <div className="mt-8 mb-10 text-center">
+              <a 
+                href="https://www.tarifcheck.com/W1pi1Fx" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  JETZT ONLINE-BANKING BEGINNEN
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kredit umschulden und Depot eröffnen</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Kredit umschulden für Ersparnisse</h3>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wann lohnt sich eine Umschuldung?</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei Zinsdifferenz von über 1% oder mehreren laufenden Krediten. Besonders alte Kredite mit hohen Zinsen sollten abgelöst werden.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Ersparnis durch Umschuldung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> <strong>Bis zu 40% der Zinskosten</strong> bei geschickter Umschuldung. Bei 20.000€ Kredit können das über 2.000€ sein.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Tipp für Umschuldung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Schufa-neutrale Anfrage ermöglicht Vergleich ohne Bonitäts-Verschlechterung!</li>
+            </ul>
+            
+            {/* Zweiter Rechner für Umschuldung */}
+            <div className="mt-8 mb-12 text-center">
+              <h2 className="text-3xl font-bold mb-6">Umschuldung berechnen: So sparen Sie bis zu 40% Zinsen</h2>
+              <Script
+                src="https://frame.finanzcheck.de/main.js"
+                strategy="afterInteractive"
+                onLoad={() => handleScriptLoad("main", setSecondScriptsLoaded)}
+                onError={() => handleScriptError("main")}
+              />
+              <Script
+                src="https://widget.finanzcheck.de/embedTeal.js"
+                strategy="afterInteractive"
+                onLoad={() => handleScriptLoad("embedTeal", setSecondScriptsLoaded)}
+                onError={() => handleScriptError("embedTeal")}
+              />
+              <div
+                id="teal-embed-iframe2"
+                className="w-full min-h-[600px] bg-white mx-auto"
+                style={{ minHeight: "600px", maxWidth: "800px" }}
+              ></div>
+              {secondScriptsLoaded.main && secondScriptsLoaded.embedTeal && (
+                <Script id="teal-embed-script2" strategy="afterInteractive">
+                  {`
+                    try {
+                      teal_embed_iframe({
+                        "advertisementId": "WqzbMCwyzPe8",
+                        "elementId": "teal-embed-iframe2",
+                        "data": {
+                          "amount": 1000,
+                          "term": 96,
+                          "purpose": "REFINANCING",
+                          "formConfig": "ddf",
+                          "palette": {
+                            "primary": {
+                              "light": "#E8EEF5",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "#fff"
+                            },
+                            "secondary": {
+                              "light": "#FCE9CD",
+                              "main": "#26a269",
+                              "dark": "#26a269",
+                              "contrastText": "rgba(0, 0, 0, 0.87)"
+                            }
+                          }
+                        },
+                        "entryPoint": "first",
+                        "version": "v2",
+                        "imodEntryPoint": "banklist"
+                      });
+                      console.log("Second teal_embed_iframe initialized successfully");
+                    } catch (error) {
+                      console.error("Error initializing second teal_embed_iframe:", error);
+                    }
+                  `}
+                </Script>
+              )}
+            </div>
+
+            <h3 className="text-lg font-bold mb-2 text-green-600">Depot für langfristigen Vermögensaufbau</h3>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Vorteile eines Depots</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Aktien und ETFs bieten langfristig höhere Renditen als Tagesgeld. Schon ab 25€ monatlich können Sie in ETF-Sparpläne investieren.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Kostenlose Depotführung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Online-Broker bieten <strong>kostenlose Depotführung</strong> und günstige ETF-Sparpläne ab 0€ Ordergebühr.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Wichtige Hinweise für Depots</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Nur investieren, was Sie langfristig entbehren können. Risiko streuen!</li>
+            </ul>
+            <div className="mt-8 mb-10 text-center">
+              <a 
+                href="/trading" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  DAS BESTE DEPOT FINDEN
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Kostenlose Kreditkarten im Vergleich 2025</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Beste kostenlose Kreditkarten finden</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eine gute Kreditkarte sollte keine Jahresgebühr kosten und trotzdem alle wichtigen Features bieten. Hier finden Sie die besten kostenlosen Kreditkarten mit attraktiven Zusatzleistungen.</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Klassische Visa/Mastercard ohne Gebühren</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Weltweit akzeptiert</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlose Bargeldabhebung im Ausland</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Online-Shopping ohne Extragebühren</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Reiseversicherungen inklusive</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> 0€ Jahresgebühr dauerhaft</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Moderne digitale Kreditkarten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Apple Pay / Google Pay ready</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Echtzeit-Benachrichtigungen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Ausgabenkontrolle per App</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Virtuelle Kartennummern</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenlos + Cashback möglich</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Reise- und Bonuskarten</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Meilen oder Punkte sammeln</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Lounge-Zugang an Flughäfen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Umfassende Reiseversicherung</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Priority Pass inklusive</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Viele Premium-Features ohne Zusatzkosten</li>
+            </ul>
+            <div className="mt-8 mb-12 text-center">
+              <a 
+                href="https://www.tarifcheck.com/NMXe4cX" 
+                target="_blank" 
+                rel="sponsored"
+              >
+                <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  ALLE KREDITKARTEN IM VERGLEICH
+                </Button>
+              </a>
+            </div>
+            <Card className="mt-8 bg-orange-50 border-2 border-orange-200 rounded-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-orange-800">Kreditkarten-Fallen vermeiden</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-6 lg:grid-cols-2">
+                  <div>
+                    <h3 className="text-lg font-bold mb-2 text-green-600">Versteckte Kosten vermeiden</h3>
+                    <ul className="list-none text-base space-y-1">
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Fremdwährungsgebühren (oft 1–2%)</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bargeldgebühren auch im Inland</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Jahresgebühr ab dem 2. Jahr</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Hohe Sollzinsen bei Teilzahlung</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-2 text-green-600">Smarte Kreditkartennutzung</h3>
+                    <ul className="list-none text-base space-y-1">
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Immer per Lastschrift vollständig begleichen</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditrahmen nicht als Kredit nutzen</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bei Auslandsreisen Geld sparen</li>
+                      <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Bonusprogramme gezielt nutzen</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-green-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Jetzt Finanzprodukte vergleichen und sparen</h2>
+            <p className="text-sm sm:text-base">
+              Schnell, sicher & kostenlos – mit nur wenigen Klicks zum besten Angebot.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Checkliste für Ihre Finanzplanung</h2>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Grundausstattung für Finanzen</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Girokonto für Alltag</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Tagesgeldkonto für Notreserve (3–6 Monatsgehälter)</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditkarte ohne Jahresgebühr für Reisen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% vereinbaren</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Vermögensaufbau und Absicherung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> ETF-Sparplan für langfristigen Vermögensaufbau</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Depot mit kostenlosen ETF-Sparplänen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Alte Kredite auf bessere Konditionen prüfen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßig Konditionen vergleichen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<footer className="bg-gray-900 text-white py-8 sm:py-12">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
+      <div className="col-span-2 md:col-span-1">
+        <div className="flex flex-col items-start mb-4">
+          <SmartFinanzLogo className="text-xl" />
+          <a
+            href="https://www.linkedin.com/in/unservergleichsportalde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4"
+          >
+            <Button
+              className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              aria-label="Besuchen Sie unser LinkedIn-Profil (externer Link)"
+            >
+              <Linkedin className="mr-2 h-4 w-4" />
+              LinkedIn
+            </Button>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link
+              href="/banking"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Banking"
+            >
+              Banking
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/tierversicherungen"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Haustierversicherung"
+            >
+              Haustierversicherung
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/trading"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Trading"
+            >
+              Trading
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/versicherungen"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Versicherungen"
+            >
+              Versicherungen
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
+        <div className="grid grid-cols-2 gap-4">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+            <li>
+              <a
+                href="https://www.c24n.de/ducwCtq"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="DSL Vergleich (externer Link)"
+              >
+                DSL
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/Uxudvkj"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Gasvergleich (externer Link)"
+              >
+                Gas
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/5R17qbN"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Handytarif vergleichen (externer Link)"
+              >
+                Handytarif
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/RYXPGyh"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Kreditkarten vergleichen (externer Link)"
+              >
+                Kreditkarte
+              </a>
+            </li>
+          </ul>
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+            <li>
+              <a
+                href="https://www.c24n.de/FZ9nd0R"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Mietwagen vergleichen (externer Link)"
+              >
+                Mietwagen
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/zxy0WKh"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Ökostrom vergleichen (externer Link)"
+              >
+                Ökostrom
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/EieKR0E"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Reise vergleichen (externer Link)"
+              >
+                Reise
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/RYXPGyh"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Stromvergleich (externer Link)"
+              >
+                Strom
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link
+              href="/karriere"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Karriere"
+            >
+              Karriere
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/kontakt"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/partnerprogramme"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Partnerprogramm"
+            >
+              Partnerprogramm
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/ueber-uns"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Über uns"
+            >
+              Über uns
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link
+              href="/agb"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="AGB"
+            >
+              AGB
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/cookie-richtlinie"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Cookie-Richtlinie"
+            >
+              Cookie-Richtlinie
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/datenschutz"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Datenschutz"
+            >
+              Datenschutz
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/impressum"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Impressum"
+            >
+              Impressum
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+      <p className="text-sm sm:text-base text-gray-400 mb-4">
+        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+      </p>
+      <Link href="/" aria-label="Zurück zur Startseite">
+        <Button
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+        >
+          Zur Startseite
+        </Button>
+      </Link>
+    </div>
+  </div>
+</footer>
+    
+    </div>
   )
 }
