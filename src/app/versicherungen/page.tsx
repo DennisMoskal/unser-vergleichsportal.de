@@ -147,13 +147,12 @@ const Header: React.FC = () => {
               </div>
               <div>
                 <div className="text-center mt-4">
-                  <a href="/" onClick={() => setMobileMenuOpen(false)}>
-                    <Button
-                      className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    >
-                      Startseite
-                    </Button>
-                  </a>
+                  <Button
+                    className="w-auto bg-green-600 text-white font-medium text-base px-4 py-2 transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Startseite
+                  </Button>
                 </div>
               </div>
             </nav>
@@ -300,7 +299,7 @@ const providerData = [
       "Günstige Kfz-Versicherung ab 9,70€/Monat",
       "Bis zu 350€ Ersparnis beim Vergleich",
       "91% Weiterempfehlungsrate von Kunden",
-      "24h Notfall-Hotline für schnelle Unterstützung",
+      "24h Notfall-Hotline für schnhelle Unterstützung",
       "Schufa-neutrale Tarifberechnung",
       "Einfacher Online-Abschluss in 3 Minuten",
       "Ausgezeichnet als 'Fairer Versicherer' (Focus Money)"
@@ -388,7 +387,7 @@ const providerData = [
       "Kostenlose Beratung für Umschuldung und Finanzoptimierung"
     ],
     price: "100% kostenlos",
-    bonus: "Bis zu 300€ Rückerstattung",
+    bonus: "Bis zu 300€ Rückerstatting",
     logo: "⚖️",
     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
     metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
@@ -408,7 +407,7 @@ const providerData = [
       "Kostenloser Datenleck-Check für Ihre Datensicherheit",
       "Über 65 Jahre Erfahrung als Rechtsschutz-Spezialist"
     ],
-    price: "12,50€/Monat",
+    price: "ab 12,50€/Monat",
     bonus: "Bis zu 70€ Empfehlungsbonus",
     logo: "🛡️",
     url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
@@ -837,10 +836,9 @@ export default function Versicherungen() {
                   <a
                     href={provider.url}
                     target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                    rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}
-                    className="mt-auto"
+                    rel={provider.url.startsWith("http") ? "sponsored" : undefined}
                   >
-                    <Button className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                       ZUM ANBIETER UND SPAREN*
                     </Button>
                   </a>
@@ -886,7 +884,7 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Rabatte für sichere Fahrer und E-Autos
+                Telematik-Tarife für junge Fahrer mit bis zu 30% Ersparnis
               </li>
             </ul>
             
@@ -923,11 +921,11 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Weltweiter Schutz für Reisen
+                Weltweiter Schutz auch im Auslandsurlaub
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Optionaler Schutz für Drohnen oder E-Bikes
+                Erweiterte Deckung für Mietsachschäden und Schäden am Arbeitsplatz
               </li>
             </ul>
 
@@ -952,18 +950,18 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schutz für Wertsachen und Elektronik
+                Erweiterter Schutz für teure Einzelstücke wie Schmuck oder Kunst
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Schnelle Schadenmeldung per App
+                Außenversicherung für Gartenmöbel und Fahrräder
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="noopener noreferrer sponsored">
+              <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -991,15 +989,15 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Nachversicherung bei Lebensereignissen (z.B. Geburt)
+                Kombinierbar mit Berufsunfähigkeitsversicherung
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Kombinierbar mit Berufsunfähigkeitsversicherung
+                Dynamische Erhöhung der Versicherungssumme möglich
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35735224T" target="_blank" rel="noopener noreferrer sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35735224T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -1007,10 +1005,11 @@ export default function Versicherungen() {
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Rechtsschutzversicherung für Miet-, Verkehrsstreitigkeiten und Selbstständige
+              Rechtsschutzversicherung für Miet- und Verkehrsstreitigkeiten
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten. Für Selbstständige bietet sie zusätzlichen Schutz bei beruflichen Rechtsstreitigkeiten, wie z.B. Vertragsstreitigkeiten mit Kunden oder Lieferanten.
+              Eine Rechtsschutzversicherung deckt Kosten für Anwälte und Gerichte in Streitfällen. Ideal für Arbeits-, Miet- oder Verkehrsstreitigkeiten. 
+              <strong> FÜR SELBSTSTÄNDIGE:</strong> Spezielle Tarife für Selbstständige und Freiberufler bieten erweiterten Schutz bei beruflichen Rechtsstreitigkeiten und Vertragsverletzungen.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
@@ -1027,57 +1026,56 @@ export default function Versicherungen() {
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Spezielle Bausteine für Selbstständige (z.B. Vertragsrecht)
+                Spezialtarife für Selbstständige mit erweitertem Berufsrechtsschutz
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Online-Rechtsberatung für schnelle Hilfe
+                Familien- und Partnerschaftsrecht inklusive
               </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35220816T" target="_blank" rel="noopener noreferrer sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35220816T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
                 </Button>
               </a>
             </div>
 
+            {/* Neuer Abschnitt für Berufsunfähigkeitsversicherung */}
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Berufsunfähigkeitsversicherung für langfristige Absicherung
+              Berufsunfähigkeitsversicherung für finanzielle Absicherung
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Eine Berufsunfähigkeitsversicherung (BU) sichert Ihr Einkommen, wenn Sie aus gesundheitlichen Gründen Ihren Beruf nicht mehr ausüben können. Sie ist besonders wichtig für Selbstständige, Freiberufler und Berufe mit hohem körperlichen oder psychischen Risiko.
+              Eine Berufsunfähigkeitsversicherung schützt Ihr Einkommen, falls Sie Ihren Beruf aus gesundheitlichen Gründen nicht mehr ausüben können. 
+              Besonders wichtig für junge Berufstätige und Selbstständige ohne staatliche Absicherung.
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Monatliche Rentenzahlungen bei Berufsunfähigkeit
+                Monatliche Rente bei Berufsunfähigkeit
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Flexible Laufzeiten bis zum Rentenalter
+                Schutz bereits ab 50% Berufsunfähigkeit
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Absicherung auch bei psychischen Erkrankungen
+                Beitragsdynamik für inflationsgeschützte Leistungen
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Keine Gesundheitsprüfung bei niedrigen Summen
+                Verzicht auf abstrakte Verweisung in Top-Tarifen
               </li>
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
-                Nachversicherung bei Gehaltserhöhung möglich
+                Nachversicherungsgarantie bei Heirat oder Geburt
               </li>
             </ul>
-            <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Spartipp:</strong> Abschluss in jungen Jahren senkt die Beiträge erheblich. Kombinieren Sie mit einer Risikolebensversicherung für umfassenden Schutz.
-            </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="noopener noreferrer sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   BERUFSUNFÄHIGKEITSVERSICHERUNG VERGLEICHEN
                 </Button>
@@ -1133,7 +1131,7 @@ export default function Versicherungen() {
             </ul>
           </div>
           <div className="mt-8 text-center">
-            <a href="https://www.check24.de/versicherungen/" target="_blank" rel="noopener noreferrer sponsored">
+            <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
               <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 ALLE VERSICHERUNGEN IM ÜBERBLICK
               </Button>
