@@ -75,7 +75,7 @@ const Header: React.FC = () => {
                     { key: 'haustierversicherung', label: 'Haustierversicherung', url: '/tierversicherungen', isInternal: true },
                     { key: 'trading', label: 'Trading', url: '/trading', isInternal: true },
                     { key: 'versicherungen', label: 'Versicherungen', url: '/versicherungen', isInternal: true },
-                  ].map(({ key, label, url }) => (
+                  ].map(({ key, label, url, isInternal }) => (
                     <li key={key}>
                       <Link
                         href={url}
@@ -97,11 +97,11 @@ const Header: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq' },
-                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj' },
-                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN' },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh' },
-                    ].map(({ key, label, url }) => (
+                      { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
+                      { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
+                      { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -121,11 +121,11 @@ const Header: React.FC = () => {
                   </ul>
                   <ul className="flex flex-col gap-2 text-base">
                     {[
-                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R' },
-                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh' },
-                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E' },
-                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh' },
-                    ].map(({ key, label, url }) => (
+                      { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
+                      { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
+                      { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
+                      { key: 'strom', label: 'Strom', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                    ].map(({ key, label, url, isInternal }) => (
                       <li key={key}>
                         <a
                           href={url}
@@ -494,7 +494,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
-    url: "https://www.financeads.net/tc.php?t=78841C35719149T/",
+    url: "https://www.cosmosdirekt.de/versicherungen/",
     metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
     metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
@@ -833,16 +833,15 @@ export default function Versicherungen() {
                       </li>
                     ))}
                   </ul>
-                  <Button asChild className="w-full mt-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                    <a
-                      href={provider.url}
-                      target={provider.url.startsWith("http") ? "_blank" : "_self"}
-                      rel={provider.url.startsWith("http") ? "noopener noreferrer sponsored" : undefined}
-                      aria-label={`${provider.name} besuchen`}
-                    >
+                  <a
+                    href={provider.url}
+                    target={provider.url.startsWith("http") ? "_blank" : "_self"}
+                    rel={provider.url.startsWith("http") ? "sponsored" : undefined}
+                  >
+                    <Button className="w-full mt-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                       ZUM ANBIETER UND SPAREN*
-                    </a>
-                  </Button>
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -883,10 +882,6 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Flexible Zusatzbausteine (z. B. Mallorca-Police)
               </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Telematik-Tarife belohnen sicheres Fahren
-              </li>
             </ul>
             
             {/* Haftpflichtrechner mit optimierter Überschrift */}
@@ -920,22 +915,7 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Familienabsicherung inklusive
               </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Forderungsausfalldeckung (wenn der Schädiger nicht zahlen kann)
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Weltweiter Schutz auf Reisen
-              </li>
             </ul>
-            <div className="mt-6 mb-8 text-center">
-              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                <a href="https://a.partner-versicherung.de/click.php?partner_id=192394&ad_id=15&deep=hausratversicherung" target="_blank" rel="noopener noreferrer sponsored" aria-label="Hausratversicherung vergleichen (externer Link)">
-                  HAUSRATVERSICHERUNG VERGLEICHEN
-                </a>
-              </Button>
-            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Günstige Hausratversicherung für Mieter und Eigentümer
@@ -956,15 +936,17 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Fahrraddiebstahl optional einschließbar
               </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Unterversicherungsschutz durch korrekte Wohnfläche
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Außenversicherung (z. B. Diebstahl aus dem Auto)
-              </li>
             </ul>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
+            </p>
+            <div className="mt-6 mb-8 text-center">
+              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
+                  HAUSRATVERSICHERUNG VERGLEICHEN
+                </Button>
+              </a>
+            </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
               Risikolebensversicherung für junge Familien
@@ -985,21 +967,13 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Schneller Abschluss ohne Gesundheitsprüfung (bei kleinen Summen)
               </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Nachversicherungs-Garantie bei Lebensereignissen
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Optionale Verlängerung der Laufzeit ohne erneute Prüfung
-              </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                <a href="https://www.financeads.net/tc.php?t=78841C35735224T" target="_blank" rel="noopener noreferrer sponsored" aria-label="Risikolebensversicherung vergleichen (externer Link)">
+              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
 
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -1021,62 +995,16 @@ export default function Versicherungen() {
                 <Check className="mr-2 h-4 w-4 text-green-600" />
                 Schutz bei Mietstreitigkeiten oder Nachbarschaftsstreit
               </li>
-              {/* Zusatz-Mehrwert: Selbstständige */}
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Speziell für Selbstständige: Berufs- & Vertragsrechtsschutz (z. B. Honorar- und Lieferstreitigkeiten)
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Optionaler Steuer- & Sozial-Rechtsschutz (z. B. bei Betriebsprüfungen)
-              </li>
             </ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              <strong>Tipp für Selbstständige:</strong> Achten Sie auf Bausteine wie Firmenrechtsschutz, Spezial-Strafrechtsschutz und erweiterte Deckungssummen, damit geschäftliche Risiken vollständig abgedeckt sind.
+              <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Kombinieren Sie mit Haftpflicht für Rabatte.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                <a href="https://www.financeads.net/tc.php?t=78841C35220816T" target="_blank" rel="noopener noreferrer sponsored" aria-label="Rechtsschutzversicherung vergleichen (externer Link)">
+              <a href="https://www.arag.de/rechtsschutzversicherung/" target="_blank" rel="sponsored">
+                <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RECHTSSCHUTZVERSICHERUNG VERGLEICHEN
-                </a>
-              </Button>
-            </div>
-
-            {/* Neuer Abschnitt: Berufsunfähigkeitsversicherung */}
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
-              Berufsunfähigkeitsversicherung (BU): Einkommensschutz für den Ernstfall
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Die BU sichert Ihr Einkommen ab, wenn Sie Ihren Beruf krankheits- oder unfallbedingt voraussichtlich dauerhaft nicht mehr ausüben können.
-            </p>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Absicherung der individuellen <em>zuletzt ausgeübten</em> Tätigkeit (passgenauer Schutz)
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Verzicht auf abstrakte Verweisung bei hochwertigen Tarifen
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Dynamik-Optionen zum Inflationsausgleich der BU-Rente
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Nachversicherungs-Garantien (z. B. Heirat, Hauskauf, Kinder) ohne neue Gesundheitsprüfung
-              </li>
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Start-/Azubi-Tarife mit günstigen Einstiegsbeiträgen für junge Berufseinsteiger
-              </li>
-            </ul>
-            <div className="mt-6 mb-8 text-center">
-              <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-                <a href="https://www.financeads.net/tc.php?t=78841C35719044T" target="_blank" rel="noopener noreferrer sponsored" aria-label="Berufsunfähigkeitsversicherung vergleichen (externer Link)">
-                  BERUFSUNFÄHIGKEITSVERSICHERUNG VERGLEICHEN
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1128,11 +1056,11 @@ export default function Versicherungen() {
             </ul>
           </div>
           <div className="mt-8 text-center">
-            <Button asChild className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-              <a href="https://www.check24.de/versicherungen/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Alle Versicherungen im Überblick (externer Link)">
+            <a href="https://www.check24.de/versicherungen/" target="_blank" rel="sponsored">
+              <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                 ALLE VERSICHERUNGEN IM ÜBERBLICK
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -1394,11 +1322,13 @@ export default function Versicherungen() {
       <p className="text-sm sm:text-base text-gray-400 mb-4">
         © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
-      <Button asChild className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
-        <Link href="/" aria-label="Zurück zur Startseite">
+      <Link href="/" aria-label="Zurück zur Startseite">
+        <Button 
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+        >
           Zur Startseite
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </div>
   </div>
 </footer>
