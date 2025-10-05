@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
-import { headers } from "next/headers";
+import CanonicalTag from "@/components/CanonicalTag";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,62 +18,48 @@ const geistMono = Geist_Mono({
 // Bevorzugte Domain - IMMER ohne www und mit https
 const PREFERRED_DOMAIN = "https://unser-vergleichsportal.de";
 
-// Dynamische Metadata-Generierung für jede Seite
-export async function generateMetadata(): Promise<Metadata> {
-  const headersList = await headers();
-  
-  // Versuche verschiedene Header-Quellen für den Pfad
-  const pathname = headersList.get("x-invoke-path") || "/";
-  
-  // Bereinige den Pfad: entferne Query-Parameter und Hashes
-  const cleanPathname = pathname.split("?")[0].split("#")[0];
-  
-  // Erstelle die Canonical URL - IMMER mit PREFERRED_DOMAIN (ohne www)
-  // Dies stellt sicher, dass selbst wenn die Seite über www aufgerufen wird,
-  // der Canonical immer auf die nicht-www Version zeigt
-  const canonicalUrl = `${PREFERRED_DOMAIN}${cleanPathname}`;
-  
-  return {
+// Statische Metadata für das Root Layout
+// Der Canonical wird automatisch für die Homepage gesetzt
+export const metadata: Metadata = {
+  title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
+  description:
+    "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
+  metadataBase: new URL(PREFERRED_DOMAIN),
+  alternates: {
+    canonical: PREFERRED_DOMAIN, // Canonical für die Homepage
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
     title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
     description:
       "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
-    metadataBase: new URL(PREFERRED_DOMAIN),
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    icons: {
-      icon: [
-        { url: "/favicon.svg", type: "image/svg+xml" },
-        { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
-        { url: "/favicon.ico", type: "image/x-icon" },
-      ],
-      apple: "/apple-touch-icon.png",
-    },
-    openGraph: {
-      title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
-      description:
-        "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
-      url: canonicalUrl,
-      siteName: "SmartFinanz",
-      type: "website",
-      locale: "de_DE",
-      images: [
-        {
-          url: `${PREFERRED_DOMAIN}/images/og/unser-vergleichsportal-og-1200x630.jpg`,
-          width: 1200,
-          height: 627,
-          alt: "SmartFinanz - Transparenter Finanzvergleich",
-          type: "image/jpeg",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      site: "@unservergleich",
-      creator: "@unservergleich",
-    },
-  };
-}
+    url: PREFERRED_DOMAIN,
+    siteName: "SmartFinanz",
+    type: "website",
+    locale: "de_DE",
+    images: [
+      {
+        url: `${PREFERRED_DOMAIN}/images/og/unser-vergleichsportal-og-1200x630.jpg`,
+        width: 1200,
+        height: 627,
+        alt: "SmartFinanz - Transparenter Finanzvergleich",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@unservergleich",
+    creator: "@unservergleich",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -192,6 +178,7 @@ export default function RootLayout({
       </head>
 
       <body suppressHydrationWarning className="antialiased">
+        <CanonicalTag />
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
