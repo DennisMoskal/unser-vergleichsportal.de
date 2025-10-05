@@ -72,6 +72,21 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
+        {/* Canonical Tag wird per Script dynamisch gesetzt */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var canonical = document.createElement('link');
+                canonical.rel = 'canonical';
+                var path = window.location.pathname;
+                canonical.href = 'https://unser-vergleichsportal.de' + path;
+                document.head.appendChild(canonical);
+              })();
+            `,
+          }}
+        />
+        
         {/* Bing-Verifizierung für Yahoo/Bing */}
         <meta name="msvalidate.01" content="5201AAEF61BC57DF0BFD9257B6E8B51A" />
         
