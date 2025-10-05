@@ -1,9 +1,9 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,33 +15,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-/**
- * Bevorzugte (canonical) Domain — immer ohne "www" und mit https
- */
+// Bevorzugte Domain - IMMER ohne www und mit https
 const PREFERRED_DOMAIN = "https://unser-vergleichsportal.de";
 
-/**
- * Dynamisch erzeugte Metadata für jede Request (serverseitig)
- * -> erzeugt <link rel="canonical" href="..."> automatisch im Head
- * -> canonical enthält nur origin + pathname (keine Query-Strings, keine Hashes)
- */
-export async function generateMetadata({
-  request,
-}: {
-  request: Request;
-}): Promise<Metadata> {
-  const reqUrl = new URL(request.url);
-
-  // Erzeuge canonical auf Basis der bevorzugten Domain + pathname (ohne Query, ohne Hash)
-  const canonical = new URL(reqUrl.pathname, PREFERRED_DOMAIN).toString();
-
+// Dynamische Metadata-Generierung für jede Seite
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  
+  // Versuche verschiedene Header-Quellen für den Pfad
+  const pathname = headersList.get("x-invoke-path") || "/";
+  
+  // Bereinige den Pfad: entferne Query-Parameter und Hashes
+  const cleanPathname = pathname.split("?")[0].split("#")[0];
+  
+  // Erstelle die Canonical URL - IMMER mit PREFERRED_DOMAIN (ohne www)
+  // Dies stellt sicher, dass selbst wenn die Seite über www aufgerufen wird,
+  // der Canonical immer auf die nicht-www Version zeigt
+  const canonicalUrl = `${PREFERRED_DOMAIN}${cleanPathname}`;
+  
   return {
     title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
     description:
       "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
     metadataBase: new URL(PREFERRED_DOMAIN),
     alternates: {
-      canonical,
+      canonical: canonicalUrl,
     },
     icons: {
       icon: [
@@ -55,8 +53,10 @@ export async function generateMetadata({
       title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
       description:
         "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
-      url: canonical,
+      url: canonicalUrl,
       siteName: "SmartFinanz",
+      type: "website",
+      locale: "de_DE",
       images: [
         {
           url: `${PREFERRED_DOMAIN}/images/og/unser-vergleichsportal-og-1200x630.jpg`,
@@ -66,15 +66,9 @@ export async function generateMetadata({
           type: "image/jpeg",
         },
       ],
-      locale: "de_DE",
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
-      description:
-        "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
-      images: [`${PREFERRED_DOMAIN}/images/og/unser-vergleichsportal-og-1200x630.jpg`],
       site: "@unservergleich",
       creator: "@unservergleich",
     },
@@ -88,39 +82,48 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
-      {/* generateMetadata() erzeugt Title / OG / Canonical automatisch im Head */}
       <head>
-        {/* Verifizierungs-Meta Tags */}
+        {/* Bing-Verifizierung für Yahoo/Bing */}
         <meta name="msvalidate.01" content="5201AAEF61BC57DF0BFD9257B6E8B51A" />
+        
+        {/* Impact Site Verification Tag */}
+        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+        
+        {/* Google Verification Tag */}
         <meta
           name="google-site-verification"
           content="gSAsxWmOFdGA-fzAf37lxqrJyMnFL-TiscNlX5FRriI"
         />
-        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
         <meta name="verification" content="f97e97c1e8f6cf5274f5d6d0cc18505c" />
 
-        {/* Fallback / legacy icons */}
+        {/* Favicon für ältere Browser und Suchmaschinen */}
         <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+        
+        {/* Apple Touch Icon für iOS-Geräte */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-        {/* Sitemap (Crawler-Hilfe) */}
+        
+        {/* Sitemap für Suchmaschinen */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-        {/* Robots / Author */}
+        {/* Standard robots meta tag - kann von einzelnen Seiten überschrieben werden */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SmartFinanz" />
+        <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
 
-        {/* Open Graph Defaults (werden durch generateMetadata / OG überschrieben) */}
-        <meta property="og:site_name" content="SmartFinanz" />
-        <meta property="og:locale" content="de_DE" />
-
-        {/* Preloads / Prefetch Hints */}
+        {/* --- Preloads & Prefetch --- */}
         <link rel="preload" href="/logo.png" as="image" />
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
         <link rel="dns-prefetch" href="https://partner.e-recht24.de" />
+        <link rel="dns-prefetch" href="https://link-pso.xtb.com" />
+        <link rel="dns-prefetch" href="https://www.credimaxx.de" />
+        <link rel="dns-prefetch" href="https://www.hansemerkur.de" />
+        <link rel="dns-prefetch" href="https://www.check24.de" />
+        <link rel="dns-prefetch" href="https://private.vodafone-affiliate.de" />
+        <link rel="dns-prefetch" href="https://www.awin1.com" />
+        <link rel="dns-prefetch" href="https://www.freenet.de" />
 
-        {/* Google Analytics (gtag) - asynchron, mit anonymize option */}
+        {/* ---- Google Analytics Tag (gtag.js) ---- */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RG2RPFD2J9" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -131,7 +134,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Schema.org: Organization (JSON-LD) */}
+        {/* ---- Schema.org: Organization ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -141,6 +144,10 @@ export default function RootLayout({
               name: "SmartFinanz – unser-vergleichsportal.de",
               url: PREFERRED_DOMAIN,
               logo: `${PREFERRED_DOMAIN}/logo.png`,
+              brand: {
+                "@type": "Brand",
+                name: "unser-vergleichsportal.de",
+              },
               sameAs: [
                 "https://www.linkedin.com/in/unservergleichsportalde",
                 "https://x.com/unservergleich",
@@ -157,6 +164,30 @@ export default function RootLayout({
               ],
             }),
           }}
+        />
+
+        {/* ---- Schema.org: WebSite + SearchAction ---- */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "SmartFinanz",
+              url: PREFERRED_DOMAIN,
+              inLanguage: "de",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${PREFERRED_DOMAIN}/suche?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+
+        <Script
+          crossOrigin="anonymous"
+          src="//unpkg.com/same-runtime/dist/index.global.js"
         />
       </head>
 
