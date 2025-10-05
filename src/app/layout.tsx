@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
-import CanonicalTag from "@/components/CanonicalTag";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,14 +18,15 @@ const geistMono = Geist_Mono({
 const PREFERRED_DOMAIN = "https://unser-vergleichsportal.de";
 
 // Statische Metadata für das Root Layout
-// Der Canonical wird automatisch für die Homepage gesetzt
+// WICHTIG: metadataBase + alternates.canonical: './' 
+// erzeugt automatisch für JEDE Seite den korrekten Canonical Tag
 export const metadata: Metadata = {
+  metadataBase: new URL(PREFERRED_DOMAIN),
   title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
   description:
     "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
-  metadataBase: new URL(PREFERRED_DOMAIN),
   alternates: {
-    canonical: PREFERRED_DOMAIN, // Canonical für die Homepage
+    canonical: './', // WICHTIG: './' erzeugt automatisch canonical für jede Seite!
   },
   icons: {
     icon: [
@@ -40,13 +40,12 @@ export const metadata: Metadata = {
     title: "UNSER-VERGLEICHSPORTAL.DE | einfach sparen",
     description:
       "Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten.",
-    url: PREFERRED_DOMAIN,
     siteName: "SmartFinanz",
     type: "website",
     locale: "de_DE",
     images: [
       {
-        url: `${PREFERRED_DOMAIN}/images/og/unser-vergleichsportal-og-1200x630.jpg`,
+        url: "/images/og/unser-vergleichsportal-og-1200x630.jpg",
         width: 1200,
         height: 627,
         alt: "SmartFinanz - Transparenter Finanzvergleich",
@@ -58,6 +57,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@unservergleich",
     creator: "@unservergleich",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -91,8 +94,7 @@ export default function RootLayout({
         {/* Sitemap für Suchmaschinen */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-        {/* Standard robots meta tag - kann von einzelnen Seiten überschrieben werden */}
-        <meta name="robots" content="index, follow" />
+        {/* Robots / Author */}
         <meta name="author" content="SmartFinanz" />
         <meta name="revisit-after" content="7 days" />
         <meta charSet="UTF-8" />
@@ -178,7 +180,6 @@ export default function RootLayout({
       </head>
 
       <body suppressHydrationWarning className="antialiased">
-        <CanonicalTag />
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
