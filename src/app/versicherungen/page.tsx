@@ -555,7 +555,7 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-  <title>Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich</title>
+  <title>Beste Versicherung Oktober 2025 | Alle Versicherungen im Vergleich</title>
   <meta
     name="description"
     content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
