@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                       { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
                       { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
                       { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+                      { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.tarifcheck.com/NMXe4cX', isInternal: false },
                     ].map(({ key, label, url }) => (
                       <li key={key}>
                         <a
@@ -220,7 +220,7 @@ const Header: React.FC = () => {
               { key: 'dsl', label: 'DSL', url: 'https://www.c24n.de/ducwCtq', isInternal: false },
               { key: 'gas', label: 'Gas', url: 'https://www.c24n.de/Uxudvkj', isInternal: false },
               { key: 'handytarif', label: 'Handytarif', url: 'https://www.c24n.de/5R17qbN', isInternal: false },
-              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.c24n.de/RYXPGyh', isInternal: false },
+              { key: 'kreditkarte', label: 'Kreditkarte', url: 'https://www.tarifcheck.com/NMXe4cX', isInternal: false },
               { key: 'mietwagen', label: 'Mietwagen', url: 'https://www.c24n.de/FZ9nd0R', isInternal: false },
               { key: 'oekostrom', label: 'Ökostrom', url: 'https://www.c24n.de/zxy0WKh', isInternal: false },
               { key: 'reise', label: 'Reise', url: 'https://www.c24n.de/EieKR0E', isInternal: false },
@@ -979,7 +979,7 @@ export default function Tierversicherungen() {
                   </li>
                   <li>
                     <a
-                      href="https://www.c24n.de/RYXPGyh"
+                      href="https://www.tarifcheck.com/NMXe4cX"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
