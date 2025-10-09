@@ -1449,11 +1449,11 @@ export default function Home() {
                     <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                       <li>
                         <a
-                          href="https://www.c24n.de/FZ9nd0R"
+                          href="https://www.tarifcheck.com/NMXe4cX"
                           target="_blank"
                           rel="noopener sponsored noreferrer nofollow"
                           className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Mietwagen vergleichen (externer Link)"
+                          aria-label="Mietwagen vergleichen (externer Link)"https://www.tarifcheck.com/NMXe4cX
                         >
                           Mietwagen
                         </a>
