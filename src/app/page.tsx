@@ -1436,7 +1436,7 @@ export default function Home() {
                       </li>
                       <li>
                         <a
-                          href="https://www.c24n.de/RYXPGyh"
+                          href="https://www.tarifcheck.com/NMXe4cX"
                           target="_blank"
                           rel="noopener sponsored noreferrer nofollow"
                           className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
@@ -1453,7 +1453,7 @@ export default function Home() {
                           target="_blank"
                           rel="noopener sponsored noreferrer nofollow"
                           className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                          aria-label="Mietwagen vergleichen (externer Link)"https://www.tarifcheck.com/NMXe4cX
+                          aria-label="Mietwagen vergleichen (externer Link)"
                         >
                           Mietwagen
                         </a>
