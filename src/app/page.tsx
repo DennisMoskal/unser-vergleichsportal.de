@@ -733,7 +733,183 @@ export default function Home() {
               </div>
             </div>
           </section>
+{/* New Content Sections for Subpages */}
+          <section className="py-12 sm:py-16 bg-white" id="content-sections">
+            <div className="container mx-auto px-4">
+              {/* Banking Section */}
+              <div className="mb-12" id="banking-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking Anbieter</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Die Wahl der richtigen Bank entscheidet über Gebühren, Servicequalität und langfristige Zufriedenheit. Ein durchdachter Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
+                  <Link href="/banking" className="text-green-600 hover:underline">
+                    Banking-Vergleichsseite
+                  </Link>{" "}
+                  hilft Ihnen, das optimale Konto zu finden.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
+                <p className="mb-4 text-gray-700">
+                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
+                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    CHECK24
+                  </a>{" "}
+                  bieten bis zu 250€ Bonus.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
+                <p className="mb-4 text-gray-700">
+                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
+                    Tagesgeldkonten
+                  </Link>{" "}
+                  für maximale Erträge.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
+                <p className="mb-4 text-gray-700">
+                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
+                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Tarifcheck.de
+                  </a>{" "}
+                  bietet kostenlose Vergleiche.
+                </p>
+                <Link href="/banking">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    BANKING-PRODUKTE ENTDECKEN
+                  </Button>
+                </Link>
+              </div>
 
+              {/* Trading Section */}
+              <div className="mb-12" id="trading-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
+                  <Link href="/trading" className="text-green-600 hover:underline">
+                    Trading-Seite um das richtige Depot zu eröffnen
+                  </Link>
+                  . In wenigen Minuten können Sie per App mit Aktien handeln, Ihre finanzielle Zukunft planen oder in Bitcoin und andere Kryptowährungen investieren.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
+                <p className="mb-4 text-gray-700">
+                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
+                  <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
+                    Altersvorsorge-Optionen
+                  </Link>
+                  .
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
+                <p className="mb-4 text-gray-700">
+                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
+                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    XTB
+                  </a>{" "}
+                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rohstoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine Verzinsung des Guthabens.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
+                <p className="mb-4 text-gray-700">
+                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
+                  <Link href="/trading#krypto" className="text-green-600 hover:underline">
+                    sicheres Krypto-Trading
+                  </Link>
+                  . In unserer Trading-Rubrik finden Sie Informationen und Tipps, um sicher und gut vorbereitet mit dem Handel zu beginnen.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
+                <p className="mb-4 text-gray-700">
+                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
+                  <Link href="/trading#etfs" className="text-green-600 hover:underline">
+                    ETF-Sparplänen
+                  </Link>
+                  .
+                </p>
+                <Link href="/trading">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    JETZT VORSORGE PLANEN
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Versicherungen Section */}
+              <div className="mb-12" id="versicherungen-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
+                  <Link href="/versicherungen" className="text-green-600 hover:underline">
+                    Versicherungsseite
+                  </Link>
+                  , welche Policen unverzichtbar sind.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
+                <p className="mb-4 text-gray-700">
+                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
+                  <a
+                    href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
+                    target="_blank"
+                    rel="noopener sponsored noreferrer"
+                    className="text-green-600 hover:underline"
+                  >
+                    Verivox
+                  </a>
+                  .
+                </p>
+                <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
+                <p className="mb-4 text-gray-700">
+                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
+                  <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
+                    KFZ-Vergleich
+                  </Link>
+                  .
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Rechtschutzversicherung</h3>
+                <p className="mb-4 text-gray-700">
+                  Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung deckt Anwalts- und Gerichtskosten in privaten, beruflichen und Verkehrsstreitigkeiten. Besonders wichtig für Mieter und Selbstständige.
+                </p>
+                <Link href="/versicherungen">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    DEN BESTEN TARIF FINDEN
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Tierversicherungen Section */}
+              <div className="mb-12" id="tierversicherungen-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
+                  <Link href="/tierversicherungen" className="text-green-600 hover:underline">
+                    Tierversicherungsseite
+                  </Link>
+                  .
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
+                <p className="mb-4 text-gray-700">
+                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
+                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    HanseMerkur
+                  </a>{" "}
+                  decken bis zu 100% der Kosten ab.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
+                <p className="mb-4 text-gray-700">
+                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
+                  <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
+                    Tierversicherungen
+                  </Link>
+                  .
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
+                <p className="mb-4 text-gray-700">
+                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
+                  <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
+                    alternative Behandlungen
+                  </Link>
+                  .
+                </p>
+                <Link href="/tierversicherungen">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    ALLE TIERARZTKOSTEN ABSICHERN
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </section>
           {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
@@ -996,183 +1172,6 @@ export default function Home() {
                 <p className="mt-4">
                   *Wir erhalten eine Provision für Käufe über diese Links.
                 </p>
-              </div>
-            </div>
-          </section>
-{/* New Content Sections for Subpages */}
-          <section className="py-12 sm:py-16 bg-white" id="content-sections">
-            <div className="container mx-auto px-4">
-              {/* Banking Section */}
-              <div className="mb-12" id="banking-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">So finden Sie den richtigen Banking Anbieter</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Die Wahl der richtigen Bank entscheidet über Gebühren, Servicequalität und langfristige Zufriedenheit. Ein durchdachter Vergleich spart bares Geld und vermeidet versteckte Kosten. Unsere{" "}
-                  <Link href="/banking" className="text-green-600 hover:underline">
-                    Banking-Vergleichsseite
-                  </Link>{" "}
-                  hilft Ihnen, das optimale Konto zu finden.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
-                <p className="mb-4 text-gray-700">
-                  Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    CHECK24
-                  </a>{" "}
-                  bieten bis zu 250€ Bonus.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
-                <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
-                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
-                    Tagesgeldkonten
-                  </Link>{" "}
-                  für maximale Erträge.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
-                <p className="mb-4 text-gray-700">
-                  Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
-                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    Tarifcheck.de
-                  </a>{" "}
-                  bietet kostenlose Vergleiche.
-                </p>
-                <Link href="/banking">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    BANKING-PRODUKTE ENTDECKEN
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Trading Section */}
-              <div className="mb-12" id="trading-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Selber die Altersvorsorge in die Hand nehmen und Vermögen aufbauen</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Immer mehr Menschen bauen ihre Altersvorsorge aktiv auf. Moderne Trading-Plattformen und Neo-Broker machen den Einstieg einfach. Entdecken Sie passende Optionen und Trading Apps auf unserer{" "}
-                  <Link href="/trading" className="text-green-600 hover:underline">
-                    Trading-Seite um das richtige Depot zu eröffnen
-                  </Link>
-                  . In wenigen Minuten können Sie per App mit Aktien handeln, Ihre finanzielle Zukunft planen oder in Bitcoin und andere Kryptowährungen investieren.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Die Rentenlücke in Zahlen</h3>
-                <p className="mb-4 text-gray-700">
-                  Die gesetzliche Rente beträgt nur etwa 48% des letzten Nettoeinkommens. Für einen sorgenfreien Ruhestand ist private Vorsorge essenziell, um die Lücke von über 50% zu schließen. Informieren Sie sich über{" "}
-                  <Link href="/trading#rentenloch" className="text-green-600 hover:underline">
-                    Altersvorsorge-Optionen
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Welche Möglichkeiten gibt es?</h3>
-                <p className="mb-4 text-gray-700">
-                  Aktien, ETFs, Immobilienfonds, Kryptowährungen und Robo-Advisor bieten vielfältige Chancen. Diversifikation und Planung reduziert Risiken und stabilisiert Erträge. Plattformen wie{" "}
-                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    XTB
-                  </a>{" "}
-                  bieten 0% Kommission bis 100.000€ Umsatz. Andere bieten einen nachhaltigen ETF Sparplan bei 25€ Mindestsparate komplett kostenlos an. Interessant sind auch Alternative Investments in Rohstoffe und Edelmetalle. Unsere Broker bieten zum Großteil eine Verzinsung des Guthabens.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Sind Bitcoin und andere Kryptowährungen sicher?</h3>
-                <p className="mb-4 text-gray-700">
-                  Kryptowährungen bieten hohe Renditechancen, aber auch Risiken. Regulierte Plattformen mit sicherer Verwahrung minimieren Gefahren. Je nach Anlagevolumen ist professionelles Passwortmanagement zum Beispiel durch Multisig zu empfehlen. Ihre Codes lassen sich am sichersten in Wallets aufbewahren – entweder bequem per Software-Wallet oder besonders geschützt mit einer Hardware-Wallet. Erfahren Sie mehr über{" "}
-                  <Link href="/trading#krypto" className="text-green-600 hover:underline">
-                    sicheres Krypto-Trading
-                  </Link>
-                  . In unserer Trading-Rubrik finden Sie Informationen und Tipps, um sicher und gut vorbereitet mit dem Handel zu beginnen.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Vermögen aufbauen: So einfach kann es wirklich jeder</h3>
-                <p className="mb-4 text-gray-700">
-                  Mit nur 25 € monatlich können Sie für sich oder Ihre Kinder ein Depot eröffnen und in einen kostenlosen ETF-Sparplan investieren. Der Cost-Average-Effekt nutzt Kursschwankungen für den langfristigen Vermögensaufbau. Sparpläne gibt es passend für jeden Wunsch – unter anderem als Aktien-, Rohstoff-, Krypto-, KI- und nachhaltige Varianten. Starten Sie mit{" "}
-                  <Link href="/trading#etfs" className="text-green-600 hover:underline">
-                    ETF-Sparplänen
-                  </Link>
-                  .
-                </p>
-                <Link href="/trading">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    JETZT VORSORGE PLANEN
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Versicherungen Section */}
-              <div className="mb-12" id="versicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Diese Versicherungen sollten Sie mindestens haben</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Der richtige Versicherungsschutz schützt vor finanziellen Risiken. Erfahren Sie auf unserer{" "}
-                  <Link href="/versicherungen" className="text-green-600 hover:underline">
-                    Versicherungsseite
-                  </Link>
-                  , welche Policen unverzichtbar sind.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Die Privathaftpflicht schützt vor Schadensersatzansprüchen Dritter. Ein kleiner Unfall kann hohe Kosten verursachen – eine gute Police kostet nur 50-100€ jährlich. Vergleichen Sie bei{" "}
-                  <a
-                    href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                    target="_blank"
-                    rel="noopener sponsored noreferrer"
-                    className="text-green-600 hover:underline"
-                  >
-                    Verivox
-                  </a>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Pflicht für Autobesitzer, aber die Unterschiede sind groß. Eine Vollkasko schützt auch bei Eigenverschulden und Diebstahl. Sparen Sie mit unserem{" "}
-                  <Link href="/versicherungen#kfz" className="text-green-600 hover:underline">
-                    KFZ-Vergleich
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Rechtschutzversicherung</h3>
-                <p className="mb-4 text-gray-700">
-                  Rechtstreitigkeiten sind teuer. Eine Rechtschutzversicherung deckt Anwalts- und Gerichtskosten in privaten, beruflichen und Verkehrsstreitigkeiten. Besonders wichtig für Mieter und Selbstständige.
-                </p>
-                <Link href="/versicherungen">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    DEN BESTEN TARIF FINDEN
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Tierversicherungen Section */}
-              <div className="mb-12" id="tierversicherungen-content">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Warum eine Tierversicherung wichtig ist</h2>
-                <p className="mb-4 text-gray-700" itemProp="description">
-                  Tiere sind Familienmitglieder – ihre Gesundheit sollte abgesichert sein. Hohe Tierarztkosten können Sie finanziell belasten. Entdecken Sie passende Tarife auf unserer{" "}
-                  <Link href="/tierversicherungen" className="text-green-600 hover:underline">
-                    Tierversicherungsseite
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
-                <p className="mb-4 text-gray-700">
-                  Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    HanseMerkur
-                  </a>{" "}
-                  decken bis zu 100% der Kosten ab.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
-                <p className="mb-4 text-gray-700">
-                  Impfungen, Parasitenprophylaxe und Gesundheitschecks werden von modernen Policen übernommen. Sparen Sie bei der Vorsorge mit{" "}
-                  <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
-                    Tierversicherungen
-                  </Link>
-                  .
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Alternative Behandlungsmethoden</h3>
-                <p className="mb-4 text-gray-700">
-                  Physiotherapie oder Akupunktur sind bei chronischen Beschwerden wichtig. Premium-Tarife erstatten 80-100% dieser Kosten. Informieren Sie sich über{" "}
-                  <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
-                    alternative Behandlungen
-                  </Link>
-                  .
-                </p>
-                <Link href="/tierversicherungen">
-                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                    ALLE TIERARZTKOSTEN ABSICHERN
-                  </Button>
-                </Link>
               </div>
             </div>
           </section>
