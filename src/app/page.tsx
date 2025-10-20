@@ -297,22 +297,89 @@ const Header: React.FC = () => {
         </div>
       </section>
 
+      {/* Hauptüberschrift */}
+      <section className="py-8 sm:py-12 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4">Ihr Weg zu besseren Finanzentscheidungen</h1>
+          <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
+            <span itemProp="name">SmartFinanz</span> | Klarheit schaffen, Kosten senken
+          </p>
+          <p className="text-base sm:text-lg mb-4">Egal ob Berufseinsteiger, Familie oder Selbstständige: Optimieren Sie Ihre Finanzen mit klaren, unabhängigen Informationen.</p>
+          <p className="text-base sm:text-lg mb-4">In nur 3 Minuten finden Sie passende Finanzprodukte, die zu Ihrem Leben passen – transparent und ohne versteckte Kosten.</p>
+          <p className="text-base sm:text-lg mb-4">Ein unübersichtlicher Markt? Wir analysieren täglich über 500 Produkte, um Ihnen die besten Konditionen zu präsentieren.</p>
+          <p className="text-base sm:text-lg mb-4">Profitieren Sie von der Erfahrung von über 100.000 zufriedenen Nutzern und treffen Sie fundierte Entscheidungen.</p>
+          <a
+            rel="sponsored"
+            href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
+            aria-label="Verivox - die Tarifexperten"
+          >
+            <Button
+              size="lg"
+              className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+            >
+              JETZT TARIFE VERGLEICHEN
+            </Button>
+          </a>
+          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+            <Image
+              src="/images/5.png"
+              alt="Vertrauenssignal 5"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/1.png"
+              alt="Vertrauenssignal 1"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/2.png"
+              alt="Vertrauenssignal 2"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/3.png"
+              alt="Vertrauenssignal 3"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/4.png"
+              alt="Vertrauenssignal 4"
+              width={80}
+              height={40}
+              className="opacity-100 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Neue Inhalte oberhalb der Vergleichstabellen */}
       <section className="py-12 sm:py-16 bg-white" id="pre-comparison-content">
         <div className="container mx-auto px-4">
           {/* Versicherung */}
           <div className="mb-12" id="versicherung-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die richtige Versicherung für Ihren Bedarf finden</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die passende Versicherung für Ihren Schutz</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Versicherungen schützen vor finanziellen Risiken und sind für jeden Lebensbereich wichtig. Unser Vergleich hilft Ihnen, die besten Tarife zu finden. Entdecken Sie passende Angebote auf unserer{" "}
-              <Link href="/versicherungen" className="text-green-600 hover:underline">
-                Versicherungsseite
-              </Link>
-              .
+              Versicherungen bieten Sicherheit in jeder Lebenslage – von Haftpflicht bis Wohngebäude. Wichtig ist, Tarife zu wählen, die Ihren individuellen Bedürfnissen entsprechen. 
             </p>
-            <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
+            <h3 className="text-xl font-semibold mb-3">Warum eine Privathaftpflichtversicherung?</h3>
             <p className="mb-4 text-gray-700">
-              Eine Privathaftpflichtversicherung ist essenziell, um Schäden an Dritten abzudecken. Schon kleine Unfälle können hohe Kosten verursachen. Mit{" "}
+              Ein kleiner Unfall kann hohe Kosten verursachen, z. B. wenn Sie versehentlich fremdes Eigentum beschädigen. Eine Privathaftpflichtversicherung deckt Schäden an Dritten ab und ist für viele ein Muss. Tarife starten bei etwa 50€ pro Jahr.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Hausrat- und Wohngebäudeversicherung</h3>
+            <p className="mb-4 text-gray-700">
+              Schutz für Ihr Zuhause ist essenziell. Die Hausratversicherung deckt Schäden an Möbeln und Wertgegenständen, z. B. bei Einbruch oder Feuer. Die Wohngebäudeversicherung sichert das Haus selbst. Achten Sie auf Zusatzoptionen wie Elementarschäden.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Tipps für die Auswahl</h3>
+            <p className="mb-4 text-gray-700">
+              Vergleichen Sie Leistungen, Selbstbeteiligungen und Kündigungsfristen. Prüfen Sie, ob der Versicherer schnelle Schadensbearbeitung bietet. Plattformen wie{" "}
               <a
                 href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
                 target="_blank"
@@ -321,28 +388,7 @@ const Header: React.FC = () => {
               >
                 Verivox
               </a>{" "}
-              finden Sie Tarife ab 50€ pro Jahr.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Hausrat- und Wohngebäudeversicherung</h3>
-            <p className="mb-4 text-gray-700">
-              Schützen Sie Ihr Zuhause vor Feuer, Wasser oder Einbruch. Eine Hausratversicherung deckt Möbel und Wertgegenstände, während die Wohngebäudeversicherung das Gebäude selbst absichert. Vergleichen Sie jetzt auf{" "}
-              <Link href="/versicherungen#hausrat" className="text-green-600 hover:underline">
-                unserer Versicherungsseite
-              </Link>
-              .
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Wie finde ich die passende Versicherung?</h3>
-            <p className="mb-4 text-gray-700">
-              Nutzen Sie unseren Vergleich, um Tarife nach Preis, Leistung und Zusatzschutz wie Elementarschäden zu prüfen. Achten Sie auf flexible Laufzeiten und schnelle Schadensbearbeitung. Starten Sie mit{" "}
-              <a
-                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                target="_blank"
-                rel="noopener sponsored noreferrer"
-                className="text-green-600 hover:underline"
-              >
-                Verivox
-              </a>
-              .
+              helfen Ihnen, Tarife schnell zu vergleichen.
             </p>
             <Link href="/versicherungen">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -353,37 +399,25 @@ const Header: React.FC = () => {
 
           {/* DSL */}
           <div className="mb-12" id="dsl-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Schnelles Internet mit dem besten DSL-Tarif</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Schnelles Internet für jeden Bedarf</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Ein zuverlässiger DSL-Anschluss ist für Homeoffice, Streaming und Gaming unverzichtbar. Finden Sie den besten Tarif mit hoher Geschwindigkeit und fairem Preis auf{" "}
-              <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem DSL-Vergleich
-              </a>
-              .
+              Ein zuverlässiger DSL-Anschluss ist entscheidend für Homeoffice, Streaming oder Gaming. Die richtige Wahl spart Kosten und sorgt für stabiles Internet.
             </p>
-            <h3 className="text-xl font-semibold mb-3">WLAN-Geschwindigkeit optimieren</h3>
+            <h3 className="text-xl font-semibold mb-3">Geschwindigkeit und Verfügbarkeit</h3>
             <p className="mb-4 text-gray-700">
-              Tarife mit bis zu 250 MBit/s sorgen für stabiles Internet. Achten Sie auf kostenlose Router und Installationsservices. Anbieter wie{" "}
+              Tarife mit 100 MBit/s oder mehr eignen sich für die meisten Haushalte. Prüfen Sie die Verfügbarkeit an Ihrer Adresse, da nicht überall Glasfaser verfügbar ist. Anbieter wie{" "}
               <a href="https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                 1&1
               </a>{" "}
-              bieten Testsieger-Tarife mit 30 Tagen Testphase.
+              bieten oft kostenlose Router.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Kombi-Vorteile nutzen</h3>
+            <h3 className="text-xl font-semibold mb-3">Kombi-Angebote</h3>
             <p className="mb-4 text-gray-700">
-              Kombinieren Sie DSL mit Mobilfunktarifen für Rabatte. Viele Anbieter bieten kostenlose Hardware oder Startguthaben. Vergleichen Sie Kombi-Angebote auf{" "}
-              <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Viele Anbieter kombinieren DSL mit Mobilfunk oder TV-Diensten für Rabatte. Achten Sie auf versteckte Kosten, z. B. für Installation oder Hardware.
             </p>
-            <h3 className="text-xl font-semibold mb-3">So wechseln Sie Ihren Anbieter</h3>
+            <h3 className="text-xl font-semibold mb-3">So wechseln Sie</h3>
             <p className="mb-4 text-gray-700">
-              Prüfen Sie die Verfügbarkeit an Ihrer Adresse, vergleichen Sie Tarife und nutzen Sie den Wechselservice. Anbieter wie{" "}
-              <a href="https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                1&1
-              </a>{" "}
-              übernehmen die Kündigung Ihres alten Vertrags.
+              Ein Anbieterwechsel ist oft einfacher, als Sie denken. Viele Anbieter übernehmen die Kündigung Ihres alten Vertrags. Nutzen Sie Vergleichsplattformen, um die besten Konditionen zu finden.
             </p>
             <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -394,37 +428,25 @@ const Header: React.FC = () => {
 
           {/* Gas */}
           <div className="mb-12" id="gas-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Den günstigsten Gasanbieter finden</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Günstige Gastarife finden</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Mit steigenden Energiekosten lohnt sich ein Gasanbieter-Vergleich mehr denn je. Sparen Sie bis zu 500€ jährlich mit dem richtigen Tarif auf{" "}
-              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Gas-Vergleich
-              </a>
-              .
+              Mit steigenden Energiekosten ist ein Gasanbieterwechsel oft lohnenswert. Ein guter Tarif kann Ihnen bis zu 500€ jährlich sparen.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Preisgarantien nutzen</h3>
+            <h3 className="text-xl font-semibold mb-3">Preisgarantien verstehen</h3>
             <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten Preisgarantien für 12-24 Monate, um vor Preisschwankungen zu schützen. Achten Sie auf Neukundenboni und transparente Abrechnungen. Starten Sie mit{" "}
-              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleich
-              </a>
-              .
+              Viele Anbieter bieten Preisgarantien für 12 bis 24 Monate, um Sie vor Preisschwankungen zu schützen. Achten Sie auf Neukundenboni und transparente Abrechnungen.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Verbrauch richtig einschätzen</h3>
+            <h3 className="text-xl font-semibold mb-3">Verbrauch berechnen</h3>
             <p className="mb-4 text-gray-700">
-              Nutzen Sie Ihren letzten Jahresverbrauch, um den besten Tarif zu finden. Online-Rechner helfen, den Verbrauch präzise zu ermitteln. Vergleichen Sie jetzt auf{" "}
+              Schauen Sie auf Ihre letzte Gasrechnung, um Ihren Jahresverbrauch zu ermitteln. So finden Sie den passenden Tarif. Plattformen wie{" "}
               <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserer Gas-Seite
-              </a>
-              .
+                CHECK24
+              </a>{" "}
+              bieten praktische Rechner.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Nachhaltige Gastarife</h3>
+            <h3 className="text-xl font-semibold mb-3">Nachhaltigkeit im Fokus</h3>
             <p className="mb-4 text-gray-700">
-              Biogas-Tarife fördern Umweltschutz und sind oft nur minimal teurer. Informieren Sie sich über nachhaltige Optionen und sparen Sie gleichzeitig mit{" "}
-              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Biogas-Tarife fördern den Umweltschutz und sind oft nur geringfügig teurer. Prüfen Sie, ob Ihr Anbieter nachhaltige Optionen anbietet.
             </p>
             <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -435,37 +457,25 @@ const Header: React.FC = () => {
 
           {/* Handytarif */}
           <div className="mb-12" id="handytarif-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Den besten Handytarif für Ihre Bedürfnisse finden</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Den idealen Handytarif finden</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Ob Vielsurfer oder Wenignutzer – der richtige Handytarif spart Kosten und bietet Flexibilität. Finden Sie den perfekten Tarif auf{" "}
-              <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Handytarif-Vergleich
-              </a>
-              .
+              Ob Wenignutzer oder Vielsurfer: Der richtige Handytarif spart Kosten und bietet die passende Leistung für Ihre Bedürfnisse.
             </p>
             <h3 className="text-xl font-semibold mb-3">Datenvolumen richtig wählen</h3>
             <p className="mb-4 text-gray-700">
-              Für Streaming und Social Media sind Tarife mit 30 GB oder mehr ideal. Anbieter wie{" "}
+              Für Streaming oder Social Media empfehlen sich Tarife mit 20 GB oder mehr. Anbieter wie{" "}
               <a href="https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                 freenet
               </a>{" "}
               bieten 5G-Tarife mit bis zu 40 GB.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Kombi-Angebote mit Smartphones</h3>
+            <h3 className="text-xl font-semibold mb-3">Smartphone-Bundles</h3>
             <p className="mb-4 text-gray-700">
-              Viele Tarife beinhalten Top-Smartphones wie das iPhone 17 oder Galaxy S25 mit Kopfhörern. Vergleichen Sie Bundle-Angebote auf{" "}
-              <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Viele Tarife beinhalten Smartphones wie das iPhone 17 oder Galaxy S25. Achten Sie auf die Vertragslaufzeit und Gesamtkosten des Bundles.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Wechsel leicht gemacht</h3>
+            <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
             <p className="mb-4 text-gray-700">
-              Nutzen Sie den Wechselservice für eine reibungslose Übertragung Ihrer Rufnummer. Anbieter wie{" "}
-              <a href="https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                freenet
-              </a>{" "}
-              bieten kostenlose Hotline und Startguthaben.
+              Ein Wechsel ist oft in wenigen Minuten erledigt. Viele Anbieter übernehmen die Rufnummernmitnahme kostenlos.
             </p>
             <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -476,37 +486,25 @@ const Header: React.FC = () => {
 
           {/* Kreditkarte */}
           <div className="mb-12" id="kreditkarte-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die passende Kreditkarte für jeden Anlass</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die beste Kreditkarte für Ihren Alltag</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Ob Reisen, Online-Shopping oder Alltag – die richtige Kreditkarte bietet Flexibilität und Vorteile. Finden Sie die beste Karte auf{" "}
-              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Kreditkarten-Vergleich
-              </a>
-              .
+              Kreditkarten bieten Flexibilität beim Einkaufen, Reisen oder im Alltag. Wählen Sie eine Karte, die zu Ihrem Lebensstil passt.
             </p>
             <h3 className="text-xl font-semibold mb-3">Kostenlose Kreditkarten</h3>
             <p className="mb-4 text-gray-700">
-              Viele Anbieter wie{" "}
+              Viele Anbieter bieten Kreditkarten ohne Jahresgebühr an, oft mit Cashback oder Bonusprogrammen. Prüfen Sie die Konditionen für Auslandsnutzung.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Reisevorteile</h3>
+            <p className="mb-4 text-gray-700">
+              Für Vielreisende eignen sich Karten mit Reiseversicherungen oder Meilenprogrammen. Achten Sie auf Gebührenfreiheit bei Fremdwährungen.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Sicherheit beim Bezahlen</h3>
+            <p className="mb-4 text-gray-700">
+              Wählen Sie Karten mit 3D-Secure und kontaktloser Zahlung für sicheres Online-Shopping. Plattformen wie{" "}
               <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                 Tarifcheck.de
               </a>{" "}
-              bieten Kreditkarten ohne Jahresgebühr mit Cashback oder Bonusprogrammen.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Reisevorteile nutzen</h3>
-            <p className="mb-4 text-gray-700">
-              Kreditkarten mit Reiseversicherungen oder Meilenprogrammen sind ideal für Vielreisende. Vergleichen Sie Karten mit Zusatzleistungen auf{" "}
-              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Sicher online bezahlen</h3>
-            <p className="mb-4 text-gray-700">
-              Achten Sie auf Karten mit 3D-Secure und kontaktloser Zahlung. Informieren Sie sich über sichere Kreditkarten auf{" "}
-              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserer Kreditkarten-Seite
-              </a>
-              .
+              zeigen Ihnen die besten Optionen.
             </p>
             <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -517,37 +515,24 @@ const Header: React.FC = () => {
 
           {/* Mietwagen */}
           <div className="mb-12" id="mietwagen-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Günstige Mietwagen für jede Reise</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Flexibel reisen mit dem richtigen Mietwagen</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Ob Urlaub oder Geschäftsreise – ein Mietwagen bietet Flexibilität. Finden Sie die besten Angebote weltweit auf{" "}
-              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Mietwagen-Vergleich
-              </a>
-              .
+              Ein Mietwagen bietet Freiheit auf Reisen. Ob Urlaub oder Geschäftsreise, die richtige Wahl spart Zeit und Geld.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Das richtige Fahrzeug wählen</h3>
+            <h3 className="text-xl font-semibold mb-3">Fahrzeugauswahl</h3>
             <p className="mb-4 text-gray-700">
-              Vom Kleinwagen bis zur Luxuslimousine – wählen Sie je nach Bedarf. Achten Sie auf Inklusivleistungen wie Vollkasko. Vergleichen Sie auf{" "}
-              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Vom Kleinwagen bis zur Limousine: Wählen Sie je nach Bedarf. Achten Sie auf Inklusivleistungen wie Vollkaskoversicherung ohne Selbstbeteiligung.
             </p>
             <h3 className="text-xl font-semibold mb-3">Versteckte Kosten vermeiden</h3>
             <p className="mb-4 text-gray-700">
-              Prüfen Sie Zusatzgebühren für Einwegmieten oder junge Fahrer. Transparente Anbieter listen alle Kosten auf. Informieren Sie sich auf{" "}
-              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserer Mietwagen-Seite
-              </a>
-              .
+              Prüfen Sie Gebühren für Zusatzfahrer, Einwegmieten oder Kilometerbegrenzungen. Transparente Anbieter listen alle Kosten klar auf.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Flexibel buchen und stornieren</h3>
+            <h3 className="text-xl font-semibold mb-3">Flexible Buchung</h3>
             <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten kostenlose Stornierungen bis 24 Stunden vor Abholung. Buchen Sie flexibel mit{" "}
+              Viele Anbieter erlauben kostenlose Stornierungen bis 24 Stunden vor Abholung. Buchen Sie flexibel mit Plattformen wie{" "}
               <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleich
-              </a>
-              .
+                CHECK24
+              </a>.
             </p>
             <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -558,37 +543,25 @@ const Header: React.FC = () => {
 
           {/* Ökostrom */}
           <div className="mb-12" id="oekostrom-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Nachhaltig sparen mit Ökostrom</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Nachhaltig und günstig mit Ökostrom</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Ökostrom schont die Umwelt und oft auch den Geldbeutel. Finden Sie nachhaltige Tarife mit Preisgarantie auf{" "}
-              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Ökostrom-Vergleich
-              </a>
-              .
+              Ökostrom schont die Umwelt und kann Ihre Energiekosten senken. Finden Sie Tarife, die Nachhaltigkeit und Preis vereinen.
             </p>
             <h3 className="text-xl font-semibold mb-3">Vorteile von Ökostrom</h3>
             <p className="mb-4 text-gray-700">
-              Ökostrom aus Wind, Sonne oder Biomasse reduziert Ihren CO₂-Fußabdruck. Viele Tarife bieten Boni und Preisgarantien. Vergleichen Sie auf{" "}
-              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Strom aus Wind, Sonne oder Biomasse reduziert Ihren CO₂-Fußabdruck. Viele Anbieter bieten zudem Neukundenboni oder Preisgarantien.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Wie finde ich den besten Tarif?</h3>
+            <h3 className="text-xl font-semibold mb-3">Den richtigen Tarif finden</h3>
             <p className="mb-4 text-gray-700">
-              Geben Sie Ihren Verbrauch und Ihre Postleitzahl ein, um regionale Angebote zu finden. Achten Sie auf Zertifikate wie TÜV Nord. Starten Sie mit{" "}
-              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleich
-              </a>
-              .
+              Geben Sie Ihren Verbrauch und Ihre Postleitzahl ein, um regionale Angebote zu prüfen. Zertifikate wie TÜV Nord garantieren echten Ökostrom.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Wechseln und sparen</h3>
+            <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
             <p className="mb-4 text-gray-700">
-              Der Wechsel zu Ökostrom ist einfach und dauert nur wenige Minuten. Nutzen Sie den Wechselservice für eine reibungslose Umstellung auf{" "}
+              Der Wechsel zu Ökostrom ist unkompliziert und dauert nur wenige Minuten. Nutzen Sie Plattformen wie{" "}
               <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserer Ökostrom-Seite
-              </a>
-              .
+                CHECK24
+              </a>{" "}
+              für einen reibungslosen Übergang.
             </p>
             <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -599,37 +572,24 @@ const Header: React.FC = () => {
 
           {/* Reise */}
           <div className="mb-12" id="reise-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die perfekte Reise zum besten Preis buchen</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Reisen zum besten Preis buchen</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Ob Last-Minute oder Frühbucher – sparen Sie bei Ihrer Reiseplanung. Finden Sie die besten Angebote auf{" "}
-              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Reise-Vergleich
-              </a>
-              .
+              Ob Last-Minute oder Frühbucher: Die richtige Reiseplanung spart Geld und sorgt für unvergessliche Erlebnisse.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Pauschalreisen vergleichen</h3>
+            <h3 className="text-xl font-semibold mb-3">Pauschalreisen</h3>
             <p className="mb-4 text-gray-700">
-              Pauschalreisen bieten Planungssicherheit und oft günstige Preise. Achten Sie auf Inklusivleistungen wie Transfers. Vergleichen Sie auf{" "}
-              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Pauschalreisen bieten Planungssicherheit. Achten Sie auf Inklusivleistungen wie Transfers oder Verpflegung, um Überraschungen zu vermeiden.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Reiseversicherungen nicht vergessen</h3>
+            <h3 className="text-xl font-semibold mb-3">Reiseversicherungen</h3>
             <p className="mb-4 text-gray-700">
-              Eine Reiserücktrittsversicherung schützt vor unvorhergesehenen Stornokosten. Kombinieren Sie Ihre Reisebuchung mit einer Versicherung auf{" "}
-              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserer Reise-Seite
-              </a>
-              .
+              Eine Reiserücktrittsversicherung schützt vor Stornokosten bei Krankheit oder anderen unvorhergesehenen Ereignissen. Prüfen Sie die Bedingungen genau.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Flexibilität bei der Buchung</h3>
+            <h3 className="text-xl font-semibold mb-3">Flexibel buchen</h3>
             <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten flexible Umbuchungsoptionen. Buchen Sie jetzt und sichern Sie sich Frühbucherrabatte auf{" "}
+              Viele Anbieter bieten flexible Umbuchungsoptionen oder Frühbucherrabatte. Vergleichen Sie Angebote auf Plattformen wie{" "}
               <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleich
-              </a>
-              .
+                CHECK24
+              </a>.
             </p>
             <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -640,37 +600,25 @@ const Header: React.FC = () => {
 
           {/* Strom */}
           <div className="mb-12" id="strom-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stromtarife vergleichen und Kosten senken</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stromtarife für weniger Kosten</h2>
             <p className="mb-4 text-gray-700" itemProp="description">
-              Mit einem Stromtarif-Vergleich sparen Sie bis zu 400€ jährlich. Finden Sie den besten Anbieter auf{" "}
-              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Strom-Vergleich
-              </a>
-              .
+              Ein Stromtarifwechsel kann Ihre Energiekosten deutlich senken. Mit dem richtigen Anbieter sparen Sie bis zu 400€ jährlich.
             </p>
-            <h3 className="text-xl font-semibold mb-3">Den Verbrauch richtig einschätzen</h3>
+            <h3 className="text-xl font-semibold mb-3">Verbrauch ermitteln</h3>
             <p className="mb-4 text-gray-700">
-              Nutzen Sie Ihre letzte Stromabrechnung, um den Verbrauch zu ermitteln. Online-Rechner helfen, den besten Tarif zu finden. Starten Sie auf{" "}
-              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleichsportal
-              </a>
-              .
+              Checken Sie Ihre letzte Stromrechnung, um Ihren Jahresverbrauch zu kennen. So finden Sie den passenden Tarif für Ihren Haushalt.
             </p>
             <h3 className="text-xl font-semibold mb-3">Preisgarantien und Boni</h3>
             <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten Preisgarantien und Neukundenboni. Achten Sie auf kurze Kündigungsfristen für Flexibilität. Vergleichen Sie auf{" "}
-              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserer Strom-Seite
-              </a>
-              .
+              Viele Anbieter locken mit Preisgarantien oder Neukundenboni. Achten Sie auf kurze Kündigungsfristen, um flexibel zu bleiben.
             </p>
             <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
             <p className="mb-4 text-gray-700">
-              Der Wechsel zu einem neuen Stromanbieter ist unkompliziert und wird oft vom neuen Anbieter übernommen. Informieren Sie sich auf{" "}
+              Der Wechselprozess ist unkompliziert, und viele Anbieter übernehmen die Kündigung Ihres alten Vertrags. Plattformen wie{" "}
               <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                unserem Vergleich
-              </a>
-              .
+                CHECK24
+              </a>{" "}
+              machen es Ihnen leicht.
             </p>
             <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer">
               <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -869,15 +817,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* --- Meta Basics (bereinigt) --- */}
-        <title>Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</title>
+        <title>Ihr Weg zu besseren Finanzentscheidungen | SmartFinanz</title>
         <meta
           name="description"
-          content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
+          content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Strom & mehr. Transparent, kostenlos und unabhängig – sparen Sie Zeit und Geld!"
         />
-        {/* Entfernt: meta keywords (obsolet), revisit-after (ohne Wirkung) */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        {/* Accessibility: Zoom wieder erlaubt */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
         <meta name="author" content="SmartFinanz" />
@@ -887,16 +832,14 @@ export default function Home() {
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
 
-        {/* Hreflang (Basis) */}
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="de-DE" />
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
 
-        {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
+        <meta property="og:title" content="Ihr Weg zu besseren Finanzentscheidungen | SmartFinanz" />
         <meta
           property="og:description"
-          content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
+          content="Vergleichen Sie über 500 Anbieter für Versicherungen, Banking, DSL, Strom & mehr. Kostenlos, transparent und unabhängig."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de" />
         <meta property="og:site_name" content="SmartFinanz" />
@@ -911,38 +854,33 @@ export default function Home() {
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
-        <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
+        <meta property="og:image:alt" content="SmartFinanz - Ihr Finanzvergleich" />
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-10-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-10-19T00:27:16+00:00" />
+        <meta property="og:updated_time" content="2025-10-20T12:59:00+02:00" />
+        <meta property="article:published_time" content="2025-10-01T00:00:00+02:00" />
+        <meta property="article:modified_time" content="2025-10-20T12:59:00+02:00" />
 
-        {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
-        <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
+        <meta name="twitter:title" content="Ihr Weg zu besseren Finanzentscheidungen | SmartFinanz" />
+        <meta name="twitter:description" content="Vergleichen Sie über 500 Anbieter für Versicherungen, Banking, DSL, Strom & mehr. Kostenlos, transparent und unabhängig." />
         <meta
           name="twitter:image"
           content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
         />
-        <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
+        <meta name="twitter:image:alt" content="SmartFinanz - Ihr Finanzvergleich" />
         <meta name="twitter:site" content="@unservergleich" />
         <meta name="twitter:creator" content="@unservergleich" />
 
-        {/* --- Preloads & Resource Hints (bereinigt) --- */}
         <link rel="preload" href="/logo.png" as="image" />
-        {/* bevorzugt preconnect für Domains mit früher Verbindung */}
         <link rel="preconnect" href="https://www.awin1.com" crossOrigin="" />
         <link rel="preconnect" href="https://link-pso.xtb.com" crossOrigin="" />
         <link rel="preconnect" href="https://private.vodafone-affiliate.de" crossOrigin="" />
-        {/* unnötige dns-prefetch reduziert */}
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
         <link rel="dns-prefetch" href="https://www.c24n.de" />
 
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
 
-        {/* ---- Schema.org: Organization ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -972,7 +910,6 @@ export default function Home() {
           }}
         />
 
-        {/* ---- Schema.org: WebSite + SearchAction ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -991,7 +928,6 @@ export default function Home() {
           }}
         />
 
-        {/* ---- Schema.org: FAQPage (einmalig, im Head belassen) ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -1001,34 +937,34 @@ export default function Home() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Wie funktioniert der Finanzvergleich?",
+                  "name": "Wie funktioniert ein Finanzvergleich?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                    "text": "Unsere Experten analysieren täglich über 500 Finanzprodukte und liefern Ihnen unabhängige, transparente Empfehlungen, die zu Ihren Bedürfnissen passen."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Ist der Finanzvergleich auf unser-vergleichsportal.de kostenlos?",
+                  "name": "Ist der Vergleich kostenlos?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ja, alle unsere Vergleiche sind 100% kostenlos und unverbindlich. Wir erhalten Provisionen von Partnern; das beeinflusst weder Ihre Kosten noch unsere Bewertungen."
+                    "text": "Ja, alle Vergleiche sind kostenlos und unverbindlich. Wir finanzieren uns durch Provisionen von Partnern, ohne dass Ihnen Kosten entstehen."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Welche Finanzprodukte kann ich bei SmartFinanz vergleichen?",
+                  "name": "Welche Produkte kann ich vergleichen?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Versicherungen, Banking-Produkte, Tierversicherungen, Trading-Plattformen, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
+                    "text": "Versicherungen, Banking, Trading, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Wie schnell bekomme ich die Empfehlungen?",
+                  "name": "Wie schnell finde ich passende Angebote?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Die meisten Vergleiche sind sofort verfügbar. Bei komplexeren Anfragen erhalten Sie binnen weniger Minuten personalisierte Empfehlungen."
+                    "text": "Die meisten Vergleiche sind sofort verfügbar. Komplexere Anfragen dauern maximal wenige Minuten."
                   }
                 }
               ]
@@ -1036,7 +972,6 @@ export default function Home() {
           }}
         />
 
-        {/* ---- Schema.org: BreadcrumbList (Home) ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -1053,70 +988,6 @@ export default function Home() {
       <main>
         <div className="min-h-screen bg-white">
           <Header />
-
-          {/* Hauptüberschrift */}
-          <section className="py-8 sm:py-12 bg-white">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</h1>
-              <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
-                <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
-              </p>
-              <p className="text-base sm:text-lg mb-4">Perfekt für Berufseinsteiger, Familien und Selbstständige, die ihre Finanzen optimieren wollen.</p>
-              <p className="text-base sm:text-lg mb-4">Finden Sie in 3 Minuten das passende Finanzprodukt – transparent, unabhängig, ohne Kosten. Unser Vergleich spart Zeit, Geld und schützt vor Fehlentscheidungen.</p>
-              <p className="text-base sm:text-lg mb-4">Unübersichtlicher Markt? Wir liefern Klarheit und die besten Konditionen – schnell und zuverlässig.</p>
-              <p className="text-base sm:text-lg mb-4">Über 500 Produkte täglich geprüft – 100.000+ zufriedene Nutzer.</p>
-              <a
-                rel="sponsored"
-                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref="
-                aria-label="Verivox - die Tarifexperten"
-              >
-                <Button
-                  size="lg"
-                  className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                >
-                  BESTEN TARIF BERECHNEN
-                </Button>
-              </a>
-             {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
-          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-            <Image
-              src="/images/5.png"
-              alt="Vertrauenssignal 5"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/1.png"
-              alt="Vertrauenssignal 1"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/2.png"
-              alt="Vertrauenssignal 2"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/3.png"
-              alt="Vertrauenssignal 3"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/4.png"
-              alt="Vertrauenssignal 4"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-              </div>
-            </div>
-          </section>
 
           {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
