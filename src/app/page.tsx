@@ -296,6 +296,390 @@ const Header: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Neue Inhalte oberhalb der Vergleichstabellen */}
+      <section className="py-12 sm:py-16 bg-white" id="pre-comparison-content">
+        <div className="container mx-auto px-4">
+          {/* Versicherung */}
+          <div className="mb-12" id="versicherung-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die richtige Versicherung für Ihren Bedarf finden</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Versicherungen schützen vor finanziellen Risiken und sind für jeden Lebensbereich wichtig. Unser Vergleich hilft Ihnen, die besten Tarife zu finden. Entdecken Sie passende Angebote auf unserer{" "}
+              <Link href="/versicherungen" className="text-green-600 hover:underline">
+                Versicherungsseite
+              </Link>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Privathaftpflichtversicherung</h3>
+            <p className="mb-4 text-gray-700">
+              Eine Privathaftpflichtversicherung ist essenziell, um Schäden an Dritten abzudecken. Schon kleine Unfälle können hohe Kosten verursachen. Mit{" "}
+              <a
+                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
+                target="_blank"
+                rel="noopener sponsored noreferrer"
+                className="text-green-600 hover:underline"
+              >
+                Verivox
+              </a>{" "}
+              finden Sie Tarife ab 50€ pro Jahr.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Hausrat- und Wohngebäudeversicherung</h3>
+            <p className="mb-4 text-gray-700">
+              Schützen Sie Ihr Zuhause vor Feuer, Wasser oder Einbruch. Eine Hausratversicherung deckt Möbel und Wertgegenstände, während die Wohngebäudeversicherung das Gebäude selbst absichert. Vergleichen Sie jetzt auf{" "}
+              <Link href="/versicherungen#hausrat" className="text-green-600 hover:underline">
+                unserer Versicherungsseite
+              </Link>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Wie finde ich die passende Versicherung?</h3>
+            <p className="mb-4 text-gray-700">
+              Nutzen Sie unseren Vergleich, um Tarife nach Preis, Leistung und Zusatzschutz wie Elementarschäden zu prüfen. Achten Sie auf flexible Laufzeiten und schnelle Schadensbearbeitung. Starten Sie mit{" "}
+              <a
+                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
+                target="_blank"
+                rel="noopener sponsored noreferrer"
+                className="text-green-600 hover:underline"
+              >
+                Verivox
+              </a>
+              .
+            </p>
+            <Link href="/versicherungen">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                VERSICHERUNGEN VERGLEICHEN
+              </Button>
+            </Link>
+          </div>
+
+          {/* DSL */}
+          <div className="mb-12" id="dsl-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Schnelles Internet mit dem besten DSL-Tarif</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Ein zuverlässiger DSL-Anschluss ist für Homeoffice, Streaming und Gaming unverzichtbar. Finden Sie den besten Tarif mit hoher Geschwindigkeit und fairem Preis auf{" "}
+              <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem DSL-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">WLAN-Geschwindigkeit optimieren</h3>
+            <p className="mb-4 text-gray-700">
+              Tarife mit bis zu 250 MBit/s sorgen für stabiles Internet. Achten Sie auf kostenlose Router und Installationsservices. Anbieter wie{" "}
+              <a href="https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                1&1
+              </a>{" "}
+              bieten Testsieger-Tarife mit 30 Tagen Testphase.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Kombi-Vorteile nutzen</h3>
+            <p className="mb-4 text-gray-700">
+              Kombinieren Sie DSL mit Mobilfunktarifen für Rabatte. Viele Anbieter bieten kostenlose Hardware oder Startguthaben. Vergleichen Sie Kombi-Angebote auf{" "}
+              <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">So wechseln Sie Ihren Anbieter</h3>
+            <p className="mb-4 text-gray-700">
+              Prüfen Sie die Verfügbarkeit an Ihrer Adresse, vergleichen Sie Tarife und nutzen Sie den Wechselservice. Anbieter wie{" "}
+              <a href="https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                1&1
+              </a>{" "}
+              übernehmen die Kündigung Ihres alten Vertrags.
+            </p>
+            <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                DSL-TARIFE VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Gas */}
+          <div className="mb-12" id="gas-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Den günstigsten Gasanbieter finden</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Mit steigenden Energiekosten lohnt sich ein Gasanbieter-Vergleich mehr denn je. Sparen Sie bis zu 500€ jährlich mit dem richtigen Tarif auf{" "}
+              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Gas-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Preisgarantien nutzen</h3>
+            <p className="mb-4 text-gray-700">
+              Viele Anbieter bieten Preisgarantien für 12-24 Monate, um vor Preisschwankungen zu schützen. Achten Sie auf Neukundenboni und transparente Abrechnungen. Starten Sie mit{" "}
+              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Verbrauch richtig einschätzen</h3>
+            <p className="mb-4 text-gray-700">
+              Nutzen Sie Ihren letzten Jahresverbrauch, um den besten Tarif zu finden. Online-Rechner helfen, den Verbrauch präzise zu ermitteln. Vergleichen Sie jetzt auf{" "}
+              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserer Gas-Seite
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Nachhaltige Gastarife</h3>
+            <p className="mb-4 text-gray-700">
+              Biogas-Tarife fördern Umweltschutz und sind oft nur minimal teurer. Informieren Sie sich über nachhaltige Optionen und sparen Sie gleichzeitig mit{" "}
+              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                GASANBIETER VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Handytarif */}
+          <div className="mb-12" id="handytarif-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Den besten Handytarif für Ihre Bedürfnisse finden</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Ob Vielsurfer oder Wenignutzer – der richtige Handytarif spart Kosten und bietet Flexibilität. Finden Sie den perfekten Tarif auf{" "}
+              <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Handytarif-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Datenvolumen richtig wählen</h3>
+            <p className="mb-4 text-gray-700">
+              Für Streaming und Social Media sind Tarife mit 30 GB oder mehr ideal. Anbieter wie{" "}
+              <a href="https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                freenet
+              </a>{" "}
+              bieten 5G-Tarife mit bis zu 40 GB.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Kombi-Angebote mit Smartphones</h3>
+            <p className="mb-4 text-gray-700">
+              Viele Tarife beinhalten Top-Smartphones wie das iPhone 17 oder Galaxy S25 mit Kopfhörern. Vergleichen Sie Bundle-Angebote auf{" "}
+              <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Wechsel leicht gemacht</h3>
+            <p className="mb-4 text-gray-700">
+              Nutzen Sie den Wechselservice für eine reibungslose Übertragung Ihrer Rufnummer. Anbieter wie{" "}
+              <a href="https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                freenet
+              </a>{" "}
+              bieten kostenlose Hotline und Startguthaben.
+            </p>
+            <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                HANDYTARIFE VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Kreditkarte */}
+          <div className="mb-12" id="kreditkarte-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die passende Kreditkarte für jeden Anlass</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Ob Reisen, Online-Shopping oder Alltag – die richtige Kreditkarte bietet Flexibilität und Vorteile. Finden Sie die beste Karte auf{" "}
+              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Kreditkarten-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Kostenlose Kreditkarten</h3>
+            <p className="mb-4 text-gray-700">
+              Viele Anbieter wie{" "}
+              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                Tarifcheck.de
+              </a>{" "}
+              bieten Kreditkarten ohne Jahresgebühr mit Cashback oder Bonusprogrammen.
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Reisevorteile nutzen</h3>
+            <p className="mb-4 text-gray-700">
+              Kreditkarten mit Reiseversicherungen oder Meilenprogrammen sind ideal für Vielreisende. Vergleichen Sie Karten mit Zusatzleistungen auf{" "}
+              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Sicher online bezahlen</h3>
+            <p className="mb-4 text-gray-700">
+              Achten Sie auf Karten mit 3D-Secure und kontaktloser Zahlung. Informieren Sie sich über sichere Kreditkarten auf{" "}
+              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserer Kreditkarten-Seite
+              </a>
+              .
+            </p>
+            <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                KREDITKARTEN VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Mietwagen */}
+          <div className="mb-12" id="mietwagen-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Günstige Mietwagen für jede Reise</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Ob Urlaub oder Geschäftsreise – ein Mietwagen bietet Flexibilität. Finden Sie die besten Angebote weltweit auf{" "}
+              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Mietwagen-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Das richtige Fahrzeug wählen</h3>
+            <p className="mb-4 text-gray-700">
+              Vom Kleinwagen bis zur Luxuslimousine – wählen Sie je nach Bedarf. Achten Sie auf Inklusivleistungen wie Vollkasko. Vergleichen Sie auf{" "}
+              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Versteckte Kosten vermeiden</h3>
+            <p className="mb-4 text-gray-700">
+              Prüfen Sie Zusatzgebühren für Einwegmieten oder junge Fahrer. Transparente Anbieter listen alle Kosten auf. Informieren Sie sich auf{" "}
+              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserer Mietwagen-Seite
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Flexibel buchen und stornieren</h3>
+            <p className="mb-4 text-gray-700">
+              Viele Anbieter bieten kostenlose Stornierungen bis 24 Stunden vor Abholung. Buchen Sie flexibel mit{" "}
+              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleich
+              </a>
+              .
+            </p>
+            <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                MIETWAGEN VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Ökostrom */}
+          <div className="mb-12" id="oekostrom-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Nachhaltig sparen mit Ökostrom</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Ökostrom schont die Umwelt und oft auch den Geldbeutel. Finden Sie nachhaltige Tarife mit Preisgarantie auf{" "}
+              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Ökostrom-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Vorteile von Ökostrom</h3>
+            <p className="mb-4 text-gray-700">
+              Ökostrom aus Wind, Sonne oder Biomasse reduziert Ihren CO₂-Fußabdruck. Viele Tarife bieten Boni und Preisgarantien. Vergleichen Sie auf{" "}
+              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Wie finde ich den besten Tarif?</h3>
+            <p className="mb-4 text-gray-700">
+              Geben Sie Ihren Verbrauch und Ihre Postleitzahl ein, um regionale Angebote zu finden. Achten Sie auf Zertifikate wie TÜV Nord. Starten Sie mit{" "}
+              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Wechseln und sparen</h3>
+            <p className="mb-4 text-gray-700">
+              Der Wechsel zu Ökostrom ist einfach und dauert nur wenige Minuten. Nutzen Sie den Wechselservice für eine reibungslose Umstellung auf{" "}
+              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserer Ökostrom-Seite
+              </a>
+              .
+            </p>
+            <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                ÖKOSTROM VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Reise */}
+          <div className="mb-12" id="reise-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die perfekte Reise zum besten Preis buchen</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Ob Last-Minute oder Frühbucher – sparen Sie bei Ihrer Reiseplanung. Finden Sie die besten Angebote auf{" "}
+              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Reise-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Pauschalreisen vergleichen</h3>
+            <p className="mb-4 text-gray-700">
+              Pauschalreisen bieten Planungssicherheit und oft günstige Preise. Achten Sie auf Inklusivleistungen wie Transfers. Vergleichen Sie auf{" "}
+              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Reiseversicherungen nicht vergessen</h3>
+            <p className="mb-4 text-gray-700">
+              Eine Reiserücktrittsversicherung schützt vor unvorhergesehenen Stornokosten. Kombinieren Sie Ihre Reisebuchung mit einer Versicherung auf{" "}
+              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserer Reise-Seite
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Flexibilität bei der Buchung</h3>
+            <p className="mb-4 text-gray-700">
+              Viele Anbieter bieten flexible Umbuchungsoptionen. Buchen Sie jetzt und sichern Sie sich Frühbucherrabatte auf{" "}
+              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleich
+              </a>
+              .
+            </p>
+            <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                REISEN VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+
+          {/* Strom */}
+          <div className="mb-12" id="strom-pre-content">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stromtarife vergleichen und Kosten senken</h2>
+            <p className="mb-4 text-gray-700" itemProp="description">
+              Mit einem Stromtarif-Vergleich sparen Sie bis zu 400€ jährlich. Finden Sie den besten Anbieter auf{" "}
+              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Strom-Vergleich
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Den Verbrauch richtig einschätzen</h3>
+            <p className="mb-4 text-gray-700">
+              Nutzen Sie Ihre letzte Stromabrechnung, um den Verbrauch zu ermitteln. Online-Rechner helfen, den besten Tarif zu finden. Starten Sie auf{" "}
+              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleichsportal
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Preisgarantien und Boni</h3>
+            <p className="mb-4 text-gray-700">
+              Viele Anbieter bieten Preisgarantien und Neukundenboni. Achten Sie auf kurze Kündigungsfristen für Flexibilität. Vergleichen Sie auf{" "}
+              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserer Strom-Seite
+              </a>
+              .
+            </p>
+            <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
+            <p className="mb-4 text-gray-700">
+              Der Wechsel zu einem neuen Stromanbieter ist unkompliziert und wird oft vom neuen Anbieter übernommen. Informieren Sie sich auf{" "}
+              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                unserem Vergleich
+              </a>
+              .
+            </p>
+            <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer">
+              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                STROMTARIFE VERGLEICHEN
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
