@@ -1,5 +1,4 @@
-
- "use client"
+"use client"
 
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
@@ -97,59 +96,6 @@ const Header: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <span className="font-semibold text-2xl mb-3 text-left ml-2">Weitere Produkte</span>
-                <div className="grid grid-cols-2 gap-2">
-                  <ul className="flex flex-col gap-2 text-base">
-                    {[
-                      { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-                      { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-                      { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-                      { key: "kreditkarte", label: "Kreditkarte", url: "https://www.tarifcheck.com/NMXe4cX", isInternal: false },
-                    ].map(({ key, label, url }) => (
-                      <li key={key}>
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="noopener sponsored noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setActiveCategory(key);
-                          }}
-                          aria-label={`${label} vergleichen (externer Link)`}
-                        >
-                          {label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="flex flex-col gap-2 text-base">
-                    {[
-                      { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-                      { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-                      { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-                      { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
-                    ].map(({ key, label, url }) => (
-                      <li key={key}>
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="noopener sponsored noreferrer"
-                          className="inline-block px-3 py-1 font-medium transition-all duration-300 ease-in-out text-sm sm:text-base rounded-lg hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setActiveCategory(key);
-                          }}
-                          aria-label={`${label} vergleichen (externer Link)`}
-                        >
-                          {label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div>
                 <span className="font-semibold text-2xl mb-3 text-left ml-2">Unternehmen</span>
                 <ul className="flex flex-col gap-2 text-base">
                   {[
@@ -221,14 +167,6 @@ const Header: React.FC = () => {
               { key: "haustierversicherung", label: "Haustierversicherung", url: "/tierversicherungen", isInternal: true },
               { key: "trading", label: "Trading", url: "/trading", isInternal: true },
               { key: "versicherungen", label: "Versicherung", url: "/versicherungen", isInternal: true },
-              { key: "dsl", label: "DSL", url: "https://www.c24n.de/ducwCtq", isInternal: false },
-              { key: "gas", label: "Gas", url: "https://www.c24n.de/Uxudvkj", isInternal: false },
-              { key: "handytarif", label: "Handytarif", url: "https://www.c24n.de/5R17qbN", isInternal: false },
-              { key: "kreditkarte", label: "Kreditkarte", url: "https://www.tarifcheck.com/NMXe4cX", isInternal: false },
-              { key: "mietwagen", label: "Mietwagen", url: "https://www.c24n.de/FZ9nd0R", isInternal: false },
-              { key: "oekostrom", label: "Ökostrom", url: "https://www.c24n.de/zxy0WKh", isInternal: false },
-              { key: "reise", label: "Reise", url: "https://www.c24n.de/EieKR0E", isInternal: false },
-              { key: "strom", label: "Strom", url: "https://www.c24n.de/RYXPGyh", isInternal: false },
             ].map(({ key, label, url, isInternal }) => (
               <li key={key}>
                 {isInternal ? (
@@ -486,15 +424,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* --- Meta Basics (bereinigt) --- */}
         <title>Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</title>
         <meta
           name="description"
           content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
         />
-        {/* Entfernt: meta keywords (obsolet), revisit-after (ohne Wirkung) */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        {/* Accessibility: Zoom wieder erlaubt */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
         <meta name="author" content="SmartFinanz" />
@@ -503,12 +438,8 @@ export default function Home() {
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
-
-        {/* Hreflang (Basis) */}
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="de-DE" />
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
-
-        {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
         <meta
@@ -534,8 +465,6 @@ export default function Home() {
         <meta property="og:updated_time" content="2025-10-19T00:27:16+00:00" />
         <meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
         <meta property="article:modified_time" content="2025-10-19T00:27:16+00:00" />
-
-        {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
@@ -546,20 +475,12 @@ export default function Home() {
         <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta name="twitter:site" content="@unservergleich" />
         <meta name="twitter:creator" content="@unservergleich" />
-
-        {/* --- Preloads & Resource Hints (bereinigt) --- */}
         <link rel="preload" href="/logo.png" as="image" />
-        {/* bevorzugt preconnect für Domains mit früher Verbindung */}
         <link rel="preconnect" href="https://www.awin1.com" crossOrigin="" />
         <link rel="preconnect" href="https://link-pso.xtb.com" crossOrigin="" />
         <link rel="preconnect" href="https://private.vodafone-affiliate.de" crossOrigin="" />
-        {/* unnötige dns-prefetch reduziert */}
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://www.c24n.de" />
-
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
-
-        {/* ---- Schema.org: Organization ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -588,8 +509,6 @@ export default function Home() {
             }),
           }}
         />
-
-        {/* ---- Schema.org: WebSite + SearchAction ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -607,8 +526,6 @@ export default function Home() {
             }),
           }}
         />
-
-        {/* ---- Schema.org: FAQPage (einmalig, im Head belassen) ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -652,8 +569,6 @@ export default function Home() {
             }),
           }}
         />
-
-        {/* ---- Schema.org: BreadcrumbList (Home) ---- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -670,8 +585,6 @@ export default function Home() {
       <main>
         <div className="min-h-screen bg-white">
           <Header />
-
-          {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Oktober 2025 | Finden Sie den besten Anbieter</h1>
@@ -733,11 +646,8 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          {/* New Content Sections */}
           <section className="py-12 sm:py-16 bg-white" id="content-sections">
             <div className="container mx-auto px-4">
-              {/* Banking Section */}
               <div className="mb-12" id="banking-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Optimieren Sie Ihre Finanzen mit dem passenden Bankkonto</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
@@ -750,10 +660,10 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein Girokonto</h3>
                 <p className="mb-4 text-gray-700">
                   Ein modernes Girokonto sollte keine Kontoführungsgebühren haben, eine kostenlose Debitkarte bieten und digitale Services wie Echtzeit-Überweisungen unterstützen. Beachten Sie die Konditionen für Dispozinsen (oft 8-12% p.a.) und ob kontaktloses Bezahlen möglich ist. Plattformen wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    CHECK24
+                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Tarifcheck.de
                   </a>{" "}
-                  bieten Zugang zu Konten mit bis zu 250€ Willkommensbonus.
+                  bieten Zugang zu Konten mit bis zu 120€ Neukundenbonus.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Tagesgeld: Maximieren Sie Ihre Ersparnisse</h3>
                 <p className="mb-4 text-gray-700">
@@ -764,11 +674,10 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Nachhaltiges Banking: Ökologie trifft Ökonomie</h3>
                 <p className="mb-4 text-gray-700">
-                  Nachhaltige Banken investieren in grüne Projekte und verzichten auf fossile Finanzierungen. Neben ökologischen Vorteilen bieten sie oft kostenlose Konten und attraktive Zinsen. Anbieter wie{" "}
-                  <a href="https://www.tomorrow.one/de-de/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    Tomorrow
-                  </a>{" "}
-                  kombinieren nachhaltiges Banking mit modernen Apps.
+                  Nachhaltige Banken investieren in grüne Projekte und verzichten auf fossile Finanzierungen. Neben ökologischen Vorteilen bieten sie oft kostenlose Konten und attraktive Zinsen. Informieren Sie sich über nachhaltiges Banking auf unserer{" "}
+                  <Link href="/banking#nachhaltigkeit" className="text-green-600 hover:underline">
+                    Nachhaltigkeits-Seite
+                  </Link>.
                 </p>
                 <Link href="/banking">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -776,8 +685,6 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-
-              {/* Trading Section */}
               <div className="mb-12" id="trading-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Vermögensaufbau durch intelligentes Trading</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
@@ -790,22 +697,21 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Die Rentenlücke schließen</h3>
                 <p className="mb-4 text-gray-700">
                   Die gesetzliche Rente deckt nur etwa 48% des letzten Nettoeinkommens. Bei einem Netto von 2.000€ monatlich bleibt eine Lücke von über 1.000€. Private Vorsorge durch Investitionen in ETFs oder Aktien kann diese Lücke schließen. Plattformen wie{" "}
-                  <a href="https://www.scalable.capital/de" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    Scalable Capital
-                  </a>{" "}
-                  bieten kostengünstige ETF-Sparpläne ab 1€.
-                </p>
-                <h3 className="text-xl font-semibold mb-3">Investmentmöglichkeiten im Überblick</h3>
-                <p className="mb-4 text-gray-700">
-                  Neben Aktien und ETFs sind alternative Anlagen wie Rohstoffe (z.B. Gold) oder Immobilienfonds attraktiv. Kryptowährungen wie Bitcoin bieten hohe Renditen, aber auch Risiken. Plattformen wie{" "}
                   <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     XTB
                   </a>{" "}
-                  ermöglichen 0% Kommission bis 100.000€ Umsatz und bieten CFDs auf Kryptowährungen.
+                  bieten 0% Kommission bis 100.000€ Umsatz.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Investmentmöglichkeiten im Überblick</h3>
+                <p className="mb-4 text-gray-700">
+                  Neben Aktien und ETFs sind alternative Anlagen wie Rohstoffe (z.B. Gold) oder Immobilienfonds attraktiv. Kryptowährungen wie Bitcoin bieten hohe Renditen, aber auch Risiken. Informieren Sie sich über{" "}
+                  <Link href="/trading#investments" className="text-green-600 hover:underline">
+                    Investmentmöglichkeiten
+                  </Link>.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Krypto-Sicherheit gewährleisten</h3>
                 <p className="mb-4 text-gray-700">
-                  Kryptowährungen erfordern sichere Verwahrung. Hardware-Wallets wie Ledger bieten maximalen Schutz durch Offline-Speicherung. Multisig-Wallets erhöhen die Sicherheit durch Mehrfach-Authentifizierung. Informieren Sie sich über{" "}
+                  Kryptowährungen erfordern sichere Verwahrung. Hardware-Wallets bieten maximalen Schutz durch Offline-Speicherung. Multisig-Wallets erhöhen die Sicherheit durch Mehrfach-Authentifizierung. Informieren Sie sich über{" "}
                   <Link href="/trading#krypto" className="text-green-600 hover:underline">
                     sicheres Krypto-Investing
                   </Link>{" "}
@@ -814,10 +720,9 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Vermögensaufbau für Einsteiger</h3>
                 <p className="mb-4 text-gray-700">
                   Mit einem ETF-Sparplan ab 25€ monatlich können Sie langfristig Vermögen aufbauen. Der Cost-Average-Effekt gleicht Kursschwankungen aus. Nachhaltige ETFs oder KI-Fonds sind besonders gefragt. Starten Sie mit{" "}
-                  <a href="https://www.trade-republic.com/de-de" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    Trade Republic
-                  </a>{" "}
-                  für provisionsfreie Sparpläne.
+                  <Link href="/trading#etfs" className="text-green-600 hover:underline">
+                    ETF-Sparplänen
+                  </Link>.
                 </p>
                 <Link href="/trading">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
@@ -825,8 +730,6 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-
-              {/* Versicherungen Section */}
               <div className="mb-12" id="versicherungen-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Maßgeschneiderter Versicherungsschutz für Ihre Bedürfnisse</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
@@ -839,14 +742,14 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Privathaftpflicht: Unverzichtbarer Grundschutz</h3>
                 <p className="mb-4 text-gray-700">
                   Eine Privathaftpflichtversicherung deckt Schäden ab, die Sie anderen zufügen. Ein Schaden (z.B. Sachbeschädigung) kann schnell Kosten von 10.000€ oder mehr verursachen. Gute Tarife ab 50€ jährlich finden Sie bei{" "}
-                  <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    CHECK24
+                  <a href="https://www.tarifcheck.de/haftpflichtversicherung/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Tarifcheck.de
                   </a>.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung: Sicherheit für Autofahrer</h3>
                 <p className="mb-4 text-gray-700">
                   Eine Vollkaskoversicherung deckt auch Schäden durch Eigenverschulden oder Vandalismus. Beachten Sie Schadenfreiheitsrabatte (bis zu 70%) und Zusatzleistungen wie Werkstattbindung für günstigere Tarife. Vergleichen Sie bei{" "}
-                  <a href="https://www.verivox.de/kfz-versicherung/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     Verivox
                   </a>.
                 </p>
@@ -863,8 +766,6 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-
-              {/* Tierversicherungen Section */}
               <div className="mb-12" id="tierversicherungen-content">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Sorgenfreier Schutz für Ihre Haustiere</h2>
                 <p className="mb-4 text-gray-700" itemProp="description">
@@ -877,9 +778,9 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Kosten von Operationen absichern</h3>
                 <p className="mb-4 text-gray-700">
                   Operationen wie Kreuzbandrisse können 1.500-3.000€ kosten. Premium-Tarife von Anbietern wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    HanseMerkur
-                  </a>{" "}
+                  <Link href="/anbieter/petprotect" className="text-green-600 hover:underline">
+                    PetProtect
+                  </Link>{" "}
                   erstatten bis zu 100% der Kosten, oft ohne Wartezeit.
                 </p>
                 <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
@@ -892,9 +793,9 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Alternative Therapien für Tiere</h3>
                 <p className="mb-4 text-gray-700">
                   Physiotherapie oder Homöopathie können bei chronischen Erkrankungen helfen. Tarife mit 80-100% Erstattung gibt es bei{" "}
-                  <a href="https://www.agila.de/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                    AGILA
-                  </a>. Informieren Sie sich über{" "}
+                  <Link href="/anbieter/figopet" className="text-green-600 hover:underline">
+                    FigoPet
+                  </Link>. Informieren Sie sich über{" "}
                   <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
                     alternative Behandlungen
                   </Link>.
@@ -907,8 +808,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          {/* Vergleichstabellen */}         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
+          <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
                 Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 10/2025
