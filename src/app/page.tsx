@@ -1,4 +1,5 @@
-"use client"
+
+ "use client"
 
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
@@ -693,677 +694,221 @@ export default function Home() {
                   BESTEN TARIF BERECHNEN
                 </Button>
               </a>
-             {/* Trust Signals hinzugefügt - genau wie in Code 1 */}
-          <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-            <Image
-              src="/images/5.png"
-              alt="Vertrauenssignal 5"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/1.png"
-              alt="Vertrauenssignal 1"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/2.png"
-              alt="Vertrauenssignal 2"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/3.png"
-              alt="Vertrauenssignal 3"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
-            <Image
-              src="/images/4.png"
-              alt="Vertrauenssignal 4"
-              width={80}
-              height={40}
-              className="opacity-100 hover:opacity-100 transition-opacity"
-            />
+              <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+                <Image
+                  src="/images/5.png"
+                  alt="Vertrauenssignal 5"
+                  width={80}
+                  height={40}
+                  className="opacity-100 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/images/1.png"
+                  alt="Vertrauenssignal 1"
+                  width={80}
+                  height={40}
+                  className="opacity-100 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/images/2.png"
+                  alt="Vertrauenssignal 2"
+                  width={80}
+                  height={40}
+                  className="opacity-100 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/images/3.png"
+                  alt="Vertrauenssignal 3"
+                  width={80}
+                  height={40}
+                  className="opacity-100 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/images/4.png"
+                  alt="Vertrauenssignal 4"
+                  width={80}
+                  height={40}
+                  className="opacity-100 hover:opacity-100 transition-opacity"
+                />
               </div>
             </div>
           </section>
-{/* Neue Inhalte oberhalb der Vergleichstabellen */}
-      <section className="py-12 sm:py-16 bg-white" id="pre-comparison-content">
-        <div className="container mx-auto px-4">
-          {/* Versicherung */}
-          <div className="mb-12" id="versicherung-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die passende Versicherung für Ihren Schutz</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Versicherungen bieten Sicherheit in jeder Lebenslage – von Haftpflicht bis Wohngebäude. Wichtig ist, Tarife zu wählen, die Ihren individuellen Bedürfnissen entsprechen. 
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Warum eine Privathaftpflichtversicherung?</h3>
-            <p className="mb-4 text-gray-700">
-              Ein kleiner Unfall kann hohe Kosten verursachen, z. B. wenn Sie versehentlich fremdes Eigentum beschädigen. Eine Privathaftpflichtversicherung deckt Schäden an Dritten ab und ist für viele ein Muss. Tarife starten bei etwa 50€ pro Jahr.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Hausrat- und Wohngebäudeversicherung</h3>
-            <p className="mb-4 text-gray-700">
-              Schutz für Ihr Zuhause ist essenziell. Die Hausratversicherung deckt Schäden an Möbeln und Wertgegenständen, z. B. bei Einbruch oder Feuer. Die Wohngebäudeversicherung sichert das Haus selbst. Achten Sie auf Zusatzoptionen wie Elementarschäden.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Tipps für die Auswahl</h3>
-            <p className="mb-4 text-gray-700">
-              Vergleichen Sie Leistungen, Selbstbeteiligungen und Kündigungsfristen. Prüfen Sie, ob der Versicherer schnelle Schadensbearbeitung bietet. Plattformen wie{" "}
-              <a
-                href="https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref="
-                target="_blank"
-                rel="noopener sponsored noreferrer"
-                className="text-green-600 hover:underline"
-              >
-                Verivox
-              </a>{" "}
-              helfen Ihnen, Tarife schnell zu vergleichen.
-            </p>
-            <Link href="/versicherungen">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                VERSICHERUNGEN VERGLEICHEN
-              </Button>
-            </Link>
-          </div>
 
-          {/* DSL */}
-          <div className="mb-12" id="dsl-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Schnelles Internet für jeden Bedarf</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Ein zuverlässiger DSL-Anschluss ist entscheidend für Homeoffice, Streaming oder Gaming. Die richtige Wahl spart Kosten und sorgt für stabiles Internet.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Geschwindigkeit und Verfügbarkeit</h3>
-            <p className="mb-4 text-gray-700">
-              Tarife mit 100 MBit/s oder mehr eignen sich für die meisten Haushalte. Prüfen Sie die Verfügbarkeit an Ihrer Adresse, da nicht überall Glasfaser verfügbar ist. Anbieter wie{" "}
-              <a href="https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                1&1
-              </a>{" "}
-              bieten oft kostenlose Router.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Kombi-Angebote</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Anbieter kombinieren DSL mit Mobilfunk oder TV-Diensten für Rabatte. Achten Sie auf versteckte Kosten, z. B. für Installation oder Hardware.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">So wechseln Sie</h3>
-            <p className="mb-4 text-gray-700">
-              Ein Anbieterwechsel ist oft einfacher, als Sie denken. Viele Anbieter übernehmen die Kündigung Ihres alten Vertrags. Nutzen Sie Vergleichsplattformen, um die besten Konditionen zu finden.
-            </p>
-            <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                DSL-TARIFE VERGLEICHEN
-              </Button>
-            </a>
-          </div>
+          {/* New Content Sections */}
+          <section className="py-12 sm:py-16 bg-white" id="content-sections">
+            <div className="container mx-auto px-4">
+              {/* Banking Section */}
+              <div className="mb-12" id="banking-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Optimieren Sie Ihre Finanzen mit dem passenden Bankkonto</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Die Wahl des richtigen Bankkontos kann Ihre Finanzen erheblich verbessern. Neben niedrigen Gebühren sind Faktoren wie Zinsen, Bonusprogramme und digitale Services entscheidend. Besuchen Sie unsere{" "}
+                  <Link href="/banking" className="text-green-600 hover:underline">
+                    Banking-Seite
+                  </Link>{" "}
+                  für einen umfassenden Vergleich.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein Girokonto</h3>
+                <p className="mb-4 text-gray-700">
+                  Ein modernes Girokonto sollte keine Kontoführungsgebühren haben, eine kostenlose Debitkarte bieten und digitale Services wie Echtzeit-Überweisungen unterstützen. Beachten Sie die Konditionen für Dispozinsen (oft 8-12% p.a.) und ob kontaktloses Bezahlen möglich ist. Plattformen wie{" "}
+                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    CHECK24
+                  </a>{" "}
+                  bieten Zugang zu Konten mit bis zu 250€ Willkommensbonus.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Tagesgeld: Maximieren Sie Ihre Ersparnisse</h3>
+                <p className="mb-4 text-gray-700">
+                  Tagesgeldkonten bieten 2025 Zinsen von bis zu 4% p.a. Bei einer Anlage von 10.000€ sind das 400€ Jahresertrag, steuerfrei bis zum Sparerpauschbetrag von 1.000€ (Einzelperson). Achten Sie auf Einlagensicherung (bis 100.000€ pro Person in der EU) und flexible Verfügbarkeit. Entdecken Sie Top-Angebote auf unserer{" "}
+                  <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
+                    Tagesgeld-Seite
+                  </Link>.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Nachhaltiges Banking: Ökologie trifft Ökonomie</h3>
+                <p className="mb-4 text-gray-700">
+                  Nachhaltige Banken investieren in grüne Projekte und verzichten auf fossile Finanzierungen. Neben ökologischen Vorteilen bieten sie oft kostenlose Konten und attraktive Zinsen. Anbieter wie{" "}
+                  <a href="https://www.tomorrow.one/de-de/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Tomorrow
+                  </a>{" "}
+                  kombinieren nachhaltiges Banking mit modernen Apps.
+                </p>
+                <Link href="/banking">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    ZUM OPTIMALEN BANKKONTO
+                  </Button>
+                </Link>
+              </div>
 
-          {/* Gas */}
-          <div className="mb-12" id="gas-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Günstige Gastarife finden</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Mit steigenden Energiekosten ist ein Gasanbieterwechsel oft lohnenswert. Ein guter Tarif kann Ihnen bis zu 500€ jährlich sparen.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Preisgarantien verstehen</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten Preisgarantien für 12 bis 24 Monate, um Sie vor Preisschwankungen zu schützen. Achten Sie auf Neukundenboni und transparente Abrechnungen.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Verbrauch berechnen</h3>
-            <p className="mb-4 text-gray-700">
-              Schauen Sie auf Ihre letzte Gasrechnung, um Ihren Jahresverbrauch zu ermitteln. So finden Sie den passenden Tarif. Plattformen wie{" "}
-              <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                CHECK24
-              </a>{" "}
-              bieten praktische Rechner.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Nachhaltigkeit im Fokus</h3>
-            <p className="mb-4 text-gray-700">
-              Biogas-Tarife fördern den Umweltschutz und sind oft nur geringfügig teurer. Prüfen Sie, ob Ihr Anbieter nachhaltige Optionen anbietet.
-            </p>
-            <a href="https://www.c24n.de/Uxudvkj" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                GASANBIETER VERGLEICHEN
-              </Button>
-            </a>
-          </div>
+              {/* Trading Section */}
+              <div className="mb-12" id="trading-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Vermögensaufbau durch intelligentes Trading</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Der Aufbau von Vermögen durch Trading ist dank moderner Plattformen einfacher denn je. Ob Aktien, ETFs oder Kryptowährungen – unsere{" "}
+                  <Link href="/trading" className="text-green-600 hover:underline">
+                    Trading-Seite
+                  </Link>{" "}
+                  zeigt Ihnen, wie Sie starten können.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Die Rentenlücke schließen</h3>
+                <p className="mb-4 text-gray-700">
+                  Die gesetzliche Rente deckt nur etwa 48% des letzten Nettoeinkommens. Bei einem Netto von 2.000€ monatlich bleibt eine Lücke von über 1.000€. Private Vorsorge durch Investitionen in ETFs oder Aktien kann diese Lücke schließen. Plattformen wie{" "}
+                  <a href="https://www.scalable.capital/de" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Scalable Capital
+                  </a>{" "}
+                  bieten kostengünstige ETF-Sparpläne ab 1€.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Investmentmöglichkeiten im Überblick</h3>
+                <p className="mb-4 text-gray-700">
+                  Neben Aktien und ETFs sind alternative Anlagen wie Rohstoffe (z.B. Gold) oder Immobilienfonds attraktiv. Kryptowährungen wie Bitcoin bieten hohe Renditen, aber auch Risiken. Plattformen wie{" "}
+                  <a href="https://link-pso.xtb.com/pso/lMDhc" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    XTB
+                  </a>{" "}
+                  ermöglichen 0% Kommission bis 100.000€ Umsatz und bieten CFDs auf Kryptowährungen.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Krypto-Sicherheit gewährleisten</h3>
+                <p className="mb-4 text-gray-700">
+                  Kryptowährungen erfordern sichere Verwahrung. Hardware-Wallets wie Ledger bieten maximalen Schutz durch Offline-Speicherung. Multisig-Wallets erhöhen die Sicherheit durch Mehrfach-Authentifizierung. Informieren Sie sich über{" "}
+                  <Link href="/trading#krypto" className="text-green-600 hover:underline">
+                    sicheres Krypto-Investing
+                  </Link>{" "}
+                  für weitere Details.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Vermögensaufbau für Einsteiger</h3>
+                <p className="mb-4 text-gray-700">
+                  Mit einem ETF-Sparplan ab 25€ monatlich können Sie langfristig Vermögen aufbauen. Der Cost-Average-Effekt gleicht Kursschwankungen aus. Nachhaltige ETFs oder KI-Fonds sind besonders gefragt. Starten Sie mit{" "}
+                  <a href="https://www.trade-republic.com/de-de" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Trade Republic
+                  </a>{" "}
+                  für provisionsfreie Sparpläne.
+                </p>
+                <Link href="/trading">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    VERMÖGEN AUFBAUEN
+                  </Button>
+                </Link>
+              </div>
 
-          {/* Handytarif */}
-          <div className="mb-12" id="handytarif-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Den idealen Handytarif finden</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Ob Wenignutzer oder Vielsurfer: Der richtige Handytarif spart Kosten und bietet die passende Leistung für Ihre Bedürfnisse.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Datenvolumen richtig wählen</h3>
-            <p className="mb-4 text-gray-700">
-              Für Streaming oder Social Media empfehlen sich Tarife mit 20 GB oder mehr. Anbieter wie{" "}
-              <a href="https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                freenet
-              </a>{" "}
-              bieten 5G-Tarife mit bis zu 40 GB.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Smartphone-Bundles</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Tarife beinhalten Smartphones wie das iPhone 17 oder Galaxy S25. Achten Sie auf die Vertragslaufzeit und Gesamtkosten des Bundles.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
-            <p className="mb-4 text-gray-700">
-              Ein Wechsel ist oft in wenigen Minuten erledigt. Viele Anbieter übernehmen die Rufnummernmitnahme kostenlos.
-            </p>
-            <a href="https://www.c24n.de/5R17qbN" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                HANDYTARIFE VERGLEICHEN
-              </Button>
-            </a>
-          </div>
+              {/* Versicherungen Section */}
+              <div className="mb-12" id="versicherungen-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Maßgeschneiderter Versicherungsschutz für Ihre Bedürfnisse</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Der richtige Versicherungsschutz bewahrt Sie vor finanziellen Risiken. Unsere{" "}
+                  <Link href="/versicherungen" className="text-green-600 hover:underline">
+                    Versicherungsseite
+                  </Link>{" "}
+                  hilft Ihnen, die besten Policen zu finden.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Privathaftpflicht: Unverzichtbarer Grundschutz</h3>
+                <p className="mb-4 text-gray-700">
+                  Eine Privathaftpflichtversicherung deckt Schäden ab, die Sie anderen zufügen. Ein Schaden (z.B. Sachbeschädigung) kann schnell Kosten von 10.000€ oder mehr verursachen. Gute Tarife ab 50€ jährlich finden Sie bei{" "}
+                  <a href="https://www.check24.de/haftpflichtversicherung/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    CHECK24
+                  </a>.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">KFZ-Versicherung: Sicherheit für Autofahrer</h3>
+                <p className="mb-4 text-gray-700">
+                  Eine Vollkaskoversicherung deckt auch Schäden durch Eigenverschulden oder Vandalismus. Beachten Sie Schadenfreiheitsrabatte (bis zu 70%) und Zusatzleistungen wie Werkstattbindung für günstigere Tarife. Vergleichen Sie bei{" "}
+                  <a href="https://www.verivox.de/kfz-versicherung/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    Verivox
+                  </a>.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Berufsunfähigkeitsversicherung: Absicherung für Erwerbstätige</h3>
+                <p className="mb-4 text-gray-700">
+                  Eine Berufsunfähigkeitsversicherung (BU) sichert Ihr Einkommen bei Arbeitsunfähigkeit. Besonders für Selbstständige und körperlich arbeitende Berufe wichtig. Prüfen Sie die Bedingungen für Auszahlung und Beitragshöhe. Informieren Sie sich auf unserer{" "}
+                  <Link href="/versicherungen#bu" className="text-green-600 hover:underline">
+                    BU-Seite
+                  </Link>.
+                </p>
+                <Link href="/versicherungen">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    PASSENDEN SCHUTZ FINDEN
+                  </Button>
+                </Link>
+              </div>
 
-          {/* Kreditkarte */}
-          <div className="mb-12" id="kreditkarte-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Die beste Kreditkarte für Ihren Alltag</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Kreditkarten bieten Flexibilität beim Einkaufen, Reisen oder im Alltag. Wählen Sie eine Karte, die zu Ihrem Lebensstil passt.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Kostenlose Kreditkarten</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten Kreditkarten ohne Jahresgebühr an, oft mit Cashback oder Bonusprogrammen. Prüfen Sie die Konditionen für Auslandsnutzung.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Reisevorteile</h3>
-            <p className="mb-4 text-gray-700">
-              Für Vielreisende eignen sich Karten mit Reiseversicherungen oder Meilenprogrammen. Achten Sie auf Gebührenfreiheit bei Fremdwährungen.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Sicherheit beim Bezahlen</h3>
-            <p className="mb-4 text-gray-700">
-              Wählen Sie Karten mit 3D-Secure und kontaktloser Zahlung für sicheres Online-Shopping. Plattformen wie{" "}
-              <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                Tarifcheck.de
-              </a>{" "}
-              zeigen Ihnen die besten Optionen.
-            </p>
-            <a href="https://www.tarifcheck.com/NMXe4cX" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                KREDITKARTEN VERGLEICHEN
-              </Button>
-            </a>
-          </div>
+              {/* Tierversicherungen Section */}
+              <div className="mb-12" id="tierversicherungen-content">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Sorgenfreier Schutz für Ihre Haustiere</h2>
+                <p className="mb-4 text-gray-700" itemProp="description">
+                  Eine Tierversicherung schützt vor hohen Tierarztkosten und sichert die Gesundheit Ihrer Tiere. Unsere{" "}
+                  <Link href="/tierversicherungen" className="text-green-600 hover:underline">
+                    Tierversicherungsseite
+                  </Link>{" "}
+                  zeigt Ihnen die besten Tarife.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Kosten von Operationen absichern</h3>
+                <p className="mb-4 text-gray-700">
+                  Operationen wie Kreuzbandrisse können 1.500-3.000€ kosten. Premium-Tarife von Anbietern wie{" "}
+                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    HanseMerkur
+                  </a>{" "}
+                  erstatten bis zu 100% der Kosten, oft ohne Wartezeit.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Vorsorge und Routineuntersuchungen</h3>
+                <p className="mb-4 text-gray-700">
+                  Moderne Tarife decken Impfungen (ca. 50-100€ pro Jahr), Wurmkuren und Zahnprophylaxe ab. Achten Sie auf flexible Erstattungsgrenzen. Entdecken Sie passende Tarife auf unserer{" "}
+                  <Link href="/tierversicherungen#vorsorge" className="text-green-600 hover:underline">
+                    Vorsorge-Seite
+                  </Link>.
+                </p>
+                <h3 className="text-xl font-semibold mb-3">Alternative Therapien für Tiere</h3>
+                <p className="mb-4 text-gray-700">
+                  Physiotherapie oder Homöopathie können bei chronischen Erkrankungen helfen. Tarife mit 80-100% Erstattung gibt es bei{" "}
+                  <a href="https://www.agila.de/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                    AGILA
+                  </a>. Informieren Sie sich über{" "}
+                  <Link href="/tierversicherungen#alternativ" className="text-green-600 hover:underline">
+                    alternative Behandlungen
+                  </Link>.
+                </p>
+                <Link href="/tierversicherungen">
+                  <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
+                    TIERARZTKOSTEN SICHERN
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </section>
 
-          {/* Mietwagen */}
-          <div className="mb-12" id="mietwagen-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Flexibel reisen mit dem richtigen Mietwagen</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Ein Mietwagen bietet Freiheit auf Reisen. Ob Urlaub oder Geschäftsreise, die richtige Wahl spart Zeit und Geld.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Fahrzeugauswahl</h3>
-            <p className="mb-4 text-gray-700">
-              Vom Kleinwagen bis zur Limousine: Wählen Sie je nach Bedarf. Achten Sie auf Inklusivleistungen wie Vollkaskoversicherung ohne Selbstbeteiligung.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Versteckte Kosten vermeiden</h3>
-            <p className="mb-4 text-gray-700">
-              Prüfen Sie Gebühren für Zusatzfahrer, Einwegmieten oder Kilometerbegrenzungen. Transparente Anbieter listen alle Kosten klar auf.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Flexible Buchung</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Anbieter erlauben kostenlose Stornierungen bis 24 Stunden vor Abholung. Buchen Sie flexibel mit Plattformen wie{" "}
-              <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                CHECK24
-              </a>.
-            </p>
-            <a href="https://www.c24n.de/FZ9nd0R" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                MIETWAGEN VERGLEICHEN
-              </Button>
-            </a>
-          </div>
-
-          {/* Ökostrom */}
-          <div className="mb-12" id="oekostrom-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Nachhaltig und günstig mit Ökostrom</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Ökostrom schont die Umwelt und kann Ihre Energiekosten senken. Finden Sie Tarife, die Nachhaltigkeit und Preis vereinen.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Vorteile von Ökostrom</h3>
-            <p className="mb-4 text-gray-700">
-              Strom aus Wind, Sonne oder Biomasse reduziert Ihren CO₂-Fußabdruck. Viele Anbieter bieten zudem Neukundenboni oder Preisgarantien.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Den richtigen Tarif finden</h3>
-            <p className="mb-4 text-gray-700">
-              Geben Sie Ihren Verbrauch und Ihre Postleitzahl ein, um regionale Angebote zu prüfen. Zertifikate wie TÜV Nord garantieren echten Ökostrom.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
-            <p className="mb-4 text-gray-700">
-              Der Wechsel zu Ökostrom ist unkompliziert und dauert nur wenige Minuten. Nutzen Sie Plattformen wie{" "}
-              <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                CHECK24
-              </a>{" "}
-              für einen reibungslosen Übergang.
-            </p>
-            <a href="https://www.c24n.de/zxy0WKh" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                ÖKOSTROM VERGLEICHEN
-              </Button>
-            </a>
-          </div>
-
-          {/* Reise */}
-          <div className="mb-12" id="reise-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Reisen zum besten Preis buchen</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Ob Last-Minute oder Frühbucher: Die richtige Reiseplanung spart Geld und sorgt für unvergessliche Erlebnisse.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Pauschalreisen</h3>
-            <p className="mb-4 text-gray-700">
-              Pauschalreisen bieten Planungssicherheit. Achten Sie auf Inklusivleistungen wie Transfers oder Verpflegung, um Überraschungen zu vermeiden.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Reiseversicherungen</h3>
-            <p className="mb-4 text-gray-700">
-              Eine Reiserücktrittsversicherung schützt vor Stornokosten bei Krankheit oder anderen unvorhergesehenen Ereignissen. Prüfen Sie die Bedingungen genau.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Flexibel buchen</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Anbieter bieten flexible Umbuchungsoptionen oder Frühbucherrabatte. Vergleichen Sie Angebote auf Plattformen wie{" "}
-              <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                CHECK24
-              </a>.
-            </p>
-            <a href="https://www.c24n.de/EieKR0E" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                REISEN VERGLEICHEN
-              </Button>
-            </a>
-          </div>
-
-          {/* Strom */}
-          <div className="mb-12" id="strom-pre-content">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stromtarife für weniger Kosten</h2>
-            <p className="mb-4 text-gray-700" itemProp="description">
-              Ein Stromtarifwechsel kann Ihre Energiekosten deutlich senken. Mit dem richtigen Anbieter sparen Sie bis zu 400€ jährlich.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Verbrauch ermitteln</h3>
-            <p className="mb-4 text-gray-700">
-              Checken Sie Ihre letzte Stromrechnung, um Ihren Jahresverbrauch zu kennen. So finden Sie den passenden Tarif für Ihren Haushalt.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Preisgarantien und Boni</h3>
-            <p className="mb-4 text-gray-700">
-              Viele Anbieter locken mit Preisgarantien oder Neukundenboni. Achten Sie auf kurze Kündigungsfristen, um flexibel zu bleiben.
-            </p>
-            <h3 className="text-xl font-semibold mb-3">Einfacher Wechsel</h3>
-            <p className="mb-4 text-gray-700">
-              Der Wechselprozess ist unkompliziert, und viele Anbieter übernehmen die Kündigung Ihres alten Vertrags. Plattformen wie{" "}
-              <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
-                CHECK24
-              </a>{" "}
-              machen es Ihnen leicht.
-            </p>
-            <a href="https://www.c24n.de/RYXPGyh" target="_blank" rel="noopener sponsored noreferrer">
-              <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700 mt-4">
-                STROMTARIFE VERGLEICHEN
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export interface Provider {
-  name: string;
-  rating: number;
-  features: string[];
-  price: string;
-  bonus: string;
-  logo: string;
-  url: string;
-}
-
-const providerData: { [key: string]: Provider[] } = {
-  versicherungen: [
-    {
-      name: "Tarifcheck.de",
-      rating: 4.5,
-      features: [
-        "Bis zu 1.000€ jährlich sparen möglich",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-      ],
-      price: "100% kostenlos",
-      bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/",
-    },
-    {
-      name: "freenet",
-      rating: 4.7,
-      features: [
-        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-        "Kostenloser Wechselservice für Mobilfunkverträge",
-        "5G-Unterstützung in allen Tarifen",
-        "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-        "Bis zu 100€ Startguthaben für Neukunden",
-        "Kostenlose Hotline für Kunden",
-        "Schnelle Vertragsabwicklung online",
-        "Testsieger für Kundenservice (connect 2025)",
-        "Zusätzliche Rabatte für junge Kunden unter 28",
-        "Umweltfreundliche Tarife mit CO₂-Kompensation",
-      ],
-      price: "ab 9,99€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "📱",
-      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
-    },
-  ],
-  tierversicherungen: [
-    {
-      name: "PetProtect",
-      rating: 4.9,
-      features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"],
-      price: "ab 8€/Monat",
-      bonus: "1. Monat gratis",
-      logo: "🐕",
-      url: "/anbieter/petprotect",
-    },
-    {
-      name: "FigoPet",
-      rating: 4.6,
-      features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"],
-      price: "ab 12€/Monat",
-      bonus: "Willkommensgeschenk",
-      logo: "🐱",
-      url: "/anbieter/figopet",
-    },
-  ],
-  banking: [
-    {
-      name: "Tarifcheck.de",
-      rating: 4.5,
-      features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
-        "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
-        "Mehrfach ausgezeichnet mit 'sehr gut'",
-        "eKomi Silber Siegel mit 4,5/5 Sternen",
-        "Über 3.194 Kundenbewertungen",
-        "Deutschlands drittgrößtes Vergleichsportal",
-        "Vertrauen von Millionen Verbrauchern",
-        "Bis zu 1.000€ jährlich sparen möglich",
-      ],
-      price: "100% kostenlos",
-      bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/",
-    },
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25",
-      ],
-      price: "0€ Kommission",
-      bonus: "Demo-Konto",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc",
-    },
-    {
-      name: "Credimaxx",
-      rating: 4.9,
-      features: [
-        "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-        "Sofortvermittlung durch erfahrene Kreditprofis",
-        "Digitaler Abschluss mit WebID oder VideoIdent",
-        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
-        "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
-        "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
-        "Vermittlung in bis zu 1 Minute",
-        "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
-        "Anschlussfinanzierungen und Immobilienkredite verfügbar",
-        "25 Jahre Erfahrung in der Kreditvermittlung",
-      ],
-      price: "ab 10,99% eff. Zins p.a.",
-      bonus: "Schnelle Auszahlung",
-      logo: "💳",
-      url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
-    },
-    {
-      name: "freenet",
-      rating: 4.7,
-      features: [
-        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
-        "Kostenloser Wechselservice für Mobilfunkverträge",
-        "5G-Unterstützung in allen Tarifen",
-        "Kombi-Vorteile mit DSL- und Festnetzanschluss",
-        "Bis zu 100€ Startguthaben für Neukunden",
-        "Kostenlose Hotline für Kunden",
-        "Schnelle Vertragsabwicklung online",
-        "Testsieger für Kundenservice (connect 2025)",
-        "Zusätzliche Rabatte für junge Kunden unter 28",
-        "Umweltfreundliche Tarife mit CO₂-Kompensation",
-      ],
-      price: "ab 9,99€/Monat",
-      bonus: "Bis zu 100€ Startguthaben",
-      logo: "📱",
-      url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
-    },
-  ],
-  trading: [
-    {
-      name: "XTB",
-      rating: 4.5,
-      features: [
-        "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
-        "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
-        "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
-        "eWallet mit virtueller Mastercard",
-        "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
-        "Kostenlose Ein- & Auszahlungen",
-        "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
-        "Platz 1 CFD-Broker 2024/25",
-      ],
-      price: "0€ Kommission",
-      bonus: "Demo-Konto",
-      logo: "📊",
-      url: "https://link-pso.xtb.com/pso/lMDhc",
-    },
-  ],
-};
-
-export default function Home() {
-  const [activeCategory, setActiveCategory] = useState("versicherungen");
-
-  return (
-    <>
-      <Head>
-        <title>Ihr Weg zu besseren Finanzentscheidungen | SmartFinanz</title>
-        <meta
-          name="description"
-          content="Vergleichen Sie über 500 Finanzprodukte: Versicherungen, Banking, DSL, Strom & mehr. Transparent, kostenlos und unabhängig – sparen Sie Zeit und Geld!"
-        />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="do7wLkAw67zaDPOv09_PXGQaI2LAKpw5cTkmkjgRe6E" />
-        <meta name="author" content="SmartFinanz" />
-        <meta charSet="UTF-8" />
-        <link rel="canonical" href="https://unser-vergleichsportal.de" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-        <link rel="alternate icon" href="/images/favicon.ico" />
-
-        <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="de-DE" />
-        <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ihr Weg zu besseren Finanzentscheidungen | SmartFinanz" />
-        <meta
-          property="og:description"
-          content="Vergleichen Sie über 500 Anbieter für Versicherungen, Banking, DSL, Strom & mehr. Kostenlos, transparent und unabhängig."
-        />
-        <meta property="og:url" content="https://unser-vergleichsportal.de" />
-        <meta property="og:site_name" content="SmartFinanz" />
-        <meta
-          property="og:image"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta
-          property="og:image:secure_url"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="627" />
-        <meta property="og:image:alt" content="SmartFinanz - Ihr Finanzvergleich" />
-        <meta property="og:locale" content="de_DE" />
-        <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-10-20T12:59:00+02:00" />
-        <meta property="article:published_time" content="2025-10-01T00:00:00+02:00" />
-        <meta property="article:modified_time" content="2025-10-20T12:59:00+02:00" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ihr Weg zu besseren Finanzentscheidungen | SmartFinanz" />
-        <meta name="twitter:description" content="Vergleichen Sie über 500 Anbieter für Versicherungen, Banking, DSL, Strom & mehr. Kostenlos, transparent und unabhängig." />
-        <meta
-          name="twitter:image"
-          content="https://unser-vergleichsportal.de/images/og/unser-vergleichsportal-og-1200x630.jpg"
-        />
-        <meta name="twitter:image:alt" content="SmartFinanz - Ihr Finanzvergleich" />
-        <meta name="twitter:site" content="@unservergleich" />
-        <meta name="twitter:creator" content="@unservergleich" />
-
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preconnect" href="https://www.awin1.com" crossOrigin="" />
-        <link rel="preconnect" href="https://link-pso.xtb.com" crossOrigin="" />
-        <link rel="preconnect" href="https://private.vodafone-affiliate.de" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
-        <link rel="dns-prefetch" href="https://www.c24n.de" />
-
-        <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "SmartFinanz – unser-vergleichsportal.de",
-              "url": "https://unser-vergleichsportal.de",
-              "logo": "https://unser-vergleichsportal.de/logo.png",
-              "brand": {
-                "@type": "Brand",
-                "name": "unser-vergleichsportal.de"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/in/unservergleichsportalde",
-                "https://x.com/unservergleich",
-                "https://medium.com/@unser-vergleichsportal.de",
-                "https://www.facebook.com/profile.php?id=61580338356626"
-              ],
-              "contactPoint": [{
-                "@type": "ContactPoint",
-                "contactType": "customer support",
-                "availableLanguage": ["de"],
-                "url": "https://unser-vergleichsportal.de/kontakt"
-              }]
-            }),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "SmartFinanz",
-              "url": "https://unser-vergleichsportal.de",
-              "inLanguage": "de",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://unser-vergleichsportal.de/suche?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Wie funktioniert ein Finanzvergleich?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Unsere Experten analysieren täglich über 500 Finanzprodukte und liefern Ihnen unabhängige, transparente Empfehlungen, die zu Ihren Bedürfnissen passen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Ist der Vergleich kostenlos?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, alle Vergleiche sind kostenlos und unverbindlich. Wir finanzieren uns durch Provisionen von Partnern, ohne dass Ihnen Kosten entstehen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Welche Produkte kann ich vergleichen?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Versicherungen, Banking, Trading, DSL, Handytarife, Strom, Gas, Ökostrom, Reisen, Kreditkarten und Mietwagen."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Wie schnell finde ich passende Angebote?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Die meisten Vergleiche sind sofort verfügbar. Komplexere Anfragen dauern maximal wenige Minuten."
-                  }
-                }
-              ]
-            }),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://unser-vergleichsportal.de/" }
-              ]
-            }),
-          }}
-        />
-      </Head>
-      <main>
-        <div className="min-h-screen bg-white">
-          <Header />
-
-          {/* Vergleichstabellen */}
-          <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
+          {/* Vergleichstabellen */}         <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
                 Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 10/2025
@@ -2233,4 +1778,3 @@ export default function Home() {
     </>
   )
 }
-        
