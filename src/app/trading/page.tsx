@@ -987,45 +987,63 @@ export default function DeFi() {
           </div>
         </div>
       </section>
-     {/* Neue LinkedIn-Sektion */}
-<section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
+     {/* Bitcoin Special Sektion */}
+<section className="py-12 sm:py-16 bg-white" id="bitcoin-special">
   <div className="container mx-auto px-4">
     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-      Aktuelle Finanztipps auf LinkedIn
+      Bitcoin Special: Ihr Weg zur digitalen Wertspeicherung
     </h2>
     <p className="text-base sm:text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
-      Entdecken Sie unsere neuesten Finanztipps und Einblicke auf unserem LinkedIn-Profil. Von Bitcoin-Trading bis hin zu Marktanalysen – bleiben Sie informiert!
+      Tauchen Sie ein in unsere umfassende Serie über Bitcoin – von seiner Rolle als digitales Gold über die Technologie der Blockchain bis hin zu makroökonomischen Perspektiven und praktischen Spartipps.
     </p>
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {[
         {
-          title: "Bitcoin ist das digitale Gold – aber warum?",
-          description: "Bitcoin wird oft als „digitales Gold“ bezeichnet. Wir erklären die einzigartigen Eigenschaften von Bitcoin, die ihn zu einem Wertspeicher machen. 🪙 #Bitcoin #Krypto #SmartFinanz",
+          title: "Bitcoin ist das digitale Gold. Aber warum?",
+          description: "Entdecken Sie, warum Bitcoin als Wertspeicher Gold übertrumpft – durch absolute Knappheit und digitale Übertragbarkeit.",
           url: "https://www.linkedin.com/pulse/ausgabe-1-bitcoin-ist-das-digitale-gold-aber-warum-dennis-moskal-grbrf",
           date: "23. Oktober 2025",
         },
         {
+          title: "Der Architekt der Dezentralität: Was ist eine Blockchain?",
+          description: "Verstehen Sie, wie die Blockchain Bitcoins Knappheit und Zensurresistenz durch Proof-of-Work und Nodes sichert.",
+          url: "https://www.linkedin.com/pulse/ausgabe-2-der-architekt-dezentralit%C3%A4t-ist-eine-dennis-moskal-9wa8f",
+          date: "23. Oktober 2025",
+        },
+        {
           title: "Die Rolle von Geld: Warum Bitcoin das beste Gut ist",
-          description: "Geld hat sich im Laufe der Zeit verändert. Erfahren Sie, warum Bitcoin als dezentrales, knappes und sicheres Gut eine Schlüsselrolle in der Zukunft des Finanzsystems spielen könnte. 💸 #Bitcoin #Finanzen #SmartFinanz",
+          description: "Erfahren Sie, warum Bitcoin als Hard Money die Schwächen des Fiat-Systems überwindet und Kaufkraft sichert.",
           url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
           date: "23. Oktober 2025",
         },
         {
+          title: "MicroStrategy vs. Bitcoin: Wie funktioniert $MSTR?",
+          description: "Analyse der genialen Kapitalmarktstrategie von MicroStrategy, die $MSTR zur Bitcoin-Akkumulationsmaschine macht.",
+          url: "https://www.linkedin.com/pulse/ausgabe-4-microstrategy-vs-bitcoin-wie-funktioniert-mstr-moskal-ihnef",
+          date: "23. Oktober 2025",
+        },
+        {
           title: "Trump und der Bitcoin: Wird BTC zur Reserve in den USA?",
-          description: "Könnte Bitcoin eine strategische Reserve für die USA werden? Wir analysieren die politischen Entwicklungen und die möglichen Auswirkungen auf den Kryptomarkt. 🇺🇸 #Bitcoin #Politik #SmartFinanz",
+          description: "Wie Trumps Politik Bitcoin zur strategischen Reserve der USA machen könnte und was das bedeutet.",
           url: "https://www.linkedin.com/pulse/ausgabe-5-trump-und-der-bitcoin-wird-zur-reserve-usa-dennis-moskal-i4nbf",
           date: "23. Oktober 2025",
         },
         {
+          title: "Bin ich zu spät für Bitcoin? 5 Gründe, warum wir sagen: Nein!",
+          description: "Warum Bitcoins Marktkapitalisierung zeigt, dass wir noch am Anfang stehen – und wie Sie profitieren können.",
+          url: "https://www.linkedin.com/pulse/ausgabe-6-bin-ich-zu-sp%C3%A4t-f%C3%BCr-bitcoin-5-gr%C3%BCnde-warum-wir-moskal-ctfcf",
+          date: "23. Oktober 2025",
+        },
+        {
           title: "Echter Insidertipp: Die Bitcoin-Kostenfalle einfach erklärt",
-          description: "Beim Bitcoin-Trading lauern versteckte Kosten. Wir zeigen Ihnen, wie Sie die Kostenfalle vermeiden und clever investieren! 💡 #Bitcoin #Trading #SmartFinanz",
+          description: "Vermeiden Sie hohe Gebühren durch strategisches UTXO-Management beim Bitcoin-Sparen.",
           url: "https://www.linkedin.com/pulse/7echter-insidertipp-die-bitcoin-kostenfalle-einfach-erkl%C3%A4rt-moskal-7i1bf",
           date: "23. Oktober 2025",
         },
         {
-          title: "Bin ich zu spät für Bitcoin? 5 Gründe, warum wir sagen: Nein!",
-          description: "Denkst du, der Bitcoin-Zug ist abgefahren? Wir geben dir 5 Gründe, warum es sich immer noch lohnt, in Bitcoin zu investieren! 🚀 #Bitcoin #Investieren #SmartFinanz",
-          url: "https://www.linkedin.com/pulse/ausgabe-6-bin-ich-zu-sp%C3%A4t-f%C3%BCr-bitcoin-5-gr%C3%BCnde-warum-wir-moskal-ctfcf",
+          title: "Bitcoin als disruptive Kraft: Unendliches Wachstum ohne Schaden",
+          description: "Warum Bitcoins reiner monetärer Zweck die Wirtschaft entlastet und es einzigartig macht.",
+          url: "https://www.linkedin.com/pulse/8-bitcoin-als-disruptive-kraft-warum-es-das-einzige-asset-moskal-btacf",
           date: "23. Oktober 2025",
         },
       ].map((post, index) => (
@@ -1065,7 +1083,7 @@ export default function DeFi() {
     </div>
     <div className="text-center mt-8">
       <a
-        href="https://www.linkedin.com/company/smartfinanz"
+        href="https://www.linkedin.com/in/unservergleichsportalde"
         target="_blank"
         rel="noopener noreferrer nofollow"
         aria-label="Besuchen Sie unser LinkedIn-Profil für weitere Beiträge"
