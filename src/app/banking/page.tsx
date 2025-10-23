@@ -920,7 +920,97 @@ export default function Banking() {
           </div>
         </div>
       </section>
-
+{/* Neue LinkedIn-Sektion */}
+<section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+      Aktuelle Finanztipps auf LinkedIn
+    </h2>
+    <p className="text-base sm:text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+      Entdecken Sie unsere neuesten Finanztipps und Einblicke auf unserem LinkedIn-Profil. Von Bitcoin-Analysen über nachhaltige Investments bis hin zu Rentenvorsorge-Strategien – bleiben Sie informiert!
+    </p>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Die Rolle von Geld: Warum Bitcoin das beste Gut für das 21. Jahrhundert ist",
+          description: "Bitcoin als ökonomische Gegenbewegung: Die Wiederherstellung der Kaufkraft und die Schwächen des Fiat-Geldsystems beleuchtet.",
+          url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
+          date: "23. Oktober 2025",
+        },
+        {
+          title: "Nachhaltige Kapitalanlagen: Rendite mit gutem Gewissen im Jahr 2025!",
+          description: "ESG-ETFs bieten bis zu 14% Rendite und fördern Klimaschutz. Warum jetzt in grüne Anlagen investieren?",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_nachhaltigeinvestments-esg-kapitalanlagen2025-activity-7377372911860363266-xbkZ",
+          date: "3. Oktober 2025",
+        },
+        {
+          title: "Deutschlands Rechenzentrums-Bremse: Risiko für KI & Wettbewerbsfähigkeit",
+          description: "Ohne leistungsstarke Rechenzentren läuft nichts. Warum Deutschland ins Hintertreffen gerät und was dagegen tun werden muss.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_digitalisierung-ki-infrastruktur-activity-7378304599587323904-Jugq",
+          date: "3. Oktober 2025",
+        },
+        {
+          title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau 2025",
+          description: "Wie clevere Anleger die Haltefrist, Schenkungen und smarte Strategien nutzen, um legal Steuern zu optimieren.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
+          date: "10. Oktober 2025",
+        },
+        {
+          title: "Die stille Krise: Rentenlücke 2025 – Ursachen, Folgen und ein 3-Stufen-Plan",
+          description: "Ein systematischer Leitfaden, wie Sie die Rentenlücke erkennen, verstehen und Schritt für Schritt schließen können.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_die-stille-krise-rentenl%C3%BCcke-2025-ursachen-activity-7375163950973394944-CKPw",
+          date: "23. September 2025",
+        },
+      ].map((post, index) => (
+        <Card
+          key={index}
+          className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full"
+        >
+          <CardHeader className="pb-4 flex-shrink-0">
+            <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 break-words">
+              {post.title}
+            </CardTitle>
+            <p className="text-sm text-gray-500">{post.date}</p>
+          </CardHeader>
+          <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
+              {post.description}
+            </p>
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="mt-auto"
+              aria-label={`LinkedIn-Beitrag lesen: ${post.title}`}
+            >
+              <Button
+                className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              >
+                Beitrag lesen
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+    <div className="text-center mt-8">
+      <a
+        href="https://www.linkedin.com/in/unservergleichsportalde"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        aria-label="Besuchen Sie unser LinkedIn-Profil für weitere Beiträge"
+      >
+        <Button
+          className="bg-green-600 text-white font-medium text-sm sm:text-base px-6 py-3 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+        >
+          <Linkedin className="h-5 w-5 mr-2" aria-hidden="true" />
+          Mehr Tipps auf LinkedIn entdecken
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Baufinanzierung für Ihr Eigenheim</h2>
