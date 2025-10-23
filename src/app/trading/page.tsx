@@ -987,6 +987,89 @@ export default function DeFi() {
           </div>
         </div>
       </section>
+      {/* New LinkedIn Posts Section */}
+          <section id="linkedin-posts" className="py-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Unsere Insights auf LinkedIn</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card>
+                <CardHeader>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    <a href="https://www.linkedin.com/pulse/ausgabe-1-bitcoin-ist-das-digitale-gold-aber-warum-dennis-moskal-grbrf" target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
+                      Bitcoin ist das digitale Gold – aber warum?
+                    </a>
+                  </h2>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Bitcoin wird oft als „digitales Gold“ bezeichnet. Aber warum? Wir erklären die einzigartigen Eigenschaften von Bitcoin, die ihn zu einem Wertspeicher machen, und warum er in der Finanzwelt so viel Aufmerksamkeit erregt. 🪙 #Bitcoin #Krypto #SmartFinanz
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    <a href="https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f" target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
+                      Die Rolle von Geld: Warum Bitcoin das beste Gut ist
+                    </a>
+                  </h2>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Geld hat sich im Laufe der Zeit verändert. Wir beleuchten, warum Bitcoin als dezentrales, knappes und sicheres Gut eine Schlüsselrolle in der Zukunft des Finanzsystems spielen könnte. 💸 #Bitcoin #Finanzen #SmartFinanz
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    <a href="https://www.linkedin.com/pulse/ausgabe-5-trump-und-der-bitcoin-wird-zur-reserve-usa-dennis-moskal-i4nbf" target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
+                      Trump und der Bitcoin: Wird BTC zur Reserve in den USA?
+                    </a>
+                  </h2>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Könnte Bitcoin eine strategische Reserve für die USA werden? Wir analysieren die politischen Entwicklungen und die möglichen Auswirkungen auf den Kryptomarkt. 🇺🇸 #Bitcoin #Politik #SmartFinanz
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    <a href="https://www.linkedin.com/pulse/7echter-insidertipp-die-bitcoin-kostenfalle-einfach-erkl%C3%A4rt-moskal-7i1bf" target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
+                      Echter Insidertipp: Die Bitcoin-Kostenfalle einfach erklärt
+                    </a>
+                  </h2>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Beim Bitcoin-Trading lauern versteckte Kosten. Wir zeigen dir, wie du die Kostenfalle vermeidest und clever investierst! 💡 #Bitcoin #Trading #SmartFinanz
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    <a href="https://www.linkedin.com/pulse/ausgabe-6-bin-ich-zu-sp%C3%A4t-f%C3%BCr-bitcoin-5-gr%C3%BCnde-warum-wir-moskal-ctfcf" target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
+                      Bin ich zu spät für Bitcoin? 5 Gründe, warum wir sagen: Nein!
+                    </a>
+                  </h2>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Denkst du, der Bitcoin-Zug ist abgefahren? Wir geben dir 5 Gründe, warum es sich immer noch lohnt, in Bitcoin zu investieren! 🚀 #Bitcoin #Investieren #SmartFinanz
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="text-center mt-8">
+              <Button asChild className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold transition-all duration-300 ease-in-out shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-blue-600 hover:to-blue-700">
+                <Link href="https://www.linkedin.com/company/smartfinanz" target="_blank" rel="noopener noreferrer">
+                  Besuchen Sie unser LinkedIn-Profil
+                </Link>
+              </Button>
+            </div>
+          </section>
       {/* Guide + Versicherungen-CTA */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
