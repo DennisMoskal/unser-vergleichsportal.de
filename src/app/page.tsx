@@ -1175,7 +1175,85 @@ export default function Home() {
               </div>
             </div>
           </section>
-
+{/* Neue LinkedIn-Sektion */}
+<section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+      Aktuelle Finanztipps von LinkedIn
+    </h2>
+    <p className="text-base sm:text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+      Entdecken Sie unsere neuesten Finanztipps und Einblicke direkt von unserem LinkedIn-Profil. Von Dienstwagen-Optimierung über Sparstrategien bis hin zu Krypto-Tipps – bleiben Sie informiert!
+    </p>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Effiziente Dienstwagenpolitik: Jetzt optimieren",
+          description: "Nutzen Sie die Dienstwagenpolitik als strategischen Hebel für Kostenoptimierung und Mitarbeiterbindung.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_dienstwagen-mobilitaeut-hrstrategie-activity-7386498451917852672-3UGb",
+          date: "23. Oktober 2025",
+        },
+        {
+          title: "Finanzvergleich 2025: Bis zu 800€ sparen",
+          description: "Erfahren Sie, wie Sie durch strategische Finanzvergleiche jährlich 400–800€ sparen können.",
+          url: "https://www.linkedin.com/pulse/der-ultimative-leitfaden-zum-finanzvergleich-2025-wie-dennis-moskal-xljuf",
+          date: "23. September 2025",
+        },
+        {
+          title: "Bitcoin steuerfrei: Der 365-Tage-Trick",
+          description: "Bauen Sie Vermögen mit Bitcoin legal steuerfrei auf – dank § 23 EStG. So geht’s!",
+          url: "https://www.linkedin.com/pulse/steuer-geheimtipp-wie-sie-mit-bitcoin-legal-100-verm%C3%B6gen-moskal-djqvf",
+          date: "23. September 2025",
+        },
+      ].map((post, index) => (
+        <Card
+          key={index}
+          className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full"
+        >
+          <CardHeader className="pb-4 flex-shrink-0">
+            <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 break-words">
+              {post.title}
+            </CardTitle>
+            <p className="text-sm text-gray-500">{post.date}</p>
+          </CardHeader>
+          <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
+              {post.description}
+            </p>
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="mt-auto"
+              aria-label={`LinkedIn-Beitrag lesen: ${post.title}`}
+            >
+              <Button
+                className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              >
+                Beitrag lesen
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+    <div className="text-center mt-8">
+      <a
+        href="https://www.linkedin.com/in/unservergleichsportalde"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        aria-label="Besuchen Sie unser LinkedIn-Profil für weitere Beiträge"
+      >
+        <Button
+          className="bg-green-600 text-white font-medium text-sm sm:text-base px-6 py-3 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+        >
+          <Linkedin className="h-5 w-5 mr-2" aria-hidden="true" />
+          Mehr Tipps auf LinkedIn entdecken
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>
           {/* Kundenbewertungen */}
           <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
             <div className="container mx-auto px-4">
