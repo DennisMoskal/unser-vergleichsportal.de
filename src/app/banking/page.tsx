@@ -924,7 +924,7 @@ export default function Banking() {
 <section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
   <div className="container mx-auto px-4">
     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-      Aktuelle Finanztipps auf LinkedIn
+      Aktuelle Finanztipps und Artikel
     </h2>
     <p className="text-base sm:text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
       Entdecken Sie unsere neuesten Finanztipps und Einblicke auf unserem LinkedIn-Profil. Von Bitcoin-Analysen über nachhaltige Investments bis hin zu Rentenvorsorge-Strategien – bleiben Sie informiert!
