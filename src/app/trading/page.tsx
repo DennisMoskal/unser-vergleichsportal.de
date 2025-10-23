@@ -987,7 +987,7 @@ export default function DeFi() {
           </div>
         </div>
       </section>
-   {/* Bitcoin Special Sektion */}
+  {/* Bitcoin Special Sektion */}
 <section className="py-12 sm:py-16 bg-white" id="bitcoin-special">
   <div className="container mx-auto px-4">
     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
@@ -1016,7 +1016,36 @@ export default function DeFi() {
           url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
           date: "23. Oktober 2025",
         },
-        // ... die anderen Artikel-Objekte hier
+        {
+          title: "MicroStrategy vs. Bitcoin: Wie funktioniert $MSTR?",
+          description: "Analyse der genialen Kapitalmarktstrategie von MicroStrategy, die $MSTR zur Bitcoin-Akkumulationsmaschine macht.",
+          url: "https://www.linkedin.com/pulse/ausgabe-4-microstrategy-vs-bitcoin-wie-funktioniert-mstr-moskal-ihnef",
+          date: "23. Oktober 2025",
+        },
+        {
+          title: "Trump und der Bitcoin: Wird BTC zur Reserve in den USA?",
+          description: "Wie Trumps Politik Bitcoin zur strategischen Reserve der USA machen könnte und was das bedeutet.",
+          url: "https://www.linkedin.com/pulse/ausgabe-5-trump-und-der-bitcoin-wird-zur-reserve-usa-dennis-moskal-i4nbf",
+          date: "23. Oktober 2025",
+        },
+        {
+          title: "Bin ich zu spät für Bitcoin? 5 Gründe, warum wir sagen: Nein!",
+          description: "Warum Bitcoins Marktkapitalisierung zeigt, dass wir noch am Anfang stehen – und wie Sie profitieren können.",
+          url: "https://www.linkedin.com/pulse/ausgabe-6-bin-ich-zu-sp%C3%A4t-f%C3%BCr-bitcoin-5-gr%C3%BCnde-warum-wir-moskal-ctfcf",
+          date: "23. Oktober 2025",
+        },
+        {
+          title: "Echter Insidertipp: Die Bitcoin-Kostenfalle einfach erklärt",
+          description: "Vermeiden Sie hohe Gebühren durch strategisches UTXO-Management beim Bitcoin-Sparen.",
+          url: "https://www.linkedin.com/pulse/7echter-insidertipp-die-bitcoin-kostenfalle-einfach-erkl%C3%A4rt-moskal-7i1bf",
+          date: "23. Oktober 2025",
+        },
+        {
+          title: "Bitcoin als disruptive Kraft: Unendliches Wachstum ohne Schaden",
+          description: "Warum Bitcoins reiner monetärer Zweck die Wirtschaft entlastet und es einzigartig macht.",
+          url: "https://www.linkedin.com/pulse/8-bitcoin-als-disruptive-kraft-warum-es-das-einzige-asset-moskal-btacf",
+          date: "23. Oktober 2025",
+        },
       ].map((post, index) => (
         <Card
           key={index}
@@ -1070,7 +1099,7 @@ export default function DeFi() {
       </a>
     </div>
   </div>
-</section>  
+</section>
       {/* Guide + Versicherungen-CTA */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
