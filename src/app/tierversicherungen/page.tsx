@@ -759,15 +759,15 @@ export default function Tierversicherungen() {
           className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full"
         >
           <CardHeader className="pb-4 flex-shrink-0">
-            <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 break-words">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 break-words">
               {post.title}
-            </CardTitle>
+            </h3>
             <p className="text-sm text-gray-500">{post.date}</p>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
+            <h4 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
               {post.description}
-            </p>
+            </h4>
             <a
               href={post.url}
               target="_blank"
