@@ -987,7 +987,7 @@ export default function DeFi() {
           </div>
         </div>
       </section>
-  {/* Bitcoin Special Sektion */}
+ {/* Bitcoin Special Sektion */}
 <section className="py-12 sm:py-16 bg-white" id="bitcoin-special">
   <div className="container mx-auto px-4">
     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
@@ -1058,9 +1058,9 @@ export default function DeFi() {
             <p className="text-sm text-gray-500">{post.date}</p>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
+            <h4 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
               {post.description}
-            </p>
+            </h4>
             <a
               href={post.url}
               target="_blank"
