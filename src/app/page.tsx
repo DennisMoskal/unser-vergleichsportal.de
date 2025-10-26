@@ -1252,9 +1252,9 @@ export default function Home() {
             <p className="text-sm text-gray-500">{post.date}</p>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
+            <h4 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
               {post.description}
-            </p>
+            </h4>
             <a
               href={post.url}
               target="_blank"
