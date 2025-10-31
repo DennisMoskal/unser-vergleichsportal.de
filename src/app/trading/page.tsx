@@ -1204,13 +1204,13 @@ export default function DeFi() {
                 Tokens.
               </li>
             </ul>
-            <h4 class (…) className="text-base sm:text-lg font-semibold mb-2 text-green-600">Risiken</h4>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
-              <li className="flex items-center">
-                <Check className="mr-2 h-4 w-4 text-green-600" />
-                Nutzen Sie vertrauenswürdige Bridges und prüfen Sie Smart-Contract-Audits, um Hacks zu vermeiden.
-              </li>
-            </ul>
+            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Risiken</h4>
+<ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
+  <li className="flex items-center">
+    <Check className="mr-2 h-4 w-4 text-green-600" />
+    Nutzen Sie vertrauenswürdige Bridges und prüfen Sie Smart-Contract-Audits, um Hacks zu vermeiden.
+  </li>
+</ul>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
               Spartipp: Kombinieren Sie Bridging mit Plattformen für sicheres Trading nach dem Transfer.
             </p>
