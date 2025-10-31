@@ -1028,7 +1028,7 @@ export default function Home() {
                     ],
                     price: "ab 9,99€/Monat",
                     bonus: "Bis zu 50€ Startguthaben",
-                    logo | "Globe",
+                    logo : "Globe",
                     url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=",
                   },
                   {
