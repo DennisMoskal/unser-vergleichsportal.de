@@ -454,9 +454,9 @@ export default function Banking() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
 
-        {/* --- Open Graph --- */}
+      {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich" />
+        <meta property="og:title" content="Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich" />
         <meta
           property="og:description"
           content="Finden Sie die besten Girokonten, günstige Kredite & sichere Tagesgeldkonten 2025. Banking vergleichen, sparen & von Prämien profitieren."
@@ -473,7 +473,7 @@ export default function Banking() {
 
         {/* --- Twitter --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Beste Bank Oktober 2025 | Girokonto, Kredite & Tagesgeld Vergleich" />
+        <meta name="twitter:title" content="Beste Bank November 2025 | Girokonto, Kredite & Tagesgeld Vergleich" />
         <meta
           name="twitter:description"
           content="Kostenlos Girokonto eröffnen, günstigen Kredit finden oder Top-Tagesgeld sichern. Banking-Vergleich 2025 mit Testsiegern."
@@ -518,7 +518,7 @@ export default function Banking() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich",
+              "name": "Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich",
               "url": "https://unser-vergleichsportal.de/banking",
               "description":
                 "Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen.",
@@ -621,8 +621,294 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich</h1>
+          <div className="max-w-4xl mx-auto text-left">
+            <h3 className="text-lg font-bold mb-2 text-green-600">Grundausstattung für Finanzen</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kostenloses Girokonto für Alltag</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Tagesgeldkonto für Notreserve (3–6 Monatsgehälter)</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Kreditkarte ohne Jahresgebühr für Reisen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Dispozinsen unter 7% vereinbaren</li>
+            </ul>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Vermögensaufbau und Absicherung</h3>
+            <ul className="list-none text-base mb-6">
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> ETF-Sparplan für langfristigen Vermögensaufbau</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Depot mit kostenlosen ETF-Sparplänen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Alte Kredite auf bessere Konditionen prüfen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Regelmäßig Konditionen vergleichen</li>
+              <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Eigenheim absichern: Wohngebäude-, Hausrat- &amp; Haftpflicht sinnvoll kombinieren</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+<footer className="bg-gray-900 text-white py-8 sm:py-12">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
+      <div className="col-span-2 md:col-span-1">
+        <div className="flex flex-col items-start mb-4">
+          <SmartFinanzLogo className="text-xl" />
+          <a
+            href="https://www.linkedin.com/in/unservergleichsportalde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4"
+          >
+            <Button
+              className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              aria-label="Besuchen Sie unser LinkedIn-Profil (externer Link)"
+            >
+              <Linkedin className="mr-2 h-4 w-4" />
+              LinkedIn
+            </Button>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link
+              href="/banking"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Banking"
+            >
+              Banking
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/tierversicherungen"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Haustierversicherung"
+            >
+              Haustierversicherung
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/trading"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Trading"
+            >
+              Trading
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/versicherungen"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Versicherungen"
+            >
+              Versicherungen
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
+        <div className="grid grid-cols-2 gap-4">
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+            <li>
+              <a
+                href="https://www.c24n.de/ducwCtq"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="DSL Vergleich (externer Link)"
+              >
+                DSL
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/Uxudvkj"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Gasvergleich (externer Link)"
+              >
+                Gas
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/5R17qbN"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Handytarif vergleichen (externer Link)"
+              >
+                Handytarif
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tarifcheck.com/NMXe4cX"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Kreditkarten vergleichen (externer Link)"
+              >
+                Kreditkarte
+              </a>
+            </li>
+          </ul>
+          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+            <li>
+              <a
+                href="https://www.c24n.de/FZ9nd0R"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Mietwagen vergleichen (externer Link)"
+              >
+                Mietwagen
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/zxy0WKh"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Ökostrom vergleichen (externer Link)"
+              >
+                Ökostrom
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/EieKR0E"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Reise vergleichen (externer Link)"
+              >
+                Reise
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.c24n.de/RYXPGyh"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                aria-label="Stromvergleich (externer Link)"
+              >
+                Strom
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link
+              href="/karriere"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Karriere"
+            >
+              Karriere
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/kontakt"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/partnerprogramme"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Partnerprogramm"
+            >
+              Partnerprogramm
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/ueber-uns"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Über uns"
+            >
+              Über uns
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+          <li>
+            <Link
+              href="/agb"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="AGB"
+            >
+              AGB
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/cookie-richtlinie"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Cookie-Richtlinie"
+            >
+              Cookie-Richtlinie
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/datenschutz"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Datenschutz"
+            >
+              Datenschutz
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/impressum"
+              rel="nofollow"
+              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+              aria-label="Impressum"
+            >
+              Impressum
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+      <p className="text-sm sm:text-base text-gray-400 mb-4">
+        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+      </p>
+      <Link href="/" aria-label="Zurück zur Startseite">
+        <Button
+          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+        >
+          Zur Startseite
+        </Button>
+      </Link>
+    </div>
+  </div>
+</footer> mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich</h1>
             <p className="text-base sm:text-lg mb-8">
               Wir haben für Sie die besten Anbieter gefunden und die Top-Empfehlungen zusammengestellt. Vergleichen Sie mit unseren Rechnern über 300 Finanzprodukte kostenlos und sparen Sie bis zu 1.000€ jährlich. Unsere Testsieger bieten Ihnen erstklassige Konditionen und attraktive Boni.
             </p>
@@ -756,7 +1042,7 @@ export default function Banking() {
               </a>
             </div>
             <h2 className="text-3xl font-bold mb-6">Informationen über das Tagesgeldkonto als sichere Kapitalanlage</h2>
-            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen 2025</h3>
+            <h3 className="text-lg font-bold mb-2 text-green-600">Aktuelle Tagesgeldzinsen November 2025</h3>
             <ul className="list-none text-base mb-6">
               <li className="flex items-center"><Check className="mr-2 h-4 w-4 text-green-600" /> Die verglichenen Tagesgeldkonten bieten derzeit bis zu 4,00% Zinsen und sind mit 100% Einlagensicherung abgesichert. Täglich verfügbar, ohne Laufzeitbindung – ideal für Notreserven und kurzfristige Geldanlage.</li>
             </ul>
@@ -865,7 +1151,7 @@ export default function Banking() {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Top-Empfehlungen: Alle Banken im Vergleich 10/2025</h2>
+          <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center text-gray-900">Top-Empfehlungen: Alle Banken im Vergleich 11/2025</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {providerData.map((provider) => (
               <Card key={provider.name} className="hover:shadow-lg transition-shadow border-2 hover:border-green-200 flex flex-col h-full relative">
@@ -935,25 +1221,25 @@ export default function Banking() {
           title: "Die Rolle von Geld: Warum Bitcoin das beste Gut für das 21. Jahrhundert ist",
           description: "Bitcoin als ökonomische Gegenbewegung: Die Wiederherstellung der Kaufkraft und die Schwächen des Fiat-Geldsystems beleuchtet.",
           url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Nachhaltige Kapitalanlagen: Rendite mit gutem Gewissen im Jahr 2025!",
           description: "ESG-ETFs bieten bis zu 14% Rendite und fördern Klimaschutz. Warum jetzt in grüne Anlagen investieren?",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_nachhaltigeinvestments-esg-kapitalanlagen2025-activity-7377372911860363266-xbkZ",
-          date: "3. Oktober 2025",
+          date: "3. November 2025",
         },
         {
           title: "Deutschlands Rechenzentrums-Bremse: Risiko für KI & Wettbewerbsfähigkeit",
           description: "Ohne leistungsstarke Rechenzentren läuft nichts. Warum Deutschland ins Hintertreffen gerät und was dagegen tun werden muss.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_digitalisierung-ki-infrastruktur-activity-7378304599587323904-Jugq",
-          date: "3. Oktober 2025",
+          date: "3. November 2025",
         },
         {
           title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau 2025",
           description: "Wie clevere Anleger die Haltefrist, Schenkungen und smarte Strategien nutzen, um legal Steuern zu optimieren.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
-          date: "10. Oktober 2025",
+          date: "10. November 2025",
         },
         {
           title: "Die stille Krise: Rentenlücke 2025 – Ursachen, Folgen und ein 3-Stufen-Plan",
