@@ -7,7 +7,6 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Head from "next/head"
 import Image from "next/image"
-
 // SmartFinanzLogo-Komponente
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -25,12 +24,10 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
     </Link>
   )
 }
-
 // Wiederverwendbare Header-Komponente
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("versicherungen")
-
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
@@ -38,14 +35,12 @@ const Header: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
-
   useEffect(() => {
     const hash = window.location.hash.substring(1)
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash)
     }
   }, [])
-
   return (
     <>
       <header className="bg-white shadow-sm relative border-b">
@@ -253,7 +248,6 @@ const Header: React.FC = () => {
     </>
   )
 }
-
 const providerData = {
   trading: [
     {
@@ -273,7 +267,7 @@ const providerData = {
       ],
       price: "0€ Kontoeröffnung",
       bonus: "Kostenloser Start",
-      logo: "📈",
+      logo: "chart",
       url: "https://de.tradingview.com/?aff_id=156504",
       metaTitle: "TradingView: Beste Plattform für Krypto- und Aktien-Trading 2025",
       metaDescription: "TradingView bietet Supercharts, Top Screener und Social Trading für über 100 Mio. Nutzer. Starten Sie kostenlos mit Aktien, Krypto, Forex und Futures!",
@@ -296,7 +290,7 @@ const providerData = {
       ],
       price: "1% Spread bei Krypto",
       bonus: "Kostenloses Demo-Konto",
-      logo: "🌐",
+      logo: "globe",
       url: "https://med.etoro.com/B19298_A126856_TClick.aspx",
       metaTitle: "eToro Trading: Top Plattform für Bitcoin handeln und Social Trading 2025",
       metaDescription: "eToro bietet Social Trading, Bitcoin handeln mit niedrigen Gebühren, über 70 Kryptowährungen und 3.000+ Aktien/ETFs. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -319,7 +313,7 @@ const providerData = {
       ],
       price: "0€ Kommission",
       bonus: "Kostenlose Kontoeröffnung",
-      logo: "📊",
+      logo: "bar-chart",
       url: "https://link-pso.xtb.com/pso/lMDhc",
       metaTitle: "XTB Trading: Testsieger CFD-Broker 2025",
       metaDescription: "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!",
@@ -342,7 +336,7 @@ const providerData = {
       ],
       price: "0.1% Taker Fee",
       bonus: "Bis zu 10.000$ Bonus",
-      logo: "🐂",
+      logo: "bull",
       url: "https://go.blackbull.com/visit/?bta=42835&brand=blackbull",
       metaTitle: "BlackBull Trading: Professionelle Handelsplattform mit 26.000+ Instrumenten",
       metaDescription: "BlackBull Markets bietet professionelles Trading mit über 26.000 Instrumenten, niedrigen Spreads und schneller Ausführung. Jetzt mit bis zu 10.000$ Bonus handeln!",
@@ -364,7 +358,7 @@ const providerData = {
       ],
       price: "0,1% Taker Fee",
       bonus: "5% Einzahlungs-Coupon",
-      logo: "🔒",
+      logo: "lock",
       url: "https://weex.com/register?vipCode=0pika",
       metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
       metaDescription: "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!",
@@ -385,9 +379,9 @@ const providerData = {
       ],
       price: "0,1% Taker Fee",
       bonus: "Willkommensbonus bis zu 5.000 USDT",
-      logo: "⚡",
+      logo: "lightning",
       url: "https://www.bybit.eu/invite?ref=RME6DV2",
-      metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage 2025",
+      metaTitle: "Bybit Trading:: Krypto-Trading mit hohem Leverage 2025",
       metaDescription: "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!",
       isTopRecommendation: true
     },
@@ -401,14 +395,14 @@ const providerData = {
         "50% Cashback Bonus bei Einzahlung ab $500",
         "Metatrader 4, Metatrader 5 & AppTrader",
         "Ultra-schnelle Ausführung unter 15ms",
-        "Reguliert durch SLIBC und FSCA",
+        "“Reguliert durch SLIBC und FSCA",
         "Segregierte Konten bei AA-Rated Bank",
         "Kostenloses Demo-Konto für risikofreies Trading",
         "Erweiterte Tools: Premium Economic Calendar, AI Market Buzz"
       ],
       price: "0.0 Pips Spread",
       bonus: "50% Cashback Bonus",
-      logo: "💸",
+      logo: "money",
       url: "https://www.monetamarkets.com/?affid=Nzc0MjU0OA==",
       metaTitle: "Moneta Markets: Top Online Trading Plattform 2025",
       metaDescription: "Moneta Markets bietet über 1000 Instrumente, Spreads ab 0.0 Pips, bis zu 1000:1 Leverage und 50% Cashback Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -431,7 +425,7 @@ const providerData = {
       ],
       price: "0.0 Pips Spread",
       bonus: "50% Einzahlungsbonus",
-      logo: "🏎️",
+      logo: "car",
       url: "https://go.vantagefx.com/visit/?bta=65953&brand=vantagefx",
       metaTitle: "Vantage Trading: Top CFD-Broker für Forex & Krypto 2025",
       metaDescription: "Vantage bietet über 1.000 CFDs, Spreads ab 0.0 Pips, bis zu 500:1 Leverage und einen 50% Einzahlungsbonus. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -454,7 +448,7 @@ const providerData = {
       ],
       price: "Free to Start",
       bonus: "Free Demo Access",
-      logo: "🧪",
+      logo: "flask",
       url: "https://platinumlabs.vercel.app/",
       metaTitle: "PlatinumLabs: Top Crypto Trading Tools & AI Bots 2025",
       metaDescription: "PlatinumLabs offers AI-powered trading bots, CryptoPulse Pro analytics, and multi-chain support for Ethereum, Solana, and more. Start with free demo access now!",
@@ -477,7 +471,7 @@ const providerData = {
       ],
       price: "0€ Kommission",
       bonus: "100€ Willkommensbonus",
-      logo: "🌱",
+      logo: "leaf",
       url: "https://www.awin1.com/awclick.php?gid=347729&mid=15658&awinaffid=2524533&linkid=2258019&clickref=",
       metaTitle: "Investivox: Nachhaltige Investments in ETFs & Aktien 2025",
       metaDescription: "Investivox bietet nachhaltige ETFs und Aktien mit 0% Kommission, BaFin-Regulierung und einem 100€ Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -485,29 +479,25 @@ const providerData = {
     }
   ]
 }
-
 // Einheitliches Button-Layout (übernommen & vereinheitlicht)
 const btnBase = "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold transition-all duration-300 ease-in-out shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
 const btnPrimary = `${btnBase} bg-green-600 text-white hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`
 const btnSecondary = `${btnBase} bg-white text-green-700 border border-green-200 hover:bg-gray-100 hover:scale-105`
-
 export default function DeFi() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   // Top-Empfehlungen zuerst
   const sortedProviders = [...providerData.trading].sort((a, b) => {
     if (a.isTopRecommendation && !b.isTopRecommendation) return -1
     if (!a.isTopRecommendation && b.isTopRecommendation) return 1
     return 0
   })
-
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Beste Trading-App Oktober 2025 | Broker & Neo-Broker Vergleich</title>
+        <title>Beste Trading-App November 2025 | Broker & Neo-Broker Vergleich</title>
         <meta
           name="description"
-          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025"
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im November 2025"
         />
         <meta
           name="keywords"
@@ -517,10 +507,10 @@ export default function DeFi() {
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich" />
+        <meta property="og:title" content="Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich" />
         <meta
           property="og:description"
-          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im November 2025."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/trading" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -531,10 +521,10 @@ export default function DeFi() {
         <meta property="og:image:alt" content="Beste Broker 2025 – unser-vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich" />
+        <meta name="twitter:title" content="Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich" />
         <meta
           name="twitter:description"
-          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im November 2025."
         />
         <meta
           name="twitter:image"
@@ -548,9 +538,9 @@ export default function DeFi() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich",
+              name: "Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich",
               description:
-                "Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im Oktober 2025.",
+                "Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im November 2025.",
               url: "https://unser-vergleichsportal.de/trading",
               publisher: {
                 "@type": "Organization",
@@ -669,7 +659,7 @@ export default function DeFi() {
                   name: "Welcher Broker ist 2025 Testsieger?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Zu den Testsiegern im Oktober 2025 zählen TradingView, eToro, XTB und Investivox – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
+                    text: "Zu den Testsiegern im November 2025 zählen TradingView, eToro, XTB und Investivox – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
                   }
                 },
                 {
@@ -699,7 +689,7 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Trading-Apps Oktober 2025 | Broker & Neo-Broker Vergleich
+              Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs,
@@ -708,7 +698,7 @@ export default function DeFi() {
               bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              <Button className={`${btnPrimary} text-sm sm:text-base`}>UNSERE TESTSIEGER 10/2025</Button>
+              <Button className={`${btnPrimary} text-sm sm:text-base`}>UNSERE TESTSIEGER 11/2025</Button>
             </Link>
           </div>
         </div>
@@ -719,7 +709,7 @@ export default function DeFi() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             So finden Sie die passende Trading-Plattform
           </h2>
-          
+         
           {/* Trust Signals hinzugefügt */}
           <div className="mt-6 mb-8 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
             <Image
@@ -758,7 +748,6 @@ export default function DeFi() {
               className="opacity-100 hover:opacity-100 transition-opacity"
             />
           </div>
-
           <div className="max-w-4xl mx-auto space-y-6">
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Gebühren vergleichen</h2>
@@ -855,7 +844,7 @@ export default function DeFi() {
             <div>
               <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Warum in nachhaltige Anlagen investieren?</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
-                Nachhaltige Investments gewinnen an Popularität, da sie sowohl finanzielle Rendite als auch positive gesellschaftliche Wirkung bieten. Im Jahr 2025 haben ESG-ETFs ein durchschnittliches jährliches Wachstum von über 20% erzielt (Stand 10/2025).
+                Nachhaltige Investments gewinnen an Popularität, da sie sowohl finanzielle Rendite als auch positive gesellschaftliche Wirkung bieten. Im Jahr 2025 haben ESG-ETFs ein durchschnittliches jährliches Wachstum von über 20% erzielt (Stand 11/2025).
               </p>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
                 <li className="flex items-center">
@@ -910,7 +899,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Trading-Apps für Aktien, ETFs & Krypto 10/2025
+            Top-Empfehlungen: Trading-Apps für Aktien, ETFs & Krypto 11/2025
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -1002,49 +991,49 @@ export default function DeFi() {
           title: "Bitcoin ist das digitale Gold. Aber warum?",
           description: "Entdecken Sie, warum Bitcoin als Wertspeicher Gold übertrumpft – durch absolute Knappheit und digitale Übertragbarkeit.",
           url: "https://www.linkedin.com/pulse/ausgabe-1-bitcoin-ist-das-digitale-gold-aber-warum-dennis-moskal-grbrf",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Der Architekt der Dezentralität: Was ist eine Blockchain?",
           description: "Verstehen Sie, wie die Blockchain Bitcoins Knappheit und Zensurresistenz durch Proof-of-Work und Nodes sichert.",
           url: "https://www.linkedin.com/pulse/ausgabe-2-der-architekt-dezentralit%C3%A4t-ist-eine-dennis-moskal-9wa8f",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Die Rolle von Geld: Warum Bitcoin das beste Gut ist",
           description: "Erfahren Sie, warum Bitcoin als Hard Money die Schwächen des Fiat-Systems überwindet und Kaufkraft sichert.",
           url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "MicroStrategy vs. Bitcoin: Wie funktioniert $MSTR?",
           description: "Analyse der genialen Kapitalmarktstrategie von MicroStrategy, die $MSTR zur Bitcoin-Akkumulationsmaschine macht.",
           url: "https://www.linkedin.com/pulse/ausgabe-4-microstrategy-vs-bitcoin-wie-funktioniert-mstr-moskal-ihnef",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Trump und der Bitcoin: Wird BTC zur Reserve in den USA?",
           description: "Wie Trumps Politik Bitcoin zur strategischen Reserve der USA machen könnte und was das bedeutet.",
           url: "https://www.linkedin.com/pulse/ausgabe-5-trump-und-der-bitcoin-wird-zur-reserve-usa-dennis-moskal-i4nbf",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Bin ich zu spät für Bitcoin? 5 Gründe, warum wir sagen: Nein!",
           description: "Warum Bitcoins Marktkapitalisierung zeigt, dass wir noch am Anfang stehen – und wie Sie profitieren können.",
           url: "https://www.linkedin.com/pulse/ausgabe-6-bin-ich-zu-sp%C3%A4t-f%C3%BCr-bitcoin-5-gr%C3%BCnde-warum-wir-moskal-ctfcf",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Echter Insidertipp: Die Bitcoin-Kostenfalle einfach erklärt",
           description: "Vermeiden Sie hohe Gebühren durch strategisches UTXO-Management beim Bitcoin-Sparen.",
           url: "https://www.linkedin.com/pulse/7echter-insidertipp-die-bitcoin-kostenfalle-einfach-erkl%C3%A4rt-moskal-7i1bf",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Bitcoin als disruptive Kraft: Unendliches Wachstum ohne Schaden",
           description: "Warum Bitcoins reiner monetärer Zweck die Wirtschaft entlastet und es einzigartig macht.",
           url: "https://www.linkedin.com/pulse/8-bitcoin-als-disruptive-kraft-warum-es-das-einzige-asset-moskal-btacf",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
       ].map((post, index) => (
         <Card
@@ -1163,7 +1152,7 @@ export default function DeFi() {
               Sicher Bitcoin handeln mit BlackBull
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 10/2025). Mit BlackBull
+              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 11/2025). Mit BlackBull
               können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
@@ -1215,7 +1204,7 @@ export default function DeFi() {
                 Tokens.
               </li>
             </ul>
-            <h4 className="text-base sm:text-lg font-semibold mb-2 text-green-600">Risiken</h4>
+            <h4 class (…) className="text-base sm:text-lg font-semibold mb-2 text-green-600">Risiken</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
               <li className="flex items-center">
                 <Check className="mr-2 h-4 w-4 text-green-600" />
