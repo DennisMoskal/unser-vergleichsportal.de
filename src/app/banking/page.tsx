@@ -454,7 +454,7 @@ export default function Banking() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
 
-     {/* --- Open Graph --- */}
+    {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich" />
         <meta
@@ -920,7 +920,7 @@ export default function Banking() {
           </div>
         </div>
       </section>
-{/* Neue LinkedIn-Sektion */}   
+{/* Neue LinkedIn-Sektion */}
 <section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
   <div className="container mx-auto px-4">
     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
@@ -935,25 +935,25 @@ export default function Banking() {
           title: "Die Rolle von Geld: Warum Bitcoin das beste Gut für das 21. Jahrhundert ist",
           description: "Bitcoin als ökonomische Gegenbewegung: Die Wiederherstellung der Kaufkraft und die Schwächen des Fiat-Geldsystems beleuchtet.",
           url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
-          date: "23. Oktober 2025",
+          date: "23. November 2025",
         },
         {
           title: "Nachhaltige Kapitalanlagen: Rendite mit gutem Gewissen im Jahr 2025!",
           description: "ESG-ETFs bieten bis zu 14% Rendite und fördern Klimaschutz. Warum jetzt in grüne Anlagen investieren?",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_nachhaltigeinvestments-esg-kapitalanlagen2025-activity-7377372911860363266-xbkZ",
-          date: "3. Oktober 2025",
+          date: "3. November 2025",
         },
         {
           title: "Deutschlands Rechenzentrums-Bremse: Risiko für KI & Wettbewerbsfähigkeit",
           description: "Ohne leistungsstarke Rechenzentren läuft nichts. Warum Deutschland ins Hintertreffen gerät und was dagegen tun werden muss.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_digitalisierung-ki-infrastruktur-activity-7378304599587323904-Jugq",
-          date: "3. Oktober 2025",
+          date: "3. November 2025",
         },
         {
           title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau 2025",
           description: "Wie clevere Anleger die Haltefrist, Schenkungen und smarte Strategien nutzen, um legal Steuern zu optimieren.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
-          date: "10. Oktober 2025",
+          date: "10. November 2025",
         },
         {
           title: "Die stille Krise: Rentenlücke 2025 – Ursachen, Folgen und ein 3-Stufen-Plan",
