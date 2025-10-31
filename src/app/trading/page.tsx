@@ -251,7 +251,7 @@ const Header: React.FC = () => {
 const providerData = {
   trading: [
     {
-      name: "TradingView",
+     name: "TradingView",
       rating: 4.8,
       features: [
         "Über 100 Millionen Nutzer weltweit",
@@ -267,7 +267,7 @@ const providerData = {
       ],
       price: "0€ Kontoeröffnung",
       bonus: "Kostenloser Start",
-      logo: "chart",
+      logo: "📈",
       url: "https://de.tradingview.com/?aff_id=156504",
       metaTitle: "TradingView: Beste Plattform für Krypto- und Aktien-Trading 2025",
       metaDescription: "TradingView bietet Supercharts, Top Screener und Social Trading für über 100 Mio. Nutzer. Starten Sie kostenlos mit Aktien, Krypto, Forex und Futures!",
@@ -290,7 +290,7 @@ const providerData = {
       ],
       price: "1% Spread bei Krypto",
       bonus: "Kostenloses Demo-Konto",
-      logo: "globe",
+      logo: "🌐",
       url: "https://med.etoro.com/B19298_A126856_TClick.aspx",
       metaTitle: "eToro Trading: Top Plattform für Bitcoin handeln und Social Trading 2025",
       metaDescription: "eToro bietet Social Trading, Bitcoin handeln mit niedrigen Gebühren, über 70 Kryptowährungen und 3.000+ Aktien/ETFs. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -313,7 +313,7 @@ const providerData = {
       ],
       price: "0€ Kommission",
       bonus: "Kostenlose Kontoeröffnung",
-      logo: "bar-chart",
+      logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc",
       metaTitle: "XTB Trading: Testsieger CFD-Broker 2025",
       metaDescription: "XTB bietet 0% Kommission bis 100.000€ Umsatz, über 8000 Aktien & ETFs und smarte Sparpläne. Jetzt mit gratis Aktie starten!",
@@ -336,7 +336,7 @@ const providerData = {
       ],
       price: "0.1% Taker Fee",
       bonus: "Bis zu 10.000$ Bonus",
-      logo: "bull",
+      logo: "🐂",
       url: "https://go.blackbull.com/visit/?bta=42835&brand=blackbull",
       metaTitle: "BlackBull Trading: Professionelle Handelsplattform mit 26.000+ Instrumenten",
       metaDescription: "BlackBull Markets bietet professionelles Trading mit über 26.000 Instrumenten, niedrigen Spreads und schneller Ausführung. Jetzt mit bis zu 10.000$ Bonus handeln!",
@@ -358,7 +358,7 @@ const providerData = {
       ],
       price: "0,1% Taker Fee",
       bonus: "5% Einzahlungs-Coupon",
-      logo: "lock",
+      logo: "🔒",
       url: "https://weex.com/register?vipCode=0pika",
       metaTitle: "WEEX Trading: Sichere Krypto-Plattform mit hohem Leverage 2025",
       metaDescription: "WEEX bietet über 1.700 Handelspaare, bis zu 400x Leverage und einen 1.000 BTC Schutzfonds. Jetzt mit 5% Einzahlungs-Coupon starten!",
@@ -379,9 +379,9 @@ const providerData = {
       ],
       price: "0,1% Taker Fee",
       bonus: "Willkommensbonus bis zu 5.000 USDT",
-      logo: "lightning",
+      logo: "⚡",
       url: "https://www.bybit.eu/invite?ref=RME6DV2",
-      metaTitle: "Bybit Trading:: Krypto-Trading mit hohem Leverage 2025",
+      metaTitle: "Bybit Trading: Krypto-Trading mit hohem Leverage 2025",
       metaDescription: "Bybit bietet über 100 Kryptowährungen, bis zu 100x Leverage und niedrige Gebühren. Jetzt mit bis zu 5.000 USDT Bonus starten!",
       isTopRecommendation: true
     },
@@ -395,14 +395,14 @@ const providerData = {
         "50% Cashback Bonus bei Einzahlung ab $500",
         "Metatrader 4, Metatrader 5 & AppTrader",
         "Ultra-schnelle Ausführung unter 15ms",
-        "“Reguliert durch SLIBC und FSCA",
+        "Reguliert durch SLIBC und FSCA",
         "Segregierte Konten bei AA-Rated Bank",
         "Kostenloses Demo-Konto für risikofreies Trading",
         "Erweiterte Tools: Premium Economic Calendar, AI Market Buzz"
       ],
       price: "0.0 Pips Spread",
       bonus: "50% Cashback Bonus",
-      logo: "money",
+      logo: "💸",
       url: "https://www.monetamarkets.com/?affid=Nzc0MjU0OA==",
       metaTitle: "Moneta Markets: Top Online Trading Plattform 2025",
       metaDescription: "Moneta Markets bietet über 1000 Instrumente, Spreads ab 0.0 Pips, bis zu 1000:1 Leverage und 50% Cashback Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -425,7 +425,7 @@ const providerData = {
       ],
       price: "0.0 Pips Spread",
       bonus: "50% Einzahlungsbonus",
-      logo: "car",
+      logo: "🏎️",
       url: "https://go.vantagefx.com/visit/?bta=65953&brand=vantagefx",
       metaTitle: "Vantage Trading: Top CFD-Broker für Forex & Krypto 2025",
       metaDescription: "Vantage bietet über 1.000 CFDs, Spreads ab 0.0 Pips, bis zu 500:1 Leverage und einen 50% Einzahlungsbonus. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -448,7 +448,7 @@ const providerData = {
       ],
       price: "Free to Start",
       bonus: "Free Demo Access",
-      logo: "flask",
+      logo: "🧪",
       url: "https://platinumlabs.vercel.app/",
       metaTitle: "PlatinumLabs: Top Crypto Trading Tools & AI Bots 2025",
       metaDescription: "PlatinumLabs offers AI-powered trading bots, CryptoPulse Pro analytics, and multi-chain support for Ethereum, Solana, and more. Start with free demo access now!",
@@ -471,7 +471,7 @@ const providerData = {
       ],
       price: "0€ Kommission",
       bonus: "100€ Willkommensbonus",
-      logo: "leaf",
+      logo: "🌱",
       url: "https://www.awin1.com/awclick.php?gid=347729&mid=15658&awinaffid=2524533&linkid=2258019&clickref=",
       metaTitle: "Investivox: Nachhaltige Investments in ETFs & Aktien 2025",
       metaDescription: "Investivox bietet nachhaltige ETFs und Aktien mit 0% Kommission, BaFin-Regulierung und einem 100€ Bonus. Jetzt mit kostenlosem Demo-Konto starten!",
@@ -479,6 +479,7 @@ const providerData = {
     }
   ]
 }
+
 // Einheitliches Button-Layout (übernommen & vereinheitlicht)
 const btnBase = "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold transition-all duration-300 ease-in-out shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
 const btnPrimary = `${btnBase} bg-green-600 text-white hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700`
