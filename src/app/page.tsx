@@ -724,7 +724,7 @@ export default function Home() {
               className="opacity-100 hover:opacity-100 transition-opacity"
             />
             <Image
-              src="/images/4.png"
+              src="/images/4.png"  
               alt="Vertrauenssignal 4"
               width={80}
               height={40}
