@@ -724,7 +724,7 @@ export default function Home() {
               className="opacity-100 hover:opacity-100 transition-opacity"
             />
             <Image
-              src="/images/4.png"  
+              src="/images/4.png"
               alt="Vertrauenssignal 4"
               width={80}
               height={40}
@@ -907,7 +907,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-            {/* Vergleichstabellen */}
+          {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
