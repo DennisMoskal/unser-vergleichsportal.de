@@ -1,4 +1,5 @@
 "use client"
+
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +9,7 @@ import { Search, Check, Star, Menu, X, ArrowRight, Linkedin } from "lucide-react
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 // SmartFinanzLogo Component
 const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -27,10 +29,12 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
     </Link>
   );
 };
+
 // Header Component
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("versicherungen");
+
   const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId);
     const element = document.getElementById(sectionId);
@@ -38,12 +42,14 @@ const Header: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   useEffect(() => {
     const hash = window.location.hash.substring(1);
     if (hash && ["versicherungen", "banking", "tierversicherungen", "trading"].includes(hash)) {
       scrollToSection(hash);
     }
   }, []);
+
   return (
     <>
       <header className="bg-white shadow-sm relative border-b">
@@ -59,6 +65,7 @@ const Header: React.FC = () => {
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
+
         {/* Mobile Menü */}
         {mobileMenuOpen && (
           <div className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
@@ -203,6 +210,7 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
+
       {/* Kategorie-Navigation */}
       <section className="bg-white py-4 border-b" id="versicherungen">
         <div className="container mx-auto px-4">
@@ -248,6 +256,7 @@ const Header: React.FC = () => {
           </ul>
         </div>
       </section>
+
       {/* Grüner Value-/Trust-Bereich ohne Überschrift */}
       <section className="py-12 sm:py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
@@ -290,6 +299,7 @@ const Header: React.FC = () => {
     </>
   );
 };
+
 export interface Provider {
   name: string;
   rating: number;
@@ -299,6 +309,7 @@ export interface Provider {
   logo: string;
   url: string;
 }
+
 const providerData: { [key: string]: Provider[] } = {
   versicherungen: [
     {
@@ -317,7 +328,7 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "100% kostenlos",
       bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "Trophy",
+      logo: "🏆",
       url: "https://www.tarifcheck.de/girokonto/",
     },
     {
@@ -337,7 +348,7 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "ab 9,99€/Monat",
       bonus: "Bis zu 100€ Startguthaben",
-      logo: "Phone",
+      logo: "📱",
       url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
     },
   ],
@@ -348,7 +359,7 @@ const providerData: { [key: string]: Provider[] } = {
       features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"],
       price: "ab 8€/Monat",
       bonus: "1. Monat gratis",
-      logo: "Dog",
+      logo: "🐕",
       url: "/anbieter/petprotect",
     },
     {
@@ -357,7 +368,7 @@ const providerData: { [key: string]: Provider[] } = {
       features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"],
       price: "ab 12€/Monat",
       bonus: "Willkommensgeschenk",
-      logo: "Cat",
+      logo: "🐱",
       url: "/anbieter/figopet",
     },
   ],
@@ -378,7 +389,7 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "100% kostenlos",
       bonus: "Bis zu 120€ Neukundenbonus",
-      logo: "Trophy",
+      logo: "🏆",
       url: "https://www.tarifcheck.de/girokonto/",
     },
     {
@@ -399,7 +410,7 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "0€ Kommission",
       bonus: "Demo-Konto",
-      logo: "Chart",
+      logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc",
     },
     {
@@ -419,7 +430,7 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "ab 10,99% eff. Zins p.a.",
       bonus: "Schnelle Auszahlung",
-      logo: "Credit Card",
+      logo: "💳",
       url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
     },
     {
@@ -439,7 +450,7 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "ab 9,99€/Monat",
       bonus: "Bis zu 100€ Startguthaben",
-      logo: "Phone",
+      logo: "📱",
       url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
     },
   ],
@@ -462,13 +473,15 @@ const providerData: { [key: string]: Provider[] } = {
       ],
       price: "0€ Kommission",
       bonus: "Demo-Konto",
-      logo: "Chart",
+      logo: "📊",
       url: "https://link-pso.xtb.com/pso/lMDhc",
     },
   ],
 };
+
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen");
+
   return (
     <>
       <Head>
@@ -489,9 +502,11 @@ export default function Home() {
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
         <link rel="alternate icon" href="/images/favicon.ico" />
+
         {/* Hreflang (Basis) */}
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="de-DE" />
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
+
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Transparenter Finanzvergleich November 2025 | Finden Sie den besten Anbieter" />
@@ -518,6 +533,7 @@ export default function Home() {
         <meta property="og:updated_time" content="2025-11-19T00:27:16+00:00" />
         <meta property="article:published_time" content="2025-11-01T00:00:00+00:00" />
         <meta property="article:modified_time" content="2025-11-19T00:27:16+00:00" />
+
         {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Transparenter Finanzvergleich November 2025 | Finden Sie den besten Anbieter" />
@@ -529,6 +545,7 @@ export default function Home() {
         <meta name="twitter:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta name="twitter:site" content="@unservergleich" />
         <meta name="twitter:creator" content="@unservergleich" />
+
         {/* --- Preloads & Resource Hints (bereinigt) --- */}
         <link rel="preload" href="/logo.png" as="image" />
         {/* bevorzugt preconnect für Domains mit früher Verbindung */}
@@ -538,7 +555,9 @@ export default function Home() {
         {/* unnötige dns-prefetch reduziert */}
         <link rel="dns-prefetch" href="https://www.tarifcheck.de" />
         <link rel="dns-prefetch" href="https://www.c24n.de" />
+
         <meta name="impact-site-verification" content="f34232c9-40b1-4773-b281-9b596b88cd82" />
+
         {/* ---- Schema.org: Organization ---- */}
         <script
           type="application/ld+json"
@@ -568,6 +587,7 @@ export default function Home() {
             }),
           }}
         />
+
         {/* ---- Schema.org: WebSite + SearchAction ---- */}
         <script
           type="application/ld+json"
@@ -586,6 +606,7 @@ export default function Home() {
             }),
           }}
         />
+
         {/* ---- Schema.org: FAQPage (einmalig, im Head belassen) ---- */}
         <script
           type="application/ld+json"
@@ -630,6 +651,7 @@ export default function Home() {
             }),
           }}
         />
+
         {/* ---- Schema.org: BreadcrumbList (Home) ---- */}
         <script
           type="application/ld+json"
@@ -647,6 +669,7 @@ export default function Home() {
       <main>
         <div className="min-h-screen bg-white">
           <Header />
+
           {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
