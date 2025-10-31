@@ -423,7 +423,6 @@ export default function Banking() {
     console.error(`${scriptName} script failed to load`)
   }
 
-  // Debugging: Log when both scripts are loaded
   useEffect(() => {
     if (scriptsLoaded.main && scriptsLoaded.embedTeal) {
       console.log("Both FINANZCHECK scripts loaded, initializing teal_embed_iframe")
@@ -440,7 +439,7 @@ export default function Banking() {
     <div className="min-h-screen bg-white">
       <Head>
         {/* --- Meta Basics --- */}
-        <title>Beste Bank Oktober 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich</title>
+        <title>Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich</title>
         <meta
           name="description"
           content="Vergleichen Sie kostenlose Girokonten, günstige Kredite, Tagesgeld & Kreditkarten 2025. Top-Banken mit Prämien, hoher Sicherheit & Testsieger-Bewertungen."
@@ -454,7 +453,7 @@ export default function Banking() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
 
-    {/* --- Open Graph --- */}
+        {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich" />
         <meta
