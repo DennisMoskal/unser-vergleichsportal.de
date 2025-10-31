@@ -454,7 +454,7 @@ export default function Banking() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
 
-      {/* --- Open Graph --- */}
+     {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Beste Bank November 2025 | Anbieter für Girokonto, Kredite & Tagesgeld im Vergleich" />
         <meta
