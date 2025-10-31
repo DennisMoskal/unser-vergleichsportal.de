@@ -907,7 +907,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          {/* Vergleichstabellen */}
+    {/* Vergleichstabellen */}
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
@@ -931,7 +931,7 @@ export default function Home() {
                     ],
                     price: "100% kostenlos",
                     bonus: "Bis zu 120€ Neukundenbonus",
-                    logo: "Trophy",
+                    logo: "🏆",
                     url: "https://www.tarifcheck.com/wmPi92g",
                   },
                   {
@@ -952,7 +952,7 @@ export default function Home() {
                     ],
                     price: "0€ Kommission",
                     bonus: "Demo-Konto",
-                    logo: "Chart",
+                    logo: "📊",
                     url: "https://link-pso.xtb.com/pso/lMDhc",
                   },
                   {
@@ -972,7 +972,7 @@ export default function Home() {
                     ],
                     price: "ab 10,99% eff. Zins p.a.",
                     bonus: "Schnelle Auszahlung",
-                    logo: "Credit Card",
+                    logo: "💳",
                     url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
                   },
                   {
@@ -991,7 +991,7 @@ export default function Home() {
                     ],
                     price: "ab 10€/Monat",
                     bonus: "Kostenloser Gesundheitscheck",
-                    logo: "Paw",
+                    logo: "🐾",
                     url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
                   },
                   {
@@ -1011,7 +1011,7 @@ export default function Home() {
                     ],
                     price: "0€ Kontoführung",
                     bonus: "Bis zu 250€ Bonus",
-                    logo: "Bank",
+                    logo: "🏦",
                     url: "https://www.c24n.de/ducwCtq",
                   },
                   {
@@ -1031,7 +1031,7 @@ export default function Home() {
                     ],
                     price: "ab 9,99€/Monat",
                     bonus: "Bis zu 100€ Startguthaben",
-                    logo: "Signal",
+                    logo: "📡",
                     url: "https://private.vodafone-affiliate.de/tc.php?t=126731C2369176269T&cons=",
                   },
                   {
@@ -1051,7 +1051,7 @@ export default function Home() {
                     ],
                     price: "ab 9,99€/Monat",
                     bonus: "Bis zu 50€ Startguthaben",
-                    logo : "Globe",
+                    logo: "🌐",
                     url: "https://www.awin1.com/awclick.php?gid=347927&mid=12554&awinaffid=2524533&linkid=2259270&clickref=",
                   },
                   {
@@ -1071,7 +1071,7 @@ export default function Home() {
                     ],
                     price: "100% kostenlos",
                     bonus: "Bis zu 200€ Prämie",
-                    logo: "Home",
+                    logo: "🏠",
                     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
                   },
                   {
@@ -1091,7 +1091,7 @@ export default function Home() {
                     ],
                     price: "ab 9,99€/Monat",
                     bonus: "Bis zu 100€ Startguthaben",
-                    logo: "Phone",
+                    logo: "📱",
                     url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
                   },
                 ].map((provider, index) => (
@@ -1193,7 +1193,7 @@ export default function Home() {
           title: "Die Bank wechseln? Diese 5 Faktoren entscheiden",
           description: "Vermeiden Sie teure Fehler bei der Wahl Ihres Banking-Partners – die wichtigsten Kriterien für Unternehmer.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_die-bank-wechseln-diese-5-faktoren-entscheiden-activity-7373376935558627328-bKc0",
-          date: "17. September 2025",
+          date: "17. November 2025",
         },
         {
           title: "Bin ich zu spät für Bitcoin? 5 Gründe, warum nicht!",
@@ -1205,7 +1205,7 @@ export default function Home() {
           title: "Wärmepumpen + Stromanbieter: Das perfekte Duo",
           description: "Mit speziellen Tarifen bis zu 30% Stromkosten bei Wärmepumpen sparen – nachhaltig und günstig.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_w%C3%A4rmepumpen-stromanbieter-das-perfekte-activity-7374470832355569665-33G4",
-          date: "20. September 2025",
+          date: "20. November 2025",
         },
         {
           title: "Die Bitcoin-Kostenfalle: UTXO-Management erklärt",
@@ -1217,13 +1217,13 @@ export default function Home() {
           title: "Rentenlücke schließen: 4 Strategien für die Zukunft",
           description: "ETFs, Immobilien, bAV und mehr – wie Sie Ihre Altersvorsorge systematisch aufbauen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_vermaemgensaufbau-rentenlaescke-altersvorsorge-activity-7374108704184446976-EfCG",
-          date: "19. September 2025",
+          date: "19. November 2025",
         },
         {
           title: "Steuern sparen durch Bitcoin-Trading",
           description: "Nutzen Sie Haltefristen und smarte Strategien, um legal Steuern zu optimieren und Vermögen aufzubauen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
-          date: "23. September 2025",
+          date: "23. November 2025",
         },
         {
           title: "Effiziente Dienstwagenpolitik: Jetzt optimieren",
@@ -1235,7 +1235,7 @@ export default function Home() {
           title: "Warum eine Hunde-Haftpflichtversicherung Pflicht ist",
           description: "Schützen Sie sich vor hohen Kosten durch Schäden Ihres Hundes – eine unverzichtbare Absicherung.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_warum-eine-hunde-haftpflichtversicherung-activity-7374460905553661952-_G5d",
-          date: "20. September 2025",
+          date: "20. November 2025",
         },
       ].map((post, index) => (
         <Card
@@ -1291,7 +1291,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-{/* Kundenbewertungen */}
+          {/* Kundenbewertungen */}      
 <section className="py-12 sm:py-16 bg-gray-50" id="kundenbewertungen">
   <div className="container mx-auto px-4">
     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Kundenbewertungen zu SmartFinanz</h2>
