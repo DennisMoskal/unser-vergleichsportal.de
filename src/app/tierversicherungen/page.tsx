@@ -328,7 +328,7 @@ const providerData = [
     features: [
       "Vergleich von über 50 Tierversicherungen",
       "100% kostenloser und unverbindlicher Vergleich",
-      "Testsieger in der Kategorie Tierversicherung (10/2025)",
+      "Testsieger in der Kategorie Tierversicherung (11/2025)",
       "eKomi Gold Siegel mit 4,8/5 Sternen",
       "Bis zu 50% Ersparnis durch Vergleich",
       "Kostenlose Beratung durch Experten",
@@ -401,7 +401,7 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
      <Head>
   {/* --- Meta Basics --- */}
-  <title>Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen</title>
+  <title>Beste Tierversicherungen November 2025 | Hunde, Katzen & Welpen</title>
   <meta
     name="description"
     content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
@@ -417,7 +417,7 @@ export default function Tierversicherungen() {
 
   {/* --- Open Graph --- */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen" />
+  <meta property="og:title" content="Beste Tierversicherungen November 2025 | Hunde, Katzen & Welpen" />
   <meta
     property="og:description"
     content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Welpen."
@@ -434,10 +434,10 @@ export default function Tierversicherungen() {
 
   {/* --- Twitter --- */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Tierversicherungen Oktober 2025 | Hunde, Katzen & Welpen" />
+  <meta name="twitter:title" content="Beste Tierversicherungen November 2025 | Hunde, Katzen & Welpen" />
   <meta
     name="twitter:description"
-    content="Beste Tierversicherungen Oktober 2025 | Hunde- und Katzenversicherungen im Vergleich"
+    content="Beste Tierversicherungen November 2025 | Hunde- und Katzenversicherungen im Vergleich"
   />
   <meta
     name="twitter:image"
