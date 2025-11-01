@@ -494,7 +494,7 @@ const providerData = [
     price: "Individuelle Tarife",
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
-    url: "https://www.cosmosdirekt.de/versicherungen/",
+    url: "https://www.financeads.net/tc.php?t=78841C35719131T",
     metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
     metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
