@@ -217,7 +217,7 @@ const providerData = [
       "Über 20 Jahre Erfahrung als Vergleichsportal",
       "100% kostenloser und unverbindlicher Vergleich",
       "Vergleich von über 300 Kfz-Versicherungstarifen",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 10/2024)",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 11/2024)",
       "eKomi Silber Siegel mit 4,5/5 Sternen",
       "Über 3.194 verifizierte Kundenbewertungen",
       "Deutschlands drittgrößtes Vergleichsportal",
@@ -236,7 +236,7 @@ const providerData = [
     rating: 4.8,
     features: [
       "Vergleich von über 300 Versicherungen in wenigen Minuten",
-      "Testsieger in über 25 Kategorien (Handelsblatt 10/2024)",
+      "Testsieger in über 25 Kategorien (Handelsblatt 11/2024)",
       "Kostenlose Beratung durch 300 Experten (08:00–22:00 Uhr)",
       "Über 98% Kundenzufriedenheit (eKomi Gold Siegel)",
       "Nirgendwo-Günstiger-Garantie für beste Konditionen",
@@ -360,7 +360,7 @@ const providerData = [
       "Vergleich von über 200 Wohngebäudeversicherungen",
       "100% kostenloser und unverbindlicher Vergleich",
       "Schutz für Haus und Eigentum vor Feuer, Sturm und mehr",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 10/2024)",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 11/2024)",
       "eKomi Silber Siegel mit 4,5/5 Sternen",
       "Bis zu 500€ jährliche Ersparnis",
       "Schneller Online-Abschluss in wenigen Minuten",
@@ -443,7 +443,7 @@ const providerData = [
       "Optimaler Hinterbliebenenschutz für Ihre Familie",
       "Flexibler Vergleichsrechner für maßgeschneiderte Tarife",
       "Bis zu 100% Absicherung des Familieneinkommens",
-      "Testsieger bei Stiftung Warentest (10/2025, Note 1,3)",
+      "Testsieger bei Stiftung Warentest (11/2025, Note 1,3)",
       "Einfacher Online-Abschluss in wenigen Minuten",
       "Kostenlose Beratung durch Experten",
       "Anpassbare Versicherungssumme und Laufzeit",
@@ -555,7 +555,7 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-  <title>Beste Versicherung Oktober 2025 | Alle Versicherungen im Vergleich</title>
+  <title>Beste Versicherung November 2025 | Alle Versicherungen im Vergleich</title>
   <meta
     name="description"
     content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
@@ -566,14 +566,14 @@ export default function Versicherungen() {
   />
   <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial=1.0" />
   <meta charSet="UTF-8" />
   <meta name="author" content="SmartFinanz" />
   <meta name="format-detection" content="telephone=no" />
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich" />
+  <meta property="og:title" content="Beste Versicherungen November 2025 | Alle Versicherungen im Vergleich" />
   <meta
     property="og:description"
     content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
@@ -590,7 +590,7 @@ export default function Versicherungen() {
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich" />
+  <meta name="twitter:title" content="Beste Versicherungen November 2025 | Alle Versicherungen im Vergleich" />
   <meta
     name="twitter:description"
     content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
@@ -608,7 +608,7 @@ export default function Versicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich",
+        name: "Beste Versicherungen November 2025 | Alle Versicherungen im Vergleich",
         description:
           "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
         url: "https://unser-vergleichsportal.de/versicherungen",
@@ -697,7 +697,7 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Versicherungen Oktober 2025 | Alle Versicherungen im Vergleich
+              Beste Versicherungen November 2025 | Alle Versicherungen im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
@@ -792,7 +792,7 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Versicherungsvergleich 10/2025
+            Top-Empfehlungen: Versicherungsvergleich 11/2025
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -866,43 +866,43 @@ export default function Versicherungen() {
           title: "Sozialabgaben-Schock 2026: Wer zahlt die Rechnung?",
           description: "Die Erhöhung der Beitragsbemessungsgrenzen ab 2026 bringt Mehrkosten für Gutverdiener und Arbeitgeber. Was tun?",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_sozialabgaben-lohnnebenkosten-finanzmanagement-activity-7381646319544598528-TuJg",
-          date: "9. Oktober 2025",
+          date: "9. November 2025",
         },
         {
           title: "87.000 € vs. 311.000 €: Warum deutsche Sparer zurückfallen",
           description: "Der Allianz Global Wealth Report zeigt: Deutsche investieren zu wenig in Aktien. Wie Sie die Vermögenslücke schließen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_vermaemgensaufbau-finanzen-investment-activity-7380966545365217280-BjaG",
-          date: "7. Oktober 2025",
+          date: "7. November 2025",
         },
         {
-          title: "DKB senkt Dispozinsen: Günstiges Girokonto ab Oktober 2025",
-          description: "Die DKB senkt ab 01.10.2025 die Dispozinsen – ein Top-Angebot für clevere Kontoinhaber.",
+          title: "DKB senkt Dispozinsen: Günstiges Girokonto ab November 2025",
+          description: "Die DKB senkt ab 01.11.2025 die Dispozinsen – ein Top-Angebot für clevere Kontoinhaber.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_dkb-girokonto-zinsen-activity-7378676241324863488-sF9W",
-          date: "1. Oktober 2025",
+          date: "1. November 2025",
         },
         {
           title: "Krypto unter Druck: Steuerfahnder nehmen Anleger ins Visier",
           description: "Finanzbehörden jagen unversteuerte Krypto-Gewinne. Wie Sie jetzt reagieren, um Strafen zu vermeiden.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_krypto-bitcoin-steuern-activity-7378304235051843584-fmwN",
-          date: "30. September 2025",
+          date: "30. Oktober 2025",
         },
         {
           title: "Immobilieneigentümer: So sparen Sie 4.000€+ pro Jahr",
           description: "Mit der richtigen Energie-Strategie können Immobilieneigentümer jährlich Tausende Euro einsparen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_immobilieneigent%C3%BCmer-so-sparen-sie-4000-activity-7376569695614885888-pf7_",
-          date: "25. September 2025",
+          date: "25. Oktober 2025",
         },
         {
           title: "Warum eine Hunde-Haftpflichtversicherung unverzichtbar ist",
           description: "Schützen Sie sich vor hohen Kosten durch Schäden Ihres Hundes – eine Hunde-Haftpflicht ist Pflicht!",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_warum-eine-hunde-haftpflichtversicherung-activity-7374460905553661952-_G5d",
-          date: "20. September 2025",
+          date: "20. Oktober 2025",
         },
         {
           title: "Finanzoptimierung: Von Tagesgeld zu Neobroker",
           description: "Steigen Sie um auf Neobroker und ETFs für 8-12% Rendite und schützen Sie Ihr Vermögen vor Inflation.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_finanzoptimierung-durch-globales-verstehen-activity-7374176844977278976-M6oU",
-          date: "19. September 2025",
+          date: "19. Oktober 2025",
         },
       ].map((post, index) => (
         <Card
