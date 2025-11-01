@@ -1075,7 +1075,7 @@ export default function Versicherungen() {
               </li>
             </ul>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.cosmosdirekt.de/risikolebensversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.financeads.net/tc.php?t=78841C35719093T" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   RISIKOLEBENSVERSICHERUNG VERGLEICHEN
                 </Button>
