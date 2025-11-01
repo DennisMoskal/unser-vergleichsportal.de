@@ -1047,7 +1047,7 @@ export default function Versicherungen() {
               <strong>Spartipp:</strong> Online-Abschlüsse sparen bis zu 30%. Nutzen Sie Apps für schnelle Schadenmeldung.
             </p>
             <div className="mt-6 mb-8 text-center">
-              <a href="https://www.check24.de/hausratversicherung/" target="_blank" rel="sponsored">
+              <a href="https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref=" target="_blank" rel="sponsored">
                 <Button className="w-full sm:w-auto bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
                   HAUSRATVERSICHERUNG VERGLEICHEN
                 </Button>
