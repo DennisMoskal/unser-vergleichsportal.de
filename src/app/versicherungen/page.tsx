@@ -457,27 +457,7 @@ const providerData = [
     metaDescription: "Die Bayerische bietet Testsieger-Risikolebensversicherungen mit flexiblen Tarifen. Jetzt vergleichen und sparen!",
     isTopRecommendation: true
   },
-  {
-    name: "Allianz",
-    rating: 4.6,
-    features: [
-      "Weltweit agierender Versicherer mit über 100 Jahren Erfahrung",
-      "Umfassender Schutz für Kfz, Hausrat, Haftpflicht und mehr",
-      "eKomi-Bewertung: 4,6/5 Sterne von über 5.000 Kunden",
-      "Schneller digitaler Abschluss mit VideoIdent",
-      "Attraktive Boni für langjährige Kunden",
-      "Persönliche Beratung in über 2.000 Filialen",
-      "Schadensservice mit 24/7-Verfügbarkeit",
-      "Flexible Tarifanpassung für individuelle Bedürfnisse"
-    ],
-    price: "Bonitätsabhängige Tarife",
-    bonus: "Treuebonus für Bestandskunden",
-    logo: "🛡️",
-    url: "https://www.allianz.de/versicherungen/",
-    metaTitle: "Allianz Versicherungen: Zuverlässiger Schutz für Kfz und Hausrat 2025",
-    metaDescription: "Allianz bietet umfassenden Schutz für Kfz, Hausrat und mehr mit 4,6/5 eKomi-Bewertung. Jetzt Tarife vergleichen und Treuebonus sichern!",
-    isTopRecommendation: true
-  },
+ 
   {
     name: "CosmosDirekt",
     rating: 4.5,
