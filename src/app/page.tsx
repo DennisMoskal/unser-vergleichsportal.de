@@ -726,7 +726,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Darauf sollten Sie achten</h3>
                 <p className="mb-4 text-gray-700">
                   Moderne Banken bieten kostenlose Kontoführung, attraktive Neukundenboni und innovative Banking-Apps. Achten Sie auf monatliche Gebühren, Dispozinskonditionen und die Qualität des Mobile Bankings. Top-Anbieter wie{" "}
-                  <a href="https://www.check24.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.c24n.de/ducwCtq" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     CHECK24
                   </a>{" "}
                   bieten bis zu 250€ Bonus.
