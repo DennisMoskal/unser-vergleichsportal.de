@@ -318,7 +318,7 @@ const providerData: { [key: string]: Provider[] } = {
       price: "100% kostenlos",
       bonus: "Bis zu 120€ Neukundenbonus",
       logo: "🏆",
-      url: "https://www.tarifcheck.de/girokonto/",
+      url: "https://www.tarifcheck.com/W1pi1Fx",
     },
     {
       name: "freenet",
@@ -742,7 +742,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Wichtige Kriterien für ein nachhaltiges Konto ohne Kosten</h3>
                 <p className="mb-4 text-gray-700">
                   Ein wirklich kostenloses Konto hat keine Grundgebühr, bietet eine kostenlose EC-Karte, gratis Online-Banking und mobile Nutzung. Achten Sie auf versteckte Kosten bei Überweisungen oder Kontoauszügen.{" "}
-                  <a href="https://www.tarifcheck.de/girokonto/" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.tarifcheck.com/W1pi1Fx" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     Tarifcheck.de
                   </a>{" "}
                   bietet kostenlose Vergleiche.
