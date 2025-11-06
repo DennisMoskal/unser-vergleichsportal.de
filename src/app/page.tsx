@@ -302,11 +302,11 @@ export interface Provider {
 const providerData: { [key: string]: Provider[] } = {
   versicherungen: [
     {
-      name: "Tarifcheck.de",
+     name: "Tarifcheck.de",
       rating: 4.5,
       features: [
-        "Bis zu 1.000€ jährlich sparen möglich",
-        "100% kostenloser und unverbindlicher Vergleich",
+        "<h4>Bis zu 1.000€ jährlich sparen möglich</h4>",
+        "<h4>100% kostenloser und unverbindlicher Vergleich</h4>",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
         "eKomi Silber Siegel mit 4,5/5 Sternen",
@@ -324,9 +324,9 @@ const providerData: { [key: string]: Provider[] } = {
       name: "freenet",
       rating: 4.7,
       features: [
-        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+        "<h4>Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen</h4>",
+        "<h4>5G-Unterstützung in allen Tarifen</h4>",
         "Kostenloser Wechselservice für Mobilfunkverträge",
-        "5G-Unterstützung in allen Tarifen",
         "Kombi-Vorteile mit DSL- und Festnetzanschluss",
         "Bis zu 100€ Startguthaben für Neukunden",
         "Kostenlose Hotline für Kunden",
@@ -345,7 +345,11 @@ const providerData: { [key: string]: Provider[] } = {
     {
       name: "PetProtect",
       rating: 4.9,
-      features: ["Vollschutz", "Ohne Wartezeit", "Freie Tierarztwahl"],
+      features: [
+        "<h4>Vollschutz für Hunde, Katzen & Kleintiere</h4>",
+        "<h4>Ohne Wartezeit bei Abschluss</h4>",
+        "Freie Tierarztwahl"
+      ],
       price: "ab 8€/Monat",
       bonus: "1. Monat gratis",
       logo: "🐕",
@@ -354,7 +358,11 @@ const providerData: { [key: string]: Provider[] } = {
     {
       name: "FigoPet",
       rating: 4.6,
-      features: ["Moderne Plattform", "Schnelle Erstattung", "Präventionsschutz"],
+      features: [
+        "<h4>Moderne Plattform für digitale Tierversicherung</h4>",
+        "<h4>Schnelle Erstattung tierärztlicher Kosten</h4>",
+        "Präventionsschutz"
+      ],
       price: "ab 12€/Monat",
       bonus: "Willkommensgeschenk",
       logo: "🐱",
@@ -366,8 +374,8 @@ const providerData: { [key: string]: Provider[] } = {
       name: "Tarifcheck.de",
       rating: 4.5,
       features: [
-        "Über 20 Jahre Erfahrung als Vergleichsportal",
-        "100% kostenloser und unverbindlicher Vergleich",
+        "<h4>Über 20 Jahre Erfahrung als Vergleichsportal</h4>",
+        "<h4>100% kostenloser und unverbindlicher Vergleich</h4>",
         "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
         "Mehrfach ausgezeichnet mit 'sehr gut'",
         "eKomi Silber Siegel mit 4,5/5 Sternen",
@@ -385,9 +393,9 @@ const providerData: { [key: string]: Provider[] } = {
       name: "XTB",
       rating: 4.5,
       features: [
+        "<h4>Über 8000 Aktien & ETFs handeln</h4>",
+        "<h4>Bis zu 2,3% p.a. Zinsen auf Guthaben</h4>",
         "Gratis Aktie für neue Investoren",
-        "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
         "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
         "eWallet mit virtueller Mastercard",
@@ -406,10 +414,10 @@ const providerData: { [key: string]: Provider[] } = {
       name: "Credimaxx",
       rating: 4.9,
       features: [
+        "<h4>Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich</h4>",
+        "<h4>Sofortvermittlung durch erfahrene Kreditprofis</h4>",
         "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
-        "Sofortvermittlung durch erfahrene Kreditprofis",
         "Digitaler Abschluss mit WebID oder VideoIdent",
-        "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
         "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
         "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
         "Vermittlung in bis zu 1 Minute",
@@ -426,9 +434,9 @@ const providerData: { [key: string]: Provider[] } = {
       name: "freenet",
       rating: 4.7,
       features: [
-        "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+        "<h4>Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen</h4>",
+        "<h4>5G-Unterstützung in allen Tarifen</h4>",
         "Kostenloser Wechselservice für Mobilfunkverträge",
-        "5G-Unterstützung in allen Tarifen",
         "Kombi-Vorteile mit DSL- und Festnetzanschluss",
         "Bis zu 100€ Startguthaben für Neukunden",
         "Kostenlose Hotline für Kunden",
@@ -448,14 +456,14 @@ const providerData: { [key: string]: Provider[] } = {
       name: "XTB",
       rating: 4.5,
       features: [
+        "<h4>Über 8000 Aktien & ETFs handeln</h4>",
+        "<h4>0% Kommission bis 100.000€ Umsatz</h4>",
         "Gratis Aktie für neue Investoren",
         "Bis zu 2,3% p.a. Zinsen auf Guthaben",
-        "Über 8000 Aktien & ETFs",
         "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
         "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
         "eWallet mit virtueller Mastercard",
         "Smarte ETF-Sparpläne",
-        "0% Kommission bis 100.000€ Umsatz",
         "Kostenlose Ein- & Auszahlungen",
         "Kostenlos für ETFs und echte Aktien und 0,2 % Gebühr für Transaktionen über 100.000 EUR.",
         "Platz 1 CFD-Broker 2024/25",
