@@ -260,8 +260,169 @@ const Header: React.FC = () => {
 
 const providerData = [
   {
- Sie haben recht, entschuldigen Sie! Die H4-Tags sollen für SEO bleiben, aber nicht sichtbar sein. Hier ist der korrekte Code mit versteckten H4-Tags:
-
+   name: "Tarifcheck.de",
+  rating: 4.5,
+  features: [
+    "<h4 style='display:none;'>Kostenloser Vergleichstarifrechner</h4>Kostenloser Vergleichstarifrechner",
+    "<h4 style='display:none;'>Girokonto Neukundenbonus bis 120€</h4>Girokonto Neukundenbonus bis 120€",
+    "Über 20 Jahre Erfahrung als Vergleichsportal",
+    "100% kostenloser und unverbindlicher Vergleich",
+    "<h4 style='display:none;'>Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)</h4>Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 09/2024)",
+    "eKomi Silber Siegel mit 4,5/5 Sternen",
+    "Über 3.194 verifizierte Kundenbewertungen",
+    "Deutschlands drittgrößtes Vergleichsportal",
+    "Bis zu 1.000€ jährlich sparen bei Girokonten und Krediten"
+  ],
+  price: "100% kostenlos",
+  bonus: "Bis zu 120€ Neukundenbonus",
+  logo: "🏆",
+  url: "https://www.tarifcheck.com/W1pi1Fx"
+},
+{
+  name: "DKB",
+  rating: 4.7,
+  features: [
+    "<h4 style='display:none;'>Kostenloses Girokonto mit 100€ Prämie</h4>Kostenloses Girokonto mit 100€ Prämie",
+    "<h4 style='display:none;'>Visa Kreditkarte ohne Jahresgebühr</h4>Visa Kreditkarte ohne Jahresgebühr",
+    "Visa Kreditkarte ohne Jahresgebühr, weltweit kostenlos bezahlen",
+    "<h4 style='display:none;'>Tagesgeldkonto mit 3,5% Zinsen p.a.</h4>Tagesgeldkonto mit 3,5% Zinsen p.a.",
+    "Nachhaltige Bank: Finanziererin erneuerbarer Energien",
+    "Online-Broker mit ETF-Sparplänen ab 1,90€ pro Trade",
+    "Kinderkonto für finanzielle Bildung der Jüngsten",
+    "Baufinanzierung mit flexiblen Konditionen und LBS-Bausparen",
+    "DKB-App: Sicher und mobil Bankgeschäfte erledigen"
+  ],
+  price: "100% kostenlos",
+  bonus: "100€ Prämie + 30€ Kreditkarten-Bonus",
+  logo: "🏦",
+  url: "https://www.awin1.com/awclick.php?gid=441815&mid=11329&awinaffid=2524533&linkid=2273909&clickref="
+},
+{
+  name: "Credimaxx",
+  rating: 4.9,
+  features: [
+    "<h4 style='display:none;'>Kreditvermittlung ohne Schufa</h4>Kreditvermittlung ohne Schufa",
+    "<h4 style='display:none;'>Digitale Kreditbeantragung mit WebID</h4>Digitale Kreditbeantragung mit WebID",
+    "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+    "Sofortvermittlung durch erfahrene Kreditprofis",
+    "Digitaler Abschluss mit WebID oder VideoIdent",
+    "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
+    "<h4 style='display:none;'>TÜV Kundenzufriedenheit: 1.9 (sehr gut)</h4>TÜV Kundenzufriedenheit: 1.9 (sehr gut)",
+    "Vermittlung in bis zu 1 Minute",
+    "100% Sicherheit mit 256-Bit-SSL-Verschlüsselung",
+    "25 Jahre Erfahrung in der Kreditvermittlung"
+  ],
+  price: "ab 10,99% eff. Zins p.a.",
+  bonus: "Schnelle Auszahlung",
+  logo: "💳",
+  url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
+},
+{
+  name: "auxmoney",
+  rating: 4.8,
+  features: [
+    "<h4 style='display:none;'>Kreditvermittlung für Selbstständige</h4>Kreditvermittlung für Selbstständige",
+    "<h4 style='display:none;'>Schufa-neutrale Kreditanfrage</h4>Schufa-neutrale Kreditanfrage",
+    "Kreditvermittlung auch für Selbstständige und Freiberufler",
+    "Kooperation mit SWK Bank für schnelle Abwicklung",
+    "<h4 style='display:none;'>eKomi Gold Siegel mit 4,8/5 Sternen</h4>eKomi Gold Siegel mit 4,8/5 Sternen",
+    "Über 10 Jahre Erfahrung im Kreditmarkt",
+    "Schufa-neutrale Kreditanfrage",
+    "Kostenlose Sondertilgungen für flexible Rückzahlung",
+    "Vergleich von über 20 Banken für beste Konditionen",
+    "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung"
+  ],
+  price: "Bonitätsabhängige Zinsen",
+  bonus: "Flexible Kreditkonditionen",
+  logo: "💸",
+  url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&subid=&target=Startseite"
+},
+{
+  name: "CHECK24",
+  rating: 4.7,
+  features: [
+    "<h4 style='display:none;'>Marktführer im Finanzvergleich</h4>Marktführer im Finanzvergleich",
+    "<h4 style='display:none;'>Vergleich von 300+ Girokonten</h4>Vergleich von 300+ Girokonten",
+    "Marktführer mit über 90% Marktabdeckung bei Girokonten und Krediten",
+    "<h4 style='display:none;'>25 Testsiege im Finanzvergleich</h4>25 Testsiege im Finanzvergleich",
+    "Vergleich von über 300 Girokonten und Kreditangeboten",
+    "Nirgendwo-Günstiger-Garantie für beste Konditionen",
+    "Kostenlose Beratung durch 300 Finanzexperten (08:00–22:00 Uhr)",
+    "Über 98% Kundenzufriedenheit",
+    "Vermittlung von Krediten mit Provisionstransparenz",
+    "Zusätzliche Vergleiche für Versicherungen, Strom und Gas"
+  ],
+  price: "100% kostenlos",
+  bonus: "Bis zu 100€ Cashback",
+  logo: "✅",
+  url: "https://www.tarifcheck.com/k0zzIEJ"
+},
+{
+  name: "Verivox",
+  rating: 4.6,
+  features: [
+    "<h4 style='display:none;'>Kreditvergleich mit 40% Zinsersparnis</h4>Kreditvergleich mit 40% Zinsersparnis",
+    "<h4 style='display:none;'>Schufa-neutrale Kreditanfragen</h4>Schufa-neutrale Kreditanfragen",
+    "Kreditvergleich mit über 40% Zinsersparnis im Schnitt",
+    "Nirgendwo-Günstiger-Garantie mit bis zu 300€ Rückerstattung",
+    "Kostenlose und Schufa-neutrale Kreditanfragen",
+    "<h4 style='display:none;'>TÜV-geprüfte Kreditplattform</h4>TÜV-geprüfte Kreditplattform",
+    "Über 20 Jahre Erfahrung im Finanzvergleich",
+    "TÜV-geprüfte Plattform für Kredite und Finanzen",
+    "Kredite ab 0,68% effektiver Jahreszins",
+    "Persönliche Beratung unter 06221 79617216"
+  ],
+  price: "100% kostenlos",
+  bonus: "Bis zu 300€ Rückerstattung",
+  logo: "⚖️",
+  url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
+  metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
+  metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
+},
+{
+  name: "Smava",
+  rating: 4.8,
+  features: [
+    "<h4 style='display:none;'>Kreditvergleich mit 20+ Banken</h4>Kreditvergleich mit 20+ Banken",
+    "<h4 style='display:none;'>Schufa-neutrale Kreditanfragen</h4>Schufa-neutrale Kreditanfragen",
+    "Kreditvergleich mit über 20 Banken für beste Konditionen",
+    "Günstiger geht nicht Garantie mit Top-Zinsen ab 0,68%",
+    "Schufa-neutrale und 100% kostenlose Kreditanfragen",
+    "<h4 style='display:none;'>TÜV-zertifizierte Kreditplattform</h4>TÜV-zertifizierte Kreditplattform",
+    "Über 300.000 zufriedene Kunden seit 2007",
+    "TÜV-zertifizierte Plattform für Kreditvergleiche",
+    "Schnelle Auszahlung innerhalb von 48 Stunden",
+    "Digitale Antragsprozesse mit VideoIdent"
+  ],
+  price: "100% kostenlos",
+  bonus: "Schnelle Auszahlung",
+  logo: "💰",
+  url: "https://kreditvergleich.smava.de/coop/antrag?refId=dykN1hEao7j3",
+  metaTitle: "Smava Kreditvergleich: Günstige Kredite ab 0,68% 2025",
+  metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!"
+},
+{
+  name: "FINANZCHECK.de",
+  rating: 4.8,
+  features: [
+    "<h4 style='display:none;'>Kreditvergleich mit 20+ Banken</h4>Kreditvergleich mit 20+ Banken",
+    "<h4 style='display:none;'>Zinsen ab 0,69% effektivem Jahreszins</h4>Zinsen ab 0,69% effektivem Jahreszins",
+    "Kreditvergleich mit über 20 Banken für beste Konditionen",
+    "Zinsen ab 0,69% effektivem Jahreszins",
+    "<h4 style='display:none;'>Schufa-neutrale Kreditanfrage</h4>Schufa-neutrale Kreditanfrage",
+    "Schufa-neutrale Anfrage ohne Bonitätsbeeinträchtigung",
+    "TÜV-geprüfte Plattform mit 4,8/5 Sternen (eKomi)",
+    "Schnelle Auszahlung innerhalb von 24–48 Stunden",
+    "Kostenlose Beratung durch Experten (Mo–Fr 8–20 Uhr)",
+    "Über 500.000 zufriedene Kunden seit 2011",
+    "Flexible Laufzeiten von 12 bis 120 Monaten"
+  ],
+  price: "100% kostenlos",
+  bonus: "Schnelle Auszahlung",
+  logo: "💶",
+  url: "https://kreditvergleich.finanzcheck.de/coop/antrag?refId=Bz0EGclZjG5L",
+  metaTitle: "FINANZCHECK.de Kreditvergleich: Günstige Kredite ab 0,69% 2025",
+  metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!"
   }
 ]
 
