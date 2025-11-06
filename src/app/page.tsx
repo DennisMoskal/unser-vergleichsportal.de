@@ -855,7 +855,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-3">Operationen und Notfallbehandlungen</h3>
                 <p className="mb-4 text-gray-700">
                   Eine Operation kann 1.000-2.000€ oder mehr kosten. Gute Versicherungen wie{" "}
-                  <a href="https://www.hansemerkur.de/tierkrankenversicherung" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
+                  <a href="https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=" target="_blank" rel="noopener sponsored noreferrer" className="text-green-600 hover:underline">
                     HanseMerkur
                   </a>{" "}
                   decken bis zu 100% der Kosten ab.
