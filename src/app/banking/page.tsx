@@ -275,7 +275,14 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
-    url: "https://www.tarifcheck.com/W1pi1Fx"
+    url: "https://www.tarifcheck.com/W1pi1Fx",
+    // Versteckte H4 Tags für SEO
+    hiddenSeoKeywords: [
+      "Girokonto Vergleich 2025",
+      "Kostenloses Girokonto mit Bonus",
+      "Finanzvergleich Testsieger",
+      "Kreditvergleich online"
+    ]
   },
   {
     name: "DKB",
@@ -293,7 +300,13 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "100€ Prämie + 30€ Kreditkarten-Bonus",
     logo: "🏦",
-    url: "https://www.awin1.com/awclick.php?gid=441815&mid=11329&awinaffid=2524533&linkid=2273909&clickref="
+    url: "https://www.awin1.com/awclick.php?gid=441815&mid=11329&awinaffid=2524533&linkid=2273909&clickref=",
+    hiddenSeoKeywords: [
+      "DKB Girokonto kostenlos",
+      "Tagesgeldkonto hohe Zinsen",
+      "Nachhaltige Bank Deutschland",
+      "ETF Sparplan günstig"
+    ]
   },
   {
     name: "Credimaxx",
@@ -311,7 +324,13 @@ const providerData = [
     price: "ab 10,99% eff. Zins p.a.",
     bonus: "Schnelle Auszahlung",
     logo: "💳",
-    url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D"
+    url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
+    hiddenSeoKeywords: [
+      "Kredit ohne Schufa",
+      "Sofortkredit online",
+      "Umschuldung Kredit",
+      "Kreditvermittlung schnell"
+    ]
   },
   {
     name: "auxmoney",
@@ -329,7 +348,13 @@ const providerData = [
     price: "Bonitätsabhängige Zinsen",
     bonus: "Flexible Kreditkonditionen",
     logo: "💸",
-    url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&subid=&target=Startseite"
+    url: "https://partner.auxmoney.com/go.cgi?pid=10017147&wmid=54&cpid=1&prid=1&subid=&target=Startseite",
+    hiddenSeoKeywords: [
+      "Kredit für Selbstständige",
+      "Schufa neutrale Kreditanfrage",
+      "Kreditkonditionen vergleichen",
+      "Nirgendwo günstiger Garantie"
+    ]
   },
   {
     name: "CHECK24",
@@ -347,7 +372,13 @@ const providerData = [
     price: "100% kostenlos",
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
-    url: "https://www.tarifcheck.com/k0zzIEJ"
+    url: "https://www.tarifcheck.com/k0zzIEJ",
+    hiddenSeoKeywords: [
+      "CHECK24 Finanzvergleich",
+      "Girokonto Marktführer",
+      "Kostenlose Finanzberatung",
+      "Vergleichsportal Testsieger"
+    ]
   },
   {
     name: "Verivox",
@@ -366,7 +397,13 @@ const providerData = [
     logo: "⚖️",
     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2676754&clickref=",
     metaTitle: "Verivox Kreditvergleich: Bis zu 40% Zinsen sparen 2025",
-    metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!"
+    metaDescription: "Vergleichen Sie Kredite mit Verivox und sparen Sie bis zu 40% Zinsen. Schufa-neutral, kostenlos und TÜV-geprüft. Jetzt günstige Konditionen sichern!",
+    hiddenSeoKeywords: [
+      "Verivox Kreditvergleich",
+      "Zinsersparnis Kredit",
+      "TÜV geprüft Finanzen",
+      "Kredit ab 0,68% Zinsen"
+    ]
   },
   {
     name: "Smava",
@@ -385,7 +422,13 @@ const providerData = [
     logo: "💰",
     url: "https://kreditvergleich.smava.de/coop/antrag?refId=dykN1hEao7j3",
     metaTitle: "Smava Kreditvergleich: Günstige Kredite ab 0,68% 2025",
-    metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!"
+    metaDescription: "Finden Sie mit Smava den günstigsten Kredit ab 0,68% Zinsen. Schufa-neutral, kostenlos und mit schneller Auszahlung. Jetzt vergleichen und sparen!",
+    hiddenSeoKeywords: [
+      "Smava Kreditvergleich",
+      "Günstiger Kredit ab 0,68%",
+      "Schnelle Kreditauszahlung",
+      "TÜV zertifiziert Kredit"
+    ]
   },
   {
     name: "FINANZCHECK.de",
@@ -405,7 +448,13 @@ const providerData = [
     logo: "💶",
     url: "https://kreditvergleich.finanzcheck.de/coop/antrag?refId=Bz0EGclZjG5L",
     metaTitle: "FINANZCHECK.de Kreditvergleich: Günstige Kredite ab 0,69% 2025",
-    metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!"
+    metaDescription: "Vergleichen Sie Kredite mit FINANZCHECK.de: Zinsen ab 0,69%, Schufa-neutral, schnelle Auszahlung. Jetzt bis zu 40% Zinsen sparen!",
+    hiddenSeoKeywords: [
+      "FINANZCHECK Kreditvergleich",
+      "Kredit ab 0,69% Zinsen",
+      "Schufa neutrale Kreditanfrage",
+      "Flexible Kreditlaufzeiten"
+    ]
   }
 ]
 
