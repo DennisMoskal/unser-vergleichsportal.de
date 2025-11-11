@@ -298,6 +298,7 @@ export interface Provider {
   bonus: string;
   logo: string;
   url: string;
+  hiddenSeoKeywords?: string[];
 }
 const providerData: { [key: string]: Provider[] } = {
   versicherungen: [
@@ -305,9 +306,9 @@ const providerData: { [key: string]: Provider[] } = {
      name: "Tarifcheck.de",
   rating: 4.5,
   features: [
-    "<h4>Bis zu 1.000€ jährlich sparen möglich</h4>",
-    "<h4>100% kostenloser und unverbindlicher Vergleich</h4>",
-    "<h4>Kostenlose Girokonten mit bis zu 120€ Neukundenbonus</h4>",
+    "Bis zu 1.000€ jährlich sparen möglich",
+    "100% kostenloser und unverbindlicher Vergleich",
+    "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
     "Mehrfach ausgezeichnet mit 'sehr gut'",
     "eKomi Silber Siegel mit 4,5/5 Sternen",
     "Über 3.194 Kundenbewertungen",
@@ -319,14 +320,20 @@ const providerData: { [key: string]: Provider[] } = {
   bonus: "Bis zu 120€ Neukundenbonus",
   logo: "🏆",
   url: "https://www.tarifcheck.de/girokonto/",
+  hiddenSeoKeywords: [
+    "Versicherungen Vergleich 2025",
+    "Kostenloser Versicherungsvergleich",
+    "Günstige Versicherungen finden",
+    "Top Versicherungsanbieter"
+  ]
 },
 {
   name: "freenet",
   rating: 4.7,
   features: [
-    "<h4>Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen</h4>",
-    "<h4>Kostenloser Wechselservice für Mobilfunkverträge</h4>",
-    "<h4>5G-Unterstützung in allen Tarifen</h4>",
+    "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+    "Kostenloser Wechselservice für Mobilfunkverträge",
+    "5G-Unterstützung in allen Tarifen",
     "Kombi-Vorteile mit DSL- und Festnetzanschluss",
     "Bis zu 100€ Startguthaben für Neukunden",
     "Kostenlose Hotline für Kunden",
@@ -339,6 +346,12 @@ const providerData: { [key: string]: Provider[] } = {
   bonus: "Bis zu 100€ Startguthaben",
   logo: "📱",
   url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
+  hiddenSeoKeywords: [
+    "Mobilfunk Vergleich 2025",
+    "Günstige Handytarife",
+    "5G Tarife vergleichen",
+    "Flexible Mobilfunktarife"
+  ]
 },
 ],
 tierversicherungen: [
@@ -346,27 +359,39 @@ tierversicherungen: [
   name: "PetProtect",
   rating: 4.9,
   features: [
-    "<h4>Vollschutz für Haustiere</h4>",
-    "<h4>Ohne Wartezeit</h4>",
-    "<h4>Freie Tierarztwahl</h4>"
+    "Vollschutz für Haustiere",
+    "Ohne Wartezeit",
+    "Freie Tierarztwahl"
   ],
   price: "ab 8€/Monat",
   bonus: "1. Monat gratis",
   logo: "🐕",
   url: "/anbieter/petprotect",
+  hiddenSeoKeywords: [
+    "Tierversicherung Vergleich",
+    "Hundeversicherung günstig",
+    "Katzenversicherung Testsieger",
+    "Haustier Versicherungsschutz"
+  ]
 },
 {
   name: "FigoPet",
   rating: 4.6,
   features: [
-    "<h4>Moderne Plattform</h4>",
-    "<h4>Schnelle Erstattung</h4>",
-    "<h4>Präventionsschutz</h4>"
+    "Moderne Plattform",
+    "Schnelle Erstattung",
+    "Präventionsschutz"
   ],
   price: "ab 12€/Monat",
   bonus: "Willkommensgeschenk",
   logo: "🐱",
   url: "/anbieter/figopet",
+  hiddenSeoKeywords: [
+    "Tierversicherung online",
+    "Schnelle Schadensregulierung",
+    "Prävention für Haustiere",
+    "Moderne Tierarztkosten Versicherung"
+  ]
 },
 ],
 banking: [
@@ -374,9 +399,9 @@ banking: [
   name: "Tarifcheck.de",
   rating: 4.5,
   features: [
-    "<h4>Über 20 Jahre Erfahrung als Vergleichsportal</h4>",
-    "<h4>100% kostenloser und unverbindlicher Vergleich</h4>",
-    "<h4>Kostenlose Girokonten mit bis zu 120€ Neukundenbonus</h4>",
+    "Über 20 Jahre Erfahrung als Vergleichsportal",
+    "100% kostenloser und unverbindlicher Vergleich",
+    "Kostenlose Girokonten mit bis zu 120€ Neukundenbonus",
     "Mehrfach ausgezeichnet mit 'sehr gut'",
     "eKomi Silber Siegel mit 4,5/5 Sternen",
     "Über 3.194 Kundenbewertungen",
@@ -388,14 +413,20 @@ banking: [
   bonus: "Bis zu 120€ Neukundenbonus",
   logo: "🏆",
   url: "https://www.tarifcheck.de/girokonto/",
+  hiddenSeoKeywords: [
+    "Banking Vergleich 2025",
+    "Kostenloses Girokonto",
+    "Girokonto mit Bonus",
+    "Banking Testsieger"
+  ]
 },
 {
   name: "XTB",
   rating: 4.5,
   features: [
-    "<h4>Gratis Aktie für neue Investoren</h4>",
-    "<h4>Bis zu 2,3% p.a. Zinsen auf Guthaben</h4>",
-    "<h4>Über 8000 Aktien & ETFs</h4>",
+    "Gratis Aktie für neue Investoren",
+    "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+    "Über 8000 Aktien & ETFs",
     "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
     "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
     "eWallet mit virtueller Mastercard",
@@ -409,14 +440,20 @@ banking: [
   bonus: "Demo-Konto",
   logo: "📊",
   url: "https://link-pso.xtb.com/pso/lMDhc",
+  hiddenSeoKeywords: [
+    "Trading Plattform Vergleich",
+    "Kostenloses Demokonto",
+    "ETF Sparplan kostenlos",
+    "Aktien handeln günstig"
+  ]
 },
 {
   name: "Credimaxx",
   rating: 4.9,
   features: [
-    "<h4>Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung</h4>",
-    "<h4>Sofortvermittlung durch erfahrene Kreditprofis</h4>",
-    "<h4>Digitaler Abschluss mit WebID oder VideoIdent</h4>",
+    "Kredite von 4.000€ bis 50.000€ mit sozialer Verantwortung",
+    "Sofortvermittlung durch erfahrene Kreditprofis",
+    "Digitaler Abschluss mit WebID oder VideoIdent",
     "Kredit ohne Schufa, Sofortkredit oder Umschuldung möglich",
     "Keine Zusatzprodukte wie Versicherungen oder Fondssparpläne",
     "TÜV Kundenzufriedenheit: 1.9 (sehr gut), eKomi 4.9/5",
@@ -429,14 +466,20 @@ banking: [
   bonus: "Schnelle Auszahlung",
   logo: "💳",
   url: "https://www.credimaxx.de/?a_aid=S37C8H62WGM9D",
+  hiddenSeoKeywords: [
+    "Kreditvergleich online",
+    "Kredit ohne Schufa",
+    "Sofortkredit beantragen",
+    "Günstiger Ratenkredit"
+  ]
 },
 {
   name: "freenet",
   rating: 4.7,
   features: [
-    "<h4>Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen</h4>",
-    "<h4>Kostenloser Wechselservice für Mobilfunkverträge</h4>",
-    "<h4>5G-Unterstützung in allen Tarifen</h4>",
+    "Flexible Mobilfunktarife mit bis zu 40 GB Datenvolumen",
+    "Kostenloser Wechselservice für Mobilfunkverträge",
+    "5G-Unterstützung in allen Tarifen",
     "Kombi-Vorteile mit DSL- und Festnetzanschluss",
     "Bis zu 100€ Startguthaben für Neukunden",
     "Kostenlose Hotline für Kunden",
@@ -449,6 +492,12 @@ banking: [
   bonus: "Bis zu 100€ Startguthaben",
   logo: "📱",
   url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
+  hiddenSeoKeywords: [
+    "Mobilfunk Tarifvergleich",
+    "Günstige Smartphone Tarife",
+    "5G Flatrate Angebote",
+    "Handytarife mit Bonus"
+  ]
 },
 ],
 trading: [
@@ -456,9 +505,9 @@ trading: [
   name: "XTB",
   rating: 4.5,
   features: [
-    "<h4>Gratis Aktie für neue Investoren</h4>",
-    "<h4>Bis zu 2,3% p.a. Zinsen auf Guthaben</h4>",
-    "<h4>Über 8000 Aktien & ETFs</h4>",
+    "Gratis Aktie für neue Investoren",
+    "Bis zu 2,3% p.a. Zinsen auf Guthaben",
+    "Über 8000 Aktien & ETFs",
     "Über 2600 CFD-Instrumente (Forex, Rohstoffe, Indizes)",
     "Über 40 Krypto-CFDs (BTC, ETH, etc.)",
     "eWallet mit virtueller Mastercard",
@@ -472,8 +521,14 @@ trading: [
   bonus: "Demo-Konto",
   logo: "📊",
   url: "https://link-pso.xtb.com/pso/lMDhc",
-    },
-  ],
+  hiddenSeoKeywords: [
+    "Online Broker Vergleich",
+    "Kostenloses Trading Demokonto",
+    "ETF Sparplan ohne Gebühren",
+    "Aktien handeln für Anfänger"
+  ]
+},
+],
 };
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("versicherungen");
