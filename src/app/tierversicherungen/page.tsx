@@ -729,22 +729,34 @@ export default function Tierversicherungen() {
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {[
         {
+          title: "Tierversicherung als Corporate Benefit: Der unterschätzte Faktor für Mitarbeiterbindung",
+          description: "Eine betriebliche Tierkrankenversicherung ist ein starkes Argument in Zeiten des Fachkräftemangels. Wie Arbeitgeber mit diesem Benefit die Mitarbeiterzufriedenheit und Bindung signifikant steigern können.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_tierversicherung-corporatebenefits-mitarbeiterbindung-activity-7391121771187310593--ndl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
+          date: "17. November 2025",
+        },
+        {
+          title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau 2025 (KORRIGIERT)",
+          description: "Die clevere Nutzung der Haltefrist von über einem Jahr, Schenkungen und smarte Strategien sind der Schlüssel zur legalen Optimierung der Steuerlast beim Krypto-Vermögensaufbau.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7394057603619753984-c6OW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
+          date: "15. November 2025",
+        },
+        {
           title: "Die Explosion der Tierarztkosten: Warum Haustierversicherungen zur sozialen Pflicht werden",
           description: "Der Markt für Haustierversicherungen in Deutschland wächst rasant, getrieben durch steigende Tierarztkosten und medizinischen Fortschritt. Die neue GOT und moderne Behandlungsmethoden machen Versicherungen zu einem unverzichtbaren Schutz vor hohen finanziellen Risiken für Tierhalter.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_haustierversicherung-tierwohl-versicherungen-activity-7388192993553334272-FLUf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
           date: "04. April 2025",
         },
         {
-          title: "Warum eine Hunde-Haftpflichtversicherung unverzichtbar ist",
-          description: "Die Hunde-Haftpflichtversicherung deckt Personen- und Sachschäden ab, schützt vor hohen Kosten durch Unfälle oder Schäden und ist für Hundehalter essenziell, um finanzielle Risiken zu minimieren. Der Autor empfiehlt, Angebote zu vergleichen und auf ausreichende Deckungssummen sowie Mietsachschäden zu achten.",
-          url: "https://www.linkedin.com/posts/unservergleichsportalde_warum-eine-hunde-haftpflichtversicherung-activity-7374460905553661952-_G5d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
-          date: "01. Februar 2025",
-        },
-        {
           title: "Nachhaltige Finanzen für eine starke Zukunft: Wie Sie mit smarter Fiskalpolitik und den richtigen Finanzprodukten profitieren",
           description: "Der Beitrag beleuchtet, wie nachhaltige Fiskalpolitik Klimaschutz, sozialen Ausgleich und wirtschaftliches Wachstum vereint, und zeigt, wie eine Reform der Schuldenbremse notwendig ist, um Investitionen zu fördern. Mit SmartFinanz von Unser-Vergleichsportal.de können Nutzer ihre Finanzen optimieren und bis zu 1.000 € jährlich sparen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_nachhaltigkeit-fiskalpolitik-schuldenbremse-activity-7378818223414280192-Rsw4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
           date: "03. April 2025",
+        },
+        {
+          title: "Warum eine Hunde-Haftpflichtversicherung unverzichtbar ist",
+          description: "Die Hunde-Haftpflichtversicherung deckt Personen- und Sachschäden ab, schützt vor hohen Kosten durch Unfälle oder Schäden und ist für Hundehalter essenziell, um finanzielle Risiken zu minimieren. Der Autor empfiehlt, Angebote zu vergleichen und auf ausreichende Deckungssummen sowie Mietsachschäden zu achten.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_warum-eine-hunde-haftpflichtversicherung-activity-7374460905553661952-_G5d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
+          date: "01. Februar 2025",
         },
         {
           title: "Nachhaltige Kapitalanlagen: Rendite mit gutem Gewissen im Jahr 2025!",
