@@ -986,7 +986,7 @@ export default function Banking() {
           date: "23. November 2025",
         },
         {
-          title: "Ausgabe 27: Bitcoin als perfektes Pfand: Die Eigenschaften des idealen Collateral und das Geheimnis der Superreichen",
+          title: "Bitcoin als perfektes Pfand: Die Eigenschaften des idealen Collateral und das Geheimnis der Superreichen",
           description: "Wie clevere Anleger Liquidität steuerfrei generieren: Bitcoin erfüllt nahezu alle Eigenschaften des idealen Kreditsicherungs-Assets und macht die Strategie der Superreichen replizierbar.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe27-bitcoin-als-perfektes-pfand-ugcPost-7394474547024035841-q5P-",
           date: "16. November 2025",
