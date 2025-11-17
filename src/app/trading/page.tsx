@@ -1055,8 +1055,8 @@ export default function DeFi() {
           date: "15. November 2025",
         },
         {
-          title: "Ausgabe 20: Immobilien-Risiko neu gedacht: Warum Ihr Vermögen im Stehen verliert",
-          description: "Hohe Nebenkosten, Zinsrisiken und Illiquidität machen Immobilien zu einem riskanten Asset. Ein Vergleich mit Bitcoins Überlegenheit als digitaler und liquider Wertspeicher.",
+          title: "mmobilien-Risiko neu gedacht: Warum Ihr Vermögen jetzt eine strategische Neuausrichtung braucht",
+          description: "Die Debatte zwischen traditionellen Sachwerten und knappen digitalen Assets ist mehr als ein Hype – sie ist eine strategische Notwendigkeit. Wer glaubt, Immobilien seien aufgrund geringer Volatilität risikofrei, übersieht die tiefgreifenden, langfristigen Risiken, die durch globale und demografische Trends verschärft werden.",
           url: "https://www.linkedin.com/pulse/ausgabe20immobilien-risiko-neu-gedacht-warum-ihr-verm%C3%B6gen-moskal-pqicf",
           date: "14. November 2025",
         },
