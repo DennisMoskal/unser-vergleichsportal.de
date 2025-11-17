@@ -1036,6 +1036,30 @@ export default function DeFi() {
           url: "https://www.linkedin.com/pulse/8-bitcoin-als-disruptive-kraft-warum-es-das-einzige-asset-moskal-btacf",
           date: "23. November 2025",
         },
+        {
+          title: "Die Renaissance der Kernkraft – Warum Bitcoin Mining die neue Energielösung ist",
+          description: "Die Renaissance der Kernkraft: Warum Uran und SMR-Technologie die neue Diversifikation zu Tech und KI darstellen.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_oder-etwa-doch-die-renaissance-der-kernkraft-ugcPost-7395513172784304128-CLNr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
+          date: "17. November 2025",
+        },
+        {
+          title: "Langfristanleihen und der Bailout-Zwang",
+          description: "Die toxische Mischung aus steigenden Zinsen und Langfristanleihen der Banken zwingt Zentralbanken zur Rettung. Warum das System unweigerlich zu Bitcoin führt.",
+          url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe25-langfristanleihen-und-der-bailout-zwang-ugcPost-7394470985523073024-OXLu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
+          date: "16. November 2025",
+        },
+        {
+          title: "Die ETF-Falle: Warum Ihr Vermögen damit stagniert – und das Risiko, über das niemand spricht",
+          description: "Eine kritische Analyse der Renditen, der tatsächlichen Inflationsrate und der tief liegenden Drittparteirisiken der Verwahrung zeigt, dass Anleger ihre Strategie fundamental hinterfragen müssen",
+          url: "https://www.linkedin.com/pulse/die-etf-falle-warum-ihr-verm%C3%B6gen-damit-stagniert-und-das-moskal-7j4pf",
+          date: "15. November 2025",
+        },
+        {
+          title: "Ausgabe 20: Immobilien-Risiko neu gedacht: Warum Ihr Vermögen im Stehen verliert",
+          description: "Hohe Nebenkosten, Zinsrisiken und Illiquidität machen Immobilien zu einem riskanten Asset. Ein Vergleich mit Bitcoins Überlegenheit als digitaler und liquider Wertspeicher.",
+          url: "https://www.linkedin.com/pulse/ausgabe20immobilien-risiko-neu-gedacht-warum-ihr-verm%C3%B6gen-moskal-pqicf",
+          date: "14. November 2025",
+        },
       ].map((post, index) => (
         <Card
           key={index}
