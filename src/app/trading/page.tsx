@@ -1037,7 +1037,7 @@ export default function DeFi() {
           date: "23. November 2025",
         },
         {
-          title: "Die Renaissance der Kernkraft – Warum Bitcoin Mining die neue Energielösung ist",
+          title: "Die Renaissance der Kernkraft: Warum Uran und SMR-Technologie die neue Diversifikation zu Tech und KI darstellen",
           description: "Die Renaissance der Kernkraft: Warum Uran und SMR-Technologie die neue Diversifikation zu Tech und KI darstellen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_oder-etwa-doch-die-renaissance-der-kernkraft-ugcPost-7395513172784304128-CLNr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
           date: "17. November 2025",
