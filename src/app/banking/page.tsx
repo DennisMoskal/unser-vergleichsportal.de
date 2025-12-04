@@ -934,7 +934,7 @@ export default function Banking() {
                     ))}
                     <span className="ml-2 text-base font-medium text-gray-600">{provider.rating}</span>
                   </div>
-                </CardContent>
+                </CardHeader>
                 <CardContent className="flex flex-col flex-1">
                   <div className="text-center border-b pb-2 mb-4">
                     <p className="text-xl font-bold text-green-600">{provider.price}</p>
@@ -968,103 +968,105 @@ export default function Banking() {
           </div>
         </div>
       </section>
-{/* Neue LinkedIn-Sektion */}
-<section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
-  <div className="container mx-auto px-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-      Aktuelle Finanztipps und Artikel
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
-      Entdecken Sie unsere neuesten Finanztipps und Einblicke auf unserem LinkedIn-Profil. Von Bitcoin-Analysen über nachhaltige Investments bis hin zu Rentenvorsorge-Strategien – bleiben Sie informiert!
-    </p>
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          title: "Die Rolle von Geld: Warum Bitcoin das beste Gut für das 21. Jahrhundert ist",
-          description: "Bitcoin als ökonomische Gegenbewegung: Die Wiederherstellung der Kaufkraft und die Schwächen des Fiat-Geldsystems beleuchtet.",
-          url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
-          date: "23. November 2025",
-        },
-        {
-          title: "Bitcoin als perfektes Pfand: Die Eigenschaften des idealen Collateral und das Geheimnis der Superreichen",
-          description: "Wie clevere Anleger Liquidität steuerfrei generieren: Bitcoin erfüllt nahezu alle Eigenschaften des idealen Kreditsicherungs-Assets und macht die Strategie der Superreichen replizierbar.",
-          url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe27-bitcoin-als-perfektes-pfand-ugcPost-7394474547024035841-q5P-",
-          date: "16. November 2025",
-        },
-        {
-          title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau 2025",
-          description: "Wie clevere Anleger die Haltefrist, Schenkungen und smarte Strategien nutzen, um legal Steuern zu optimieren.",
-          url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
-          date: "10. November 2025",
-        },
-        {
-          title: "Nachhaltige Kapitalanlagen: Rendite mit gutem Gewissen im Jahr 2025!",
-          description: "ESG-ETFs bieten bis zu 14% Rendite und fördern Klimaschutz. Warum jetzt in grüne Anlagen investieren?",
-          url: "https://www.linkedin.com/posts/unservergleichsportalde_nachhaltigeinvestments-esg-kapitalanlagen2025-activity-7377372911860363266-xbkZ",
-          date: "3. November 2025",
-        },
-        {
-          title: "Deutschlands Rechenzentrums-Bremse: Risiko für KI & Wettbewerbsfähigkeit",
-          description: "Ohne leistungsstarke Rechenzentren läuft nichts. Warum Deutschland ins Hintertreffen gerät und was dagegen tun werden muss.",
-          url: "https://www.linkedin.com/posts/unservergleichsportalde_digitalisierung-ki-infrastruktur-activity-7378304599587323904-Jugq",
-          date: "3. November 2025",
-        },
-        {
-          title: "Die stille Krise: Rentenlücke 2025 – Ursachen, Folgen und ein 3-Stufen-Plan",
-          description: "Ein systematischer Leitfaden, wie Sie die Rentenlücke erkennen, verstehen und Schritt für Schritt schließen können.",
-          url: "https://www.linkedin.com/posts/unservergleichsportalde_die-stille-krise-rentenl%C3%BCcke-2025-ursachen-activity-7375163950973394944-CKPw",
-          date: "23. September 2025",
-        },
-      ].map((post, index) => (
-        <Card
-          key={index}
-          className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full"
-        >
-          <CardHeader className="pb-4 flex-shrink-0">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 break-words">
-              {post.title}
-            </h3>
-            <p className="text-sm text-gray-500">{post.date}</p>
-          </CardHeader>
-          <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
-            <h4 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
-              {post.description}
-            </h4>
+
+      {/* Neue LinkedIn-Sektion */}
+      <section className="py-12 sm:py-16 bg-white" id="linkedin-posts">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
+            Aktuelle Finanztipps und Artikel
+          </h2>
+          <p className="text-base sm:text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+            Entdecken Sie unsere neuesten Finanztipps und Einblicke auf unserem LinkedIn-Profil. Von Bitcoin-Analysen über nachhaltige Investments bis hin zu Rentenvorsorge-Strategien – bleiben Sie informiert!
+          </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Die Rolle von Geld: Warum Bitcoin das beste Gut für das 21. Jahrhundert ist",
+                description: "Bitcoin als ökonomische Gegenbewegung: Die Wiederherstellung der Kaufkraft und die Schwächen des Fiat-Geldsystems beleuchtet.",
+                url: "https://www.linkedin.com/pulse/ausgabe-3-die-rolle-von-geld-warum-bitcoin-das-beste-gut-moskal-bpd7f",
+                date: "23. November 2025",
+              },
+              {
+                title: "Bitcoin als perfektes Pfand: Die Eigenschaften des idealen Collateral und das Geheimnis der Superreichen",
+                description: "Wie clevere Anleger Liquidität steuerfrei generieren: Bitcoin erfüllt nahezu alle Eigenschaften des idealen Kreditsicherungs-Assets und macht die Strategie der Superreichen replizierbar.",
+                url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe27-bitcoin-als-perfektes-pfand-ugcPost-7394474547024035841-q5P-",
+                date: "16. November 2025",
+              },
+              {
+                title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau 2025",
+                description: "Wie clevere Anleger die Haltefrist, Schenkungen und smarte Strategien nutzen, um legal Steuern zu optimieren.",
+                url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
+                date: "10. November 2025",
+              },
+              {
+                title: "Nachhaltige Kapitalanlagen: Rendite mit gutem Gewissen im Jahr 2025!",
+                description: "ESG-ETFs bieten bis zu 14% Rendite und fördern Klimaschutz. Warum jetzt in grüne Anlagen investieren?",
+                url: "https://www.linkedin.com/posts/unservergleichsportalde_nachhaltigeinvestments-esg-kapitalanlagen2025-activity-7377372911860363266-xbkZ",
+                date: "3. November 2025",
+              },
+              {
+                title: "Deutschlands Rechenzentrums-Bremse: Risiko für KI & Wettbewerbsfähigkeit",
+                description: "Ohne leistungsstarke Rechenzentren läuft nichts. Warum Deutschland ins Hintertreffen gerät und was dagegen tun werden muss.",
+                url: "https://www.linkedin.com/posts/unservergleichsportalde_digitalisierung-ki-infrastruktur-activity-7378304599587323904-Jugq",
+                date: "3. November 2025",
+              },
+              {
+                title: "Die stille Krise: Rentenlücke 2025 – Ursachen, Folgen und ein 3-Stufen-Plan",
+                description: "Ein systematischer Leitfaden, wie Sie die Rentenlücke erkennen, verstehen und Schritt für Schritt schließen können.",
+                url: "https://www.linkedin.com/posts/unservergleichsportalde_die-stille-krise-rentenl%C3%BCcke-2025-ursachen-activity-7375163950973394944-CKPw",
+                date: "23. September 2025",
+              },
+            ].map((post, index) => (
+              <Card
+                key={index}
+                className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col h-full"
+              >
+                <CardHeader className="pb-4 flex-shrink-0">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 break-words">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-gray-500">{post.date}</p>
+                </CardHeader>
+                <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                  <h4 className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-4">
+                    {post.description}
+                  </h4>
+                  <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="mt-auto"
+                    aria-label={`LinkedIn-Beitrag lesen: ${post.title}`}
+                  >
+                    <Button
+                      className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    >
+                      Beitrag lesen
+                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-8">
             <a
-              href={post.url}
+              href="https://www.linkedin.com/in/unservergleichsportalde"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="mt-auto"
-              aria-label={`LinkedIn-Beitrag lesen: ${post.title}`}
+              aria-label="Besuchen Sie unser LinkedIn-Profil für weitere Beiträge"
             >
               <Button
-                className="w-full bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                className="bg-green-600 text-white font-medium text-sm sm:text-base px-6 py-3 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
               >
-                Beitrag lesen
-                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                <Linkedin className="h-5 w-5 mr-2" aria-hidden="true" />
+                Mehr Tipps auf LinkedIn entdecken
               </Button>
             </a>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-    <div className="text-center mt-8">
-      <a
-        href="https://www.linkedin.com/in/unservergleichsportalde"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        aria-label="Besuchen Sie unser LinkedIn-Profil für weitere Beiträge"
-      >
-        <Button
-          className="bg-green-600 text-white font-medium text-sm sm:text-base px-6 py-3 transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-        >
-          <Linkedin className="h-5 w-5 mr-2" aria-hidden="true" />
-          Mehr Tipps auf LinkedIn entdecken
-        </Button>
-      </a>
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-center">Baufinanzierung für Ihr Eigenheim</h2>
@@ -1365,274 +1367,275 @@ export default function Banking() {
           </div>
         </div>
       </section>
-<footer className="bg-gray-900 text-white py-8 sm:py-12">
-  <div className="container mx-auto px-4">
-    <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
-      <div className="col-span-2 md:col-span-1">
-        <div className="flex flex-col items-start mb-4">
-          <SmartFinanzLogo className="text-xl" />
-          <a
-            href="https://www.linkedin.com/in/unservergleichsportalde"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4"
-          >
-            <Button
-              className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-              aria-label="Besuchen Sie unser LinkedIn-Profil (externer Link)"
-            >
-              <Linkedin className="mr-2 h-4 w-4" />
-              LinkedIn
-            </Button>
-          </a>
+
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-start mb-4">
+                <SmartFinanzLogo className="text-xl" />
+                <a
+                  href="https://www.linkedin.com/in/unservergleichsportalde"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4"
+                >
+                  <Button
+                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+                    aria-label="Besuchen Sie unser LinkedIn-Profil (externer Link)"
+                  >
+                    <Linkedin className="mr-2 h-4 w-4" />
+                    LinkedIn
+                  </Button>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+                <li>
+                  <Link
+                    href="/banking"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Banking"
+                  >
+                    Banking
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tierversicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Haustierversicherung"
+                  >
+                    Haustierversicherung
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/trading"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Trading"
+                  >
+                    Trading
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/versicherungen"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Versicherungen"
+                  >
+                    Versicherungen
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+                  <li>
+                    <a
+                      href="https://www.c24n.de/ducwCtq"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="DSL Vergleich (externer Link)"
+                    >
+                      DSL
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.c24n.de/Uxudvkj"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Gasvergleich (externer Link)"
+                    >
+                      Gas
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.c24n.de/5R17qbN"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Handytarif vergleichen (externer Link)"
+                    >
+                      Handytarif
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tarifcheck.com/NMXe4cX"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Kreditkarten vergleichen (externer Link)"
+                    >
+                      Kreditkarte
+                    </a>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+                  <li>
+                    <a
+                      href="https://www.c24n.de/FZ9nd0R"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Mietwagen vergleichen (externer Link)"
+                    >
+                      Mietwagen
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.c24n.de/zxy0WKh"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Ökostrom vergleichen (externer Link)"
+                    >
+                      Ökostrom
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.c24n.de/EieKR0E"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Reise vergleichen (externer Link)"
+                    >
+                      Reise
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.c24n.de/RYXPGyh"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                      aria-label="Stromvergleich (externer Link)"
+                    >
+                      Strom
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+                <li>
+                  <Link
+                    href="/karriere"
+                    rel="nofollow"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Karriere"
+                  >
+                    Karriere
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kontakt"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Kontakt"
+                  >
+                    Kontakt
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/partnerprogramme"
+                    rel="nofollow"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Partnerprogramm"
+                  >
+                    Partnerprogramm
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/ueber-uns"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Über uns"
+                  >
+                    Über uns
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
+                <li>
+                  <Link
+                    href="/agb"
+                    rel="nofollow"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="AGB"
+                  >
+                    AGB
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/cookie-richtlinie"
+                    rel="nofollow"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Cookie-Richtlinie"
+                  >
+                    Cookie-Richtlinie
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/datenschutz"
+                    rel="nofollow"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Datenschutz"
+                  >
+                    Datenschutz
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/impressum"
+                    rel="nofollow"
+                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
+                    aria-label="Impressum"
+                  >
+                    Impressum
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+            <p className="text-sm sm:text-base text-gray-400 mb-4">
+              © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+            </p>
+            <Link href="/" aria-label="Zurück zur Startseite">
+              <Button
+                className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
+              >
+                Zur Startseite
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div>
-        <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
-        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-          <li>
-            <Link
-              href="/banking"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Banking"
-            >
-              Banking
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/tierversicherungen"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Haustierversicherung"
-            >
-              Haustierversicherung
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/trading"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Trading"
-            >
-              Trading
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/versicherungen"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Versicherungen"
-            >
-              Versicherungen
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
-        <div className="grid grid-cols-2 gap-4">
-          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-            <li>
-              <a
-                href="https://www.c24n.de/ducwCtq"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="DSL Vergleich (externer Link)"
-              >
-                DSL
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.c24n.de/Uxudvkj"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Gasvergleich (externer Link)"
-              >
-                Gas
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.c24n.de/5R17qbN"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Handytarif vergleichen (externer Link)"
-              >
-                Handytarif
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.tarifcheck.com/NMXe4cX"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Kreditkarten vergleichen (externer Link)"
-              >
-                Kreditkarte
-              </a>
-            </li>
-          </ul>
-          <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-            <li>
-              <a
-                href="https://www.c24n.de/FZ9nd0R"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Mietwagen vergleichen (externer Link)"
-              >
-                Mietwagen
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.c24n.de/zxy0WKh"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Ökostrom vergleichen (externer Link)"
-              >
-                Ökostrom
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.c24n.de/EieKR0E"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Reise vergleichen (externer Link)"
-              >
-                Reise
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.c24n.de/RYXPGyh"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                aria-label="Stromvergleich (externer Link)"
-              >
-                Strom
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
-        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-          <li>
-            <Link
-              href="/karriere"
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Karriere"
-            >
-              Karriere
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/kontakt"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Kontakt"
-            >
-              Kontakt
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/partnerprogramme"
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Partnerprogramm"
-            >
-              Partnerprogramm
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/ueber-uns"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Über uns"
-            >
-              Über uns
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
-        <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-          <li>
-            <Link
-              href="/agb"
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="AGB"
-            >
-              AGB
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/cookie-richtlinie"
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Cookie-Richtlinie"
-            >
-              Cookie-Richtlinie
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/datenschutz"
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Datenschutz"
-            >
-              Datenschutz
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/impressum"
-              rel="nofollow"
-              className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-              aria-label="Impressum"
-            >
-              Impressum
-            </Link>
-          </li>
-        </ul>
-      </div>
+      </footer>
     </div>
-
-    <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-      <p className="text-sm sm:text-base text-gray-400 mb-4">
-        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-      </p>
-      <Link href="/" aria-label="Zurück zur Startseite">
-        <Button
-          className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-        >
-          Zur Startseite
-        </Button>
-      </Link>
-    </div>
-  </div>
-</footer>
- </div>
   )
 }
