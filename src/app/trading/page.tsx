@@ -495,10 +495,10 @@ export default function DeFi() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Beste Trading-App November 2025 | Broker & Neo-Broker Vergleich</title>
+        <title>Beste Trading-App Dezember 2025 | Broker & Neo-Broker Vergleich</title>
         <meta
           name="description"
-          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im November 2025"
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im Dezember 2025"
         />
         <meta
           name="keywords"
@@ -508,10 +508,10 @@ export default function DeFi() {
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich" />
+        <meta property="og:title" content="Beste Trading-Apps Dezember 2025 | Broker & Neo-Broker Vergleich" />
         <meta
           property="og:description"
-          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im November 2025."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im Dezember 2025."
         />
         <meta property="og:url" content="https://unser-vergleichsportal.de/trading" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -522,10 +522,10 @@ export default function DeFi() {
         <meta property="og:image:alt" content="Beste Broker 2025 – unser-vergleichsportal.de" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich" />
+        <meta name="twitter:title" content="Beste Trading-Apps Dezember 2025 | Broker & Neo-Broker Vergleich" />
         <meta
           name="twitter:description"
-          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im November 2025."
+          content="Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Transparente Gebühren, sichere Depots & regulierte Testsieger im Dezember 2025."
         />
         <meta
           name="twitter:image"
@@ -539,9 +539,9 @@ export default function DeFi() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Beste Trading-Apps November 2025 | Broker & Neo-Broker Vergleich",
+              name: "Beste Trading-Apps Dezember 2025 | Broker & Neo-Broker Vergleich",
               description:
-                "Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im November 2025.",
+                "Vergleichen Sie Broker & Trading-Plattformen für Aktien, ETFs & Bitcoin. Niedrige Gebühren, sichere Depots & regulierte Testsieger im Dezember 2025.",
               url: "https://unser-vergleichsportal.de/trading",
               publisher: {
                 "@type": "Organization",
@@ -660,7 +660,7 @@ export default function DeFi() {
                   name: "Welcher Broker ist 2025 Testsieger?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Zu den Testsiegern im November 2025 zählen TradingView, eToro, XTB und Investivox – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
+                    text: "Zu den Testsiegern im Dezember 2025 zählen TradingView, eToro, XTB und Investivox – alle reguliert, mit günstigen Gebühren und sicheren Plattformen."
                   }
                 },
                 {
@@ -690,7 +690,7 @@ export default function DeFi() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Trading-Apps November 2025 | Neo-Broker Vergleich
+              Beste Trading-Apps Dezember 2025 | Neo-Broker Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Entdecken Sie die besten Aktiendepots, Online-Broker und Trading-Plattformen für Aktien, Forex, ETFs,
@@ -699,7 +699,7 @@ export default function DeFi() {
               bieten 0 % Kommission, professionelle Tools und regulierte Plattformen für sicheres Trading.
             </p>
             <Link href="#anbieter">
-              <Button className={`${btnPrimary} text-sm sm:text-base`}>UNSERE TESTSIEGER 11/2025</Button>
+              <Button className={`${btnPrimary} text-sm sm:text-base`}>UNSERE TESTSIEGER 12/2025</Button>
             </Link>
           </div>
         </div>
@@ -845,7 +845,7 @@ export default function DeFi() {
             <div>
               <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">Warum in nachhaltige Anlagen investieren?</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
-                Nachhaltige Investments gewinnen an Popularität, da sie sowohl finanzielle Rendite als auch positive gesellschaftliche Wirkung bieten. Im Jahr 2025 haben ESG-ETFs ein durchschnittliches jährliches Wachstum von über 20% erzielt (Stand 11/2025).
+                Nachhaltige Investments gewinnen an Popularität, da sie sowohl finanzielle Rendite als auch positive gesellschaftliche Wirkung bieten. Im Jahr 2025 haben ESG-ETFs ein durchschnittliches jährliches Wachstum von über 20% erzielt (Stand 12/2025).
               </p>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-4">
                 <li className="flex items-center">
@@ -900,7 +900,7 @@ export default function DeFi() {
       <section id="anbieter" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Trading-Apps für Aktien, ETFs & Krypto 11/2025
+            Top-Empfehlungen: Trading-Apps für Aktien, ETFs & Krypto 12/2025
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -1177,7 +1177,7 @@ export default function DeFi() {
               Sicher Bitcoin handeln mit BlackBull
             </h3>
             <p className="text-sm sm:text-base text-gray-600 mb-4">
-              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 11/2025). Mit BlackBull
+              Bitcoin bleibt die führende Kryptowährung mit einem Marktanteil von über 50% (Stand 12/2025). Mit BlackBull
               können Sie Bitcoin-CFDs handeln, ohne physische Coins besitzen zu müssen. Vorteile:
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600 mb-6">
