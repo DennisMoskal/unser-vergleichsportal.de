@@ -386,7 +386,7 @@ export default function ImpressumPage() {
                     Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline break-all">https://ec.europa.eu/consumers/odr</a> finden. Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht bereit.
                   </p>
                   <p>
-                    Für Beschwerden oder Anliegen wenden Sie sich bitte an unsere oben angegebene Kontaktadresse oder per E-Mail an <a href="mailto:dennismoskal@yahoo.com" className="text-green-600 hover:underline break-all">dennismoskal@yahoo.com</a>.
+                    Für Beschwerden oder Anliegen wenden Sie sich bitte an unsere oben angegebene Kontaktadresse oder per E-Mail an <a href="mailto:info@unser-vergleichsportal.de" className="text-green-600 hover:underline break-all">dennismoskal@yahoo.com</a>.
                   </p>
                 </CardContent>
               </Card>
