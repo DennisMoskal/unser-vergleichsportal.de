@@ -8,7 +8,7 @@ import Link from "next/link"
 import Head from "next/head"
 
 // SmartFinanzLogo-Komponente
-const SmartFinanzLogo = ({ className = "" }) => {
+const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Link href="/" aria-label="Zurück zur Startseite">
       <div className={`flex flex-col items-start ${className}`}>
@@ -26,7 +26,7 @@ const SmartFinanzLogo = ({ className = "" }) => {
 }
 
 // Wiederverwendbare Header-Komponente
-const Header = () => {
+const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("versicherungen")
 
