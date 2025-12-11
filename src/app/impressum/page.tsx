@@ -30,7 +30,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState("versicherungen")
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     setActiveCategory(sectionId)
     const element = document.getElementById(sectionId)
     if (element) {
