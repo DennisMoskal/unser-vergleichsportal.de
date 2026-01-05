@@ -217,7 +217,7 @@ const providerData = [
       "Über 20 Jahre Erfahrung als Vergleichsportal",
       "100% kostenloser und unverbindlicher Vergleich",
       "Vergleich von über 300 Kfz-Versicherungstarifen",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 12/2024)",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 01/2025)",
       "eKomi Silber Siegel mit 4,5/5 Sternen",
       "Über 3.194 verifizierte Kundenbewertungen",
       "Deutschlands drittgrößtes Vergleichsportal",
@@ -227,7 +227,7 @@ const providerData = [
     bonus: "Bis zu 120€ Neukundenbonus",
     logo: "🏆",
     url: "https://www.tarifcheck.com/wmPi92g",
-    metaTitle: "Tarifcheck.de Versicherungsvergleich: Bis zu 1.000€ sparen 2025",
+    metaTitle: "Tarifcheck.de Versicherungsvergleich: Bis zu 1.000€ sparen 2026",
     metaDescription: "Vergleichen Sie über 300 Kfz-Versicherungen mit Tarifcheck.de. Kostenlos, unverbindlich und mit Top-Bewertungen. Sparen Sie bis zu 1.000€ jährlich!",
     isTopRecommendation: true
   },
@@ -236,7 +236,7 @@ const providerData = [
     rating: 4.8,
     features: [
       "Vergleich von über 300 Versicherungen in wenigen Minuten",
-      "Testsieger in über 25 Kategorien (Handelsblatt 12/2024)",
+      "Testsieger in über 25 Kategorien (Handelsblatt 01/2025)",
       "Kostenlose Beratung durch 300 Experten (08:00–22:00 Uhr)",
       "Über 98% Kundenzufriedenheit (eKomi Gold Siegel)",
       "Nirgendwo-Günstiger-Garantie für beste Konditionen",
@@ -248,7 +248,7 @@ const providerData = [
     bonus: "Bis zu 100€ Cashback",
     logo: "✅",
     url: "https://www.tarifcheck.com/djwVRAd",
-    metaTitle: "CHECK24 Versicherungsvergleich: Testsieger 2025 mit bis zu 50% Ersparnis",
+    metaTitle: "CHECK24 Versicherungsvergleich: Testsieger 2026 mit bis zu 50% Ersparnis",
     metaDescription: "Vergleichen Sie über 300 Versicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Sparen Sie bis zu 50% mit unseren Testsiegern!",
     isTopRecommendation: true
   },
@@ -268,7 +268,7 @@ const providerData = [
     bonus: "Geld-zurück-Garantie",
     logo: "🚗",
     url: "https://www.awin1.com/awclick.php?gid=497362&mid=87589&awinaffid=2524533&linkid=3711034&clickref=",
-    metaTitle: "InShared Kfz-Versicherung: Günstige Tarife mit Geld-zurück-Garantie 2025",
+    metaTitle: "InShared Kfz-Versicherung: Günstige Tarife mit Geld-zurück-Garantie 2026",
     metaDescription: "InShared bietet günstige Kfz-Versicherungen mit Geld-zurück-Garantie und 24/7 Notfallservice. Jetzt vergleichen und sparen!",
     isTopRecommendation: true
   },
@@ -288,7 +288,7 @@ const providerData = [
     bonus: "Kostenloser Tarifrechner",
     logo: "🏠",
     url: "https://www.awin1.com/awclick.php?gid=365648&mid=15000&awinaffid=2524533&linkid=2841978&clickref=",
-    metaTitle: "AXA Versicherungen: Top Hausratversicherung 2025",
+    metaTitle: "AXA Versicherungen: Top Hausratversicherung 2026",
     metaDescription: "AXA bietet individuellen Schutz für Hausrat und Eigentum mit Testsieger-Tarifen. Jetzt Tarifrechner nutzen und sparen!",
     isTopRecommendation: true
   },
@@ -308,7 +308,7 @@ const providerData = [
     bonus: "Bis zu 350€ Ersparnis",
     logo: "🚘",
     url: "https://www.awin1.com/awclick.php?gid=355334&mid=13884&awinaffid=2524533&linkid=2322280&clickref=",
-    metaTitle: "BavariaDirekt Kfz-Versicherung: Bis zu 350€ sparen 2025",
+    metaTitle: "BavariaDirekt Kfz-Versicherung: Bis zu 350€ sparen 2026",
     metaDescription: "BavariaDirekt bietet günstige Kfz-Versicherungen mit hoher Kundenzufriedenheit. Jetzt vergleichen und bis zu 350€ sparen!",
     isTopRecommendation: true
   },
@@ -328,7 +328,7 @@ const providerData = [
     bonus: "Kostenlose Erstberatung",
     logo: "🦷",
     url: "https://www.awin1.com/awclick.php?gid=329260&mid=11705&awinaffid=2524533&linkid=3289856&clickref=",
-    metaTitle: "HanseMerkur Zahnzusatzversicherung: Testsieger 2025",
+    metaTitle: "HanseMerkur Zahnzusatzversicherung: Testsieger 2026",
     metaDescription: "HanseMerkur bietet erstklassige Zahnzusatzversicherungen ohne Wartezeit. Jetzt Tarife vergleichen und profitieren!",
     isTopRecommendation: true
   },
@@ -349,7 +349,7 @@ const providerData = [
     bonus: "14 Tage kostenlos widerrufbar",
     logo: "🚲",
     url: "https://www.awin1.com/awclick.php?gid=458089&mid=17549&awinaffid=2524533&linkid=3870155&clickref=",
-    metaTitle: "hepster Versicherungen: Flexible E-Bike- und Tierversicherungen 2025",
+    metaTitle: "hepster Versicherungen: Flexible E-Bike- und Tierversicherungen 2026",
     metaDescription: "hepster bietet flexible E-Bike- und Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
   },
@@ -360,7 +360,7 @@ const providerData = [
       "Vergleich von über 200 Wohngebäudeversicherungen",
       "100% kostenloser und unverbindlicher Vergleich",
       "Schutz für Haus und Eigentum vor Feuer, Sturm und mehr",
-      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 12/2024)",
+      "Mehrfach ausgezeichnet mit 'sehr gut' (Handelsblatt 01/2025)",
       "eKomi Silber Siegel mit 4,5/5 Sternen",
       "Bis zu 500€ jährliche Ersparnis",
       "Schneller Online-Abschluss in wenigen Minuten",
@@ -370,7 +370,7 @@ const providerData = [
     bonus: "Bis zu 500€ Ersparnis",
     logo: "🏡",
     url: "https://www.tarifcheck.com/xLfTPmG",
-    metaTitle: "Tarifcheck Wohngebäudeversicherung: Bis zu 500€ sparen 2025",
+    metaTitle: "Tarifcheck Wohngebäudeversicherung: Bis zu 500€ sparen 2026",
     metaDescription: "Vergleichen Sie über 200 Wohngebäudeversicherungen mit Tarifcheck. Kostenlos und mit Top-Bewertungen. Jetzt sparen!",
     isTopRecommendation: true
   },
@@ -390,7 +390,7 @@ const providerData = [
     bonus: "Bis zu 300€ Rückerstatting",
     logo: "⚖️",
     url: "https://www.awin1.com/awclick.php?gid=373003&mid=14797&awinaffid=2524533&linkid=2691475&clickref=",
-    metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2025",
+    metaTitle: "Verivox Versicherungsvergleich: Bis zu 850€ sparen 2026",
     metaDescription: "Verivox bietet TÜV-geprüfte Vergleiche für Kfz-, Hausrat- und Haftpflichtversicherungen. Jetzt bis zu 850€ sparen!",
     isTopRecommendation: true
   },
@@ -399,7 +399,7 @@ const providerData = [
     rating: 4.8,
     features: [
       "Umfassender Schutz für Privat, Beruf und Verkehr",
-      "Mehrfacher Testsieger 'Fairster Leistungsregulierer' (Focus Money 2025)",
+      "Mehrfacher Testsieger 'Fairster Leistungsregulierer' (Focus Money 2026)",
       "60 Tage Widerrufsrecht für maximale Flexibilität",
       "24/7 Schadenmeldung und telefonische Erstberatung",
       "eKomi-Bewertung 4,9/5 für höchste Kundenzufriedenheit",
@@ -411,7 +411,7 @@ const providerData = [
     bonus: "Bis zu 70€ Empfehlungsbonus",
     logo: "🛡️",
     url: "https://www.awin1.com/awclick.php?gid=324436&mid=11215&awinaffid=2524533&linkid=3007378&clickref=",
-    metaTitle: "ROLAND Rechtsschutzversicherung: Testsieger 2025",
+    metaTitle: "ROLAND Rechtsschutzversicherung: Testsieger 2026",
     metaDescription: "ROLAND bietet umfassenden Rechtsschutz mit Top-Bewertungen und 60 Tagen Widerrufsrecht. Jetzt Tarife vergleichen!",
     isTopRecommendation: true
   },
@@ -432,7 +432,7 @@ const providerData = [
     bonus: "Kostenlose Beratung",
     logo: "✈️",
     url: "https://www.awin1.com/awclick.php?gid=505833&mid=106517&awinaffid=2524533&linkid=3795138&clickref=",
-    metaTitle: "TravelSecure Reiseversicherung: Testsieger 2025",
+    metaTitle: "TravelSecure Reiseversicherung: Testsieger 2026",
     metaDescription: "TravelSecure bietet Testsieger-Reiseversicherungen für Familien und Vielreisende. Jetzt Tarife vergleichen!",
     isTopRecommendation: true
   },
@@ -443,17 +443,17 @@ const providerData = [
       "Optimaler Hinterbliebenenschutz für Ihre Familie",
       "Flexibler Vergleichsrechner für maßgeschneiderte Tarife",
       "Bis zu 100% Absicherung des Familieneinkommens",
-      "Testsieger bei Stiftung Warentest (11/2025, Note 1,3)",
+      "Testsieger bei Stiftung Warentest (01/2026, Note 1,3)",
       "Einfacher Online-Abschluss in wenigen Minuten",
       "Kostenlose Beratung durch Experten",
       "Anpassbare Versicherungssumme und Laufzeit",
       "Über 160 Jahre Erfahrung und Vertrauen"
     ],
     price: "ab 5,90€/Monat",
-    bonus: "10% Rabatt bei Abschluss bis 31.12.2025",
+    bonus: "10% Rabatt bei Abschluss bis 31.12.2026",
     logo: "🛡️",
     url: "https://www.awin1.com/awclick.php?gid=391372&mid=17046&awinaffid=2524533&linkid=2659747&clickref=",
-    metaTitle: "Die Bayerische Risikolebensversicherung: Testsieger 2025",
+    metaTitle: "Die Bayerische Risikolebensversicherung: Testsieger 2026",
     metaDescription: "Die Bayerische bietet Testsieger-Risikolebensversicherungen mit flexiblen Tarifen. Jetzt vergleichen und sparen!",
     isTopRecommendation: true
   },
@@ -475,7 +475,7 @@ const providerData = [
     bonus: "Günstige Einstiegstarife",
     logo: "💼",
     url: "https://www.financeads.net/tc.php?t=78841C35719131T",
-    metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2025",
+    metaTitle: "CosmosDirekt: Testsieger Risikolebensversicherung 2026",
     metaDescription: "CosmosDirekt bietet günstige Risikolebensversicherungen und digitale Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true
   },
@@ -496,7 +496,7 @@ const providerData = [
     bonus: "Bis zu 30% Online-Rabatt",
     logo: "⚖️",
     url: "https://www.financeads.net/tc.php?t=78841C35228974T",
-    metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2025",
+    metaTitle: "ARAG Rechtsschutzversicherung: Marktführer für Miet- und Verkehrsrecht 2026",
     metaDescription: "ARAG bietet erstklassigen Rechtsschutz für Privat und Berufsleben. Bis zu 30% Online-Rabatt. Jetzt vergleichen!",
     isTopRecommendation: true
   }
@@ -535,14 +535,14 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-  <title>Beste Versicherung Dezember 2025 | Alle Versicherungen im Vergleich</title>
+  <title>Beste Versicherung Januar 2026 | Alle Versicherungen im Vergleich</title>
   <meta
     name="description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
+    content="Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
   />
   <meta
     name="keywords"
-    content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2025, CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
+    content="Versicherungsvergleich, Kfz-Versicherung, Haftpflichtversicherung, Hausratversicherung, Rechtsschutzversicherung, Testsieger 2026, CHECK24, Allianz, CosmosDirekt, ARAG, Tarifcheck, InShared, AXA, BavariaDirekt, HanseMerkur, hepster, Verivox, ROLAND Rechtsschutz, TravelSecure, Die Bayerische"
   />
   <link rel="canonical" href="https://unser-vergleichsportal.de/versicherungen" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
@@ -553,10 +553,10 @@ export default function Versicherungen() {
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Versicherungen Dezember 2025 | Alle Versicherungen im Vergleich" />
+  <meta property="og:title" content="Beste Versicherungen Januar 2026 | Alle Versicherungen im Vergleich" />
   <meta
     property="og:description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
+    content="Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
   />
   <meta property="og:url" content="https://unser-vergleichsportal.de/versicherungen" />
   <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -570,10 +570,10 @@ export default function Versicherungen() {
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Versicherungen Dezember 2025 | Alle Versicherungen im Vergleich" />
+  <meta name="twitter:title" content="Beste Versicherungen Januar 2026 | Alle Versicherungen im Vergleich" />
   <meta
     name="twitter:description"
-    content="Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
+    content="Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
   />
   <meta
     name="twitter:image"
@@ -588,9 +588,9 @@ export default function Versicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Beste Versicherungen Dezember 2025 | Alle Versicherungen im Vergleich",
+        name: "Beste Versicherungen Januar 2026 | Alle Versicherungen im Vergleich",
         description:
-          "Vergleichen Sie die besten Versicherungen 2025: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
+          "Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
         url: "https://unser-vergleichsportal.de/versicherungen",
         keywords: [
           "Versicherungsvergleich",
@@ -677,7 +677,7 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Versicherungen Dezember 2025 | Alle Versicherungen im Vergleich
+              Beste Versicherungen Januar 2026 | Alle Versicherungen im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
@@ -772,7 +772,7 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Versicherungsvergleich 12/2025
+            Top-Empfehlungen: Versicherungsvergleich 01/2026
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -942,7 +942,7 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Ihr Weg zur Besten Versicherung 2025
+            Ihr Weg zur Besten Versicherung 2026
           </h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -972,7 +972,7 @@ export default function Versicherungen() {
             
             {/* Haftpflichtrechner mit optimierter Überschrift */}
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center mt-8">
-              KFZ-Haftpflichtversicherung Vergleich 2025 - Jetzt in 2 Minuten Tarife vergleichen & bis zu 300€ sparen
+              KFZ-Haftpflichtversicherung Vergleich 2026 - Jetzt in 2 Minuten Tarife vergleichen & bis zu 300€ sparen
             </h2>
             <div className="my-4">
               <HaftpflichtRechner />
@@ -1406,7 +1406,7 @@ export default function Versicherungen() {
     
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
       <p className="text-sm sm:text-base text-gray-400 mb-4">
-        © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+        © 2026 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button 
