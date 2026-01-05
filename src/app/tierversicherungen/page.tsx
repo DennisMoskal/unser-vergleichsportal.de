@@ -276,7 +276,7 @@ const providerData = [
     bonus: "10% Rabatt bei Online-Abschluss",
     logo: "🐶",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2025",
+    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen Januar 2026",
     metaDescription: "Agila bietet umfassenden Schutz für Hunde und Katzen mit bis zu 100% Kostenerstattung. Jetzt Testsieger-Tarife vergleichen!",
     isTopRecommendation: true,
   },
@@ -297,7 +297,7 @@ const providerData = [
     bonus: "Kostenlose Erstberatung",
     logo: "🐾",
     url: "https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075009&clickref=",
-    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2025",
+    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere Januar 2026",
     metaDescription: "Petplan bietet flexible Tierversicherungen für Hunde, Katzen und Pferde mit schneller Schadenbearbeitung. Jetzt vergleichen!",
     isTopRecommendation: true,
   },
@@ -318,7 +318,7 @@ const providerData = [
     bonus: "5% Rabatt bei Jahreszahlung",
     logo: "🐱",
     url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
-    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
+    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung Januar 2026",
     metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
   },
@@ -328,7 +328,7 @@ const providerData = [
     features: [
       "Vergleich von über 50 Tierversicherungen",
       "100% kostenloser und unverbindlicher Vergleich",
-      "Testsieger in der Kategorie Tierversicherung (12/2025)",
+      "Testsieger in der Kategorie Tierversicherung (01/2026)",
       "eKomi Gold Siegel mit 4,8/5 Sternen",
       "Bis zu 50% Ersparnis durch Vergleich",
       "Kostenlose Beratung durch Experten",
@@ -339,7 +339,7 @@ const providerData = [
     bonus: "Bis zu 50€ Cashback",
     logo: "✅",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2025",
+    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich Januar 2026",
     metaDescription: "Vergleichen Sie über 50 Tierversicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Jetzt sparen!",
     isTopRecommendation: true,
   },
@@ -360,7 +360,7 @@ const providerData = [
     bonus: "Treuebonus für Bestandskunden",
     logo: "🛡️",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2025",
+    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere Januar 2026",
     metaDescription: "Allianz bietet zuverlässigen Schutz für Haustiere mit flexiblen Tarifen. Jetzt vergleichen und Treuebonus sichern!",
     isTopRecommendation: true,
   },
@@ -381,7 +381,7 @@ const providerData = [
     bonus: "Kostenloser Tarifrechner",
     logo: "🐾",
     url: "https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=",
-    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
+    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere Januar 2026",
     metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
   },
@@ -401,14 +401,14 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
      <Head>
   {/* --- Meta Basics --- */}
-  <title>Beste Tierversicherungen Dezember 2025 | Hunde, Katzen & Welpen</title>
+  <title>Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen</title>
   <meta
     name="description"
-    content="Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
+    content="Vergleichen Sie die besten Tierversicherungen Januar 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
   />
   <meta
     name="keywords"
-    content="Tierversicherung 2025, Hundeversicherung, Katzenversicherung, Welpenversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
+    content="Tierversicherung Januar 2026, Hundeversicherung, Katzenversicherung, Welpenversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
   />
   <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -417,7 +417,7 @@ export default function Tierversicherungen() {
 
   {/* --- Open Graph --- */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Tierversicherungen Dezember 2025 | Hunde, Katzen & Welpen" />
+  <meta property="og:title" content="Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen" />
   <meta
     property="og:description"
     content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Welpen."
@@ -434,10 +434,10 @@ export default function Tierversicherungen() {
 
   {/* --- Twitter --- */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Tierversicherungen Dezember 2025 | Hunde, Katzen & Welpen" />
+  <meta name="twitter:title" content="Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen" />
   <meta
     name="twitter:description"
-    content="Beste Tierversicherungen Dezember 2025 | Hunde- und Katzenversicherungen im Vergleich"
+    content="Beste Tierversicherungen Januar 2026 | Hunde- und Katzenversicherungen im Vergleich"
   />
   <meta
     name="twitter:image"
@@ -478,10 +478,10 @@ export default function Tierversicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Beste Tierversicherungen Dezember 2025 | Hunde, Katzen & Welpen",
+        "name": "Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen",
         "url": "https://unser-vergleichsportal.de/tierversicherungen",
         "description":
-          "Vergleichen Sie die besten Tierversicherungen 2025 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
+          "Vergleichen Sie die besten Tierversicherungen Januar 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
         "inLanguage": "de",
         "mainEntity": {
           "@type": "ItemList",
@@ -560,7 +560,7 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Tierversicherungen Dezember 2025 | Hunde- und Katzenversicherungen im Vergleich
+              Beste Tierversicherungen Januar 2026 | Hunde- und Katzenversicherungen im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie die besten Tierversicherungen für Hunde und Katzen mit SmartFinanz. Sparen Sie bis zu 50%
@@ -656,7 +656,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Alle Tierversicherungen im Vergleich 12/2025
+            Top-Empfehlungen: Alle Tierversicherungen im Vergleich 01/2026
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
@@ -732,13 +732,13 @@ export default function Tierversicherungen() {
           title: "Tierversicherung als Corporate Benefit: Der unterschätzte Faktor für Mitarbeiterbindung",
           description: "Eine betriebliche Tierkrankenversicherung ist ein starkes Argument in Zeiten des Fachkräftemangels. Wie Arbeitgeber mit diesem Benefit die Mitarbeiterzufriedenheit und Bindung signifikant steigern können.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_tierversicherung-corporatebenefits-mitarbeiterbindung-activity-7391121771187310593--ndl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
-          date: "17. November 2025",
+          date: "17. Januar 2026",
         },
         {
           title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau",
           description: "Die clevere Nutzung der Haltefrist von über einem Jahr, Schenkungen und smarte Strategien sind der Schlüssel zur legalen Optimierung der Steuerlast beim Krypto-Vermögensaufbau.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7394057603619753984-c6OW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
-          date: "15. November 2025",
+          date: "15. Januar 2026",
         },
         {
           title: "Die Explosion der Tierarztkosten: Warum Haustierversicherungen zur sozialen Pflicht werden",
@@ -822,7 +822,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Ihr Weg zur besten Tierversicherung 2025
+            Ihr Weg zur besten Tierversicherung Januar 2026
           </h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -990,255 +990,3 @@ export default function Tierversicherungen() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 sm:py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
-            <div className="col-span-2 md:col-span-1">
-              <div className="flex flex-col items-start mb-4">
-                <SmartFinanzLogo className="text-xl" />
-              </div>
-            </div>
-            <div>
-              <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
-              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                <li>
-                  <Link
-                    href="/banking"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Banking"
-                  >
-                    Banking
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/tierversicherungen"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Haustierversicherung"
-                  >
-                    Haustierversicherung
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/trading"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Trading"
-                  >
-                    Trading
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/versicherungen"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Versicherungen"
-                  >
-                    Versicherungen
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
-              <div className="grid grid-cols-2 gap-4">
-                <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                  <li>
-                    <a
-                      href="https://www.c24n.de/ducwCtq"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="DSL Vergleich (externer Link)"
-                    >
-                      DSL
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/Uxudvkj"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Gasvergleich (externer Link)"
-                    >
-                      Gas
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/5R17qbN"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Handytarif vergleichen (externer Link)"
-                    >
-                      Handytarif
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.tarifcheck.com/NMXe4cX"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Kreditkarten vergleichen (externer Link)"
-                    >
-                      Kreditkarte
-                    </a>
-                  </li>
-                </ul>
-                <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                  <li>
-                    <a
-                      href="https://www.c24n.de/FZ9nd0R"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Mietwagen vergleichen (externer Link)"
-                    >
-                      Mietwagen
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/zxy0WKh"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Ökostrom vergleichen (externer Link)"
-                    >
-                      Ökostrom
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/EieKR0E"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Reise vergleichen (externer Link)"
-                    >
-                      Reise
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.c24n.de/RYXPGyh"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                      aria-label="Stromvergleich (externer Link)"
-                    >
-                      Strom
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
-              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                <li>
-                  <Link
-                    href="/karriere"
-                    rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Karriere"
-                  >
-                    Karriere
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/kontakt"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Kontakt"
-                  >
-                    Kontakt
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/partnerprogramme"
-                    rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Partnerprogramm"
-                  >
-                    Partnerprogramm
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/ueber-uns"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Über uns"
-                  >
-                    Über uns
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
-              <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-                <li>
-                  <Link
-                    href="/agb"
-                    rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="AGB"
-                  >
-                    AGB
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cookie-richtlinie"
-                    rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Cookie-Richtlinie"
-                  >
-                    Cookie-Richtlinie
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/datenschutz"
-                    rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Datenschutz"
-                  >
-                    Datenschutz
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/impressum"
-                    rel="nofollow"
-                    className="hover:text-white transition-all duration-300 ease-in-out hover:scale-105 rounded-lg hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-900 hover:shadow-sm"
-                    aria-label="Impressum"
-                  >
-                    Impressum
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-            <p className="text-sm sm:text-base text-gray-400 mb-4">
-              © 2025 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
-            </p>
-            <Link href="/" aria-label="Zurück zur Startseite">
-              <Button
-                className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-              >
-                Zur Startseite
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </footer>
-    </div>
-  )
-}
