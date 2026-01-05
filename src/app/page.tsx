@@ -536,10 +536,10 @@ export default function Home() {
     <>
       <Head>
         {/* --- Meta Basics (bereinigt) --- */}
-        <title>Transparenter Finanzvergleich Dezember 2025 | Finden Sie den besten Anbieter</title>
+        <title>Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter</title>
         <meta
           name="description"
-          content="Unabhängiger Finanzvergleich 2025: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
+          content="Unabhängiger Finanzvergleich Januar 2026: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
         />
         {/* Entfernt: meta keywords (obsolet), revisit-after (ohne Wirkung) */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -557,7 +557,7 @@ export default function Home() {
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich Dezember 2025 | Finden Sie den besten Anbieter" />
+        <meta property="og:title" content="Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter" />
         <meta
           property="og:description"
           content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
@@ -578,12 +578,12 @@ export default function Home() {
         <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2025-12-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2025-12-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-12-19T00:27:16+00:00" />
+        <meta property="og:updated_time" content="2026-01-19T00:27:16+00:00" />
+        <meta property="article:published_time" content="2026-01-01T00:00:00+00:00" />
+        <meta property="article:modified_time" content="2026-01-19T00:27:16+00:00" />
         {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich Dezember 2025 | Finden Sie den besten Anbieter" />
+        <meta name="twitter:title" content="Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
         <meta
           name="twitter:image"
@@ -662,7 +662,7 @@ export default function Home() {
                   "name": "Wie funktioniert der Finanzvergleich?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängige Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
+                    "text": "Unser Expertenteam vergleicht täglich über 500 Finanzprodukte von führenden Anbietern. Sie erhalten kostenlose, unabhängie Empfehlungen basierend auf Ihren individuellen Bedürfnissen."
                   }
                 },
                 {
@@ -713,7 +713,7 @@ export default function Home() {
           {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Dezember 2025 | Finden Sie den besten Anbieter</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter</h1>
               <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
                 <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
               </p>
@@ -796,7 +796,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten 2025 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten Januar 2026 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
                   <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
                     Tagesgeldkonten
                   </Link>{" "}
@@ -951,7 +951,7 @@ export default function Home() {
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-                Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 12/2025
+                Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 01/2026
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
@@ -1287,55 +1287,55 @@ export default function Home() {
           title: "Bitcoin ist das digitale Gold. Aber warum?",
           description: "Erfahren Sie, warum Bitcoin als Wertspeicher Gold übertrumpft – durch absolute Knappheit und digitale Übertragbarkeit.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe-1-bitcoin-ist-das-digitale-gold-activity-7384286562995404800-U_gq",
-          date: "16. November 2025",
+          date: "16. Dezember 2025",
         },
         {
           title: "Die Bank wechseln? Diese 5 Faktoren entscheiden",
           description: "Vermeiden Sie teure Fehler bei der Wahl Ihres Banking-Partners – die wichtigsten Kriterien für Unternehmer.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_die-bank-wechseln-diese-5-faktoren-entscheiden-activity-7373376935558627328-bKc0",
-          date: "17. November 2025",
+          date: "17. Dezember 2025",
         },
         {
           title: "Bin ich zu spät für Bitcoin? 5 Gründe, warum nicht!",
           description: "Warum Bitcoins Marktkapitalisierung zeigt, dass wir noch am Anfang stehen – und wie Sie profitieren können.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe6-bin-ich-zu-sp%C3%A4t-f%C3%BCr-bitcoin-activity-7386053641750667264-OiZ1",
-          date: "21. November 2025",
+          date: "21. Dezember 2025",
         },
         {
           title: "Wärmepumpen + Stromanbieter: Das perfekte Duo",
           description: "Mit speziellen Tarifen bis zu 30% Stromkosten bei Wärmepumpen sparen – nachhaltig und günstig.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_w%C3%A4rmepumpen-stromanbieter-das-perfekte-activity-7374470832355569665-33G4",
-          date: "20. November 2025",
+          date: "20. Dezember 2025",
         },
         {
           title: "Die Bitcoin-Kostenfalle: UTXO-Management erklärt",
           description: "Vermeiden Sie hohe Gebühren durch strategisches UTXO-Management beim Bitcoin-Sparen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_ausgabe7-ein-echter-insider-tippdie-bitcoin-kostenfalle-activity-7386416007902539776-EvTT",
-          date: "22. November 2025",
+          date: "22. Dezember 2025",
         },
         {
           title: "Rentenlücke schließen: 4 Strategien für die Zukunft",
           description: "ETFs, Immobilien, bAV und mehr – wie Sie Ihre Altersvorsorge systematisch aufbauen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_vermaemgensaufbau-rentenlaescke-altersvorsorge-activity-7374108704184446976-EfCG",
-          date: "19. November 2025",
+          date: "19. Dezember 2025",
         },
         {
           title: "Steuern sparen durch Bitcoin-Trading",
           description: "Nutzen Sie Haltefristen und smarte Strategien, um legal Steuern zu optimieren und Vermögen aufzubauen.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7375253667916001280-3S9w",
-          date: "23. November 2025",
+          date: "23. Dezember 2025",
         },
         {
           title: "Effiziente Dienstwagenpolitik: Jetzt optimieren",
           description: "Nutzen Sie Dienstwagen als strategischen Hebel für Kostenoptimierung und Mitarbeiterbindung.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_dienstwagen-mobilitaeut-hrstrategie-activity-7386498451917852672-3UGb",
-          date: "23. November 2025",
+          date: "23. Dezember 2025",
         },
         {
           title: "Warum eine Hunde-Haftpflichtversicherung Pflicht ist",
           description: "Schützen Sie sich vor hohen Kosten durch Schäden Ihres Hundes – eine unverzichtbare Absicherung.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_warum-eine-hunde-haftpflichtversicherung-activity-7374460905553661952-_G5d",
-          date: "20. November 2025",
+          date: "20. Dezember 2025",
         },
       ].map((post, index) => (
         <Card
@@ -1791,7 +1791,7 @@ export default function Home() {
     </div>
     <div className="border-t border-gray-800 mt-8 pt-6 text-center">
       <p className="text-sm sm:text-base text-gray-400 mb-4">
-        © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+        © 2026 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
       </p>
       <Link href="/" aria-label="Zurück zur Startseite">
         <Button
