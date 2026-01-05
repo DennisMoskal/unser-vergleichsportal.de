@@ -276,7 +276,7 @@ const providerData = [
     bonus: "10% Rabatt bei Online-Abschluss",
     logo: "🐶",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen Januar 2026",
+    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2025",
     metaDescription: "Agila bietet umfassenden Schutz für Hunde und Katzen mit bis zu 100% Kostenerstattung. Jetzt Testsieger-Tarife vergleichen!",
     isTopRecommendation: true,
   },
@@ -297,7 +297,7 @@ const providerData = [
     bonus: "Kostenlose Erstberatung",
     logo: "🐾",
     url: "https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075009&clickref=",
-    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere Januar 2026",
+    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2025",
     metaDescription: "Petplan bietet flexible Tierversicherungen für Hunde, Katzen und Pferde mit schneller Schadenbearbeitung. Jetzt vergleichen!",
     isTopRecommendation: true,
   },
@@ -318,7 +318,7 @@ const providerData = [
     bonus: "5% Rabatt bei Jahreszahlung",
     logo: "🐱",
     url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
-    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung Januar 2026",
+    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
     metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
   },
@@ -328,7 +328,7 @@ const providerData = [
     features: [
       "Vergleich von über 50 Tierversicherungen",
       "100% kostenloser und unverbindlicher Vergleich",
-      "Testsieger in der Kategorie Tierversicherung (01/2026)",
+      "Testsieger in der Kategorie Tierversicherung (12/2025)",
       "eKomi Gold Siegel mit 4,8/5 Sternen",
       "Bis zu 50% Ersparnis durch Vergleich",
       "Kostenlose Beratung durch Experten",
@@ -339,7 +339,7 @@ const providerData = [
     bonus: "Bis zu 50€ Cashback",
     logo: "✅",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich Januar 2026",
+    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2025",
     metaDescription: "Vergleichen Sie über 50 Tierversicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Jetzt sparen!",
     isTopRecommendation: true,
   },
@@ -360,7 +360,7 @@ const providerData = [
     bonus: "Treuebonus für Bestandskunden",
     logo: "🛡️",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere Januar 2026",
+    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2025",
     metaDescription: "Allianz bietet zuverlässigen Schutz für Haustiere mit flexiblen Tarifen. Jetzt vergleichen und Treuebonus sichern!",
     isTopRecommendation: true,
   },
@@ -381,7 +381,7 @@ const providerData = [
     bonus: "Kostenloser Tarifrechner",
     logo: "🐾",
     url: "https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=",
-    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere Januar 2026",
+    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
     metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
   },
@@ -404,11 +404,11 @@ export default function Tierversicherungen() {
   <title>Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen</title>
   <meta
     name="description"
-    content="Vergleichen Sie die besten Tierversicherungen Januar 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
+    content="Vergleichen Sie die besten Tierversicherungen 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
   />
   <meta
     name="keywords"
-    content="Tierversicherung Januar 2026, Hundeversicherung, Katzenversicherung, Welpenversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
+    content="Tierversicherung 2026, Hundeversicherung, Katzenversicherung, Welpenversicherung, OP-Versicherung Hund, Agila, Petplan, HanseMerkur, CHECK24, Allianz, hepster"
   />
   <link rel="canonical" href="https://unser-vergleichsportal.de/tierversicherungen" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -481,7 +481,7 @@ export default function Tierversicherungen() {
         "name": "Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen",
         "url": "https://unser-vergleichsportal.de/tierversicherungen",
         "description":
-          "Vergleichen Sie die besten Tierversicherungen Januar 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
+          "Vergleichen Sie die besten Tierversicherungen 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
         "inLanguage": "de",
         "mainEntity": {
           "@type": "ItemList",
@@ -732,13 +732,13 @@ export default function Tierversicherungen() {
           title: "Tierversicherung als Corporate Benefit: Der unterschätzte Faktor für Mitarbeiterbindung",
           description: "Eine betriebliche Tierkrankenversicherung ist ein starkes Argument in Zeiten des Fachkräftemangels. Wie Arbeitgeber mit diesem Benefit die Mitarbeiterzufriedenheit und Bindung signifikant steigern können.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_tierversicherung-corporatebenefits-mitarbeiterbindung-activity-7391121771187310593--ndl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
-          date: "17. Januar 2026",
+          date: "17. November 2025",
         },
         {
           title: "Steuern sparen durch Bitcoin-Trading: Ihr Weg zu steuerfreiem Vermögensaufbau",
           description: "Die clevere Nutzung der Haltefrist von über einem Jahr, Schenkungen und smarte Strategien sind der Schlüssel zur legalen Optimierung der Steuerlast beim Krypto-Vermögensaufbau.",
           url: "https://www.linkedin.com/posts/unservergleichsportalde_steuern-sparen-durch-bitcoin-trading-activity-7394057603619753984-c6OW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5zyAsBk40h6x_KEkBua_UcPmvFcGPQw8w",
-          date: "15. Januar 2026",
+          date: "15. November 2025",
         },
         {
           title: "Die Explosion der Tierarztkosten: Warum Haustierversicherungen zur sozialen Pflicht werden",
@@ -822,7 +822,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Ihr Weg zur besten Tierversicherung Januar 2026
+            Ihr Weg zur besten Tierversicherung 2026
           </h2>
           <div className="max-w-4xl mx-auto text-left">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 text-green-600">
@@ -990,29 +990,14 @@ export default function Tierversicherungen() {
       </section>
 
       {/* Footer */}
-<footer className="bg-gray-900 text-white py-8 sm:py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
             <div className="col-span-2 md:col-span-1">
               <div className="flex flex-col items-start mb-4">
                 <SmartFinanzLogo className="text-xl" />
-                <a
-                  href="https://www.linkedin.com/in/unservergleichsportalde"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4"
-                >
-                  <Button
-                    className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700"
-                    aria-label="Besuchen Sie unser LinkedIn-Profil (externer Link)"
-                  >
-                    <Linkedin className="mr-2 h-4 w-4" />
-                    LinkedIn
-                  </Button>
-                </a>
               </div>
             </div>
-
             <div>
               <span className="font-semibold mb-3 text-lg sm:text-xl">Finanzprodukte</span>
               <ul className="space-y-2 text-sm sm:text-base text-gray-400">
@@ -1054,7 +1039,6 @@ export default function Tierversicherungen() {
                 </li>
               </ul>
             </div>
-
             <div>
               <span className="font-semibold mb-3 text-lg sm:text-xl">Weitere Produkte</span>
               <div className="grid grid-cols-2 gap-4">
@@ -1152,7 +1136,6 @@ export default function Tierversicherungen() {
                 </ul>
               </div>
             </div>
-
             <div>
               <span className="font-semibold mb-3 text-lg sm:text-xl">Unternehmen</span>
               <ul className="space-y-2 text-sm sm:text-base text-gray-400">
@@ -1196,7 +1179,6 @@ export default function Tierversicherungen() {
                 </li>
               </ul>
             </div>
-
             <div>
               <span className="font-semibold mb-3 text-lg sm:text-xl">Rechtliches</span>
               <ul className="space-y-2 text-sm sm:text-base text-gray-400">
@@ -1243,7 +1225,6 @@ export default function Tierversicherungen() {
               </ul>
             </div>
           </div>
-
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-sm sm:text-base text-gray-400 mb-4">
               © 2026 SmartFinanz unser-vergleichsportal.de. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
