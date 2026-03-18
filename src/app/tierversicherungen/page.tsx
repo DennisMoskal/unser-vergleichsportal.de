@@ -276,7 +276,7 @@ const providerData = [
     bonus: "10% Rabatt bei Online-Abschluss",
     logo: "🐶",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2025",
+    metaTitle: "Agila Tierversicherung: Testsieger für Hunde und Katzen 2026",
     metaDescription: "Agila bietet umfassenden Schutz für Hunde und Katzen mit bis zu 100% Kostenerstattung. Jetzt Testsieger-Tarife vergleichen!",
     isTopRecommendation: true,
   },
@@ -297,7 +297,7 @@ const providerData = [
     bonus: "Kostenlose Erstberatung",
     logo: "🐾",
     url: "https://www.awin1.com/awclick.php?gid=367217&mid=13775&awinaffid=2524533&linkid=3075009&clickref=",
-    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2025",
+    metaTitle: "Petplan Tierversicherung: Flexible Tarife für Haustiere 2026",
     metaDescription: "Petplan bietet flexible Tierversicherungen für Hunde, Katzen und Pferde mit schneller Schadenbearbeitung. Jetzt vergleichen!",
     isTopRecommendation: true,
   },
@@ -318,7 +318,7 @@ const providerData = [
     bonus: "5% Rabatt bei Jahreszahlung",
     logo: "🐱",
     url: "https://www.awin1.com/awclick.php?gid=452030&mid=11705&awinaffid=2524533&linkid=3283544&clickref=",
-    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2025",
+    metaTitle: "HanseMerkur Tierversicherung: Top-Schutz ohne Altersbegrenzung 2026",
     metaDescription: "HanseMerkur bietet Tierversicherungen ohne Altersbegrenzung mit Top-Bewertungen. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
   },
@@ -339,7 +339,7 @@ const providerData = [
     bonus: "Bis zu 50€ Cashback",
     logo: "✅",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2025",
+    metaTitle: "CHECK24 Tierversicherung: Testsieger-Vergleich 2026",
     metaDescription: "Vergleichen Sie über 50 Tierversicherungen mit CHECK24. Kostenlos, transparent und mit Top-Bewertungen. Jetzt sparen!",
     isTopRecommendation: true,
   },
@@ -360,7 +360,7 @@ const providerData = [
     bonus: "Treuebonus für Bestandskunden",
     logo: "🛡️",
     url: "https://www.tarifcheck.com/5dM0KnS",
-    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2025",
+    metaTitle: "Allianz Tierversicherung: Zuverlässiger Schutz für Haustiere 2026",
     metaDescription: "Allianz bietet zuverlässigen Schutz für Haustiere mit flexiblen Tarifen. Jetzt vergleichen und Treuebonus sichern!",
     isTopRecommendation: true,
   },
@@ -381,7 +381,7 @@ const providerData = [
     bonus: "Kostenloser Tarifrechner",
     logo: "🐾",
     url: "https://www.awin1.com/awclick.php?gid=458099&mid=17549&awinaffid=2524533&linkid=3870251&clickref=",
-    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2025",
+    metaTitle: "hepster Tierversicherung: Flexible Tarife für Haustiere 2026",
     metaDescription: "hepster bietet flexible Tierversicherungen mit digitaler Abwicklung. Jetzt Tarife vergleichen und sparen!",
     isTopRecommendation: true,
   },
@@ -401,7 +401,7 @@ export default function Tierversicherungen() {
     <div className="min-h-screen bg-white">
      <Head>
   {/* --- Meta Basics --- */}
-  <title>Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen</title>
+  <title>Beste Tierversicherungen März 2026 | Hunde, Katzen & Welpen</title>
   <meta
     name="description"
     content="Vergleichen Sie die besten Tierversicherungen 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%."
@@ -417,7 +417,7 @@ export default function Tierversicherungen() {
 
   {/* --- Open Graph --- */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen" />
+  <meta property="og:title" content="Beste Tierversicherungen März 2026 | Hunde, Katzen & Welpen" />
   <meta
     property="og:description"
     content="Tierversicherungen im Vergleich: Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Bis zu 50% sparen – umfassender Schutz für Hunde, Katzen & Welpen."
@@ -434,10 +434,10 @@ export default function Tierversicherungen() {
 
   {/* --- Twitter --- */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen" />
+  <meta name="twitter:title" content="Beste Tierversicherungen März 2026 | Hunde, Katzen & Welpen" />
   <meta
     name="twitter:description"
-    content="Beste Tierversicherungen Januar 2026 | Hunde- und Katzenversicherungen im Vergleich"
+    content="Beste Tierversicherungen März 2026 | Hunde- und Katzenversicherungen im Vergleich"
   />
   <meta
     name="twitter:image"
@@ -478,7 +478,7 @@ export default function Tierversicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Beste Tierversicherungen Januar 2026 | Hunde, Katzen & Welpen",
+        "name": "Beste Tierversicherungen März 2026 | Hunde, Katzen & Welpen",
         "url": "https://unser-vergleichsportal.de/tierversicherungen",
         "description":
           "Vergleichen Sie die besten Tierversicherungen 2026 für Hunde, Katzen & Welpen. Testsieger wie Agila, Petplan, HanseMerkur, CHECK24, Allianz & hepster. Sparen Sie bis zu 50%.",
@@ -560,7 +560,7 @@ export default function Tierversicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Tierversicherungen Januar 2026 | Hunde- und Katzenversicherungen im Vergleich
+              Beste Tierversicherungen März 2026 | Hunde- und Katzenversicherungen im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie die besten Tierversicherungen für Hunde und Katzen mit SmartFinanz. Sparen Sie bis zu 50%
@@ -656,7 +656,7 @@ export default function Tierversicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Alle Tierversicherungen im Vergleich 01/2026
+            Top-Empfehlungen: Alle Tierversicherungen im Vergleich 03/2026
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
