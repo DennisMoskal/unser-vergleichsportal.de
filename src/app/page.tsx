@@ -321,7 +321,7 @@ const providerData: { [key: string]: Provider[] } = {
   logo: "🏆",
   url: "https://www.tarifcheck.de/girokonto/",
   hiddenSeoKeywords: [
-    "Versicherungen Vergleich 2025",
+    "Versicherungen Vergleich 2026",
     "Kostenloser Versicherungsvergleich",
     "Günstige Versicherungen finden",
     "Top Versicherungsanbieter"
@@ -347,7 +347,7 @@ const providerData: { [key: string]: Provider[] } = {
   logo: "📱",
   url: "https://www.awin1.com/awclick.php?gid=392137&mid=11420&awinaffid=2524533&linkid=3572260&clickref=",
   hiddenSeoKeywords: [
-    "Mobilfunk Vergleich 2025",
+    "Mobilfunk Vergleich 2026",
     "Günstige Handytarife",
     "5G Tarife vergleichen",
     "Flexible Mobilfunktarife"
@@ -414,7 +414,7 @@ banking: [
   logo: "🏆",
   url: "https://www.tarifcheck.de/girokonto/",
   hiddenSeoKeywords: [
-    "Banking Vergleich 2025",
+    "Banking Vergleich 2026",
     "Kostenloses Girokonto",
     "Girokonto mit Bonus",
     "Banking Testsieger"
@@ -536,10 +536,10 @@ export default function Home() {
     <>
       <Head>
         {/* --- Meta Basics (bereinigt) --- */}
-        <title>Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter</title>
+        <title>Transparenter Finanzvergleich März 2026 | Finden Sie den besten Anbieter</title>
         <meta
           name="description"
-          content="Unabhängiger Finanzvergleich Januar 2026: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
+          content="Unabhängiger Finanzvergleich März 2026: Über 500 geprüfte Anbieter für Versicherungen, Banking, Trading, DSL & mehr. Kostenlos vergleichen & bis zu 1.000€ sparen!"
         />
         {/* Entfernt: meta keywords (obsolet), revisit-after (ohne Wirkung) */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -557,7 +557,7 @@ export default function Home() {
         <link rel="alternate" href="https://unser-vergleichsportal.de/" hrefLang="x-default" />
         {/* --- Open Graph --- */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter" />
+        <meta property="og:title" content="Transparenter Finanzvergleich März 2026 | Finden Sie den besten Anbieter" />
         <meta
           property="og:description"
           content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten."
@@ -578,12 +578,12 @@ export default function Home() {
         <meta property="og:image:alt" content="SmartFinanz - Transparenter Finanzvergleich" />
         <meta property="og:locale" content="de_DE" />
         <meta property="article:author" content="SmartFinanz" />
-        <meta property="og:updated_time" content="2026-01-19T00:27:16+00:00" />
-        <meta property="article:published_time" content="2026-01-01T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2026-01-19T00:27:16+00:00" />
+        <meta property="og:updated_time" content="2026-03-19T00:27:16+00:00" />
+        <meta property="article:published_time" content="2026-03-01T00:00:00+00:00" />
+        <meta property="article:modified_time" content="2026-03-19T00:27:16+00:00" />
         {/* --- Twitter Cards --- */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter" />
+        <meta name="twitter:title" content="Transparenter Finanzvergleich März 2026 | Finden Sie den besten Anbieter" />
         <meta name="twitter:description" content="Über 500 Anbieter im Vergleich: Versicherungen, Banking, Trading, DSL, Strom & mehr. Kostenlos, unabhängig & ohne versteckte Kosten." />
         <meta
           name="twitter:image"
@@ -713,7 +713,7 @@ export default function Home() {
           {/* Hauptüberschrift */}
           <section className="py-8 sm:py-12 bg-white">
             <div className="container mx-auto px-4 text-center">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich Januar 2026 | Finden Sie den besten Anbieter</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-4">Transparenter Finanzvergleich März 2026 | Finden Sie den besten Anbieter</h1>
               <p className="text-lg font-semibold mb-4" itemScope itemType="http://schema.org/Brand">
                 <span itemProp="name">unser-vergleichsportal.de</span> | einfach sparen
               </p>
@@ -796,7 +796,7 @@ export default function Home() {
                 </p>
                 <h3 className="text-xl font-semibold mb-3">So viel kann ein Tagesgeldkonto bringen</h3>
                 <p className="mb-4 text-gray-700">
-                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten Januar 2026 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
+                  Mit Zinsen von bis zu 4% p.a. sind Tagesgeldkonten März 2026 wieder attraktiv. Eine Anlage von 10.000€ kann bis zu 400€ jährlich bringen – steuerfrei dank Sparerpauschbetrag. Vergleichen Sie{" "}
                   <Link href="/banking#tagesgeld" className="text-green-600 hover:underline">
                     Tagesgeldkonten
                   </Link>{" "}
@@ -951,7 +951,7 @@ export default function Home() {
           <section className="py-12 sm:py-16 px-4 bg-gray-50" id="comparison-section">
             <div className="container mx-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-                Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 01/2026
+                Top-Empfehlungen: Die Besten Anbieter für Finanzprodukte 03/2026
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
