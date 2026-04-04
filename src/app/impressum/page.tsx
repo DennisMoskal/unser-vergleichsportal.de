@@ -269,7 +269,7 @@ export default function ImpressumPage() {
         <link rel="canonical" href="https://unser-vergleichsportal.de/impressum" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Impressum - SmartFinanz unser-vergleichsportal.de 2025" />
+        <meta property="og:title" content="Impressum - SmartFinanz unser-vergleichsportal.de April 2026" />
         <meta property="og:description" content="Gemäß § 5 Telemediengesetz (TMG) stellen wir Ihnen alle erforderlichen Angaben über SmartFinanz unser-vergleichsportal.de transparent zur Verfügung." />
         <meta property="og:url" content="https://unser-vergleichsportal.de/impressum" />
         <meta property="og:site_name" content="Unser-Vergleichsportal.de" />
@@ -288,7 +288,7 @@ export default function ImpressumPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                name: "Impressum - SmartFinanz unser-vergleichsportal.de 2025",
+                name: "Impressum - SmartFinanz unser-vergleichsportal.de April 2026",
                 description: "Gemäß § 5 Telemediengesetz (TMG) stellen wir Ihnen alle erforderlichen Angaben über SmartFinanz unser-vergleichsportal.de transparent zur Verfügung.",
                 url: "https://unser-vergleichsportal.de/impressum",
                 keywords: [
@@ -688,7 +688,7 @@ export default function ImpressumPage() {
 
               <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center">
                 <p className="text-sm sm:text-base text-gray-400 mb-4">
-                  © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+                  © 2026 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
                 </p>
                 <Link href="/" aria-label="Zurück zur Startseite">
                   <Button className="bg-green-600 text-white font-medium text-sm sm:text-base transition-all duration-300 ease-in-out rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-b hover:from-green-600 hover:to-green-700">
