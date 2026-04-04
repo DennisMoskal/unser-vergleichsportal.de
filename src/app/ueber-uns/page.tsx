@@ -646,7 +646,7 @@ export default function UeberUnsPage() {
           
           <div className="border-t border-gray-800 mt-8 pt-6 text-center">
             <p className="text-base text-gray-400 mb-4">
-              © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+              © 2026 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
             </p>
             <Link href="/" aria-label="Zurück zur Startseite">
               <Button 
