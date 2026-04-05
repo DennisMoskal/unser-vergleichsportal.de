@@ -272,7 +272,7 @@ export default function DatenschutzPage() {
         <link rel="canonical" href="https://unser-vergleichsportal.de/datenschutz" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Datenschutz bei SmartFinanz unser-vergleichsportal.de 2025" />
+        <meta property="og:title" content="Datenschutz bei SmartFinanz unser-vergleichsportal.de April 2026" />
         <meta
           property="og:description"
           content="Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen."
@@ -296,7 +296,7 @@ export default function DatenschutzPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                name: "Datenschutz bei SmartFinanz unser-vergleichsportal.de 2025",
+                name: "Datenschutz bei SmartFinanz unser-vergleichsportal.de April 2026",
                 description:
                   "Bei SmartFinanz unser-vergleichsportal.de nehmen wir den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, wie wir Ihre Daten verarbeiten und schützen.",
                 url: "https://unser-vergleichsportal.de/datenschutz",
@@ -664,7 +664,7 @@ export default function DatenschutzPage() {
               
               <div className="border-t border-gray-800 mt-8 pt-6 text-center">
                 <p className="text-base text-gray-400 mb-4">
-                  © 2025 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
+                  © 2026 SmartFinanz. Alle Rechte vorbehalten. | Finanzvergleich für Versicherungen, Banking, DSL, Strom, Gas & mehr
                 </p>
                 <Link href="/" aria-label="Zurück zur Startseite">
                   <Button 
