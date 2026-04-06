@@ -268,7 +268,7 @@ const Header: React.FC = () => {
               <li className="flex items-start">
                 <Check className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <p className="ml-3 text-base sm:text-lg">
-                  Im Durchschnitt <strong className="font-semibold">850 € Ersparnis pro Jahr</strong> bei Top-Tarifen
+                  Im Durchschnitt <strong className="font-semibold">Bis zu 850 € Ersparnis im Jahr</strong> oft 40 % günstiger bei Top-Tarifen
                 </p>
               </li>
               <li className="flex items-start">
