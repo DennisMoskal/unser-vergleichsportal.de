@@ -450,7 +450,7 @@ const providerData = [
       "Über 160 Jahre Erfahrung und Vertrauen"
     ],
     price: "ab 5,90€/Monat",
-    bonus: "10% Rabatt bei Abschluss bis 31.08.2026",
+    bonus: "10% Rabatt bei Abschluss bis 31.10.2026",
     logo: "🛡️",
     url: "https://www.awin1.com/awclick.php?gid=391372&mid=17046&awinaffid=2524533&linkid=2659747&clickref=",
     metaTitle: "Die Bayerische Risikolebensversicherung: Testsieger 2026",
@@ -535,7 +535,7 @@ export default function Versicherungen() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-  <title>Beste Versicherung August 2026 | Alle Versicherungen im Vergleich</title>
+  <title>Beste Versicherung Oktober 2026 | Alle Versicherungen im Vergleich</title>
   <meta
     name="description"
     content="Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
@@ -553,7 +553,7 @@ export default function Versicherungen() {
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beste Versicherungen August 2026 | Alle Versicherungen im Vergleich" />
+  <meta property="og:title" content="Beste Versicherungen Oktober 2026 | Alle Versicherungen im Vergleich" />
   <meta
     property="og:description"
     content="Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr."
@@ -570,7 +570,7 @@ export default function Versicherungen() {
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beste Versicherungen August 2026 | Alle Versicherungen im Vergleich" />
+  <meta name="twitter:title" content="Beste Versicherungen Oktober 2026 | Alle Versicherungen im Vergleich" />
   <meta
     name="twitter:description"
     content="Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Bis zu 50% sparen mit unseren Testsiegern."
@@ -588,7 +588,7 @@ export default function Versicherungen() {
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Beste Versicherungen August 2026 | Alle Versicherungen im Vergleich",
+        name: "Beste Versicherungen Oktober 2026 | Alle Versicherungen im Vergleich",
         description:
           "Vergleichen Sie die besten Versicherungen 2026: Kfz, Haftpflicht, Hausrat und mehr. Sparen Sie bis zu 50% mit Testsiegern wie CHECK24, Allianz, CosmosDirekt, ARAG und mehr.",
         url: "https://unser-vergleichsportal.de/versicherungen",
@@ -677,7 +677,7 @@ export default function Versicherungen() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-              Beste Versicherungen August 2026 | Alle Versicherungen im Vergleich
+              Beste Versicherungen Oktober 2026 | Alle Versicherungen im Vergleich
             </h1>
             <p className="text-sm sm:text-base text-green-100 mb-6 sm:mb-8">
               Vergleichen Sie über 300 Versicherungsprodukte kostenlos mit SmartFinanz. Sparen Sie bis zu 50% jährlich mit
@@ -772,7 +772,7 @@ export default function Versicherungen() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Top-Empfehlungen: Versicherungsvergleich 08/2026
+            Top-Empfehlungen: Versicherungsvergleich 10/2026
           </h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {sortedProviders.map((provider) => (
