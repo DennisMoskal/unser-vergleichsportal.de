@@ -329,7 +329,7 @@ export default function ImpressumPage() {
                   </p>
                   <p>
                     <strong>Geschäftsführer:</strong> Dennis Moskal<br />
-                    <strong>Handelsregister:</strong> HRB 123456, Amtsgericht Bonn<br />
+                    <strong>Handelsregister:</strong> Einzusehen bei Amtsgericht Bonn<br />
                     <strong>Umsatzsteuer-ID:</strong> DE61479320456 (gemäß § 27a Umsatzsteuergesetz)
                   </p>
                   <p>
