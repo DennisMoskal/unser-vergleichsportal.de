@@ -20,9 +20,7 @@ const SmartFinanzLogo: React.FC<{ className?: string }> = ({ className }) => {
             <text x="16" y="22" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontSize="20" fill="white" fontWeight="900">U</text>
           </svg>
           <span className="font-bold">nser-vergleichsportal.de</span>
-        </div>
-        <span className="text-sm mt-1">Unser-Vergleichsportal.de</span>
-      </div>
+    </div>
     </Link>
   )
 }
